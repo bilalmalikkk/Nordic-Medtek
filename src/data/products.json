@@ -1,0 +1,7 @@
+[
+  { "id": "fall-sensor", "name": "Fallsensor", "category": "Sikkerhet", "description": "Varsler fall i hjemmet og ute." },
+  { "id": "bp-monitor", "name": "Blodtrykksmåler", "category": "Medisinsk", "description": "Automatiserte målinger med deling til pårørende/lege." },
+  { "id": "pill-dispenser", "name": "Medisin-dispenser", "category": "Sikkerhet", "description": "Påminnelser og varsler ved uteblitt dose." }
+]
+
+

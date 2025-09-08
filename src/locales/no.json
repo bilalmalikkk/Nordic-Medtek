@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Hjem",
+    "private": "Privat",
+    "municipality": "Kommune",
+    "company": "Bedrift",
+    "partners": "Partnere",
+    "products": "Produkter",
+    "lang": "English"
+  },
+  "hero": {
+    "title1": "Finn den hjelpen du trenger.",
+    "title2": "Vi er bare en samtale unna",
+    "lead": "Vi tilbyr gratis veiledning, møter og uforpliktende kontakt. Velg det som passer deg best."
+  },
+  "help": {
+    "heading": "Hvordan vi kan hjelpe",
+    "items": [
+      { "title": "Pårørende", "text": "Få veiledning om hvordan løsningene kan skape trygghet i hjemmet" },
+      { "title": "Ledere i hjemmetjenesten", "text": "Avtal et møte og se hvordan systemet kan lette arbeidsdagen" },
+      { "title": "Beslutningstakere", "text": "Få en oversikt og svar på det du trenger å vite" }
+    ]
+  },
+  "form": {
+    "title": "Bestill veiledning eller møte",
+    "desc": "Fyll ut skjemaet under, så tar vi kontakt. Du forplikter deg ikke.",
+    "type": {"legend": "Velg type henvendelse", "free": "Gratis veiledning", "meeting": "Avtal møte", "general": "Generell henvendelse"},
+    "name": "Ditt navn",
+    "phone": "+47 xx xx xx xx",
+    "email": "din@email.no",
+    "confirm": "Bekreft e-post",
+    "description": {"label": "Beskrivelse", "ph": "Din melding"},
+    "news": {"legend": "Ja, send meg gjerne", "p": "E-post om produkter", "n": "E-post med nyheter og oppdateringer", "m": "E-post med markedsføring"},
+    "note": "Alle henvendelser er uforpliktende. Vi svarer så raskt vi kan",
+    "submit": "Send henvendelse"
+  },
+  "pages": {
+    "private": {"title": "For privatpersoner", "p": "Trygghet i hjemmet med fallvarsling, medisinske målinger og enkel oppfølging. Velg egeninnsats, fastlege-oppfølging eller alarmsentral."},
+    "municipality": {"title": "For kommune", "p": "Dokumentasjon for anskaffelser, gevinster, drift og datasikkerhet. Skalerer fra pilot til full utrulling."},
+    "company": {"title": "For bedrifter", "p": "White-label drift med egen instans per partner og integrasjoner via API."},
+    "partners": {"title": "Partnere", "p": "Bli partner og få egen skyinstans, opplæring og markedsmateriell."},
+    "products": {"title": "Produkter"}
+  }
+}
+
+

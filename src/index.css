@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/* App-wide primitives */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply antialiased text-slate-800 bg-white;
+}
+
+.container-page {
+  @apply max-w-6xl mx-auto px-4 sm:px-6;
+}
+
+/* Form primitives to match Figma */
+.form-section {
+  @apply py-12;
+}
+
+.form-heading {
+  @apply text-2xl font-semibold tracking-tight;
+}
+
+.form-subheading {
+  @apply text-slate-600 text-sm mt-1;
+}
+
+.form-grid {
+  @apply mt-6 grid gap-6 w-full; /* span full container width */
+}
+
+.form-field-grid {
+  @apply grid gap-4 md:grid-cols-2;
+}
+
+.form-label {
+  @apply block text-sm text-slate-700 mb-1;
+}
+
+.form-input {
+  @apply w-full rounded border p-3 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500;
+}
+
+.form-textarea {
+  @apply w-full rounded border p-3 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 min-h-40;
+}
+
+.form-error {
+  @apply text-sm text-red-600;
+}
+
+.form-radio {
+  @apply inline-flex items-center gap-2 rounded-md border p-3 text-sm bg-white cursor-pointer hover:border-emerald-500 shadow-sm transition;
+}
+
+.form-radio:has(input:checked) {
+  @apply ring-2 ring-emerald-500 border-emerald-500;
+}
+
+.form-radio input[type="radio"] {
+  accent-color: #059669; /* emerald-600 */
+}
+
+.form-checkbox {
+  @apply flex items-center gap-2;
+}
+
+.form-checkbox input[type="checkbox"] {
+  accent-color: #059669;
+}
+
+.btn-primary {
+  @apply rounded-md bg-emerald-600 px-4 py-2 text-white hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2;
+}
+
+.form-subcopy {
+  @apply text-sm text-slate-600;
+}

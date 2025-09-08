@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "home": "Home",
+    "private": "Private",
+    "municipality": "Municipality",
+    "company": "Company",
+    "partners": "Partners",
+    "products": "Products",
+    "lang": "Norsk"
+  },
+  "hero": {
+    "title1": "Find the help you need.",
+    "title2": "We are only a call away",
+    "lead": "We offer free guidance, meetings and contact. Choose what suits you."
+  },
+  "help": {
+    "heading": "How we can help",
+    "items": [
+      { "title": "Relatives", "text": "Guidance on creating safety at home" },
+      { "title": "Home care managers", "text": "Book a meeting and see how it helps the workflow" },
+      { "title": "Decision makers", "text": "Overview and answers to what you need" }
+    ]
+  },
+  "form": {
+    "title": "Book guidance or meeting",
+    "desc": "Fill in the form and we will contact you. No obligations.",
+    "type": {"legend": "Choose request type", "free": "Free guidance", "meeting": "Book meeting", "general": "General inquiry"},
+    "name": "Your name",
+    "phone": "+47 xx xx xx xx",
+    "email": "your@email.com",
+    "confirm": "Confirm email",
+    "description": {"label": "Description", "ph": "Your message"},
+    "news": {"legend": "Yes, send me", "p": "Product emails", "n": "News and updates", "m": "Marketing emails"},
+    "note": "All inquiries are non-binding. We'll reply quickly.",
+    "submit": "Send"
+  },
+  "pages": {
+    "private": {"title": "For private individuals", "p": "Safety with fall alerts, medical measurements and easy follow-up. Choose self-service, GP follow-up or alarm center."},
+    "municipality": {"title": "For municipalities", "p": "Documentation for procurement, benefits, operations and data security. Scales from pilot to full rollout."},
+    "company": {"title": "For companies", "p": "White-label operations with a dedicated instance per partner and APIs."},
+    "partners": {"title": "Partners", "p": "Become a partner and get your own cloud instance, training and marketing materials."},
+    "products": {"title": "Products"}
+  }
+}
+
+
