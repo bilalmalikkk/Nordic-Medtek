@@ -9,6 +9,13 @@ import Municipality from './pages/Municipality'
 import Company from './pages/Company'
 import Partners from './pages/Partners'
 import Products from './pages/Products'
+import Guidance from './pages/Guidance'
+import Demo from './pages/Demo'
+import Experiences from './pages/Experiences'
+import Documents from './pages/Documents'
+import Pricing from './pages/Pricing'
+import Support from './pages/Support'
+import Evidence from './pages/Evidence'
 
 function App() {
   return (
@@ -22,6 +29,13 @@ function App() {
           <Route path="/company" element={<Company />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/guidance" element={<Guidance />} />
+          <Route path="/demo" element={<Demo />} />
+          <Route path="/experiences" element={<Experiences />} />
+          <Route path="/documents" element={<Documents />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/evidence" element={<Evidence />} />
         </Routes>
       </main>
     </div>

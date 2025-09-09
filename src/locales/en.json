@@ -6,8 +6,17 @@
     "company": "Company",
     "partners": "Partners",
     "products": "Products",
+    "resources": "Resources",
+    "guidance": "Guidance",
+    "demo": "Demo",
+    "experiences": "Experiences",
+    "documents": "Documents",
+    "pricing": "Pricing",
+    "support": "Support",
+    "evidence": "Evidence/impact",
     "lang": "Norsk"
   },
+  "util": {"about": "About", "demo": "Book demo", "contact": "Contact", "privacy": "Privacy policy"},
   "hero": {
     "title1": "Find the help you need.",
     "title2": "We are only a call away",
@@ -39,7 +48,14 @@
     "municipality": {"title": "For municipalities", "p": "Documentation for procurement, benefits, operations and data security. Scales from pilot to full rollout."},
     "company": {"title": "For companies", "p": "White-label operations with a dedicated instance per partner and APIs."},
     "partners": {"title": "Partners", "p": "Become a partner and get your own cloud instance, training and marketing materials."},
-    "products": {"title": "Products"}
+    "products": {"title": "Products"},
+    "guidance": {"title": "Guidance and advice", "p": "Get free guidance from our team. We'll help you choose the right solution for you or your organization."},
+    "demo": {"title": "Demo and pilots", "p": "See how it works in practice. Book a demonstration or pilot."},
+    "experiences": {"title": "Experiences and case studies", "p": "Learn how others use the solution and the benefits they achieve."},
+    "documents": {"title": "Documentation and security", "p": "Everything you need for procurement: data security, architecture, operations and processes."},
+    "pricing": {"title": "Pricing and models", "p": "Simpler and more predictable with leasing. Choose the model that fits best."},
+    "support": {"title": "Support and delivery", "p": "We make sure everything works all the way – from onboarding to operations."},
+    "evidence": {"title": "Evidence and impact", "p": "Documented results that build confidence for users and decision-makers."}
   }
 }
 

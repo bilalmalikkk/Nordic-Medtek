@@ -6,8 +6,17 @@
     "company": "Bedrift",
     "partners": "Partnere",
     "products": "Produkter",
+    "resources": "Ressurser",
+    "guidance": "Veiledning",
+    "demo": "Demo",
+    "experiences": "Erfaringer",
+    "documents": "Dokumenter",
+    "pricing": "Priser",
+    "support": "Support",
+    "evidence": "Bevis/effekt",
     "lang": "English"
   },
+  "util": {"about": "Om oss", "demo": "Bestill demo", "contact": "Kontakt oss", "privacy": "Personvernerklæring"},
   "hero": {
     "title1": "Finn den hjelpen du trenger.",
     "title2": "Vi er bare en samtale unna",
@@ -39,7 +48,14 @@
     "municipality": {"title": "For kommune", "p": "Dokumentasjon for anskaffelser, gevinster, drift og datasikkerhet. Skalerer fra pilot til full utrulling."},
     "company": {"title": "For bedrifter", "p": "White-label drift med egen instans per partner og integrasjoner via API."},
     "partners": {"title": "Partnere", "p": "Bli partner og få egen skyinstans, opplæring og markedsmateriell."},
-    "products": {"title": "Produkter"}
+    "products": {"title": "Produkter"},
+    "guidance": {"title": "Veiledning og råd", "p": "Få gratis veiledning fra vårt team. Vi hjelper deg å finne riktig løsning for deg eller din organisasjon."},
+    "demo": {"title": "Demo og piloter", "p": "Se hvordan det fungerer i praksis. Bestill en demonstrasjon eller pilot."},
+    "experiences": {"title": "Erfaringer og kundehistorier", "p": "Les hvordan andre bruker løsningen og hvilke gevinster de oppnår."},
+    "documents": {"title": "Dokumentasjon og sikkerhet", "p": "Alt du trenger for anskaffelser: datasikkerhet, arkitektur, drift og prosesser."},
+    "pricing": {"title": "Priser og modeller", "p": "Enklere og mer forutsigbart med leie. Velg modellen som passer best."},
+    "support": {"title": "Support og leveranse", "p": "Vi sørger for at alt fungerer hele veien – fra oppstart til drift."},
+    "evidence": {"title": "Bevis og effekt", "p": "Dokumenterte resultater som skaper trygghet for brukere og beslutningstakere."}
   }
 }
 

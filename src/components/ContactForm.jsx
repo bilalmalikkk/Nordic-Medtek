@@ -3,27 +3,35 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslation } from 'react-i18next'
 
-const schema = z.object({
-  type: z.enum(['gratis', 'mote', 'generell']),
-  name: z.string().min(2),
-  phone: z.string().min(6),
-  email: z.string().email(),
-  confirmEmail: z.string().email(),
-  description: z.string().min(5),
-  newsletters: z.array(z.enum(['produkter', 'nyheter', 'marked'])).optional(),
-}).refine((d) => d.email === d.confirmEmail, {
-  path: ['confirmEmail'],
-  message: 'E-postene matcher ikke',
-})
-
-export default function ContactForm() {
+export default function ContactForm({ title, desc, typeOptions, footerNote }) {
   const { t } = useTranslation()
+
+  const computedTypeOptions = typeOptions || [
+    { value: 'gratis', label: t('form.type.free') },
+    { value: 'mote', label: t('form.type.meeting') },
+    { value: 'generell', label: t('form.type.general') },
+  ]
+  const typeValues = computedTypeOptions.map((o) => o.value)
+
+  const schema = z.object({
+    type: z.enum(typeValues),
+    name: z.string().min(2),
+    phone: z.string().min(6),
+    email: z.string().email(),
+    confirmEmail: z.string().email(),
+    description: z.string().min(5),
+    newsletters: z.array(z.enum(['produkter', 'nyheter', 'marked'])).optional(),
+  }).refine((d) => d.email === d.confirmEmail, {
+    path: ['confirmEmail'],
+    message: 'E-postene matcher ikke',
+  })
+
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({ resolver: zodResolver(schema), defaultValues: { type: 'gratis' } })
+  } = useForm({ resolver: zodResolver(schema), defaultValues: { type: typeValues[0] } })
 
   function onSubmit(values) {
     console.log('submit', values)
@@ -33,25 +41,19 @@ export default function ContactForm() {
 
   return (
     <section className="form-section">
-      <h2 className="form-heading">{t('form.title')}</h2>
-      <p className="form-subheading">{t('form.desc')}</p>
+      <h2 className="form-heading">{title || t('form.title')}</h2>
+      <p className="form-subheading">{desc || t('form.desc')}</p>
 
       <form onSubmit={handleSubmit(onSubmit)} className="form-grid">
         <fieldset className="grid gap-3">
           <legend className="font-medium">{t('form.type.legend')}</legend>
           <div className="grid sm:grid-cols-3 gap-4">
-            <label className="form-radio">
-              <input type="radio" value="gratis" {...register('type')} />
-              <span>{t('form.type.free')}</span>
-            </label>
-            <label className="form-radio">
-              <input type="radio" value="mote" {...register('type')} />
-              <span>{t('form.type.meeting')}</span>
-            </label>
-            <label className="form-radio">
-              <input type="radio" value="generell" {...register('type')} />
-              <span>{t('form.type.general')}</span>
-            </label>
+            {computedTypeOptions.map((opt) => (
+              <label key={opt.value} className="form-radio">
+                <input type="radio" value={opt.value} {...register('type')} />
+                <span>{opt.label}</span>
+              </label>
+            ))}
           </div>
         </fieldset>
 
@@ -92,6 +94,8 @@ export default function ContactForm() {
 
         <button type="submit" className="btn-primary w-max">{t('form.submit')}</button>
       </form>
+
+      {footerNote && <p className="mt-8 text-sm text-slate-600">{footerNote}</p>}
     </section>
   )
 }
