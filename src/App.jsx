@@ -21,7 +21,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <main className="container-page">
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/private" element={<Private />} />

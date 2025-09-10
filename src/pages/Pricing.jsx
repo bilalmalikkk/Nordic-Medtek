@@ -4,14 +4,16 @@ import ContactForm from '../components/ContactForm'
 export default function Pricing() {
   const { t } = useTranslation()
   return (
-    <section className="py-10 grid gap-6">
-      <div className="grid gap-3">
-        <h1 className="text-2xl font-semibold">{t('pages.pricing.title')}</h1>
-        <p className="text-slate-600 max-w-prose">{t('pages.pricing.p')}</p>
-      </div>
+    <div className="container-page">
+      <section className="py-10 grid gap-6">
+        <div className="grid gap-3">
+          <h1 className="text-2xl font-semibold">{t('pages.pricing.title')}</h1>
+          <p className="text-slate-600 max-w-prose">{t('pages.pricing.p')}</p>
+        </div>
 
-      <ContactForm />
-    </section>
+        <ContactForm />
+      </section>
+    </div>
   )
 }
 

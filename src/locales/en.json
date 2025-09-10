@@ -18,9 +18,10 @@
   },
   "util": {"about": "About", "demo": "Book demo", "contact": "Contact", "privacy": "Privacy policy"},
   "hero": {
-    "title1": "Find the help you need.",
-    "title2": "We are only a call away",
-    "lead": "We offer free guidance, meetings and contact. Choose what suits you."
+    "title1": "Live safely at home, longer",
+    "title2": "",
+    "lead": "Smart monitoring that provides peace of mind for families and caregivers",
+    "button": "See how it works"
   },
   "help": {
     "heading": "How we can help",
@@ -29,6 +30,87 @@
       { "title": "Home care managers", "text": "Book a meeting and see how it helps the workflow" },
       { "title": "Decision makers", "text": "Overview and answers to what you need" }
     ]
+  },
+  "home": {
+    "whoAreYou": "Who are you",
+    "targetAudiences": {
+      "municipalities": {
+        "title": "For municipalities",
+        "description": "Scalable solutions that reduce costs and improve care quality.",
+        "link": "Read more for municipalities"
+      },
+      "healthcare": {
+        "title": "For healthcare personnel",
+        "description": "Alerts and insights that enable you to help at the right time.",
+        "link": "Read more for healthcare personnel"
+      },
+      "relatives": {
+        "title": "For relatives",
+        "description": "Peace of mind for the family without the elderly losing their independence.",
+        "link": "Read more for relatives"
+      },
+      "partners": {
+        "title": "For partners",
+        "description": "A future-oriented health technology company delivering innovative solutions.",
+        "link": "Read more for partners"
+      }
+    },
+    "why": {
+      "title": "Why - our purpose",
+      "description": "We believe that everyone deserves to live with dignity and independence in their own homes. Our mission is to give elderly people security and their families peace of mind in everyday life, while providing caregivers with reliable tools to deliver the best possible care."
+    },
+    "how": {
+      "title": "How - our approach",
+      "description": "Our technology is discreet, reliable and trustworthy. We use sensors, a gateway and a cloud solution that monitors patterns and sends alerts only when action is needed. This ensures safety without unnecessary disruptions."
+    },
+    "what": {
+      "title": "What - our solutions",
+      "solutions": [
+        "Bed sensors that detect presence, movement and activity patterns",
+        "Gateway that sends data securely without extra user effort",
+        "Cloud solution that analyzes signals in real time",
+        "Alerts and dashboards for families, municipalities and healthcare personnel"
+      ]
+    },
+    "benefits": {
+      "title": "Benefits",
+      "items": [
+        "For families: peace of mind in everyday life",
+        "For caregivers: clear and actionable alerts, not noise",
+        "For municipalities: a scalable solution that reduces costs for institutional care"
+      ]
+    },
+    "cta1": {
+      "title": "Ready to make your home safer?",
+      "button": "Contact us"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "questions": [
+        {
+          "question": "Is it difficult to install?",
+          "answer": "No, you can install the solution yourself. We provide you with all necessary guidance."
+        },
+        {
+          "question": "What does it cost?",
+          "answer": "Solutions start from approximately 299 NOK per month, depending on chosen sensors/services."
+        },
+        {
+          "question": "Do we need internet?",
+          "answer": "Yes, internet is necessary for alerts and data sharing. We can help with suggestions if it's not available."
+        },
+        {
+          "question": "Is the data secure?",
+          "answer": "Yes, data is stored on servers in Norway and follows strict privacy requirements (GDPR and DPIA)."
+        }
+      ]
+    },
+    "cta2": {
+      "title": "Ready to find safety at home?",
+      "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+      "button": "Contact us today"
+    },
+    "footer": "[Footer]"
   },
   "form": {
     "title": "Book guidance or meeting",

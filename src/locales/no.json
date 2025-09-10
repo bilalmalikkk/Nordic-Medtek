@@ -18,9 +18,91 @@
   },
   "util": {"about": "Om oss", "demo": "Bestill demo", "contact": "Kontakt oss", "privacy": "Personvernerklæring"},
   "hero": {
-    "title1": "Finn den hjelpen du trenger.",
-    "title2": "Vi er bare en samtale unna",
-    "lead": "Vi tilbyr gratis veiledning, møter og uforpliktende kontakt. Velg det som passer deg best."
+    "title1": "Lev trygt hjemme, lenger",
+    "title2": "",
+    "lead": "Smart overvåkning som gir trygghet for familie og omsorgspersoner",
+    "button": "Se hvordan det fungerer"
+  },
+  "home": {
+    "whoAreYou": "Hvem er du",
+    "targetAudiences": {
+      "municipalities": {
+        "title": "For kommuner",
+        "description": "Skalerbare løsninger som reduserer kostnader og forbedrer omsorgskvaliteten.",
+        "link": "Les mer for kommuner"
+      },
+      "healthcare": {
+        "title": "For helsepersonell",
+        "description": "Varsler og innsikt som gir deg mulighet til å hjelpe til rett tid.",
+        "link": "Les mer for helsepersonell"
+      },
+      "relatives": {
+        "title": "For pårørende",
+        "description": "Trygghet for familien uten at den eldre mister sin selvstendighet.",
+        "link": "Les mer for pårørende"
+      },
+      "partners": {
+        "title": "For partnere",
+        "description": "Et fremtidsrettet helseteknologiselskap som leverer innovative løsninger.",
+        "link": "Les mer for partnere"
+      }
+    },
+    "why": {
+      "title": "Hvorfor - vårt formål",
+      "description": "Vi tror på at alle fortjener å leve med verdighet og selvstendighet i sine egne hjem. Vår misjon er å gi eldre mennesker trygghet og deres familier ro i hverdagen, samtidig som vi gir omsorgspersoner pålitelige verktøy for å levere best mulig omsorg."
+    },
+    "how": {
+      "title": "Hvordan - vår tilnærming",
+      "description": "Vår teknologi er diskret, pålitelig og tillitsvekkende. Vi bruker sensorer, en gateway og en skyløsning som overvåker mønstre og sender varsler kun når det trengs handling. Dette sikrer trygghet uten unødvendige forstyrrelser."
+    },
+    "what": {
+      "title": "Hva - våre løsninger",
+      "solutions": [
+        "Sengesensorer som oppdager tilstedeværelse, bevegelse og aktivitetsmønstre",
+        "Gateway som sender data sikkert uten ekstra brukerinnsats",
+        "Skyløsning som analyserer signaler i sanntid",
+        "Varslinger og dashboards for familier, kommuner og helsepersonell"
+      ]
+    },
+    "benefits": {
+      "title": "Fordeler",
+      "items": [
+        "For familier: ro i hverdagen",
+        "For omsorgspersoner: tydelige og handlingsrettede varsler, ikke støy",
+        "For kommuner: en skalerbar løsning som reduserer kostnader for institusjonell omsorg"
+      ]
+    },
+    "cta1": {
+      "title": "Klar til å gjøre hjemmet tryggere?",
+      "button": "Kontakt oss"
+    },
+    "faq": {
+      "title": "Ofte stilte spørsmål",
+      "questions": [
+        {
+          "question": "Er det vanskelig å installere?",
+          "answer": "Nei, du kan installere løsningen selv. Vi gir deg all nødvendig veiledning."
+        },
+        {
+          "question": "Hva koster det?",
+          "answer": "Løsninger starter fra ca. 299 NOK per måned, avhengig av valgte sensorer/tjenester."
+        },
+        {
+          "question": "Må vi ha internett?",
+          "answer": "Ja, internett er nødvendig for varsler og datadeling. Vi kan hjelpe med forslag hvis det ikke er tilgjengelig."
+        },
+        {
+          "question": "Er dataene trygge?",
+          "answer": "Ja, dataene lagres på servere i Norge og følger strenge personvernkrav (GDPR og DPIA)."
+        }
+      ]
+    },
+    "cta2": {
+      "title": "Klar for å finne tryggheten hjemme?",
+      "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+      "button": "Kontakt oss i dag"
+    },
+    "footer": "[Footer]"
   },
   "help": {
     "heading": "Hvordan vi kan hjelpe",
