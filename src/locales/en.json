@@ -203,6 +203,71 @@
       "button": "Contact us today"
     },
     "footer": "[Footer]"
+  },
+  "municipality": {
+    "hero": {
+      "title": "Safer and more sustainable care in the municipality.",
+      "description": "Technology that makes it possible for the elderly to live at home longer, while resources are used smarter.",
+      "button": "See how it works in practice"
+    },
+    "benefits": {
+      "safeCare": {
+        "title": "Safe and dignified care in everyday life",
+        "link": "(link to page for health personnel and leader in home care)"
+      },
+      "moreTime": {
+        "title": "More time for people, less time on unnecessary tasks",
+        "link": "(link to page for leader in home care and municipal chief)"
+      },
+      "knowledgeBase": {
+        "title": "Knowledge base that provides better decisions",
+        "link": "(link to page for municipal chief and politicians)"
+      },
+      "economic": {
+        "title": "Economic responsibility and long-term gains",
+        "link": "(link to page for purchasing manager and politicians)"
+      },
+      "secureData": {
+        "title": "Secure data and technical standards at the bottom",
+        "link": "(link to page for IT and welfare technology)"
+      },
+      "partnership": {
+        "title": "Partnership that builds future care",
+        "link": "(link to page for municipal chief, politicians, purchasing manager, IT and welfare technology)"
+      }
+    },
+    "cta": {
+      "title": "Ready to see how this can work in your municipality?",
+      "contact": "Contact us",
+      "demo": "Book demo"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "questions": [
+        {
+          "question": "Is it difficult to install?",
+          "answer": "No. Most of our products you can mount yourself, as easy as hanging a picture. We show you how."
+        },
+        {
+          "question": "What does it cost?",
+          "answer": "Our solutions cost from approx. 299 kroner per month. It depends on how many sensors or services you choose."
+        },
+        {
+          "question": "Do we need internet?",
+          "answer": "Yes, for the systems to send alerts and share data, there must be internet at home. If you don't have it already, we can help you with suggestions."
+        },
+        {
+          "question": "Are the data safe?",
+          "answer": "Yes. All data is stored on servers in Norway and follows strict requirements for privacy (GDPR and DPIA)."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Ready to find safety at home?",
+      "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+      "button": "Contact us today"
+    },
+    "footer": "[Footer]"
   }
 }
 

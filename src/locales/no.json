@@ -203,6 +203,71 @@
       "button": "Kontakt oss i dag"
     },
     "footer": "[Footer]"
+  },
+  "municipality": {
+    "hero": {
+      "title": "En tryggere og mer bærekraftig omsorg i kommunen.",
+      "description": "Teknologi som gjør det mulig for eldre å bo hjemme lenger, samtidig som ressursene brukes smartere.",
+      "button": "Se hvordan det fungerer i praksis"
+    },
+    "benefits": {
+      "safeCare": {
+        "title": "Trygg og verdig omsorg i hverdagen",
+        "link": "(link til side for helsepersonell og leder i hjemmetjenesten)"
+      },
+      "moreTime": {
+        "title": "Mer tid til mennesker, mindre tid på unødvendige oppgaver",
+        "link": "(link til side for leder i hjemmetjenesten og kommunalsjef)"
+      },
+      "knowledgeBase": {
+        "title": "Kunnskapsgrunnlag som gir bedre beslutninger",
+        "link": "(link til side for kommunalsjef og politikere)"
+      },
+      "economic": {
+        "title": "Økonomisk ansvarlighet og langsiktige gevinster",
+        "link": "(link til side for innkjøpsansvarlig og politikere)"
+      },
+      "secureData": {
+        "title": "Trygge data og tekniske standarder i bunn",
+        "link": "(link til side for IT og velferdsteknologi)"
+      },
+      "partnership": {
+        "title": "Partnerskap som bygger fremtidens omsorg",
+        "link": "(link til side for kommunalsjef, politikere, innkjøpsansvarlig, IT og velferdsteknologi)"
+      }
+    },
+    "cta": {
+      "title": "Klar til å se hvordan dette kan fungere i din kommune?",
+      "contact": "Kontakt oss",
+      "demo": "Bestill demo"
+    },
+    "faq": {
+      "title": "Ofte stilte spørsmål",
+      "questions": [
+        {
+          "question": "Er det vanskelig å installere?",
+          "answer": "Nei. De fleste av våre produkter kan du montere selv, like enkelt som å henge opp et bilde. Vi viser deg hvordan."
+        },
+        {
+          "question": "Hva koster det?",
+          "answer": "Våre løsninger koster fra ca. 299 kroner i måneden. Det avhenger av hvor mange sensorer eller tjenester dere velger."
+        },
+        {
+          "question": "Må vi ha internett?",
+          "answer": "Ja, for at systemene skal sende varsler og dele data må det være internett hjemme. Har dere ikke det fra før, kan vi hjelpe dere med forslag."
+        },
+        {
+          "question": "Er dataene trygge?",
+          "answer": "Ja. Alle data lagres på servere i Norge og følger strenge krav til personvern (GDPR og DPIA)."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Klar for å finne tryggheten hjemme?",
+      "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+      "button": "Kontakt oss i dag"
+    },
+    "footer": "[Footer]"
   }
 }
 
