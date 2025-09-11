@@ -77,3 +77,32 @@ body {
 .form-subcopy {
   @apply text-sm text-slate-600;
 }
+
+/* Private page specific styles */
+.private-page {
+  @apply min-h-screen;
+}
+
+.hero-section {
+  @apply py-16;
+}
+
+.concerns-section {
+  @apply py-16 bg-slate-100;
+}
+
+.guidance-section {
+  @apply py-16;
+}
+
+.why-choose-section {
+  @apply py-16 bg-green-50;
+}
+
+.faq-section {
+  @apply py-16;
+}
+
+.final-cta-section {
+  @apply py-16;
+}

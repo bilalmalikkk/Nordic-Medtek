@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full">
       {/* Hero Section */}
-      <section className="py-16 md:py-20 w-full">
+      <section className="h-[calc(100vh-100px)] flex items-center w-full">
         <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
     <div>
