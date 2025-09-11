@@ -138,6 +138,71 @@
     "pricing": {"title": "Pricing and models", "p": "Simpler and more predictable with leasing. Choose the model that fits best."},
     "support": {"title": "Support and delivery", "p": "We make sure everything works all the way – from onboarding to operations."},
     "evidence": {"title": "Evidence and impact", "p": "Documented results that build confidence for users and decision-makers."}
+  },
+  "private": {
+    "hero": {
+      "title": "Take care of your loved ones - safely, simply, and at home",
+      "description": "For you as a relative who needs follow-up of your loved ones at home. Our unique sensors automatically detect irregularities related to safety and security, so you can get alerts when needed.",
+      "button": "Book free guidance"
+    },
+    "concerns": {
+      "title": "Worried about your loved ones?",
+      "alarm": {
+        "title": "That they won't be able to say something?",
+        "description": "Solutions for alarm and communication include alerts for sudden illness, two-way communication with video, and geofence functions that give you peace of mind when your loved ones are home or out.",
+        "button": "Solutions for alarm and communication"
+      },
+      "medical": {
+        "title": "For acute illness?",
+        "description": "Monitoring for heart problems, diabetes and regular measurements of breathing, blood pressure, sleep, blood sugar, body temperature and oxygen saturation. Automatic alerts for deviations.",
+        "button": "Solutions for medical follow-up"
+      },
+      "safety": {
+        "title": "For falls at home?",
+        "description": "Worried about falls in the bathroom, on the stairs or in the bedroom? Our discrete fall sensors automatically detect falls and send immediate alerts to you or healthcare personnel.",
+        "button": "Solutions for safety"
+      }
+    },
+    "guidance": {
+      "title": "Not sure what you need?",
+      "description": "Tell us about everyday life at home with your loved ones, and you'll get a non-binding proposal for solutions that are perfect for you.",
+      "button1": "Book free guidance",
+      "button2": "How others use it"
+    },
+    "whyChoose": {
+      "title": "Why choose us?",
+      "easySetup": "You don't need to be technical. If you've managed to hang up a picture, you can set this up.",
+      "security": "Our solutions are made for Norwegian homes and follow strict requirements for privacy and data security.",
+      "modular": "You can start simple and expand later if needs change.",
+      "noHiddenCosts": "Everything is without commitment and hidden startup costs."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "questions": [
+        {
+          "question": "Is it difficult to install?",
+          "answer": "No, it's as easy as hanging up a picture. We give you all necessary guidance and support during installation."
+        },
+        {
+          "question": "What does it cost?",
+          "answer": "Solutions start from approximately 299 NOK per month, depending on which sensors and services you choose."
+        },
+        {
+          "question": "Do we need internet?",
+          "answer": "Yes, internet is necessary for the systems to be able to send alerts and share data. We can help with suggestions if internet is not available."
+        },
+        {
+          "question": "Is the data secure?",
+          "answer": "Yes, all data is stored on servers in Norway and follows strict privacy requirements (GDPR and DPIA)."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Ready to find safety at home?",
+      "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+      "button": "Contact us today"
+    },
+    "footer": "[Footer]"
   }
 }
 

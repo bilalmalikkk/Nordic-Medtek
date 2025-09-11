@@ -138,6 +138,71 @@
     "pricing": {"title": "Priser og modeller", "p": "Enklere og mer forutsigbart med leie. Velg modellen som passer best."},
     "support": {"title": "Support og leveranse", "p": "Vi sørger for at alt fungerer hele veien – fra oppstart til drift."},
     "evidence": {"title": "Bevis og effekt", "p": "Dokumenterte resultater som skaper trygghet for brukere og beslutningstakere."}
+  },
+  "private": {
+    "hero": {
+      "title": "Ta vare på dine nærmeste - trygt, enkelt, og hjemme",
+      "description": "For deg som pårørende som trenger oppfølging av dine kjære hjemme. Våre unike sensorer oppdager automatisk uregelmessigheter knyttet til trygghet og sikkerhet, slik at du kan få varsling når det trengs.",
+      "button": "Bestill gratis veiledning"
+    },
+    "concerns": {
+      "title": "Bekymret for dine kjære?",
+      "alarm": {
+        "title": "For at de ikke får sagt fra?",
+        "description": "Løsninger for alarm og kommunikasjon inkluderer varsling ved plutselig sykdom, toveis kommunikasjon med video, og geofence-funksjoner som gir deg trygghet når dine kjære er hjemme eller ute.",
+        "button": "Løsninger for alarm og kommunikasjon"
+      },
+      "medical": {
+        "title": "For akutt sykdom?",
+        "description": "Overvåkning for hjerteproblemer, diabetes og regelmessige målinger av pust, blodtrykk, søvn, blodsukker, kroppstemperatur og oksygenmetning. Automatisk varsling ved avvik.",
+        "button": "Løsninger for medisinsk oppfølging"
+      },
+      "safety": {
+        "title": "For fall i hjemmet?",
+        "description": "Bekymring for fall på badet, i trappen eller på soverommet? Våre diskrete fallsensorer oppdager automatisk fall og sender umiddelbar varsling til deg eller helsepersonell.",
+        "button": "Løsninger for trygghet"
+      }
+    },
+    "guidance": {
+      "title": "Ikke sikker på hva dere trenger?",
+      "description": "Fortell oss om hverdagen hjemme med dine kjære, så får du et uforpliktende forslag til løsninger som passer akkurat for dere.",
+      "button1": "Bestill gratis veiledning",
+      "button2": "Hvordan andre bruker det"
+    },
+    "whyChoose": {
+      "title": "Hvorfor velge oss?",
+      "easySetup": "Du trenger ikke være teknisk. Har du klart å henge opp et bilde, klarer du å sette opp dette.",
+      "security": "Våre løsninger er laget for norske hjem og følger strenge krav til personvern og datasikkerhet.",
+      "modular": "Du kan starte enkelt og bygge ut senere hvis behovet endrer seg.",
+      "noHiddenCosts": "Alt er uten binding og skjulte oppstartskostnader."
+    },
+    "faq": {
+      "title": "Ofte stilte spørsmål",
+      "questions": [
+        {
+          "question": "Er det vanskelig å installere?",
+          "answer": "Nei, det er like enkelt som å henge opp et bilde. Vi gir deg all nødvendig veiledning og støtte under installasjonen."
+        },
+        {
+          "question": "Hva koster det?",
+          "answer": "Løsninger starter fra ca. 299 kroner per måned, avhengig av hvilke sensorer og tjenester du velger."
+        },
+        {
+          "question": "Må vi ha internett?",
+          "answer": "Ja, internett er nødvendig for at systemene skal kunne sende varsler og dele data. Vi kan hjelpe med forslag hvis internett ikke er tilgjengelig."
+        },
+        {
+          "question": "Er dataene trygge?",
+          "answer": "Ja, alle data lagres på servere i Norge og følger strenge personvernkrav (GDPR og DPIA)."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Klar for å finne tryggheten hjemme?",
+      "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+      "button": "Kontakt oss i dag"
+    },
+    "footer": "[Footer]"
   }
 }
 
