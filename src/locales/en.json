@@ -268,6 +268,78 @@
       "button": "Contact us today"
     },
     "footer": "[Footer]"
+  },
+  "company": {
+    "hero": {
+      "title": "Build tomorrow's care with us",
+      "description1": "NordicMedTek delivers solutions that provide security for users and relatives.",
+      "description2": "The technology is easy to implement. It gives you a product that can be sold with confidence.",
+      "button1": "Become a partner",
+      "button2": "Explore possibilities"
+    },
+    "whyCollaborate": {
+      "title": "Why collaborate with us",
+      "left": "Ready product sheet, demo kit and training that makes it easy to get started",
+      "right": "A product that builds trust with the end customer, because it works silently in the background and only alerts when necessary"
+    },
+    "whoCollaborate": {
+      "title": "Who we collaborate with",
+      "careEnvironments": {
+        "title": "Solutions for modern care environments",
+        "description": "For companies that deliver guard rooms and care technology.",
+        "link": "Read more"
+      },
+      "broaderAssortment": {
+        "title": "A wider assortment for your customers",
+        "description": "For resellers who want a reliable addition to their portfolio.",
+        "link": "Read more"
+      },
+      "competitiveAdvantage": {
+        "title": "Competitive advantage in a demanding market",
+        "description": "For private health and care providers who want to offer high quality and reduced resource consumption.",
+        "link": "Read more"
+      }
+    },
+    "benefits": {
+      "title": "Partnership benefits",
+      "items": [
+        "Documented technology that is ready for the market",
+        "Access to resources and materials that strengthen your sales",
+        "Training and support when you need it.",
+        "Opportunity to be part of a growing network within welfare technology"
+      ]
+    },
+    "cta": {
+      "title": "Do you want to help shape the future of care?",
+      "button": "Become a partner"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "questions": [
+        {
+          "question": "Is it difficult to install?",
+          "answer": "No. Most of our products you can mount yourself, as easy as hanging a picture. We show you how."
+        },
+        {
+          "question": "What does it cost?",
+          "answer": "Our solutions cost from approx. 299 kroner per month. It depends on how many sensors or services you choose."
+        },
+        {
+          "question": "Do we need internet?",
+          "answer": "Yes, for the systems to send alerts and share data, there must be internet at home. If you don't have it already, we can help you with suggestions."
+        },
+        {
+          "question": "Is the data safe?",
+          "answer": "Yes. All data is stored on servers in Norway and follows strict requirements for data privacy (GDPR and DPIA)."
+        }
+      ]
+    },
+    "finalCta": {
+      "title": "Ready to find safety at home?",
+      "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+      "button": "Contact us today"
+    },
+    "footer": "[Footer]"
   }
 }
 
