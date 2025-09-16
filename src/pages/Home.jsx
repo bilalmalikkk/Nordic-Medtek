@@ -51,7 +51,7 @@ export default function Home() {
 
       {/* Hvem er du Section */}
       <section className="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100 w-full">
-        <div className="w-full">
+        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.whoAreYou')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -143,7 +143,7 @@ export default function Home() {
 
       {/* Hvorfor - vårt formål Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full">
+        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.why.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -158,7 +158,7 @@ export default function Home() {
 
       {/* Hvordan - vår tilnærming Section */}
       <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="w-full">
+        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.how.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -260,7 +260,7 @@ export default function Home() {
 
       {/* Final CTA Section */}
       <section className="py-20 w-full bg-gradient-to-br from-orange-50 to-yellow-50">
-        <div className="w-full">
+        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="bg-white rounded-3xl shadow-2xl p-12 border-2 border-orange-200">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">{t('home.cta2.title')}</h2>

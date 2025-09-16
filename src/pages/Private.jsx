@@ -80,7 +80,7 @@ export default function Private() {
                     {t('private.concerns.alarm.description')}
                   </p>
                   <Link 
-                    to="/products" 
+                    to="/alarm-communication" 
                     className="group inline-flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     {t('private.concerns.alarm.button')}
@@ -104,7 +104,7 @@ export default function Private() {
                     {t('private.concerns.medical.description')}
                   </p>
                   <Link 
-                    to="/products" 
+                    to="/medical-followup" 
                     className="group inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     {t('private.concerns.medical.button')}
@@ -128,7 +128,7 @@ export default function Private() {
                     {t('private.concerns.safety.description')}
                   </p>
                   <Link 
-                    to="/products" 
+                    to="/safety-solutions" 
                     className="group inline-flex items-center justify-center bg-green-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     {t('private.concerns.safety.button')}

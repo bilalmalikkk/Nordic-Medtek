@@ -17,6 +17,483 @@
     "lang": "English"
   },
   "util": {"about": "Om oss", "demo": "Bestill demo", "contact": "Kontakt oss", "privacy": "Personvernerklæring"},
+  "alarmCommunication": {
+    "hero": {
+      "title": "Alarmknapper og trygghetsløsninger",
+      "subtitle": "Når hver sekund teller, vil du være sikker på at hjelpen er bare ett knappetrykk unna.",
+      "button1": "Bestill gratis veiledning",
+      "button2": "Hvordan andre bruker det"
+    },
+    "whenEverySecond": {
+      "title": "Når hver sekund teller",
+      "text1": "Du har kanskje tenkt tanken mer enn én gang. Hva hvis pappa plutselig får smerter i brystet, eller mamma svimer av på kjøkkenet? Hvor raskt får de sagt fra, og hva hvis ingen er der til å høre?",
+      "text2": "Det er en vond tanke å bære på. Våre alarmknapper og trygghetsløsninger sørger for at mor eller far kan få tak i deg eller helsepersonell med ett enkelt trykk, enten de er hjemme eller ute."
+    },
+    "howAlarmButtonsWork": {
+      "title": "Hvordan virker alarmknappene?",
+      "text1": "De bæres som regel rundt halsen eller i lommen. Hvis noe skjer, trykker de bare på knappen, og blir umiddelbart koblet til en forhåndsvalgt kontakt, for eksempel deg, en annen pårørende eller helsepersonell.",
+      "text2": "Alarmsystemet kan settes opp slik at det først prøver å nå deg, deretter andre pårørende, og til slutt helsepersonell hvis ingen svarer.",
+      "text3": "Med to-veis kommunikasjon kan de snakke direkte med hjelp uten å måtte finne telefonen.",
+      "orderButton": "Bestill knapp"
+    },
+    "whereDoesThisFit": {
+      "title": "Hvor passer dette best?",
+      "outdoor": "Ute, for eldre som fortsatt liker å gå tur eller handle selv. Med GPS og mobilnett kan du se hvor de er, og få beskjed hvis noe skjer.",
+      "home": "Hjemme, som en trygghet på kjøkkenet, i stua eller på badet. Ett trykk, og hjelpen er i gang.",
+      "dementia": "For personer med demens eller hukommelsesproblemer, der en trygghetsknapp gir en ekstra sikkerhet, både for dem og deg."
+    },
+    "whatAboutFalls": {
+      "title": "Hva med fall eller hvis de ikke får trykket?",
+      "text1": "En alarmknapp er fantastisk når de klarer å trykke selv. Men hvis de faller og ikke rekker det, kan det være smart å kombinere med en automatisk fallsensor. Da får du varsling også hvis de er svake, forvirret eller mister bevisstheten.",
+      "text2": "Mange velger nettopp denne kombinasjonen for å være helt sikre."
+    },
+    "whyChooseOurAlarms": {
+      "title": "Hvorfor velge våre alarmer?",
+      "points": [
+        "Virker både inne og ute, overalt hvor det er mobildekning.",
+        "Gir deg varsling med en gang, ikke timer senere.",
+        "Tilpasset deres behov: varsling kan gå til deg, andre pårørende eller direkte til helsepersonell.",
+        "Trygg to-veis kommunikasjon, de får hjelp uten å lete etter telefonen.",
+        "Ingen binding eller oppstartskostnad, og kan utvides med fallsensorer eller medisinsk overvåkning senere."
+      ]
+    },
+    "howAlertingWorks": {
+      "title": "Slik virker varslingen",
+      "steps": [
+        {
+          "title": "Leie eller kjøp av utstyr",
+          "text": "Kunden får tilgang til utstyret enten gjennom leie eller kjøp."
+        },
+        {
+          "title": "Valg av mottaker",
+          "text": "Kunden bestemmer om alarmene skal gå direkte til en vaktsentral (mot ekstern kostnad) eller til egne kontakter (for eksempel pårørende eller naboer)."
+        },
+        {
+          "title": "Når alarmen utløses",
+          "text": "Dersom det er avtale med vaktsentral, går alarmen dit og håndteres av dem. Hvis alarmen går til pårørende, vil den først varsle hovedkontakt."
+        },
+        {
+          "title": "Fallback-prinsippet",
+          "text": "Hvis hovedkontakt ikke svarer, går alarmen videre til neste kontakt (fallback 1). Dersom heller ikke den kontakten svarer, går den videre til fallback 2, og så videre. Den siste fallback kan være vaktsentral, dersom det finnes en avtale."
+        },
+        {
+          "title": "Tiltak",
+          "text": "Når enten vaktsentral eller en pårørende mottar og besvarer alarmen, vil de iverksette nødvendige tiltak. Dette kan være å kontakte helsepersonell, rykke ut selv, eller ta annen nødvendig handling."
+        }
+      ]
+    },
+    "typicalPrice": {
+      "title": "Typisk pris",
+      "text": "Alarmknapp med GPS og to-veis tale koster fra rundt 299 kroner i måneden, avhengig av hva slags oppsett dere ønsker. Ingen binding eller skjulte kostnader, og du kan alltid bygge ut med flere sensorer eller medisinsk overvåkning senere.",
+      "disclaimer": "Ved bestilling er det et depositum på 800 for sensoren, som blir avskrevet på månedsleie",
+      "button1": "Bestill leie av fallsensor",
+      "button2": "Kjøp fallsensor"
+    },
+    "whyRentInstead": {
+      "title": "Derfor bør du leie i stedet for å kjøpe",
+      "intro": "Medisinske sensorer og løsninger er kostbare investeringer hvis du kjøper dem. For private personer er det sjelden behov for å eie utstyret - det trengs bare så lenge den som trenger ekstra trygghet, faktisk trenger det.",
+      "subtitle": "Når du leier fra NordicMedTek får du:",
+      "flexibility": {
+        "title": "Fleksibilitet:",
+        "text": "Du betaler kun for den perioden du faktisk trenger utstyret."
+      },
+      "simplerLife": {
+        "title": "Enklere hverdag:",
+        "text": "Vi tar oss av oppsett, vedlikehold og retur når behovet ikke lenger er der."
+      },
+      "financialSecurity": {
+        "title": "Økonomisk trygghet:",
+        "text": "Du unngår å binde opp store summer i utstyr som ellers kan stå ubrukt."
+      },
+      "conclusion": "Mange konkurrenter tilbyr kun kjøp, men NordicMedTek mener leie er den mest fornuftige og milde løsningen for private. Når behovene endres, kan leien enkelt avsluttes og produkter returneres - du betaler kun for det du trenger og får tilgang til moderne, pålitelige løsninger uten unødvendig risiko."
+    },
+    "whatDoIDoNow": {
+      "title": "Hva gjør jeg nå",
+      "text": "Fortell oss litt om situasjonen hjemme, så hjelper vi deg å finne en løsning som passer.",
+      "button": "Kontakt oss i dag"
+    },
+    "stillUnsure": {
+      "title": "Fortsatt usikker?",
+      "text": "Vi kan hjelpe deg med å finne riktig løsning eller å svare på spørsmål du lurer på.",
+      "button1": "Ring oss på 51 30 30 66",
+      "button2": "Book gratis veiledning"
+    },
+    "faq": {
+      "title": "Ofte stilte spørsmål",
+      "items": [
+        {
+          "question": "Virker alarmen bare hjemme?",
+          "answer": "Nei, vi har modeller med 4G og GPS som virker overalt med mobildekning, på butikken, på tur eller hos naboen."
+        },
+        {
+          "question": "Hva skjer når de trykker på knappen?",
+          "answer": "Alarmen ringer opp forhåndsvalgte kontaktpersoner eller et vaktrom. Med to-veis tale kan de snakke direkte med hjelp uten å måtte finne telefon."
+        },
+        {
+          "question": "Hva hvis de ikke rekker å trykke?",
+          "answer": "Avanserte modeller har innebygget fallalarm som utløses automatisk hvis de faller."
+        },
+        {
+          "question": "Er dataene trygge?",
+          "answer": "Ja. All data håndteres i tråd med GDPR og lagres på servere i Norge."
+        },
+        {
+          "question": "Er dette vanskelig å sette opp?",
+          "answer": "Nei. Alarmene er laget for å være like enkle å bruke som en liten fjernkontroll. Vi setter opp systemet sammen med deg, slik at du vet at alt virker. All data håndteres trygt, lagres på servere i Norge, og følger strenge regler for personvern."
+        }
+      ]
+    },
+    "readyForQuickHelp": {
+      "title": "Klar for å gi dem muligheten til rask hjelp?",
+      "text": "Fortell oss litt om hvordan situasjonen er hjemme hos mor eller far, så finner vi sammen ut hva som passer best. Det er helt uforpliktende.",
+      "button1": "Book gratis veiledning",
+      "button2": "Eller ring oss på 51 30 30 66"
+    },
+    "nextSteps": {
+      "title": "Neste steg",
+      "text": "Ikke vent til etter et fall. La oss hjelpe deg å sikre hverdagen til mor eller far, før noe skjer.",
+      "button": "Kontakt oss i dag"
+    },
+    "moreTechnical": {
+      "title": "Vil du se mer teknisk?",
+      "text1": "Ønsker du å lese mer om de konkrete sensorene som brukes for å oppdage fall, hvordan de monteres og hvilke varianter som finnes?",
+      "text2": "Her finner du en oversikt over produktene som passer for trygghet og fallsikring hjemme. Du kan også se hvordan disse sensorene kan kombineres med alarmknapper eller medisinsk oppfølging, for å få en komplett løsning i hjemmet.",
+      "button": "Se produkter for trygghet og fallsikring hjemme"
+    }
+  },
+  "medicalFollowup": {
+    "hero": {
+      "title": "Medisinsk oppfølging hjemme",
+      "subtitle1": "Unngå at et fall endrer alt.",
+      "subtitle2": "Våre sensorer oppdager fall helt automatisk.",
+      "button1": "Bestill gratis veiledning",
+      "button2": "Hvordan andre bruker det",
+      "secondaryTitle": "Trygghet for deg og god helseoppfølging for dem",
+      "description1": "Du kan bekymre deg for at dine eldre foreldre blir skrøpelige, spesielt hvis de allerede har helseproblemer som hjerteproblemer, pustevansker eller diabetes. Dette øker bekymringen din.",
+      "question1": "Hvordan vet du at alt er i orden mellom legebesøkene?",
+      "question2": "Hva hvis verdiene plutselig forverrer seg, og ingen oppdager det i tide?",
+      "description2": "Våre løsninger for medisinsk oppfølging gir deg og familien en helt ny trygghet. De følger viktige helseverdier automatisk, rett fra stua hjemme, og deler dataen med deg, eller direkte med helsepersonell hvis dere ønsker det."
+    },
+    "whenEverySecond": {
+      "title": "Når helseovervåking betyr noe",
+      "text1": "Du har kanskje tenkt tanken mer enn én gang. Hva hvis pappas blodtrykk stiger plutselig, eller mammas blodsukker synker farlig lavt? Hvor raskt kan du oppdage disse endringene, og hva hvis ingen er der til å overvåke?",
+      "text2": "Det er en bekymring som veier på mange familier. Våre medisinske overvåkningsløsninger sikrer kontinuerlig sporing av vitale tegn, med automatiske varsler når intervensjon trengs."
+    },
+    "howMedicalMonitoring": {
+      "title": "Hvordan virker medisinsk oppfølging hjemme?",
+      "text1": "Sensorer kan plasseres under madrassen, på stolen der de sitter mest eller kobles til kroppen med enkle måleinstrument. Disse måler helt kontaktløst eller med små enheter som brukes bare noen sekunder av gangen.",
+      "subtitle": "Typisk kan de måle:",
+      "measurement1": "Puls og pustemønster",
+      "measurement2": "Blodtrykk og oksygenmetning",
+      "measurement3": "Blodsukker og temperatur",
+      "measurement4": "Søvn og avvik som kan tyde på at noe er galt",
+      "text2": "Alt dette går automatisk inn i systemet vårt, som du og legen kan følge via en enkel portal. Skjer det noe unormalt, kan det varsles direkte.",
+      "imageAlt1": "Sensorer og plasseringer for medisinsk overvåking",
+      "imageAlt2": "Systemoversikt over medisinske overvåkningsenheter"
+    },
+    "combinedWithEasyContact": {
+      "title": "Kombinert med enkel kontakt med legen og familien",
+      "text1": "For mange eldre er det trygt å vite at både helse og kontakt med omverdenen tas vare på samtidig. Med easeBlink få dedikert skjerm hjemme som gjør at mor eller far en",
+      "feature1": "ha videokonsultasjoner med fastlegen, som samler målinger av puls, pust og blodtrykk,",
+      "feature2": "målinger av puls, pust og blodtrykk,",
+      "feature3": "motta meldinger og bilder fra familien,",
+      "feature4": "og ha én knapp å trykke på for å snakke med dere eller helsepersonell.",
+      "text2": "Dette gir både medisinsk trygghet og sosial kontakt i samme løsning.",
+      "imageAlt": "Kombinert medisinsk overvåking og familiekommunikasjonssystem"
+    },
+    "whereDoesThisFitBest": {
+      "title": "Hvor passer dette best?",
+      "useCase1": {
+        "title": "For eldre med kjent hjertesykdom eller pustevansker...",
+        "description": "For eldre med kjent hjertesykdom eller pustevansker, der det er viktig å oppdage endringer tidlig.",
+        "alt": "Eldre mann med brystsmerter og hjerteovervåking"
+      },
+      "useCase2": {
+        "title": "Etter sykehusopphold...",
+        "description": "Etter sykehusopphold, for eksempel etter operasjon eller infeksjon, når man gjerne vil følge ekstra godt med.",
+        "alt": "Person i seng med medisinske overvåkningsenheter"
+      },
+      "useCase3": {
+        "title": "Ved diabetes eller blodtrykksproblemer...",
+        "description": "Ved diabetes eller blodtrykksproblemer, slik at man kan justere medisiner raskere.",
+        "alt": "Eldre mann som måler blodtrykk"
+      },
+      "generalBenefit": "Dette gir både deg og dem ro i hverdagen, og reduserer behovet for mange unødvendige turer til legekontoret.",
+      "whyChoose": {
+        "title": "Hvorfor velge dette?",
+        "point1": "Målingene skjer helt automatisk, uten at de må huske å gjøre noe selv i hverdagen.",
+        "point2": "Data kan deles direkte med fastlegen, som da kan justere medisiner eller be dem komme inn før noe utvikler seg.",
+        "point3": "Alt foregår hjemme, i deres trygge omgivelser, uten stress og reiser."
+      }
+    },
+    "howMedicalAlertingWorks": {
+      "title": "Slik virker varslingen",
+      "steps": [
+        {
+          "title": "Leie eller kjøp av utstyr",
+          "text": "Kunden får tilgang til utstyret enten gjennom leie eller kjøp."
+        },
+        {
+          "title": "Valg av mottaker",
+          "text": "Kunden bestemmer om alarmene skal gå direkte til en vaktsentral (mot ekstern kostnad) eller til egne kontakter (for eksempel pårørende eller naboer)."
+        },
+        {
+          "title": "Når alarmen utløses",
+          "text": "Dersom det er avtale med vaktsentral, går alarmen dit og håndteres av dem. Hvis alarmen går til pårørende, vil den først varsle hovedkontakt."
+        },
+        {
+          "title": "Fallback-prinsippet",
+          "text": "Hvis hovedkontakt ikke svarer, går alarmen videre til neste kontakt (fallback 1). Dersom heller ikke den kontakten svarer, går den videre til fallback 2, og så videre. Den siste fallback kan være vaktsentral, dersom det finnes en avtale."
+        },
+        {
+          "title": "Tiltak",
+          "text": "Når enten vaktsentral eller en pårørende mottar og besvarer alarmen, vil de iverksette nødvendige tiltak. Dette kan være å kontakte helsepersonell, rykke ut selv, eller ta annen nødvendig handling."
+        }
+      ]
+    },
+    "typicalPrice": {
+      "title": "Typisk pris for medisinsk overvåking",
+      "text": "Medisinske overvåkningsløsninger starter fra rundt 499 kroner per måned, avhengig av antall sensorer og overvåkningsparametere som trengs. Ingen binding eller skjulte kostnader, og du kan alltid justere overvåkningsnivået etter hvert som helsebehovene endres.",
+      "disclaimer": "Ved bestilling er det et depositum for de medisinske sensorer, som vil bli trukket fra månedlig leie.",
+      "button1": "Bestill medisinsk overvåking leie",
+      "button2": "Kjøp medisinsk overvåkingsutstyr"
+    },
+    "whyRentInstead": {
+      "title": "Hvorfor leie medisinsk overvåkingsutstyr?",
+      "intro": "Medisinsk overvåkingsutstyr representerer en betydelig investering hvis det kjøpes direkte. For de fleste familier gir leie den fleksibiliteten og kostnadseffektiviteten som trengs for langsiktig helseovervåking.",
+      "subtitle": "Når du leier medisinsk overvåking fra NordicMedTek får du:",
+      "flexibility": {
+        "title": "Fleksibilitet:",
+        "text": "Juster overvåkningsparametere og utstyr etter hvert som helsebehovene endres over tid."
+      },
+      "simplerLife": {
+        "title": "Forenklet administrasjon:",
+        "text": "Vi håndterer utstyrsopprettholdelse, oppdateringer og teknisk støtte slik at du kan fokusere på helse."
+      },
+      "financialSecurity": {
+        "title": "Kostnadsprediktabilitet:",
+        "text": "Faste månedlige kostnader uten uventede vedlikeholds- eller oppgraderingsutgifter."
+      },
+      "conclusion": "Medisinsk overvåking er mest effektiv når den kan tilpasse seg endrede helsebehov. Leie lar deg få tilgang til den nyeste teknologien uten eierskapsbyrden, og sikrer at dine kjære alltid har den mest passende overvåkningsløsningen."
+    },
+    "whatDoIDoNow": {
+      "title": "Hva gjør jeg nå?",
+      "text": "Fortell oss om dine helseovervåkningsbehov, og vi hjelper deg med å finne den rette medisinske overvåkningsløsningen.",
+      "button": "Kontakt oss i dag"
+    },
+    "stillUnsure": {
+      "title": "Fortsatt usikker på medisinsk overvåking?",
+      "text": "Vi kan hjelpe deg med å forstå hvordan medisinsk overvåking fungerer og avgjøre om det er riktig for din situasjon.",
+      "button1": "Ring oss på 51 30 30 66",
+      "button2": "Bestill gratis veiledning"
+    },
+    "faq": {
+      "title": "Ofte stilte spørsmål om medisinsk overvåking",
+      "items": [
+        {
+          "question": "Hvor nøyaktige er de medisinske sensorene?",
+          "answer": "Våre medisinske sensorer er klinisk validerte og gir nøyaktige avlesninger sammenlignbare med tradisjonelle medisinske enheter. De er designet for kontinuerlig overvåking i hjemmemiljøer."
+        },
+        {
+          "question": "Hva skjer hvis sensorene oppdager et problem?",
+          "answer": "Systemet varsler automatisk helsepersonell eller utpegede kontakter med detaljert informasjon om de bekymringsfulle avlesningene, og muliggjør rask medisinsk intervensjon."
+        },
+        {
+          "question": "Kan sensorene bæres komfortabelt hele dagen?",
+          "answer": "Ja, våre sensorer er designet for å være lette, diskrete og komfortable for kontinuerlig bruk uten å forstyrre daglige aktiviteter."
+        },
+        {
+          "question": "Er de medisinske dataene sikre og private?",
+          "answer": "Absolutt. Alle medisinske data er krypterte, lagret sikkert på norske servere, og håndteres i streng overensstemmelse med GDPR og medisinske personvernregler."
+        },
+        {
+          "question": "Hvordan integrerer dette med eksisterende helsevesen?",
+          "answer": "Vårt system kan integreres med helsepersonellsystemer, og lar medisinsk personell få tilgang til overvåkningsdata og ta informerte behandlingsbeslutninger."
+        }
+      ]
+    },
+    "readyForQuickHelp": {
+      "title": "Klar for å sikre trygghet og rask hjelp?",
+      "text": "Fortell oss litt om hvordan situasjonen ser ut hjemme hos mor eller far, så finner vi løsningen som passer best.",
+      "button1": "Bestill gratis veiledning",
+      "button2": "Eller ring oss på 51 30 30 66"
+    },
+    "nextSteps": {
+      "title": "Neste steg",
+      "text": "Ikke vent på en helsekrise. La oss hjelpe deg med å implementere proaktiv helseovervåking for dine kjære.",
+      "button": "Kontakt oss i dag"
+    },
+    "moreTechnical": {
+      "title": "Vil du se mer tekniske detaljer?",
+      "text1": "Vil du lese mer om de spesifikke medisinske sensorene som brukes til overvåking, hvordan de fungerer, og hvilke helseparametere de kan spore?",
+      "text2": "Her finner du detaljert informasjon om våre medisinske overvåkningsprodukter, inkludert spesifikasjoner, nøyaktighetsdata og integrasjonsmuligheter med helsesystemer.",
+      "button": "Se medisinske overvåkningsprodukter og spesifikasjoner"
+    }
+  },
+  "safetySolutions": {
+    "hero": {
+      "title": "Fallsensorer og trygghet hjemme",
+      "subtitle": "Unngå at et fall endrer alt. Våre sensorer oppdager fall helt automatisk.",
+      "button1": "Bestill fallsensor",
+      "button2": "Hvordan andre bruker det",
+      "secondaryTitle": "Unngå at et fall endrer alt",
+      "description1": "Et lite fall kan få store konsekvenser. Et hoftebrudd eller timer alene på gulvet kan gjøre at mor eller far aldri helt kommer seg igjen. Kanskje du allerede har merket at balansen svikter litt oftere, eller at de virker mer ustø i trappa eller på badet.",
+      "description2": "Mange eldre blir også redde etter et fall. De trekker seg tilbake og våger mindre, og livskvaliteten faller sammen med tryggheten. Som pårørende bærer du på en uro, hva hvis det skjer når ingen er der?",
+      "description3": "Våre fallsensorer kan ikke forhindre alle fall, men de sikrer at et fall aldri blir liggende uoppdaget."
+    },
+    "whenEverySecond": {
+      "title": "Når fall skjer uventet",
+      "text1": "Du har kanskje bekymret deg for det mer enn én gang. Hva hvis mamma faller på badet, eller pappa snubler på trappen? Hvor raskt kan de få hjelp, og hva hvis ingen er der til å høre dem?",
+      "text2": "Det er en bekymring som veier på mange familier. Våre diskrete fallsensorer oppdager automatisk fall og sender umiddelbare varsler til deg eller helsepersonell, og sikrer at hjelp alltid er tilgjengelig."
+    },
+    "howFallSensorsWork": {
+      "title": "Hvordan virker fallsensorene?",
+      "text1": "Våre sensorer bruker radar eller infrarød teknologi for å oppdage fall automatisk, og kan plasseres i stue, soverom, trapper eller på bad. De fanger opp bevegelsesmønstre og varsler når noe ikke stemmer, for eksempel hvis noen faller og ikke reiser seg igjen.",
+      "subtitle": "Dette betyr:",
+      "benefit1": "Mor eller far trenger ikke å huske å ha på seg noe.",
+      "benefit2": "Du får beskjed med én gang, og kan kontakte dem eller sende hjelp.",
+      "benefit3": "Systemet kan også varsle helsepersonell direkte hvis dere ønsker det.",
+      "text2": "Når et fall oppdages, sender systemet umiddelbart varsler til forhåndsvalgte kontakter eller helsepersonell. Sensorene kan skille mellom normale aktiviteter og faktiske fall for å redusere falske alarmer.",
+      "imageAlt1": "Fallsensor illustrasjon",
+      "imageAlt2": "Varsling til helsepersonell illustrasjon"
+    },
+    "whereDoesThisFitBest": {
+      "title": "Hvor passer fallsensorer best?",
+      "useCase1": {
+        "title": "Baderomssikkerhet",
+        "description": "Baderomssikkerhet: Den vanligste plasseringen for fall, våre sensorer gir umiddelbar deteksjon og varsling når glid eller fall skjer i våte, glatte forhold.",
+        "alt": "Baderom fallsensor illustrasjon"
+      },
+      "useCase2": {
+        "title": "Soveromsovervåking",
+        "description": "Soveromsovervåking: Oppdag fall som skjer når man kommer inn eller ut av sengen, eller under nattlige aktiviteter, og gir trygghet for både beboere og omsorgspersoner.",
+        "alt": "Soverom fallsensor illustrasjon"
+      },
+      "useCase3": {
+        "title": "Trappesikkerhet",
+        "description": "Trappesikkerhet: Overvåk trapper for fall og gi øyeblikkelige varsler når noen snubler eller faller på trinn, og sikrer rask assistanse når mobilitet er kompromittert.",
+        "alt": "Trapp fallsensor illustrasjon"
+      },
+      "generalBenefit": "Flere velger å ha sensorer i flere rom, for å dekke hele hjemmet og slippe bekymringen for at et fall skjer i en «blindsone». Alle våre sensorer er diskrete og plasseres på vegg eller i tak. Har du montert et bilde, klarer du fint dette selv."
+    },
+    "whyChooseOurFallSensors": {
+      "title": "Hvorfor velge våre fallsensorer?",
+      "points": [
+        "Automatisk falldeteksjon, uavhengig av om brukeren husker en alarm.",
+        "Umiddelbare varsler til brukeren eller helsepersonell.",
+        "Tilkobling til sikkerhetsalarmer, videoskjermer eller medisinsk overvåking for en komplett løsning.",
+        "Sikker datalagring i Norge, i henhold til strenge personvernkrav."
+      ]
+    },
+    "familyContactSecurity": {
+      "title": "Også trygghet i form av kontakt med familien",
+      "description": "Denne seksjonen inkluderer hvordan fallsensorer forbedrer sikkerheten gjennom familiær kontakt. Den introduserer \"easeBlink,\" en skjerm med brukervennlige knapper som lar eldre foreldre motta bilder og meldinger fra familie og enkelt foreta videoanrop, og gir en følelse av trygghet selv når de bor alene.",
+      "imageAlt": "Familiekontaktgrensesnitt som viser bilder og meldinger"
+    },
+    "whatDistinguishesFromAlarmButton": {
+      "title": "Hva skiller dette fra en alarmknapp?",
+      "description": "Alarmknapper er avhengige av at brukeren husker å bære dem og er i stand til å trykke på dem. I motsetning til dette opererer fallsensorer autonomt, og varsler umiddelbart hvis noe skjer, selv om brukeren er svak, forvirret eller ikke i stand til å trykke på en knapp. Dette gir et ekstra sikkerhetslag utover en alarmknapp."
+    },
+    "howSafetyAlertingWorks": {
+      "title": "Hvordan virker trygghetsvarsling",
+      "steps": [
+        {
+          "title": "Falldeteksjon",
+          "text": "Sensorer overvåker kontinuerlig etter fallmønstre og plutselige påvirkninger i utpegede områder av hjemmet."
+        },
+        {
+          "title": "Varslingsgenerering",
+          "text": "Når et fall oppdages, genererer systemet umiddelbart varsler til forhåndsvalgte kontakter eller helsepersonell."
+        },
+        {
+          "title": "Kontaktvarsling",
+          "text": "Varsler sendes via flere kanaler - telefonsamtaler, tekstmeldinger og app-varsler for å sikre at noen nås raskt."
+        },
+        {
+          "title": "Responskoordinering",
+          "text": "Systemet kan koordinere med helsepersonell eller nødetjenester hvis umiddelbar medisinsk oppmerksomhet trengs."
+        },
+        {
+          "title": "Oppfølgingsovervåking",
+          "text": "Etter et varsel fortsetter systemet overvåkningen for å sikre personens sikkerhet og kan gi tilleggsassistanse hvis det trengs."
+        }
+      ]
+    },
+    "typicalPrice": {
+      "title": "Typisk pris for fallsensorer",
+      "text": "Fallsensorløsninger starter fra rundt 399 kroner per måned, avhengig av antall sensorer og områder som skal overvåkes. Ingen binding eller skjulte kostnader, og du kan alltid justere overvåkningsdekningen etter hvert som behovene endres.",
+      "disclaimer": "Ved bestilling er det et depositum for fallsensorene, som vil bli trukket fra månedlig leie.",
+      "button1": "Bestill fallsensor leie",
+      "button2": "Kjøp fallsensorutstyr"
+    },
+    "whyRentInstead": {
+      "title": "Hvorfor leie fallsensorutstyr?",
+      "intro": "Fallsensorutstyr representerer en betydelig investering hvis det kjøpes direkte. For de fleste familier gir leie den fleksibiliteten og kostnadseffektiviteten som trengs for omfattende hjemmesikkerhetsovervåking.",
+      "subtitle": "Når du leier fallsensorer fra NordicMedTek får du:",
+      "flexibility": {
+        "title": "Fleksibilitet:",
+        "text": "Juster sensorplassering og dekning etter hvert som sikkerhetsbehovene endres eller personens mobilitet endres over tid."
+      },
+      "simplerLife": {
+        "title": "Forenklet administrasjon:",
+        "text": "Vi håndterer sensorinstallasjon, vedlikehold og teknisk støtte slik at du kan fokusere på sikkerhet og trygghet."
+      },
+      "financialSecurity": {
+        "title": "Kostnadsprediktabilitet:",
+        "text": "Faste månedlige kostnader uten uventede vedlikeholds-, reparasjons- eller oppgraderingsutgifter."
+      },
+      "conclusion": "Fallforebygging er mest effektiv når den kan tilpasse seg endrede behov og hjemmelayouts. Leie lar deg få tilgang til den nyeste sensorteknologien uten eierskapsbyrden, og sikrer at dine kjære alltid har den mest passende sikkerhetsovervåkningsløsningen."
+    },
+    "whatDoIDoNow": {
+      "title": "Hva gjør jeg nå?",
+      "text": "Fortell oss om dine falltrygghetsbekymringer, og vi hjelper deg med å finne den rette fallsensorløsningen for hjemmet ditt.",
+      "button": "Kontakt oss i dag"
+    },
+    "stillUnsure": {
+      "title": "Fortsatt usikker på fallsensorer?",
+      "text": "Vi kan hjelpe deg med å forstå hvordan fallsensorer fungerer og avgjøre om de er riktige for dine sikkerhetsbehov.",
+      "button1": "Ring oss på 51 30 30 66",
+      "button2": "Bestill gratis veiledning"
+    },
+    "faq": {
+      "title": "Ofte stilte spørsmål om fallsensorer",
+      "items": [
+        {
+          "question": "Må mor eller far ha på seg noe?",
+          "answer": "Nei. Det er hele poenget. Sensorene oppdager fall automatisk, helt uten at de må huske en knapp eller et armbånd."
+        },
+        {
+          "question": "Er det vanskelig å montere?",
+          "answer": "Nei. Har du klart å henge opp et bilde, klarer du dette. Vi sender med enkel veiledning."
+        },
+        {
+          "question": "Hva om de bare setter seg raskt ned, vil det utløse alarm?",
+          "answer": "Sensorene er laget for å skille mellom normale bevegelser og fall, slik at det ikke kommer unødvendige alarmer."
+        },
+        {
+          "question": "Er dataene trygge?",
+          "answer": "Ja. All data lagres i Norge, og vi følger GDPR og DPIA slik at du kan være trygg på personvernet."
+        }
+      ]
+    },
+    "readyForQuickHelp": {
+      "title": "Klar for å sikre trygghet og rask hjelp?",
+      "text": "Fortell oss litt om hvordan situasjonen ser ut hjemme hos mor eller far, så finner vi løsningen som passer best.",
+      "button1": "Bestill gratis veiledning",
+      "button2": "Eller ring oss på 51 30 30 66"
+    },
+    "nextSteps": {
+      "title": "Neste steg",
+      "text": "Ikke vent på at et fall skal skje. La oss hjelpe deg med å implementere proaktiv falltrygghetsovervåking for dine kjære.",
+      "button": "Kontakt oss i dag"
+    },
+    "moreTechnical": {
+      "title": "Vil du se mer tekniske detaljer?",
+      "text1": "Vil du lese mer om den spesifikke fallsensorteknologien som brukes, hvordan sensorene installeres, og hvilke typer fall de kan oppdage?",
+      "text2": "Her finner du detaljert informasjon om våre fallsensorprodukter, inkludert tekniske spesifikasjoner, installasjonskrav og integrasjonsmuligheter med andre sikkerhetssystemer.",
+      "button": "Se fallsensorprodukter og spesifikasjoner"
+    }
+  },
   "hero": {
     "title1": "Lev trygt hjemme, lenger",
     "title2": "",
@@ -103,6 +580,13 @@
       "button": "Kontakt oss i dag"
     },
     "footer": "[Footer]"
+  },
+  "guidance": {
+    "hero": {
+      "title": "Finn den hjelpen du trenger. Vi er bare en samtale unna",
+      "subtitle": "Vi tilbyr gratis veiledning, møter og uforpliktende kontakt. Velg det som passer deg best.",
+      "imageAlt": "Eldre mann som snakker i telefon med videooppkall"
+    }
   },
   "help": {
     "heading": "Hvordan vi kan hjelpe",
@@ -266,6 +750,173 @@
       "title": "Klar for å finne tryggheten hjemme?",
       "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
       "button": "Kontakt oss i dag"
+    },
+    "footer": "[Footer]"
+  },
+  "fallalarm": {
+    "hero": {
+      "title": "Fallalarmer som oppdager uten å kreve noe av brukeren",
+      "description": "Guardian-serien gir trygghet gjennom kontaktløse sensorer som oppdager fall og kritiske hendelser - uten kamera og uten at brukeren må bære noe.",
+      "button1": "Se produktene",
+      "button2": "Bestill demo eller pilot",
+      "imageCaption": "Eldre person som sover rolig i en seng, mens en liten sensor på veggen overvåker rommet diskret"
+    },
+    "whyGuardian": {
+      "sectionTitle": "Hvorfor Guardian-serien?",
+      "title": "Trygghet uten inngrep i hverdagen",
+      "description": "Mange fall skjer når ingen er til stede, og tradisjonelle alarmer krever at brukeren bærer en knapp eller klokke. Guardian-serien oppdager hendelser automatisk, med sensorer som jobber stille i bakgrunnen, bevarer personvernet, og varsler når noe skjer.",
+      "feature1": {
+        "title": "Kontaktløs",
+        "description": "Ingen bæring eller knapp å huske."
+      },
+      "feature2": {
+        "title": "Personvern",
+        "description": "Radar/IR-teknologi, aldri kamera."
+      },
+      "feature3": {
+        "title": "Integrasjon",
+        "description": "Kan kobles til både kommunale alarmsentraler og pårørende."
+      }
+    },
+    "products": {
+      "sectionTitle": "Produktene i serien",
+      "title": "Velg riktig løsning for dine behov",
+      "guardianWall": {
+        "title": "Guardian Wall",
+        "description": "Veggmontert sensor som oppdager fall og unormale bevegelser.",
+        "bestFor": "Best for stue og mindre rom."
+      },
+      "guardianWallPro": {
+        "title": "Guardian Wall Pro",
+        "description": "Utvidet veggmodell med mer avansert hendelsesgjenkjenning og integrasjon mot medisinske systemer.",
+        "bestFor": "Best for rom der helsetilstanden følges tett."
+      },
+      "guardianCeiling": {
+        "title": "Guardian Ceiling",
+        "description": "Takmontert sensor med bred dekning av hele rommet.",
+        "bestFor": "Best for soverom og fellesarealer."
+      },
+      "guardianCeilingPro": {
+        "title": "Guardian Ceiling Pro",
+        "description": "Kombinerer fallovervåkning med registrering av vitale mønstre (ballistokardiografi).",
+        "bestFor": "Best for brukere med høy risiko eller behov for tett medisinsk oppfølging."
+      }
+    },
+    "completePackage": {
+      "title": "Hva en komplett pakke består av",
+      "subtitle": "Fra sensor til tiltak - alt i én løsning",
+      "description": "En Guardian-installasjon kan settes opp hjemme eller i kommunen, og består av:",
+      "component1": {
+        "title": "Sensorer",
+        "description": "Vegg- eller takmontert etter behov."
+      },
+      "component2": {
+        "title": "VitalHub (CoreHub)",
+        "description": "Samler inn data og sender sikkert til sky eller alarmsentral."
+      },
+      "component3": {
+        "title": "Alarmmottak",
+        "description": "Varsling til kommune, pårørende eller vaktsentral."
+      },
+      "component4": {
+        "title": "Fallback-struktur",
+        "description": "Flere kontakter i rekkefølge hvis første ikke svarer."
+      },
+      "component5": {
+        "title": "Support og drift",
+        "description": "Oppsett, service og enkel returordning ved leie."
+      }
+    },
+    "whoIsVital": {
+      "title": "For hvem passer Vital-serien?",
+      "subtitle": "Trygghet for alle som har ansvar",
+      "relatives": {
+        "title": "Pårørende",
+        "description": "Oppdager fall selv når du ikke er der. Ingen kamera, ingen knapp"
+      },
+      "municipality": {
+        "title": "Kommunen",
+        "description": "Bedre oversikt og færre manuelle tilsyn. Integreres med eksisterende systemer"
+      },
+      "partners": {
+        "title": "Partnere",
+        "description": "Plug-and-play sensorer med åpen API. Lav feilrate og rask montering"
+      },
+      "investors": {
+        "title": "Investorer",
+        "description": "Marked i vekst, med unikt rom mellom forbrukerprodukter og kliniske systemer."
+      }
+    },
+    "howGuardianWorks": {
+      "title": "Vil du se hvordan Guardian-serien fungerer i praksis?",
+      "button1": "Bestill demo",
+      "button2": "Start en pilot i hjemmetjenesten",
+      "button3": "Kontakt oss",
+      "subtitle": "Dette er produktene som holder øye med brukeren",
+      "description": "En komplett løsning for trygghet og fallsikring hjemme består vanligvis av tre deler:",
+      "component1": "Fallsensorer montert på vegg eller i tak som oppdager hvis noen faller og ikke reiser seg igjen.",
+      "component2": "En sentralenhet som samler data fra sensorene og sender den trygt til skyen, slik at du og helsepersonell kan følge med.",
+      "component3": "Valgfri alarmknapp, som mor eller far kan trykke på hvis de føler seg uvel eller trenger hjelp, før noe skjer.",
+      "purpose": "Dette er utstyr laget for helt vanlige hjem, slik at mor eller far kan fortsette å bo trygt hjemme, mens du kan føle deg trygg på at de ikke blir liggende alene etter et fall.",
+      "conclusion": "Slik bygges en komplett løsning"
+    },
+    "howItWorks": {
+      "step1": {
+        "title": "Sensorer som oppdager fall",
+        "description": "Små sensorer monteres på vegg eller i tak i områder med høy risiko for fall, som baderom, stue eller trapper. De bruker radar og infrarød teknologi for å overvåke bevegelsesmønstre og oppdage plutselige endringer, som fall.",
+        "products": "GuardianSense og GuardianSense Pro for både vegg- og takmontering, som dekker større områder og kan også måle pust og puls."
+      },
+      "step2": {
+        "title": "Sensorer som måler pust og puls",
+        "description": "For ekstra trygghet kan en sensor plasseres under madrass eller i stol. Den måler pust og puls uten at brukeren merker det, og kan varsle hvis verdiene plutselig endrer seg.",
+        "products": "VitalSense Pad og VitalTrack for denne formålet."
+      },
+      "step3": {
+        "title": "Sentralenhet som kobler alt sammen",
+        "description": "For at sensorene skal kunne sende data, trengs en liten boks hjemme. CoreHub eller sensorCentral samler inn data fra alle sensorer og sender den sikkert til skyen.",
+        "products": "CoreHub eller sensorCentral - nødvendig for at systemet skal fungere."
+      },
+      "step4": {
+        "title": "Kan kombineres med alarmknapp",
+        "description": "Selv med automatisk falldeteksjon velger mange å legge til en alarmknapp som bæres rundt halsen eller i lommen. Dette lar brukeren trykke for hjelp umiddelbart hvis de føler noe er galt.",
+        "products": "Call button med 4G og GPS som virker både hjemme og ute, eller Call button lokal som kobler direkte til hjemmesentralen."
+      },
+      "ctaButton": "Bestill fallsensor"
+    },
+    "footer": "[Footer]"
+  },
+  "experiences": {
+    "hero": {
+      "title": "Se hvordan andre allerede bruker det",
+      "subtitle": "Når nye løsninger vurderes, er erfaringene fra andre ofte den beste beslutningsstøtten."
+    },
+    "customerStories": {
+      "title": "Kundehistorier fra kommuner og hjemmetjenester",
+      "municipalityA": {
+        "title": "Kommune A",
+        "description": "Kommune A opplevde bedre oversikt i hjemmetjenesten"
+      },
+      "municipalityB": {
+        "title": "Kommune B", 
+        "description": "Kommune B reduserte antall nattbesøk med 30%"
+      },
+      "municipalityC": {
+        "title": "Kommune C",
+        "description": "Kommune C reduserte antall nattbesøk med 30%"
+      }
+    },
+    "brief": {
+      "title": "Brief for politikere",
+      "description": "En kort rapport med nøkkeltall og eksempler er laget for politikere og beslutningstakere, som gir en oversikt over behov, løsninger og effekter.",
+      "button": "Send brief"
+    },
+    "contactForm": {
+      "title": "Få tilgang til erfaringer og nøkkeltall",
+      "description": "Fyll ut skjemaet under, så tar vi kontakt. Du forplikter deg ikke til noe ved å sende inn skjemaet.",
+      "footerNote": "Alle henvendelser er uforpliktende. Du binder deg ikke til noe. Vi svarer så raskt vi kan"
+    },
+    "bottom": {
+      "description": "Våre løsninger er allerede i bruk i norske kommuner. Erfaringene viser at de gir både bedre trygghet for brukerne og mer effektiv drift for tjenesten"
     },
     "footer": "[Footer]"
   },

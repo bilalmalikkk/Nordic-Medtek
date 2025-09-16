@@ -17,11 +17,495 @@
     "lang": "Norsk"
   },
   "util": {"about": "About", "demo": "Book demo", "contact": "Contact", "privacy": "Privacy policy"},
+  "alarmCommunication": {
+    "hero": {
+      "title": "Alarm buttons and safety solutions",
+      "subtitle": "When every second counts, you want to be sure that help is just one button press away.",
+      "button1": "Book free guidance",
+      "button2": "How others use it"
+    },
+    "whenEverySecond": {
+      "title": "When every second counts",
+      "text1": "You may have thought about it more than once. What if dad suddenly gets chest pain, or mom faints in the kitchen? How quickly can they alert someone, and what if no one is there to hear?",
+      "text2": "It's a painful thought to carry. Our alarm buttons and safety solutions ensure that mom or dad can reach you or healthcare personnel with one simple press, whether they're at home or out."
+    },
+    "howAlarmButtonsWork": {
+      "title": "How do alarm buttons work?",
+      "text1": "They are usually worn around the neck or in the pocket. If something happens, they just press the button and are immediately connected to a pre-selected contact, for example you, another relative or healthcare personnel.",
+      "text2": "The alarm system can be set up so that it first tries to reach you, then other relatives, and finally healthcare personnel if no one answers.",
+      "text3": "With two-way communication, they can speak directly with help without having to find the phone.",
+      "orderButton": "Order button"
+    },
+    "whereDoesThisFit": {
+      "title": "Where does this fit best?",
+      "outdoor": "Outdoors, for elderly who still like to walk or shop themselves. With GPS and mobile network, you can see where they are and get notified if something happens.",
+      "home": "At home, as a safety measure in the kitchen, living room or bathroom. One press, and help is on the way.",
+      "dementia": "For people with dementia or memory problems, where a safety button provides extra security, both for them and you."
+    },
+    "whatAboutFalls": {
+      "title": "What about falls or if they can't press?",
+      "text1": "An alarm button is fantastic when they can press it themselves. But if they fall and can't reach it, it can be smart to combine it with an automatic fall sensor. Then you also get an alert if they are weak, confused or lose consciousness.",
+      "text2": "Many choose exactly this combination to be completely safe."
+    },
+    "whyChooseOurAlarms": {
+      "title": "Why choose our alarms?",
+      "points": [
+        "Works both indoors and outdoors, wherever there is mobile coverage.",
+        "Gives you an alert immediately, not hours later.",
+        "Tailored to their needs: alerts can go to you, other relatives, or directly to healthcare personnel.",
+        "Secure two-way communication, they get help without having to look for the phone.",
+        "No commitment or startup cost, and can be expanded with fall sensors or medical monitoring later."
+      ]
+    },
+    "howAlertingWorks": {
+      "title": "How the alert works",
+      "steps": [
+        {
+          "title": "Rental or purchase of equipment",
+          "text": "The customer gets access to the equipment either through rental or purchase."
+        },
+        {
+          "title": "Choice of recipient",
+          "text": "The customer decides whether the alarms should go directly to a monitoring station (with external cost) or to their own contacts (for example, relatives or neighbors)."
+        },
+        {
+          "title": "When the alarm is triggered",
+          "text": "If there is an agreement with a monitoring station, the alarm goes there and is handled by them. If the alarm goes to relatives, it will first alert the main contact."
+        },
+        {
+          "title": "The fallback principle",
+          "text": "If the main contact does not answer, the alarm goes to the next contact (fallback 1). If that contact also does not answer, it goes to fallback 2, and so on. The last fallback can be the monitoring station, if an agreement exists."
+        },
+        {
+          "title": "Action",
+          "text": "When either the monitoring station or a relative receives and answers the alarm, they will initiate necessary actions. This could be contacting healthcare personnel, going out themselves, or taking other necessary action."
+        }
+      ]
+    },
+    "typicalPrice": {
+      "title": "Typical price",
+      "text": "Alarm button with GPS and two-way talk costs from around 299 kroner per month, depending on the setup you desire. No binding or hidden costs, and you can always expand with more sensors or medical monitoring later.",
+      "disclaimer": "When ordering, there is a deposit of 800 for the sensor, which will be deducted from the monthly rent.",
+      "button1": "Order rental of fall sensor",
+      "button2": "Buy fall sensor"
+    },
+    "whyRentInstead": {
+      "title": "Why you should rent instead of buy",
+      "intro": "Medical sensors and solutions are costly investments if you purchase them. For private individuals, there is rarely a need to own the equipment - it is only needed as long as the person who needs extra security actually needs it.",
+      "subtitle": "When you rent from NordicMedTek you get:",
+      "flexibility": {
+        "title": "Flexibility:",
+        "text": "You only pay for the period you actually need the equipment."
+      },
+      "simplerLife": {
+        "title": "Simpler everyday life:",
+        "text": "We take care of setup, maintenance and return when the need is no longer there."
+      },
+      "financialSecurity": {
+        "title": "Financial security:",
+        "text": "You avoid tying up large sums in equipment that might otherwise sit unused."
+      },
+      "conclusion": "Many competitors only offer purchase, but NordicMedTek believes renting is the most sensible and gentle solution for private individuals. When needs change, the rental can be easily terminated and products returned - you pay only for what you need and get access to modern, reliable solutions without unnecessary risk."
+    },
+    "whatDoIDoNow": {
+      "title": "What do I do now",
+      "text": "Tell us a little about the situation at home, and we will help you find a solution that fits.",
+      "button": "Contact us today"
+    },
+    "stillUnsure": {
+      "title": "Still unsure?",
+      "text": "We can help you find the right solution or answer questions you may have.",
+      "button1": "Call us at 51 30 30 66",
+      "button2": "Book free guidance"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "question": "Does the alarm only work at home?",
+          "answer": "No, we have models with 4G and GPS that work everywhere with mobile coverage, at the store, on a trip, or at the neighbor's."
+        },
+        {
+          "question": "What happens when they press the button?",
+          "answer": "The alarm calls pre-selected contacts or a control room. With two-way talk, they can speak directly for help without having to look for the phone."
+        },
+        {
+          "question": "What if they don't manage to press?",
+          "answer": "Advanced models have a built-in fall alarm that is triggered automatically if they fall."
+        },
+        {
+          "question": "Are the data safe?",
+          "answer": "Yes. All data is handled in accordance with GDPR and stored on servers in Norway."
+        },
+        {
+          "question": "Is this difficult to set up?",
+          "answer": "No. The alarms are designed to be as easy to use as a small remote control. We set up the system with you, so you know everything works. All data is handled securely, stored on servers in Norway, and follows strict rules for personal privacy."
+        }
+      ]
+    },
+    "readyForQuickHelp": {
+      "title": "Ready to give them the opportunity for quick help?",
+      "text": "Tell us a little about the situation at home with mom or dad, and we will find together what suits best. It is completely non-binding.",
+      "button1": "Book free guidance",
+      "button2": "Or call us at 51 30 30 66"
+    },
+    "nextSteps": {
+      "title": "Next step",
+      "text": "Don't wait until after a fall. Let us help you secure the everyday life of your mother or father, before something happens.",
+      "button": "Contact us today"
+    },
+    "moreTechnical": {
+      "title": "Do you want to see more technical?",
+      "text1": "Do you want to read more about the specific sensors used to detect falls, how they are mounted, and what variants are available?",
+      "text2": "Here you will find an overview of products suitable for safety and fall protection at home. You can also see how these sensors can be combined with alarm buttons or medical follow-up, to get a complete solution at home.",
+      "button": "See products for safety and fall protection at home"
+    }
+  },
+  "medicalFollowup": {
+    "hero": {
+      "title": "Medical follow-up at home",
+      "subtitle1": "Prevent a fall from changing everything.",
+      "subtitle2": "Our sensors detect falls completely automatically.",
+      "button1": "Book free guidance",
+      "button2": "How others use it",
+      "secondaryTitle": "Security for you and good health follow-up for them",
+      "description1": "You may worry about your elderly parents becoming frail, especially if they already have health conditions like heart problems, breathing difficulties, or diabetes. This increases your concern.",
+      "question1": "How do you know everything is okay between doctor's visits?",
+      "question2": "What if the values suddenly worsen, and no one discovers it in time?",
+      "description2": "Our solutions for medical follow-up give you and your family a whole new sense of security. They automatically monitor important health values, right from the living room at home, and share the data with you, or directly with healthcare personnel if you wish."
+    },
+    "whenEverySecond": {
+      "title": "When health monitoring matters",
+      "text1": "You may have thought about it more than once. What if dad's blood pressure spikes, or mom's blood sugar drops dangerously low? How quickly can you detect these changes, and what if no one is there to monitor?",
+      "text2": "It's a concern that weighs on many families. Our medical monitoring solutions ensure continuous tracking of vital signs, with automatic alerts when intervention is needed."
+    },
+    "howMedicalMonitoring": {
+      "title": "How does medical follow-up work at home?",
+      "text1": "Sensors can be placed under the mattress, on the chair where they sit most, or connected to the body with simple measuring instruments. These measure completely contactlessly or with small units that are used for just a few seconds at a time.",
+      "subtitle": "Typically they can measure:",
+      "measurement1": "Pulse and breathing pattern",
+      "measurement2": "Blood pressure and oxygen saturation",
+      "measurement3": "Blood sugar and temperature",
+      "measurement4": "Sleep and deviations that may indicate something is wrong",
+      "text2": "All this automatically goes into our system, which you and the doctor can follow via a simple portal. If something abnormal happens, it can be alerted directly.",
+      "imageAlt1": "Sensors and placements for medical monitoring",
+      "imageAlt2": "System overview of medical monitoring devices"
+    },
+    "combinedWithEasyContact": {
+      "title": "Combined with easy contact with the doctor and family",
+      "text1": "For many elderly, it is safe to know that both health and contact with the outside world are taken care of simultaneously. With easeBlink get a dedicated screen at home that allows mom or dad to",
+      "feature1": "have video consultations with the general practitioner, such as collecting measurements of pulse, breath, and blood pressure,",
+      "feature2": "measurements of pulse, breath, and blood pressure,",
+      "feature3": "receive messages and pictures from the family,",
+      "feature4": "and have one button to press to talk to you or healthcare personnel.",
+      "text2": "This provides both medical safety and social contact in the same solution.",
+      "imageAlt": "Combined medical monitoring and family communication system"
+    },
+    "whereDoesThisFitBest": {
+      "title": "Where does this fit best?",
+      "useCase1": {
+        "title": "For elderly with known heart disease or breathing difficulties...",
+        "description": "For elderly with known heart disease or breathing difficulties, where it is important to detect changes early.",
+        "alt": "Elderly man with chest pain and heart monitoring"
+      },
+      "useCase2": {
+        "title": "After hospital stay...",
+        "description": "After hospital stay, for example after surgery or infection, when one wants to follow up extra well.",
+        "alt": "Person in bed with medical monitoring devices"
+      },
+      "useCase3": {
+        "title": "For diabetes or blood pressure problems...",
+        "description": "For diabetes or blood pressure problems, so that one can adjust medications faster.",
+        "alt": "Elderly man taking blood pressure measurement"
+      },
+      "generalBenefit": "This gives both you and them peace of mind in everyday life, and reduces the need for many unnecessary trips to the doctor's office.",
+      "whyChoose": {
+        "title": "Why choose this?",
+        "point1": "Measurements happen completely automatically, without them having to remember to do anything themselves in everyday life.",
+        "point2": "Data can be shared directly with the general practitioner, who can then adjust medications or ask them to come in before something develops.",
+        "point3": "Everything takes place at home, in their safe environment, without stress and travel."
+      }
+    },
+    "howMedicalAlertingWorks": {
+      "title": "How the warning system works",
+      "steps": [
+        {
+          "title": "Lease or purchase of equipment",
+          "text": "The customer gains access to the equipment either through lease or purchase."
+        },
+        {
+          "title": "Choice of recipient",
+          "text": "The customer decides whether the alarms should go directly to an emergency center (at an external cost) or to their own contacts (for example, relatives or neighbors)."
+        },
+        {
+          "title": "When the alarm is triggered",
+          "text": "If there is an agreement with an emergency center, the alarm goes there and is handled by them. If the alarm goes to relatives, it will first notify the main contact."
+        },
+        {
+          "title": "The Fallback Principle",
+          "text": "If the main contact does not answer, the alarm goes to the next contact (fallback 1). If that contact also does not answer, it goes to fallback 2, and so on. The last fallback can be the emergency center, if an agreement exists."
+        },
+        {
+          "title": "Measures/Actions",
+          "text": "When either the emergency center or a relative receives and answers the alarm, they will implement necessary measures. This could be contacting healthcare personnel, responding themselves, or taking other necessary action."
+        }
+      ]
+    },
+    "typicalPrice": {
+      "title": "Typical price for medical monitoring",
+      "text": "Medical monitoring solutions start from around 499 kroner per month, depending on the number of sensors and monitoring parameters needed. No binding or hidden costs, and you can always adjust the monitoring level as health needs change.",
+      "disclaimer": "When ordering, there is a deposit for the medical sensors, which will be deducted from the monthly rent.",
+      "button1": "Order medical monitoring rental",
+      "button2": "Buy medical monitoring equipment"
+    },
+    "whyRentInstead": {
+      "title": "Why rent medical monitoring equipment?",
+      "intro": "Medical monitoring equipment represents a significant investment if purchased outright. For most families, renting provides the flexibility and cost-effectiveness needed for long-term health monitoring.",
+      "subtitle": "When you rent medical monitoring from NordicMedTek you get:",
+      "flexibility": {
+        "title": "Flexibility:",
+        "text": "Adjust monitoring parameters and equipment as health needs change over time."
+      },
+      "simplerLife": {
+        "title": "Simplified management:",
+        "text": "We handle equipment maintenance, updates, and technical support so you can focus on health."
+      },
+      "financialSecurity": {
+        "title": "Cost predictability:",
+        "text": "Fixed monthly costs with no unexpected maintenance or upgrade expenses."
+      },
+      "conclusion": "Medical monitoring is most effective when it can adapt to changing health needs. Renting allows you to access the latest technology without the burden of ownership, ensuring your loved ones always have the most appropriate monitoring solution."
+    },
+    "whatDoIDoNow": {
+      "title": "What do I do now?",
+      "text": "Tell us about your health monitoring needs, and we'll help you find the right medical monitoring solution.",
+      "button": "Contact us today"
+    },
+    "stillUnsure": {
+      "title": "Still unsure about medical monitoring?",
+      "text": "We can help you understand how medical monitoring works and determine if it's right for your situation.",
+      "button1": "Call us at 51 30 30 66",
+      "button2": "Book free guidance"
+    },
+    "faq": {
+      "title": "Frequently asked questions about medical monitoring",
+      "items": [
+        {
+          "question": "How accurate are the medical sensors?",
+          "answer": "Our medical sensors are clinically validated and provide accurate readings comparable to traditional medical devices. They are designed for continuous monitoring in home settings."
+        },
+        {
+          "question": "What happens if the sensors detect a problem?",
+          "answer": "The system automatically alerts healthcare personnel or designated contacts with detailed information about the concerning readings, allowing for prompt medical intervention."
+        },
+        {
+          "question": "Can the sensors be worn comfortably all day?",
+          "answer": "Yes, our sensors are designed to be lightweight, discreet, and comfortable for continuous wear without interfering with daily activities."
+        },
+        {
+          "question": "Is the medical data secure and private?",
+          "answer": "Absolutely. All medical data is encrypted, stored securely on Norwegian servers, and handled in strict compliance with GDPR and medical privacy regulations."
+        },
+        {
+          "question": "How does this integrate with existing healthcare?",
+          "answer": "Our system can integrate with healthcare provider systems, allowing medical professionals to access monitoring data and make informed treatment decisions."
+        }
+      ]
+    },
+    "readyForQuickHelp": {
+      "title": "Ready to ensure safety and quick help?",
+      "text": "Tell us a little about how the situation looks at home with mom or dad, and we will find the solution that fits best.",
+      "button1": "Book free guidance",
+      "button2": "Or call us at 51 30 30 66"
+    },
+    "nextSteps": {
+      "title": "Next step",
+      "text": "Don't wait for a health crisis. Let us help you implement proactive health monitoring for your loved ones.",
+      "button": "Contact us today"
+    },
+    "moreTechnical": {
+      "title": "Want to see more technical details?",
+      "text1": "Do you want to read more about the specific medical sensors used for monitoring, how they work, and what health parameters they can track?",
+      "text2": "Here you will find detailed information about our medical monitoring products, including specifications, accuracy data, and integration capabilities with healthcare systems.",
+      "button": "See medical monitoring products and specifications"
+    }
+  },
+  "safetySolutions": {
+    "hero": {
+      "title": "Fall sensors and safety at home",
+      "subtitle": "Prevent a fall from changing everything. Our sensors detect falls completely automatically.",
+      "button1": "Order fall sensor",
+      "button2": "How others use it",
+      "secondaryTitle": "Prevent a fall from changing everything",
+      "description1": "A small fall can have major consequences. A hip fracture or hours alone on the floor can mean that mom or dad never fully recovers. Perhaps you have already noticed that balance fails a little more often, or that they seem more unsteady on the stairs or in the bathroom.",
+      "description2": "Many elderly people also become afraid after a fall. They withdraw and dare less, and quality of life declines along with safety. As a relative, you carry a worry, what if it happens when no one is there?",
+      "description3": "Our fall sensors cannot prevent all falls, but they ensure that a fall is never left undetected."
+    },
+    "whenEverySecond": {
+      "title": "When falls happen unexpectedly",
+      "text1": "You may have worried about it more than once. What if mom falls in the bathroom, or dad trips on the stairs? How quickly can they get help, and what if no one is there to hear them?",
+      "text2": "It's a concern that weighs on many families. Our discrete fall sensors automatically detect falls and send immediate alerts to you or healthcare personnel, ensuring help is always available."
+    },
+    "howFallSensorsWork": {
+      "title": "How do fall sensors work?",
+      "text1": "Our sensors use radar or infrared technology to detect falls automatically, and can be placed in the living room, bedroom, stairs or bathroom. They capture movement patterns and alert when something is not right, for example if someone falls and does not get up again.",
+      "subtitle": "This means:",
+      "benefit1": "Mom or dad doesn't need to remember to wear anything.",
+      "benefit2": "You get a notification immediately, and can contact them or send help.",
+      "benefit3": "The system can also notify healthcare personnel directly if you wish.",
+      "text2": "When a fall is detected, the system immediately sends alerts to pre-selected contacts or healthcare personnel. The sensors can distinguish between normal activities and actual falls to reduce false alarms.",
+      "imageAlt1": "Fall detection sensor illustration",
+      "imageAlt2": "Alert to healthcare personnel illustration"
+    },
+    "whereDoesThisFitBest": {
+      "title": "Where do fall sensors fit best?",
+      "useCase1": {
+        "title": "Bathroom Safety",
+        "description": "Bathroom safety: The most common placement for falls, our sensors provide immediate detection and alert when slips or falls occur in wet, slippery conditions.",
+        "alt": "Bathroom fall sensor illustration"
+      },
+      "useCase2": {
+        "title": "Bedroom Monitoring", 
+        "description": "Bedroom monitoring: Detect falls that occur when getting in or out of bed, or during nighttime activities, and provides security for both residents and caregivers.",
+        "alt": "Bedroom fall sensor illustration"
+      },
+      "useCase3": {
+        "title": "Stair Safety",
+        "description": "Stair safety: Monitor stairs for falls and provide immediate alerts when someone stumbles or falls on steps, ensuring quick assistance when mobility is compromised.",
+        "alt": "Stair fall sensor illustration"
+      },
+      "generalBenefit": "Many choose to have sensors in several rooms, to cover the entire home and avoid the worry of a fall happening in a \"blind spot\". All our sensors are discreet and are placed on the wall or ceiling. If you have mounted a picture, you can easily do this yourself."
+    },
+    "whyChooseOurFallSensors": {
+      "title": "Why choose our fall sensors?",
+      "points": [
+        "Automatic fall detection, regardless of whether the user remembers an alarm.",
+        "Immediate alerts to the user or healthcare personnel.",
+        "Connectivity to security alarms, video screens, or medical monitoring for a complete solution.",
+        "Secure data storage in Norway, adhering to strict privacy requirements."
+      ]
+    },
+    "familyContactSecurity": {
+      "title": "Also security in the form of contact with family",
+      "description": "This section includes how fall sensors enhance safety through family contact. It introduces \"easeBlink,\" a screen with user-friendly buttons that allows elderly parents to receive photos and messages from family and easily make video calls, providing a sense of security even when living alone.",
+      "imageAlt": "Family contact interface showing photos and messages"
+    },
+    "whatDistinguishesFromAlarmButton": {
+      "title": "What distinguishes this from an alarm button?",
+      "description": "Alarm buttons rely on the user remembering to wear them and being able to press them. In contrast, fall sensors operate autonomously, alerting immediately if something happens, even if the user is weak, confused, or unable to press a button. This provides an extra layer of security beyond an alarm button."
+    },
+    "howSafetyAlertingWorks": {
+      "title": "How safety alerting works",
+      "steps": [
+        {
+          "title": "Fall detection",
+          "text": "Sensors continuously monitor for fall patterns and sudden impacts in designated areas of the home."
+        },
+        {
+          "title": "Alert generation",
+          "text": "When a fall is detected, the system immediately generates alerts to pre-selected contacts or healthcare personnel."
+        },
+        {
+          "title": "Contact notification",
+          "text": "Alerts are sent via multiple channels - phone calls, text messages, and app notifications to ensure someone is reached quickly."
+        },
+        {
+          "title": "Response coordination",
+          "text": "The system can coordinate with healthcare providers or emergency services if immediate medical attention is needed."
+        },
+        {
+          "title": "Follow-up monitoring",
+          "text": "After an alert, the system continues monitoring to ensure the person's safety and can provide additional assistance if needed."
+        }
+      ]
+    },
+    "typicalPrice": {
+      "title": "Typical price for fall sensors",
+      "text": "Fall sensor solutions start from around 399 kroner per month, depending on the number of sensors and areas to be monitored. No binding or hidden costs, and you can always adjust the monitoring coverage as needs change.",
+      "disclaimer": "When ordering, there is a deposit for the fall sensors, which will be deducted from the monthly rent.",
+      "button1": "Order fall sensor rental",
+      "button2": "Buy fall sensor equipment"
+    },
+    "whyRentInstead": {
+      "title": "Why rent fall sensor equipment?",
+      "intro": "Fall sensor equipment represents a significant investment if purchased outright. For most families, renting provides the flexibility and cost-effectiveness needed for comprehensive home safety monitoring.",
+      "subtitle": "When you rent fall sensors from NordicMedTek you get:",
+      "flexibility": {
+        "title": "Flexibility:",
+        "text": "Adjust sensor placement and coverage as safety needs change or as the person's mobility changes over time."
+      },
+      "simplerLife": {
+        "title": "Simplified management:",
+        "text": "We handle sensor installation, maintenance, and technical support so you can focus on safety and peace of mind."
+      },
+      "financialSecurity": {
+        "title": "Cost predictability:",
+        "text": "Fixed monthly costs with no unexpected maintenance, repair, or upgrade expenses."
+      },
+      "conclusion": "Fall prevention is most effective when it can adapt to changing needs and home layouts. Renting allows you to access the latest sensor technology without the burden of ownership, ensuring your loved ones always have the most appropriate safety monitoring solution."
+    },
+    "whatDoIDoNow": {
+      "title": "What do I do now?",
+      "text": "Tell us about your fall safety concerns, and we'll help you find the right fall sensor solution for your home.",
+      "button": "Contact us today"
+    },
+    "stillUnsure": {
+      "title": "Still unsure about fall sensors?",
+      "text": "We can help you understand how fall sensors work and determine if they're right for your safety needs.",
+      "button1": "Call us at 51 30 30 66",
+      "button2": "Book free guidance"
+    },
+    "faq": {
+      "title": "Frequently asked questions about fall sensors",
+      "items": [
+        {
+          "question": "Does mom or dad have to wear something?",
+          "answer": "No. That's the whole point. The sensors detect falls automatically, without them having to remember a button or a wristband."
+        },
+        {
+          "question": "Is it difficult to install?",
+          "answer": "No. If you've managed to hang a picture, you can do this. We send simple instructions."
+        },
+        {
+          "question": "What if they just sit down quickly, will that trigger an alarm?",
+          "answer": "The sensors are designed to distinguish between normal movements and falls, so that unnecessary alarms are not triggered."
+        },
+        {
+          "question": "Are the data safe?",
+          "answer": "Yes. All data is stored in Norway, and we follow GDPR and DPIA so you can be confident about your privacy."
+        }
+      ]
+    },
+    "readyForQuickHelp": {
+      "title": "Ready to ensure safety and quick help?",
+      "text": "Tell us a little about how the situation looks at home with mom or dad, and we will find the solution that fits best.",
+      "button1": "Book free guidance",
+      "button2": "Or call us at 51 30 30 66"
+    },
+    "nextSteps": {
+      "title": "Next step",
+      "text": "Don't wait for a fall to happen. Let us help you implement proactive fall safety monitoring for your loved ones.",
+      "button": "Contact us today"
+    },
+    "moreTechnical": {
+      "title": "Want to see more technical details?",
+      "text1": "Do you want to read more about the specific fall sensor technology used, how the sensors are installed, and what types of falls they can detect?",
+      "text2": "Here you will find detailed information about our fall sensor products, including technical specifications, installation requirements, and integration capabilities with other safety systems.",
+      "button": "See fall sensor products and specifications"
+    }
+  },
   "hero": {
     "title1": "Live safely at home, longer",
     "title2": "",
     "lead": "Smart monitoring that provides peace of mind for families and caregivers",
     "button": "See how it works"
+  },
+  "guidance": {
+    "hero": {
+      "title": "Find the help you need. We're just one conversation away",
+      "subtitle": "We offer free guidance, meetings and non-binding contact. Choose what suits you best.",
+      "imageAlt": "Elderly man talking on phone with video call"
+    }
   },
   "help": {
     "heading": "How we can help",
@@ -266,6 +750,173 @@
       "title": "Ready to find safety at home?",
       "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
       "button": "Contact us today"
+    },
+    "footer": "[Footer]"
+  },
+  "fallalarm": {
+    "hero": {
+      "title": "Fall alarms that detect without requiring anything from the user",
+      "description": "The Guardian series provides safety through contactless sensors that detect falls and critical incidents - without a camera and without the user having to wear anything.",
+      "button1": "See products",
+      "button2": "Order demo or pilot",
+      "imageCaption": "Elderly person sleeping peacefully in a bed, while a small sensor on the wall discreetly monitors the room"
+    },
+    "whyGuardian": {
+      "sectionTitle": "Why the Guardian series?",
+      "title": "Safety without intrusion in everyday life",
+      "description": "Many falls occur when no one is present, and traditional alarms require users to wear a button or clock. The Guardian series automatically detects events, with sensors working silently in the background, preserving privacy, and notifying when something happens.",
+      "feature1": {
+        "title": "Contactless",
+        "description": "No wearing or button to remember."
+      },
+      "feature2": {
+        "title": "Privacy",
+        "description": "Radar/IR technology, never a camera."
+      },
+      "feature3": {
+        "title": "Integration",
+        "description": "Can be connected to both municipal alarm centers and relatives."
+      }
+    },
+    "products": {
+      "sectionTitle": "Products in the series",
+      "title": "Choose the right solution for your needs",
+      "guardianWall": {
+        "title": "Guardian Wall",
+        "description": "Wall-mounted sensor that detects falls and abnormal movements.",
+        "bestFor": "Best for living rooms and smaller rooms."
+      },
+      "guardianWallPro": {
+        "title": "Guardian Wall Pro",
+        "description": "Extended wall model with more advanced event recognition and integration with medical systems.",
+        "bestFor": "Best for rooms where health status is closely monitored."
+      },
+      "guardianCeiling": {
+        "title": "Guardian Ceiling",
+        "description": "Ceiling-mounted sensor with wide coverage of the entire room.",
+        "bestFor": "Best for bedrooms and common areas."
+      },
+      "guardianCeilingPro": {
+        "title": "Guardian Ceiling Pro",
+        "description": "Combines fall monitoring with registration of vital patterns (ballistocardiography).",
+        "bestFor": "Best for users with high risk or need for close medical follow-up."
+      }
+    },
+    "completePackage": {
+      "title": "What a complete package consists of",
+      "subtitle": "From sensor to action - all in one solution",
+      "description": "A Guardian installation can be set up at home or in the municipality, and consists of:",
+      "component1": {
+        "title": "Sensors",
+        "description": "Wall- or ceiling-mounted as needed."
+      },
+      "component2": {
+        "title": "VitalHub (CoreHub)",
+        "description": "Collects data and sends securely to cloud or alarm center."
+      },
+      "component3": {
+        "title": "Alarm reception",
+        "description": "Notification to municipality, relatives or alarm center."
+      },
+      "component4": {
+        "title": "Fallback structure",
+        "description": "Multiple contacts in sequence if the first does not respond."
+      },
+      "component5": {
+        "title": "Support and operation",
+        "description": "Setup, service and simple return arrangement for rental."
+      }
+    },
+    "whoIsVital": {
+      "title": "Who is the Vital series for?",
+      "subtitle": "Security for everyone who has responsibility",
+      "relatives": {
+        "title": "Relatives",
+        "description": "Detects falls even when you are not there. No camera, no button"
+      },
+      "municipality": {
+        "title": "The Municipality",
+        "description": "Better overview and fewer manual inspections. Integrates with existing systems"
+      },
+      "partners": {
+        "title": "Partners",
+        "description": "Plug-and-play sensors with open API. Low failure rate and fast installation"
+      },
+      "investors": {
+        "title": "Investors",
+        "description": "Growing market, with a unique space between consumer products and clinical systems."
+      }
+    },
+    "howGuardianWorks": {
+      "title": "Do you want to see how the Guardian series works in practice?",
+      "button1": "Order demo",
+      "button2": "Start a pilot in home care services",
+      "button3": "Contact us",
+      "subtitle": "These are the products that keep an eye on the user",
+      "description": "A complete solution for safety and fall protection at home usually consists of three parts:",
+      "component1": "Fall sensors mounted on the wall or ceiling that detect if someone falls and does not get up again.",
+      "component2": "A central unit that collects data from the sensors and sends it securely to the cloud, so that you and healthcare personnel can follow along.",
+      "component3": "Optional alarm button, which mother or father can press if they feel unwell or need help, before something happens.",
+      "purpose": "This is equipment made for completely ordinary homes, so that mother or father can continue to live safely at home, while you can feel safe that they will not be left alone after a fall.",
+      "conclusion": "How a complete solution is built"
+    },
+    "howItWorks": {
+      "step1": {
+        "title": "Sensors that detect falls",
+        "description": "Small sensors are mounted on walls or ceilings in high-risk areas for falls, such as bathrooms, living rooms, or stairs. They use radar and infrared technology to monitor movement patterns and detect sudden changes, such as falls.",
+        "products": "GuardianSense and GuardianSense Pro for both wall and ceiling mounting, which cover larger areas and can also measure breath and pulse."
+      },
+      "step2": {
+        "title": "Sensors that measure breath and pulse",
+        "description": "For extra safety, a sensor can be placed under a mattress or in a chair. It measures breath and pulse without the user noticing, and can alert if values suddenly change.",
+        "products": "VitalSense Pad and VitalTrack for this purpose."
+      },
+      "step3": {
+        "title": "Central unit that connects everything",
+        "description": "For the sensors to be able to send data, a small box is needed at home. CoreHub or sensorCentral collects data from all sensors and sends it securely to the cloud.",
+        "products": "CoreHub or sensorCentral - necessary for the system to function."
+      },
+      "step4": {
+        "title": "Can be combined with an alarm button",
+        "description": "Even with automatic fall detection, many choose to add an alarm button worn around the neck or in a pocket. This allows the user to press for help immediately if they feel something is wrong.",
+        "products": "Call button with 4G and GPS that works both at home and outside, or Local call button that connects directly to the home central."
+      },
+      "ctaButton": "Order fall sensor"
+    },
+    "footer": "[Footer]"
+  },
+  "experiences": {
+    "hero": {
+      "title": "See how others already use it",
+      "subtitle": "When new solutions are considered, experiences from others are often the best decision support."
+    },
+    "customerStories": {
+      "title": "Customer stories from municipalities and home care services",
+      "municipalityA": {
+        "title": "Municipality A",
+        "description": "Municipality A experienced better overview in home care services"
+      },
+      "municipalityB": {
+        "title": "Municipality B",
+        "description": "Municipality B reduced the number of night visits by 30%"
+      },
+      "municipalityC": {
+        "title": "Municipality C",
+        "description": "Municipality C reduced the number of night visits by 30%"
+      }
+    },
+    "brief": {
+      "title": "Brief for politicians",
+      "description": "A short report with key figures and examples has been created for politicians and decision-makers, providing an overview of needs, solutions, and effects.",
+      "button": "Send brief"
+    },
+    "contactForm": {
+      "title": "Get access to experiences and key figures",
+      "description": "Fill out the form below, and we will contact you. You are not obligated to anything by submitting the form.",
+      "footerNote": "All inquiries are non-binding. You are not obligated to anything. We will respond as quickly as we can"
+    },
+    "bottom": {
+      "description": "Our solutions are already in use in Norwegian municipalities. The experiences show that they provide both better security for the users and more efficient operation of the service"
     },
     "footer": "[Footer]"
   },

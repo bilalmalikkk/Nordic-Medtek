@@ -10,8 +10,12 @@ import Company from './pages/Company'
 import Partners from './pages/Partners'
 import Products from './pages/Products'
 import Guidance from './pages/Guidance'
+import AlarmCommunication from './pages/AlarmCommunication'
+import MedicalFollowup from './pages/MedicalFollowup'
+import SafetySolutions from './pages/SafetySolutions'
 import Demo from './pages/Demo'
 import Experiences from './pages/Experiences'
+import Fallalarm from './pages/Fallalarm'
 import Documents from './pages/Documents'
 import Pricing from './pages/Pricing'
 import Support from './pages/Support'
@@ -30,8 +34,12 @@ function App() {
           <Route path="/partners" element={<Partners />} />
           <Route path="/products" element={<Products />} />
           <Route path="/guidance" element={<Guidance />} />
+          <Route path="/alarm-communication" element={<AlarmCommunication />} />
+          <Route path="/medical-followup" element={<MedicalFollowup />} />
+          <Route path="/safety-solutions" element={<SafetySolutions />} />
           <Route path="/demo" element={<Demo />} />
           <Route path="/experiences" element={<Experiences />} />
+          <Route path="/fallalarm" element={<Fallalarm />} />
           <Route path="/documents" element={<Documents />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/support" element={<Support />} />

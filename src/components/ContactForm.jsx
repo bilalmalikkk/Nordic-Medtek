@@ -40,62 +40,132 @@ export default function ContactForm({ title, desc, typeOptions, footerNote }) {
   }
 
   return (
-    <section className="form-section">
-      <h2 className="form-heading">{title || t('form.title')}</h2>
-      <p className="form-subheading">{desc || t('form.desc')}</p>
+    <section className="form-section w-full px-8">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">{title || t('form.title')}</h2>
+        <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full mb-6"></div>
+        <p className="text-xl text-gray-700">{desc || t('form.desc')}</p>
+      </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="form-grid">
-        <fieldset className="grid gap-3">
-          <legend className="font-medium">{t('form.type.legend')}</legend>
-          <div className="grid sm:grid-cols-3 gap-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-8 rounded-2xl shadow-2xl border border-blue-200">
+        {/* Request Type Selection */}
+        <div className="mb-8">
+          <label className="block text-lg font-medium text-gray-900 mb-4">{t('form.type.legend')}</label>
+          <div className="space-y-3">
             {computedTypeOptions.map((opt) => (
-              <label key={opt.value} className="form-radio">
-                <input type="radio" value={opt.value} {...register('type')} />
-                <span>{opt.label}</span>
+              <label key={opt.value} className="flex items-center space-x-3 cursor-pointer">
+                <input 
+                  type="radio" 
+                  value={opt.value} 
+                  {...register('type')} 
+                  className="w-5 h-5 text-blue-600 border-gray-300 focus:ring-blue-500"
+                />
+                <span className="text-lg text-gray-900">{opt.label}</span>
               </label>
             ))}
           </div>
-        </fieldset>
-
-        <div className="form-field-grid">
-          <input className="form-input" placeholder={t('form.name')} {...register('name')} />
-          {errors.name && <p className="form-error">{errors.name.message}</p>}
-
-          <input className="form-input" placeholder={t('form.phone')} {...register('phone')} />
-          {errors.phone && <p className="form-error">{errors.phone.message}</p>}
-
-          <input className="form-input" placeholder={t('form.email')} {...register('email')} />
-          {errors.email && <p className="form-error">{errors.email.message}</p>}
-
-          <input className="form-input" placeholder={t('form.confirm')} {...register('confirmEmail')} />
-          {errors.confirmEmail && <p className="form-error">{errors.confirmEmail.message}</p>}
-
-          <div className="md:col-span-2">
-            <label className="form-label">{t('form.description.label')}</label>
-            <textarea className="form-textarea" placeholder={t('form.description.ph')} {...register('description')} />
-          </div>
-          {errors.description && <p className="form-error">{errors.description.message}</p>}
         </div>
 
-        <fieldset className="grid gap-2">
-          <legend className="font-medium">{t('form.news.legend')}</legend>
-          <label className="form-checkbox">
-            <input type="checkbox" value="produkter" {...register('newsletters')} /> {t('form.news.p')}
-          </label>
-          <label className="form-checkbox">
-            <input type="checkbox" value="nyheter" {...register('newsletters')} /> {t('form.news.n')}
-          </label>
-          <label className="form-checkbox">
-            <input type="checkbox" value="marked" {...register('newsletters')} /> {t('form.news.m')}
-          </label>
-        </fieldset>
+        {/* Input Fields */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div>
+            <input 
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+              placeholder={t('form.name')} 
+              {...register('name')} 
+            />
+            {errors.name && <p className="form-error mt-1">{errors.name.message}</p>}
+          </div>
 
-        <p className="form-subcopy">{t('form.note')}</p>
+          <div>
+            <input 
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
+              placeholder={t('form.phone')} 
+              {...register('phone')} 
+            />
+            {errors.phone && <p className="form-error mt-1">{errors.phone.message}</p>}
+          </div>
 
-        <button type="submit" className="btn-primary w-max">{t('form.submit')}</button>
+          <div>
+            <input 
+              className="w-full px-4 py-3 border border-orange-400 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500" 
+              placeholder="test@gmail.com" 
+              {...register('email')} 
+            />
+            {errors.email && <p className="form-error mt-1">{errors.email.message}</p>}
+          </div>
+
+          <div>
+            <input 
+              className="w-full px-4 py-3 border border-orange-400 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500" 
+              placeholder="test@gmail.com" 
+              {...register('confirmEmail')} 
+            />
+            {errors.confirmEmail && <p className="form-error mt-1">{errors.confirmEmail.message}</p>}
+          </div>
+        </div>
+
+        {/* Description */}
+        <div className="mb-8">
+          <label className="block text-lg font-medium text-gray-900 mb-3">{t('form.description.label')}</label>
+          <textarea 
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 min-h-32" 
+            placeholder={t('form.description.ph')} 
+            {...register('description')} 
+          />
+          {errors.description && <p className="form-error mt-1">{errors.description.message}</p>}
+        </div>
+
+        {/* Newsletter Checkboxes */}
+        <div className="mb-8">
+          <label className="block text-lg font-medium text-gray-900 mb-4">{t('form.news.legend')}</label>
+          <div className="space-y-3">
+            <label className="flex items-center space-x-3 cursor-pointer">
+              <input 
+                type="checkbox" 
+                value="produkter" 
+                {...register('newsletters')} 
+                className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span className="text-lg text-gray-900">{t('form.news.p')}</span>
+            </label>
+            <label className="flex items-center space-x-3 cursor-pointer">
+              <input 
+                type="checkbox" 
+                value="nyheter" 
+                {...register('newsletters')} 
+                className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span className="text-lg text-gray-900">{t('form.news.n')}</span>
+            </label>
+            <label className="flex items-center space-x-3 cursor-pointer">
+              <input 
+                type="checkbox" 
+                value="marked" 
+                {...register('newsletters')} 
+                className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+              />
+              <span className="text-lg text-gray-900">{t('form.news.m')}</span>
+            </label>
+          </div>
+        </div>
+
+        {/* Disclaimer */}
+        <div className="mb-8">
+          <p className="text-sm text-gray-600 mb-2">Alle henvendelser er uforpliktende. Du binder deg ikke til noe.</p>
+          <p className="text-sm text-gray-600">Vi svarer så raskt vi kan</p>
+        </div>
+
+        {/* Submit Button */}
+        <button 
+          type="submit" 
+          className="w-full bg-gradient-to-r from-teal-600 to-blue-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+        >
+          {t('form.submit')}
+        </button>
       </form>
 
-      {footerNote && <p className="mt-8 text-sm text-slate-600">{footerNote}</p>}
+      {footerNote && <p className="mt-8 text-sm text-slate-600 text-center">{footerNote}</p>}
     </section>
   )
 }
