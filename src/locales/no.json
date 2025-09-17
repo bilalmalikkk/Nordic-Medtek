@@ -119,7 +119,7 @@
       "button2": "Book gratis veiledning"
     },
     "faq": {
-      "title": "Ofte stilte spørsmål",
+      "title": "Ofte stilte spørsmål om alarm produkter",
       "items": [
         {
           "question": "Virker alarmen bare hjemme?",
@@ -139,7 +139,7 @@
         },
         {
           "question": "Er dette vanskelig å sette opp?",
-          "answer": "Nei. Alarmene er laget for å være like enkle å bruke som en liten fjernkontroll. Vi setter opp systemet sammen med deg, slik at du vet at alt virker. All data håndteres trygt, lagres på servere i Norge, og følger strenge regler for personvern."
+          "answer": "Nei. Alarmene er laget for å være like enkle å bruke som en liten fjernkontroll. Alle våre produkter er laget for å svært enkle å sette opp og vil i det fleste tilfeller være satt opp når du mottar disse. Skulle noe lokalt være nødvendig setter opp systemet sammen med deg, slik at du vet at alt virker. All data håndteres trygt, lagres på servere i Norge, og følger strenge regler for personvern."
         }
       ]
     },
@@ -164,8 +164,8 @@
   "medicalFollowup": {
     "hero": {
       "title": "Medisinsk oppfølging hjemme",
-      "subtitle1": "Unngå at et fall endrer alt.",
-      "subtitle2": "Våre sensorer oppdager fall helt automatisk.",
+      "subtitle1": "I de fleste norske kommuner finnes eldre som er for friske til å være innlagt på sykehus, men som likevel trenger tettere oppfølging enn hva for eksempel hjemmesykepleien har kapasitet til.",
+      "subtitle2": "Det finnes også en stor gruppe som vi kaller yngre eldre. Dette er personer som er for friske til å være berettiget kommunal hjemmehjelp tjeneste.",
       "button1": "Bestill gratis veiledning",
       "button2": "Hvordan andre bruker det",
       "secondaryTitle": "Trygghet for deg og god helseoppfølging for dem",
@@ -566,7 +566,7 @@
         },
         {
           "question": "Må vi ha internett?",
-          "answer": "Ja, internett er nødvendig for varsler og datadeling. Vi kan hjelpe med forslag hvis det ikke er tilgjengelig."
+          "answer": "Nei, alle våre systemer er laget slik at vi ikke er avhengig av Wi-Fi eller ethernetkabel. Vi bruker dette om det finnes, men om dette ikke er tilgjengelig vil løsningen bruke telefon nettet."
         },
         {
           "question": "Er dataene trygge?",

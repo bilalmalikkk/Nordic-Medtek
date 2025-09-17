@@ -119,7 +119,7 @@
       "button2": "Book free guidance"
     },
     "faq": {
-      "title": "Frequently asked questions",
+      "title": "Frequently asked questions about alarm products",
       "items": [
         {
           "question": "Does the alarm only work at home?",
@@ -139,7 +139,7 @@
         },
         {
           "question": "Is this difficult to set up?",
-          "answer": "No. The alarms are designed to be as easy to use as a small remote control. We set up the system with you, so you know everything works. All data is handled securely, stored on servers in Norway, and follows strict rules for personal privacy."
+          "answer": "No. The alarms are designed to be as easy to use as a small remote control. All our products are designed to be very easy to set up and will in most cases be set up when you receive them. Should anything local be necessary, we set up the system together with you, so you know everything works. All data is handled securely, stored on servers in Norway, and follows strict rules for personal privacy."
         }
       ]
     },
@@ -164,8 +164,8 @@
   "medicalFollowup": {
     "hero": {
       "title": "Medical follow-up at home",
-      "subtitle1": "Prevent a fall from changing everything.",
-      "subtitle2": "Our sensors detect falls completely automatically.",
+      "subtitle1": "In most Norwegian municipalities, there are elderly people who are too healthy to be admitted to a hospital, but who nevertheless need closer follow-up than what, for example, home nursing care has the capacity for.",
+      "subtitle2": "There is also a large group that we call younger elderly. These are people who are too healthy to be entitled to municipal home help services.",
       "button1": "Book free guidance",
       "button2": "How others use it",
       "secondaryTitle": "Security for you and good health follow-up for them",
@@ -581,7 +581,7 @@
         },
         {
           "question": "Do we need internet?",
-          "answer": "Yes, internet is necessary for alerts and data sharing. We can help with suggestions if it's not available."
+          "answer": "No, all our systems are designed so that we are not dependent on Wi-Fi or ethernet cable. We use this if it exists, but if this is not available, the solution will use the phone network."
         },
         {
           "question": "Is the data secure?",
