@@ -20,6 +20,7 @@ import Documents from './pages/Documents'
 import Pricing from './pages/Pricing'
 import Support from './pages/Support'
 import Evidence from './pages/Evidence'
+import HealthPersonnel from './pages/HealthPersonnel'
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/support" element={<Support />} />
           <Route path="/evidence" element={<Evidence />} />
+          <Route path="/health-personnel" element={<HealthPersonnel />} />
         </Routes>
       </main>
     </div>

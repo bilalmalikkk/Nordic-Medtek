@@ -581,7 +581,7 @@
         },
         {
           "question": "Do we need internet?",
-          "answer": "No, all our systems are designed so that we are not dependent on Wi-Fi or ethernet cable. We use this if it exists, but if this is not available, the solution will use the phone network."
+          "answer": "No, all our systems are designed so that we are not dependent on Wi-Fi or ethernet cable. We use this if it exists, but if this is not available, the solution will use the mobile network."
         },
         {
           "question": "Is the data secure?",
@@ -991,6 +991,79 @@
       "button": "Contact us today"
     },
     "footer": "[Footer]"
+  },
+  "healthPersonnel": {
+    "hero": {
+      "title": "Safe and dignified care in everyday life",
+      "description": "For health personnel and managers in home care services. Our sensors and systems give you better overview, fewer unnecessary visits and more time to focus on what really matters - the people you help.",
+      "button": "See how it works"
+    },
+    "challenges": {
+      "title": "The challenges in home care services",
+      "subtitle": "Daily challenges",
+      "challenge1": "Fewer staff per patient",
+      "challenge2": "Unnecessary visits and travel",
+      "challenge3": "Limited overview of patients' condition",
+      "challenge4": "Reactive instead of proactive measures"
+    },
+    "societalBenefits": {
+      "title": "Societal benefits",
+      "subtitle": "Our solution provides measurable results:",
+      "benefit1": {
+        "title": "Fewer hospital admissions",
+        "description": "Seniors detect critical incidents early."
+      },
+      "benefit2": {
+        "title": "Lower costs",
+        "description": "The municipality saves significant sums on prevention."
+      },
+      "benefit3": {
+        "title": "Better working conditions",
+        "description": "Employees get a more predictable workday."
+      },
+      "benefit4": {
+        "title": "Safety and dignity",
+        "description": "Elderly people can live at home longer with increased safety."
+      }
+    },
+    "documentation": {
+      "title": "Documentation and legitimacy",
+      "ceMarked": {
+        "title": "CE-marked and MDR-compliant medical equipment",
+        "description": "All our products are CE-marked and developed in accordance with MDR (Medical Device Regulation), ensuring high standards of safety, quality and reliability. This provides assurance for municipalities and health personnel that the solutions can be used in patient treatment without endangering lives and health, and can be seamlessly integrated into public operations."
+      },
+      "dataSecurity": {
+        "title": "Data security in line with GDPR",
+        "description": "Our systems are built with the highest degree of data security and personal privacy, fully compliant with GDPR. Sensitive health data is encrypted, with clear routines for storage, access and sharing. This enables municipalities to adopt the technology without concerns about legal breaches or loss of public trust."
+      },
+      "tested": {
+        "title": "Reliable technology tested in Norwegian municipalities",
+        "description": "Our solutions have already been tested in Norwegian municipalities and documented to function in practice. This means the technology is not merely theoretical but reliable in real-world healthcare and care services, addressing existing demands, routines and challenges. Experiences show it can reduce unnecessary oversight, free up time for staff, and simultaneously increase user safety."
+      },
+      "downloadButton": "Download politician brief"
+    },
+    "cases": {
+      "title": "Cases and stories",
+      "pilotResults": "In a pilot municipality, the system resulted in:",
+      "result1": "10 fewer hospital admissions per 100 users per year.",
+      "result2": "Greater safety for employees and relatives.",
+      "quote": "This is an example of technology that provides both better services and lower costs. It is a necessary choice for the municipality.",
+      "attribution": "- Mayor in pilot municipality"
+    },
+    "nextSteps": {
+      "title": "What is the next step?",
+      "subtitle": "Do you want to see how this can strengthen your municipality?",
+      "brief": {
+        "title": "Read the short version of benefits in our politician brief",
+        "description": "A concise overview explaining how the technology can provide better care, lower costs and safer working conditions. Tailored for decision-makers needing a quick, clear summary with figures and examples.",
+        "button": "Download politician brief"
+      },
+      "presentation": {
+        "title": "Order a presentation for the executive committee or committee",
+        "description": "We will come and present the solution with concrete examples from Norwegian municipalities. The presentation can be adapted to local challenges and offers an opportunity for questions and dialogue with both politicians and administration.",
+        "button": "Order a presentation"
+      }
+    }
   }
 }
 

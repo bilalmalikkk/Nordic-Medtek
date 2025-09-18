@@ -566,7 +566,7 @@
         },
         {
           "question": "Må vi ha internett?",
-          "answer": "Nei, alle våre systemer er laget slik at vi ikke er avhengig av Wi-Fi eller ethernetkabel. Vi bruker dette om det finnes, men om dette ikke er tilgjengelig vil løsningen bruke telefon nettet."
+          "answer": "Nei, alle våre systemer er laget slik at vi ikke er avhengig av Wi-Fi eller ethernetkabel. Vi bruker dette om det finnes, men om dette ikke er tilgjengelig vil løsningen bruke mobil nettet."
         },
         {
           "question": "Er dataene trygge?",
@@ -919,6 +919,79 @@
       "description": "Våre løsninger er allerede i bruk i norske kommuner. Erfaringene viser at de gir både bedre trygghet for brukerne og mer effektiv drift for tjenesten"
     },
     "footer": "[Footer]"
+  },
+  "healthPersonnel": {
+    "hero": {
+      "title": "Trygg og verdig omsorg i hverdagen",
+      "description": "For helsepersonell og ledere i hjemmetjenesten. Våre sensorer og systemer gir deg bedre oversikt, færre unødvendige besøk og mer tid til å fokusere på det som virkelig teller - menneskene du hjelper.",
+      "button": "Se hvordan det fungerer"
+    },
+    "challenges": {
+      "title": "Utfordringene i hjemmetjenesten",
+      "subtitle": "Daglige utfordringer",
+      "challenge1": "Færre ansatte per pasient",
+      "challenge2": "Unødvendige besøk og reise",
+      "challenge3": "Begrenset oversikt over pasientenes tilstand",
+      "challenge4": "Reaktive i stedet for proaktive tiltak"
+    },
+    "societalBenefits": {
+      "title": "Samfunnsgevinsten",
+      "subtitle": "Vår løsning gir målbare resultater:",
+      "benefit1": {
+        "title": "Færre sykehusinnleggelser",
+        "description": "Seniorer oppdager kritiske hendelser tidlig."
+      },
+      "benefit2": {
+        "title": "Lavere kostnader",
+        "description": "Kommunen sparer betydelige summer på forebygging."
+      },
+      "benefit3": {
+        "title": "Bedre arbeidsvilkår",
+        "description": "Ansatte får en mer forutsigbar arbeidshverdag."
+      },
+      "benefit4": {
+        "title": "Trygghet og verdighet",
+        "description": "Eldre får bo hjemme lenger med økt sikkerhet."
+      }
+    },
+    "documentation": {
+      "title": "Dokumentasjon og legitimitet",
+      "ceMarked": {
+        "title": "CE-merket og MDR-kompatibelt medisinsk utstyr",
+        "description": "Alle våre produkter er CE-merket og utviklet i henhold til MDR (Medical Device Regulation), som sikrer høy standard på sikkerhet, kvalitet og pålitelighet. Dette gir trygghet for kommuner og helsepersonell om at løsningene kan brukes i pasientbehandling uten å sette liv og helse i fare, og kan integreres sømløst i offentlig drift."
+      },
+      "dataSecurity": {
+        "title": "Datasikkerhet i tråd med GDPR",
+        "description": "Systemene våre er bygget med høyeste grad av datasikkerhet og personvern, og er fullt i tråd med GDPR. Følsomme helsedata krypteres, og det finnes klare rutiner for lagring, tilgang og deling. Dette gjør at kommuner kan adoptere teknologien uten bekymring for lovbrudd eller tap av offentlig tillit."
+      },
+      "tested": {
+        "title": "Driftssikker teknologi testet i norske kommuner",
+        "description": "Løsningene våre er allerede testet i norske kommuner og dokumentert til å fungere i praksis. Dette betyr at teknologien ikke bare er teoretisk, men pålitelig i reell helse- og omsorgstjeneste, og adresserer eksisterende behov, rutiner og utfordringer. Erfaringer viser at den kan redusere unødvendig tilsyn, frigjøre tid for ansatte, og samtidig øke brukersikkerheten."
+      },
+      "downloadButton": "Last ned politiker-brief"
+    },
+    "cases": {
+      "title": "Case og fortellinger",
+      "pilotResults": "I en pilotkommune resulterte systemet i:",
+      "result1": "10 færre sykehusinnleggelser per 100 brukere på ett år.",
+      "result2": "Større trygghet for ansatte og pårørende.",
+      "quote": "Dette er et eksempel på teknologi som gir både bedre tjenester og lavere kostnader. Det er et nødvendig valg for kommunen.",
+      "attribution": "- Ordfører i pilotkommune"
+    },
+    "nextSteps": {
+      "title": "Hva er neste steg?",
+      "subtitle": "Vil du se hvordan dette kan styrke din kommune?",
+      "brief": {
+        "title": "Les kortversjonen av gevinster i vår politiker-brief",
+        "description": "En kort oversikt som forklarer hvordan teknologien kan gi bedre omsorg, lavere kostnader og tryggere arbeidsvilkår. Tilpasset beslutningstakere som trenger en rask, klar oppsummering med tall og eksempler.",
+        "button": "Last ned politiker-brief"
+      },
+      "presentation": {
+        "title": "Bestill en presentasjon til formannskap eller utvalg",
+        "description": "Vi kommer og presenterer løsningen med konkrete eksempler fra norske kommuner. Presentasjonen kan tilpasses lokale utfordringer og gir mulighet for spørsmål og dialog med både politikere og administrasjon.",
+        "button": "Bestill en presentasjon"
+      }
+    }
   },
   "company": {
     "hero": {

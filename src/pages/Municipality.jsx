@@ -48,19 +48,21 @@ export default function Municipality() {
             {/* 6-card grid layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Row 1 */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
+              <Link to="/health-personnel" className="block">
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 cursor-pointer">
+                  <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
+                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    {t('municipality.benefits.safeCare.title')}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {t('municipality.benefits.safeCare.link')}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  {t('municipality.benefits.safeCare.title')}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {t('municipality.benefits.safeCare.link')}
-                </p>
-              </div>
+              </Link>
 
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                 <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
