@@ -6,6 +6,9 @@ import ContactForm from './components/ContactForm'
 import Home from './pages/Home'
 import Private from './pages/Private'
 import Municipality from './pages/Municipality'
+import MunicipalityDetails from './pages/MunicipalityDetails'
+import MunicipalityKnowledge from './pages/MunicipalityKnowledge'
+import ProcurementManager from './pages/ProcurementManager'
 import Company from './pages/Company'
 import Partners from './pages/Partners'
 import Products from './pages/Products'
@@ -31,6 +34,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/private" element={<Private />} />
           <Route path="/municipality" element={<Municipality />} />
+          <Route path="/municipality-details" element={<MunicipalityDetails />} />
+          <Route path="/municipality-knowledge" element={<MunicipalityKnowledge />} />
+          <Route path="/procurement-manager" element={<ProcurementManager />} />
           <Route path="/company" element={<Company />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/products" element={<Products />} />

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import landingPage from '../assets/Landingpage.png'
 
 export default function Municipality() {
   const { t } = useTranslation()
@@ -10,13 +11,13 @@ export default function Municipality() {
       {/* Hero Section */}
       <section className="hero-section min-h-[calc(100vh-100px)] flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
         <div className="w-full">
-          <div className="text-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   {t('municipality.hero.title')}
                 </h1>
-                <div className="w-20 h-1 bg-teal-600 mx-auto rounded-full"></div>
+                <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
               </div>
               <p className="text-xl text-gray-700 leading-relaxed bg-white p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
                 {t('municipality.hero.description')}
@@ -33,6 +34,18 @@ export default function Municipality() {
                 </Link>
               </div>
             </div>
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-lg">
+                <div className="absolute -inset-4 bg-gradient-to-r from-teal-400 to-blue-500 rounded-2xl blur opacity-20"></div>
+                <div className="relative bg-white p-4 rounded-2xl shadow-2xl">
+                  <img 
+                    src={landingPage} 
+                    alt="Eldre par som tar vare på hverandre" 
+                    className="w-full h-auto rounded-xl"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -41,7 +54,7 @@ export default function Municipality() {
       <section className="benefits-section py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="w-full">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Kommunale fordeler</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('municipality.benefits.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
           </div>
             
@@ -64,48 +77,54 @@ export default function Municipality() {
                 </div>
               </Link>
 
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
+              <Link to="/municipality-details" className="block">
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 cursor-pointer">
+                  <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                    <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    {t('municipality.benefits.moreTime.title')}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {t('municipality.benefits.moreTime.link')}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  {t('municipality.benefits.moreTime.title')}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {t('municipality.benefits.moreTime.link')}
-                </p>
-              </div>
+              </Link>
 
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
+              <Link to="/municipality-knowledge" className="block">
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 cursor-pointer">
+                  <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                    <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    {t('municipality.benefits.knowledgeBase.title')}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {t('municipality.benefits.knowledgeBase.link')}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  {t('municipality.benefits.knowledgeBase.title')}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {t('municipality.benefits.knowledgeBase.link')}
-                </p>
-              </div>
+              </Link>
 
               {/* Row 2 */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
-                  <svg className="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                  </svg>
+              <Link to="/procurement-manager" className="block">
+                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 cursor-pointer">
+                  <div className="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center mb-6">
+                    <svg className="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    {t('municipality.benefits.economic.title')}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {t('municipality.benefits.economic.link')}
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  {t('municipality.benefits.economic.title')}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {t('municipality.benefits.economic.link')}
-                </p>
-              </div>
+              </Link>
 
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                 <div className="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mb-6">
