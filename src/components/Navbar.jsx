@@ -1,15 +1,46 @@
 
 
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import logo from '../assets/logo.png'
 
 export default function Navbar() {
   const { t, i18n } = useTranslation()
+  const location = useLocation()
+  
   function toggleLang() {
     const next = i18n.language === 'no' ? 'en' : 'no'
     i18n.changeLanguage(next)
     localStorage.setItem('lang', next)
+  }
+
+  // Custom functions to determine if each main section should be active
+  const isPrivateActive = (isActive) => {
+    if (isActive) return true
+    // Private section sub-pages
+    const privateSubPages = ['/alarm-communication', '/medical-followup', '/safety-solutions', '/fallalarm', '/experiences']
+    return privateSubPages.includes(location.pathname)
+  }
+
+  const isMunicipalityActive = (isActive) => {
+    if (isActive) return true
+    // Municipality section sub-pages
+    const municipalitySubPages = ['/municipality-details', '/municipality-knowledge', '/procurement-manager', '/health-personnel', '/it-welfare-technology', '/municipal-benefits', '/demo']
+    return municipalitySubPages.includes(location.pathname)
+  }
+
+  const isCompanyActive = (isActive) => {
+    if (isActive) return true
+    // Company section sub-pages
+    const companySubPages = ['/products', '/guidance', '/documents', '/pricing', '/support', '/evidence']
+    return companySubPages.includes(location.pathname)
+  }
+
+  const isPartnersActive = (isActive) => {
+    if (isActive) return true
+    // Partners section sub-pages (currently none, but keeping for future expansion)
+    const partnersSubPages = []
+    return partnersSubPages.includes(location.pathname)
   }
   return (
     <header>
@@ -29,11 +60,11 @@ export default function Navbar() {
                         <Link to="/" className="font-bold text-lg">NordicMedTek</Link>
                       </div>
           <nav className="flex items-center gap-20 text-base">
-            <NavLink to="/" className={({isActive})=> isActive? 'underline' : 'hover:underline'}>{t('nav.home')}</NavLink>
-            <NavLink to="/private" className={({isActive})=> isActive? 'underline' : 'hover:underline'}>{t('nav.private')}</NavLink>
-            <NavLink to="/municipality" className={({isActive})=> isActive? 'underline' : 'hover:underline'}>{t('nav.municipality')}</NavLink>
-            <NavLink to="/company" className={({isActive})=> isActive? 'underline' : 'hover:underline'}>{t('nav.company')}</NavLink>
-            <NavLink to="/partners" className={({isActive})=> isActive? 'underline' : 'hover:underline'}>{t('nav.partners')}</NavLink>
+            <NavLink to="/" end className={({isActive})=> isActive? 'underline' : 'hover:underline'}>{t('nav.home')}</NavLink>
+            <NavLink to="/private" className={({isActive})=> isPrivateActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.private')}</NavLink>
+            <NavLink to="/municipality" className={({isActive})=> isMunicipalityActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.municipality')}</NavLink>
+            <NavLink to="/company" className={({isActive})=> isCompanyActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.company')}</NavLink>
+            <NavLink to="/partners" className={({isActive})=> isPartnersActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.partners')}</NavLink>
           </nav>
         </div>
       </div>

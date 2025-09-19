@@ -24,6 +24,8 @@ import Pricing from './pages/Pricing'
 import Support from './pages/Support'
 import Evidence from './pages/Evidence'
 import HealthPersonnel from './pages/HealthPersonnel'
+import ITWelfareTechnology from './pages/ITWelfareTechnology'
+import MunicipalBenefits from './pages/MunicipalBenefits'
 
 function App() {
   return (
@@ -52,6 +54,8 @@ function App() {
           <Route path="/support" element={<Support />} />
           <Route path="/evidence" element={<Evidence />} />
           <Route path="/health-personnel" element={<HealthPersonnel />} />
+          <Route path="/it-welfare-technology" element={<ITWelfareTechnology />} />
+          <Route path="/municipal-benefits" element={<MunicipalBenefits />} />
         </Routes>
       </main>
     </div>
