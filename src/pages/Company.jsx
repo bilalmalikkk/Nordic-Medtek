@@ -35,7 +35,16 @@ export default function Company() {
                   to="/products" 
                   className="group inline-flex items-center justify-center bg-yellow-200 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Utforsk muligheter
+                  {t('company.hero.button2')}
+                  <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+                <Link 
+                  to="/guidance" 
+                  className="group inline-flex items-center justify-center bg-green-200 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-green-300 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  {t('company.hero.button3')}
                   <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
