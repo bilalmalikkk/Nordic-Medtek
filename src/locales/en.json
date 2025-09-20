@@ -991,6 +991,93 @@
       "button": "Contact us today"
     },
     "footer": "[Footer]"
+  },
+  "vaktromIntegration": {
+    "hero": {
+      "title": "Easy integration with guard rooms and care technology",
+      "description": "NordicMedTek's sensors and gateway fit seamlessly into existing systems. It provides suppliers of guard rooms and technical infrastructure with a safe and reliable solution that strengthens their portfolio.",
+      "button": "Contact us"
+    },
+    "whyChooseUs": {
+      "title": "Why choose us in your care environment",
+      "points": [
+        "Sensors developed for continuous operation without frequent maintenance",
+        "Gateway that sends data securely and stably to the cloud",
+        "Alerts that go directly to the guard room when needed, and not otherwise",
+        "Documentation that makes implementation easy and safe"
+      ]
+    },
+    "whatThisMeans": {
+      "title": "What this means for you as a partner",
+      "points": [
+        "You can deliver a solution that is easy to install and maintain",
+        "You strengthen your sales offer with technology that is already MDR-approved",
+        "You give your customers a solution that reduces false alarms and increases trust in the entire system",
+        "You avoid uncertainty, because we deliver finished product sheets, training, and technical support"
+      ]
+    },
+    "howItWorks": {
+      "title": "How it works in practice",
+      "steps": [
+        "The sensors register movement and activity in the bed.",
+        "Data is sent securely via gateway to the cloud solution.",
+        "The system alerts the guard room if something deviates from the norm.",
+        "Healthcare personnel can act quickly and targeted."
+      ]
+    },
+    "partnerBenefits": {
+      "title": "Partner benefits for suppliers of care environments",
+      "points": [
+        "Ready integration guides",
+        "Technical specifications and certificates easily accessible",
+        "Support when you need it, so you can deliver with confidence"
+      ]
+    },
+    "cta": {
+      "button": "Become partner"
+    },
+    "footer": "NordicMedTek - Integration solutions for modern care"
+  },
+  "partners": {
+    "hero": {
+      "title": "A partnership that provides security and growth",
+      "description": "As a partner at NordicMedTek, you get more than just a product. You get documented technology, dedicated support, and access to resources that make it easy to succeed in the welfare technology market.",
+      "button": "Contact us"
+    },
+    "whyBecomePartner": {
+      "title": "Why become a partner",
+      "points": [
+        "Ready material that makes sales and implementation easier",
+        "Technical and commercial support from day one",
+        "A collaboration that builds trust both with customers and in the market"
+      ]
+    },
+    "howWeSupport": {
+      "title": "How we support our partners",
+      "steps": [
+        {
+          "title": "1. Startup:",
+          "description": "access to training, product sheets, and certificates"
+        },
+        {
+          "title": "2. Launch:",
+          "description": "marketing material and support in the sales process"
+        },
+        {
+          "title": "3. Operation:",
+          "description": "ongoing support, updates, and documentation"
+        },
+        {
+          "title": "4. Development:",
+          "description": "opportunity to participate in new pilots and solutions"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to become a partner?",
+      "button": "Become partner"
+    },
+    "footer": "NordicMedTek - Partnership for tomorrow's care"
   }
 }
 

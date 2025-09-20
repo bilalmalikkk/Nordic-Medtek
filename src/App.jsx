@@ -8,6 +8,7 @@ import Private from './pages/Private'
 import Municipality from './pages/Municipality'
 import Company from './pages/Company'
 import Partners from './pages/Partners'
+import VaktromIntegration from './pages/VaktromIntegration'
 import Products from './pages/Products'
 import Guidance from './pages/Guidance'
 import AlarmCommunication from './pages/AlarmCommunication'
@@ -32,6 +33,7 @@ function App() {
           <Route path="/municipality" element={<Municipality />} />
           <Route path="/company" element={<Company />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/vaktrom-integration" element={<VaktromIntegration />} />
           <Route path="/products" element={<Products />} />
           <Route path="/guidance" element={<Guidance />} />
           <Route path="/alarm-communication" element={<AlarmCommunication />} />
