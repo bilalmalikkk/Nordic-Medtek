@@ -1510,6 +1510,93 @@
       "conclusion": "Mange fall, pustestans eller akutte helsehendelser skjer mellom besøkene, når ingen er til stede. Resultatet er både utrygghet for innbyggerne og ekstra kostnader for kommunen."
     },
     "footer": "← Tilbake til kommunale fordeler"
+  },
+  "vaktromIntegration": {
+    "hero": {
+      "title": "Enkel integrasjon med vaktrom og omsorgsteknologi",
+      "description": "NordicMedTeks sensorer og gateway passer sømløst inn i eksisterende systemer. Det gir leverandører av vaktrom og teknisk infrastruktur en trygg og pålitelig løsning som styrker deres portefølje.",
+      "button": "Kontakt oss"
+    },
+    "whyChooseUs": {
+      "title": "Hvorfor velge oss i ditt omsorgsmiljø",
+      "points": [
+        "Sensorer som er utviklet for kontinuerlig drift uten hyppig vedlikehold",
+        "Gateway som sender data sikkert og stabilt til skyen",
+        "Varsler som går direkte til vaktrommet når det trengs, og ikke ellers",
+        "Dokumentasjon som gjør implementeringen enkel og trygg"
+      ]
+    },
+    "whatThisMeans": {
+      "title": "Hva dette betyr for deg som partner",
+      "points": [
+        "Du kan levere en løsning som er enkel å installere og vedlikeholde",
+        "Du styrker ditt salgstilbud med teknologi som allerede er MDR-godkjent",
+        "Du gir kundene dine en løsning som reduserer feilvarsler og øker tilliten til hele systemet",
+        "Du slipper usikkerhet, fordi vi leverer ferdige produktark, opplæring og teknisk støtte"
+      ]
+    },
+    "howItWorks": {
+      "title": "Hvordan det fungerer i praksis",
+      "steps": [
+        "Sensorene registrerer bevegelse og aktivitet i sengen.",
+        "Data sendes sikkert via gateway til skyløsningen.",
+        "Systemet varsler vaktrommet hvis noe avviker fra normalen.",
+        "Helsepersonell kan handle raskt og målrettet."
+      ]
+    },
+    "partnerBenefits": {
+      "title": "Partnerfordeler for leverandører av omsorgsmiljøer",
+      "points": [
+        "Ferdige integrasjonsveiledninger",
+        "Tekniske spesifikasjoner og sertifikater lett tilgjengelig",
+        "Support når du trenger det, slik at du kan levere med trygghet"
+      ]
+    },
+    "cta": {
+      "button": "Bli partner"
+    },
+    "footer": "NordicMedTek - Integrasjonsløsninger for moderne omsorg"
+  },
+  "partners": {
+    "hero": {
+      "title": "Et partnerskap som gir trygghet og vekst",
+      "description": "Som partner hos NordicMedTek får du mer enn et produkt. Du får dokumentert teknologi, dedikert støtte og tilgang til ressurser som gjør det enkelt å lykkes i markedet for velferdsteknologi.",
+      "button": "Kontakt oss"
+    },
+    "whyBecomePartner": {
+      "title": "Hvorfor bli partner",
+      "points": [
+        "Ferdig materiell som gjør salg og implementering enklere",
+        "Teknisk og kommersiell støtte fra dag én",
+        "Et samarbeid som bygger tillit både hos kundene og i markedet"
+      ]
+    },
+    "howWeSupport": {
+      "title": "Hvordan vi støtter våre partnere",
+      "steps": [
+        {
+          "title": "1. Oppstart:",
+          "description": "tilgang til opplæring, produktark og sertifikater"
+        },
+        {
+          "title": "2. Lansering:",
+          "description": "markedsmateriell og støtte i salgsprosessen"
+        },
+        {
+          "title": "3. Drift:",
+          "description": "løpende support, oppdateringer og dokumentasjon"
+        },
+        {
+          "title": "4. Utvikling:",
+          "description": "mulighet til å delta i nye piloter og løsninger"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Klar til å bli partner?",
+      "button": "Bli partner"
+    },
+    "footer": "NordicMedTek - Partnerskap for fremtidens omsorg"
   }
 }
 

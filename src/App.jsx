@@ -11,6 +11,7 @@ import MunicipalityKnowledge from './pages/MunicipalityKnowledge'
 import ProcurementManager from './pages/ProcurementManager'
 import Company from './pages/Company'
 import Partners from './pages/Partners'
+import VaktromIntegration from './pages/VaktromIntegration'
 import Products from './pages/Products'
 import Guidance from './pages/Guidance'
 import AlarmCommunication from './pages/AlarmCommunication'
@@ -41,6 +42,7 @@ function App() {
           <Route path="/procurement-manager" element={<ProcurementManager />} />
           <Route path="/company" element={<Company />} />
           <Route path="/partners" element={<Partners />} />
+          <Route path="/vaktrom-integration" element={<VaktromIntegration />} />
           <Route path="/products" element={<Products />} />
           <Route path="/guidance" element={<Guidance />} />
           <Route path="/alarm-communication" element={<AlarmCommunication />} />

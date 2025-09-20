@@ -2,7 +2,7 @@ import products from '../data/products.json'
 import { useTranslation } from 'react-i18next'
 
 export default function Products() {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const groups = products.reduce((acc, p) => {
     acc[p.category] = acc[p.category] || []
     acc[p.category].push(p)

@@ -1,9 +1,7 @@
-import { useTranslation } from 'react-i18next'
 import ContactForm from '../components/ContactForm'
 import heroImg from '../assets/demo pilot.png'
 
 export default function Demo() {
-  const { t } = useTranslation()
   const typeOptions = [
     { value: 'demo', label: 'Demo' },
     { value: 'leder', label: 'Lederpresentasjon' },
