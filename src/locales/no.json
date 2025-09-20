@@ -119,7 +119,7 @@
       "button2": "Book gratis veiledning"
     },
     "faq": {
-      "title": "Ofte stilte spørsmål",
+      "title": "Ofte stilte spørsmål om alarm produkter",
       "items": [
         {
           "question": "Virker alarmen bare hjemme?",
@@ -139,7 +139,7 @@
         },
         {
           "question": "Er dette vanskelig å sette opp?",
-          "answer": "Nei. Alarmene er laget for å være like enkle å bruke som en liten fjernkontroll. Vi setter opp systemet sammen med deg, slik at du vet at alt virker. All data håndteres trygt, lagres på servere i Norge, og følger strenge regler for personvern."
+          "answer": "Nei. Alarmene er laget for å være like enkle å bruke som en liten fjernkontroll. Alle våre produkter er laget for å svært enkle å sette opp og vil i det fleste tilfeller være satt opp når du mottar disse. Skulle noe lokalt være nødvendig setter opp systemet sammen med deg, slik at du vet at alt virker. All data håndteres trygt, lagres på servere i Norge, og følger strenge regler for personvern."
         }
       ]
     },
@@ -164,8 +164,8 @@
   "medicalFollowup": {
     "hero": {
       "title": "Medisinsk oppfølging hjemme",
-      "subtitle1": "Unngå at et fall endrer alt.",
-      "subtitle2": "Våre sensorer oppdager fall helt automatisk.",
+      "subtitle1": "I de fleste norske kommuner finnes eldre som er for friske til å være innlagt på sykehus, men som likevel trenger tettere oppfølging enn hva for eksempel hjemmesykepleien har kapasitet til.",
+      "subtitle2": "Det finnes også en stor gruppe som vi kaller yngre eldre. Dette er personer som er for friske til å være berettiget kommunal hjemmehjelp tjeneste.",
       "button1": "Bestill gratis veiledning",
       "button2": "Hvordan andre bruker det",
       "secondaryTitle": "Trygghet for deg og god helseoppfølging for dem",
@@ -566,7 +566,7 @@
         },
         {
           "question": "Må vi ha internett?",
-          "answer": "Ja, internett er nødvendig for varsler og datadeling. Vi kan hjelpe med forslag hvis det ikke er tilgjengelig."
+          "answer": "Nei, alle våre systemer er laget slik at vi ikke er avhengig av Wi-Fi eller ethernetkabel. Vi bruker dette om det finnes, men om dette ikke er tilgjengelig vil løsningen bruke mobil nettet."
         },
         {
           "question": "Er dataene trygge?",
@@ -695,6 +695,7 @@
       "button": "Se hvordan det fungerer i praksis"
     },
     "benefits": {
+      "title": "Kommunale fordeler",
       "safeCare": {
         "title": "Trygg og verdig omsorg i hverdagen",
         "link": "(link til side for helsepersonell og leder i hjemmetjenesten)"
@@ -920,6 +921,79 @@
     },
     "footer": "[Footer]"
   },
+  "healthPersonnel": {
+    "hero": {
+      "title": "Trygg og verdig omsorg i hverdagen",
+      "description": "For helsepersonell og ledere i hjemmetjenesten. Våre sensorer og systemer gir deg bedre oversikt, færre unødvendige besøk og mer tid til å fokusere på det som virkelig teller - menneskene du hjelper.",
+      "button": "Se hvordan det fungerer"
+    },
+    "challenges": {
+      "title": "Utfordringene i hjemmetjenesten",
+      "subtitle": "Daglige utfordringer",
+      "challenge1": "Færre ansatte per pasient",
+      "challenge2": "Unødvendige besøk og reise",
+      "challenge3": "Begrenset oversikt over pasientenes tilstand",
+      "challenge4": "Reaktive i stedet for proaktive tiltak"
+    },
+    "societalBenefits": {
+      "title": "Samfunnsgevinsten",
+      "subtitle": "Vår løsning gir målbare resultater:",
+      "benefit1": {
+        "title": "Færre sykehusinnleggelser",
+        "description": "Seniorer oppdager kritiske hendelser tidlig."
+      },
+      "benefit2": {
+        "title": "Lavere kostnader",
+        "description": "Kommunen sparer betydelige summer på forebygging."
+      },
+      "benefit3": {
+        "title": "Bedre arbeidsvilkår",
+        "description": "Ansatte får en mer forutsigbar arbeidshverdag."
+      },
+      "benefit4": {
+        "title": "Trygghet og verdighet",
+        "description": "Eldre får bo hjemme lenger med økt sikkerhet."
+      }
+    },
+    "documentation": {
+      "title": "Dokumentasjon og legitimitet",
+      "ceMarked": {
+        "title": "CE-merket og MDR-kompatibelt medisinsk utstyr",
+        "description": "Alle våre produkter er CE-merket og utviklet i henhold til MDR (Medical Device Regulation), som sikrer høy standard på sikkerhet, kvalitet og pålitelighet. Dette gir trygghet for kommuner og helsepersonell om at løsningene kan brukes i pasientbehandling uten å sette liv og helse i fare, og kan integreres sømløst i offentlig drift."
+      },
+      "dataSecurity": {
+        "title": "Datasikkerhet i tråd med GDPR",
+        "description": "Systemene våre er bygget med høyeste grad av datasikkerhet og personvern, og er fullt i tråd med GDPR. Følsomme helsedata krypteres, og det finnes klare rutiner for lagring, tilgang og deling. Dette gjør at kommuner kan adoptere teknologien uten bekymring for lovbrudd eller tap av offentlig tillit."
+      },
+      "tested": {
+        "title": "Driftssikker teknologi testet i norske kommuner",
+        "description": "Løsningene våre er allerede testet i norske kommuner og dokumentert til å fungere i praksis. Dette betyr at teknologien ikke bare er teoretisk, men pålitelig i reell helse- og omsorgstjeneste, og adresserer eksisterende behov, rutiner og utfordringer. Erfaringer viser at den kan redusere unødvendig tilsyn, frigjøre tid for ansatte, og samtidig øke brukersikkerheten."
+      },
+      "downloadButton": "Last ned politiker-brief"
+    },
+    "cases": {
+      "title": "Case og fortellinger",
+      "pilotResults": "I en pilotkommune resulterte systemet i:",
+      "result1": "10 færre sykehusinnleggelser per 100 brukere på ett år.",
+      "result2": "Større trygghet for ansatte og pårørende.",
+      "quote": "Dette er et eksempel på teknologi som gir både bedre tjenester og lavere kostnader. Det er et nødvendig valg for kommunen.",
+      "attribution": "- Ordfører i pilotkommune"
+    },
+    "nextSteps": {
+      "title": "Hva er neste steg?",
+      "subtitle": "Vil du se hvordan dette kan styrke din kommune?",
+      "brief": {
+        "title": "Les kortversjonen av gevinster i vår politiker-brief",
+        "description": "En kort oversikt som forklarer hvordan teknologien kan gi bedre omsorg, lavere kostnader og tryggere arbeidsvilkår. Tilpasset beslutningstakere som trenger en rask, klar oppsummering med tall og eksempler.",
+        "button": "Last ned politiker-brief"
+      },
+      "presentation": {
+        "title": "Bestill en presentasjon til formannskap eller utvalg",
+        "description": "Vi kommer og presenterer løsningen med konkrete eksempler fra norske kommuner. Presentasjonen kan tilpasses lokale utfordringer og gir mulighet for spørsmål og dialog med både politikere og administrasjon.",
+        "button": "Bestill en presentasjon"
+      }
+    }
+  },
   "company": {
     "hero": {
       "title": "Bygg fremtidens omsorg sammen med oss",
@@ -991,6 +1065,450 @@
       "button": "Kontakt oss i dag"
     },
     "footer": "[Footer]"
+  },
+  "municipalityDetails": {
+    "hero": {
+      "title": "Mer tid til mennesker, mindre tid på unødvendige oppgaver",
+      "description": "Våre sensorer og systemer hjelper deg og dine ansatte å oppdage kritiske hendelser mellom besøkene, gir bedre oversikt og gjør prioriteringen enklere - uten å skape merarbeid.",
+      "button": "Bestill gratis veiledning"
+    },
+    "challenges": {
+      "title": "Hverdagsutfordringene",
+      "uncertainty": {
+        "title": "Usikkerhet mellom besøk",
+        "description": "I hjemmetjenesten oppstår de største bekymringene når ingen er til stede. Mange fall og helseendringer skjer mellom besøk, og de ansatte må leve med usikkerheten om noe skjer i løpet av natten eller timene mellom."
+      },
+      "pressure": {
+        "title": "Presset arbeidshverdag",
+        "description": "Samtidig er arbeidshverdagen presset: korte tidsvinduer per besøk, stadig flere pasienter og en følelse av å alltid ligge litt bak. Dette gir stress for ansatte og økt risiko for pasientene."
+      }
+    },
+    "solution": {
+      "title": "Løsningen kort forklart",
+      "subtitle": "Tre byggesteiner gir kommunen kontroll:",
+      "fallSensors": {
+        "title": "Fallsensorer",
+        "description": "Oppdager fall automatisk, også når brukeren ikke klarer å trykke på alarmknappen."
+      },
+      "healthSensors": {
+        "title": "Helsesensorer",
+        "description": "Følger med på pust, puls og aktivitet uten at brukeren merker det."
+      },
+      "centralOverview": {
+        "title": "Sentral oversikt",
+        "description": "Kommunen får sanntidsdata og kan prioritere ressursene riktig."
+      }
+    },
+    "benefits": {
+      "title": "Fordeler for ansatte og ledere",
+      "benefit1": "Mindre stress og bekymring for hva som skjer mellom besøkene.",
+      "benefit2": "Bedre oversikt gjør det enklere å prioritere riktig.",
+      "benefit3": "Økt trygghet både for ansatte og pårørende.",
+      "benefit4": "Mulighet til å jobbe mer forebyggende i stedet for å håndtere kriser.",
+      "quote": "Vi får rask beskjed når noe skjer, og kan handle med en gang. Det gir trygghet både for pasientene og for oss som ansatte.",
+      "attribution": "- Avdelingssykepleier, pilotkommune"
+    },
+    "cta": {
+      "title": "Vil du se hvordan dette kan hjelpe din tjeneste?",
+      "benefit1": "Vi tilbyr demoer tilpasset hjemmetjenesten.",
+      "benefit2": "Vi kan starte med et pilotprosjekt for en liten pasientgruppe.",
+      "button": "Bestill gratis veiledning"
+    },
+    "nextSteps": {
+      "title": "Hva er neste steg?",
+      "subtitle": "Vil du se hvordan dette kan hjelpe din tjeneste?",
+      "demo": {
+        "title": "Demo tilpasset hjemmetjenesten",
+        "description": "Vi tilbyr demoer tilpasset hjemmetjenesten.",
+        "button": "Bestill demo"
+      },
+      "pilot": {
+        "title": "Start pilotprosjekt",
+        "description": "Vi kan starte med et pilotprosjekt for en liten pasientgruppe.",
+        "button": "Start en pilot / hjemmetjenesten"
+      }
+    },
+    "footer": "← Tilbake til kommunale fordeler"
+  },
+  "municipalityKnowledge": {
+    "hero": {
+      "title": "En tryggere kommune - lavere kostnader, færre innleggelser, mer robuste tjenester.",
+      "description1": "Som kommunalsjef eller avdelingsleder har du ansvar for å sikre gode tjenester innenfor stramme rammer.",
+      "description2": "Våre sensorer og systemer hjelper deg å redusere sykehusinnleggelser, styrke hjemmetjenesten og frigjøre ressurser slik at kommunen kan levere både trygghet og bærekraft.",
+      "button1": "Bestill gratis veiledning",
+      "button2": "Se gevinstene for kommunen"
+    },
+    "challenges": {
+      "title": "Utfordringene kommunen står i dag",
+      "intro": "Norske kommuner står i en krevende situasjon:",
+      "challenge1": "Antall eldre øker raskt.",
+      "challenge2": "Hjemmetjenesten har færre ansatte per pasient.",
+      "challenge3": "Kostnader til sykehusinnleggelser og oppfølging stiger.",
+      "conclusion": "Mange fall, pustestans eller akutte helsehendelser skjer mellom besøkene, når ingen er til stede. Resultatet er både utrygghet for innbyggerne og ekstra kostnader for kommunen."
+    },
+    "solution": {
+      "title": "Løsningen på systemnivå",
+      "subtitle": "Med våre løsninger får kommunen et verktøy som",
+      "fallSensors": {
+        "title": "Fallsensorer",
+        "description": "oppdager fall automatisk, også når brukeren ikke klarer å trykke på alarmknappen."
+      },
+      "healthSensors": {
+        "title": "Helsesensorer",
+        "description": "følger med på pust, puls og aktivitet uten at brukeren merker det."
+      },
+      "centralOverview": {
+        "title": "Sentral oversikt",
+        "description": "kommunen får sanntidsoversikt og kan prioritere ressursene riktig."
+      }
+    },
+    "benefits": {
+      "title": "Fordeler for ansatte og ledere",
+      "benefit1": "Mindre stress og bekymring for hva som skjer mellom besøkene.",
+      "benefit2": "Bedre oversikt gjør det enklere å prioritere riktig.",
+      "benefit3": "Økt trygghet både for ansatte og pårørende.",
+      "benefit4": "Mulighet til å jobbe mer forebyggende i stedet for å håndtere kriser.",
+      "quote": "Vi får rask beskjed når noe skjer, og kan handle med en gang. Det gir trygghet både for pasientene og for oss som ansatte.",
+      "attribution": "- Avdelingssykepleier, pilotkommune"
+    },
+    "documentation": {
+      "title": "Dokumentasjon og trygghet",
+      "subtitle": "Kommunen kan være trygg på at løsningen er:",
+      "ceMarked": {
+        "title": "CE-merket og klassifisert under MDR som medisinsk utstyr"
+      },
+      "gdpr": {
+        "title": "Utviklet i tråd med GDPR og ISO-standarder for datasikkerhet"
+      },
+      "support": {
+        "title": "Driftssikker med profesjonell support og høy oppetid"
+      },
+      "button": "Last ned dokumentasjon"
+    },
+    "cases": {
+      "title": "Case og referanser",
+      "subtitle": "Kommuner som har testet løsningen melder om:",
+      "result1": "Færre akutte sykehusinnleggelser – opp til 20% reduksjon på ett år",
+      "result2": "Økt trygghet for ansatte og pårørende",
+      "result3": "Bedre ressursutnyttelse – mer tid frigjort til planlagte besøk",
+      "quote": "Dette gir oss mulighet til å levere bedre tjenester med de ressursene vi har. Det er et viktig bidrag til en bærekraftig omsorgstjeneste.",
+      "attribution": "- Kommunalsjef, pilotkommune"
+    },
+    "nextSteps": {
+      "title": "Hva er neste steg?",
+      "subtitle": "Vil du se hva dette kan bety for din kommune?",
+      "presentation": {
+        "title": "Lederpresentasjon",
+        "description": "Vi tilbyr korte digitale møter for ledere med gjennomgang av gevinster.",
+        "button": "Bestill en lederpresentasjon"
+      },
+      "pilot": {
+        "title": "Pilotprosjekt",
+        "description": "Vi kan sette opp pilotprosjekter i liten skala, med lav risiko og rask effekt.",
+        "button": "Start et pilotprosjekt"
+      }
+    },
+    "footer": "← Tilbake til kommunale fordeler"
+  },
+  "procurementManager": {
+    "hero": {
+      "title": "Trygg leverandør - tydelig dokumentasjon.",
+      "description": "Som innkjøpsansvarlig trenger du oversikt, forutsigbarhet og sikkerhet. Alle dokumenter, prismodeller og sertifikater er tilgjengelige for gjennomgang, og tåler både revisjon og tidspress.",
+      "button1": "Bestill gratis veiledning",
+      "button2": "Last ned dokumentasjon"
+    },
+    "certifications": {
+      "title": "Godkjenninger og sertifiseringer",
+      "subtitle": "Våre produkter er godkjent og dokumentert i henhold til gjeldende krav:",
+      "ceMarked": {
+        "title": "CE-merket medisinsk utstyr (MDR-klassifisert)"
+      },
+      "gdpr": {
+        "title": "Samsvar med GDPR og ISO 27001 for datasikkerhet"
+      },
+      "standards": {
+        "title": "Utviklet i tråd med nasjonale og internasjonale standarder"
+      },
+      "button": "Last ned dokumentasjon"
+    },
+    "documents": {
+      "title": "Nedlastbare dokumenter:",
+      "compliance": "samsvarserklæring",
+      "productSheet": "produktark",
+      "certificates": "sertifikater",
+      "securityDocs": "sikkerhetsdokumentasjon"
+    },
+    "pricing": {
+      "title": "Prismodell og avtaleformer",
+      "subtitle": "Vi tilbyr en tydelig og forutsigbar prismodell:",
+      "model1": "Engangskostnad for utstyr",
+      "model2": "Årlig lisens for drift, oppdateringer og support",
+      "model3": "Mulighet for skalering opp eller ned etter behov",
+      "contracts": {
+        "title": "Avtaleformer:",
+        "contract1": "Rammeavtale for fleksibilitet",
+        "contract2": "Pilotprosjekt i liten skala",
+        "contract3": "Direkteanskaffelse (der regelverket åpner for det)"
+      }
+    },
+    "procurement": {
+      "title": "Anskaffelsesprosess",
+      "description": "Vi forstår kravene til offentlige innkjøp og har strukturert prosessen slik at den passer kommunens behov.",
+      "benefit1": "Ryddige kontrakter og dokumentpakker",
+      "benefit2": "Prosesser i tråd med anskaffelsesloven",
+      "benefit3": "Mulighet for dialog i tidlig fase for å avklare krav og tilpasninger",
+      "button": "Kontakt oss"
+    },
+    "nextSteps": {
+      "title": "Hva er neste steg?",
+      "subtitle": "Vil du ta dette inn i vurderingen?",
+      "download": {
+        "title": "Last ned komplett dokumentpakke for vurdering.",
+        "button": "Last ned komplett dokumentpakke"
+      },
+      "meeting": {
+        "title": "Avtal et møte for å gjennomgå anskaffelsesprosessen.",
+        "button": "Avtal et møte med oss"
+      }
+    },
+    "footer": "← Tilbake til kommunale fordeler"
+  },
+  "itWelfareTech": {
+    "hero": {
+      "title": "Sikker, kompatibel og klar for integrasjon.",
+      "description": "Vi leverer IT og velferdsteknologi som er sikker, stabil og kompatibel. Våre løsninger følger GDPR, ISO-standarder og integrerer enkelt med eksisterende systemer.",
+      "button1": "Bestill gratis veiledning",
+      "button2": "Se teknisk dokumentasjon"
+    },
+    "security": {
+      "title": "Datasikkerhet og personvern",
+      "subtitle": "Vi setter sikkerhet først:",
+      "encryption": {
+        "title": "Kryptering",
+        "description": "All data krypteres både under overføring og lagring."
+      },
+      "accessControl": {
+        "title": "Tilgangsstyring",
+        "description": "Tilgangsstyring med rollebaserte rettigheter og logging."
+      },
+      "gdpr": {
+        "title": "GDPR-kompatibel",
+        "description": "GDPR-kompatibel behandling av sensitive data."
+      },
+      "iso": {
+        "title": "ISO 27001",
+        "description": "Utviklet i tråd med ISO 27001 og andre relevante standarder."
+      }
+    },
+    "overview": {
+      "title": "Komplett systemoversikt",
+      "description": "Våre løsninger gir deg full kontroll over velferdsteknologien i kommunen, med enkel integrasjon og skalerbar arkitektur.",
+      "feature1": "Skalerbar arkitektur som vokser med behovene dine",
+      "feature2": "Enkel integrasjon med eksisterende kommunale systemer",
+      "feature3": "Real-time overvåking og rapportering",
+      "button": "Se teknisk dokumentasjon"
+    },
+    "standards": {
+      "title": "Tekniske standarder og kvalitet",
+      "subtitle": "Vi følger de høyeste standardene innen IT-sikkerhet og velferdsteknologi",
+      "compliance": {
+        "title": "Sertifiseringer",
+        "description": "ISO 27001, GDPR-kompatibel og følger norske og europeiske standarder for velferdsteknologi."
+      },
+      "performance": {
+        "title": "Ytelse og stabilitet",
+        "description": "Høy oppetid, rask respons og robust arkitektur som håndterer store datamengder."
+      },
+      "reliability": {
+        "title": "Pålitelighet",
+        "description": "24/7 overvåking, automatisk backup og katastrofeberedskap for kontinuerlig drift."
+      }
+    },
+    "cta": {
+      "title": "Klar for å ta steget videre?",
+      "description": "La oss vise deg hvordan våre sikre og kompatible løsninger kan integreres i din kommunes IT-miljø.",
+      "contact": "Kontakt oss",
+      "demo": "Bestill demo"
+    },
+    "architecture": {
+      "title": "Systemarkitektur og drift",
+      "subtitle": "Vår løsning er utviklet for stabilitet og skalerbarhet:",
+      "cloud": {
+        "title": "Skybasert arkitektur",
+        "description": "Skybasert arkitektur med redundans og failover."
+      },
+      "monitoring": {
+        "title": "Overvåking 24/7",
+        "description": "Overvåking 24/7 og høy oppetid."
+      },
+      "scalability": {
+        "title": "Fleksibel skalerbarhet",
+        "description": "Fleksibel skalerbarhet fra pilot til full utrulling."
+      }
+    },
+    "integration": {
+      "title": "Integrasjon og standarder",
+      "subtitle": "Vi vet at integrasjon er avgjørende for kommunens systemmiljø:",
+      "fhir": {
+        "title": "FHIR og HL7",
+        "description": "Støtter standarder som FHIR og HL7."
+      },
+      "api": {
+        "title": "Åpne API-er",
+        "description": "Åpne API-er tilgjengelig for utviklere."
+      },
+      "security": {
+        "title": "Sikkerhetstester",
+        "description": "Kontinuerlige sikkerhetstester og oppdateringer."
+      },
+      "documentation": {
+        "title": "Teknisk dokumentasjon",
+        "description": "Dokumentasjon tilgjengelig for tekniske team."
+      }
+    },
+    "planning": {
+      "title": "Planlegging og gjennomføring",
+      "subtitle": "Fra idé til ferdig løsning, med fokus på kvalitet:",
+      "projectPlanning": {
+        "title": "Prosjektplanlegging",
+        "description": "Grundig planlegging for å sikre en smidig og effektiv prosess."
+      },
+      "technical": {
+        "title": "Teknisk implementering",
+        "description": "Strukturert gjennomføring med kontinuerlig kvalitetssikring."
+      },
+      "monitoring": {
+        "title": "Kontinuerlig oppfølging",
+        "description": "Regelmessig oppfølging og justering for optimal ytelse."
+      }
+    },
+    "support": {
+      "title": "Support og oppfølging",
+      "subtitle": "Vi sørger for at alt fungerer hele veien:",
+      "technical": {
+        "title": "Teknisk support",
+        "description": "24/7 teknisk support og feilsøking for alle systemer."
+      },
+      "implementation": {
+        "title": "Implementeringsstøtte",
+        "description": "Komplett støtte gjennom hele implementeringsprosessen."
+      }
+    },
+    "footer": "← Tilbake til kommunale fordeler",
+    "dataSecurity": {
+      "title": "Datasikkerhet og personvern",
+      "subtitle": "Vi vet at integrasjon er avgjørende for kommunens systemmiljø.",
+      "developmentPlan": {
+        "title": "Planlegging",
+        "description": "Plan for videreutvikling i samarbeid med kommuner."
+      },
+      "technicalSupport": {
+        "title": "Teknisk Support",
+        "description": "Teknisk support fra norske fagpersoner."
+      },
+      "continuousSecurity": {
+        "title": "Sikkerhetstester",
+        "description": "Kontinuerlige sikkerhetstester og oppdateringer."
+      },
+      "developmentPlan2": {
+        "title": "Teknisk Dokumentasjon",
+        "description": "Plan for videreutvikling i samarbeid med kommuner."
+      }
+    },
+    "cta": {
+      "title": "Hva er neste steg?",
+      "subtitle": "Vil du ha en teknisk gjennomgang?",
+      "documentation": {
+        "description": "Last ned teknisk dokumentasjon.",
+        "button": "Last ned teknisk dokumentasjon"
+      },
+      "meeting": {
+        "description": "Avtal et møte med våre utviklere for detaljert gjennomgang.",
+        "button": "Bestill et teknisk møte"
+      }
+    }
+  },
+  "municipalBenefits": {
+    "hero": {
+      "title": "Trygghet hjemme. Avlastning for ansatte. Lavere kostnader for kommunen.",
+      "description": "Flere eldre ønsker å bo hjemme lenger. Samtidig presses budsjettene og hjemmetjenesten strekker seg stadig lenger. Våre sensorer og systemer gir kommunen et verktøy som skaper trygghet, reduserer belastningen på ansatte og sparer kostnader - uten at det krever merarbeid.",
+      "button": "Se hvordan dette kan hjelpe din rolle i kommunen"
+    },
+    "solution": {
+      "title": "Løsningen kort forklart",
+      "subtitle": "Tre byggesteiner gir kommunen kontroll:",
+      "fallSensors": {
+        "title": "Fallsensorer",
+        "description": "oppdager fall automatisk, også når brukeren ikke klarer å trykke på alarmknappen."
+      },
+      "healthSensors": {
+        "title": "Helsesensorer",
+        "description": "følger med på pust, puls og aktivitet uten at brukeren merker det."
+      },
+      "centralOverview": {
+        "title": "Sentral oversikt",
+        "description": "kommunen får sanntidsvarsler og kan prioritere ressursene riktig."
+      }
+    },
+    "security": {
+      "title": "Trygghet og dokumentasjon",
+      "subtitle": "Kommunen kan være trygg på at løsningen er:",
+      "gdprDescription": "Bygd for personvern i tråd med GDPR",
+      "downloadButton": "Last ned dokumentasjon"
+    },
+    "roles": {
+      "title": "Finn informasjon tilpasset din rolle",
+      "subtitle": "Velg inngangen som passer deg best:",
+      "municipalManager": {
+        "title": "Kommunalsjef / avdelingsleder",
+        "description": "se gevinster på systemnivå og budsjettsiden."
+      },
+      "homeCareLeader": {
+        "title": "Leder for hjemmetjenesten",
+        "description": "se hvordan systemet gir oversikt og avlastning i hverdagen."
+      },
+      "procurementManager": {
+        "title": "Innkjøpsansvarlig / anskaffelse",
+        "description": "få dokumentasjon, sertifiseringer og prismodell."
+      },
+      "healthcarePersonnel": {
+        "title": "Helsepersonell",
+        "description": "se hvordan dette fungerer i praksis for deg og pasienten."
+      },
+      "itWelfare": {
+        "title": "IT / velferdsteknologi",
+        "description": "tekniske spesifikasjoner, sikkerhet og integrasjoner."
+      },
+      "politicians": {
+        "title": "Politikere",
+        "description": "se samfunnsgevinster og bærekraftig effekt for kommunen."
+      }
+    },
+    "quote": {
+      "text": "Et fall oppdaget i tide kan spare både liv og kostnader. For oss i hjemmetjenesten har dette gitt en helt ny trygghet.",
+      "attribution": "- Sitert fra pilotkommune"
+    },
+    "cta": {
+      "title": "Hva er neste steg?",
+      "subtitle": "Vil du se hvordan dette kan hjelpe din tjeneste?",
+      "demo": {
+        "description": "Vi tilbyr demoer tilpasset hjemmetjenesten.",
+        "button": "Bestill demo"
+      },
+      "pilot": {
+        "description": "Vi kan starte med et pilotprosjekt for en liten pasientgruppe.",
+        "button": "Kontakt oss for mer informasjon"
+      }
+    },
+    "challenges": {
+      "title": "Utfordringene kommunen står i dag",
+      "intro": "Norske kommuner står i en krevende situasjon:",
+      "point1": "Antall eldre øker raskt.",
+      "point2": "Hjemmetjenesten har færre ansatte per pasient.",
+      "point3": "Kostnader til sykehusinnleggelser og oppfølging stiger.",
+      "conclusion": "Mange fall, pustestans eller akutte helsehendelser skjer mellom besøkene, når ingen er til stede. Resultatet er både utrygghet for innbyggerne og ekstra kostnader for kommunen."
+    },
+    "footer": "← Tilbake til kommunale fordeler"
   },
   "vaktromIntegration": {
     "hero": {

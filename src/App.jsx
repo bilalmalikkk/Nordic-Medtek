@@ -6,6 +6,9 @@ import ContactForm from './components/ContactForm'
 import Home from './pages/Home'
 import Private from './pages/Private'
 import Municipality from './pages/Municipality'
+import MunicipalityDetails from './pages/MunicipalityDetails'
+import MunicipalityKnowledge from './pages/MunicipalityKnowledge'
+import ProcurementManager from './pages/ProcurementManager'
 import Company from './pages/Company'
 import Partners from './pages/Partners'
 import VaktromIntegration from './pages/VaktromIntegration'
@@ -21,6 +24,9 @@ import Documents from './pages/Documents'
 import Pricing from './pages/Pricing'
 import Support from './pages/Support'
 import Evidence from './pages/Evidence'
+import HealthPersonnel from './pages/HealthPersonnel'
+import ITWelfareTechnology from './pages/ITWelfareTechnology'
+import MunicipalBenefits from './pages/MunicipalBenefits'
 
 function App() {
   return (
@@ -31,6 +37,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/private" element={<Private />} />
           <Route path="/municipality" element={<Municipality />} />
+          <Route path="/municipality-details" element={<MunicipalityDetails />} />
+          <Route path="/municipality-knowledge" element={<MunicipalityKnowledge />} />
+          <Route path="/procurement-manager" element={<ProcurementManager />} />
           <Route path="/company" element={<Company />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/vaktrom-integration" element={<VaktromIntegration />} />
@@ -46,6 +55,9 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/support" element={<Support />} />
           <Route path="/evidence" element={<Evidence />} />
+          <Route path="/health-personnel" element={<HealthPersonnel />} />
+          <Route path="/it-welfare-technology" element={<ITWelfareTechnology />} />
+          <Route path="/municipal-benefits" element={<MunicipalBenefits />} />
         </Routes>
       </main>
     </div>

@@ -119,7 +119,7 @@
       "button2": "Book free guidance"
     },
     "faq": {
-      "title": "Frequently asked questions",
+      "title": "Frequently asked questions about alarm products",
       "items": [
         {
           "question": "Does the alarm only work at home?",
@@ -139,7 +139,7 @@
         },
         {
           "question": "Is this difficult to set up?",
-          "answer": "No. The alarms are designed to be as easy to use as a small remote control. We set up the system with you, so you know everything works. All data is handled securely, stored on servers in Norway, and follows strict rules for personal privacy."
+          "answer": "No. The alarms are designed to be as easy to use as a small remote control. All our products are designed to be very easy to set up and will in most cases be set up when you receive them. Should anything local be necessary, we set up the system together with you, so you know everything works. All data is handled securely, stored on servers in Norway, and follows strict rules for personal privacy."
         }
       ]
     },
@@ -164,8 +164,8 @@
   "medicalFollowup": {
     "hero": {
       "title": "Medical follow-up at home",
-      "subtitle1": "Prevent a fall from changing everything.",
-      "subtitle2": "Our sensors detect falls completely automatically.",
+      "subtitle1": "In most Norwegian municipalities, there are elderly people who are too healthy to be admitted to a hospital, but who nevertheless need closer follow-up than what, for example, home nursing care has the capacity for.",
+      "subtitle2": "There is also a large group that we call younger elderly. These are people who are too healthy to be entitled to municipal home help services.",
       "button1": "Book free guidance",
       "button2": "How others use it",
       "secondaryTitle": "Security for you and good health follow-up for them",
@@ -581,7 +581,7 @@
         },
         {
           "question": "Do we need internet?",
-          "answer": "Yes, internet is necessary for alerts and data sharing. We can help with suggestions if it's not available."
+          "answer": "No, all our systems are designed so that we are not dependent on Wi-Fi or ethernet cable. We use this if it exists, but if this is not available, the solution will use the mobile network."
         },
         {
           "question": "Is the data secure?",
@@ -695,6 +695,7 @@
       "button": "See how it works in practice"
     },
     "benefits": {
+      "title": "Municipal benefits",
       "safeCare": {
         "title": "Safe and dignified care in everyday life",
         "link": "(link to page for health personnel and leader in home care)"
@@ -991,6 +992,523 @@
       "button": "Contact us today"
     },
     "footer": "[Footer]"
+  },
+  "healthPersonnel": {
+    "hero": {
+      "title": "Safe and dignified care in everyday life",
+      "description": "For health personnel and managers in home care services. Our sensors and systems give you better overview, fewer unnecessary visits and more time to focus on what really matters - the people you help.",
+      "button": "See how it works"
+    },
+    "challenges": {
+      "title": "The challenges in home care services",
+      "subtitle": "Daily challenges",
+      "challenge1": "Fewer staff per patient",
+      "challenge2": "Unnecessary visits and travel",
+      "challenge3": "Limited overview of patients' condition",
+      "challenge4": "Reactive instead of proactive measures"
+    },
+    "societalBenefits": {
+      "title": "Societal benefits",
+      "subtitle": "Our solution provides measurable results:",
+      "benefit1": {
+        "title": "Fewer hospital admissions",
+        "description": "Seniors detect critical incidents early."
+      },
+      "benefit2": {
+        "title": "Lower costs",
+        "description": "The municipality saves significant sums on prevention."
+      },
+      "benefit3": {
+        "title": "Better working conditions",
+        "description": "Employees get a more predictable workday."
+      },
+      "benefit4": {
+        "title": "Safety and dignity",
+        "description": "Elderly people can live at home longer with increased safety."
+      }
+    },
+    "documentation": {
+      "title": "Documentation and legitimacy",
+      "ceMarked": {
+        "title": "CE-marked and MDR-compliant medical equipment",
+        "description": "All our products are CE-marked and developed in accordance with MDR (Medical Device Regulation), ensuring high standards of safety, quality and reliability. This provides assurance for municipalities and health personnel that the solutions can be used in patient treatment without endangering lives and health, and can be seamlessly integrated into public operations."
+      },
+      "dataSecurity": {
+        "title": "Data security in line with GDPR",
+        "description": "Our systems are built with the highest degree of data security and personal privacy, fully compliant with GDPR. Sensitive health data is encrypted, with clear routines for storage, access and sharing. This enables municipalities to adopt the technology without concerns about legal breaches or loss of public trust."
+      },
+      "tested": {
+        "title": "Reliable technology tested in Norwegian municipalities",
+        "description": "Our solutions have already been tested in Norwegian municipalities and documented to function in practice. This means the technology is not merely theoretical but reliable in real-world healthcare and care services, addressing existing demands, routines and challenges. Experiences show it can reduce unnecessary oversight, free up time for staff, and simultaneously increase user safety."
+      },
+      "downloadButton": "Download politician brief"
+    },
+    "cases": {
+      "title": "Cases and stories",
+      "pilotResults": "In a pilot municipality, the system resulted in:",
+      "result1": "10 fewer hospital admissions per 100 users per year.",
+      "result2": "Greater safety for employees and relatives.",
+      "quote": "This is an example of technology that provides both better services and lower costs. It is a necessary choice for the municipality.",
+      "attribution": "- Mayor in pilot municipality"
+    },
+    "nextSteps": {
+      "title": "What is the next step?",
+      "subtitle": "Do you want to see how this can strengthen your municipality?",
+      "brief": {
+        "title": "Read the short version of benefits in our politician brief",
+        "description": "A concise overview explaining how the technology can provide better care, lower costs and safer working conditions. Tailored for decision-makers needing a quick, clear summary with figures and examples.",
+        "button": "Download politician brief"
+      },
+      "presentation": {
+        "title": "Order a presentation for the executive committee or committee",
+        "description": "We will come and present the solution with concrete examples from Norwegian municipalities. The presentation can be adapted to local challenges and offers an opportunity for questions and dialogue with both politicians and administration.",
+        "button": "Order a presentation"
+      }
+    }
+  },
+  "municipalityDetails": {
+    "hero": {
+      "title": "More time for people, less time on unnecessary tasks",
+      "description": "Our sensors and systems help you and your staff detect critical events between visits, provide better overview and make prioritization easier - without creating extra work.",
+      "button": "Book free guidance"
+    },
+    "challenges": {
+      "title": "Daily challenges",
+      "uncertainty": {
+        "title": "Uncertainty between visits",
+        "description": "In home care services, the biggest concerns arise when no one is present. Many falls and health changes occur between visits, and staff must live with the uncertainty of whether something happens during the night or the hours between."
+      },
+      "pressure": {
+        "title": "Pressured workday",
+        "description": "At the same time, the workday is pressured: short time windows per visit, constantly more patients and a feeling of always being a bit behind. This creates stress for employees and increased risk for patients."
+      }
+    },
+    "solution": {
+      "title": "The solution briefly explained",
+      "subtitle": "Three building blocks give the municipality control:",
+      "fallSensors": {
+        "title": "Fall sensors",
+        "description": "Detect falls automatically, even when the user cannot press the alarm button."
+      },
+      "healthSensors": {
+        "title": "Health sensors",
+        "description": "Monitor breathing, pulse and activity without the user noticing."
+      },
+      "centralOverview": {
+        "title": "Central overview",
+        "description": "The municipality gets real-time data and can prioritize resources correctly."
+      }
+    },
+    "benefits": {
+      "title": "Benefits for employees and managers",
+      "benefit1": "Less stress and worry about what happens between visits.",
+      "benefit2": "Better overview makes it easier to prioritize correctly.",
+      "benefit3": "Increased safety for both employees and relatives.",
+      "benefit4": "Opportunity to work more preventively instead of handling crises.",
+      "quote": "We get quick notification when something happens, and can act immediately. It provides safety for both patients and for us as employees.",
+      "attribution": "- Department nurse, pilot municipality"
+    },
+    "cta": {
+      "title": "Do you want to see how this can help your service?",
+      "benefit1": "We offer demos tailored to home care services.",
+      "benefit2": "We can start with a pilot project for a small patient group.",
+      "button": "Book free guidance"
+    },
+    "nextSteps": {
+      "title": "What is the next step?",
+      "subtitle": "Do you want to see how this can help your service?",
+      "demo": {
+        "title": "Demo tailored to home care services",
+        "description": "We offer demos tailored to home care services.",
+        "button": "Book demo"
+      },
+      "pilot": {
+        "title": "Start pilot project",
+        "description": "We can start with a pilot project for a small patient group.",
+        "button": "Start a pilot / home care services"
+      }
+    },
+    "footer": "← Back to municipal benefits"
+  },
+  "municipalityKnowledge": {
+    "hero": {
+      "title": "A safer municipality - lower costs, fewer admissions, more robust services.",
+      "description1": "As municipal manager or department head, you have responsibility for ensuring good services within tight frameworks.",
+      "description2": "Our sensors and systems help you reduce hospital admissions, strengthen home care services and free up resources so the municipality can deliver both safety and sustainability.",
+      "button1": "Book free guidance",
+      "button2": "See benefits for the municipality"
+    },
+    "challenges": {
+      "title": "The challenges the municipality faces today",
+      "intro": "Norwegian municipalities are in a demanding situation:",
+      "challenge1": "The number of elderly is increasing rapidly.",
+      "challenge2": "Home care services have fewer employees per patient.",
+      "challenge3": "Costs for hospital admissions and follow-up are rising.",
+      "conclusion": "Many falls, breathing stops or acute health events occur between visits, when no one is present. The result is both insecurity for residents and extra costs for the municipality."
+    },
+    "solution": {
+      "title": "The solution at system level",
+      "subtitle": "With our solutions, the municipality gets a tool that",
+      "fallSensors": {
+        "title": "Fall sensors",
+        "description": "detect falls automatically, even when the user cannot press the alarm button."
+      },
+      "healthSensors": {
+        "title": "Health sensors",
+        "description": "monitor breathing, pulse and activity without the user noticing."
+      },
+      "centralOverview": {
+        "title": "Central overview",
+        "description": "the municipality gets real-time overview and can prioritize resources correctly."
+      }
+    },
+    "benefits": {
+      "title": "Benefits for employees and managers",
+      "benefit1": "Less stress and worry about what happens between visits.",
+      "benefit2": "Better overview makes it easier to prioritize correctly.",
+      "benefit3": "Increased safety for both employees and relatives.",
+      "benefit4": "Opportunity to work more preventively instead of handling crises.",
+      "quote": "We get quick notification when something happens, and can act immediately. It provides safety for both patients and for us as employees.",
+      "attribution": "- Department nurse, pilot municipality"
+    },
+    "documentation": {
+      "title": "Documentation and safety",
+      "subtitle": "The municipality can be confident that the solution is:",
+      "ceMarked": {
+        "title": "CE-marked and classified under MDR as medical equipment"
+      },
+      "gdpr": {
+        "title": "Developed in accordance with GDPR and ISO standards for data security"
+      },
+      "support": {
+        "title": "Operationally reliable with professional support and high uptime"
+      },
+      "button": "Download documentation"
+    },
+    "cases": {
+      "title": "Cases and references",
+      "subtitle": "Municipalities that have tested the solution report:",
+      "result1": "Fewer acute hospital admissions – up to 20% reduction in one year",
+      "result2": "Increased safety for employees and relatives",
+      "result3": "Better resource utilization – more time freed up for planned visits",
+      "quote": "This gives us the opportunity to deliver better services with the resources we have. It is an important contribution to a sustainable care service.",
+      "attribution": "- Municipal manager, pilot municipality"
+    },
+    "nextSteps": {
+      "title": "What is the next step?",
+      "subtitle": "Do you want to see what this can mean for your municipality?",
+      "presentation": {
+        "title": "Management presentation",
+        "description": "We offer short digital meetings for managers with review of benefits.",
+        "button": "Book a management presentation"
+      },
+      "pilot": {
+        "title": "Pilot project",
+        "description": "We can set up pilot projects on a small scale, with low risk and quick effect.",
+        "button": "Start a pilot project"
+      }
+    },
+    "footer": "← Back to municipal benefits"
+  },
+  "procurementManager": {
+    "hero": {
+      "title": "Reliable supplier - clear documentation.",
+      "description": "As procurement manager, you need overview, predictability and security. All documents, pricing models and certificates are available for review, and withstand both audit and time pressure.",
+      "button1": "Book free guidance",
+      "button2": "Download documentation"
+    },
+    "certifications": {
+      "title": "Approvals and certifications",
+      "subtitle": "Our products are approved and documented according to current requirements:",
+      "ceMarked": {
+        "title": "CE-marked medical equipment (MDR-classified)"
+      },
+      "gdpr": {
+        "title": "Compliance with GDPR and ISO 27001 for data security"
+      },
+      "standards": {
+        "title": "Developed in accordance with national and international standards"
+      },
+      "button": "Download documentation"
+    },
+    "documents": {
+      "title": "Downloadable documents:",
+      "compliance": "compliance statement",
+      "productSheet": "product sheet",
+      "certificates": "certificates",
+      "securityDocs": "security documentation"
+    },
+    "pricing": {
+      "title": "Pricing model and contract forms",
+      "subtitle": "We offer a clear and predictable pricing model:",
+      "model1": "One-time cost for equipment",
+      "model2": "Annual license for operation, updates and support",
+      "model3": "Possibility for scaling up or down as needed",
+      "contracts": {
+        "title": "Contract forms:",
+        "contract1": "Framework agreement for flexibility",
+        "contract2": "Pilot project on small scale",
+        "contract3": "Direct procurement (where regulations allow)"
+      }
+    },
+    "procurement": {
+      "title": "Procurement process",
+      "description": "We understand the requirements for public procurement and have structured the process to suit the municipality's needs.",
+      "benefit1": "Clean contracts and document packages",
+      "benefit2": "Processes in accordance with procurement law",
+      "benefit3": "Opportunity for dialogue in early phase to clarify requirements and adaptations",
+      "button": "Contact us"
+    },
+    "nextSteps": {
+      "title": "What is the next step?",
+      "subtitle": "Do you want to include this in the assessment?",
+      "download": {
+        "title": "Download complete document package for assessment.",
+        "button": "Download complete document package"
+      },
+      "meeting": {
+        "title": "Schedule a meeting to review the procurement process.",
+        "button": "Schedule a meeting with us"
+      }
+    },
+    "footer": "← Back to municipal benefits"
+  },
+  "itWelfareTech": {
+    "hero": {
+      "title": "Secure, compatible and ready for integration.",
+      "description": "We deliver IT and welfare technology that is secure, stable and compatible. Our solutions follow GDPR, ISO standards and integrate easily with existing systems.",
+      "button1": "Order free guidance",
+      "button2": "See technical documentation"
+    },
+    "security": {
+      "title": "Data security and privacy",
+      "subtitle": "We put security first:",
+      "encryption": {
+        "title": "Encryption",
+        "description": "All data is encrypted both during transfer and storage."
+      },
+      "accessControl": {
+        "title": "Access Control",
+        "description": "Access control with role-based rights and logging."
+      },
+      "gdpr": {
+        "title": "GDPR-compatible",
+        "description": "GDPR-compatible processing of sensitive data."
+      },
+      "iso": {
+        "title": "ISO 27001",
+        "description": "Developed in accordance with ISO 27001 and other relevant standards."
+      }
+    },
+    "overview": {
+      "title": "Complete system overview",
+      "description": "Our solutions give you full control over welfare technology in the municipality, with easy integration and scalable architecture.",
+      "feature1": "Scalable architecture that grows with your needs",
+      "feature2": "Easy integration with existing municipal systems",
+      "feature3": "Real-time monitoring and reporting",
+      "button": "See technical documentation"
+    },
+    "standards": {
+      "title": "Technical standards and quality",
+      "subtitle": "We follow the highest standards in IT security and welfare technology",
+      "compliance": {
+        "title": "Certifications",
+        "description": "ISO 27001, GDPR-compatible and follows Norwegian and European standards for welfare technology."
+      },
+      "performance": {
+        "title": "Performance and stability",
+        "description": "High uptime, fast response and robust architecture that handles large amounts of data."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "24/7 monitoring, automatic backup and disaster recovery for continuous operation."
+      }
+    },
+    "cta": {
+      "title": "Ready to take the next step?",
+      "description": "Let us show you how our secure and compatible solutions can be integrated into your municipality's IT environment.",
+      "contact": "Contact us",
+      "demo": "Book demo"
+    },
+    "architecture": {
+      "title": "System architecture and operation",
+      "subtitle": "Our solution is developed for stability and scalability:",
+      "cloud": {
+        "title": "Cloud-based architecture",
+        "description": "Cloud-based architecture with redundancy and failover."
+      },
+      "monitoring": {
+        "title": "24/7 monitoring",
+        "description": "24/7 monitoring and high uptime."
+      },
+      "scalability": {
+        "title": "Flexible scalability",
+        "description": "Flexible scalability from pilot to full rollout."
+      }
+    },
+    "integration": {
+      "title": "Integration and standards",
+      "subtitle": "We know that integration is crucial for the municipality's system environment:",
+      "fhir": {
+        "title": "FHIR and HL7",
+        "description": "Supports standards like FHIR and HL7."
+      },
+      "api": {
+        "title": "Open APIs",
+        "description": "Open APIs available for developers."
+      },
+      "security": {
+        "title": "Security testing",
+        "description": "Continuous security tests and updates."
+      },
+      "documentation": {
+        "title": "Technical documentation",
+        "description": "Documentation available for technical teams."
+      }
+    },
+    "planning": {
+      "title": "Planning and implementation",
+      "subtitle": "From idea to complete solution, with a focus on quality:",
+      "projectPlanning": {
+        "title": "Project planning",
+        "description": "Thorough planning to ensure a smooth and efficient process."
+      },
+      "technical": {
+        "title": "Technical implementation",
+        "description": "Structured execution with continuous quality assurance."
+      },
+      "monitoring": {
+        "title": "Continuous follow-up",
+        "description": "Regular follow-up and adjustments for optimal performance."
+      }
+    },
+    "support": {
+      "title": "Support and follow-up",
+      "subtitle": "We ensure everything works all the way:",
+      "technical": {
+        "title": "Technical support",
+        "description": "24/7 technical support and troubleshooting for all systems."
+      },
+      "implementation": {
+        "title": "Implementation support",
+        "description": "Complete support throughout the entire implementation process."
+      }
+    },
+    "footer": "← Back to municipal benefits",
+    "dataSecurity": {
+      "title": "Data security and privacy",
+      "subtitle": "We know that integration is crucial for the municipality's system environment.",
+      "developmentPlan": {
+        "title": "Planning",
+        "description": "Plan for further development in collaboration with municipalities."
+      },
+      "technicalSupport": {
+        "title": "Technical Support",
+        "description": "Technical support from Norwegian specialists."
+      },
+      "continuousSecurity": {
+        "title": "Security Testing",
+        "description": "Continuous security tests and updates."
+      },
+      "developmentPlan2": {
+        "title": "Technical Documentation",
+        "description": "Plan for further development in collaboration with municipalities."
+      }
+    },
+    "cta": {
+      "title": "What is the next step?",
+      "subtitle": "Do you want a technical review?",
+      "documentation": {
+        "description": "Download technical documentation.",
+        "button": "Download technical documentation"
+      },
+      "meeting": {
+        "description": "Schedule a meeting with our developers for a detailed review.",
+        "button": "Order a technical meeting"
+      }
+    }
+  },
+  "municipalBenefits": {
+    "hero": {
+      "title": "Security at home. Relief for employees. Lower costs for the municipality.",
+      "description": "More elderly people want to live at home longer. At the same time, budgets are being squeezed and home care services are stretched further and further. Our sensors and systems provide the municipality with a tool that creates security, reduces the burden on employees, and saves costs - without requiring extra work.",
+      "button": "See how this can help your role in the municipality"
+    },
+    "solution": {
+      "title": "The solution briefly explained",
+      "subtitle": "Three building blocks give the municipality control:",
+      "fallSensors": {
+        "title": "Fall Sensors",
+        "description": "detects falls automatically, even when the user is unable to press the alarm button."
+      },
+      "healthSensors": {
+        "title": "Health Sensors",
+        "description": "monitors breathing, pulse, and activity without the user noticing."
+      },
+      "centralOverview": {
+        "title": "Central Overview",
+        "description": "the municipality receives real-time alerts and can prioritize resources correctly."
+      }
+    },
+    "security": {
+      "title": "Security and documentation",
+      "subtitle": "The municipality can be confident that the solution is:",
+      "gdprDescription": "Built for privacy in line with GDPR",
+      "downloadButton": "Download documentation"
+    },
+    "roles": {
+      "title": "Find information adapted to your role",
+      "subtitle": "Choose the entry that suits you best:",
+      "municipalManager": {
+        "title": "Municipal manager / department head",
+        "description": "see benefits at the system level and budget side."
+      },
+      "homeCareLeader": {
+        "title": "Head of home care services",
+        "description": "see how the system provides overview and relief in everyday life."
+      },
+      "procurementManager": {
+        "title": "Purchasing manager / procurement",
+        "description": "get documentation, certifications and pricing model."
+      },
+      "healthcarePersonnel": {
+        "title": "Healthcare personnel",
+        "description": "see how this works in practice for you and the patient."
+      },
+      "itWelfare": {
+        "title": "IT / welfare technology",
+        "description": "technical specifications, security and integrations."
+      },
+      "politicians": {
+        "title": "Politicians",
+        "description": "see societal benefits and sustainable effect for the municipality."
+      }
+    },
+    "quote": {
+      "text": "A fall detected in time can save both lives and costs. For us in home care, this has given a whole new sense of security.",
+      "attribution": "- Cited from pilot municipality"
+    },
+    "cta": {
+      "title": "What is the next step?",
+      "subtitle": "Do you want to see how this can help your service?",
+      "demo": {
+        "description": "We offer demos adapted to home care services.",
+        "button": "Order demo"
+      },
+      "pilot": {
+        "description": "We can start with a pilot project for a small patient group.",
+        "button": "Contact us for more information"
+      }
+    },
+    "challenges": {
+      "title": "The challenges the municipality faces today",
+      "intro": "Norwegian municipalities are in a demanding situation:",
+      "point1": "The number of elderly people is increasing rapidly.",
+      "point2": "Home care services have fewer staff per patient.",
+      "point3": "Costs for hospital admissions and follow-up are rising.",
+      "conclusion": "Many falls, breathing stops, or acute health events occur between visits, when no one is present. The result is both insecurity for residents and extra costs for the municipality."
+    },
+    "footer": "← Back to municipal benefits"
   },
   "vaktromIntegration": {
     "hero": {
