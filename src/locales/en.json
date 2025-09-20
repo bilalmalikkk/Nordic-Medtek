@@ -1597,6 +1597,37 @@
       "button": "Become partner"
     },
     "footer": "NordicMedTek - Partnership for tomorrow's care"
+  },
+  "competitiveAdvantage": {
+    "hero": {
+      "title": "Competitive advantage in a demanding market",
+      "description1": "With our sensors and cloud solution, you get reliable technology that strengthens the quality of your services and reduces unnecessary resource use.",
+      "description2": "This gives you a clear advantage in a competitive market.",
+      "button": "Contact us"
+    },
+    "advantages": {
+      "title": "Why this gives you an advantage",
+      "point1": "Technology that warns early and reduces the risk of accidents",
+      "point2": "Less need for manual supervision frees up time for tasks that truly matter",
+      "point3": "Increased safety for both users and relatives",
+      "point4": "A solution that builds trust in the market because it is CE-marked and MDR-approved"
+    },
+    "business": {
+      "title": "How this strengthens your business",
+      "point1": "You can deliver higher quality services without increasing costs",
+      "point2": "You stand out from competitors who have not adopted modern care technology",
+      "point3": "You provide peace of mind to relatives, which strengthens your reputation and customer base",
+      "point4": "You show that you are committed to innovation and sustainable care"
+    },
+    "partners": {
+      "title": "Partner benefits for private providers",
+      "point1": "Easy implementation without the need for extensive IT resources",
+      "point2": "Training and support that ensures your employees quickly adopt the system",
+      "point3": "Product sheets and case studies you can use in communication with customers and clients",
+      "point4": "Opportunity to join a partner program with benefits such as joint marketing and close follow-up",
+      "button": "Become a partner"
+    },
+    "footer": "NordicMedTek - Competitive advantage in care technology"
   }
 }
 

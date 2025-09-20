@@ -1597,6 +1597,37 @@
       "button": "Bli partner"
     },
     "footer": "NordicMedTek - Partnerskap for fremtidens omsorg"
+  },
+  "competitiveAdvantage": {
+    "hero": {
+      "title": "Konkurransefortrinn i et krevende marked",
+      "description1": "Med våre sensorer og skyløsning får du en driftssikker teknologi som styrker kvaliteten på tjenestene dine og reduserer unødvendig ressursbruk.",
+      "description2": "Det gir deg et tydelig fortrinn i et konkurranseutsatt marked.",
+      "button": "Kontakt oss"
+    },
+    "advantages": {
+      "title": "Hvorfor dette gir deg et fortrinn",
+      "point1": "Teknologi som varsler tidlig og reduserer risiko for ulykker",
+      "point2": "Mindre behov for manuelle tilsyn gir frigjort tid til oppgaver som virkelig betyr noe",
+      "point3": "Økt trygghet for både brukere og pårørende",
+      "point4": "En løsning som bygger tillit i markedet fordi den er CE-merket og MDR-godkjent"
+    },
+    "business": {
+      "title": "Hvordan dette styrker din virksomhet",
+      "point1": "Du kan levere tjenester av høyere kvalitet uten å øke kostnadene",
+      "point2": "Du skiller deg ut fra konkurrenter som ikke har tatt i bruk moderne omsorgsteknologi",
+      "point3": "Du gir pårørende trygghet, noe som styrker ditt omdømme og kundegrunnlag",
+      "point4": "Du viser at du satser på innovasjon og bærekraftig omsorg"
+    },
+    "partners": {
+      "title": "Partnerfordeler for private leverandører",
+      "point1": "Enkel implementering uten behov for store IT-ressurser",
+      "point2": "Opplæring og support som gjør at dine ansatte raskt tar i bruk systemet",
+      "point3": "Produktark og caser du kan bruke i kommunikasjon med kunder og oppdragsgivere",
+      "point4": "Mulighet til å inngå i partnerprogram med fordeler som felles markedsføring og tett oppfølging",
+      "button": "Bli partner"
+    },
+    "footer": "NordicMedTek - Konkurransefortrinn i omsorgsteknologi"
   }
 }
 

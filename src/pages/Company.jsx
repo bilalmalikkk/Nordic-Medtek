@@ -41,7 +41,7 @@ export default function Company() {
                   </svg>
                 </Link>
                 <Link 
-                  to="/guidance" 
+                  to="/competitive-advantage" 
                   className="group inline-flex items-center justify-center bg-green-200 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-green-300 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   {t('company.hero.button3')}

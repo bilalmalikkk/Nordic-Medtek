@@ -10,6 +10,7 @@ import MunicipalityDetails from './pages/MunicipalityDetails'
 import MunicipalityKnowledge from './pages/MunicipalityKnowledge'
 import ProcurementManager from './pages/ProcurementManager'
 import Company from './pages/Company'
+import CompetitiveAdvantage from './pages/CompetitiveAdvantage'
 import Partners from './pages/Partners'
 import VaktromIntegration from './pages/VaktromIntegration'
 import Products from './pages/Products'
@@ -41,6 +42,7 @@ function App() {
           <Route path="/municipality-knowledge" element={<MunicipalityKnowledge />} />
           <Route path="/procurement-manager" element={<ProcurementManager />} />
           <Route path="/company" element={<Company />} />
+          <Route path="/competitive-advantage" element={<CompetitiveAdvantage />} />
           <Route path="/partners" element={<Partners />} />
           <Route path="/vaktrom-integration" element={<VaktromIntegration />} />
           <Route path="/products" element={<Products />} />
