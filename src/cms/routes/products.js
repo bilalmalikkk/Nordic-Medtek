@@ -1,0 +1,287 @@
+import express from 'express';
+import { body, validationResult } from 'express-validator';
+import { query, queryOne, insert, update, dbDelete } from '../database/init.js';
+import { authenticateToken, requireAdmin } from '../middleware/auth.js';
+
+const router = express.Router();
+
+// Get all products (public and admin routes)
+const getProducts = async (req, res) => {
+    try {
+        const {
+            page = 1,
+            limit = 20,
+            category,
+            status = 'PUBLISHED',
+            featured,
+            search,
+            sort = 'sorting',
+            order = 'ASC'
+        } = req.query;
+
+        const offset = (page - 1) * limit;
+        let whereConditions = [];
+        let queryParams = [];
+
+        // Build WHERE conditions
+        if (category) {
+            whereConditions.push('p.category_id = ?');
+            queryParams.push(category);
+        }
+
+        if (status) {
+            whereConditions.push('p.status = ?');
+            queryParams.push(status);
+        }
+
+        if (featured !== undefined) {
+            whereConditions.push('p.is_featured = ?');
+            queryParams.push(featured === 'true' ? 1 : 0);
+        }
+
+        if (search) {
+            whereConditions.push('(p.title LIKE ? OR p.product_name LIKE ? OR p.technical_data LIKE ?)');
+            const searchTerm = `%${search}%`;
+            queryParams.push(searchTerm, searchTerm, searchTerm);
+        }
+
+        const whereClause = whereConditions.length > 0 ? `WHERE ${whereConditions.join(' AND ')}` : '';
+
+        // Build ORDER BY clause
+        const validSortFields = ['sorting', 'title', 'product_name', 'created_at', 'updated_at'];
+        const sortField = validSortFields.includes(sort) ? sort : 'sorting';
+        const sortOrder = order.toUpperCase() === 'DESC' ? 'DESC' : 'ASC';
+
+        // Get total count
+        const countQuery = `
+            SELECT COUNT(*) as total 
+            FROM products p 
+            LEFT JOIN categories c ON p.category_id = c.id 
+            ${whereClause}
+        `;
+        const countResult = await queryOne(countQuery, queryParams);
+        const total = countResult.total;
+
+        // Get products with pagination
+        const productsQuery = `
+            SELECT 
+                p.*,
+                c.name as category_name,
+                c.slug as category_slug,
+                c.color as category_color,
+                c.icon as category_icon
+            FROM products p
+            LEFT JOIN categories c ON p.category_id = c.id
+            ${whereClause}
+            ORDER BY p.${sortField} ${sortOrder}
+            LIMIT ? OFFSET ?
+        `;
+        
+        const products = await query(productsQuery, [...queryParams, limit, offset]);
+
+        res.json({
+            products,
+            pagination: {
+                page: parseInt(page),
+                limit: parseInt(limit),
+                total,
+                pages: Math.ceil(total / limit)
+            }
+        });
+
+    } catch (error) {
+        console.error('Get products error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
+// Get single product
+const getProduct = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const product = await query(`
+            SELECT 
+                p.*,
+                c.name as category_name,
+                c.slug as category_slug,
+                c.color as category_color,
+                c.icon as category_icon
+            FROM products p
+            LEFT JOIN categories c ON p.category_id = c.id
+            WHERE p.id = ? OR p.slug = ? OR p.item_number = ?
+        `, [id, id, id]);
+
+        if (product.length === 0) {
+            return res.status(404).json({ error: 'Product not found' });
+        }
+
+        res.json({ product: product[0] });
+
+    } catch (error) {
+        console.error('Get product error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
+// Create new product (admin only)
+const createProduct = async (req, res) => {
+    try {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+
+        const {
+            title,
+            product_name,
+            item_number,
+            technical_data,
+            rich_text_description,
+            image_url,
+            pdf_url,
+            category_id,
+            sorting = 0,
+            manual_sort,
+            status = 'DRAFT',
+            is_featured = false,
+            external_id
+        } = req.body;
+
+        // Check if item number already exists
+        const existingProduct = await queryOne(
+            'SELECT id FROM products WHERE item_number = ?',
+            [item_number]
+        );
+
+        if (existingProduct) {
+            return res.status(400).json({ error: 'Product with this item number already exists' });
+        }
+
+        // Generate slug from title or product_name
+        const slug = title.toLowerCase()
+            .replace(/[^a-z0-9\s-]/g, '')
+            .replace(/\s+/g, '-')
+            .replace(/-+/g, '-')
+            .trim('-');
+
+        const productData = {
+            title,
+            product_name,
+            item_number,
+            slug,
+            technical_data,
+            rich_text_description,
+            image_url,
+            pdf_url,
+            category_id: category_id || null,
+            sorting,
+            manual_sort,
+            status,
+            is_featured: is_featured ? 1 : 0,
+            external_id
+        };
+
+        const result = await insert('products', productData);
+
+        res.status(201).json({
+            message: 'Product created successfully',
+            product: { id: result.id, ...productData }
+        });
+
+    } catch (error) {
+        console.error('Create product error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
+// Update product (admin only)
+const updateProduct = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        // Check if product exists
+        const existingProduct = await queryOne('SELECT * FROM products WHERE id = ?', [id]);
+        if (!existingProduct) {
+            return res.status(404).json({ error: 'Product not found' });
+        }
+
+        const updateData = req.body;
+
+        // Handle boolean conversion for is_featured
+        if (updateData.is_featured !== undefined) {
+            updateData.is_featured = updateData.is_featured ? 1 : 0;
+        }
+
+        await update('products', id, updateData);
+
+        res.json({ message: 'Product updated successfully' });
+
+    } catch (error) {
+        console.error('Update product error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
+// Delete product (admin only)
+const deleteProduct = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        const existingProduct = await queryOne('SELECT id FROM products WHERE id = ?', [id]);
+        if (!existingProduct) {
+            return res.status(404).json({ error: 'Product not found' });
+        }
+
+        await dbDelete('products', id);
+
+        res.json({ message: 'Product deleted successfully' });
+
+    } catch (error) {
+        console.error('Delete product error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
+// Delete all products (admin only)
+const deleteAllProducts = async (req, res) => {
+    try {
+        const result = await run('DELETE FROM products');
+        
+        res.json({ 
+            message: 'All products deleted successfully',
+            deletedCount: result.changes
+        });
+
+    } catch (error) {
+        console.error('Delete all products error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
+// Routes
+router.get('/', getProducts);
+router.get('/:id', getProduct);
+
+// Admin routes (require authentication)
+router.post('/', [
+    authenticateToken,
+    requireAdmin,
+    body('title').notEmpty().withMessage('Title is required'),
+    body('product_name').notEmpty().withMessage('Product name is required'),
+    body('item_number').notEmpty().withMessage('Item number is required'),
+    body('status').optional().isIn(['DRAFT', 'PUBLISHED', 'ARCHIVED']).withMessage('Invalid status')
+], createProduct);
+
+router.put('/:id', [
+    authenticateToken,
+    requireAdmin,
+    body('status').optional().isIn(['DRAFT', 'PUBLISHED', 'ARCHIVED']).withMessage('Invalid status')
+], updateProduct);
+
+// Bulk operations (must be before /:id route to avoid conflicts)
+router.delete('/bulk/delete', [authenticateToken, requireAdmin], deleteAllProducts);
+
+router.delete('/:id', [authenticateToken, requireAdmin], deleteProduct);
+
+export default router;

@@ -1,35 +1,143 @@
-import products from '../data/products.json'
 import { useTranslation } from 'react-i18next'
+import { useProducts, useCategories } from '../hooks/useCmsProducts'
+import { Link } from 'react-router-dom'
 
 export default function Products() {
   const { t } = useTranslation()
-  const groups = products.reduce((acc, p) => {
-    acc[p.category] = acc[p.category] || []
-    acc[p.category].push(p)
+  const { products, loading: productsLoading, error: productsError } = useProducts({ status: 'PUBLISHED' })
+  const { categories, loading: categoriesLoading } = useCategories()
+
+  // Fallback to static data if CMS is not available
+  const fallbackProducts = [
+    { id: 'fall-sensor', product_name: 'Fallsensor', category_name: 'Sikkerhet', technical_data: 'Varsler fall i hjemmet og ute.' },
+    { id: 'bp-monitor', product_name: 'Blodtrykksmåler', category_name: 'Medisinsk', technical_data: 'Automatiserte målinger med deling til pårørende/lege.' },
+    { id: 'pill-dispenser', product_name: 'Medisin-dispenser', category_name: 'Sikkerhet', technical_data: 'Påminnelser og varsler ved uteblitt dose.' }
+  ]
+
+  // Use CMS products if available, otherwise fallback to static data
+  const displayProducts = products.length > 0 ? products : fallbackProducts
+  const isLoading = productsLoading || categoriesLoading
+  const hasError = productsError && products.length === 0
+
+  if (isLoading) {
+    return (
+      <div className="container-page">
+        <div className="flex items-center justify-center min-h-[400px]">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-600 mx-auto mb-4"></div>
+            <p className="text-gray-600">Laster produkter...</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (hasError) {
+    console.warn('CMS not available, using fallback data:', productsError)
+  }
+
+  // Group products by category
+  const groups = displayProducts.reduce((acc, product) => {
+    const categoryName = product.category_name || 'Andre'
+    if (!acc[categoryName]) {
+      acc[categoryName] = []
+    }
+    acc[categoryName].push(product)
     return acc
   }, {})
 
   return (
-    <div className="container-page">
-      <section className="py-10">
-        <h1 className="text-2xl font-semibold">{t('pages.products.title')}</h1>
-        <div className="mt-6 grid gap-10">
-          {Object.entries(groups).map(([category, items]) => (
-            <div key={category} className="grid gap-4">
-              <h2 className="text-lg font-semibold">{category}</h2>
-              <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {items.map((p) => (
-                  <div key={p.id} className="rounded-lg border p-4 bg-white shadow-sm">
-                    <div className="h-24 rounded bg-slate-100 mb-3" />
-                    <h3 className="font-medium">{p.name}</h3>
-                    <p className="text-sm text-slate-600 mt-1">{p.description}</p>
+    <div className="min-h-screen w-full bg-gray-50">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <section className="py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              {t('pages.products.title') || 'Våre produkter'}
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Utforsk vårt omfattende utvalg av omsorgsteknologi som gir trygghet og sikkerhet for eldre og pårørende.
+            </p>
+          </div>
+        </section>
+
+        {/* Products by Category */}
+        <section className="pb-20">
+          {Object.keys(groups).length === 0 ? (
+            <div className="text-center py-16">
+              <p className="text-gray-600">Ingen produkter funnet.</p>
+            </div>
+          ) : (
+            <div className="space-y-16">
+              {Object.entries(groups).map(([category, categoryProducts]) => (
+                <div key={category} className="bg-white rounded-2xl shadow-lg p-8">
+                  <div className="flex items-center mb-8">
+                    <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mr-4">
+                      <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                      </svg>
+                    </div>
+                    <h2 className="text-3xl font-bold text-gray-900">{category}</h2>
+                  </div>
+                  
+                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {categoryProducts.map((product) => (
+                      <div key={product.id} className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div className="aspect-w-16 aspect-h-12 bg-gray-100">
+                          {product.image_url ? (
+                            <img 
+                              src={product.image_url}
+                              alt={product.product_name}
+                              className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                          ) : (
+                            <div className="w-full h-48 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center">
+                              <svg className="w-12 h-12 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                              </svg>
+                            </div>
+                          )}
+                        </div>
+                        
+                        <div className="p-6">
+                          <div className="flex items-center justify-between mb-3">
+                            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-teal-100 text-teal-800">
+                              {product.status || 'Aktiv'}
+                            </span>
+                            {product.is_featured && (
+                              <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                Utvalgt
+                              </span>
+                            )}
+                          </div>
+                          
+                          <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-teal-600 transition-colors">
+                            {product.product_name}
+                          </h3>
+                          
+                          <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                            {product.technical_data || product.rich_text_description}
+                          </p>
+                          
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm text-gray-500">Item #{product.item_number}</span>
+                            <Link 
+                              to={`/products/${product.id}`}
+                              className="bg-teal-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors"
+                            >
+                              Les mer
+                            </Link>
+                          </div>
+                        </div>
                   </div>
                 ))}
               </div>
             </div>
           ))}
         </div>
+          )}
       </section>
+      </div>
     </div>
   )
 }
