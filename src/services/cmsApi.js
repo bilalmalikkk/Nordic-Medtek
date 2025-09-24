@@ -1,22 +1,43 @@
 // CMS API service for connecting to the integrated CMS
 const API_URL = import.meta.env.VITE_CMS_URL || 'http://localhost:3001/api';
+// Base without trailing /api for assets like /uploads/...
+const API_BASE_URL = API_URL.replace(/\/?api\/?$/, '');
 
 class CmsApiService {
   async request(endpoint, options = {}) {
     const url = `${API_URL}${endpoint}`;
+    // Important: spread options first so we don't overwrite headers later
     const config = {
+      ...options,
       headers: {
         'Content-Type': 'application/json',
-        ...options.headers,
+        ...(options.headers || {}),
       },
-      ...options,
     };
 
     try {
       const response = await fetch(url, config);
       
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        // Try to extract error body for better diagnostics
+        let errorBody;
+        try {
+          errorBody = await response.json();
+        } catch (_) {
+          try {
+            errorBody = await response.text();
+          } catch (_) {
+            errorBody = null;
+          }
+        }
+
+        const message = (errorBody && (errorBody.error || errorBody.message))
+          || `HTTP error! status: ${response.status}`;
+
+        const error = new Error(message);
+        error.status = response.status;
+        error.details = errorBody;
+        throw error;
       }
       
       return await response.json();
@@ -169,3 +190,4 @@ class CmsApiService {
 }
 
 export default new CmsApiService();
+export { API_URL, API_BASE_URL };

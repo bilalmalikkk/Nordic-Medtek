@@ -1325,12 +1325,6 @@
         "description": "24/7 overvåking, automatisk backup og katastrofeberedskap for kontinuerlig drift."
       }
     },
-    "cta": {
-      "title": "Klar for å ta steget videre?",
-      "description": "La oss vise deg hvordan våre sikre og kompatible løsninger kan integreres i din kommunes IT-miljø.",
-      "contact": "Kontakt oss",
-      "demo": "Bestill demo"
-    },
     "architecture": {
       "title": "Systemarkitektur og drift",
       "subtitle": "Vår løsning er utviklet for stabilitet og skalerbarhet:",
@@ -1411,7 +1405,7 @@
         "title": "Sikkerhetstester",
         "description": "Kontinuerlige sikkerhetstester og oppdateringer."
       },
-      "developmentPlan2": {
+      "technicalDocumentation": {
         "title": "Teknisk Dokumentasjon",
         "description": "Plan for videreutvikling i samarbeid med kommuner."
       }
@@ -1628,6 +1622,134 @@
       "button": "Bli partner"
     },
     "footer": "NordicMedTek - Konkurransefortrinn i omsorgsteknologi"
+  },
+  "admin": {
+    "login": {
+      "title": "NordicMedTek CMS",
+      "subtitle": "Admin Innlogging",
+      "username": "Brukernavn",
+      "password": "Passord",
+      "loginButton": "Logg inn",
+      "loggingIn": "Logger inn...",
+      "defaultCredentials": "Standard påloggingsdetaljer:",
+      "defaultUsername": "admin",
+      "defaultPassword": "admin123"
+    },
+    "header": {
+      "title": "NordicMedTek CMS",
+      "welcome": "Velkommen, {username}",
+      "logout": "Logg ut"
+    },
+    "tabs": {
+      "products": "Produkter",
+      "categories": "Kategorier", 
+      "import": "Importer",
+      "settings": "Innstillinger"
+    },
+    "products": {
+      "title": "Legg til nytt produkt",
+      "editTitle": "Rediger produkt",
+      "cancelEdit": "Avbryt redigering",
+      "form": {
+        "title": "Tittel",
+        "productName": "Produktnavn",
+        "itemNumber": "Artikkelnummer",
+        "category": "Kategori",
+        "selectCategory": "Velg kategori",
+        "status": "Status",
+        "sortingOrder": "Sorteringsrekkefølge",
+        "productImage": "Produktbilde",
+        "uploadImage": "Last opp bilde",
+        "uploading": "Laster opp...",
+        "imageUploaded": "Bilde lastet opp",
+        "imageUrl": "Bilde-URL (alternativ)",
+        "imageUrlPlaceholder": "https://example.com/bilde.jpg",
+        "pdfUrl": "PDF-URL",
+        "pdfUrlPlaceholder": "https://example.com/dokument.pdf",
+        "technicalData": "Tekniske data",
+        "richTextDescription": "Rik tekst beskrivelse",
+        "richTextPlaceholder": "HTML-innhold tillatt",
+        "featuredProduct": "Utvalgt produkt",
+        "createButton": "Opprett produkt",
+        "updateButton": "Oppdater produkt",
+        "saving": "Lagrer...",
+        "cancel": "Avbryt"
+      },
+      "list": {
+        "title": "Produkter ({count})",
+        "refresh": "Oppdater",
+        "refreshing": "Oppdaterer...",
+        "deleteAll": "Slett alle produkter",
+        "noProducts": "Ingen produkter funnet. Opprett ditt første produkt over eller importer fra CSV.",
+        "edit": "Rediger",
+        "delete": "Slett",
+        "featured": "Utvalgt"
+      },
+      "status": {
+        "draft": "Utkast",
+        "published": "Publisert",
+        "archived": "Arkivert"
+      },
+      "messages": {
+        "imageUploadSuccess": "Bilde lastet opp!",
+        "productCreated": "Produkt opprettet!",
+        "productUpdated": "Produkt oppdatert!",
+        "productDeleted": "Produkt slettet!",
+        "allProductsDeleted": "Alle produkter slettet! {count} produkter fjernet.",
+        "confirmDelete": "Er du sikker på at du vil slette dette produktet?",
+        "confirmDeleteAll": "Er du sikker på at du vil slette ALLE produkter? Denne handlingen kan ikke angres!",
+        "titleRequired": "Tittel er påkrevd",
+        "productNameRequired": "Produktnavn er påkrevd",
+        "itemNumberRequired": "Artikkelnummer er påkrevd",
+        "failedToUpload": "Kunne ikke laste opp bilde",
+        "failedToCreate": "Kunne ikke opprette produkt",
+        "failedToUpdate": "Kunne ikke oppdatere produkt",
+        "failedToDelete": "Kunne ikke slette produkt",
+        "failedToDeleteAll": "Kunne ikke slette alle produkter"
+      }
+    },
+    "categories": {
+      "title": "Kategorier ({count})",
+      "products": "produkter"
+    },
+    "import": {
+      "title": "Importer produkter fra CSV",
+      "uploadTitle": "Klikk for å laste opp CSV-fil",
+      "uploadDescription": "Last opp din Product+Collection.csv-fil for å importere produkter",
+      "importing": "Importerer produkter...",
+      "importCompleted": "Import fullført! {successful} produkter importert.",
+      "failedToImport": "Kunne ikke importere CSV-fil"
+    },
+    "settings": {
+      "title": "CMS Innstillinger",
+      "apiEndpoints": "API Endepunkter",
+      "apiUrl": "http://localhost:3001/api",
+      "status": "Status",
+      "statusReady": "CMS kjører og er klar",
+      "uploadDirectory": "Opplastingsmappe",
+      "uploadPath": "uploads/images/ og uploads/documents/"
+    },
+    "errors": {
+      "loginFailed": "Innlogging feilet. Sjekk dine påloggingsdetaljer.",
+      "failedToLoadData": "Kunne ikke laste data: {error}",
+      "tokenVerificationFailed": "Token-verifisering feilet"
+    }
+  },
+  "products": {
+    "title": "Våre produkter",
+    "subtitle": "Utforsk vårt omfattende utvalg av omsorgsteknologi som gir trygghet og sikkerhet for eldre og pårørende.",
+    "loading": "Laster produkter...",
+    "noProducts": "Ingen produkter funnet.",
+    "readMore": "Les mer",
+    "featured": "Utvalgt",
+    "active": "Aktiv",
+    "itemNumber": "Artikkel #{number}"
+  },
+  "csvImport": {
+    "accessRequired": "Tilgang påkrevd",
+    "loginRequired": "Vennligst logg inn for å få tilgang til CSV-importverktøyet",
+    "goToAdmin": "Gå til Admin Innlogging",
+    "backToAdmin": "← Tilbake til Admin"
   }
 }
 

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import CmsApiService from '../services/cmsApi';
+import CmsApiService, { API_BASE_URL } from '../services/cmsApi';
 
 export default function Admin() {
   const { t } = useTranslation();
@@ -142,8 +142,11 @@ export default function Admin() {
     
     try {
       const response = await CmsApiService.uploadFile(file, token);
-      setProductForm({...productForm, image_url: response.media.url});
-      setSelectedImage(response.media.url);
+      const absoluteUrl = response.media.url.startsWith('http')
+        ? response.media.url
+        : `${API_BASE_URL}${response.media.url}`;
+      setProductForm({...productForm, image_url: absoluteUrl});
+      setSelectedImage(absoluteUrl);
       alert('Image uploaded successfully!');
     } catch (error) {
       setError('Failed to upload image');
@@ -157,21 +160,53 @@ export default function Admin() {
     e.preventDefault();
     const token = localStorage.getItem('cms_token');
     
+    // Client-side validation
+    if (!productForm.title.trim()) {
+      setError('Title is required');
+      return;
+    }
+    if (!productForm.product_name.trim()) {
+      setError('Product name is required');
+      return;
+    }
+    if (!productForm.item_number.trim()) {
+      setError('Item number is required');
+      return;
+    }
+    
     try {
       setLoading(true);
+      setError(null);
+      
+      // Clean up the form data - convert empty strings to null for optional fields
+      const cleanedFormData = {
+        ...productForm,
+        category_id: productForm.category_id || null,
+        technical_data: productForm.technical_data || null,
+        rich_text_description: productForm.rich_text_description || null,
+        image_url: productForm.image_url || null,
+        pdf_url: productForm.pdf_url || null
+      };
       
       if (editingProduct) {
-        await CmsApiService.updateProduct(editingProduct.id, productForm, token);
+        await CmsApiService.updateProduct(editingProduct.id, cleanedFormData, token);
         alert('Product updated successfully!');
       } else {
-        await CmsApiService.createProduct(productForm, token);
+        await CmsApiService.createProduct(cleanedFormData, token);
         alert('Product created successfully!');
       }
       
       resetProductForm();
       await loadData(token);
     } catch (error) {
-      setError(editingProduct ? 'Failed to update product' : 'Failed to create product');
+      const baseMsg = editingProduct ? 'Failed to update product' : 'Failed to create product';
+      let extra = '';
+      if (error?.details?.errors && Array.isArray(error.details.errors)) {
+        extra = ': ' + error.details.errors.map(e => e.msg || e.message || e).join(', ');
+      } else if (error?.details?.error || error?.message) {
+        extra = ': ' + (error.details?.error || error.message);
+      }
+      setError(baseMsg + extra);
       console.error('Product operation error:', error);
     } finally {
       setLoading(false);
@@ -284,14 +319,14 @@ export default function Admin() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900">NordicMedTek CMS</h1>
-            <p className="text-gray-600 mt-2">Admin Login</p>
+            <h1 className="text-3xl font-bold text-gray-900">{t('admin.login.title')}</h1>
+            <p className="text-gray-600 mt-2">{t('admin.login.subtitle')}</p>
           </div>
 
           <form onSubmit={handleLogin} className="space-y-6">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Username
+                {t('admin.login.username')}
               </label>
               <input
                 type="text"
@@ -304,7 +339,7 @@ export default function Admin() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
-                Password
+                {t('admin.login.password')}
               </label>
               <input
                 type="password"
@@ -326,14 +361,14 @@ export default function Admin() {
               disabled={loading}
               className="w-full bg-teal-600 text-white py-2 px-4 rounded-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 disabled:opacity-50"
             >
-              {loading ? 'Logging in...' : 'Login'}
+              {loading ? t('admin.login.loggingIn') : t('admin.login.loginButton')}
             </button>
           </form>
 
           <div className="mt-6 text-center text-sm text-gray-600">
-            <p>Default credentials:</p>
-            <p><strong>Username:</strong> admin</p>
-            <p><strong>Password:</strong> admin123</p>
+            <p>{t('admin.login.defaultCredentials')}</p>
+            <p><strong>{t('admin.login.username')}:</strong> {t('admin.login.defaultUsername')}</p>
+            <p><strong>{t('admin.login.password')}:</strong> {t('admin.login.defaultPassword')}</p>
           </div>
         </div>
       </div>
@@ -347,14 +382,14 @@ export default function Admin() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">NordicMedTek CMS</h1>
-              <p className="text-gray-600">Welcome, {user?.username}</p>
+              <h1 className="text-2xl font-bold text-gray-900">{t('admin.header.title')}</h1>
+              <p className="text-gray-600">{t('admin.header.welcome', { username: user?.username })}</p>
             </div>
             <button
               onClick={handleLogout}
               className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700"
             >
-              Logout
+              {t('admin.header.logout')}
             </button>
           </div>
         </div>
@@ -365,10 +400,10 @@ export default function Admin() {
         <div className="border-b border-gray-200 mb-8">
           <nav className="-mb-px flex space-x-8">
             {[
-              { id: 'products', name: 'Products', icon: '📦' },
-              { id: 'categories', name: 'Categories', icon: '🏷️' },
-              { id: 'import', name: 'Import', icon: '📥' },
-              { id: 'settings', name: 'Settings', icon: '⚙️' }
+              { id: 'products', name: t('admin.tabs.products'), icon: '📦' },
+              { id: 'categories', name: t('admin.tabs.categories'), icon: '🏷️' },
+              { id: 'import', name: t('admin.tabs.import'), icon: '📥' },
+              { id: 'settings', name: t('admin.tabs.settings'), icon: '⚙️' }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -392,14 +427,14 @@ export default function Admin() {
             <div className="bg-white rounded-lg shadow p-6">
               <div className="flex justify-between items-center mb-4">
                 <h2 className="text-xl font-semibold">
-                  {editingProduct ? 'Edit Product' : 'Add New Product'}
+                  {editingProduct ? t('admin.products.editTitle') : t('admin.products.title')}
                 </h2>
                 {editingProduct && (
                   <button
                     onClick={resetProductForm}
                     className="text-gray-500 hover:text-gray-700"
                   >
-                    Cancel Edit
+                    {t('admin.products.cancelEdit')}
                   </button>
                 )}
               </div>
@@ -408,7 +443,7 @@ export default function Admin() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Title *
+                      {t('admin.products.form.title')} *
                     </label>
                     <input
                       type="text"
@@ -421,7 +456,7 @@ export default function Admin() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Product Name *
+                      {t('admin.products.form.productName')} *
                     </label>
                     <input
                       type="text"
@@ -434,7 +469,7 @@ export default function Admin() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Item Number *
+                      {t('admin.products.form.itemNumber')} *
                     </label>
                     <input
                       type="text"
@@ -447,14 +482,14 @@ export default function Admin() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Category
+                      {t('admin.products.form.category')}
                     </label>
                     <select
                       value={productForm.category_id}
                       onChange={(e) => setProductForm({...productForm, category_id: e.target.value})}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                     >
-                      <option value="">Select Category</option>
+                      <option value="">{t('admin.products.form.selectCategory')}</option>
                       {categories.map(category => (
                         <option key={category.id} value={category.id}>
                           {category.name}
@@ -465,16 +500,16 @@ export default function Admin() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Status
+                      {t('admin.products.form.status')}
                     </label>
                     <select
                       value={productForm.status}
                       onChange={(e) => setProductForm({...productForm, status: e.target.value})}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                     >
-                      <option value="DRAFT">Draft</option>
-                      <option value="PUBLISHED">Published</option>
-                      <option value="ARCHIVED">Archived</option>
+                      <option value="DRAFT">{t('admin.products.status.draft')}</option>
+                      <option value="PUBLISHED">{t('admin.products.status.published')}</option>
+                      <option value="ARCHIVED">{t('admin.products.status.archived')}</option>
                     </select>
                   </div>
 

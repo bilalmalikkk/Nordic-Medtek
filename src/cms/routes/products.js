@@ -159,11 +159,12 @@ const createProduct = async (req, res) => {
         }
 
         // Generate slug from title or product_name
-        const slug = title.toLowerCase()
+        const slugSource = title || product_name || 'untitled';
+        const slug = slugSource.toLowerCase()
             .replace(/[^a-z0-9\s-]/g, '')
             .replace(/\s+/g, '-')
             .replace(/-+/g, '-')
-            .trim('-');
+            .trim('-') || 'untitled';
 
         const productData = {
             title,

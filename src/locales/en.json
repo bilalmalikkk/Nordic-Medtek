@@ -1628,6 +1628,134 @@
       "button": "Become a partner"
     },
     "footer": "NordicMedTek - Competitive advantage in care technology"
+  },
+  "admin": {
+    "login": {
+      "title": "NordicMedTek CMS",
+      "subtitle": "Admin Login",
+      "username": "Username",
+      "password": "Password",
+      "loginButton": "Login",
+      "loggingIn": "Logging in...",
+      "defaultCredentials": "Default credentials:",
+      "defaultUsername": "admin",
+      "defaultPassword": "admin123"
+    },
+    "header": {
+      "title": "NordicMedTek CMS",
+      "welcome": "Welcome, {username}",
+      "logout": "Logout"
+    },
+    "tabs": {
+      "products": "Products",
+      "categories": "Categories", 
+      "import": "Import",
+      "settings": "Settings"
+    },
+    "products": {
+      "title": "Add New Product",
+      "editTitle": "Edit Product",
+      "cancelEdit": "Cancel Edit",
+      "form": {
+        "title": "Title",
+        "productName": "Product Name",
+        "itemNumber": "Item Number",
+        "category": "Category",
+        "selectCategory": "Select Category",
+        "status": "Status",
+        "sortingOrder": "Sorting Order",
+        "productImage": "Product Image",
+        "uploadImage": "Upload Image",
+        "uploading": "Uploading...",
+        "imageUploaded": "Image uploaded",
+        "imageUrl": "Image URL (alternative)",
+        "imageUrlPlaceholder": "https://example.com/image.jpg",
+        "pdfUrl": "PDF URL",
+        "pdfUrlPlaceholder": "https://example.com/document.pdf",
+        "technicalData": "Technical Data",
+        "richTextDescription": "Rich Text Description",
+        "richTextPlaceholder": "HTML content allowed",
+        "featuredProduct": "Featured Product",
+        "createButton": "Create Product",
+        "updateButton": "Update Product",
+        "saving": "Saving...",
+        "cancel": "Cancel"
+      },
+      "list": {
+        "title": "Products ({count})",
+        "refresh": "Refresh",
+        "refreshing": "Refreshing...",
+        "deleteAll": "Delete All Products",
+        "noProducts": "No products found. Create your first product above or import from CSV.",
+        "edit": "Edit",
+        "delete": "Delete",
+        "featured": "Featured"
+      },
+      "status": {
+        "draft": "Draft",
+        "published": "Published",
+        "archived": "Archived"
+      },
+      "messages": {
+        "imageUploadSuccess": "Image uploaded successfully!",
+        "productCreated": "Product created successfully!",
+        "productUpdated": "Product updated successfully!",
+        "productDeleted": "Product deleted successfully!",
+        "allProductsDeleted": "All products deleted successfully! {count} products removed.",
+        "confirmDelete": "Are you sure you want to delete this product?",
+        "confirmDeleteAll": "Are you sure you want to delete ALL products? This action cannot be undone!",
+        "titleRequired": "Title is required",
+        "productNameRequired": "Product name is required",
+        "itemNumberRequired": "Item number is required",
+        "failedToUpload": "Failed to upload image",
+        "failedToCreate": "Failed to create product",
+        "failedToUpdate": "Failed to update product",
+        "failedToDelete": "Failed to delete product",
+        "failedToDeleteAll": "Failed to delete all products"
+      }
+    },
+    "categories": {
+      "title": "Categories ({count})",
+      "products": "products"
+    },
+    "import": {
+      "title": "Import Products from CSV",
+      "uploadTitle": "Click to upload CSV file",
+      "uploadDescription": "Upload your Product+Collection.csv file to import products",
+      "importing": "Importing products...",
+      "importCompleted": "Import completed! {successful} products imported successfully.",
+      "failedToImport": "Failed to import CSV file"
+    },
+    "settings": {
+      "title": "CMS Settings",
+      "apiEndpoints": "API Endpoints",
+      "apiUrl": "http://localhost:3001/api",
+      "status": "Status",
+      "statusReady": "CMS is running and ready",
+      "uploadDirectory": "Upload Directory",
+      "uploadPath": "uploads/images/ and uploads/documents/"
+    },
+    "errors": {
+      "loginFailed": "Login failed. Please check your credentials.",
+      "failedToLoadData": "Failed to load data: {error}",
+      "tokenVerificationFailed": "Token verification failed"
+    }
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Explore our comprehensive range of care technology that provides safety and security for elderly and relatives.",
+    "loading": "Loading products...",
+    "noProducts": "No products found.",
+    "readMore": "Read more",
+    "featured": "Featured",
+    "active": "Active",
+    "itemNumber": "Item #{number}"
+  },
+  "csvImport": {
+    "accessRequired": "Access Required",
+    "loginRequired": "Please login to access the CSV import tool",
+    "goToAdmin": "Go to Admin Login",
+    "backToAdmin": "← Back to Admin"
   }
 }
 

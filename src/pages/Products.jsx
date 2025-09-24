@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { useProducts, useCategories } from '../hooks/useCmsProducts'
+import { API_BASE_URL } from '../services/cmsApi'
 import { Link } from 'react-router-dom'
 
 export default function Products() {
@@ -25,7 +26,7 @@ export default function Products() {
         <div className="flex items-center justify-center min-h-[400px]">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-600 mx-auto mb-4"></div>
-            <p className="text-gray-600">Laster produkter...</p>
+            <p className="text-gray-600">{t('products.loading')}</p>
           </div>
         </div>
       </div>
@@ -53,10 +54,10 @@ export default function Products() {
         <section className="py-16">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              {t('pages.products.title') || 'Våre produkter'}
+              {t('products.title')}
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Utforsk vårt omfattende utvalg av omsorgsteknologi som gir trygghet og sikkerhet for eldre og pårørende.
+              {t('products.subtitle')}
             </p>
           </div>
         </section>
@@ -65,7 +66,7 @@ export default function Products() {
         <section className="pb-20">
           {Object.keys(groups).length === 0 ? (
             <div className="text-center py-16">
-              <p className="text-gray-600">Ingen produkter funnet.</p>
+              <p className="text-gray-600">{t('products.noProducts')}</p>
             </div>
           ) : (
             <div className="space-y-16">
@@ -86,7 +87,7 @@ export default function Products() {
                         <div className="aspect-w-16 aspect-h-12 bg-gray-100">
                           {product.image_url ? (
                             <img 
-                              src={product.image_url}
+                              src={product.image_url.startsWith('http') ? product.image_url : `${API_BASE_URL}${product.image_url}`}
                               alt={product.product_name}
                               className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                             />
@@ -102,11 +103,11 @@ export default function Products() {
                         <div className="p-6">
                           <div className="flex items-center justify-between mb-3">
                             <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-teal-100 text-teal-800">
-                              {product.status || 'Aktiv'}
+                              {product.status || t('products.active')}
                             </span>
                             {product.is_featured && (
                               <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                                Utvalgt
+                                {t('products.featured')}
                               </span>
                             )}
                           </div>
@@ -120,12 +121,12 @@ export default function Products() {
                           </p>
                           
                           <div className="flex items-center justify-between">
-                            <span className="text-sm text-gray-500">Item #{product.item_number}</span>
+                            <span className="text-sm text-gray-500">{t('products.itemNumber', { number: product.item_number })}</span>
                             <Link 
                               to={`/products/${product.id}`}
                               className="bg-teal-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors"
                             >
-                              Les mer
+                              {t('products.readMore')}
                             </Link>
                           </div>
                         </div>

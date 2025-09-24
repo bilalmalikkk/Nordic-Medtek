@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import CsvImportTool from '../components/CsvImportTool';
 import CmsApiService from '../services/cmsApi';
 
 export default function CsvImport() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -48,14 +50,14 @@ export default function CsvImport() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8">
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-gray-900">Access Required</h1>
-            <p className="text-gray-600 mt-2">Please login to access the CSV import tool</p>
+            <h1 className="text-3xl font-bold text-gray-900">{t('csvImport.accessRequired')}</h1>
+            <p className="text-gray-600 mt-2">{t('csvImport.loginRequired')}</p>
           </div>
           <button
             onClick={() => navigate('/admin')}
             className="w-full bg-teal-600 text-white py-2 px-4 rounded-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
           >
-            Go to Admin Login
+            {t('csvImport.goToAdmin')}
           </button>
         </div>
       </div>
@@ -70,7 +72,7 @@ export default function CsvImport() {
             onClick={() => navigate('/admin')}
             className="text-teal-600 hover:text-teal-700 font-medium"
           >
-            ← Back to Admin
+            {t('csvImport.backToAdmin')}
           </button>
         </div>
         
