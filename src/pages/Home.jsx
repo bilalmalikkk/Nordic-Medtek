@@ -1,48 +1,47 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import heroImage from '../assets/Landingpage.png'
+import varmeHenderImage from '../assets/varme_hender.jpg'
 
 export default function Home() {
   const { t } = useTranslation()
   return (
     <div className="min-h-screen w-full">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Top separator */}
+      <div className="h-1 bg-white"></div>
       {/* Hero Section */}
-      <section className="min-h-[calc(100vh-100px)] flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
-        <div className="w-full">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+      <section className="min-h-[calc(100vh-120px)] flex items-center w-full relative overflow-hidden">
+        {/* Background Image */}
+        <img 
+          src={varmeHenderImage} 
+          alt="Caregiver and elderly person holding hands" 
+          className="absolute inset-0 w-full h-full object-cover z-0 brightness-65"
+        />
+        
+        {/* Content */}
+        <div className="relative z-10 w-full">
+          <div className="text-center">
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
                   {t('hero.title1')}
                 </h1>
-                <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
+                <div className="w-24 h-1 bg-white rounded-full mx-auto"></div>
               </div>
-              <p className="text-xl text-gray-700 italic leading-relaxed bg-white p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
+              <p className="text-xl md:text-2xl text-white italic leading-relaxed max-w-4xl mx-auto px-4 drop-shadow-lg">
                 {t('hero.lead')}
               </p>
-              <div className="pt-4">
+              <div className="pt-8">
                 <Link 
                   to="/demo" 
-                  className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="group inline-flex items-center justify-center bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   {t('hero.button')}
                   <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </Link>
-              </div>
-            </div>
-            <div className="flex justify-center">
-              <div className="relative w-full max-w-lg">
-                <div className="absolute -inset-4 bg-gradient-to-r from-teal-400 to-blue-500 rounded-2xl blur opacity-20"></div>
-                <div className="relative bg-white p-4 rounded-2xl shadow-2xl">
-                  <img 
-                    src={heroImage} 
-                    alt="Elderly woman and caregiver holding hands" 
-                    className="w-full h-auto rounded-xl"
-                  />
-                </div>
               </div>
             </div>
           </div>
