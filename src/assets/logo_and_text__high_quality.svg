@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-bbox="1203.363 570.192 3942.737 880.108" viewBox="0 0 7118.5 2215.6" xmlns="http://www.w3.org/2000/svg" data-type="ugc">
+    <g>
+        <path fill="#c4c6c8" d="M4877.4 912.1c0 156.573-126.927 283.5-283.5 283.5s-283.5-126.927-283.5-283.5 126.927-283.5 283.5-283.5 283.5 126.927 283.5 283.5"/>
+        <path d="M4717.362 907.498c-4.867 0-9.12 3.28-10.347 7.987l-37.293 142.653-70.933-367.293a10.69 10.69 0 0 0-10.44-8.666h-.067a10.715 10.715 0 0 0-10.48 8.546l-60.453 294.72-49.414-147.653a10.73 10.73 0 0 0-10.186-7.307 10.69 10.69 0 0 0-10.12 7.4l-22.56 69.613h-71.08c-.013 0-.04.013-.053.013-.12 5.227-.374 10.454-.6 15.68v5.694h79.506c4.64 0 8.747-2.987 10.174-7.4l14.946-46.12 51.733 154.586a10.693 10.693 0 0 0 20.614-1.253l57.653-281.08 69.68 360.813a10.71 10.71 0 0 0 10.16 8.667h.346c4.854 0 9.107-3.267 10.347-7.987l47.107-180.253h47.84v-21.387h-56.08z" fill="#ffffff"/>
+        <path fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" d="M4353.5 928.8v-21.3"/>
+        <path fill="none" d="M5146.1 660.1v790.2H1203.4V660.1z"/>
+        <text transform="translate(1203.363 1015.1)" fill="#ffffff"><tspan y="0" x="0" stroke="#ffffff" stroke-miterlimit="10" font-family="MyriadPro-Regular" font-size="500">NordicMedTek </tspan><tspan y="350" x="0" stroke="#ffffff" stroke-miterlimit="10" font-family="MyriadPro-Regular" font-size="230" letter-spacing="17">Nordic medical Technologies AS</tspan></text>
+    </g>
+</svg>

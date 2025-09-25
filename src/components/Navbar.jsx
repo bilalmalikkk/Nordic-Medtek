@@ -2,7 +2,7 @@
 
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo_and_text__high_quality.svg'
 
 export default function Navbar() {
   const { t, i18n } = useTranslation()
@@ -55,10 +55,9 @@ export default function Navbar() {
       </div>
       <div className="bg-teal-700 text-white w-full">
         <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center gap-98 py-4">
-                      <div className="flex items-center gap-3">
-                        <img src={logo} alt="NordicMedTek" className="h-8 w-auto" />
-                        <Link to="/" className="font-bold text-lg">NordicMedTek</Link>
-                      </div>
+                       <div className="flex items-center w-72 relative overflow-visible">
+                         <img src={logo} alt="NordicMedTek" className="h-12 w-auto" style={{ transform: 'scaleX(2) scaleY(1.9)', transformOrigin: 'left center' }} />
+                       </div>
           <nav className="flex items-center gap-20 text-base">
             <NavLink to="/" end className={({isActive})=> isActive? 'underline' : 'hover:underline'}>{t('nav.home')}</NavLink>
             <NavLink to="/private" className={({isActive})=> isPrivateActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.private')}</NavLink>
