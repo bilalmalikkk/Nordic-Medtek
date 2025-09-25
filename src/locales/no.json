@@ -172,7 +172,18 @@
       "description1": "Du kan bekymre deg for at dine eldre foreldre blir skrøpelige, spesielt hvis de allerede har helseproblemer som hjerteproblemer, pustevansker eller diabetes. Dette øker bekymringen din.",
       "question1": "Hvordan vet du at alt er i orden mellom legebesøkene?",
       "question2": "Hva hvis verdiene plutselig forverrer seg, og ingen oppdager det i tide?",
-      "description2": "Våre løsninger for medisinsk oppfølging gir deg og familien en helt ny trygghet. De følger viktige helseverdier automatisk, rett fra stua hjemme, og deler dataen med deg, eller direkte med helsepersonell hvis dere ønsker det."
+      "description2": "Våre løsninger for medisinsk oppfølging gir deg og familien en helt ny trygghet. De følger viktige helseverdier automatisk og vist noen målinger blir kritiske vil du få en alarm på SMS. Ulike former for automatiskvarsling kan bestilles. Om du er opptatt av at medisinske data skal overvåkes av helsepersonell og doktor viser vi til vår samarbeidspartner salubi.no som har svært gode løsninger for dette"
+    },
+    "solutions": {
+      "title": "Våre løsninger for private deles inn i to segmenter",
+      "security": {
+        "title": "Om du ønsker en løsning som fokuserer på sikkerhet, mer en medisinsk oppfølging av dine kjære har vi gode løsninger for dette. Les mer under",
+        "icon": "chart"
+      },
+      "medical": {
+        "title": "Vår samarbeidspartner Salubi tilbyr en utvidet løsning med **Spesialiserte digitale helsetjenester.** Kvalifisert heleperson og doktor vil overvåke brukerens medisinske data. Gå til saluba.no",
+        "icon": "people"
+      }
     },
     "whenEverySecond": {
       "title": "Når helseovervåking betyr noe",
@@ -187,7 +198,7 @@
       "measurement2": "Blodtrykk og oksygenmetning",
       "measurement3": "Blodsukker og temperatur",
       "measurement4": "Søvn og avvik som kan tyde på at noe er galt",
-      "text2": "Alt dette går automatisk inn i systemet vårt, som du og legen kan følge via en enkel portal. Skjer det noe unormalt, kan det varsles direkte.",
+      "text2": "En rekke sensorer kan velges, og alt settes opp automatisk. Det er ingen krav til teknisk kompetanse for å ta vårt system i bruk.",
       "imageAlt1": "Sensorer og plasseringer for medisinsk overvåking",
       "imageAlt2": "Systemoversikt over medisinske overvåkningsenheter"
     },
@@ -666,6 +677,17 @@
       "title": "Ta vare på dine nærmeste - trygt, enkelt, og hjemme",
       "description": "For deg som pårørende som trenger oppfølging av dine kjære hjemme. Våre unike sensorer oppdager automatisk uregelmessigheter knyttet til trygghet og sikkerhet, slik at du kan få varsling når det trengs.",
       "button": "Bestill gratis veiledning"
+    },
+    "solutions": {
+      "title": "Våre løsninger for private deles inn i to segmenter",
+      "security": {
+        "title": "Om du ønsker en løsning som fokuserer på sikkerhet, mer en medisinsk oppfølging av dine kjære har vi gode løsninger for dette. Les mer under",
+        "icon": "chart"
+      },
+      "medical": {
+        "title": "Vår samarbeidspartner Salubi tilbyr en utvidet løsning med **Spesialiserte digitale helsetjenester.** Kvalifisert heleperson og doktor vil overvåke brukerens medisinske data. Gå til saluba.no",
+        "icon": "people"
+      }
     },
     "concerns": {
       "title": "Bekymret for dine kjære?",

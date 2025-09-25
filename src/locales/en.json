@@ -172,7 +172,18 @@
       "description1": "You may worry about your elderly parents becoming frail, especially if they already have health conditions like heart problems, breathing difficulties, or diabetes. This increases your concern.",
       "question1": "How do you know everything is okay between doctor's visits?",
       "question2": "What if the values suddenly worsen, and no one discovers it in time?",
-      "description2": "Our solutions for medical follow-up give you and your family a whole new sense of security. They automatically monitor important health values, right from the living room at home, and share the data with you, or directly with healthcare personnel if you wish."
+      "description2": "Our solutions for medical follow-up give you and your family a whole new sense of security. They automatically monitor important health values, and if some measurements become critical, you will receive an alarm via SMS. Various forms of automatic alerts can be ordered. If you are concerned that medical data should be monitored by healthcare personnel and doctors, we refer you to our partner salubi.no, who has very good solutions for this"
+    },
+    "solutions": {
+      "title": "Our solutions for private individuals are divided into two segments",
+      "security": {
+        "title": "If you want a solution that focuses on security, more than medical follow-up of your loved ones, we have good solutions for this. Read more below",
+        "icon": "chart"
+      },
+      "medical": {
+        "title": "Our partner Salubi offers an extended solution with **Specialized digital health services.** Qualified healthcare personnel and doctors will monitor the user's medical data. Go to saluba.no",
+        "icon": "people"
+      }
     },
     "whenEverySecond": {
       "title": "When health monitoring matters",
@@ -187,7 +198,7 @@
       "measurement2": "Blood pressure and oxygen saturation",
       "measurement3": "Blood sugar and temperature",
       "measurement4": "Sleep and deviations that may indicate something is wrong",
-      "text2": "All this automatically goes into our system, which you and the doctor can follow via a simple portal. If something abnormal happens, it can be alerted directly.",
+      "text2": "A number of sensors can be selected, and everything is set up automatically. There are no requirements for technical competence to use our system.",
       "imageAlt1": "Sensors and placements for medical monitoring",
       "imageAlt2": "System overview of medical monitoring devices"
     },
@@ -666,6 +677,17 @@
       "title": "Take care of your loved ones - safely, simply, and at home",
       "description": "For you as a relative who needs follow-up of your loved ones at home. Our unique sensors automatically detect irregularities related to safety and security, so you can get alerts when needed.",
       "button": "Book free guidance"
+    },
+    "solutions": {
+      "title": "Our solutions for private individuals are divided into two segments",
+      "security": {
+        "title": "If you want a solution that focuses on security, more than medical follow-up of your loved ones, we have good solutions for this. Read more below",
+        "icon": "chart"
+      },
+      "medical": {
+        "title": "Our partner Salubi offers an extended solution with **Specialized digital health services.** Qualified healthcare personnel and doctors will monitor the user's medical data. Go to saluba.no",
+        "icon": "people"
+      }
     },
     "concerns": {
       "title": "Worried about your loved ones?",
