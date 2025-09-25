@@ -517,6 +517,44 @@
   },
   "home": {
     "whoAreYou": "Who are you",
+    "fallDetection": {
+      "title": "Advanced fall alarm technology",
+      "subtitle": "discrete monitoring that respects privacy",
+      "description1": "Our radar-based fall alarm uses advanced technology to detect falls without compromising privacy. The sensor is discretely mounted on the wall and monitors movements 24/7.",
+      "description2": "The system sends immediate alerts for suspected falls, so help can arrive quickly when it's needed most. No cameras, no recordings - just safety."
+    },
+    "trygghet": {
+      "title": "Safety",
+      "subtitle": "Safety-creating technology",
+      "description1": "In the face of an aging population and increasing demand for healthcare services, welfare technology and sensor-based solutions play an increasingly important role. These technologies not only provide increased safety for the elderly but also better tools for healthcare professionals and greater security for relatives.",
+      "description2": "Our solution integrates seamlessly into daily life, so users can live safely and independently in their own homes, while family and caregivers get peace of mind."
+    },
+    "medicalHome": {
+      "title": "medical@home",
+      "subtitle": "Advanced home monitoring",
+      "description1": "Medical@Home is a new way of thinking about health – where advanced technology meets everyday comfort. It's about giving people the opportunity to live safely and independently at home, while health is monitored continuously and discreetly.",
+      "description2": "Our large package of sensors allows us to offer a complete solution for such a task. From heart rate and movement patterns to sleep quality and activity levels – everything is monitored automatically and provides valuable information to both users and healthcare personnel."
+    },
+    "easeBlink": {
+      "title": "easeBlink",
+      "subtitle": "Safety-creating technology",
+      "description1": "Many elderly, especially those with limited mobility, experience isolation. Video calls allow them to maintain contact with family and friends, see their faces and hear their voices in real-time, fostering a sense of presence and community that traditional phone calls and text messages cannot replace.",
+      "description2": "Image sharing in the form of a digital carousel enables sharing memories, celebrations, and everyday moments. This feature brings joy and provides conversation topics. The solution has a very simple user interface, making it accessible for elderly people with varying degrees of cognitive impairment.",
+      "link": "read more about the camera hook here"
+    },
+    "madeInNorway": {
+      "title": "Made in Norway",
+      "subtitle": "Therefore you should choose a product made in Norway",
+      "description1": "When you choose a product made in Norway, you choose more than just quality – you invest in sustainability, safety, and pride.",
+      "quality": {
+        "title": "Quality",
+        "description": "Norwegian products are known for their high standard. With a focus on precision, good craftsmanship, and carefully selected materials, you get a product that lasts – and delivers, time and time again."
+      },
+      "sustainability": {
+        "title": "Sustainable and responsible production",
+        "description": "Production in Norway follows strict environmental requirements and ethical work practices. This means you support a greener future and fair working conditions – without compromising on quality. With the exception of some simple third-party Bluetooth devices, all our products are produced in Norway."
+      }
+    },
     "targetAudiences": {
       "municipalities": {
         "title": "For municipalities",

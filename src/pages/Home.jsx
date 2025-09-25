@@ -2,6 +2,12 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import heroImage from '../assets/Landingpage.png'
 import varmeHenderImage from '../assets/varme_hender.jpg'
+import eldreMannImage from '../assets/eldremanntrykthjemme.jpg'
+import fallSensorImage from '../assets/A futuristic compact radar-based fall sensor mounted on a wall shown in use. The scene is rendered.jpeg'
+import elderlySensorsImage from '../assets/eldre dame med sensorer.jpg'
+import medicalHomeImage from '../assets/An illustration representing a \'Medical_Home\' concept focused on health monitoring through sensors .jpeg'
+import phoneImage from '../assets/Phone_lowres.png'
+import madeInNorwayImage from '../assets/An abstract artwork symbolizing \'Made in Norway\' inspired by Norwegian nature. The image should ble.jpeg'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -42,6 +48,226 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Smart Overvåkning Section */}
+      <section className="py-20 bg-white w-full">
+        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-gray-900">
+                Smart overvåkning
+              </h2>
+              <p className="text-xl text-gray-600 italic">
+                som gir trygghet for familie og omsorgspersoner
+              </p>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  Vi tilbyr omfattende løsninger for hele aldringsreisen. Enten du er privatperson som ønsker ekstra trygghet for dine kjære, eller du representerer en kommune som ønsker å innføre velferdsteknologi.
+                </p>
+                <p>
+                  Vår skalerbare løsning kan gå fra en enkel sensor til en komplett løsning med daglig oppfølging av medisinsk personale.
+                </p>
+              </div>
+            </div>
+            
+            {/* Image */}
+            <div className="relative flex justify-center">
+              <img 
+                src={eldreMannImage} 
+                alt="Elderly man in living room with smart home technology" 
+                className="w-5/6 h-80 object-cover rounded-lg shadow-lg border border-gray-200"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fall Detection Technology Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 w-full">
+        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="relative flex justify-center order-2 md:order-1">
+              <img 
+                src={fallSensorImage} 
+                alt="Futuristic compact radar-based fall sensor mounted on wall" 
+                className="w-5/6 h-80 object-cover rounded-lg shadow-lg border border-gray-200"
+              />
+            </div>
+            
+            {/* Text Content */}
+            <div className="space-y-6 order-1 md:order-2">
+              <h2 className="text-4xl font-bold text-gray-900">
+                {t('home.fallDetection.title')}
+              </h2>
+              <p className="text-xl text-gray-600 italic">
+                {t('home.fallDetection.subtitle')}
+              </p>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  {t('home.fallDetection.description1')}
+                </p>
+                <p>
+                  {t('home.fallDetection.description2')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trygghet Section */}
+      <section className="py-20 bg-white w-full">
+        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-gray-900 italic">
+                {t('home.trygghet.title')}
+              </h2>
+              <p className="text-xl text-gray-600 italic">
+                {t('home.trygghet.subtitle')}
+              </p>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  {t('home.trygghet.description1')}
+                </p>
+                <p>
+                  {t('home.trygghet.description2')}
+                </p>
+              </div>
+            </div>
+            
+            {/* Image */}
+            <div className="relative flex justify-center">
+              <img 
+                src={elderlySensorsImage} 
+                alt="Elderly woman in living room with sensor technology overlay" 
+                className="w-5/6 h-80 object-cover rounded-lg shadow-lg border border-gray-200"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Medical@Home Section */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50 w-full">
+        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="relative flex justify-center order-2 md:order-1">
+              <img 
+                src={medicalHomeImage} 
+                alt="Medical Home concept with advanced health monitoring through sensors" 
+                className="w-5/6 h-80 object-cover rounded-lg shadow-lg border border-gray-200"
+              />
+            </div>
+            
+            {/* Text Content */}
+            <div className="space-y-6 order-1 md:order-2">
+              <h2 className="text-4xl font-bold text-gray-900">
+                {t('home.medicalHome.title')}
+              </h2>
+              <p className="text-xl text-gray-600 italic">
+                {t('home.medicalHome.subtitle')}
+              </p>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  {t('home.medicalHome.description1')}
+                </p>
+                <p>
+                  {t('home.medicalHome.description2')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* easeBlink Section */}
+      <section className="py-20 bg-white w-full">
+        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Text Content */}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-gray-900">
+                {t('home.easeBlink.title')}
+              </h2>
+              <p className="text-xl text-gray-600 italic">
+                {t('home.easeBlink.subtitle')}
+              </p>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  {t('home.easeBlink.description1')}
+                </p>
+                <p>
+                  {t('home.easeBlink.description2')}
+                </p>
+                <div className="pt-4">
+                  <Link 
+                    to="/easeblink" 
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors group"
+                  >
+                    {t('home.easeBlink.link')}
+                    <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            
+            {/* Image */}
+            <div className="relative flex justify-center">
+              <img 
+                src={phoneImage} 
+                alt="Smartphone showing video call with elderly person" 
+                className="w-[36rem] h-96 object-contain rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Made in Norway Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 w-full">
+        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="relative flex justify-center order-2 md:order-1">
+              <img 
+                src={madeInNorwayImage} 
+                alt="Made in Norway artwork with Norwegian nature and Northern Lights" 
+                className="w-5/6 h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
+              />
+            </div>
+            
+            {/* Text Content */}
+            <div className="space-y-6 order-1 md:order-2">
+              <h2 className="text-4xl font-bold text-gray-900 italic">
+                {t('home.madeInNorway.title')}
+              </h2>
+              <p className="text-xl text-gray-600 italic font-semibold">
+                {t('home.madeInNorway.subtitle')}
+              </p>
+              <div className="space-y-4 text-gray-700 leading-relaxed">
+                <p>
+                  {t('home.madeInNorway.description1')}
+                </p>
+                <div className="space-y-3">
+                  <p>
+                    <span className="font-bold">{t('home.madeInNorway.quality.title')}</span> - {t('home.madeInNorway.quality.description')}
+                  </p>
+                  <p>
+                    <span className="font-bold">{t('home.madeInNorway.sustainability.title')}</span> - {t('home.madeInNorway.sustainability.description')}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

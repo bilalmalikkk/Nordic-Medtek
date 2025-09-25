@@ -502,6 +502,44 @@
   },
   "home": {
     "whoAreYou": "Hvem er du",
+    "fallDetection": {
+      "title": "Avansert fallalarm teknologi",
+      "subtitle": "diskret overvåkning som respekterer privatlivet",
+      "description1": "Vår radar-baserte fallalarm bruker avansert teknologi for å oppdage fall uten å kompromittere personvernet. Sensoren er diskret montert på veggen og overvåker bevegelser 24/7.",
+      "description2": "Systemet sender umiddelbare varsler ved mistenkte fall, slik at hjelp kan komme raskt når det trengs mest. Ingen kameraer, ingen opptak - bare trygghet."
+    },
+    "trygghet": {
+      "title": "Trygghet",
+      "subtitle": "Trygghetsskapende teknologi",
+      "description1": "I møte med en aldrende befolkning og økende behov for helsetjenester, spiller velferdsteknologi og sensorbaserte løsninger en stadig viktigere rolle. Disse teknologiene gir ikke bare økt sikkerhet for eldre, men også bedre arbeidsverktøy for helsepersonell og større trygghet for pårørende.",
+      "description2": "Vår løsning integrerer seg sømløst i hverdagen, slik at brukeren kan leve trygt og uavhengig i sitt eget hjem, mens familien og omsorgspersoner får ro i sjelen."
+    },
+    "medicalHome": {
+      "title": "medical@home",
+      "subtitle": "Avansert overvåking hjemme",
+      "description1": "Medical@Home er en ny måte å tenke helse på – der avansert teknologi møter hverdagslivets komfort. Det handler om å gi mennesker muligheten til å leve trygt og selvstendig hjemme, samtidig som helsen overvåkes kontinuerlig og diskret.",
+      "description2": "Vår store pakke av sensorer gjør at vi kan tilby en fullverdig løsning for en slik oppgave. Fra hjerterytme og bevegelsesmønstre til søvnkvalitet og aktivitetsnivå – alt overvåkes automatisk og gir verdifull informasjon til både bruker og helsepersonell."
+    },
+    "easeBlink": {
+      "title": "easeBlink",
+      "subtitle": "Trygghetsskapende teknologi",
+      "description1": "Mange eldre, spesielt de med begrenset mobilitet, opplever isolasjon. Videokonferanser lar dem opprettholde kontakt med familie og venner, se ansiktene deres og høre stemmene deres i sanntid. Dette skaper en følelse av tilstedeværelse og fellesskap som tradisjonelle telefoner og tekstmeldinger ikke kan erstatte.",
+      "description2": "Bilde deling i form av en digital karusell gjør det mulig å dele minner, feiringer og hverdagsøyeblikk. Dette bringer glede og gir samtaleemner. Løsningen har et svært enkelt brukergrensesnitt, noe som gjør den tilgjengelig for eldre med varierende grader av kognitiv svekkelse.",
+      "link": "les mer om kamerakroken her"
+    },
+    "madeInNorway": {
+      "title": "Made in Norway",
+      "subtitle": "Derfor bør du velge et produkt laget i Norge",
+      "description1": "Når du velger et produkt som er laget i Norge, velger du mer enn bare kvalitet – du investerer i bærekraft, trygghet og stolthet.",
+      "quality": {
+        "title": "Kvalitet",
+        "description": "Norske produkter er kjent for sin høye standard. Med fokus på presisjon, godt håndverk og nøye utvalgte materialer, får du et produkt som varer – og som leverer, gang på gang."
+      },
+      "sustainability": {
+        "title": "Bærekraftig og ansvarlig produksjon",
+        "description": "Produksjon i Norge følger strenge miljøkrav og etisk arbeidspraksis. Det betyr at du støtter en grønnere fremtid og rettferdige arbeidsforhold – uten å gå på kompromiss med kvaliteten. Med unntak av noen enkle tredjeparts bluetooth enheter produseres alle våre produkter i Norge."
+      }
+    },
     "targetAudiences": {
       "municipalities": {
         "title": "For kommuner",
