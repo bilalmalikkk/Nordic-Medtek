@@ -1,9 +1,29 @@
+import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import landingPage from '../assets/Landingpage.png'
 
 export default function Municipality() {
   const { t } = useTranslation()
+  const [showHealthButtons, setShowHealthButtons] = useState(false)
+  const cardRef = useRef(null)
+
+  // Close buttons when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (cardRef.current && !cardRef.current.contains(event.target)) {
+        setShowHealthButtons(false)
+      }
+    }
+
+    if (showHealthButtons) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [showHealthButtons])
   
   return (
     <div className="municipality-page min-h-screen w-full">
@@ -12,7 +32,7 @@ export default function Municipality() {
       <section className="hero-section min-h-[calc(100vh-100px)] flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
         <div className="w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-6">""
               <div className="space-y-4">
                 <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
                   {t('municipality.hero.title')}
@@ -61,8 +81,11 @@ export default function Municipality() {
             {/* 6-card grid layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Row 1 */}
-              <Link to="/health-personnel" className="block">
-                <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 cursor-pointer">
+              <div className="block w-full relative" ref={cardRef}>
+                <div 
+                  onClick={() => setShowHealthButtons(!showHealthButtons)}
+                  className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 cursor-pointer"
+                >
                   <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
                     <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -75,7 +98,27 @@ export default function Municipality() {
                     {t('municipality.benefits.safeCare.link')}
                   </p>
                 </div>
-              </Link>
+                
+                {/* Compact overflow buttons */}
+                {showHealthButtons && (
+                  <div className="absolute top-2 right-2 z-10 bg-white rounded-lg shadow-lg border border-gray-200 p-2 min-w-[200px]">
+                    <div className="flex flex-col gap-1">
+                      <Link
+                        to="/health-personnel?role=personnel"
+                        className="bg-green-600 text-white px-3 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors text-center"
+                      >
+                        {t('municipality.benefits.safeCare.healthPersonnel')}
+                      </Link>
+                      <Link
+                        to="/municipality-details"
+                        className="bg-blue-600 text-white px-3 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors text-center"
+                      >
+                        {t('municipality.benefits.safeCare.homeCareLeader')}
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
 
               <Link to="/municipality-details" className="block">
                 <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 cursor-pointer">

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import HelpCards from './components/HelpCards'
 import ContactForm from './components/ContactForm'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Private from './pages/Private'
 import Municipality from './pages/Municipality'
@@ -34,6 +35,7 @@ import CsvImport from './pages/CsvImport'
 function App() {
   return (
     <div>
+      <ScrollToTop />
       <Navbar />
       <main>
         <Routes>

@@ -758,7 +758,9 @@
       "title": "Kommunale fordeler",
       "safeCare": {
         "title": "Trygg og verdig omsorg i hverdagen",
-        "link": "(link til side for helsepersonell og leder i hjemmetjenesten)"
+        "link": "(link til side for helsepersonell og leder i hjemmetjenesten)",
+        "healthPersonnel": "Helsepersonell",
+        "homeCareLeader": "Leder i hjemmetjenesten"
       },
       "moreTime": {
         "title": "Mer tid til mennesker, mindre tid på unødvendige oppgaver",
@@ -1129,9 +1131,10 @@
   },
   "municipalityDetails": {
     "hero": {
-      "title": "Mer tid til mennesker, mindre tid på unødvendige oppgaver",
-      "description": "Våre sensorer og systemer hjelper deg og dine ansatte å oppdage kritiske hendelser mellom besøkene, gir bedre oversikt og gjør prioriteringen enklere - uten å skape merarbeid.",
-      "button": "Bestill gratis veiledning"
+      "title": "Enklere hverdag for ansatte - tryggere liv for brukerne",
+      "description": "Som leder for hjemmetjenesten vet du hvor presset hverdagen er. Våre sensorer og systemer hjelper deg og dine ansatte å oppdage kritiske hendelser mellom besøkene, gir bedre oversikt og gjør prioriteringen enklere - uten å skape merarbeid.",
+      "button1": "Bestill gratis veiledning",
+      "button2": "Se hvordan dette fungerer i praksis"
     },
     "challenges": {
       "title": "Hverdagsutfordringene",

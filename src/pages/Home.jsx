@@ -13,7 +13,7 @@ export default function Home() {
   const { t } = useTranslation()
   return (
     <div className="min-h-screen w-full">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full">
       {/* Top separator */}
       <div className="h-1 bg-white"></div>
       {/* Hero Section */}
@@ -35,7 +35,7 @@ export default function Home() {
                 </h1>
                 <div className="w-24 h-1 bg-white rounded-full mx-auto"></div>
               </div>
-              <p className="text-xl md:text-2xl text-white italic leading-relaxed max-w-4xl mx-auto px-4 drop-shadow-lg">
+              <p className="text-xl md:text-2xl text-white italic leading-relaxed max-w-6xl mx-auto px-8 drop-shadow-lg">
                 {t('hero.lead')}
               </p>
               <div className="pt-8">

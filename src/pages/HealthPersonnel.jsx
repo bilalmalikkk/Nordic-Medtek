@@ -1,6 +1,13 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import kPolitikere from '../assets/k-politikere.png'
+import kHelsepersonell from '../assets/k-helsepersonell.png'
+import bigChecklist from '../assets/big checklist.png'
+import sensor from '../assets/sensor.png'
+import receivesPing from '../assets/recieves ping.png'
+import sensorsData from '../assets/sensors data.png'
+import easeOfInstallation from '../assets/ease of installationm.png'
+import notification from '../assets/notification.png'
+import workLifeBalance from '../assets/what a work life balance waw.png'
 import hospital from '../assets/hospital.png'
 import calmShift from '../assets/calm shift.png'
 import sensorDetect from '../assets/sensor detecty.png'
@@ -16,159 +23,71 @@ export default function HealthPersonnel() {
         {/* Hero Section */}
         <section className="hero-section min-h-[calc(100vh-100px)] flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
           <div className="w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <div className="space-y-4">
                   <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                    {t('healthPersonnel.hero.title')}
+                    Enklere arbeidshverdag, tryggere pasienter.
                   </h1>
                   <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
                 </div>
                 <p className="text-xl text-gray-700 leading-relaxed">
-                  {t('healthPersonnel.hero.description')}
+                  Som sykepleier eller hjemmehjelper vet du at mye kan skje mellom besøkene. Våre sensorer oppdager fall og endringer i pust eller puls automatisk, og varsler deg direkte. Du får beskjed når det er kritisk, slik at du kan være der pasienten trenger deg mest, uten ekstra rutiner.
                 </p>
-                <div className="pt-4">
+                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <Link 
+                    to="/guidance" 
+                    className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    Bestill gratis veiledning
+                  </Link>
                   <Link 
                     to="/demo" 
-                    className="group inline-flex items-center justify-center bg-yellow-400 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center justify-center bg-yellow-400 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
-                    {t('healthPersonnel.hero.button')}
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
+                    Se hvordan det fungerer i praksis
                   </Link>
                 </div>
               </div>
               <div className="flex justify-center">
-                <img 
-                  src={kPolitikere} 
-                  alt="Politiker som snakker om trygghet" 
-                  className="max-w-md h-auto rounded-2xl shadow-2xl"
-                />
+                <div className="relative w-full max-w-md">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-teal-400 to-blue-500 rounded-2xl blur opacity-20"></div>
+                  <div className="relative bg-white p-4 rounded-2xl shadow-2xl">
+                    <img 
+                      src={kHelsepersonell} 
+                      alt="Helsepersonell som bruker teknologi for trygg omsorg" 
+                      className="w-full h-auto rounded-xl"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Challenges Section */}
-        <section className="challenges-section py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
-          <div className="w-full px-8 sm:px-12 lg:px-16">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('healthPersonnel.challenges.title')}</h2>
+        <section className="challenges-section py-12 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
+          <div className="w-full">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Hverdagen i hjemmetjenesten</h2>
               <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
             </div>
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-gray-900">{t('healthPersonnel.challenges.subtitle')}</h3>
-                <ul className="space-y-4 text-gray-700">
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    </div>
-                    <span>{t('healthPersonnel.challenges.challenge1')}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    </div>
-                    <span>{t('healthPersonnel.challenges.challenge2')}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    </div>
-                    <span>{t('healthPersonnel.challenges.challenge3')}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <div className="w-2 h-2 bg-red-600 rounded-full"></div>
-                    </div>
-                    <span>{t('healthPersonnel.challenges.challenge4')}</span>
-                  </li>
-                </ul>
+                <p className="text-xl text-gray-700 leading-relaxed">
+                  Du har mange pasienter på listen og lite tid til hver enkelt. Mellom besøkene kan det skje fall, pustestans eller forvirring som ingen oppdager før det er for sent. Det gir stress, dårlig samvittighet og risiko for pasientene.
+                </p>
               </div>
               <div className="flex justify-center">
-                <img 
-                  src={hospital} 
-                  alt="Sykehus og helsepersonell" 
-                  className="max-w-full h-auto rounded-2xl shadow-2xl"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Societal Benefits Section */}
-        <section className="societal-benefits-section py-20 w-full bg-white">
-          <div className="w-full">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('healthPersonnel.societalBenefits.title')}</h2>
-              <p className="text-xl text-gray-600 mb-8">{t('healthPersonnel.societalBenefits.subtitle')}</p>
-              <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-red-200">
-                <div className="flex items-start mb-6">
-                  <img 
-                    src={sensorDetect} 
-                    alt="Sensor som oppdager krise" 
-                    className="w-48 h-48 rounded-xl mr-6 flex-shrink-0"
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('healthPersonnel.societalBenefits.benefit1.title')}</h3>
-                    <p className="text-gray-700 leading-relaxed text-lg">
-                      {t('healthPersonnel.societalBenefits.benefit1.description')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-green-200">
-                <div className="flex items-start mb-6">
-                  <img 
-                    src={stonks} 
-                    alt="Økonomiske gevinster" 
-                    className="w-48 h-48 rounded-xl mr-6 flex-shrink-0"
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('healthPersonnel.societalBenefits.benefit2.title')}</h3>
-                    <p className="text-gray-700 leading-relaxed text-lg">
-                      {t('healthPersonnel.societalBenefits.benefit2.description')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-blue-200">
-                <div className="flex items-start mb-6">
-                  <img 
-                    src={calmShift} 
-                    alt="Bedre arbeidsvilkår" 
-                    className="w-48 h-48 rounded-xl mr-6 flex-shrink-0"
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('healthPersonnel.societalBenefits.benefit3.title')}</h3>
-                    <p className="text-gray-700 leading-relaxed text-lg">
-                      {t('healthPersonnel.societalBenefits.benefit3.description')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-purple-200">
-                <div className="flex items-start mb-6">
-                  <img 
-                    src={videoCall} 
-                    alt="Trygghet og verdighet" 
-                    className="w-48 h-48 rounded-xl mr-6 flex-shrink-0"
-                  />
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">{t('healthPersonnel.societalBenefits.benefit4.title')}</h3>
-                    <p className="text-gray-700 leading-relaxed text-lg">
-                      {t('healthPersonnel.societalBenefits.benefit4.description')}
-                    </p>
+                <div className="relative w-full max-w-lg">
+                  <div className="absolute -inset-4 bg-gradient-to-r from-teal-400 to-blue-500 rounded-2xl blur opacity-20"></div>
+                  <div className="relative bg-white p-4 rounded-2xl shadow-2xl">
+                    <img 
+                      src={bigChecklist} 
+                      alt="Helsepersonell med utfordringer i hjemmetjenesten" 
+                      className="w-full h-auto rounded-xl"
+                    />
                   </div>
                 </div>
               </div>
@@ -176,144 +95,202 @@ export default function HealthPersonnel() {
           </div>
         </section>
 
-        {/* Documentation and Legitimacy Section */}
-        <section className="documentation-section py-20 w-full bg-gray-50">
+        {/* Solution in Practice Section */}
+        <section className="solution-section py-20 w-full bg-white">
           <div className="w-full">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('healthPersonnel.documentation.title')}</h2>
-              <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('healthPersonnel.documentation.ceMarked.title')}</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {t('healthPersonnel.documentation.ceMarked.description')}
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('healthPersonnel.documentation.dataSecurity.title')}</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {t('healthPersonnel.documentation.dataSecurity.description')}
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('healthPersonnel.documentation.tested.title')}</h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {t('healthPersonnel.documentation.tested.description')}
-                </p>
-              </div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Løsningen i praksis</h2>
+              <p className="text-xl text-gray-700">Slik støtter systemet deg i hverdagen:</p>
+              <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full mt-4"></div>
             </div>
 
-            <div className="text-center">
-              <button className="bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl">
-                {t('healthPersonnel.documentation.downloadButton')}
-              </button>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+              {/* Fall Sensors */}
+              <div className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center text-center">
+                <div className="w-64 h-64 mb-6 flex items-center justify-center">
+                  <img 
+                    src={sensor} 
+                    alt="Fallsensor som oppdager fall automatisk" 
+                    className="w-full h-full object-contain rounded-xl"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Fallsensorer</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  oppdager fall automatisk, også når brukeren ikke klarer å trykke på alarmknappen.
+                </p>
+              </div>
+
+              {/* Health Sensors */}
+              <div className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center text-center">
+                <div className="w-64 h-64 mb-6 flex items-center justify-center">
+                  <img 
+                    src={receivesPing} 
+                    alt="Helsepersonell som mottar varsel på mobil" 
+                    className="w-full h-full object-contain rounded-xl"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Helsesensorer</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  følger med på pust, puls og aktivitet uten at brukeren merker det.
+                </p>
+              </div>
+
+              {/* Central Overview */}
+              <div className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center text-center">
+                <div className="w-64 h-64 mb-6 flex items-center justify-center">
+                  <img 
+                    src={sensorsData} 
+                    alt="Sentral oversikt med sanntidsdata" 
+                    className="w-full h-full object-contain rounded-xl"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Sentral oversikt</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  kommunen får sanntidsvarsler og kan prioritere ressursene riktig.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Cases and Stories Section */}
-        <section className="cases-section py-20 w-full bg-white">
+        {/* Benefits for You and Colleagues Section */}
+        <section className="benefits-section py-20 w-full bg-gradient-to-br from-gray-50 to-white">
           <div className="w-full">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('healthPersonnel.cases.title')}</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">Fordeler for deg og kollegene dine</h2>
               <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('healthPersonnel.cases.pilotResults')}</h3>
-                <ul className="space-y-3 mb-6">
+            <div className="max-w-7xl mx-auto">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+                <ul className="space-y-6 text-lg text-gray-700 mb-8">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-teal-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700">{t('healthPersonnel.cases.result1')}</span>
+                    <div className="w-2 h-2 bg-teal-600 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                    <span>Mindre bekymring for hva som skjer mellom besøkene.</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 bg-teal-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700">{t('healthPersonnel.cases.result2')}</span>
+                    <div className="w-2 h-2 bg-teal-600 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                    <span>Varsler gjør det enklere å prioritere riktig når det haster.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-teal-600 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                    <span>Pasientene får hjelp raskere – det gir trygghet både for deg og dem.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="w-2 h-2 bg-teal-600 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                    <span>Pårørende kan være mer rolige fordi de vet dere varsles automatisk.</span>
                   </li>
                 </ul>
-                <blockquote className="text-gray-600 italic border-l-4 border-teal-600 pl-4">
-                  "{t('healthPersonnel.cases.quote')}"
-                </blockquote>
-                <p className="text-sm text-gray-500 mt-4">{t('healthPersonnel.cases.attribution')}</p>
+                
+                <div className="bg-teal-50 p-6 rounded-xl border-l-4 border-teal-500">
+                  <blockquote className="text-lg italic text-gray-700 mb-2">
+                    "Vi slipper å lure på hva som skjer mellom besøkene. Nå får vi beskjed med en gang, og kan rykke ut raskt."
+                  </blockquote>
+                  <cite className="text-sm text-gray-600 font-medium">
+                    - Sykepleier, pilotkommune
+                  </cite>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* What You Get Section */}
+        <section className="what-you-get-section py-20 w-full bg-white">
+          <div className="w-full">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Hva du får</h2>
+              <p className="text-xl text-gray-700">Slik gjør vi hverdagen enklere:</p>
+              <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+              {/* Easy Installation */}
+              <div className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center text-center">
+                <div className="w-64 h-64 mb-6 flex items-center justify-center">
+                  <img 
+                    src={easeOfInstallation} 
+                    alt="Enkel installasjon av sensorer" 
+                    className="w-full h-full object-contain rounded-xl"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Enkel installasjon</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Våre sensorer er enkle å installere og krever minimalt med vedlikehold.
+                </p>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('healthPersonnel.cases.pilotResults')}</h3>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-teal-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700">{t('healthPersonnel.cases.result1')}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-teal-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700">{t('healthPersonnel.cases.result2')}</span>
-                  </li>
-                </ul>
-                <blockquote className="text-gray-600 italic border-l-4 border-teal-600 pl-4">
-                  "{t('healthPersonnel.cases.quote')}"
-                </blockquote>
-                <p className="text-sm text-gray-500 mt-4">{t('healthPersonnel.cases.attribution')}</p>
+              {/* Direct Notification */}
+              <div className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center text-center">
+                <div className="w-64 h-64 mb-6 flex items-center justify-center">
+                  <img 
+                    src={notification} 
+                    alt="Direkte varsling på mobil" 
+                    className="w-full h-full object-contain rounded-xl"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Direkte varsling</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Få umiddelbare varsler på din mobil eller nettbrett når noe kritisk skjer.
+                </p>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{t('healthPersonnel.cases.pilotResults')}</h3>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-teal-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700">{t('healthPersonnel.cases.result1')}</span>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-2 h-2 bg-teal-600 rounded-full mr-3 mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700">{t('healthPersonnel.cases.result2')}</span>
-                  </li>
-                </ul>
-                <blockquote className="text-gray-600 italic border-l-4 border-teal-600 pl-4">
-                  "{t('healthPersonnel.cases.quote')}"
-                </blockquote>
-                <p className="text-sm text-gray-500 mt-4">{t('healthPersonnel.cases.attribution')}</p>
+              {/* Better Work-Life Balance */}
+              <div className="bg-gray-50 p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center text-center">
+                <div className="w-64 h-64 mb-6 flex items-center justify-center">
+                  <img 
+                    src={workLifeBalance} 
+                    alt="Bedre arbeidsmiljø og balanse" 
+                    className="w-full h-full object-contain rounded-xl"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Bedre arbeidsmiljø</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Reduser stress og få en bedre balanse mellom jobb og fritid med tryggere pasienter.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Next Steps Section */}
-        <section className="next-steps-section py-20 w-full bg-gray-50">
+        <section className="next-steps-section py-20 w-full bg-gradient-to-br from-gray-50 to-white">
           <div className="w-full">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('healthPersonnel.nextSteps.title')}</h2>
-              <p className="text-xl text-gray-600 mb-8">{t('healthPersonnel.nextSteps.subtitle')}</p>
-              <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Hva er neste steg?</h2>
+              <p className="text-xl text-gray-700">Vil du se hva dette kan bety for din kommune?</p>
+              <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full mt-4"></div>
             </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('healthPersonnel.nextSteps.brief.title')}</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  {t('healthPersonnel.nextSteps.brief.description')}
-                </p>
-                <button className="bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl">
-                  {t('healthPersonnel.nextSteps.brief.button')}
-                </button>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {/* Demo Option */}
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Se en kort demo som viser systemet i praksis.
+                </h3>
+                <Link 
+                  to="/demo" 
+                  className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  Se demo
+                </Link>
               </div>
 
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{t('healthPersonnel.nextSteps.presentation.title')}</h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  {t('healthPersonnel.nextSteps.presentation.description')}
-                </p>
-                <button className="bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl">
-                  {t('healthPersonnel.nextSteps.presentation.button')}
-                </button>
+              {/* Test Group Option */}
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Test løsningen på en liten pasientgruppe før kommunen ruller det ut bredere.
+                </h3>
+                <Link 
+                  to="/guidance" 
+                  className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  Test på en pasientgruppe først
+                </Link>
               </div>
             </div>
           </div>
         </section>
-
       </div>
     </div>
   )

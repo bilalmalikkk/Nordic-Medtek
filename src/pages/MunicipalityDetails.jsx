@@ -21,20 +21,29 @@ export default function MunicipalityDetails() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                  <h1 className="text-4xl lg:text-6xl font-bold italic text-gray-900 leading-tight">
                     {t('municipalityDetails.hero.title')}
                   </h1>
                   <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
                 </div>
-                <p className="text-xl text-gray-700 leading-relaxed bg-white p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
+                <p className="text-xl text-gray-700 leading-relaxed">
                   {t('municipalityDetails.hero.description')}
                 </p>
-                <div className="pt-4">
+                <div className="pt-4 flex flex-col sm:flex-row gap-4">
                   <Link 
                     to="/guidance" 
                     className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
-                    {t('municipalityDetails.hero.button')}
+                    {t('municipalityDetails.hero.button1')}
+                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </Link>
+                  <Link 
+                    to="/demo" 
+                    className="group inline-flex items-center justify-center bg-yellow-400 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    {t('municipalityDetails.hero.button2')}
                     <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>

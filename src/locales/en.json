@@ -758,7 +758,9 @@
       "title": "Municipal benefits",
       "safeCare": {
         "title": "Safe and dignified care in everyday life",
-        "link": "(link to page for health personnel and leader in home care)"
+        "link": "(link to page for health personnel and leader in home care)",
+        "healthPersonnel": "Health Personnel",
+        "homeCareLeader": "Home Care Leader"
       },
       "moreTime": {
         "title": "More time for people, less time on unnecessary tasks",
@@ -1129,9 +1131,10 @@
   },
   "municipalityDetails": {
     "hero": {
-      "title": "More time for people, less time on unnecessary tasks",
-      "description": "Our sensors and systems help you and your staff detect critical events between visits, provide better overview and make prioritization easier - without creating extra work.",
-      "button": "Book free guidance"
+      "title": "Easier everyday for employees - safer life for users",
+      "description": "As a leader for home care services, you know how pressured everyday life is. Our sensors and systems help you and your staff detect critical events between visits, provide better overview and make prioritization easier - without creating extra work.",
+      "button1": "Book free guidance",
+      "button2": "See how this works in practice"
     },
     "challenges": {
       "title": "Daily challenges",
