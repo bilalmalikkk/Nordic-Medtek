@@ -764,7 +764,9 @@
       },
       "moreTime": {
         "title": "More time for people, less time on unnecessary tasks",
-        "link": "(link to page for leader in home care and municipal chief)"
+        "link": "(link to page for leader in home care and municipal chief)",
+        "healthPersonnel": "Health Personnel",
+        "municipalChief": "Municipal Chief"
       },
       "knowledgeBase": {
         "title": "Knowledge base that provides better decisions",

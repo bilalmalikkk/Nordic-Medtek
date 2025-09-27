@@ -764,7 +764,9 @@
       },
       "moreTime": {
         "title": "Mer tid til mennesker, mindre tid på unødvendige oppgaver",
-        "link": "(link til side for leder i hjemmetjenesten og kommunalsjef)"
+        "link": "(link til side for leder i hjemmetjenesten og kommunalsjef)",
+        "healthPersonnel": "Helsepersonell",
+        "municipalChief": "Kommunal sjef"
       },
       "knowledgeBase": {
         "title": "Kunnskapsgrunnlag som gir bedre beslutninger",
