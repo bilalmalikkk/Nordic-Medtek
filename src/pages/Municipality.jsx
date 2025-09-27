@@ -354,7 +354,7 @@ export default function Municipality() {
                   <div className="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-white/30 p-3 min-w-[220px] animate-in slide-in-from-top-2 duration-300">
                     <div className="flex flex-col gap-2">
                       <Link
-                        to="/municipality-details"
+                        to="/municipality-knowledge"
                         className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-4 py-3 rounded-xl text-sm font-semibold hover:from-amber-600 hover:to-orange-700 transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105"
                       >
                         {t('municipality.benefits.partnership.municipalChief')}
