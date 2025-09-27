@@ -153,10 +153,10 @@ export default function Municipality() {
                   <div className="absolute top-2 right-2 z-10 bg-white rounded-lg shadow-lg border border-gray-200 p-2 min-w-[200px]">
                     <div className="flex flex-col gap-1">
                       <Link
-                        to="/health-personnel?role=personnel"
+                        to="/municipality-details"
                         className="bg-green-600 text-white px-3 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors text-center"
                       >
-                        {t('municipality.benefits.moreTime.healthPersonnel')}
+                        Leder i hjemmetjenesten
                       </Link>
                       <Link
                         to="/municipality-knowledge"
