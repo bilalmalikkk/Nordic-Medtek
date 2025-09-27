@@ -29,6 +29,7 @@ import Evidence from './pages/Evidence'
 import HealthPersonnel from './pages/HealthPersonnel'
 import ITWelfareTechnology from './pages/ITWelfareTechnology'
 import MunicipalBenefits from './pages/MunicipalBenefits'
+import Politicians from './pages/Politicians'
 import Admin from './pages/Admin'
 import CsvImport from './pages/CsvImport'
 
@@ -64,6 +65,7 @@ function App() {
           <Route path="/health-personnel" element={<HealthPersonnel />} />
           <Route path="/it-welfare-technology" element={<ITWelfareTechnology />} />
           <Route path="/municipal-benefits" element={<MunicipalBenefits />} />
+          <Route path="/politicians" element={<Politicians />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/csv-import" element={<CsvImport />} />
         </Routes>

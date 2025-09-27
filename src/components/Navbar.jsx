@@ -25,7 +25,7 @@ export default function Navbar() {
   const isMunicipalityActive = (isActive) => {
     if (isActive) return true
     // Municipality section sub-pages
-    const municipalitySubPages = ['/municipality-details', '/municipality-knowledge', '/procurement-manager', '/health-personnel', '/it-welfare-technology', '/municipal-benefits', '/demo']
+    const municipalitySubPages = ['/municipality-details', '/municipality-knowledge', '/procurement-manager', '/health-personnel', '/it-welfare-technology', '/municipal-benefits', '/demo', '/politicians']
     return municipalitySubPages.includes(location.pathname)
   }
 

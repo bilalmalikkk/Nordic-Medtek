@@ -766,23 +766,30 @@
         "title": "More time for people, less time on unnecessary tasks",
         "link": "(link to page for leader in home care and municipal chief)",
         "healthPersonnel": "Health Personnel",
+        "homeCareLeader": "Home Care Leader",
         "municipalChief": "Municipal Chief"
       },
       "knowledgeBase": {
         "title": "Knowledge base that provides better decisions",
-        "link": "(link to page for municipal chief and politicians)"
+        "link": "(link to page for municipal chief and politicians)",
+        "healthPersonnel": "Municipal Chief",
+        "politicians": "Municipal Politicians"
       },
       "economic": {
         "title": "Economic responsibility and long-term gains",
-        "link": "(link to page for purchasing manager and politicians)"
+        "link": "(link to page for purchasing manager and politicians)",
+        "procurementManager": "Procurement Manager",
+        "politicians": "Municipal Politicians"
       },
       "secureData": {
         "title": "Secure data and technical standards at the bottom",
-        "link": "(link to page for IT and welfare technology)"
+        "link": "(link to page for IT and welfare technology)",
+        "itWelfareTechnology": "IT and Welfare Technology"
       },
       "partnership": {
         "title": "Partnership that builds future care",
-        "link": "(link to page for municipal chief, politicians, purchasing manager, IT and welfare technology)"
+        "link": "(link to page for municipal chief, politicians, purchasing manager, IT and welfare technology)",
+        "municipalChief": "Municipal Chief"
       }
     },
     "cta": {
@@ -984,6 +991,102 @@
       "description": "Our solutions are already in use in Norwegian municipalities. The experiences show that they provide both better security for the users and more efficient operation of the service"
     },
     "footer": "[Footer]"
+  },
+  "politicians": {
+    "hero": {
+      "title": "Safety and dignity for the elderly – lower costs for the municipality.",
+      "description1": "As a politician, you must make decisions that provide the greatest possible societal benefit.",
+      "description2": "Our sensors and systems contribute to fewer hospital admissions, safer elderly, and more sustainable operation of the municipality. Results you can stand by.",
+      "button": "See the benefits for society"
+    },
+    "challenges": {
+      "title": "The challenges the municipality faces today",
+      "subtitle": "The societal challenge",
+      "intro": "Norwegian municipalities are facing an aging population wave:",
+      "challenge1": "More elderly wish to live at home longer.",
+      "challenge2": "Home care services have fewer staff per patient.",
+      "challenge3": "Every unnecessary admission increases costs and pressures the healthcare service.",
+      "conclusion": "Without new solutions, the gap between needs and resources will only grow."
+    },
+    "societalBenefits": {
+      "title": "Societal Benefit",
+      "subtitle": "Our solution provides measurable results.",
+      "benefit1": {
+        "title": "Fewer hospital admissions",
+        "description": "Sensors detect critical events early."
+      },
+      "benefit2": {
+        "title": "Lower costs",
+        "description": "The municipality saves significant sums on prevention."
+      },
+      "benefit3": {
+        "title": "Better working conditions",
+        "description": "Employees get a more predictable work day."
+      },
+      "benefit4": {
+        "title": "Safety and dignity",
+        "description": "Elderly get to live at home longer, with increased safety."
+      }
+    },
+    "documentation": {
+      "title": "Documentation and Legitimacy",
+      "ceMarking": {
+        "title": "CE-marked and MDR-compatible medical equipment",
+        "description": "All our products are CE-marked and developed in accordance with MDR (Medical Device Regulation). This ensures safety, quality and reliability for municipalities and healthcare personnel, and enables the technology to be seamlessly integrated into public operations without endangering lives."
+      },
+      "gdpr": {
+        "title": "Data security in line with GDPR",
+        "description": "Our systems are built with the highest degree of data security and privacy. We are fully GDPR-compliant, and sensitive health data is encrypted with clear routines for storage, access and sharing. This enables municipalities to use the technology without legal concerns or loss of public trust."
+      },
+      "tested": {
+        "title": "Reliable technology tested in Norwegian municipalities",
+        "description": "Our solutions have already been tested in Norwegian municipalities and documented to work in practice. This means the technology is not just theoretical, but reliable in real healthcare and care services, and addresses existing needs, routines and challenges. Experience shows that it can reduce unnecessary supervision, free up time for employees, and at the same time increase user safety."
+      },
+      "downloadButton": "Download politician brief"
+    },
+    "cases": {
+      "title": "Case and Stories",
+      "pilotResults": "In a pilot municipality, the system resulted in:",
+      "result1": "10 fewer hospital admissions per 100 users per year.",
+      "result2": "Greater security for employees and relatives.",
+      "quote": "This is an example of technology that provides both better services and lower costs. It is a responsible choice for the municipality.",
+      "attribution": "- Mayor in pilot municipality"
+    },
+    "nextSteps": {
+      "title": "What is the next step?",
+      "subtitle": "Do you want to see how this can strengthen your municipality?",
+      "brief": {
+        "title": "Read the short version of benefits in our politician brief",
+        "description": "A concise overview that explains how the technology can provide better care, lower costs, and safer working conditions. Adapted for decision-makers who need a quick, clear summary with figures and examples.",
+        "button": "Download politician brief"
+      },
+      "presentation": {
+        "title": "Order a presentation for the executive committee or committee",
+        "description": "We will come to you and present the solution with concrete examples from Norwegian municipalities. The presentation can be adapted to your local challenges, and provides an opportunity for questions and dialogue with both politicians and administration.",
+        "button": "Order a presentation"
+      }
+    },
+    "benefits": {
+      "title": "Benefits for the municipality and society",
+      "benefit1": {
+        "title": "Fewer hospital admissions",
+        "description": "Our sensors detect health problems early, reducing the need for acute hospital treatment and thus municipal costs."
+      },
+      "benefit2": {
+        "title": "Sustainable operation",
+        "description": "More efficient resource use and better planning gives the municipality financial stability and the opportunity to invest in other important services."
+      },
+      "benefit3": {
+        "title": "Safety and dignity",
+        "description": "Elderly can live at home longer with increased safety, while families get peace of mind and the municipality delivers better services."
+      }
+    },
+    "cta": {
+      "title": "Ready to see how this can strengthen your municipality?",
+      "contact": "Contact us",
+      "demo": "Book demo"
+    },
+    "footer": "← Back to municipal benefits"
   },
   "company": {
     "hero": {

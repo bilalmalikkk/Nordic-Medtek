@@ -508,7 +508,7 @@
   "hero": {
     "title1": "Vi tar vare på deg, uansett hvor du er i livsløpet",
     "title2": "",
-    "lead": "\"Vi utvikler innovative løsninger som gir brukerne trygghet, verdighet og bedre livskvalitet\"",
+    "lead": "Vi utvikler innovative løsninger som gir brukerne trygghet, verdighet og bedre livskvalitet",
     "button": "Se hvordan det fungerer"
   },
   "home": {
@@ -766,23 +766,30 @@
         "title": "Mer tid til mennesker, mindre tid på unødvendige oppgaver",
         "link": "(link til side for leder i hjemmetjenesten og kommunalsjef)",
         "healthPersonnel": "Helsepersonell",
+        "homeCareLeader": "Leder i hjemmetjenesten",
         "municipalChief": "Kommunal sjef"
       },
       "knowledgeBase": {
         "title": "Kunnskapsgrunnlag som gir bedre beslutninger",
-        "link": "(link til side for kommunalsjef og politikere)"
+        "link": "(link til side for kommunalsjef og politikere)",
+        "healthPersonnel": "Kommunal sjef",
+        "politicians": "kommune-Politikere"
       },
       "economic": {
         "title": "Økonomisk ansvarlighet og langsiktige gevinster",
-        "link": "(link til side for innkjøpsansvarlig og politikere)"
+        "link": "(link til side for innkjøpsansvarlig og politikere)",
+        "procurementManager": "Innkjøpsansvarlig",
+        "politicians": "kommune-Politikere"
       },
       "secureData": {
         "title": "Trygge data og tekniske standarder i bunn",
-        "link": "(link til side for IT og velferdsteknologi)"
+        "link": "(link til side for IT og velferdsteknologi)",
+        "itWelfareTechnology": "IT og velferdsteknologi"
       },
       "partnership": {
         "title": "Partnerskap som bygger fremtidens omsorg",
-        "link": "(link til side for kommunalsjef, politikere, innkjøpsansvarlig, IT og velferdsteknologi)"
+        "link": "(link til side for kommunalsjef, politikere, innkjøpsansvarlig, IT og velferdsteknologi)",
+        "municipalChief": "Kommunal sjef"
       }
     },
     "cta": {
@@ -1057,6 +1064,102 @@
         "button": "Bestill en presentasjon"
       }
     }
+  },
+  "politicians": {
+    "hero": {
+      "title": "Trygghet og verdighet for eldre – lavere kostnader for kommunen.",
+      "description1": "Som politiker skal du fatte beslutninger som gir størst mulig samfunnsnytte.",
+      "description2": "Våre sensorer og systemer bidrar til færre sykehusinnleggelser, tryggere eldre og mer bærekraftig drift av kommunen. Resultater du kan stå inne for.",
+      "button": "Se gevinstene for samfunnet"
+    },
+    "challenges": {
+      "title": "Utfordringene kommunen står i dag",
+      "subtitle": "Samfunnsutfordringen",
+      "intro": "Norske kommuner står foran en eldrebølge:",
+      "challenge1": "Flere eldre ønsker å bo hjemme lenger.",
+      "challenge2": "Hjemmetjenesten har færre ansatte per pasient.",
+      "challenge3": "Hver unødvendig innleggelse øker kostnadene og presser helsetjenesten.",
+      "conclusion": "Uten nye løsninger vil gapet mellom behov og ressurser bare vokse."
+    },
+    "societalBenefits": {
+      "title": "Samfunnsgevinsten",
+      "subtitle": "Vår løsning gir målbare resultater.",
+      "benefit1": {
+        "title": "Færre sykehusinnleggelser",
+        "description": "Sensorer oppdager kritiske hendelser tidlig."
+      },
+      "benefit2": {
+        "title": "Lavere kostnader",
+        "description": "Kommunen sparer betydelige summer på forebygging."
+      },
+      "benefit3": {
+        "title": "Bedre arbeidsvilkår",
+        "description": "Ansatte får en mer forutsigbar arbeidshverdag."
+      },
+      "benefit4": {
+        "title": "Trygghet og verdighet",
+        "description": "Eldre får bo hjemme lenger, med økt sikkerhet."
+      }
+    },
+    "documentation": {
+      "title": "Dokumentasjon og legitimitet",
+      "ceMarking": {
+        "title": "CE-merket og MDR-kompatibelt medisinsk utstyr",
+        "description": "Alle våre produkter er CE-merket og utviklet i tråd med MDR (Medical Device Regulation). Dette sikrer trygghet, kvalitet og pålitelighet for kommuner og helsepersonell, og gjør at teknologien kan integreres sømløst inn i offentlig drift uten å sette liv i fare."
+      },
+      "gdpr": {
+        "title": "Datasikkerhet i tråd med GDPR",
+        "description": "Våre systemer er bygget med høyeste grad av datasikkerhet og personvern. Vi er fullt GDPR-kompatible, og sensitive helsedata krypteres med klare rutiner for lagring, tilgang og deling. Dette gjør at kommuner kan bruke teknologien uten juridiske bekymringer eller tap av offentlig tillit."
+      },
+      "tested": {
+        "title": "Driftssikker teknologi testet i norske kommuner",
+        "description": "Løsningene våre er allerede testet i norske kommuner og dokumentert til å fungere i praksis. Dette betyr at teknologien ikke bare er teoretisk, men pålitelig i reell helse- og omsorgstjeneste, og adresserer eksisterende behov, rutiner og utfordringer. Erfaringer viser at den kan redusere unødvendig tilsyn, frigjøre tid for ansatte, og samtidig øke brukersikkerheten."
+      },
+      "downloadButton": "Last ned politiker-brief"
+    },
+    "cases": {
+      "title": "Case og fortellinger",
+      "pilotResults": "I en pilotkommune resulterte systemet i:",
+      "result1": "10 færre sykehusinnleggelser per 100 brukere på ett år.",
+      "result2": "Større trygghet for ansatte og pårørende.",
+      "quote": "Dette er et eksempel på teknologi som gir både bedre tjenester og lavere kostnader. Det er et ansvarlig valg for kommunen.",
+      "attribution": "- Ordfører i pilotkommune"
+    },
+    "nextSteps": {
+      "title": "Hva er neste steg?",
+      "subtitle": "Vil du se hvordan dette kan styrke din kommune?",
+      "brief": {
+        "title": "Les kortversjonen av gevinster i vår politiker-brief",
+        "description": "En kortfattet oversikt som forklarer hvordan teknologien kan gi bedre omsorg, lavere kostnader og tryggere arbeidsforhold. Tilpasset for beslutningstakere som trenger en rask, tydelig oppsummering med tall og eksempler.",
+        "button": "Last ned politiker-brief"
+      },
+      "presentation": {
+        "title": "Bestill en presentasjon til formannskap eller utvalg",
+        "description": "Vi kommer til dere og presenterer løsningen med konkrete eksempler fra norske kommuner. Presentasjonen kan tilpasses deres lokale utfordringer, og gir mulighet for spørsmål og dialog med både politikere og administrasjon.",
+        "button": "Bestill en presentasjon"
+      }
+    },
+    "benefits": {
+      "title": "Fordeler for kommunen og samfunnet",
+      "benefit1": {
+        "title": "Færre sykehusinnleggelser",
+        "description": "Våre sensorer oppdager helseproblemer tidlig, noe som reduserer behovet for akutt sykehusbehandling og dermed kommunens kostnader."
+      },
+      "benefit2": {
+        "title": "Bærekraftig drift",
+        "description": "Mer effektiv ressursbruk og bedre planlegging gir kommunen økonomisk stabilitet og mulighet for å investere i andre viktige tjenester."
+      },
+      "benefit3": {
+        "title": "Trygghet og verdighet",
+        "description": "Eldre kan bo hjemme lenger med økt sikkerhet, mens familier får ro i sinnet og kommunen leverer bedre tjenester."
+      }
+    },
+    "cta": {
+      "title": "Klar til å se hvordan dette kan styrke din kommune?",
+      "contact": "Kontakt oss",
+      "demo": "Bestill demo"
+    },
+    "footer": "← Tilbake til kommunale fordeler"
   },
   "company": {
     "hero": {
