@@ -35,10 +35,10 @@ import CsvImport from './pages/CsvImport'
 
 function App() {
   return (
-    <div className="w-full max-w-[2000px] mx-auto">
+    <div>
       <ScrollToTop />
       <Navbar />
-      <main>
+      <main className="w-full max-w-[2000px] mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/private" element={<Private />} />

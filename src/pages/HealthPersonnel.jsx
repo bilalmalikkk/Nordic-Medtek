@@ -18,7 +18,13 @@ export default function HealthPersonnel() {
   const { t } = useTranslation()
   
   return (
-    <div className="health-personnel-page min-h-screen w-full">
+    <div className="health-personnel-page min-h-screen w-full relative">
+      {/* Alphabet Label */}
+      <div className="absolute top-4 left-4 z-10">
+        <div className="w-8 h-8 bg-orange-300 rounded-full flex items-center justify-center text-white font-bold text-lg">
+          O
+        </div>
+      </div>
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <section className="hero-section min-h-[calc(100vh-100px)] flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
