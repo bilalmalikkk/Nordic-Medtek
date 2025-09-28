@@ -5,9 +5,9 @@ import varmeHenderImage from '../assets/varme_hender.jpg'
 import eldreMannImage from '../assets/eldremanntrykthjemme.jpg'
 import fallSensorImage from '../assets/A futuristic compact radar-based fall sensor mounted on a wall shown in use. The scene is rendered.jpeg'
 import elderlySensorsImage from '../assets/eldre dame med sensorer.jpg'
-import medicalHomeImage from '../assets/An illustration representing a \'Medical_Home\' concept focused on health monitoring through sensors .jpeg'
 import phoneImage from '../assets/Phone_lowres.png'
-import madeInNorwayImage from '../assets/An abstract artwork symbolizing \'Made in Norway\' inspired by Norwegian nature. The image should ble.jpeg'
+import madeInNorwayImage from '../assets/image-Norway.png'
+import digitaltTilsynImage from '../assets/Digitalt tilsyn.jpg'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -81,46 +81,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Fall Detection Technology Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 w-full">
+
+      {/* Trygghet Section */}
+      <section className="py-20 bg-white w-full">
         <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image */}
             <div className="relative flex justify-start order-2 md:order-1">
               <img 
-                src={fallSensorImage} 
-                alt="Futuristic compact radar-based fall sensor mounted on wall" 
+                src={elderlySensorsImage} 
+                alt="Elderly woman in living room with sensor technology overlay" 
                 className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
             
             {/* Text Content */}
             <div className="space-y-6 order-1 md:order-2">
-              <h2 className="text-4xl font-bold text-gray-900">
-                {t('home.fallDetection.title')}
-              </h2>
-              <p className="text-xl text-gray-600 italic">
-                {t('home.fallDetection.subtitle')}
-              </p>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
-                <p>
-                  {t('home.fallDetection.description1')}
-                </p>
-                <p>
-                  {t('home.fallDetection.description2')}
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trygghet Section */}
-      <section className="py-20 bg-white w-full">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Text Content */}
-            <div className="space-y-6">
               <h2 className="text-4xl font-bold text-gray-900 italic">
                 {t('home.trygghet.title')}
               </h2>
@@ -136,48 +112,52 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            
-            {/* Image */}
-            <div className="relative flex justify-end">
-              <img 
-                src={elderlySensorsImage} 
-                alt="Elderly woman in living room with sensor technology overlay" 
-                className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
-              />
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Medical@Home Section */}
-      <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50 w-full">
+      {/* Digitalt tilsyn Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 w-full">
         <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Image */}
-            <div className="relative flex justify-start order-2 md:order-1">
-              <img 
-                src={medicalHomeImage} 
-                alt="Medical Home concept with advanced health monitoring through sensors" 
-                className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
-              />
-            </div>
-            
             {/* Text Content */}
-            <div className="space-y-6 order-1 md:order-2">
-              <h2 className="text-4xl font-bold text-gray-900">
-                {t('home.medicalHome.title')}
+            <div className="space-y-6">
+              <h2 className="text-4xl font-bold text-gray-900 italic">
+                {t('home.digitaltTilsyn.title')}
               </h2>
               <p className="text-xl text-gray-600 italic">
-                {t('home.medicalHome.subtitle')}
+                {t('home.digitaltTilsyn.subtitle')}
               </p>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  {t('home.medicalHome.description1')}
+                  {t('home.digitaltTilsyn.description1')}
                 </p>
                 <p>
-                  {t('home.medicalHome.description2')}
+                  {t('home.digitaltTilsyn.description2')}
                 </p>
+                <div className="pt-4">
+                  <a 
+                    href={t('home.digitaltTilsyn.linkUrl')}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors group"
+                  >
+                    {t('home.digitaltTilsyn.link')}
+                    <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
               </div>
+            </div>
+            
+            {/* Image */}
+            <div className="relative flex justify-end">
+              <img 
+                src={digitaltTilsynImage} 
+                alt="Digital supervision technology with elderly woman" 
+                className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
+              />
             </div>
           </div>
         </div>
@@ -187,8 +167,17 @@ export default function Home() {
       <section className="py-20 bg-white w-full">
         <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="relative flex justify-start order-2 md:order-1">
+              <img 
+                src={phoneImage} 
+                alt="Smartphone showing video call with elderly person" 
+                className="w-[28rem] h-[28rem] object-contain rounded-2xl shadow-2xl"
+              />
+            </div>
+            
             {/* Text Content */}
-            <div className="space-y-6">
+            <div className="space-y-6 order-1 md:order-2">
               <h2 className="text-4xl font-bold text-gray-900">
                 {t('home.easeBlink.title')}
               </h2>
@@ -203,26 +192,19 @@ export default function Home() {
                   {t('home.easeBlink.description2')}
                 </p>
                 <div className="pt-4">
-                  <Link 
-                    to="/easeblink" 
+                  <a 
+                    href="https://www.nordicmedtek.no/easeblink"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors group"
                   >
                     {t('home.easeBlink.link')}
                     <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </Link>
+                  </a>
                 </div>
               </div>
-            </div>
-            
-            {/* Image */}
-            <div className="relative flex justify-end">
-              <img 
-                src={phoneImage} 
-                alt="Smartphone showing video call with elderly person" 
-                className="w-[28rem] h-[28rem] object-contain rounded-2xl shadow-2xl"
-              />
             </div>
           </div>
         </div>
@@ -233,7 +215,7 @@ export default function Home() {
         <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className="relative flex justify-start order-2 md:order-1">
+            <div className="relative flex justify-end order-1 md:order-2">
               <img 
                 src={madeInNorwayImage} 
                 alt="Made in Norway artwork with Norwegian nature and Northern Lights" 
@@ -242,7 +224,7 @@ export default function Home() {
             </div>
             
             {/* Text Content */}
-            <div className="space-y-6 order-1 md:order-2">
+            <div className="space-y-6 order-2 md:order-1">
               <h2 className="text-4xl font-bold text-gray-900 italic">
                 {t('home.madeInNorway.title')}
               </h2>
@@ -263,6 +245,17 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Se hvordan det fungerer Button Section */}
+      <section className="py-12 bg-white w-full">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="text-center">
+            <button className="bg-gray-800 text-white italic px-8 py-4 rounded-lg hover:bg-gray-700 transition-colors duration-300 font-medium text-lg">
+              Se hvordan det fungerer
+            </button>
           </div>
         </div>
       </section>
