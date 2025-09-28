@@ -19,36 +19,29 @@ export default function Home() {
       {/* Hero Section */}
       <section className="min-h-[calc(100vh-120px)] flex items-center w-full relative overflow-hidden">
         {/* Background Image */}
-        <img 
-          src={varmeHenderImage} 
-          alt="Caregiver and elderly person holding hands" 
-          className="absolute inset-0 w-full h-full object-cover z-0 brightness-65"
-        />
+        <div className="absolute inset-0 w-full h-full z-0">
+          <div className="w-full max-w-8xl mx-auto h-full px-8 sm:px-12 lg:px-16 xl:px-20">
+            <img 
+              src={varmeHenderImage} 
+              alt="Caregiver and elderly person holding hands" 
+              className="w-full h-full object-cover brightness-65 aspect-square"
+            />
+          </div>
+        </div>
         
         {/* Content */}
-        <div className="relative z-10 w-full">
+        <div className="relative z-10 w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg whitespace-pre-line">
                   {t('hero.title1')}
                 </h1>
                 <div className="w-24 h-1 bg-white rounded-full mx-auto"></div>
               </div>
-              <p className="text-xl md:text-2xl text-white italic leading-relaxed max-w-6xl mx-auto px-8 drop-shadow-lg">
+              <p className="text-xl md:text-2xl text-white italic leading-relaxed max-w-6xl mx-auto px-8 drop-shadow-lg whitespace-pre-line">
                 {t('hero.lead')}
               </p>
-              <div className="pt-8">
-                <Link 
-                  to="/demo" 
-                  className="group inline-flex items-center justify-center bg-white text-gray-900 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  {t('hero.button')}
-                  <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -56,7 +49,7 @@ export default function Home() {
 
       {/* Smart Overvåkning Section */}
       <section className="py-20 bg-white w-full">
-        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="space-y-6">
@@ -77,11 +70,11 @@ export default function Home() {
             </div>
             
             {/* Image */}
-            <div className="relative flex justify-center">
+            <div className="relative flex justify-end">
               <img 
                 src={eldreMannImage} 
                 alt="Elderly man in living room with smart home technology" 
-                className="w-5/6 h-80 object-cover rounded-lg shadow-lg border border-gray-200"
+                className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
           </div>
@@ -90,14 +83,14 @@ export default function Home() {
 
       {/* Fall Detection Technology Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 w-full">
-        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className="relative flex justify-center order-2 md:order-1">
+            <div className="relative flex justify-start order-2 md:order-1">
               <img 
                 src={fallSensorImage} 
                 alt="Futuristic compact radar-based fall sensor mounted on wall" 
-                className="w-5/6 h-80 object-cover rounded-lg shadow-lg border border-gray-200"
+                className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
             
@@ -124,7 +117,7 @@ export default function Home() {
 
       {/* Trygghet Section */}
       <section className="py-20 bg-white w-full">
-        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="space-y-6">
@@ -145,11 +138,11 @@ export default function Home() {
             </div>
             
             {/* Image */}
-            <div className="relative flex justify-center">
+            <div className="relative flex justify-end">
               <img 
                 src={elderlySensorsImage} 
                 alt="Elderly woman in living room with sensor technology overlay" 
-                className="w-5/6 h-80 object-cover rounded-lg shadow-lg border border-gray-200"
+                className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
           </div>
@@ -158,14 +151,14 @@ export default function Home() {
 
       {/* Medical@Home Section */}
       <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50 w-full">
-        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className="relative flex justify-center order-2 md:order-1">
+            <div className="relative flex justify-start order-2 md:order-1">
               <img 
                 src={medicalHomeImage} 
                 alt="Medical Home concept with advanced health monitoring through sensors" 
-                className="w-5/6 h-80 object-cover rounded-lg shadow-lg border border-gray-200"
+                className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
             
@@ -192,7 +185,7 @@ export default function Home() {
 
       {/* easeBlink Section */}
       <section className="py-20 bg-white w-full">
-        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Text Content */}
             <div className="space-y-6">
@@ -224,11 +217,11 @@ export default function Home() {
             </div>
             
             {/* Image */}
-            <div className="relative flex justify-center">
+            <div className="relative flex justify-end">
               <img 
                 src={phoneImage} 
                 alt="Smartphone showing video call with elderly person" 
-                className="w-[36rem] h-96 object-contain rounded-2xl shadow-2xl"
+                className="w-[28rem] h-[28rem] object-contain rounded-2xl shadow-2xl"
               />
             </div>
           </div>
@@ -237,14 +230,14 @@ export default function Home() {
 
       {/* Made in Norway Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 w-full">
-        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Image */}
-            <div className="relative flex justify-center order-2 md:order-1">
+            <div className="relative flex justify-start order-2 md:order-1">
               <img 
                 src={madeInNorwayImage} 
                 alt="Made in Norway artwork with Norwegian nature and Northern Lights" 
-                className="w-5/6 h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
+                className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
             
@@ -276,7 +269,7 @@ export default function Home() {
 
       {/* Hvem er du Section */}
       <section className="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100 w-full">
-        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.whoAreYou')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -368,7 +361,7 @@ export default function Home() {
 
       {/* Hvorfor - vårt formål Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.why.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -383,7 +376,7 @@ export default function Home() {
 
       {/* Hvordan - vår tilnærming Section */}
       <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.how.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -398,7 +391,7 @@ export default function Home() {
 
       {/* Hva - våre løsninger Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.what.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -422,7 +415,7 @@ export default function Home() {
 
       {/* Fordeler Section */}
       <section className="py-20 w-full bg-gradient-to-br from-green-50 to-emerald-50">
-        <div className="w-full">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.benefits.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -446,7 +439,7 @@ export default function Home() {
 
       {/* First CTA Section */}
       <section className="py-20 w-full bg-gradient-to-br from-gray-900 to-gray-800">
-        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">{t('home.cta1.title')}</h2>
           <Link 
             to="/guidance" 
@@ -462,7 +455,7 @@ export default function Home() {
 
       {/* FAQ Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.faq.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -485,7 +478,7 @@ export default function Home() {
 
       {/* Final CTA Section */}
       <section className="py-20 w-full bg-gradient-to-br from-orange-50 to-yellow-50">
-        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="bg-white rounded-3xl shadow-2xl p-12 border-2 border-orange-200">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">{t('home.cta2.title')}</h2>
@@ -508,7 +501,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-gray-200 py-8 w-full">
-        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 text-center">
           <p className="text-gray-600">{t('home.footer')}</p>
         </div>
       </footer>

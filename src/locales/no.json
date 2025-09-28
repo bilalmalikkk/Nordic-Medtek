@@ -506,9 +506,9 @@
     }
   },
   "hero": {
-    "title1": "Vi tar vare på deg, uansett hvor du er i livsløpet",
+    "title1": "Vi tar vare på deg,\nuansett hvor du er i livsløpet",
     "title2": "",
-    "lead": "Vi utvikler innovative løsninger som gir brukerne trygghet, verdighet og bedre livskvalitet",
+    "lead": "Vi utvikler innovative løsninger som gir brukerne trygghet,\nverdighet og bedre livskvalitet",
     "button": "Se hvordan det fungerer"
   },
   "home": {

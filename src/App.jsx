@@ -35,7 +35,7 @@ import CsvImport from './pages/CsvImport'
 
 function App() {
   return (
-    <div>
+    <div className="w-full max-w-[2000px] mx-auto">
       <ScrollToTop />
       <Navbar />
       <main>
