@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import heroImage from '../assets/Landingpage.png'
 import varmeHenderImage from '../assets/varme_hender.jpg'
+import varmeHenderImageFallback from '../assets/varme_hender.jpg'
 import eldreMannImage from '../assets/eldremanntrykthjemme.jpg'
 import fallSensorImage from '../assets/A futuristic compact radar-based fall sensor mounted on a wall shown in use. The scene is rendered.jpeg'
 import elderlySensorsImage from '../assets/eldre dame med sensorer.jpg'
@@ -17,25 +18,9 @@ export default function Home() {
       {/* Top separator */}
       <div className="h-1 bg-white"></div>
       {/* Hero Section */}
-      <section className="py-20 w-full relative overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full z-0">
-          <img 
-            src="/src/assets/varme_hender.jpg" 
-            alt="Caregiver and elderly person holding hands" 
-            className="w-full h-full object-cover brightness-75"
-            onError={(e) => {
-              console.log('Image failed to load with direct path');
-              console.log('Error:', e);
-              // Fallback to imported image
-              e.target.src = varmeHenderImage;
-            }}
-            onLoad={() => console.log('Image loaded successfully')}
-          />
-        </div>
-        
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black bg-opacity-25 z-5"></div>
+      <section className="py-20 w-full relative overflow-hidden" style={{backgroundImage: `url(${varmeHenderImage})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+        {/* Gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/15 z-10"></div>
         
         {/* Content */}
         <div className="relative z-10 w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
