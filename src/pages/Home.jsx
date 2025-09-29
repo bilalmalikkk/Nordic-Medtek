@@ -20,26 +20,26 @@ export default function Home() {
       <section className="min-h-[calc(100vh-120px)] flex items-center w-full relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full z-0">
-          <div className="w-full max-w-8xl mx-auto h-full px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="w-full h-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
             <img 
               src={varmeHenderImage} 
               alt="Caregiver and elderly person holding hands" 
-              className="w-full h-full object-cover brightness-65 aspect-square"
+              className="w-full h-full object-cover brightness-65"
             />
           </div>
         </div>
         
         {/* Content */}
-        <div className="relative z-10 w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-          <div className="text-center">
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+          <div className="text-center max-w-7xl mx-auto">
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-lg whitespace-pre-line">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight drop-shadow-lg whitespace-pre-line">
                   {t('hero.title1')}
                 </h1>
                 <div className="w-24 h-1 bg-white rounded-full mx-auto"></div>
               </div>
-              <p className="text-xl md:text-2xl text-white italic leading-relaxed max-w-6xl mx-auto px-8 drop-shadow-lg whitespace-pre-line">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white italic leading-relaxed max-w-5xl mx-auto px-4 sm:px-8 drop-shadow-lg whitespace-pre-line">
                 {t('hero.lead')}
               </p>
             </div>
