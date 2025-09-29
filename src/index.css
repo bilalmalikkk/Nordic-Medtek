@@ -7,6 +7,9 @@ html, body, #root {
 
 body {
   @apply antialiased text-slate-800 bg-white;
+  /* Ensure consistent zoom behavior */
+  zoom: 1;
+  transform: scale(1);
 }
 
 .container-page {
@@ -111,12 +114,29 @@ body {
 .hero-section {
   transform-origin: center;
   will-change: transform;
+  /* Ensure hero sections scale with browser zoom */
+  zoom: 1;
+  transform: scale(1);
 }
 
 /* Ensure hero sections scale properly with zoom */
 @media (min-width: 1024px) {
   .hero-section {
-    min-height: 100vh;
+    min-height: 80vh;
     height: auto;
+  }
+}
+
+/* Force consistent scaling across all sections */
+@media (min-width: 1024px) {
+  .hero-section,
+  .solutions-section,
+  .concerns-section,
+  .guidance-section,
+  .why-choose-section,
+  .faq-section,
+  .final-cta-section {
+    transform: scale(1);
+    zoom: 1;
   }
 }
