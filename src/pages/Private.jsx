@@ -16,42 +16,40 @@ export default function Private() {
     <div className="private-page min-h-screen w-full">
       <div className="w-full">
       {/* Hero Section */}
-      <section className="hero-section min-h-[80vh] flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
-        <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
-              <div className="space-y-6">
-                <div className="space-y-4">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 leading-tight">
-                    {t('private.hero.title')}
-                  </h1>
-                  <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
-                </div>
-                <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed bg-white p-4 sm:p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
-                  {t('private.hero.description')}
-                </p>
-                <div className="pt-4">
-                  <Link 
-                    to="/guidance" 
-                    className="group inline-flex items-center justify-center bg-gray-800 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base"
-                  >
-                    {t('private.hero.button')}
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                </div>
+      <section className="min-h-[calc(100vh-120px)] w-full relative overflow-hidden bg-gradient-to-br from-gray-50 to-white flex items-center">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-11 items-center">
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight">
+                  {t('private.hero.title')}
+                </h1>
+                <div className="w-16 h-1 bg-teal-600 rounded-full"></div>
               </div>
-              <div className="flex justify-center">
-                <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
-                  <div className="absolute -inset-4 bg-gradient-to-r from-teal-400 to-blue-500 rounded-2xl blur opacity-20"></div>
-                  <div className="relative bg-white p-4 rounded-2xl shadow-2xl">
-                    <img 
-                      src={landingPage} 
-                      alt="Eldre par som tar vare på hverandre" 
-                      className="w-full h-auto rounded-xl"
-                    />
-                  </div>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed bg-white p-3 sm:p-4 rounded-xl shadow-sm border-l-4 border-teal-500">
+                {t('private.hero.description')}
+              </p>
+              <div className="pt-4">
+                <Link 
+                  to="/guidance" 
+                  className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-base sm:text-lg"
+                >
+                  {t('private.hero.button')}
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-sm lg:max-w-md xl:max-w-lg">
+                <div className="absolute -inset-2 bg-gradient-to-r from-teal-400 to-blue-500 rounded-2xl blur opacity-20"></div>
+                <div className="relative bg-white p-3 rounded-2xl shadow-2xl">
+                  <img 
+                    src={landingPage} 
+                    alt="Eldre par som tar vare på hverandre" 
+                    className="w-full h-auto rounded-xl"
+                  />
                 </div>
               </div>
             </div>
@@ -60,8 +58,8 @@ export default function Private() {
       </section>
 
       {/* Solutions Section */}
-      <section className="solutions-section py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="w-full">
+      <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               {t('private.solutions.title')}
@@ -105,8 +103,8 @@ export default function Private() {
       </section>
 
       {/* Concerns Section */}
-      <section className="concerns-section py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="w-full">
+      <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               {t('private.concerns.title')}
@@ -190,8 +188,8 @@ export default function Private() {
       </section>
 
       {/* Guidance Section */}
-      <section className="guidance-section py-20 w-full bg-white">
-        <div className="w-full">
+      <section className="py-20 w-full bg-white">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-3xl shadow-2xl p-12 border-2 border-orange-200">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -226,8 +224,8 @@ export default function Private() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="why-choose-section py-20 w-full bg-gradient-to-br from-green-50 to-emerald-50">
-        <div className="w-full">
+      <section className="py-20 w-full bg-gradient-to-br from-green-50 to-emerald-50">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               {t('private.whyChoose.title')}
@@ -299,8 +297,8 @@ export default function Private() {
       </section>
 
       {/* FAQ Section */}
-      <section className="faq-section py-20 w-full bg-white">
-        <div className="w-full">
+      <section className="py-20 w-full bg-white">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               {t('private.faq.title')}
@@ -326,8 +324,8 @@ export default function Private() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="final-cta-section py-20 w-full bg-gradient-to-br from-orange-50 to-yellow-50">
-        <div className="w-full">
+      <section className="py-20 w-full bg-gradient-to-br from-orange-50 to-yellow-50">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="bg-white rounded-3xl shadow-2xl p-12 border-2 border-orange-200">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -352,7 +350,7 @@ export default function Private() {
 
       {/* Footer */}
       <footer className="bg-slate-200 py-8 w-full">
-        <div className="w-full">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center text-slate-600">
             {t('private.footer')}
           </div>

@@ -49,27 +49,30 @@ export default function Products() {
 
   return (
     <div className="min-h-screen w-full bg-gray-50">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full">
         {/* Hero Section */}
-        <section className="py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              {t('products.title')}
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {t('products.subtitle')}
-            </p>
+        <section className="py-12 w-full relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6">
+                {t('products.title')}
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto">
+                {t('products.subtitle')}
+              </p>
+            </div>
           </div>
         </section>
 
         {/* Products by Category */}
-        <section className="pb-20">
-          {Object.keys(groups).length === 0 ? (
-            <div className="text-center py-16">
-              <p className="text-gray-600">{t('products.noProducts')}</p>
-            </div>
-          ) : (
-            <div className="space-y-16">
+        <section className="py-20 w-full">
+          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+            {Object.keys(groups).length === 0 ? (
+              <div className="text-center py-16">
+                <p className="text-gray-600">{t('products.noProducts')}</p>
+              </div>
+            ) : (
+              <div className="space-y-16">
               {Object.entries(groups).map(([category, categoryProducts]) => (
                 <div key={category} className="bg-white rounded-2xl shadow-lg p-8">
                   <div className="flex items-center mb-8">
@@ -135,9 +138,10 @@ export default function Products() {
               </div>
             </div>
           ))}
-        </div>
-          )}
-      </section>
+              </div>
+            )}
+          </div>
+        </section>
       </div>
     </div>
   )

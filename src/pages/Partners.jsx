@@ -6,17 +6,17 @@ export default function Partners() {
   const { t } = useTranslation()
   return (
     <div className="min-h-screen w-full">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full">
         {/* Hero Section */}
-        <section className="min-h-[calc(100vh-100px)] flex items-center w-full bg-white">
-          <div className="w-full">
+        <section className="py-12 w-full relative overflow-hidden bg-white">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
                 <div className="space-y-6">
-                  <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
                     {t('partners.hero.title')}
                   </h1>
-                  <p className="text-xl text-gray-700 leading-relaxed">
+                  <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed">
                     {t('partners.hero.description')}
                   </p>
                 </div>
@@ -48,7 +48,7 @@ export default function Partners() {
 
         {/* Why Become Partner Section */}
         <section className="py-20 w-full bg-white">
-          <div className="w-full">
+          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
             <div className="mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-8">{t('partners.whyBecomePartner.title')}</h2>
               <ul className="space-y-4 text-lg text-gray-700">
@@ -65,7 +65,7 @@ export default function Partners() {
 
         {/* How We Support Partners Section */}
         <section className="py-20 w-full bg-gradient-to-br from-gray-50 to-white">
-          <div className="w-full">
+          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
             <div className="mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-8">{t('partners.howWeSupport.title')}</h2>
               <ol className="space-y-6 text-lg text-gray-700">
@@ -82,7 +82,7 @@ export default function Partners() {
 
         {/* Ready to Become Partner CTA Section */}
         <section className="py-20 w-full bg-white">
-          <div className="w-full">
+          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-8">{t('partners.cta.title')}</h2>
               <Link 

@@ -6,19 +6,19 @@ export default function Guidance() {
   const { t } = useTranslation()
   return (
     <div className="guidance-page min-h-screen w-full">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full">
         {/* Hero Section */}
-        <section className="hero-section min-h-[calc(100vh-100px)] flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
-          <div className="w-full">
+        <section className="py-12 w-full relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+          <div className="w-full px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <div className="space-y-4">
-                  <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
                     {t('guidance.hero.title')}
                   </h1>
                   <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
                 </div>
-                <p className="text-xl text-gray-700 leading-relaxed bg-white p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed bg-white p-4 sm:p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
                   {t('guidance.hero.subtitle')}
                 </p>
               </div>
@@ -39,8 +39,8 @@ export default function Guidance() {
         </section>
 
         {/* How we can help Section */}
-        <section className="help-section py-20 w-full bg-gradient-to-br from-yellow-50 to-yellow-100">
-          <div className="w-full">
+        <section className="py-20 w-full bg-gradient-to-br from-yellow-50 to-yellow-100">
+          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 {t('help.heading')}
@@ -72,8 +72,8 @@ export default function Guidance() {
       </div>
 
       {/* Contact Form Section - Full Width */}
-      <section className="form-section py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="w-full">
+      <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <ContactForm />
         </div>
       </section>

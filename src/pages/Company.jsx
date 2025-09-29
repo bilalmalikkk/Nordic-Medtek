@@ -6,19 +6,19 @@ export default function Company() {
   const { t } = useTranslation()
   return (
     <div className="min-h-screen w-full">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full">
       {/* Hero Section */}
-      <section className="min-h-[calc(100vh-100px)] flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
-        <div className="w-full">
+      <section className="py-12 w-full relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
                   {t('company.hero.title')}
                 </h1>
                 <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
               </div>
-              <p className="text-xl text-gray-700 italic leading-relaxed bg-white p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 italic leading-relaxed bg-white p-4 sm:p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
                 {t('company.hero.description1')}
               </p>
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
@@ -69,7 +69,7 @@ export default function Company() {
 
       {/* Why Collaborate Section */}
       <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="w-full">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('company.whyCollaborate.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -103,7 +103,7 @@ export default function Company() {
 
       {/* Who We Collaborate With Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('company.whoCollaborate.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -160,7 +160,7 @@ export default function Company() {
 
       {/* Partnership Benefits Section */}
       <section className="py-20 w-full bg-gradient-to-br from-green-50 to-emerald-50">
-        <div className="w-full">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('company.benefits.title')}</h2>
             <div className="w-24 h-1 bg-green-600 mx-auto rounded-full"></div>
@@ -184,7 +184,7 @@ export default function Company() {
 
       {/* CTA Section */}
       <section className="py-20 w-full bg-gradient-to-br from-gray-900 to-gray-800">
-        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">{t('company.cta.title')}</h2>
           <Link 
             to="/partners" 
@@ -200,7 +200,7 @@ export default function Company() {
 
       {/* FAQ Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('company.faq.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -223,7 +223,7 @@ export default function Company() {
 
       {/* Final CTA Section */}
       <section className="py-20 w-full bg-gradient-to-br from-orange-50 to-yellow-50">
-        <div className="w-full">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="bg-white rounded-3xl shadow-2xl p-12 border-2 border-orange-200">
             <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
               <div className="text-left flex-1">
@@ -250,7 +250,7 @@ export default function Company() {
 
       {/* Footer */}
       <footer className="bg-gray-200 py-8 w-full">
-        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 text-center">
           <p className="text-gray-600">{t('company.footer')}</p>
         </div>
       </footer>

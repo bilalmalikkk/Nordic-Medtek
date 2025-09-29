@@ -52,19 +52,19 @@ export default function Municipality() {
   
   return (
     <div className="municipality-page min-h-screen w-full">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full">
       {/* Hero Section */}
-      <section className="hero-section min-h-[calc(100vh-100px)] flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
-        <div className="w-full">
+      <section className="py-12 w-full relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
                   {t('municipality.hero.title')}
                 </h1>
                 <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
               </div>
-              <p className="text-xl text-gray-700 leading-relaxed bg-white p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed bg-white p-4 sm:p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
                 {t('municipality.hero.description')}
               </p>
               <div className="pt-4">
@@ -368,8 +368,8 @@ export default function Municipality() {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section py-20 w-full bg-gradient-to-br from-gray-900 to-gray-800">
-        <div className="w-full px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 w-full bg-gradient-to-br from-gray-900 to-gray-800">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             {t('municipality.cta.title')}
           </h2>
@@ -397,8 +397,8 @@ export default function Municipality() {
       </section>
 
       {/* FAQ Section */}
-      <section className="faq-section py-20 w-full bg-white">
-        <div className="w-full">
+      <section className="py-20 w-full bg-white">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               {t('municipality.faq.title')}
@@ -424,8 +424,8 @@ export default function Municipality() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="final-cta-section py-20 w-full bg-gradient-to-br from-orange-50 to-yellow-50">
-        <div className="w-full">
+      <section className="py-20 w-full bg-gradient-to-br from-orange-50 to-yellow-50">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="bg-white rounded-3xl shadow-2xl p-12 border-2 border-orange-200">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
@@ -450,7 +450,7 @@ export default function Municipality() {
 
       {/* Footer */}
       <footer className="bg-slate-200 py-8 w-full">
-        <div className="w-full">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center text-slate-600">
             {t('municipality.footer')}
           </div>
