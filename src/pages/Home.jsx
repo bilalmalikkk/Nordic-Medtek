@@ -17,7 +17,7 @@ export default function Home() {
       {/* Top separator */}
       <div className="h-1 bg-white"></div>
       {/* Hero Section */}
-      <section className="min-h-[calc(100vh-120px)] flex items-center w-full relative overflow-hidden">
+      <section className="hero-section h-[100vh] flex items-center w-full relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full z-0">
           <div className="w-full h-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">

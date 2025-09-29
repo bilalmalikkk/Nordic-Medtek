@@ -16,7 +16,7 @@ export default function Private() {
     <div className="private-page min-h-screen w-full">
       <div className="w-full">
       {/* Hero Section */}
-      <section className="hero-section min-h-[calc(100vh-100px)] flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
+      <section className="hero-section h-[100vh] flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
         <div className="w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">

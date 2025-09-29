@@ -106,3 +106,17 @@ body {
 .final-cta-section {
   @apply py-16;
 }
+
+/* Hero section zoom responsiveness */
+.hero-section {
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* Ensure hero sections scale properly with zoom */
+@media (min-width: 1024px) {
+  .hero-section {
+    min-height: 100vh;
+    height: auto;
+  }
+}
