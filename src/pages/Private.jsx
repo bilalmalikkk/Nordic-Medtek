@@ -16,9 +16,9 @@ export default function Private() {
     <div className="private-page min-h-screen w-full">
       <div className="w-full">
       {/* Hero Section */}
-      <section className="min-h-[calc(100vh-120px)] w-full relative overflow-hidden bg-gradient-to-br from-gray-50 to-white flex items-center">
+      <section className="py-12 w-full relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
         <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-11 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="space-y-4">
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-tight">
