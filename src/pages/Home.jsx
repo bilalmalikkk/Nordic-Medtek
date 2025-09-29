@@ -17,23 +17,31 @@ export default function Home() {
       {/* Top separator */}
       <div className="h-1 bg-white"></div>
       {/* Hero Section */}
-      <section className="hero-section min-h-[80vh] flex items-center w-full relative overflow-hidden">
+      <section className="py-20 w-full relative overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full z-0">
-          <div className="w-full h-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
-            <img 
-              src={varmeHenderImage} 
-              alt="Caregiver and elderly person holding hands" 
-              className="w-full h-full object-cover brightness-65"
-            />
-          </div>
+          <img 
+            src="/src/assets/varme_hender.jpg" 
+            alt="Caregiver and elderly person holding hands" 
+            className="w-full h-full object-cover brightness-75"
+            onError={(e) => {
+              console.log('Image failed to load with direct path');
+              console.log('Error:', e);
+              // Fallback to imported image
+              e.target.src = varmeHenderImage;
+            }}
+            onLoad={() => console.log('Image loaded successfully')}
+          />
         </div>
         
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black bg-opacity-25 z-5"></div>
+        
         {/* Content */}
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
-          <div className="text-center max-w-7xl mx-auto">
-            <div className="space-y-8">
-              <div className="space-y-6">
+        <div className="relative z-10 w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="text-center py-8">
+            <div className="space-y-6">
+              <div className="space-y-4">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight drop-shadow-lg whitespace-pre-line">
                   {t('hero.title1')}
                 </h1>
