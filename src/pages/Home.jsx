@@ -292,7 +292,7 @@ export default function Home() {
                   {t('home.targetAudiences.healthcare.description')}
                 </p>
                 <Link 
-                  to="/company" 
+                  to="/health-personnel" 
                   className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors group"
                 >
                   {t('home.targetAudiences.healthcare.link')}
