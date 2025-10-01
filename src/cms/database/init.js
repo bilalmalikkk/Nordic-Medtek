@@ -14,24 +14,37 @@ const SCHEMA_PATH = path.join(__dirname, 'schema.sql');
 const { Database } = sqlite3.verbose();
 const db = new Database(DB_PATH);
 
-// Initialize database with schema
+async function ensureAdminUser() {
+    try {
+        const existingAdmin = await dbHelpers.queryOne('SELECT * FROM users WHERE username = ?', ['admin']);
+        if (!existingAdmin) {
+            console.log('Creating default admin user...');
+            await db.run(
+                "INSERT INTO users (username, email, password_hash, role) VALUES ('admin', 'admin@nordicmedtek.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin')"
+            );
+            console.log('✅ Default admin user created');
+        }
+    } catch (error) {
+        console.error('Error ensuring admin user:', error);
+    }
+}
+
 async function initializeDatabase() {
     return new Promise((resolve, reject) => {
-        // Check if schema file exists
         if (!fs.existsSync(SCHEMA_PATH)) {
             reject(new Error('Schema file not found'));
             return;
         }
 
-        // Read and execute schema
         const schema = fs.readFileSync(SCHEMA_PATH, 'utf8');
         
-        db.exec(schema, (err) => {
+        db.exec(schema, async (err) => {
             if (err) {
                 console.error('Error initializing database:', err);
                 reject(err);
             } else {
                 console.log('Database schema loaded successfully');
+                await ensureAdminUser();
                 resolve();
             }
         });
