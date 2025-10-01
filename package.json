@@ -10,8 +10,8 @@
     "preview": "vite preview",
     "cms:dev": "node src/cms/server.js",
     "cms:start": "NODE_ENV=production node src/cms/server.js",
-    "dev:full": "concurrently \"npm run dev\" \"npm run cms:dev\"",
-    "postinstall": "npm rebuild sqlite3 sharp --build-from-source"
+    "cms:build": "npm rebuild sqlite3 sharp --build-from-source",
+    "dev:full": "concurrently \"npm run dev\" \"npm run cms:dev\""
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
