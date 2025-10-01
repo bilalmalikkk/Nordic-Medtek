@@ -25,7 +25,7 @@ import { initializeDatabase } from './database/init.js';
 import { authenticateToken } from './middleware/auth.js';
 
 const app = express();
-const PORT = process.env.CMS_PORT || 3001;
+const PORT = process.env.PORT || process.env.CMS_PORT || 3001;
 
 // Security middleware
 app.use(helmet({
