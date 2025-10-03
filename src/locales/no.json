@@ -1917,6 +1917,13 @@
     "loading": "Laster produkter...",
     "noProducts": "Ingen produkter funnet.",
     "readMore": "Les mer",
+    "seeMore": "Se mer",
+    "viewDatasheet": "Vis datablad",
+    "closeModal": "Lukk",
+    "noDatasheet": "Ingen datablad tilgjengelig",
+    "backToProducts": "Tilbake til produkter",
+    "download": "Last ned",
+    "openInNewTab": "Åpne i ny fane",
     "featured": "Utvalgt",
     "active": "Aktiv",
     "itemNumber": "Artikkel #{number}"

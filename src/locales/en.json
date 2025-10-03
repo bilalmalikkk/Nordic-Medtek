@@ -1915,6 +1915,13 @@
     "loading": "Loading products...",
     "noProducts": "No products found.",
     "readMore": "Read more",
+    "seeMore": "See More",
+    "viewDatasheet": "View Datasheet",
+    "closeModal": "Close",
+    "noDatasheet": "No datasheet available",
+    "backToProducts": "Back to Products",
+    "download": "Download",
+    "openInNewTab": "Open in new tab",
     "featured": "Featured",
     "active": "Active",
     "itemNumber": "Item #{number}"

@@ -28,6 +28,7 @@ export default function Admin() {
     rich_text_description: '',
     image_url: '',
     pdf_url: '',
+    datasheet_url: '',
     category_id: '',
     status: 'PUBLISHED',
     is_featured: false,
@@ -37,6 +38,10 @@ export default function Admin() {
   // Image upload state
   const [uploadingImage, setUploadingImage] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
+  
+  // Datasheet upload state
+  const [uploadingDatasheet, setUploadingDatasheet] = useState(false);
+  const [selectedDatasheet, setSelectedDatasheet] = useState(null);
 
   // Check if user is already logged in
   useEffect(() => {
@@ -125,6 +130,7 @@ export default function Admin() {
       rich_text_description: '',
       image_url: '',
       pdf_url: '',
+      datasheet_url: '',
       category_id: '',
       status: 'PUBLISHED',
       is_featured: false,
@@ -132,6 +138,7 @@ export default function Admin() {
     });
     setEditingProduct(null);
     setSelectedImage(null);
+    setSelectedDatasheet(null);
   };
 
   const handleImageUpload = async (file) => {
@@ -153,6 +160,28 @@ export default function Admin() {
       console.error('Image upload error:', error);
     } finally {
       setUploadingImage(false);
+    }
+  };
+
+  const handleDatasheetUpload = async (file) => {
+    if (!file) return;
+    
+    const token = localStorage.getItem('cms_token');
+    setUploadingDatasheet(true);
+    
+    try {
+      const response = await CmsApiService.uploadFile(file, token);
+      const absoluteUrl = response.media.url.startsWith('http')
+        ? response.media.url
+        : `${API_BASE_URL}${response.media.url}`;
+      setProductForm({...productForm, datasheet_url: absoluteUrl});
+      setSelectedDatasheet(absoluteUrl);
+      alert('Datasheet uploaded successfully!');
+    } catch (error) {
+      setError('Failed to upload datasheet');
+      console.error('Datasheet upload error:', error);
+    } finally {
+      setUploadingDatasheet(false);
     }
   };
 
@@ -185,7 +214,8 @@ export default function Admin() {
         technical_data: productForm.technical_data || null,
         rich_text_description: productForm.rich_text_description || null,
         image_url: productForm.image_url || null,
-        pdf_url: productForm.pdf_url || null
+        pdf_url: productForm.pdf_url || null,
+        datasheet_url: productForm.datasheet_url || null
       };
       
       if (editingProduct) {
@@ -224,12 +254,14 @@ export default function Admin() {
       rich_text_description: product.rich_text_description || '',
       image_url: product.image_url || '',
       pdf_url: product.pdf_url || '',
+      datasheet_url: product.datasheet_url || '',
       category_id: product.category_id || '',
       status: product.status || 'PUBLISHED',
       is_featured: product.is_featured || false,
       sorting: product.sorting || 0
     });
     setSelectedImage(product.image_url || null);
+    setSelectedDatasheet(product.datasheet_url || null);
     setActiveTab('products');
   };
 
@@ -584,6 +616,49 @@ export default function Admin() {
                     onChange={(e) => setProductForm({...productForm, pdf_url: e.target.value})}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                     placeholder="https://example.com/document.pdf"
+                  />
+                </div>
+
+                {/* Datasheet Upload */}
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Product Datasheet (PDF)
+                  </label>
+                  <div className="flex items-center space-x-4">
+                    <input
+                      type="file"
+                      accept=".pdf"
+                      onChange={(e) => handleDatasheetUpload(e.target.files[0])}
+                      className="hidden"
+                      id="datasheet-upload"
+                    />
+                    <label
+                      htmlFor="datasheet-upload"
+                      className="cursor-pointer bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-md border border-gray-300"
+                    >
+                      {uploadingDatasheet ? 'Uploading...' : 'Upload Datasheet'}
+                    </label>
+                    {selectedDatasheet && (
+                      <div className="flex items-center space-x-2">
+                        <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                        </svg>
+                        <span className="text-sm text-gray-600">Datasheet uploaded</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Datasheet URL (alternative)
+                  </label>
+                  <input
+                    type="url"
+                    value={productForm.datasheet_url}
+                    onChange={(e) => setProductForm({...productForm, datasheet_url: e.target.value})}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    placeholder="https://example.com/datasheet.pdf"
                   />
                 </div>
 

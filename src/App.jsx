@@ -15,6 +15,8 @@ import CompetitiveAdvantage from './pages/CompetitiveAdvantage'
 import Partners from './pages/Partners'
 import VaktromIntegration from './pages/VaktromIntegration'
 import Products from './pages/Products'
+import ProductDetail from './pages/ProductDetail'
+import ProductDatasheet from './pages/ProductDatasheet'
 import Guidance from './pages/Guidance'
 import AlarmCommunication from './pages/AlarmCommunication'
 import MedicalFollowup from './pages/MedicalFollowup'
@@ -51,6 +53,8 @@ function App() {
           <Route path="/partners" element={<Partners />} />
           <Route path="/vaktrom-integration" element={<VaktromIntegration />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/products/:id/datasheet" element={<ProductDatasheet />} />
           <Route path="/guidance" element={<Guidance />} />
           <Route path="/alarm-communication" element={<AlarmCommunication />} />
           <Route path="/medical-followup" element={<MedicalFollowup />} />

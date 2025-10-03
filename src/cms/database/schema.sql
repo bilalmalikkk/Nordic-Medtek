@@ -55,6 +55,7 @@ CREATE TABLE IF NOT EXISTS products (
     -- Media
     image_url TEXT,
     pdf_url TEXT,
+    datasheet_url TEXT,
     
     -- Organization
     category_id INTEGER,

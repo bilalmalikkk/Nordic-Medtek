@@ -29,7 +29,14 @@ const PORT = process.env.PORT || process.env.CMS_PORT || 3001;
 
 // Security middleware
 app.use(helmet({
-    crossOriginResourcePolicy: { policy: "cross-origin" }
+    crossOriginResourcePolicy: { policy: "cross-origin" },
+    contentSecurityPolicy: {
+        directives: {
+            defaultSrc: ["'self'"],
+            frameAncestors: ["'self'", "http://localhost:5173", "https://localhost:5173"],
+            frameSrc: ["'self'", "http://localhost:5173", "https://localhost:5173"]
+        }
+    }
 }));
 
 // Rate limiting
