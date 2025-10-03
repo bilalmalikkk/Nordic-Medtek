@@ -28,13 +28,24 @@ const app = express();
 const PORT = process.env.PORT || process.env.CMS_PORT || 3001;
 
 // Security middleware
+const allowedOrigins = [
+    "'self'",
+    "http://localhost:5173",
+    "https://localhost:5173"
+];
+
+// Add production frontend URL if specified
+if (process.env.FRONTEND_URL) {
+    allowedOrigins.push(process.env.FRONTEND_URL);
+}
+
 app.use(helmet({
     crossOriginResourcePolicy: { policy: "cross-origin" },
     contentSecurityPolicy: {
         directives: {
             defaultSrc: ["'self'"],
-            frameAncestors: ["'self'", "http://localhost:5173", "https://localhost:5173"],
-            frameSrc: ["'self'", "http://localhost:5173", "https://localhost:5173"]
+            frameAncestors: allowedOrigins,
+            frameSrc: allowedOrigins
         }
     }
 }));
