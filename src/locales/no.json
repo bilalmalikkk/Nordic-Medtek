@@ -17,6 +17,56 @@
     "lang": "English"
   },
   "util": {"about": "Om oss", "demo": "Bestill demo", "contact": "Kontakt oss", "privacy": "Personvernerklæring"},
+  "vision": {
+    "title": "Vår Visjon:",
+    "subtitle1": "Et Tryggere, Sunnere og Mer",
+    "subtitle2": "Selvstendig Liv – For Alle"
+  },
+  "visionPage": {
+    "story": {
+      "title": "Vår reise..",
+      "subtitle": "Løsninger med fokus på enkelthet",
+      "body": "Hos NordicMedTek begynte vår reise med ønsket om å skape en betydningsfull endring i helsevesenet for eldre. Vi er forpliktet til å levere høykvalitets velferdsteknologi som sikrer trygghet og fremmer uavhengighet for eldre. Vårt team brenner for å gjøre en forskjell, og vi er stolte av å tilby eksepsjonelle tjenester som imøtekommer de unike behovene til eldre."
+    },
+    "leadership": {
+      "title": "Visjonært lederskap",
+      "subtitle": "Løsninger med fokus på enkelthet",
+      "body": "Med et dedikert og erfarent lederteam jobber NordicMedTek hardt for å være i forkant av å drive frem fremskritt innen eldrehelse. Vårt team samler en mengde kunnskap og ekspertise for å utvikle banebrytende sensorprodukter som prioriterer helse og komfort for eldre. Vi fokuserer på å skape en positiv innvirkning og sette nye standarder i bransjen.",
+      "cta": "Klikk her for å møte de visjonære lederne bak våre banebrytende løsninger."
+    },
+    "quote": {
+      "title": "Vår visjon er klar:",
+      "body": "\"Å skape en fremtid hvor alle kan leve et trygt, sunt og selvstendig liv, støttet av intelligent teknologi som bryr seg. Vi inviterer deg til å være med på denne reisen.\""
+    },
+    "solutions": {
+      "intro1": "I en verden hvor helseutfordringer og behovet for trygghet stadig øker, er vår visjon å transformere måten vi ivaretar hverandre på. Vi ser for oss et samfunn der teknologi ikke bare forenkler, men også beriker liv, og gir enestående trygghet og helseovervåking for alle – uansett alder eller livssituasjon.",
+      "intro2": "Vi har utviklet en banebrytende portefølje av velferds-teknologiske løsninger som adresserer de mest presserende behovene innen omsorg og trygghet:",
+      "medical": {
+        "title": "For Medisinsk Overvåking:",
+        "body": "Våre avanserte sensorer dekker et bredt spekter av medisinske behov. Fra presis overvåking av hjertefrekvens, respirasjonsfrekvens, temperatur, systolisk og diastolisk blodtrykk, til andre vitale parametere, gir våre løsninger helsepersonell og pårørende sanntidsdata for proaktiv og persontilpasset oppfølging. Dette muliggjør tidlig intervensjon, reduserer behovet for sykehusinnleggelser og sikrer optimal helsehåndtering i hjemmet."
+      },
+      "home": {
+        "title": "For Trygghet i Hjemmet:",
+        "intro": "For de som bor alene, eller ønsker ekstra sikkerhet, tilbyr vi en omfattende pakke av trygghetssensorer:",
+        "points": [
+          "Radar- og IR-baserte fallsensorer: Diskret og personverns-vennlig deteksjon av fall, selv i mørket, uten behov for kamera i private soner.",
+          "Fallsensor med kamera: Gir visuell bekreftelse ved en hendelse for rask og målrettet hjelp, med respekt for personvernsinnstillinger.",
+          "Trygghetsalarm med 4G, GPS-lokasjon og geofence: Gir frihet og trygghet både i og utenfor hjemmet, med automatisk varsling ved definerte grenser og nøyaktig lokalisering i nødsituasjoner.",
+          "Toveis tale: Direkte kommunikasjon via alarmen, som sikrer umiddelbar kontakt og betryggende dialog når det trengs.",
+          "Talevarsling: Alarmer og påminnelser formidles med en klar, rolig stemme, noe som reduserer forvirring og øker forståelsen i kritiske situasjoner."
+        ]
+      },
+      "audience": {
+        "title": "Hvem vi hjelper:",
+        "intro": "Våre løsninger er designet for å møte behovene til:",
+        "items": [
+          "Bedrifter: Som ønsker å tilby innovative og trygge løsninger til sine ansatte eller kunder.",
+          "Stat og kommune: Som står overfor eldrebølgen og søker bærekraftige, effektive og humane løsninger for eldreomsorgen.",
+          "Privatmarkedet: Som ønsker å gi sine kjære – eller seg selv – den ultimate tryggheten og friheten til å bo selvstendig lenger."
+        ]
+      }
+    }
+  },
   "alarmCommunication": {
     "hero": {
       "title": "Alarmknapper og trygghetsløsninger",

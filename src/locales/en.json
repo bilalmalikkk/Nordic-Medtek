@@ -17,6 +17,56 @@
     "lang": "Norsk"
   },
   "util": {"about": "About", "demo": "Book demo", "contact": "Contact", "privacy": "Privacy policy"},
+  "vision": {
+    "title": "Our Vision:",
+    "subtitle1": "A Safer, Healthier and More",
+    "subtitle2": "Independent Life – For Everyone"
+  },
+  "visionPage": {
+    "story": {
+      "title": "Our journey..",
+      "subtitle": "Solutions focused on simplicity",
+      "body": "At NordicMedTek, our journey began with the desire to create meaningful change in elderly healthcare. We are committed to delivering high-quality welfare technology that ensures safety and promotes independence for seniors. Our team is passionate about making a difference, and we are proud to provide exceptional services that meet the unique needs of the elderly."
+    },
+    "leadership": {
+      "title": "Visionary leadership",
+      "subtitle": "Solutions focused on simplicity",
+      "body": "With a dedicated and experienced leadership team, NordicMedTek works hard to stay at the forefront of advancing elderly healthcare. Our team brings together a wealth of knowledge and expertise to develop groundbreaking sensor products that prioritize health and comfort for seniors. We focus on creating a positive impact and setting new standards in the industry.",
+      "cta": "Click here to meet the visionary leaders behind our groundbreaking solutions."
+    },
+    "quote": {
+      "title": "Our vision is clear:",
+      "body": "\"To create a future where everyone can live a safe, healthy and independent life, supported by intelligent technology that cares. We invite you to join us on this journey.\""
+    },
+    "solutions": {
+      "intro1": "In a world where health challenges and the need for security are steadily increasing, our vision is to transform the way we care for each other. We envision a society where technology not only simplifies, but also enriches lives, providing outstanding safety and health monitoring for all – regardless of age or life situation.",
+      "intro2": "We have developed a groundbreaking portfolio of welfare-technology solutions that address the most pressing needs within care and safety:",
+      "medical": {
+        "title": "For Medical Monitoring:",
+        "body": "Our advanced sensors cover a wide range of medical needs. From precise monitoring of heart rate, respiratory rate, temperature, systolic and diastolic blood pressure, to other vital parameters, our solutions provide real-time data for proactive and personalized follow-up. This enables early intervention, reduces the need for hospitalizations, and ensures optimal health management at home."
+      },
+      "home": {
+        "title": "For Home Safety:",
+        "intro": "For those who live alone or want extra security, we offer a comprehensive package of safety sensors:",
+        "points": [
+          "Radar and IR-based fall sensors: Discreet and privacy-friendly detection of falls, even in the dark, without the need for cameras in private areas.",
+          "Fall sensor with camera: Provides visual confirmation of an event for fast and targeted assistance, with respect for privacy settings.",
+          "Safety alarm with 4G, GPS location and geofence: Provides freedom and safety both inside and outside the home, with automatic alerts at defined boundaries and accurate location in emergencies.",
+          "Two-way voice: Direct communication via the alarm, ensuring immediate contact and reassuring dialogue when needed.",
+          "Voice alerts: Alarms and reminders are delivered with a clear, calm voice, reducing confusion and increasing understanding in critical situations."
+        ]
+      },
+      "audience": {
+        "title": "Who we help:",
+        "intro": "Our solutions are designed to meet the needs of:",
+        "items": [
+          "Businesses: Who want to offer innovative and safe solutions to their employees or customers.",
+          "Government and municipalities: Facing the aging wave and seeking sustainable, effective and humane solutions for elderly care.",
+          "The private market: Those who want to give their loved ones – or themselves – the ultimate security and freedom to live independently longer."
+        ]
+      }
+    }
+  },
   "alarmCommunication": {
     "hero": {
       "title": "Alarm buttons and safety solutions",

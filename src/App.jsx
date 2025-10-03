@@ -34,6 +34,7 @@ import MunicipalBenefits from './pages/MunicipalBenefits'
 import Politicians from './pages/Politicians'
 import Admin from './pages/Admin'
 import CsvImport from './pages/CsvImport'
+import Vision from './pages/Vision'
 
 function App() {
   return (
@@ -72,6 +73,7 @@ function App() {
           <Route path="/politicians" element={<Politicians />} />
           <Route path="/admin" element={<Admin />} />
           <Route path="/csv-import" element={<CsvImport />} />
+          <Route path="/vision" element={<Vision />} />
         </Routes>
       </main>
     </div>

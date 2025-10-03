@@ -46,7 +46,7 @@ export default function Navbar() {
     <header className="w-screen">
       <div className="bg-teal-800 text-gray-200 text-xs w-full">
         <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-end gap-6 py-2">
-          <Link to="/company" className="hover:underline">{t('util.about')}</Link>
+          <Link to="/vision" className="hover:underline">{t('util.about')}</Link>
           <Link to="/demo" className="hover:underline">{t('util.demo')}</Link>
           <Link to="/guidance" className="hover:underline">{t('util.contact')}</Link>
           <Link to="/documents" className="hover:underline">{t('util.privacy')}</Link>

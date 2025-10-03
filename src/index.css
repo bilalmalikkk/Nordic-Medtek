@@ -5,9 +5,13 @@ html, body, #root {
   height: 100%;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   @apply antialiased text-slate-800 bg-white;
-  /* Ensure consistent zoom behavior */
+  overflow-x: hidden;
   zoom: 1;
   transform: scale(1);
 }
