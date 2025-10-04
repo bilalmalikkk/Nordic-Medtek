@@ -6,6 +6,9 @@ import leadershipImg from '../assets/Gemini_Generated_Image_p4saa8p4saa8p4sa.jpg
 export default function Vision() {
   const { t } = useTranslation()
   
+  const subtitle2 = t('vision.subtitle2')
+  const [subtitle2First, subtitle2Second] = subtitle2.split('–').map(part => part ? part.trim() : '')
+  
   return (
     <div className="w-full">
       <section className="py-12 md:py-16 w-full relative overflow-hidden mb-8 md:mb-12 lg:mb-16">
@@ -23,9 +26,9 @@ export default function Vision() {
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight drop-shadow-lg">
                   {t('vision.title')}
                 </h1>
-                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-gray-800 leading-relaxed drop-shadow-lg">
-                  <p className="mb-2">{t('vision.subtitle1')}</p>
-                  <p className="mb-2">{t('vision.subtitle2')}</p>
+                <div className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-gray-800 leading-relaxed drop-shadow-lg">
+                  <p className="mb-2 whitespace-nowrap">{t('vision.subtitle1')} {subtitle2First}</p>
+                  <p className="mb-2">{subtitle2Second ? `– ${subtitle2Second}` : ''}</p>
                 </div>
               </div>
             </div>
