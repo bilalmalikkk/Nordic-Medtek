@@ -48,8 +48,8 @@ export default function Navbar() {
         <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-end gap-6 py-2">
           <Link to="/vision" className="hover:underline">{t('util.about')}</Link>
           <Link to="/demo" className="hover:underline">{t('util.demo')}</Link>
-          <Link to="/guidance" className="hover:underline">{t('util.contact')}</Link>
-          <Link to="/documents" className="hover:underline">{t('util.privacy')}</Link>
+          <Link to="/documents" className="hover:underline">{t('util.contact')}</Link>
+          <Link to="/privacy" className="hover:underline">{t('util.privacy')}</Link>
           <button onClick={toggleLang} className="hover:underline">{t('nav.lang')}</button>
         </div>
       </div>

@@ -9,8 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "cms:dev": "node src/cms/server.js",
-    "cms:start": "NODE_ENV=production node src/cms/server.js",
-    "cms:build": "npm rebuild sqlite3 sharp --build-from-source",
+    "cms:start": "node src/cms/server.js",
     "dev:full": "concurrently \"npm run dev\" \"npm run cms:dev\""
   },
   "dependencies": {
