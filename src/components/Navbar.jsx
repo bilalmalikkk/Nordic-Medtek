@@ -32,8 +32,14 @@ export default function Navbar() {
   const isCompanyActive = (isActive) => {
     if (isActive) return true
     // Company section sub-pages
-    const companySubPages = ['/products', '/guidance', '/documents', '/pricing', '/support', '/evidence']
+    const companySubPages = ['/guidance', '/documents', '/pricing', '/support', '/evidence']
     return companySubPages.includes(location.pathname)
+  }
+
+  const isProductsActive = (isActive) => {
+    if (isActive) return true
+    // Products section includes list and detail pages
+    return location.pathname.startsWith('/products')
   }
 
   const isPartnersActive = (isActive) => {
@@ -63,6 +69,7 @@ export default function Navbar() {
             <NavLink to="/private" className={({isActive})=> isPrivateActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.private')}</NavLink>
             <NavLink to="/municipality" className={({isActive})=> isMunicipalityActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.municipality')}</NavLink>
             <NavLink to="/company" className={({isActive})=> isCompanyActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.company')}</NavLink>
+            <NavLink to="/products" className={({isActive})=> isProductsActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.products')}</NavLink>
             <NavLink to="/partners" className={({isActive})=> isPartnersActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.partners')}</NavLink>
           </nav>
         </div>
