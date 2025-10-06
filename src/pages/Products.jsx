@@ -10,13 +10,18 @@ export default function Products() {
 
   // Fallback to static data if CMS is not available
   const fallbackProducts = [
-    { id: 'fall-sensor', product_name: 'Fallsensor', category_name: 'Sikkerhet', technical_data: 'Varsler fall i hjemmet og ute.' },
-    { id: 'bp-monitor', product_name: 'Blodtrykksmåler', category_name: 'Medisinsk', technical_data: 'Automatiserte målinger med deling til pårørende/lege.' },
-    { id: 'pill-dispenser', product_name: 'Medisin-dispenser', category_name: 'Sikkerhet', technical_data: 'Påminnelser og varsler ved uteblitt dose.' }
+    { id: 'fall-sensor', product_name: 'Fallsensor', item_number: '11501', category_name: 'Sikkerhet', technical_data: 'Varsler fall i hjemmet og ute.', rich_text_description: '<p>Avansert sensor som oppdager fallhendelser i hjemmet og utendørs. Systemet sender automatisk varsel til pårørende eller helsepersonell ved farlige situasjoner.</p>' },
+    { id: 'bp-monitor', product_name: 'Blodtrykksmåler', item_number: '12602', category_name: 'Medisinsk', technical_data: 'Automatiserte målinger med deling til pårørende/lege.', rich_text_description: '<p>Moderne blodtrykksmåler som automatisk sender målinger til helsepersonell og pårørende. Sikrer kontinuerlig overvåking av pasientens helsetilstand.</p>' },
+    { id: 'pill-dispenser', product_name: 'Medisin-dispenser', item_number: '11503', category_name: 'Sikkerhet', technical_data: 'Påminnelser og varsler ved uteblitt dose.', rich_text_description: '<p>Smart medisin-dispenser som gir påminnelser og sender varsler hvis medisin ikke blir tatt. Integrerer med helsepersonells systemer for optimal medisinering.</p>' }
   ]
 
   // Use CMS products if available, otherwise fallback to static data
   const displayProducts = products.length > 0 ? products : fallbackProducts
+  
+  // Debug: Log the products being used
+  console.log('Products from CMS:', products)
+  console.log('Display products:', displayProducts)
+  console.log('First product rich text:', displayProducts[0]?.rich_text_description)
   const isLoading = productsLoading || categoriesLoading
   const hasError = productsError && products.length === 0
 
@@ -107,8 +112,8 @@ export default function Products() {
                   
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {categoryProducts.map((product) => (
-                      <div key={product.id} className="group bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div className="aspect-w-16 aspect-h-12 bg-gray-700">
+                      <div key={product.id} className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
+                        <div className="aspect-w-16 aspect-h-12 bg-gray-100">
                           {product.image_url ? (
                             <img 
                               src={product.image_url.startsWith('http') ? product.image_url : `${API_BASE_URL}${product.image_url}`}
@@ -116,38 +121,41 @@ export default function Products() {
                               className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                           ) : (
-                            <div className="w-full h-48 bg-gray-700 flex items-center justify-center">
-                              <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="w-full h-48 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center">
+                              <svg className="w-12 h-12 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                               </svg>
                             </div>
                           )}
                         </div>
                         
-                        <div className="p-6">
-                          <h3 className="text-xl font-semibold text-white mb-1">
+                        <div className="p-6 flex flex-col flex-grow text-left">
+                          <h3 className="text-xl font-semibold text-gray-900 mb-1 group-hover:text-teal-600 transition-colors">
                             {product.product_name}
                           </h3>
                           
-                          <p className="text-white text-sm mb-2">
+                          <p className="text-gray-600 text-sm mb-2">
                             {product.item_number}
                           </p>
                           
-                          <p className="text-white text-lg font-bold mb-2">
+                          <p className="text-gray-800 text-sm font-bold mb-2">
                             {product.technical_data}
                           </p>
                           
-                          <p className="text-gray-300 text-sm mb-6 line-clamp-3">
-                            {product.rich_text_description ? product.rich_text_description.replace(/<[^>]*>/g, '') : ''}
-                          </p>
+                          <div 
+                            className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow prose prose-sm max-w-none"
+                            dangerouslySetInnerHTML={{ 
+                              __html: product.rich_text_description || product.rich_text || '<p><em>No rich text content available</em></p>' 
+                            }}
+                          />
                           
-                          <div className="flex justify-center">
+                          <div className="flex justify-center mt-auto">
                             <Link
                               to={product.datasheet_url ? `/products/${product.id}/datasheet` : '#'}
-                              className={`px-6 py-3 rounded-lg transition-colors flex items-center gap-2 ${
+                              className={`text-sm px-6 py-3 rounded-lg transition-colors flex items-center gap-2 ${
                                 product.datasheet_url 
-                                  ? 'bg-gray-700 text-white hover:bg-gray-600' 
-                                  : 'bg-gray-600 text-gray-400 cursor-not-allowed'
+                                  ? 'bg-teal-600 text-white hover:bg-teal-700' 
+                                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                               }`}
                               onClick={(e) => !product.datasheet_url && e.preventDefault()}
                             >

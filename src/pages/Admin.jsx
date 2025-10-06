@@ -25,6 +25,7 @@ export default function Admin() {
     item_number: '',
     technical_data: '',
     rich_text_description: '',
+    rich_text: '',
     image_url: '',
     datasheet_url: '',
     category_id: '',
@@ -124,6 +125,7 @@ export default function Admin() {
       item_number: '',
       technical_data: '',
       rich_text_description: '',
+      rich_text: '',
       image_url: '',
       datasheet_url: '',
       category_id: '',
@@ -204,6 +206,7 @@ export default function Admin() {
         category_id: productForm.category_id || null,
         technical_data: productForm.technical_data || null,
         rich_text_description: productForm.rich_text_description || null,
+        rich_text: productForm.rich_text || null,
         image_url: productForm.image_url || null,
         datasheet_url: productForm.datasheet_url || null,
         is_featured: productForm.is_featured ? 1 : 0
@@ -242,6 +245,7 @@ export default function Admin() {
       item_number: product.item_number || '',
       technical_data: product.technical_data || '',
       rich_text_description: product.rich_text_description || '',
+      rich_text: product.rich_text || '',
       image_url: product.image_url || '',
       datasheet_url: product.datasheet_url || '',
       category_id: product.category_id || '',
@@ -535,14 +539,31 @@ export default function Admin() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Product Description
+                    Product Description (Plain Text)
                   </label>
                   <textarea
                     value={productForm.rich_text_description}
                     onChange={(e) => setProductForm({...productForm, rich_text_description: e.target.value})}
                     rows={3}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    placeholder="Enter plain text description"
                   />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Rich Text Content (HTML)
+                  </label>
+                  <textarea
+                    value={productForm.rich_text || ''}
+                    onChange={(e) => setProductForm({...productForm, rich_text: e.target.value})}
+                    rows={4}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    placeholder="Enter HTML content (e.g., &lt;p&gt;Your content here&lt;/p&gt;)"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">
+                    HTML tags are supported. Use &lt;p&gt; for paragraphs, &lt;strong&gt; for bold, &lt;em&gt; for italic, etc.
+                  </p>
                 </div>
 
                 {/* Image Upload */}
