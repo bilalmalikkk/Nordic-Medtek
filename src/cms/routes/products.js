@@ -146,6 +146,8 @@ const createProduct = async (req, res) => {
             manual_sort,
             status = 'DRAFT',
             is_featured = false,
+            publish_date,
+            unpublish_date,
             external_id
         } = req.body;
 
@@ -182,6 +184,8 @@ const createProduct = async (req, res) => {
             manual_sort,
             status,
             is_featured: is_featured ? 1 : 0,
+            publish_date,
+            unpublish_date,
             external_id
         };
 

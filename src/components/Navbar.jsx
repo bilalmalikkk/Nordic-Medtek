@@ -18,7 +18,7 @@ export default function Navbar() {
   const isPrivateActive = (isActive) => {
     if (isActive) return true
     // Private section sub-pages
-    const privateSubPages = ['/alarm-communication', '/medical-followup', '/safety-solutions', '/fallalarm', '/experiences']
+    const privateSubPages = ['/alarm-communication', '/medical-followup', '/safety-solutions', '/fallalarm', '/experiences', '/alarm-buttons']
     return privateSubPages.includes(location.pathname)
   }
 

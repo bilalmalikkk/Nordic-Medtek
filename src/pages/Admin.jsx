@@ -21,18 +21,15 @@ export default function Admin() {
 
   // Product form state
   const [productForm, setProductForm] = useState({
-    title: '',
     product_name: '',
     item_number: '',
     technical_data: '',
     rich_text_description: '',
     image_url: '',
-    pdf_url: '',
     datasheet_url: '',
     category_id: '',
     status: 'PUBLISHED',
-    is_featured: false,
-    sorting: 0
+    is_featured: false
   });
 
   // Image upload state
@@ -123,18 +120,15 @@ export default function Admin() {
 
   const resetProductForm = () => {
     setProductForm({
-      title: '',
       product_name: '',
       item_number: '',
       technical_data: '',
       rich_text_description: '',
       image_url: '',
-      pdf_url: '',
       datasheet_url: '',
       category_id: '',
       status: 'PUBLISHED',
-      is_featured: false,
-      sorting: 0
+      is_featured: false
     });
     setEditingProduct(null);
     setSelectedImage(null);
@@ -190,10 +184,6 @@ export default function Admin() {
     const token = localStorage.getItem('cms_token');
     
     // Client-side validation
-    if (!productForm.title.trim()) {
-      setError('Title is required');
-      return;
-    }
     if (!productForm.product_name.trim()) {
       setError('Product name is required');
       return;
@@ -210,12 +200,13 @@ export default function Admin() {
       // Clean up the form data - convert empty strings to null for optional fields
       const cleanedFormData = {
         ...productForm,
+        title: productForm.product_name, // Use product_name as title
         category_id: productForm.category_id || null,
         technical_data: productForm.technical_data || null,
         rich_text_description: productForm.rich_text_description || null,
         image_url: productForm.image_url || null,
-        pdf_url: productForm.pdf_url || null,
-        datasheet_url: productForm.datasheet_url || null
+        datasheet_url: productForm.datasheet_url || null,
+        is_featured: productForm.is_featured ? 1 : 0
       };
       
       if (editingProduct) {
@@ -247,18 +238,15 @@ export default function Admin() {
     console.log('Edit button clicked for product:', product);
     setEditingProduct(product);
     setProductForm({
-      title: product.title || '',
       product_name: product.product_name || '',
       item_number: product.item_number || '',
       technical_data: product.technical_data || '',
       rich_text_description: product.rich_text_description || '',
       image_url: product.image_url || '',
-      pdf_url: product.pdf_url || '',
       datasheet_url: product.datasheet_url || '',
       category_id: product.category_id || '',
       status: product.status || 'PUBLISHED',
-      is_featured: product.is_featured || false,
-      sorting: product.sorting || 0
+      is_featured: product.is_featured || false
     });
     setSelectedImage(product.image_url || null);
     setSelectedDatasheet(product.datasheet_url || null);
@@ -475,20 +463,7 @@ export default function Admin() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      {t('admin.products.form.title')} *
-                    </label>
-                    <input
-                      type="text"
-                      value={productForm.title}
-                      onChange={(e) => setProductForm({...productForm, title: e.target.value})}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      {t('admin.products.form.productName')} *
+                      Product Name *
                     </label>
                     <input
                       type="text"
@@ -501,7 +476,7 @@ export default function Admin() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      {t('admin.products.form.itemNumber')} *
+                      Item Number *
                     </label>
                     <input
                       type="text"
@@ -514,14 +489,26 @@ export default function Admin() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      {t('admin.products.form.category')}
+                      Technical Data
+                    </label>
+                    <input
+                      type="text"
+                      value={productForm.technical_data}
+                      onChange={(e) => setProductForm({...productForm, technical_data: e.target.value})}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Category
                     </label>
                     <select
                       value={productForm.category_id}
                       onChange={(e) => setProductForm({...productForm, category_id: e.target.value})}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                     >
-                      <option value="">{t('admin.products.form.selectCategory')}</option>
+                      <option value="">Select Category</option>
                       {categories.map(category => (
                         <option key={category.id} value={category.id}>
                           {category.name}
@@ -532,30 +519,30 @@ export default function Admin() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      {t('admin.products.form.status')}
+                      Status
                     </label>
                     <select
                       value={productForm.status}
                       onChange={(e) => setProductForm({...productForm, status: e.target.value})}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                     >
-                      <option value="DRAFT">{t('admin.products.status.draft')}</option>
-                      <option value="PUBLISHED">{t('admin.products.status.published')}</option>
-                      <option value="ARCHIVED">{t('admin.products.status.archived')}</option>
+                      <option value="DRAFT">Draft</option>
+                      <option value="PUBLISHED">Published</option>
+                      <option value="ARCHIVED">Archived</option>
                     </select>
                   </div>
+                </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Sorting Order
-                    </label>
-                    <input
-                      type="number"
-                      value={productForm.sorting}
-                      onChange={(e) => setProductForm({...productForm, sorting: parseInt(e.target.value) || 0})}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    />
-                  </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Product Description
+                  </label>
+                  <textarea
+                    value={productForm.rich_text_description}
+                    onChange={(e) => setProductForm({...productForm, rich_text_description: e.target.value})}
+                    rows={3}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                  />
                 </div>
 
                 {/* Image Upload */}
@@ -593,31 +580,6 @@ export default function Admin() {
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Image URL (alternative)
-                  </label>
-                  <input
-                    type="url"
-                    value={productForm.image_url}
-                    onChange={(e) => setProductForm({...productForm, image_url: e.target.value})}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    placeholder="https://example.com/image.jpg"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    PDF URL
-                  </label>
-                  <input
-                    type="url"
-                    value={productForm.pdf_url}
-                    onChange={(e) => setProductForm({...productForm, pdf_url: e.target.value})}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    placeholder="https://example.com/document.pdf"
-                  />
-                </div>
 
                 {/* Datasheet Upload */}
                 <div>
@@ -647,44 +609,6 @@ export default function Admin() {
                       </div>
                     )}
                   </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Datasheet URL (alternative)
-                  </label>
-                  <input
-                    type="url"
-                    value={productForm.datasheet_url}
-                    onChange={(e) => setProductForm({...productForm, datasheet_url: e.target.value})}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    placeholder="https://example.com/datasheet.pdf"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Technical Data
-                  </label>
-                  <textarea
-                    value={productForm.technical_data}
-                    onChange={(e) => setProductForm({...productForm, technical_data: e.target.value})}
-                    rows={3}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Rich Text Description
-                  </label>
-                  <textarea
-                    value={productForm.rich_text_description}
-                    onChange={(e) => setProductForm({...productForm, rich_text_description: e.target.value})}
-                    rows={4}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    placeholder="HTML content allowed"
-                  />
                 </div>
 
                 <div className="flex items-center">

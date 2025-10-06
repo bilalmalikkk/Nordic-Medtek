@@ -37,6 +37,7 @@ import CsvImport from './pages/CsvImport'
 import Vision from './pages/Vision'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TrygghetOgFallsikring from './pages/TrygghetOgFallsikring'
+import AlarmButtons from './pages/AlarmButtons'
 
 function App() {
   return (
@@ -78,6 +79,7 @@ function App() {
           <Route path="/vision" element={<Vision />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/trygghet-og-fallsikring" element={<TrygghetOgFallsikring />} />
+          <Route path="/alarm-buttons" element={<AlarmButtons />} />
         </Routes>
       </main>
     </div>

@@ -71,6 +71,15 @@ export default function Products() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </Link>
+                <Link
+                  to="/alarm-buttons"
+                  className="ml-4 inline-flex items-center gap-2 bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+                >
+                  Alarmknapper og rask varsling
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>
@@ -98,8 +107,8 @@ export default function Products() {
                   
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {categoryProducts.map((product) => (
-                      <div key={product.id} className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div className="aspect-w-16 aspect-h-12 bg-gray-100">
+                      <div key={product.id} className="group bg-gray-800 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div className="aspect-w-16 aspect-h-12 bg-gray-700">
                           {product.image_url ? (
                             <img 
                               src={product.image_url.startsWith('http') ? product.image_url : `${API_BASE_URL}${product.image_url}`}
@@ -107,8 +116,8 @@ export default function Products() {
                               className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                           ) : (
-                            <div className="w-full h-48 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center">
-                              <svg className="w-12 h-12 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div className="w-full h-48 bg-gray-700 flex items-center justify-center">
+                              <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                               </svg>
                             </div>
@@ -116,40 +125,33 @@ export default function Products() {
                         </div>
                         
                         <div className="p-6">
-                          <div className="flex items-center justify-between mb-3">
-                            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-teal-100 text-teal-800">
-                              {product.status || t('products.active')}
-                            </span>
-                            {product.is_featured && (
-                              <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                                {t('products.featured')}
-                              </span>
-                            )}
-                          </div>
-                          
-                          <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-teal-600 transition-colors">
+                          <h3 className="text-xl font-semibold text-white mb-1">
                             {product.product_name}
                           </h3>
                           
-                          <p className="text-gray-600 text-sm mb-4 line-clamp-3">
-                            {product.technical_data || product.rich_text_description}
+                          <p className="text-white text-sm mb-2">
+                            {product.item_number}
                           </p>
                           
-                          <div className="flex items-center justify-between">
-                            <span className="text-sm text-gray-500">{t('products.itemNumber', { number: product.item_number })}</span>
+                          <p className="text-white text-lg font-bold mb-2">
+                            {product.technical_data}
+                          </p>
+                          
+                          <p className="text-gray-300 text-sm mb-6 line-clamp-3">
+                            {product.rich_text_description ? product.rich_text_description.replace(/<[^>]*>/g, '') : ''}
+                          </p>
+                          
+                          <div className="flex justify-center">
                             <Link
                               to={product.datasheet_url ? `/products/${product.id}/datasheet` : '#'}
-                              className={`text-sm px-4 py-2 rounded-lg transition-colors flex items-center gap-2 ${
+                              className={`px-6 py-3 rounded-lg transition-colors flex items-center gap-2 ${
                                 product.datasheet_url 
-                                  ? 'bg-teal-600 text-white hover:bg-teal-700' 
-                                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                                  ? 'bg-gray-700 text-white hover:bg-gray-600' 
+                                  : 'bg-gray-600 text-gray-400 cursor-not-allowed'
                               }`}
                               onClick={(e) => !product.datasheet_url && e.preventDefault()}
                             >
-                              {t('products.seeMore')}
-                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                              </svg>
+                              Datasheet
                             </Link>
                           </div>
                         </div>
