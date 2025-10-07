@@ -1,6 +1,6 @@
 import express from 'express';
 import { body, validationResult } from 'express-validator';
-import { query, queryOne, insert, update, dbDelete } from '../database/init.js';
+import { query, queryOne, insert, update, dbDelete, run } from '../database/init.js';
 import { authenticateToken, requireAdmin } from '../middleware/auth.js';
 
 const router = express.Router();
@@ -10,7 +10,7 @@ const getProducts = async (req, res) => {
     try {
         const {
             page = 1,
-            limit = 20,
+            limit = 1000,
             category,
             status = 'PUBLISHED',
             featured,
@@ -255,11 +255,23 @@ const deleteProduct = async (req, res) => {
 // Delete all products (admin only)
 const deleteAllProducts = async (req, res) => {
     try {
+        // First, get count of products before deletion
+        const countBefore = await queryOne('SELECT COUNT(*) as count FROM products');
+        console.log('Products before deletion:', countBefore.count);
+        
+        // Delete all products (regardless of status)
         const result = await run('DELETE FROM products');
+        console.log('Products deleted:', result.changes);
+        
+        // Verify deletion
+        const countAfter = await queryOne('SELECT COUNT(*) as count FROM products');
+        console.log('Products after deletion:', countAfter.count);
         
         res.json({ 
             message: 'All products deleted successfully',
-            deletedCount: result.changes
+            deletedCount: result.changes,
+            countBefore: countBefore.count,
+            countAfter: countAfter.count
         });
 
     } catch (error) {
@@ -268,7 +280,44 @@ const deleteAllProducts = async (req, res) => {
     }
 };
 
+// Debug endpoint to check database state
+const debugProducts = async (req, res) => {
+    try {
+        const allProducts = await query('SELECT id, product_name, item_number, status, external_id FROM products ORDER BY id');
+        const countByStatus = await query('SELECT status, COUNT(*) as count FROM products GROUP BY status');
+        
+        // Check for duplicate item numbers
+        const duplicateItems = await query(`
+            SELECT item_number, COUNT(*) as count 
+            FROM products 
+            GROUP BY item_number 
+            HAVING COUNT(*) > 1
+        `);
+        
+        // Check for duplicate external IDs
+        const duplicateExternalIds = await query(`
+            SELECT external_id, COUNT(*) as count 
+            FROM products 
+            WHERE external_id IS NOT NULL 
+            GROUP BY external_id 
+            HAVING COUNT(*) > 1
+        `);
+        
+        res.json({
+            totalProducts: allProducts.length,
+            products: allProducts,
+            countByStatus: countByStatus,
+            duplicateItemNumbers: duplicateItems,
+            duplicateExternalIds: duplicateExternalIds
+        });
+    } catch (error) {
+        console.error('Debug products error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+};
+
 // Routes
+router.get('/debug', debugProducts);
 router.get('/', getProducts);
 router.get('/:id', getProduct);
 

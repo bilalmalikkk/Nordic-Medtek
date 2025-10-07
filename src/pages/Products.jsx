@@ -1,22 +1,18 @@
+import { useState, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useProducts, useCategories } from '../hooks/useCmsProducts'
 import { API_BASE_URL } from '../services/cmsApi'
 import { Link } from 'react-router-dom'
+import ProductModal from '../components/ProductModal'
 
 export default function Products() {
   const { t } = useTranslation()
   const { products, loading: productsLoading, error: productsError } = useProducts({ status: 'PUBLISHED' })
   const { categories, loading: categoriesLoading } = useCategories()
+  const [selectedProduct, setSelectedProduct] = useState(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
-  // Fallback to static data if CMS is not available
-  const fallbackProducts = [
-    { id: 'fall-sensor', product_name: 'Fallsensor', item_number: '11501', category_name: 'Sikkerhet', technical_data: 'Varsler fall i hjemmet og ute.', rich_text_description: '<p>Avansert sensor som oppdager fallhendelser i hjemmet og utendørs. Systemet sender automatisk varsel til pårørende eller helsepersonell ved farlige situasjoner.</p>' },
-    { id: 'bp-monitor', product_name: 'Blodtrykksmåler', item_number: '12602', category_name: 'Medisinsk', technical_data: 'Automatiserte målinger med deling til pårørende/lege.', rich_text_description: '<p>Moderne blodtrykksmåler som automatisk sender målinger til helsepersonell og pårørende. Sikrer kontinuerlig overvåking av pasientens helsetilstand.</p>' },
-    { id: 'pill-dispenser', product_name: 'Medisin-dispenser', item_number: '11503', category_name: 'Sikkerhet', technical_data: 'Påminnelser og varsler ved uteblitt dose.', rich_text_description: '<p>Smart medisin-dispenser som gir påminnelser og sender varsler hvis medisin ikke blir tatt. Integrerer med helsepersonells systemer for optimal medisinering.</p>' }
-  ]
-
-  // Use CMS products if available, otherwise fallback to static data
-  const displayProducts = products.length > 0 ? products : fallbackProducts
+  const displayProducts = products
   
   // Debug: Log the products being used
   console.log('=== PRODUCTS PAGE DEBUG ===')
@@ -24,8 +20,6 @@ export default function Products() {
   console.log('Products loading:', productsLoading)
   console.log('Products error:', productsError)
   console.log('Display products:', displayProducts)
-  console.log('Using fallback data:', products.length === 0)
-  console.log('First product rich text:', displayProducts[0]?.rich_text_description)
   console.log('==========================')
   const isLoading = productsLoading || categoriesLoading
   const hasError = productsError && products.length === 0
@@ -45,7 +39,7 @@ export default function Products() {
   }
 
   if (hasError) {
-    console.warn('CMS not available, using fallback data:', productsError)
+    console.warn('CMS not available:', productsError)
   }
 
   // Group products by category
@@ -66,6 +60,16 @@ export default function Products() {
     return Math.max(500, baseHeight + contentHeight)
   }
 
+  const openModal = (product) => {
+    setSelectedProduct(product)
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+    setSelectedProduct(null)
+  }
+
   return (
     <div className="min-h-screen w-full bg-gray-50">
       <div className="w-full">
@@ -76,11 +80,6 @@ export default function Products() {
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6">
                 {t('products.title')}
               </h1>
-              {products.length === 0 && !isLoading && (
-                <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded mb-4 max-w-2xl mx-auto">
-                  <strong>Demo Mode:</strong> Showing sample products. Import your CSV file through the admin panel to see your actual products.
-                </div>
-              )}
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto">
                 {t('products.subtitle')}
               </p>
@@ -133,7 +132,12 @@ export default function Products() {
                       const cardHeight = calculateCardHeight(product)
                       
                       return (
-                      <div key={product.id} className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col" style={{ minHeight: `${cardHeight}px` }}>
+                      <div 
+                        key={product.id} 
+                        className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col cursor-pointer" 
+                        style={{ minHeight: `${cardHeight}px` }}
+                        onClick={() => openModal(product)}
+                      >
                         <div className="aspect-w-16 aspect-h-12 bg-gray-100">
                           {product.image_url ? (
                             <img 
@@ -184,7 +188,10 @@ export default function Products() {
                                   ? 'bg-teal-600 text-white hover:bg-teal-700' 
                                   : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                               }`}
-                              onClick={(e) => !product.datasheet_url && e.preventDefault()}
+                              onClick={(e) => {
+                                e.stopPropagation()
+                                if (!product.datasheet_url) e.preventDefault()
+                              }}
                             >
                               Datasheet
                             </Link>
@@ -201,6 +208,12 @@ export default function Products() {
           </div>
         </section>
       </div>
+      
+      <ProductModal 
+        product={selectedProduct}
+        isOpen={isModalOpen}
+        onClose={closeModal}
+      />
     </div>
   )
 }

@@ -256,14 +256,20 @@ export default function TrygghetOgFallsikring() {
         </section>
 
         {/* Technical info CTA */}
-        <section className="py-20 w-full">
+        <section className="py-20 w-full bg-gray-50">
           <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-            <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">Vil du se teknisk informasjon?</h3>
-            <p className="text-gray-700">Er du interessert i detaljer om alarmknappene, hvordan de kobles opp, og hvordan tale og</p>
-            <p className="text-gray-700 mb-4">GPS virker? Her finner du en teknisk oversikt.</p>
-            <Link to="/products" className="inline-flex items-center bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition">
-              Se teknisk produktoversikt
-            </Link>
+            <div className="max-w-2xl mx-auto text-center">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">Vil du se teknisk informasjon?</h3>
+              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+                Er du interessert i detaljer om alarmknappene, hvordan de kobles opp, og hvordan tale og GPS virker?
+              </p>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                Her finner du en teknisk oversikt.
+              </p>
+              <Link to="/products" className="inline-block bg-slate-800 text-white px-8 py-4 rounded-lg hover:bg-slate-700 transition-colors shadow-lg font-semibold text-lg">
+                Se teknisk produktoversikt
+              </Link>
+            </div>
           </div>
         </section>
       </div>

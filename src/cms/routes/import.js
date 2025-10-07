@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { authenticateToken, requireAdmin } from '../middleware/auth.js';
-import { insert, queryOne } from '../database/init.js';
+import { insert, queryOne, update } from '../database/init.js';
 
 // ES module __dirname equivalent
 const __filename = fileURLToPath(import.meta.url);
@@ -90,16 +90,23 @@ router.post('/products', [
             try {
                 // Check if product already exists
                 const existingProduct = await queryOne(
-                    'SELECT id FROM products WHERE item_number = ? OR external_id = ?',
+                    'SELECT id, item_number, external_id FROM products WHERE item_number = ? OR external_id = ?',
                     [product.item_number, product.external_id]
                 );
+                
+                if (existingProduct) {
+                    console.log(`Product already exists - Item: ${product.item_number}, External ID: ${product.external_id}, DB ID: ${existingProduct.id}`);
+                }
 
                 if (existingProduct) {
+                    // Update existing product instead of skipping
+                    await update('products', existingProduct.id, product);
                     errors.push({
                         item_number: product.item_number,
-                        error: 'Product already exists',
-                        action: 'skipped'
+                        error: 'Product updated (already existed)',
+                        action: 'updated'
                     });
+                    successCount++;
                     continue;
                 }
 
@@ -119,13 +126,24 @@ router.post('/products', [
         // Clean up temp file
         fs.unlinkSync(filePath);
 
+        const updatedCount = errors.filter(e => e.action === 'updated').length;
+        const failedCount = errors.filter(e => e.action === 'failed').length;
+        const skippedCount = errors.filter(e => e.action === 'skipped').length;
+        
+        // Get final count in database
+        const finalCount = await queryOne('SELECT COUNT(*) as count FROM products');
+        console.log(`Import completed: ${successCount - updatedCount} new, ${updatedCount} updated, ${failedCount} failed, ${skippedCount} skipped`);
+        console.log(`Final database count: ${finalCount.count} products`);
+        
         res.json({
-            message: `CSV import completed: ${successCount} products imported successfully`,
+            message: `CSV import completed: ${successCount - updatedCount} products imported, ${updatedCount} products updated`,
             summary: {
                 total: products.length,
-                successful: successCount,
-                failed: errors.filter(e => e.action === 'failed').length,
-                skipped: errors.filter(e => e.action === 'skipped').length
+                successful: successCount - updatedCount,
+                updated: updatedCount,
+                failed: failedCount,
+                skipped: skippedCount,
+                finalDatabaseCount: finalCount.count
             },
             errors: errors.length > 0 ? errors : undefined
         });

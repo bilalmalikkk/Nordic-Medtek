@@ -18,7 +18,7 @@ export default function Navbar() {
   const isPrivateActive = (isActive) => {
     if (isActive) return true
     // Private section sub-pages
-    const privateSubPages = ['/alarm-communication', '/medical-followup', '/safety-solutions', '/fallalarm', '/experiences', '/alarm-buttons']
+    const privateSubPages = ['/alarm-communication', '/medical-followup', '/safety-solutions', '/fallalarm', '/experiences']
     return privateSubPages.includes(location.pathname)
   }
 
@@ -38,8 +38,8 @@ export default function Navbar() {
 
   const isProductsActive = (isActive) => {
     if (isActive) return true
-    // Products section includes list and detail pages
-    return location.pathname.startsWith('/products')
+    // Products section includes list, detail pages, and alarm-buttons
+    return location.pathname.startsWith('/products') || location.pathname === '/alarm-buttons' || location.pathname === '/trygghet-og-fallsikring'
   }
 
   const isPartnersActive = (isActive) => {

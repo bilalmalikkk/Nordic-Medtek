@@ -95,7 +95,7 @@ export default function Admin() {
       setError(null);
       
       const [productsResponse, categoriesResponse] = await Promise.all([
-        CmsApiService.getProducts({ status: 'PUBLISHED' }),
+        CmsApiService.getProducts(),
         CmsApiService.getCategories()
       ]);
       
@@ -298,8 +298,33 @@ export default function Admin() {
       setLoading(true);
       setError(null);
       console.log('Attempting to delete all products...');
+      console.log('Current products in state:', products.length);
+      console.log('Products to delete:', products.map(p => ({ id: p.id, name: p.product_name, item_number: p.item_number })));
       
-      // Delete products one by one (more reliable than bulk delete)
+      // Use the bulk delete endpoint if available, otherwise delete one by one
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/products/bulk/delete`, {
+          method: 'DELETE',
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          const result = await response.json();
+          console.log('Bulk deletion successful:', result);
+          alert(`All products deleted successfully! ${result.deletedCount || products.length} products removed.`);
+          await forceRefresh();
+          return;
+        } else {
+          console.log('Bulk delete failed, falling back to individual deletion');
+        }
+      } catch (bulkError) {
+        console.log('Bulk delete not available, falling back to individual deletion:', bulkError);
+      }
+      
+      // Fallback: Delete products one by one
       let deletedCount = 0;
       let failedCount = 0;
       const productsToDelete = [...products]; // Create a copy
@@ -320,14 +345,10 @@ export default function Admin() {
       // Force refresh the data
       await forceRefresh();
       
-      // Check if any products remain
-      const remainingProducts = await CmsApiService.getProducts({ status: 'PUBLISHED' });
-      const remainingCount = remainingProducts.products?.length || 0;
-      
-      if (remainingCount === 0) {
+      if (failedCount === 0) {
         alert(`All products deleted successfully! ${deletedCount} products removed.`);
       } else {
-        alert(`Deletion completed with issues. ${deletedCount} products deleted, ${failedCount} failed, ${remainingCount} products remain. Please refresh the page and try again.`);
+        alert(`Deletion completed with issues. ${deletedCount} products deleted, ${failedCount} failed. Please refresh the page and check the product list.`);
       }
     } catch (error) {
       setError('Failed to delete all products: ' + error.message);
