@@ -116,7 +116,15 @@ export default function Admin() {
   const forceRefresh = async () => {
     const token = localStorage.getItem('cms_token');
     setProducts([]); // Clear immediately
-    await loadData(token);
+    setLoading(true);
+    try {
+      await loadData(token);
+      // Wait a bit for the database to update
+      await new Promise(resolve => setTimeout(resolve, 500));
+      await loadData(token);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const resetProductForm = () => {
@@ -293,6 +301,7 @@ export default function Admin() {
       
       // Delete products one by one (more reliable than bulk delete)
       let deletedCount = 0;
+      let failedCount = 0;
       const productsToDelete = [...products]; // Create a copy
       
       for (const product of productsToDelete) {
@@ -301,16 +310,25 @@ export default function Admin() {
           deletedCount++;
           console.log(`Deleted product ${product.id}: ${product.product_name}`);
         } catch (error) {
+          failedCount++;
           console.error(`Failed to delete product ${product.id}:`, error);
         }
       }
       
-      console.log('All products deleted successfully, refreshing data...');
+      console.log('Deletion completed, refreshing data...');
       
       // Force refresh the data
       await forceRefresh();
       
-      alert(`All products deleted successfully! ${deletedCount} products removed.`);
+      // Check if any products remain
+      const remainingProducts = await CmsApiService.getProducts({ status: 'PUBLISHED' });
+      const remainingCount = remainingProducts.products?.length || 0;
+      
+      if (remainingCount === 0) {
+        alert(`All products deleted successfully! ${deletedCount} products removed.`);
+      } else {
+        alert(`Deletion completed with issues. ${deletedCount} products deleted, ${failedCount} failed, ${remainingCount} products remain. Please refresh the page and try again.`);
+      }
     } catch (error) {
       setError('Failed to delete all products: ' + error.message);
       console.error('Delete all products error:', error);
@@ -327,7 +345,18 @@ export default function Admin() {
     try {
       setLoading(true);
       const response = await CmsApiService.importProducts(file, token);
-      alert(`Import completed! ${response.summary.successful} products imported successfully.`);
+      
+      const { successful, failed, skipped } = response.summary;
+      let message = `Import completed! ${successful} products imported successfully.`;
+      
+      if (skipped > 0) {
+        message += ` ${skipped} products skipped (already exist).`;
+      }
+      if (failed > 0) {
+        message += ` ${failed} products failed to import.`;
+      }
+      
+      alert(message);
       await loadData(token);
     } catch (error) {
       setError('Failed to import CSV file');

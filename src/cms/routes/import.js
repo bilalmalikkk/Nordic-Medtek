@@ -120,11 +120,11 @@ router.post('/products', [
         fs.unlinkSync(filePath);
 
         res.json({
-            message: 'CSV import completed',
+            message: `CSV import completed: ${successCount} products imported successfully`,
             summary: {
                 total: products.length,
                 successful: successCount,
-                failed: errors.length,
+                failed: errors.filter(e => e.action === 'failed').length,
                 skipped: errors.filter(e => e.action === 'skipped').length
             },
             errors: errors.length > 0 ? errors : undefined

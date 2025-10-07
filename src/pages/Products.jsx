@@ -19,9 +19,14 @@ export default function Products() {
   const displayProducts = products.length > 0 ? products : fallbackProducts
   
   // Debug: Log the products being used
+  console.log('=== PRODUCTS PAGE DEBUG ===')
   console.log('Products from CMS:', products)
+  console.log('Products loading:', productsLoading)
+  console.log('Products error:', productsError)
   console.log('Display products:', displayProducts)
+  console.log('Using fallback data:', products.length === 0)
   console.log('First product rich text:', displayProducts[0]?.rich_text_description)
+  console.log('==========================')
   const isLoading = productsLoading || categoriesLoading
   const hasError = productsError && products.length === 0
 
@@ -53,6 +58,14 @@ export default function Products() {
     return acc
   }, {})
 
+  // Calculate base height for cards based on content
+  const calculateCardHeight = (product) => {
+    const richText = product.rich_text_description || product.rich_text || ''
+    const baseHeight = 400 // Base height for image, product name, item number, title, technical data, and button
+    const contentHeight = Math.min(richText.length * 0.4, 200) // Max 200px for content
+    return Math.max(500, baseHeight + contentHeight)
+  }
+
   return (
     <div className="min-h-screen w-full bg-gray-50">
       <div className="w-full">
@@ -63,6 +76,11 @@ export default function Products() {
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6">
                 {t('products.title')}
               </h1>
+              {products.length === 0 && !isLoading && (
+                <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded mb-4 max-w-2xl mx-auto">
+                  <strong>Demo Mode:</strong> Showing sample products. Import your CSV file through the admin panel to see your actual products.
+                </div>
+              )}
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto">
                 {t('products.subtitle')}
               </p>
@@ -111,8 +129,11 @@ export default function Products() {
                   </div>
                   
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    {categoryProducts.map((product) => (
-                      <div key={product.id} className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
+                    {categoryProducts.map((product) => {
+                      const cardHeight = calculateCardHeight(product)
+                      
+                      return (
+                      <div key={product.id} className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col" style={{ minHeight: `${cardHeight}px` }}>
                         <div className="aspect-w-16 aspect-h-12 bg-gray-100">
                           {product.image_url ? (
                             <img 
@@ -138,12 +159,18 @@ export default function Products() {
                             {product.item_number}
                           </p>
                           
+                          {product.title && (
+                            <h2 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-teal-600 transition-colors">
+                              {product.title}
+                            </h2>
+                          )}
+                          
                           <p className="text-gray-800 text-sm font-bold mb-2">
                             {product.technical_data}
                           </p>
                           
                           <div 
-                            className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow prose prose-sm max-w-none"
+                            className="text-gray-600 text-sm mb-4 flex-grow prose prose-sm max-w-none"
                             dangerouslySetInnerHTML={{ 
                               __html: product.rich_text_description || product.rich_text || '<p><em>No rich text content available</em></p>' 
                             }}
@@ -163,8 +190,9 @@ export default function Products() {
                             </Link>
                           </div>
                         </div>
-                  </div>
-                ))}
+                      </div>
+                      )
+                    })}
               </div>
             </div>
           ))}
