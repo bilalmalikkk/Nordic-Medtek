@@ -83,7 +83,7 @@ export default function Products() {
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto">
                 {t('products.subtitle')}
               </p>
-              <div className="mt-6 flex justify-center">
+              <div className="mt-6 flex justify-center flex-wrap gap-4">
                 <Link
                   to="/trygghet-og-fallsikring"
                   className="inline-flex items-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
@@ -95,9 +95,18 @@ export default function Products() {
                 </Link>
                 <Link
                   to="/alarm-buttons"
-                  className="ml-4 inline-flex items-center gap-2 bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+                  className="inline-flex items-center gap-2 bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
                 >
                   Alarmknapper og rask varsling
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
+                <Link
+                  to="/medical-followup-products"
+                  className="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
+                >
+                  Medisinsk oppfølging hjemme
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>

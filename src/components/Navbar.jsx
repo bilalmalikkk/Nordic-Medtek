@@ -38,8 +38,8 @@ export default function Navbar() {
 
   const isProductsActive = (isActive) => {
     if (isActive) return true
-    // Products section includes list, detail pages, and alarm-buttons
-    return location.pathname.startsWith('/products') || location.pathname === '/alarm-buttons' || location.pathname === '/trygghet-og-fallsikring'
+    // Products section includes list, detail pages, alarm-buttons, and medical follow-up products
+    return location.pathname.startsWith('/products') || location.pathname === '/alarm-buttons' || location.pathname === '/trygghet-og-fallsikring' || location.pathname === '/medical-followup-products'
   }
 
   const isPartnersActive = (isActive) => {

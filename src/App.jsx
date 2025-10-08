@@ -20,6 +20,7 @@ import ProductDatasheet from './pages/ProductDatasheet'
 import Guidance from './pages/Guidance'
 import AlarmCommunication from './pages/AlarmCommunication'
 import MedicalFollowup from './pages/MedicalFollowup'
+import MedicalFollowupProducts from './pages/MedicalFollowupProducts'
 import SafetySolutions from './pages/SafetySolutions'
 import Demo from './pages/Demo'
 import Experiences from './pages/Experiences'
@@ -62,6 +63,7 @@ function App() {
           <Route path="/guidance" element={<Guidance />} />
           <Route path="/alarm-communication" element={<AlarmCommunication />} />
           <Route path="/medical-followup" element={<MedicalFollowup />} />
+          <Route path="/medical-followup-products" element={<MedicalFollowupProducts />} />
           <Route path="/safety-solutions" element={<SafetySolutions />} />
           <Route path="/demo" element={<Demo />} />
           <Route path="/experiences" element={<Experiences />} />

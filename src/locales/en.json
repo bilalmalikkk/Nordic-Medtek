@@ -17,6 +17,198 @@
     "lang": "Norsk"
   },
   "util": {"about": "About", "demo": "Book demo", "contact": "Contact", "privacy": "Privacy policy"},
+  "medicalFollowupProducts": {
+    "hero": {
+      "title": "Products for medical follow-up at home",
+      "subtitle1": "Avoid a fall changing everything.",
+      "subtitle2": "Our sensors detect falls",
+      "subtitle3": "completely automatically.",
+      "button1": "Order free guidance",
+      "button2": "How others use it"
+    },
+    "products": {
+      "title": "These are the products that monitor your health at home",
+      "subtitle": "A complete solution for medical follow-up at home usually consists of:",
+      "sensors": {
+        "title": "Sensors that measure breath, pulse, blood pressure, oxygen and other values,",
+        "subtitle": "completely automatically."
+      },
+      "centralUnit": {
+        "description": "A central unit in the house that collects data and sends it securely to the cloud, where you and your GP can follow along."
+      },
+      "easeBlink": {
+        "description": "Optional with easeBlink, a screen that allows mother or father to have video consultations with the doctor, who simultaneously sees all measurements in real time."
+      },
+      "conclusion": "This ensures that small changes are detected early, and that you don't have to wonder if everything is as it should be between doctor's visits."
+    },
+    "howBuilt": {
+      "title": "How a solution for medical follow-up is built",
+      "step1": {
+        "title": "Sensors that measure important health values",
+        "description": "These sensors are placed in the home in places that are natural in everyday life.",
+        "sensor1": "Sensor under the mattress or in the chair measures breath, pulse and sleep completely automatically. No buttons or manual measurements.",
+        "sensor2": "VitalSense Pad and VitalTrack are placed under the mattress or chair.",
+        "sensor3": "Blood pressure monitor, oxygen meter and thermometer are used simply for a few seconds to retrieve specific values.",
+        "sensor4": "Blood pressure, SPO (oxygen), temperature and weight are automatically connected to the system.",
+        "sensor5": "Blood sugar can also be connected for those who need it.",
+        "summary": "Everything is collected in the same system, and measurements can be shared with you or the doctor."
+      },
+      "step2": {
+        "title": "Central unit that collects data",
+        "description": "The sensors are connected to a small box in the house. CoreHub or sensorCentral ensures that everything is sent securely to the cloud. This is necessary for everything to work together."
+      },
+      "step3": {
+        "title": "Can be combined with easeBlink for video consultation",
+        "description1": "Many choose to include \"easeBlink\", a screen that allows a mother or father to have video consultations with the doctor, who simultaneously sees the measurements in real-time.",
+        "description2": "This means the doctor can say \"everything looks fine\" or \"we should adjust the medicine\" directly, without extra trips to the doctor's office."
+      }
+    },
+    "typicalSetups": {
+      "title": "Typical setups at home",
+      "easeBlink": {
+        "title": "With easeBlink:",
+        "description": "Provides the doctor with the ability to see the values directly in the video call, and at the same time talk with mom or dad in a safe and simple way."
+      },
+      "hospital": {
+        "title": "After hospital or operation:",
+        "description": "Several measurements to monitor pulse, breath, and temperature daily."
+      },
+      "elderly": {
+        "title": "For elderly with heart or respiratory disease:",
+        "description": "Sensor under the mattress plus blood pressure monitor and oxygen meter."
+      },
+      "conclusion": "This can be adapted exactly to your situation. Many start with only breath and pulse, and add blood pressure or blood sugar if the need changes."
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "question1": {
+        "question": "Do we have to measure this manually every day?",
+        "answer": "No. Breath and pulse are automatic. Blood pressure or oxygen can be chosen to be measured, e.g., once daily or when the doctor wishes."
+      },
+      "question2": {
+        "question": "Can the GP really follow up from home?",
+        "answer": "Yes. If you wish, we set it up so that the doctor can see the measurements, and call you in for a check-up if something needs to be examined more closely."
+      },
+      "question3": {
+        "question": "Is this safe for privacy?",
+        "answer": "Yes. Nothing is stored outside Norway, and data is only shared with those you choose yourself."
+      }
+    },
+    "readyForSafety": {
+      "title": "Ready to find safety at home?",
+      "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+      "button": "Contact us today"
+    },
+    "contactForm": {
+      "title": "Ready to order or get a proposal?",
+      "subtitle": "Order form",
+      "description": "Fill out the form below, and we will contact you to set up a solution that fits you perfectly. You are not obligated to anything by submitting the form.",
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "whoFor": "Who is this for",
+      "concerns": "What are you most concerned about?",
+      "description": "Description of situation",
+      "newsletters": "Yes, send me gladly",
+      "submit": "Submit form",
+      "footer": "We usually contact you the same or next business day."
+    },
+    "technicalInfo": {
+      "title": "Do you want to see technical information?",
+      "description1": "Are you interested in details about the alarm buttons, how they are connected, and how voice and GPS work?",
+      "description2": "Here you will find a technical overview.",
+      "button": "See technical product overview"
+    }
+  },
+  "alarmButtons": {
+    "hero": {
+      "title": "Products for alarm buttons and quick notification",
+      "subtitle": "Avoid a fall changing everything. Our sensors detect falls completely automatically.",
+      "button1": "Order free guidance",
+      "button2": "How others use it"
+    },
+    "products": {
+      "title": "These are the products that provide quick help if something happens",
+      "alarmButton": {
+        "title": "Alarm button",
+        "description": "Alarm button that mother or father wears around their neck or in their pocket and can press if something happens – at home or outside."
+      },
+      "centralUnit": {
+        "title": "A central unit or mobile connection",
+        "description": "Ensures that the alarm actually reaches you, relatives or healthcare personnel – and doesn't just stop in the house."
+      },
+      "easeBlink": {
+        "title": "Optional screen solution with easeBlink",
+        "description": "Provides easy access to talk with you or your GP, and makes follow-up safer and more personal."
+      },
+      "conclusion": "This provides security in everyday life and allows them to continue living actively, while you know that help is near if something should happen."
+    },
+    "solutionBuilding": {
+      "title": "How a complete solution is built",
+      "step1": {
+        "title": "1. Alarm button",
+        "description": "A small button that mother or father wears around their neck or in their pocket, and can press if something happens. It immediately sends an alarm to you, relatives or healthcare personnel."
+      },
+      "step2": {
+        "title": "2. Central unit or mobile connection",
+        "description": "Ensures that the alarm reaches the right person, and doesn't just stop in the house. This can be a small box that connects to the internet, or a solution that uses the mobile network."
+      },
+      "step3": {
+        "title": "3. Optional screen solution",
+        "description": "With easeBlink, mother or father can easily talk with you or the GP via video, and get help directly without having to travel to the doctor's office."
+      }
+    },
+    "technicalInfo": {
+      "title": "Do you want to see technical information?",
+      "description": "Are you interested in details about the alarm buttons, how they are connected, and how voice and GPS work? Here you will find a technical overview.",
+      "button": "See technical product overview"
+    }
+  },
+  "trygghetOgFallsikring": {
+    "hero": {
+      "title": "Products for safety and fall protection",
+      "subtitle": "Avoid a fall changing everything. Our sensors detect falls completely automatically.",
+      "button1": "Order free guidance",
+      "button2": "How others use it"
+    },
+    "products": {
+      "title": "These are the products that keep an eye on the user",
+      "description": "A complete solution for safety and fall protection at home usually consists of three parts:",
+      "fallSensors": "Fall sensors mounted on wall or ceiling that detect if someone falls and doesn't get up again.",
+      "centralUnit": "A central unit that collects data from the sensors and sends it securely to the cloud, so that you and healthcare personnel can follow along.",
+      "alarmButton": "Optional alarm button, which mother or father can press if they feel unwell or need help, before something happens.",
+      "conclusion": "This is equipment made for completely ordinary homes, so that mother or father can continue to live safely at home, while you can feel secure that they won't be left alone after a fall."
+    },
+    "solutionBuilding": {
+      "title": "How a complete solution is built",
+      "step1": {
+        "title": "1. Sensors that detect falls",
+        "description": "These are small sensors that are mounted on wall or ceiling in the rooms where the risk is greatest, such as the bathroom, living room or stairs. They use radar and infrared technology to capture movement patterns and detect if something suddenly changes, such as when someone falls and doesn't get up.",
+        "products": [
+          "GuardianSense and GuardianSense Pro (for wall)",
+          "GuardianSense (c) and GuardianSense Pro (c) (for ceiling, covers larger areas and can also measure breath and pulse.)"
+        ]
+      },
+      "step2": {
+        "title": "2. Sensors that measure breath and pulse",
+        "description": "For extra safety, there can be a sensor under the mattress or in the chair. It measures breath and pulse completely without mother or father noticing, and can alert if the values suddenly change.",
+        "products": [
+          "VitalSense Pad and VitalTrack are placed under the mattress or in the chair."
+        ]
+      },
+      "step3": {
+        "title": "3. Central unit that collects data",
+        "description": "All sensors are connected to a small box in the house that collects all information and sends it securely to the cloud. This allows you, relatives or healthcare personnel to follow what's happening at home.",
+        "products": [
+          "CoreHub or sensorCentral ensures that everything is sent securely to the cloud."
+        ]
+      },
+      "step4": {
+        "title": "4. Optional alarm button",
+        "description": "In addition, mother or father can wear an alarm button around their neck or in their pocket, which they can press if they feel unwell or need help, before something happens."
+      }
+    }
+  },
   "vision": {
     "title": "Our Vision:",
     "subtitle1": "A Safer, Healthier and More",

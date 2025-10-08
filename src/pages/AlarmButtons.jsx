@@ -21,9 +21,11 @@ import uteImg from '../assets/ute.png'
 import homeImg from '../assets/home.png'
 import buttonOgLockImg from '../assets/button og lock.png'
 import klarForTrygghetImg from '../assets/klar for å finne trygghet.png'
-import ContactForm from '../components/ContactForm'
+import NewContactForm from '../components/NewContactForm'
+import { useTranslation } from 'react-i18next'
 
 export default function AlarmButtons() {
+  const { t } = useTranslation()
   return (
     <div className="min-h-screen w-full bg-gray-50">
       <div className="w-full">
@@ -32,13 +34,13 @@ export default function AlarmButtons() {
           <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Produkter for alarmknapper og rask varsling</h1>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">{t('alarmButtons.hero.title')}</h1>
                 <p className="text-xl text-gray-600 max-w-prose">
-                  Unngå at et fall endrer alt. Våre sensorer oppdager fall helt automatisk.
+                  {t('alarmButtons.hero.subtitle')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a href="/documents" className="btn-primary">Bestill gratis veiledning</a>
-                  <a href="/experiences" className="rounded-md bg-yellow-300 px-4 py-2 text-slate-900 hover:bg-yellow-400">Hvordan andre bruker det</a>
+                  <a href="/documents" className="btn-primary">{t('alarmButtons.hero.button1')}</a>
+                  <a href="/experiences" className="rounded-md bg-yellow-300 px-4 py-2 text-slate-900 hover:bg-yellow-400">{t('alarmButtons.hero.button2')}</a>
                 </div>
               </div>
               <div className="flex justify-center lg:justify-end">
@@ -52,35 +54,35 @@ export default function AlarmButtons() {
         <section className="py-20 w-full bg-white">
           <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Dette er produktene som gir rask hjelp hvis noe skjer</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">{t('alarmButtons.products.title')}</h2>
               <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <img src={buttonImg} alt="Alarmknapp" className="w-full h-48 object-cover rounded-lg shadow mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Alarmknapp</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('alarmButtons.products.alarmButton.title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Alarmknapp som mor eller far bærer rundt halsen eller i lommen og kan trykke på hvis noe skjer – hjemme eller ute.
+                  {t('alarmButtons.products.alarmButton.description')}
                 </p>
               </div>
               <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <img src={hubImg} alt="Sentralenhet" className="w-full h-48 object-cover rounded-lg shadow mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">En sentralenhet eller mobilforbindelse</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('alarmButtons.products.centralUnit.title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Sikrer at alarmen faktisk når fram til deg, pårørende eller helsepersonell – og ikke stopper i huset.
+                  {t('alarmButtons.products.centralUnit.description')}
                 </p>
               </div>
               <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                 <img src={uiImg} alt="EaseBlink" className="w-full h-48 object-cover rounded-lg shadow mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">Valgfri skjermløsning med easeBlink</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{t('alarmButtons.products.easeBlink.title')}</h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Gir enkel tilgang til å snakke med deg eller fastlegen, og gjør oppfølging tryggere og mer personlig.
+                  {t('alarmButtons.products.easeBlink.description')}
                 </p>
               </div>
             </div>
             <div className="mt-12 text-center">
               <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
-                Dette gir trygghet i hverdagen og gjør at de kan leve aktivt videre, mens du vet at hjelpen er nær hvis noe skulle skje.
+                {t('alarmButtons.products.conclusion')}
               </p>
             </div>
           </div>
@@ -414,16 +416,9 @@ export default function AlarmButtons() {
         {/* Contact Form Section */}
         <section className="py-20 w-full bg-white">
           <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-            <ContactForm 
-              title="Klar for å bestille eller få et forslag?"
-              desc="Bestillingsskjema"
-              typeOptions={[
-                { value: 'bestilling', label: 'Bestilling' },
-                { value: 'forslag', label: 'Få et forslag' },
-                { value: 'generell', label: 'Generell henvendelse' }
-              ]}
-              footerNote="Vi kontakter deg vanligvis samme eller neste virkedag."
-            />
+            <div className="bg-white rounded-2xl shadow-lg p-12">
+              <NewContactForm />
+            </div>
           </div>
         </section>
 

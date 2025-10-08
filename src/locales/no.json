@@ -17,6 +17,198 @@
     "lang": "English"
   },
   "util": {"about": "Om oss", "demo": "Bestill demo", "contact": "Kontakt oss", "privacy": "Personvernerklæring"},
+  "medicalFollowupProducts": {
+    "hero": {
+      "title": "Produkter for medisinsk oppfølging hjemme",
+      "subtitle1": "Unngå at et fall endrer alt.",
+      "subtitle2": "Våre sensorer oppdager fall",
+      "subtitle3": "helt automatisk.",
+      "button1": "Bestill gratis veiledning",
+      "button2": "Hvordan andre bruker det"
+    },
+    "products": {
+      "title": "Dette er produktene som følger med på helsen deres hjemme",
+      "subtitle": "En komplett løsning for medisinsk oppfølging hjemme består gjerne av:",
+      "sensors": {
+        "title": "Sensorer som måler pust, puls, blodtrykk, oksygen og andre verdier,",
+        "subtitle": "helt automatisk."
+      },
+      "centralUnit": {
+        "description": "En sentralenhet i huset som samler data og sender det trygt til skyen, der du og fastlegen kan følge med."
+      },
+      "easeBlink": {
+        "description": "Valgfritt med easeBlink, en skjerm som gjør at mor eller far kan ha videokonsultasjoner med legen, som samtidig ser alle målingene i sanntid."
+      },
+      "conclusion": "Dette gjør at små forandringer oppdages tidlig, og at du slipper å lure på om alt er som det skal mellom legebesøkene."
+    },
+    "howBuilt": {
+      "title": "Slik bygges en løsning for medisinsk oppfølging",
+      "step1": {
+        "title": "Sensorer som måler viktige helseverdier",
+        "description": "Disse sensorene plasseres i hjemmet på steder som er naturlige i hverdagen.",
+        "sensor1": "Sensor under madrassen eller i stolen måler pust, puls og søvn helt automatisk. Ingen knapper eller manuelle målinger.",
+        "sensor2": "VitalSense Pad og VitalTrack plasseres under madrassen eller stolen.",
+        "sensor3": "Blodtrykksmåler, oksygenmåler og termometer brukes enkelt i noen sekunder for å hente spesifikke verdier.",
+        "sensor4": "Blodtrykk, SPO (oksygen), temperatur og vekt kobles automatisk til systemet.",
+        "sensor5": "Blodsukker kan også kobles til for de som trenger det.",
+        "summary": "Alt samles i samme system, og målingene kan deles med deg eller legen."
+      },
+      "step2": {
+        "title": "Sentralenhet som samler data",
+        "description": "Sensorene kobles til en liten boks i huset. CoreHub eller sensorCentral sørger for at alt sendes trygt til skyen. Dette er nødvendig for at alt skal fungere sammen."
+      },
+      "step3": {
+        "title": "Kan kombineres med easeBlink for videokonsultasjon",
+        "description1": "Mange velger å inkludere \"easeBlink\", en skjerm som gjør at mor eller far kan ha videokonsultasjoner med legen, som samtidig ser målingene i sanntid.",
+        "description2": "Dette betyr at legen kan si \"alt ser bra ut\" eller \"vi bør justere medisinen\" direkte, uten ekstra turer til legekontoret."
+      }
+    },
+    "typicalSetups": {
+      "title": "Typiske oppsett hjemme",
+      "easeBlink": {
+        "title": "Med easeBlink:",
+        "description": "Gir mulighet for legen å se verdiene direkte i videosamtalen, og samtidig snakke med mor eller far på en trygg og enkel måte."
+      },
+      "hospital": {
+        "title": "Etter sykehus eller operasjon:",
+        "description": "Flere målinger for å følge med på puls, pust og temperatur daglig."
+      },
+      "elderly": {
+        "title": "For eldre med hjerte- eller pustesykdom:",
+        "description": "Sensor under madrassen pluss blodtrykksmåler og oksygenmåler."
+      },
+      "conclusion": "Dette kan tilpasses akkurat deres situasjon. Mange starter med kun pust og puls, og legger til blodtrykk eller blodsukker hvis behovet endrer seg."
+    },
+    "faq": {
+      "title": "Ofte stilte spørsmål",
+      "question1": {
+        "question": "Må vi måle dette manuelt hver dag?",
+        "answer": "Nei. Pust og puls går automatisk. Blodtrykk eller oksygen kan dere velge å måle f.eks. én gang daglig eller når legen ønsker det."
+      },
+      "question2": {
+        "question": "Kan fastlegen virkelig følge med hjemmefra?",
+        "answer": "Ja. Hvis dere vil, setter vi det opp slik at legen kan se målingene, og kalle inn til kontroll hvis noe bør sjekkes nærmere."
+      },
+      "question3": {
+        "question": "Er dette trygt for personvernet?",
+        "answer": "Ja. Ingenting lagres utenfor Norge, og data deles kun med dem dere selv velger."
+      }
+    },
+    "readyForSafety": {
+      "title": "Klar for å finne tryggheten hjemme?",
+      "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+      "button": "Kontakt oss i dag"
+    },
+    "contactForm": {
+      "title": "Klar for å bestille eller få et forslag?",
+      "subtitle": "Bestillingsskjema",
+      "description": "Fyll ut skjemaet under, så tar vi kontakt for å sette opp en løsning som passer akkurat for dere. Du forplikter deg ikke til noe ved å sende inn skjemaet.",
+      "name": "Navn",
+      "phone": "Telefon",
+      "email": "Epost",
+      "whoFor": "Hvem gjelder dette for",
+      "concerns": "Hva er du mest bekymret for?",
+      "description": "Beskrivelse av situasjon",
+      "newsletters": "Ja, send meg gjerne",
+      "submit": "Send inn skjema",
+      "footer": "Vi kontakter deg vanligvis samme eller neste virkedag."
+    },
+    "technicalInfo": {
+      "title": "Vil du se teknisk informasjon?",
+      "description1": "Er du interessert i detaljer om alarmknappene, hvordan de kobles opp, og hvordan tale og GPS virker?",
+      "description2": "Her finner du en teknisk oversikt.",
+      "button": "Se teknisk produktoversikt"
+    }
+  },
+  "alarmButtons": {
+    "hero": {
+      "title": "Produkter for alarmknapper og rask varsling",
+      "subtitle": "Unngå at et fall endrer alt. Våre sensorer oppdager fall helt automatisk.",
+      "button1": "Bestill gratis veiledning",
+      "button2": "Hvordan andre bruker det"
+    },
+    "products": {
+      "title": "Dette er produktene som gir rask hjelp hvis noe skjer",
+      "alarmButton": {
+        "title": "Alarmknapp",
+        "description": "Alarmknapp som mor eller far bærer rundt halsen eller i lommen og kan trykke på hvis noe skjer – hjemme eller ute."
+      },
+      "centralUnit": {
+        "title": "En sentralenhet eller mobilforbindelse",
+        "description": "Sikrer at alarmen faktisk når fram til deg, pårørende eller helsepersonell – og ikke stopper i huset."
+      },
+      "easeBlink": {
+        "title": "Valgfri skjermløsning med easeBlink",
+        "description": "Gir enkel tilgang til å snakke med deg eller fastlegen, og gjør oppfølging tryggere og mer personlig."
+      },
+      "conclusion": "Dette gir trygghet i hverdagen og gjør at de kan leve aktivt videre, mens du vet at hjelpen er nær hvis noe skulle skje."
+    },
+    "solutionBuilding": {
+      "title": "Slik bygges en komplett løsning",
+      "step1": {
+        "title": "1. Alarmknapp",
+        "description": "En liten knapp som mor eller far bærer rundt halsen eller i lommen, og kan trykke på hvis noe skjer. Den sender umiddelbart en alarm til deg, pårørende eller helsepersonell."
+      },
+      "step2": {
+        "title": "2. Sentralenhet eller mobilforbindelse",
+        "description": "Sikrer at alarmen når fram til rett person, og ikke bare stopper i huset. Dette kan være en liten boks som kobler til internett, eller en løsning som bruker mobilnettet."
+      },
+      "step3": {
+        "title": "3. Valgfri skjermløsning",
+        "description": "Med easeBlink kan mor eller far enkelt snakke med deg eller fastlegen via video, og få hjelp direkte uten å måtte reise til legekontoret."
+      }
+    },
+    "technicalInfo": {
+      "title": "Vil du se teknisk informasjon?",
+      "description": "Er du interessert i detaljer om alarmknappene, hvordan de kobles opp, og hvordan tale og GPS virker? Her finner du en teknisk oversikt.",
+      "button": "Se teknisk produktoversikt"
+    }
+  },
+  "trygghetOgFallsikring": {
+    "hero": {
+      "title": "Produkter for trygghet og fallsikring",
+      "subtitle": "Unngå at et fall endrer alt. Våre sensorer oppdager fall helt automatisk.",
+      "button1": "Bestill gratis veiledning",
+      "button2": "Hvordan andre bruker det"
+    },
+    "products": {
+      "title": "Dette er produktene som holder øye med brukeren",
+      "description": "En komplett løsning for trygghet og fallsikring hjemme består vanligvis av tre deler:",
+      "fallSensors": "Fallsensorer montert på vegg eller i tak som oppdager hvis noen faller og ikke reiser seg igjen.",
+      "centralUnit": "En sentralenhet som samler data fra sensorene og sender dem trygt til skyen, slik at du og helsepersonell kan følge med.",
+      "alarmButton": "Valgfri alarmknapp, som mor eller far kan trykke på hvis de føler seg uvel eller trenger hjelp, før noe skjer.",
+      "conclusion": "Dette er utstyr laget for helt vanlige hjem, slik at mor eller far kan fortsette å bo trygt hjemme, mens du kan føle deg trygg på at de ikke blir liggende alene etter et fall."
+    },
+    "solutionBuilding": {
+      "title": "Slik bygges en komplett løsning",
+      "step1": {
+        "title": "1. Sensorer som oppdager fall",
+        "description": "Dette er små sensorer som monteres på vegg eller i tak i de rommene hvor risikoen er størst, som badet, stua eller trappa. De bruker radar og infrarød teknologi til å fange med på bevegelsesmønstre og oppdage hvis noe plutselig endrer seg, som når noen faller og ikke reiser seg.",
+        "products": [
+          "GuardianSense og GuardianSense Pro (for vegg)",
+          "GuardianSense (c) og GuardianSense Pro (c) (for tak, dekker større områder og kan også måle pust og puls.)"
+        ]
+      },
+      "step2": {
+        "title": "2. Sensorer som måler pust og puls",
+        "description": "For ekstra trygghet kan det være en sensor under madrassen eller i stolen. Den måler pust og puls helt uten at mor eller far merker det, og kan varsle hvis verdiene plutselig endrer seg.",
+        "products": [
+          "VitalSense Pad og VitalTrack legges under madrassen eller i stolen."
+        ]
+      },
+      "step3": {
+        "title": "3. Sentralenhet som samler data",
+        "description": "Alle sensorene kobles til en liten boks i huset som samler all informasjon og sender den trygt til skyen. Dette gjør at du, pårørende eller helsepersonell kan følge med på det som skjer hjemme.",
+        "products": [
+          "CoreHub eller sensorCentral sørger for at alt sendes trygt til skyen."
+        ]
+      },
+      "step4": {
+        "title": "4. Valgfri alarmknapp",
+        "description": "I tillegg kan mor eller far bære en alarmknapp rundt halsen eller i lommen, som de kan trykke på hvis de føler seg uvel eller trenger hjelp, før noe skjer."
+      }
+    }
+  },
   "vision": {
     "title": "Vår Visjon:",
     "subtitle1": "Et Tryggere, Sunnere og Mer",

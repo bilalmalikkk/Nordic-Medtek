@@ -7,9 +7,11 @@ import soveromImage from '../assets/soverom.png'
 import bad3Image from '../assets/bad3.png'
 import trappImage from '../assets/trapp.png'
 import klarTrygghet from '../assets/klar for å finne trygghet.png'
-import ContactForm from '../components/ContactForm'
+import NewContactForm from '../components/NewContactForm'
+import { useTranslation } from 'react-i18next'
 
 export default function TrygghetOgFallsikring() {
+  const { t } = useTranslation()
   return (
     <div className="min-h-screen w-full bg-white">
       <div className="w-full">
@@ -19,18 +21,18 @@ export default function TrygghetOgFallsikring() {
               <div>
                 <div className="space-y-4">
                   <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
-                    Produkter for trygghet og fallsikring
+                    {t('trygghetOgFallsikring.hero.title')}
                   </h1>
                   <p className="text-lg text-gray-700">
-                    Unngå at et fall endrer alt. Våre sensorer oppdager fall helt automatisk.
+                    {t('trygghetOgFallsikring.hero.subtitle')}
                   </p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 mt-10 md:mt-12">
                   <Link to="/guidance" className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-900 transition">
-                    Bestill gratis veiledning
+                    {t('trygghetOgFallsikring.hero.button1')}
                   </Link>
                   <Link to="/experiences" className="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg hover:bg-yellow-500 transition">
-                    Hvordan andre bruker det
+                    {t('trygghetOgFallsikring.hero.button2')}
                   </Link>
                 </div>
               </div>
@@ -45,23 +47,23 @@ export default function TrygghetOgFallsikring() {
 
         <section className="py-20 w-full">
           <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Dette er produktene som holder øye med brukeren</h2>
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('trygghetOgFallsikring.products.title')}</h2>
             <p className="text-gray-700">
-              En komplett løsning for trygghet og fallsikring hjemme består vanligvis av tre deler:
+              {t('trygghetOgFallsikring.products.description')}
             </p>
             <ul className="list-disc ml-6 text-gray-700 mt-4 space-y-2">
               <li>
-                Fallsensorer montert på vegg eller i tak som oppdager hvis noen faller og ikke reiser seg igjen.
+                {t('trygghetOgFallsikring.products.fallSensors')}
               </li>
               <li>
-                En sentralenhet som samler data fra sensorene og sender dem trygt til skyen, slik at du og helsepersonell kan følge med.
+                {t('trygghetOgFallsikring.products.centralUnit')}
               </li>
               <li>
-                Valgfri alarmknapp, som mor eller far kan trykke på hvis de føler seg uvel eller trenger hjelp, før noe skjer.
+                {t('trygghetOgFallsikring.products.alarmButton')}
               </li>
             </ul>
             <p className="text-gray-700 mt-6">
-              Dette er utstyr laget for helt vanlige hjem, slik at mor eller far kan fortsette å bo trygt hjemme, mens du kan føle deg trygg på at de ikke blir liggende alene etter et fall.
+              {t('trygghetOgFallsikring.products.conclusion')}
             </p>
           </div>
         </section>
@@ -70,18 +72,19 @@ export default function TrygghetOgFallsikring() {
         <section className="py-20 w-full">
           <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
             <div className="bg-gray-50 border border-dashed border-blue-200 rounded-2xl p-6 sm:p-8">
-              <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-6">Slik bygges en komplett løsning</h2>
+              <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-6">{t('trygghetOgFallsikring.solutionBuilding.title')}</h2>
 
               {/* 1 */}
               <div className="grid lg:grid-cols-2 gap-8 items-center mb-8">
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">1. Sensorer som oppdager fall</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">{t('trygghetOgFallsikring.solutionBuilding.step1.title')}</h3>
               <p className="text-gray-700 mb-3">
-                Dette er små sensorer som monteres på vegg eller i tak i de rommene hvor risikoen er størst, som badet, stua eller trappa. De bruker radar og infrarød teknologi til å fange med på bevegelsesmønstre og oppdage hvis noe plutselig endrer seg, som når noen faller og ikke reiser seg.
+                {t('trygghetOgFallsikring.solutionBuilding.step1.description')}
               </p>
               <ul className="list-disc ml-6 text-gray-700 space-y-1">
-                <li>GuardianSense og GuardianSense Pro (for vegg)</li>
-                <li>GuardianSense (c) og GuardianSense Pro (c) (for tak, dekker større områder og kan også måle pust og puls.)</li>
+                {t('trygghetOgFallsikring.solutionBuilding.step1.products', { returnObjects: true }).map((product, index) => (
+                  <li key={index}>{product}</li>
+                ))}
               </ul>
             </div>
             <div className="flex justify-center">
@@ -245,13 +248,11 @@ export default function TrygghetOgFallsikring() {
         </section>
 
         {/* Contact Form */}
-        <section className="py-20 w-full">
+        <section className="py-20 w-full bg-white">
           <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-            <ContactForm 
-              title=""
-              desc=""
-              footerNote="Vi kontakter deg vanligvis samme eller neste virkedag."
-            />
+            <div className="bg-white rounded-2xl shadow-lg p-12">
+              <NewContactForm />
+            </div>
           </div>
         </section>
 
