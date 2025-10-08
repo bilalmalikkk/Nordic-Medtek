@@ -13,6 +13,24 @@ export default function Products() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [lastRefresh, setLastRefresh] = useState(Date.now())
 
+  // Auto-refresh when page becomes visible (user switches back to tab)
+  // MUST be before any conditional returns to follow React Rules of Hooks
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        // Refresh if it's been more than 30 seconds since last refresh
+        const timeSinceRefresh = Date.now() - lastRefresh
+        if (timeSinceRefresh > 30000) {
+          refresh()
+          setLastRefresh(Date.now())
+        }
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange)
+  }, [lastRefresh, refresh])
+
   const displayProducts = products
   
   // Debug: Log the products being used
@@ -25,6 +43,18 @@ export default function Products() {
   const isLoading = productsLoading || categoriesLoading
   const hasError = productsError && products.length === 0
 
+  const handleRefresh = () => {
+    refresh()
+    setLastRefresh(Date.now())
+  }
+
+  // Format last refresh time
+  const getRefreshTime = () => {
+    const seconds = Math.floor((Date.now() - lastRefresh) / 1000)
+    if (seconds < 60) return `${seconds}s ago`
+    const minutes = Math.floor(seconds / 60)
+    return `${minutes}m ago`
+  }
 
   if (isLoading) {
     return (
@@ -69,35 +99,6 @@ export default function Products() {
   const closeModal = () => {
     setIsModalOpen(false)
     setSelectedProduct(null)
-  }
-
-  const handleRefresh = () => {
-    refresh()
-    setLastRefresh(Date.now())
-  }
-
-  // Auto-refresh when page becomes visible (user switches back to tab)
-  useEffect(() => {
-    const handleVisibilityChange = () => {
-      if (document.visibilityState === 'visible') {
-        // Refresh if it's been more than 30 seconds since last refresh
-        const timeSinceRefresh = Date.now() - lastRefresh
-        if (timeSinceRefresh > 30000) {
-          handleRefresh()
-        }
-      }
-    }
-
-    document.addEventListener('visibilitychange', handleVisibilityChange)
-    return () => document.removeEventListener('visibilitychange', handleVisibilityChange)
-  }, [lastRefresh])
-
-  // Format last refresh time
-  const getRefreshTime = () => {
-    const seconds = Math.floor((Date.now() - lastRefresh) / 1000)
-    if (seconds < 60) return `${seconds}s ago`
-    const minutes = Math.floor(seconds / 60)
-    return `${minutes}m ago`
   }
 
   return (
