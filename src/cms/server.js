@@ -23,6 +23,7 @@ import importRoutes from './routes/import.js';
 
 import { initializeDatabase } from './database/init.js';
 import { authenticateToken } from './middleware/auth.js';
+import runMigrations from './database/migrate.js';
 
 const app = express();
 const PORT = process.env.PORT || process.env.CMS_PORT || 3001;
@@ -118,6 +119,9 @@ async function startServer() {
     try {
         await initializeDatabase();
         console.log('✅ CMS Database initialized successfully');
+        
+        // Run migrations to ensure all columns exist
+        await runMigrations();
         
         app.listen(PORT, () => {
             console.log(`🚀 NordicMedTek CMS Server running on port ${PORT}`);

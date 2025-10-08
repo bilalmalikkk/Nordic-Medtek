@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "cms:dev": "node src/cms/server.js",
     "cms:start": "node src/cms/server.js",
+    "cms:migrate": "node src/cms/database/migrate.js",
     "dev:full": "concurrently \"npm run dev\" \"npm run cms:dev\""
   },
   "dependencies": {
