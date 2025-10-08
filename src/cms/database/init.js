@@ -100,9 +100,19 @@ const dbHelpers = {
             
             const query = `UPDATE ${table} SET ${setClause}, updated_at = CURRENT_TIMESTAMP WHERE id = ?`;
             
+            console.log('About to update product with data:', data);
+            console.log('Database update query:', query);
+            console.log('Database update values:', [...values, id]);
+            
             db.run(query, [...values, id], function(err) {
-                if (err) reject(err);
-                else resolve({ changes: this.changes });
+                if (err) {
+                    console.error('Database update error:', err);
+                    console.log('Query:', query);
+                    console.log('Values:', [...values, id]);
+                    reject(err);
+                } else {
+                    resolve({ changes: this.changes });
+                }
             });
         });
     },

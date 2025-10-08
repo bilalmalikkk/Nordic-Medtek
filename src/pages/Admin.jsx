@@ -12,6 +12,7 @@ export default function Admin() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [editingProduct, setEditingProduct] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(null);
 
   // Login form state
   const [loginForm, setLoginForm] = useState({
@@ -19,16 +20,19 @@ export default function Admin() {
     password: 'admin123'
   });
 
-  // Product form state
+  // Product form state - comprehensive fields matching database schema
   const [productForm, setProductForm] = useState({
+    title: '',
     product_name: '',
     item_number: '',
     technical_data: '',
     rich_text_description: '',
     rich_text: '',
     image_url: '',
+    pdf_url: '',
     datasheet_url: '',
     category_id: '',
+    sorting: 0,
     status: 'PUBLISHED',
     is_featured: false
   });
@@ -129,20 +133,25 @@ export default function Admin() {
 
   const resetProductForm = () => {
     setProductForm({
+      title: '',
       product_name: '',
       item_number: '',
       technical_data: '',
       rich_text_description: '',
       rich_text: '',
       image_url: '',
+      pdf_url: '',
       datasheet_url: '',
       category_id: '',
+      sorting: 0,
       status: 'PUBLISHED',
       is_featured: false
     });
     setEditingProduct(null);
     setSelectedImage(null);
     setSelectedDatasheet(null);
+    setError(null);
+    setSuccessMessage(null);
   };
 
   const handleImageUpload = async (file) => {
@@ -206,27 +215,33 @@ export default function Admin() {
     try {
       setLoading(true);
       setError(null);
+      setSuccessMessage(null);
       
       // Clean up the form data - convert empty strings to null for optional fields
       const cleanedFormData = {
         ...productForm,
-        title: productForm.product_name, // Use product_name as title
+        title: productForm.title || productForm.product_name, // Use title if provided, otherwise product_name
         category_id: productForm.category_id || null,
         technical_data: productForm.technical_data || null,
         rich_text_description: productForm.rich_text_description || null,
         rich_text: productForm.rich_text || null,
         image_url: productForm.image_url || null,
+        pdf_url: productForm.pdf_url || null,
         datasheet_url: productForm.datasheet_url || null,
+        sorting: parseInt(productForm.sorting) || 0,
         is_featured: productForm.is_featured ? 1 : 0
       };
       
       if (editingProduct) {
         await CmsApiService.updateProduct(editingProduct.id, cleanedFormData, token);
-        alert('Product updated successfully!');
+        setSuccessMessage('Product updated successfully!');
       } else {
         await CmsApiService.createProduct(cleanedFormData, token);
-        alert('Product created successfully!');
+        setSuccessMessage('Product created successfully!');
       }
+      
+      // Auto-hide success message after 3 seconds
+      setTimeout(() => setSuccessMessage(null), 3000);
       
       resetProductForm();
       await loadData(token);
@@ -247,22 +262,30 @@ export default function Admin() {
 
   const handleEditProduct = (product) => {
     console.log('Edit button clicked for product:', product);
+    
     setEditingProduct(product);
     setProductForm({
+      title: product.title || '',
       product_name: product.product_name || '',
       item_number: product.item_number || '',
       technical_data: product.technical_data || '',
       rich_text_description: product.rich_text_description || '',
       rich_text: product.rich_text || '',
       image_url: product.image_url || '',
+      pdf_url: product.pdf_url || '',
       datasheet_url: product.datasheet_url || '',
       category_id: product.category_id || '',
+      sorting: product.sorting || 0,
       status: product.status || 'PUBLISHED',
       is_featured: product.is_featured || false
     });
     setSelectedImage(product.image_url || null);
     setSelectedDatasheet(product.datasheet_url || null);
-    setActiveTab('products');
+    setError(null);
+    setSuccessMessage(null);
+    
+    // Scroll to form
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleDeleteProduct = async (productId) => {
@@ -278,10 +301,16 @@ export default function Admin() {
       await CmsApiService.deleteProduct(productId, token);
       console.log('Product deleted successfully, refreshing data...');
       
+      // If deleting the product being edited, reset form
+      if (editingProduct && editingProduct.id === productId) {
+        resetProductForm();
+      }
+      
       // Force refresh the data
       await forceRefresh();
       
-      alert('Product deleted successfully!');
+      setSuccessMessage('Product deleted successfully!');
+      setTimeout(() => setSuccessMessage(null), 3000);
     } catch (error) {
       setError('Failed to delete product: ' + error.message);
       console.error('Delete product error:', error);
@@ -498,23 +527,43 @@ export default function Admin() {
         {activeTab === 'products' && (
           <div className="space-y-6">
             {/* Product Form */}
-            <div className="bg-white rounded-lg shadow p-6">
+            <div className={`bg-white rounded-lg shadow p-6 ${editingProduct ? 'ring-2 ring-blue-500' : ''}`}>
               <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-semibold">
-                  {editingProduct ? t('admin.products.editTitle') : t('admin.products.title')}
-                </h2>
+                <div>
+                  <h2 className="text-xl font-semibold">
+                    {editingProduct ? '✏️ Edit Product' : '➕ Add New Product'}
+                  </h2>
+                  {editingProduct && (
+                    <p className="text-sm text-blue-600 mt-1">
+                      Editing: {editingProduct.product_name} (#{editingProduct.item_number})
+                    </p>
+                  )}
+                </div>
                 {editingProduct && (
                   <button
                     onClick={resetProductForm}
-                    className="text-gray-500 hover:text-gray-700"
+                    className="text-gray-500 hover:text-gray-700 px-3 py-1 border border-gray-300 rounded-md"
                   >
-                    {t('admin.products.cancelEdit')}
+                    Cancel Edit
                   </button>
                 )}
               </div>
               
               <form onSubmit={handleProductSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Title
+                    </label>
+                    <input
+                      type="text"
+                      value={productForm.title}
+                      onChange={(e) => setProductForm({...productForm, title: e.target.value})}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                      placeholder="Display title (optional, defaults to product name)"
+                    />
+                  </div>
+
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
                       Product Name *
@@ -538,6 +587,7 @@ export default function Admin() {
                       onChange={(e) => setProductForm({...productForm, item_number: e.target.value})}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
                       required
+                      disabled={editingProduct} // Prevent changing item number when editing
                     />
                   </div>
 
@@ -584,6 +634,20 @@ export default function Admin() {
                       <option value="PUBLISHED">Published</option>
                       <option value="ARCHIVED">Archived</option>
                     </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Sort Order
+                    </label>
+                    <input
+                      type="number"
+                      value={productForm.sorting}
+                      onChange={(e) => setProductForm({...productForm, sorting: e.target.value})}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                      min="0"
+                    />
+                    <p className="text-xs text-gray-500 mt-1">Lower numbers appear first</p>
                   </div>
                 </div>
 
@@ -695,13 +759,25 @@ export default function Admin() {
                   </label>
                 </div>
 
-                <div className="flex space-x-4">
+                <div className="flex items-center space-x-4">
                   <button
                     type="submit"
                     disabled={loading}
-                    className="bg-teal-600 text-white px-6 py-2 rounded-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 disabled:opacity-50"
+                    className="bg-teal-600 text-white px-6 py-2 rounded-md hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 disabled:opacity-50 flex items-center gap-2"
                   >
-                    {loading ? 'Saving...' : (editingProduct ? 'Update Product' : 'Create Product')}
+                    {loading ? (
+                      <>
+                        <svg className="animate-spin h-4 w-4" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Saving...
+                      </>
+                    ) : (
+                      <>
+                        {editingProduct ? '💾 Update Product' : '➕ Create Product'}
+                      </>
+                    )}
                   </button>
                   
                   {editingProduct && (
@@ -768,20 +844,23 @@ export default function Admin() {
                         </span>
                         {product.is_featured && (
                           <span className="px-2 py-1 text-xs font-medium rounded-full bg-yellow-100 text-yellow-800">
-                            Featured
+                            ⭐ Featured
                           </span>
                         )}
                         <button
                           onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            console.log('Edit button clicked, product:', product);
                             handleEditProduct(product);
                           }}
-                          className="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700"
+                          className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+                            editingProduct?.id === product.id 
+                              ? 'bg-blue-700 text-white' 
+                              : 'bg-blue-600 text-white hover:bg-blue-700'
+                          }`}
                           disabled={loading}
                         >
-                          Edit
+                          {editingProduct?.id === product.id ? 'Editing...' : 'Edit'}
                         </button>
                         <button
                           onClick={(e) => {
@@ -884,9 +963,26 @@ export default function Admin() {
           </div>
         )}
 
+        {/* Global messages */}
         {error && (
-          <div className="mt-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-            {error}
+          <div className="fixed top-4 right-4 bg-red-100 border border-red-400 text-red-700 px-6 py-4 rounded-lg shadow-lg z-50 max-w-md">
+            <div className="flex items-start">
+              <svg className="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+              </svg>
+              <span>{error}</span>
+            </div>
+          </div>
+        )}
+        
+        {successMessage && (
+          <div className="fixed top-4 right-4 bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg shadow-lg z-50 max-w-md">
+            <div className="flex items-start">
+              <svg className="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+              <span>{successMessage}</span>
+            </div>
           </div>
         )}
       </div>
