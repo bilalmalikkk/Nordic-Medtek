@@ -6,26 +6,33 @@ export const useProducts = (params = {}) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [refreshKey, setRefreshKey] = useState(0);
+
+  const fetchProducts = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      // Add cache-busting timestamp to force fresh data
+      const response = await CmsApiService.getProducts({
+        ...params,
+        _t: Date.now()
+      });
+      setProducts(response.products || []);
+    } catch (err) {
+      setError(err.message);
+      console.error('Failed to fetch products:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        const response = await CmsApiService.getProducts(params);
-        setProducts(response.products || []);
-      } catch (err) {
-        setError(err.message);
-        console.error('Failed to fetch products:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
     fetchProducts();
-  }, [JSON.stringify(params)]);
+  }, [JSON.stringify(params), refreshKey]);
 
-  return { products, loading, error };
+  const refresh = () => setRefreshKey(prev => prev + 1);
+
+  return { products, loading, error, refresh };
 };
 
 export const useProduct = (id) => {
@@ -60,26 +67,29 @@ export const useFeaturedProducts = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [refreshKey, setRefreshKey] = useState(0);
+
+  const fetchFeaturedProducts = async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      const response = await CmsApiService.getFeaturedProducts();
+      setProducts(response.products || []);
+    } catch (err) {
+      setError(err.message);
+      console.error('Failed to fetch featured products:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchFeaturedProducts = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        const response = await CmsApiService.getFeaturedProducts();
-        setProducts(response.products || []);
-      } catch (err) {
-        setError(err.message);
-        console.error('Failed to fetch featured products:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
     fetchFeaturedProducts();
-  }, []);
+  }, [refreshKey]);
 
-  return { products, loading, error };
+  const refresh = () => setRefreshKey(prev => prev + 1);
+
+  return { products, loading, error, refresh };
 };
 
 export const useCategories = () => {

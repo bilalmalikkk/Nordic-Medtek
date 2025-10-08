@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useProducts, useCategories } from '../hooks/useCmsProducts'
 import { API_BASE_URL } from '../services/cmsApi'
@@ -7,10 +7,11 @@ import ProductModal from '../components/ProductModal'
 
 export default function Products() {
   const { t } = useTranslation()
-  const { products, loading: productsLoading, error: productsError } = useProducts({ status: 'PUBLISHED' })
+  const { products, loading: productsLoading, error: productsError, refresh } = useProducts({ status: 'PUBLISHED' })
   const { categories, loading: categoriesLoading } = useCategories()
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [lastRefresh, setLastRefresh] = useState(Date.now())
 
   const displayProducts = products
   
@@ -70,6 +71,35 @@ export default function Products() {
     setSelectedProduct(null)
   }
 
+  const handleRefresh = () => {
+    refresh()
+    setLastRefresh(Date.now())
+  }
+
+  // Auto-refresh when page becomes visible (user switches back to tab)
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        // Refresh if it's been more than 30 seconds since last refresh
+        const timeSinceRefresh = Date.now() - lastRefresh
+        if (timeSinceRefresh > 30000) {
+          handleRefresh()
+        }
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+    return () => document.removeEventListener('visibilitychange', handleVisibilityChange)
+  }, [lastRefresh])
+
+  // Format last refresh time
+  const getRefreshTime = () => {
+    const seconds = Math.floor((Date.now() - lastRefresh) / 1000)
+    if (seconds < 60) return `${seconds}s ago`
+    const minutes = Math.floor(seconds / 60)
+    return `${minutes}m ago`
+  }
+
   return (
     <div className="min-h-screen w-full bg-gray-50">
       <div className="w-full">
@@ -77,11 +107,32 @@ export default function Products() {
         <section className="py-12 w-full relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
           <div className="w-full px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6">
-                {t('products.title')}
-              </h1>
+              <div className="flex justify-center items-center gap-4 mb-6">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900">
+                  {t('products.title')}
+                </h1>
+                <button
+                  onClick={handleRefresh}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors group"
+                  title="Refresh products"
+                  disabled={productsLoading}
+                >
+                  <svg 
+                    className={`w-6 h-6 text-gray-600 group-hover:text-teal-600 ${productsLoading ? 'animate-spin' : ''}`}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                </button>
+              </div>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto">
                 {t('products.subtitle')}
+              </p>
+              {/* Last refresh indicator */}
+              <p className="text-xs text-gray-400 mt-2">
+                Last updated: {getRefreshTime()} • Click refresh icon to reload
               </p>
               <div className="mt-6 flex justify-center flex-wrap gap-4">
                 <Link
