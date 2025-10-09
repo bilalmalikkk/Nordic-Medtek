@@ -29,17 +29,6 @@ export default function Private() {
               <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed bg-white p-3 sm:p-4 rounded-xl shadow-sm border-l-4 border-teal-500">
                 {t('private.hero.description')}
               </p>
-              <div className="pt-4">
-                <Link 
-                  to="/guidance" 
-                  className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl text-base sm:text-lg"
-                >
-                  {t('private.hero.button')}
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              </div>
             </div>
             <div className="flex justify-center">
               <div className="relative w-full max-w-sm lg:max-w-md xl:max-w-lg">
@@ -69,37 +58,28 @@ export default function Private() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Security Solutions Card */}
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-              <div className="flex items-start">
-                <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
-                  <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <p className="text-gray-700 leading-relaxed">
-                    {t('private.solutions.security.title')}
-                  </p>
-                </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Fokus på sikkerhet og egeninnsats
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Om du ønsker en løsning som fokuserer på sikkerhet, mer en medisinsk oppfølging av dine kjære har vi gode løsninger for dette.<br />
+                  Les mer under
+                </p>
               </div>
             </div>
 
             {/* Medical Solutions Card */}
-            <Link to="/partners" className="block">
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 cursor-pointer">
-                <div className="flex items-start">
-                  <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
-                    <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-gray-700 leading-relaxed">
-                      {t('private.solutions.medical.title')}
-                    </p>
-                  </div>
-                </div>
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Fokus på medisinsk oppfølging
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Ønsker du at en doktor skal overvåke brukeren regelmessig. Vår partner salubi tilbyr digitalt tilsyn som gir en helhetlig oversikt over din tilstand og aktivitet. Helsepersonell følger med på og analyserer måledata for tidlig intervensjon. For mer informasjon gå til <a href="https://salubi.no" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">salubi.no</a>
+                </p>
               </div>
-            </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -115,46 +95,24 @@ export default function Private() {
           </div>
             <div className="grid md:grid-cols-3 gap-8">
               {/* Alarm and Communication */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="text-center">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col">
+                <div className="text-center flex-1 flex flex-col">
                   <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <img src={alarm} alt="Alarm og kommunikasjon" className="w-12 h-12" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
                     {t('private.concerns.alarm.title')}
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-1">
                     {t('private.concerns.alarm.description')}
                   </p>
+                </div>
+                <div className="text-center mt-auto">
                   <Link 
                     to="/alarm-communication" 
                     className="group inline-flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
-                    {t('private.concerns.alarm.button')}
-                    <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Medical Follow-up */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <img src={blodtrykk} alt="Medisinsk oppfølging" className="w-12 h-12" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    {t('private.concerns.medical.title')}
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {t('private.concerns.medical.description')}
-                  </p>
-                  <Link 
-                    to="/medical-followup" 
-                    className="group inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-                    {t('private.concerns.medical.button')}
+                    Alarmknapper og rask varsling
                     <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -163,22 +121,50 @@ export default function Private() {
               </div>
 
               {/* Safety */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="text-center">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col">
+                <div className="text-center flex-1 flex flex-col">
                   <div className="w-20 h-20 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <img src={fallsensor} alt="Trygghet" className="w-12 h-12" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
                     {t('private.concerns.safety.title')}
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-1">
                     {t('private.concerns.safety.description')}
                   </p>
+                </div>
+                <div className="text-center mt-auto">
                   <Link 
                     to="/safety-solutions" 
                     className="group inline-flex items-center justify-center bg-green-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
-                    {t('private.concerns.safety.button')}
+                    Gå til trygghet og fallsikring
+                    <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Medical Follow-up */}
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col">
+                <div className="text-center flex-1 flex flex-col">
+                  <div className="w-20 h-20 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <img src={blodtrykk} alt="Medisinsk oppfølging" className="w-12 h-12" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                    {t('private.concerns.medical.title')}
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed flex-1">
+                    {t('private.concerns.medical.description')}
+                  </p>
+                </div>
+                <div className="text-center mt-auto">
+                  <Link 
+                    to="/medical-followup" 
+                    className="group inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    Medisinsk oppfølging
                     <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -200,21 +186,12 @@ export default function Private() {
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                 {t('private.guidance.description')}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex justify-center">
                 <Link 
                   to="/guidance" 
                   className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   {t('private.guidance.button1')}
-                  <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-                <Link 
-                  to="/experiences" 
-                  className="group inline-flex items-center justify-center bg-yellow-400 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  {t('private.guidance.button2')}
                   <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -308,7 +285,7 @@ export default function Private() {
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
           </div>
           <div className="space-y-6">
-            {t('private.faq.questions', { returnObjects: true }).map((faq, index) => (
+            {(t('home.faq.questions', { returnObjects: true }) || []).map((faq, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                   <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
