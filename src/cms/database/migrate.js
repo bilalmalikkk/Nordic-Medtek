@@ -19,7 +19,8 @@ async function runMigrations() {
             checkAndAddColumn(db, 'products', 'pdf_url', 'TEXT'),
             checkAndAddColumn(db, 'products', 'datasheet_url', 'TEXT'),
             checkAndAddColumn(db, 'products', 'detailed_description', 'TEXT'),
-            updateCategoryNames(db)
+            updateCategoryNames(db),
+            updateCategoryOrder(db)
         ])
         .then(() => {
             console.log('✅ Database migrations completed successfully');
@@ -96,6 +97,39 @@ function updateCategoryNames(db) {
                     } else {
                         console.log(`  ✓ Category '${oldName}' not found (already updated or doesn't exist)`);
                     }
+                    completed++;
+                    if (completed === total) {
+                        resolve();
+                    }
+                }
+            });
+        });
+    });
+}
+
+function updateCategoryOrder(db) {
+    return new Promise((resolve, reject) => {
+        console.log('  + Updating category order...');
+        
+        const categoryOrderUpdates = [
+            { slug: 'trygghet-og-fallsikring', sortOrder: 1, name: 'Trygghet og fallsikring' },
+            { slug: 'alarm-knapp-og-varsling', sortOrder: 2, name: 'Alarm knapp og varsling' },
+            { slug: 'medisinsk-oppfolging', sortOrder: 3, name: 'Medisinsk oppfølging' },
+            { slug: 'cameras', sortOrder: 4, name: 'Cameras' },
+            { slug: 'communication', sortOrder: 5, name: 'Communication' }
+        ];
+        
+        let completed = 0;
+        const total = categoryOrderUpdates.length;
+        
+        categoryOrderUpdates.forEach(({ slug, sortOrder, name }) => {
+            const updateQuery = `UPDATE categories SET sort_order = ? WHERE slug = ?`;
+            db.run(updateQuery, [sortOrder, slug], function(err) {
+                if (err) {
+                    console.error(`  ✗ Failed to update category order for '${name}':`, err.message);
+                    reject(err);
+                } else {
+                    console.log(`  ✓ Updated category order for '${name}' to position ${sortOrder}`);
                     completed++;
                     if (completed === total) {
                         resolve();

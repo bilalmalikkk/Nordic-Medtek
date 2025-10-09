@@ -124,10 +124,10 @@ VALUES ('admin', 'admin@nordicmedtek.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3
 -- Insert default categories based on CSV analysis
 INSERT OR IGNORE INTO categories (name, slug, description, icon, color, sort_order) VALUES
 ('Trygghet og fallsikring', 'trygghet-og-fallsikring', 'Various sensor products for monitoring and safety', 'sensor', '#10b981', 1),
-('Medisinsk oppfølging', 'medisinsk-oppfolging', 'Medical monitoring and measurement devices', 'heart', '#ef4444', 2),
-('Cameras', 'cameras', 'Surveillance and monitoring cameras', 'camera', '#3b82f6', 3),
-('Communication', 'communication', 'Communication and alert systems', 'phone', '#8b5cf6', 4),
-('Alarm knapp og varsling', 'alarm-knapp-og-varsling', 'Core infrastructure and server components', 'server', '#f59e0b', 5);
+('Alarm knapp og varsling', 'alarm-knapp-og-varsling', 'Core infrastructure and server components', 'server', '#f59e0b', 2),
+('Medisinsk oppfølging', 'medisinsk-oppfolging', 'Medical monitoring and measurement devices', 'heart', '#ef4444', 3),
+('Cameras', 'cameras', 'Surveillance and monitoring cameras', 'camera', '#3b82f6', 4),
+('Communication', 'communication', 'Communication and alert systems', 'phone', '#8b5cf6', 5);
 
 -- Insert default product collection
 INSERT OR IGNORE INTO product_collections (name, slug, description) 
