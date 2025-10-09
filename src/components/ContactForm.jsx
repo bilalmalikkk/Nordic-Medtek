@@ -2,9 +2,12 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslation } from 'react-i18next'
+import { useState } from 'react'
 
 export default function ContactForm({ title, desc, typeOptions, footerNote }) {
   const { t } = useTranslation()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState('')
 
   const computedTypeOptions = typeOptions || [
     { value: 'gratis', label: t('form.type.free') },
@@ -33,10 +36,33 @@ export default function ContactForm({ title, desc, typeOptions, footerNote }) {
     reset,
   } = useForm({ resolver: zodResolver(schema), defaultValues: { type: typeValues[0] } })
 
-  function onSubmit(values) {
-    console.log('submit', values)
-    alert('Henvendelse sendt!')
-    reset()
+  async function onSubmit(values) {
+    setIsSubmitting(true)
+    setSubmitMessage('')
+    
+    try {
+      const response = await fetch('http://localhost:3001/api/contact/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitMessage('Henvendelse sendt! Vi kontakter deg snart.')
+        reset()
+      } else {
+        setSubmitMessage('Det oppstod en feil. Prøv igjen senere.')
+      }
+    } catch (error) {
+      console.error('Contact form error:', error)
+      setSubmitMessage('Det oppstod en feil. Prøv igjen senere.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -159,10 +185,26 @@ export default function ContactForm({ title, desc, typeOptions, footerNote }) {
         {/* Submit Button */}
         <button 
           type="submit" 
-          className="w-full bg-gradient-to-r from-teal-600 to-blue-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-teal-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+          disabled={isSubmitting}
+          className={`w-full px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl ${
+            isSubmitting 
+              ? 'bg-gray-400 cursor-not-allowed' 
+              : 'bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 hover:scale-105'
+          } text-white`}
         >
-          {t('form.submit')}
+          {isSubmitting ? 'Sender...' : t('form.submit')}
         </button>
+
+        {/* Success/Error Message */}
+        {submitMessage && (
+          <div className={`mt-4 p-4 rounded-lg text-center ${
+            submitMessage.includes('sendt') 
+              ? 'bg-green-100 text-green-800 border border-green-200' 
+              : 'bg-red-100 text-red-800 border border-red-200'
+          }`}>
+            {submitMessage}
+          </div>
+        )}
       </form>
 
       {footerNote && <p className="mt-8 text-sm text-slate-600 text-center">{footerNote}</p>}

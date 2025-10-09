@@ -39,6 +39,7 @@ import Vision from './pages/Vision'
 import PrivacyPolicy from './pages/PrivacyPolicy'
 import TrygghetOgFallsikring from './pages/TrygghetOgFallsikring'
 import AlarmButtons from './pages/AlarmButtons'
+import EaseBlink from './pages/EaseBlink'
 
 function App() {
   return (
@@ -82,6 +83,7 @@ function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/trygghet-og-fallsikring" element={<TrygghetOgFallsikring />} />
           <Route path="/alarm-buttons" element={<AlarmButtons />} />
+          <Route path="/easeblink" element={<EaseBlink />} />
         </Routes>
       </main>
     </div>

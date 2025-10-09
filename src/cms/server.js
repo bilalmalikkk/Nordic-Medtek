@@ -20,6 +20,7 @@ import mediaRoutes from './routes/media.js';
 import settingsRoutes from './routes/settings.js';
 import uploadRoutes from './routes/upload.js';
 import importRoutes from './routes/import.js';
+import contactRoutes from './routes/contact.js';
 
 import { initializeDatabase } from './database/init.js';
 import { authenticateToken } from './middleware/auth.js';
@@ -90,6 +91,7 @@ app.use('/api/media', mediaRoutes);
 app.use('/api/settings', settingsRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/import', importRoutes);
+app.use('/api/contact', contactRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

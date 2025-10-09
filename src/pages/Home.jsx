@@ -185,17 +185,15 @@ export default function Home() {
                   {t('home.easeBlink.description2')}
                 </p>
                 <div className="pt-4">
-                  <a 
-                    href="https://www.nordicmedtek.no/easeblink"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link 
+                    to="/easeblink"
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors group"
                   >
                     {t('home.easeBlink.link')}
                     <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -242,16 +240,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Se hvordan det fungerer Button Section */}
-      <section className="py-12 bg-white w-full">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-          <div className="text-center">
-            <button className="bg-gray-800 text-white italic px-8 py-4 rounded-lg hover:bg-gray-700 transition-colors duration-300 font-medium text-lg">
-              Se hvordan det fungerer
-            </button>
-          </div>
-        </div>
-      </section>
 
       {/* Hvem er du Section */}
       <section className="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100 w-full">
@@ -345,36 +333,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Hvorfor - vårt formål Section */}
-      <section className="py-20 w-full bg-white">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.why.title')}</h2>
-            <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
-          </div>
-          <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-8 rounded-2xl shadow-lg border border-teal-100">
-            <p className="text-xl text-gray-700 leading-relaxed text-center">
-              {t('home.why.description')}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Hvordan - vår tilnærming Section */}
-      <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.how.title')}</h2>
-            <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
-          </div>
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-blue-100">
-            <p className="text-xl text-gray-700 leading-relaxed text-center">
-              {t('home.how.description')}
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Hva - våre løsninger Section */}
       <section className="py-20 w-full bg-white">
         <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
@@ -395,6 +353,36 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Hvordan - vår tilnærming Section */}
+      <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.how.title')}</h2>
+            <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
+          </div>
+          <div className="bg-white p-8 rounded-2xl shadow-lg border border-blue-100">
+            <p className="text-xl text-gray-700 leading-relaxed text-center">
+              {t('home.how.description')}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Hvorfor - vårt formål Section */}
+      <section className="py-20 w-full bg-white">
+        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.why.title')}</h2>
+            <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
+          </div>
+          <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-8 rounded-2xl shadow-lg border border-teal-100">
+            <p className="text-xl text-gray-700 leading-relaxed text-center">
+              {t('home.why.description')}
+            </p>
           </div>
         </div>
       </section>
@@ -427,15 +415,15 @@ export default function Home() {
       <section className="py-20 w-full bg-gradient-to-br from-gray-900 to-gray-800">
         <div className="w-full max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">{t('home.cta1.title')}</h2>
-          <Link 
-            to="/guidance" 
+          <button 
+            onClick={() => window.location.reload()}
             className="group inline-flex items-center justify-center bg-teal-600 text-white px-12 py-6 rounded-2xl font-semibold text-lg hover:bg-teal-700 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-teal-500/25"
           >
             {t('home.cta1.button')}
             <svg className="w-6 h-6 ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </Link>
+          </button>
         </div>
       </section>
 

@@ -17,7 +17,8 @@ async function runMigrations() {
         Promise.all([
             checkAndAddColumn(db, 'products', 'rich_text', 'TEXT'),
             checkAndAddColumn(db, 'products', 'pdf_url', 'TEXT'),
-            checkAndAddColumn(db, 'products', 'datasheet_url', 'TEXT')
+            checkAndAddColumn(db, 'products', 'datasheet_url', 'TEXT'),
+            updateCategoryNames(db)
         ])
         .then(() => {
             console.log('✅ Database migrations completed successfully');
@@ -58,6 +59,46 @@ function checkAndAddColumn(db, tableName, columnName, columnType) {
                 } else {
                     console.log(`  ✓ Column '${columnName}' added successfully`);
                     resolve();
+                }
+            });
+        });
+    });
+}
+
+function updateCategoryNames(db) {
+    return new Promise((resolve, reject) => {
+        console.log('  + Updating category names...');
+        
+        const categoryUpdates = [
+            { oldName: 'Sensors', newName: 'Trygghet og fallsikring', newSlug: 'trygghet-og-fallsikring' },
+            { oldName: 'Medical Devices', newName: 'Medisinsk oppfølging', newSlug: 'medisinsk-oppfolging' },
+            { oldName: 'Infrastructure', newName: 'Alarm knapp og varsling', newSlug: 'alarm-knapp-og-varsling' }
+        ];
+        
+        let completed = 0;
+        const total = categoryUpdates.length;
+        
+        if (total === 0) {
+            resolve();
+            return;
+        }
+        
+        categoryUpdates.forEach(({ oldName, newName, newSlug }) => {
+            const updateQuery = `UPDATE categories SET name = ?, slug = ? WHERE name = ?`;
+            db.run(updateQuery, [newName, newSlug, oldName], function(err) {
+                if (err) {
+                    console.error(`  ✗ Failed to update category '${oldName}':`, err.message);
+                    reject(err);
+                } else {
+                    if (this.changes > 0) {
+                        console.log(`  ✓ Updated category '${oldName}' to '${newName}'`);
+                    } else {
+                        console.log(`  ✓ Category '${oldName}' not found (already updated or doesn't exist)`);
+                    }
+                    completed++;
+                    if (completed === total) {
+                        resolve();
+                    }
                 }
             });
         });

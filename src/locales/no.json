@@ -772,8 +772,8 @@
       "subtitle": "Løsninger med fokus på enkelthet",
       "description1": "Det er ansett som enkelt å lage et avansert system, som ser og føles avansert. Vår filosofi er å lage det mest avanserte systemet, som skal føles som det enkleste. Det er det som gjøre vårt system så unikt!",
       "description2": "Det er stort arbeidspress på arbeidere i helsesektoren, og kompliserte systemer har ofte ført til liten eller ingen tidsbesparelse. Vårt mål fra første dag av utvikling har vært å lage et system som er svært enkelt å bruke og installere. Selv om vi mener vi har et av de mest komplette systemer i marked, krever det ingen teknisk kunnskap å sette opp og bruke våre løsninger.",
-      "link": "Les mer her",
-      "linkUrl": "https://www.nordicmedtek.no/blank-5"
+      "link": "",
+      "linkUrl": ""
     },
     "medicalHome": {
       "title": "medical@home",
@@ -850,7 +850,7 @@
     },
     "cta1": {
       "title": "Klar til å gjøre hjemmet tryggere?",
-      "button": "Kontakt oss"
+      "button": "Sjekk ut mer"
     },
     "faq": {
       "title": "Ofte stilte spørsmål",
