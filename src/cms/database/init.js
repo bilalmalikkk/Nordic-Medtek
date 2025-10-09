@@ -95,6 +95,13 @@ const dbHelpers = {
     update: (table, id, data) => {
         return new Promise((resolve, reject) => {
             const keys = Object.keys(data);
+            
+            if (keys.length === 0) {
+                console.warn('No data to update');
+                resolve({ changes: 0 });
+                return;
+            }
+            
             const values = Object.values(data);
             const setClause = keys.map(key => `${key} = ?`).join(', ');
             
@@ -106,11 +113,14 @@ const dbHelpers = {
             
             db.run(query, [...values, id], function(err) {
                 if (err) {
-                    console.error('Database update error:', err);
-                    console.log('Query:', query);
-                    console.log('Values:', [...values, id]);
+                    console.error('❌ Database update error:', err);
+                    console.error('   Table:', table);
+                    console.error('   Query:', query);
+                    console.error('   Values:', [...values, id]);
+                    console.error('   Error message:', err.message);
                     reject(err);
                 } else {
+                    console.log(`✅ Successfully updated ${this.changes} row(s) in ${table}`);
                     resolve({ changes: this.changes });
                 }
             });

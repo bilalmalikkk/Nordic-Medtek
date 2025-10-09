@@ -224,13 +224,32 @@ const updateProduct = async (req, res) => {
             updateData.is_featured = updateData.is_featured ? 1 : 0;
         }
 
-        await update('products', id, updateData);
+        // Remove any fields that are undefined or shouldn't be updated
+        const cleanedUpdateData = {};
+        for (const [key, value] of Object.entries(updateData)) {
+            if (value !== undefined && key !== 'id' && key !== 'created_at') {
+                cleanedUpdateData[key] = value;
+            }
+        }
+
+        await update('products', id, cleanedUpdateData);
 
         res.json({ message: 'Product updated successfully' });
 
     } catch (error) {
         console.error('Update product error:', error);
-        res.status(500).json({ error: 'Internal server error' });
+        // Provide more detailed error information
+        if (error.message && error.message.includes('no such column')) {
+            res.status(500).json({ 
+                error: 'Database schema error. Please ensure all migrations are run.',
+                details: error.message 
+            });
+        } else {
+            res.status(500).json({ 
+                error: 'Failed to update product',
+                details: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error'
+            });
+        }
     }
 };
 

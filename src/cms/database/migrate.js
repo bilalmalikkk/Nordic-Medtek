@@ -18,6 +18,7 @@ async function runMigrations() {
             checkAndAddColumn(db, 'products', 'rich_text', 'TEXT'),
             checkAndAddColumn(db, 'products', 'pdf_url', 'TEXT'),
             checkAndAddColumn(db, 'products', 'datasheet_url', 'TEXT'),
+            checkAndAddColumn(db, 'products', 'detailed_description', 'TEXT'),
             updateCategoryNames(db)
         ])
         .then(() => {
