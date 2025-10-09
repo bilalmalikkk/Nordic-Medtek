@@ -1,5 +1,5 @@
 import express from 'express';
-import { query, queryOne, insert, update, dbDelete } from '../database/init.js';
+import { query, queryOne, insert, update, dbDelete, run } from '../database/init.js';
 import { authenticateToken, requireAdmin } from '../middleware/auth.js';
 
 const router = express.Router();
@@ -143,6 +143,69 @@ router.delete('/:id', [authenticateToken, requireAdmin], async (req, res) => {
     } catch (error) {
         console.error('Delete category error:', error);
         res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// Debug endpoint to check category order (admin only)
+router.get('/debug/order', [authenticateToken, requireAdmin], async (req, res) => {
+    try {
+        const categories = await query(`
+            SELECT id, name, slug, sort_order, is_active
+            FROM categories
+            ORDER BY sort_order ASC, name ASC
+        `);
+        
+        res.json({ 
+            message: 'Current category order',
+            categories: categories,
+            total: categories.length
+        });
+    } catch (error) {
+        console.error('Debug category order error:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+// Manual migration endpoint to update category order (admin only)
+router.post('/migrate-order', [authenticateToken, requireAdmin], async (req, res) => {
+    try {
+        console.log('🔄 Running manual category order migration...');
+        
+        const categoryOrderUpdates = [
+            { slug: 'trygghet-og-fallsikring', sortOrder: 1, name: 'Trygghet og fallsikring' },
+            { slug: 'alarm-knapp-og-varsling', sortOrder: 2, name: 'Alarm knapp og varsling' },
+            { slug: 'medisinsk-oppfolging', sortOrder: 3, name: 'Medisinsk oppfølging' },
+            { slug: 'cameras', sortOrder: 4, name: 'Cameras' },
+            { slug: 'communication', sortOrder: 5, name: 'Communication' }
+        ];
+        
+        const results = [];
+        
+        for (const { slug, sortOrder, name } of categoryOrderUpdates) {
+            const updateQuery = `UPDATE categories SET sort_order = ? WHERE slug = ?`;
+            const result = await run(updateQuery, [sortOrder, slug]);
+            results.push({
+                category: name,
+                slug: slug,
+                sortOrder: sortOrder,
+                changes: result.changes
+            });
+            console.log(`✓ Updated category order for '${name}' to position ${sortOrder}`);
+        }
+        
+        console.log('✅ Manual category order migration completed');
+        
+        res.json({ 
+            message: 'Category order migration completed successfully',
+            results: results
+        });
+
+    } catch (error) {
+        console.error('❌ Manual category order migration error:', error);
+        res.status(500).json({ 
+            error: 'Failed to update category order',
+            details: error.message
+        });
     }
 });
 
