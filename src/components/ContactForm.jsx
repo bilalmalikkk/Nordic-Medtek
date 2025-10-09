@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
 
 export default function ContactForm({ title, desc, typeOptions, footerNote }) {
   const { t } = useTranslation()
@@ -41,17 +42,32 @@ export default function ContactForm({ title, desc, typeOptions, footerNote }) {
     setSubmitMessage('')
     
     try {
-      const response = await fetch('http://localhost:3001/api/contact/submit', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
-      })
+      // EmailJS configuration
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id'
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id'
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key'
 
-      const result = await response.json()
+      // Prepare template parameters
+      const templateParams = {
+        from_name: values.name,
+        from_email: values.email,
+        phone: values.phone,
+        type: values.type,
+        description: values.description,
+        newsletters: values.newsletters ? values.newsletters.join(', ') : '',
+        to_email: 'bilalmalik746429@gmail.com',
+        time: new Date().toLocaleString('no-NO')
+      }
 
-      if (result.success) {
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      )
+
+      if (result.status === 200) {
         setSubmitMessage('Henvendelse sendt! Vi kontakter deg snart.')
         reset()
       } else {

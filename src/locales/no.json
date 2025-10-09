@@ -861,7 +861,7 @@
         },
         {
           "question": "Hva koster det?",
-          "answer": "Løsninger starter fra ca. 299 NOK per måned, avhengig av valgte sensorer/tjenester."
+          "answer": "Vår fleksible leieordning gir en lav terskel for å ta i bruk en moderne og effektiv løsning. Vi har som mål å være ledende på både pris og funksjonalitet, og derfor gjennomfører vi nå en grundig evaluering av markedet. Dette sikrer at vår løsning blir riktig priset og strategisk plassert – til fordel for deg som kunde.\n\nPrisene er derfor ikke lansert ennå, men vil bli tilgjengelige så snart vi har kvalitetssikret at de gjenspeiler den verdien vi ønsker å tilby."
         },
         {
           "question": "Må vi ha internett?",
@@ -870,6 +870,14 @@
         {
           "question": "Er dataene trygge?",
           "answer": "Ja, dataene lagres på servere i Norge og følger strenge personvernkrav (GDPR og DPIA)."
+        },
+        {
+          "question": "Er produktene laget i Norge?",
+          "answer": "Ja, alle produkter, bortsett fra noen standard produkter som blodtrykksmåling produseres i Norge.\n\nFordelen for deg som kunde er at vi kan garantere lang levetid på våre produkter da vi bestemmer levetiden, ikke en eller annen stor produsent i Kina."
+        },
+        {
+          "question": "Hvordan fungerer leieavtalen?",
+          "answer": "Den er veldig enkel du velger hva produkt du vil ha, og så påløper det en liten kostnad per måned. Du tar ingen risiko, du har ingen bindingstid, og du kan når som helst avslutte leieforholdet og returnere produktet."
         }
       ]
     },

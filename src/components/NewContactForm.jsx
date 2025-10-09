@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import emailjs from '@emailjs/browser'
 
 export default function NewContactForm() {
   const { t } = useTranslation()
@@ -30,19 +31,54 @@ export default function NewContactForm() {
     }
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Henvendelse sendt! Vi kontakter deg vanligvis samme eller neste virkedag.')
-    setFormData({
-      name: '',
-      phone: '',
-      email: '',
-      whoFor: [],
-      concerns: '',
-      description: '',
-      newsletters: []
-    })
+    
+    try {
+      // EmailJS configuration
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id'
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id'
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key'
+
+      // Prepare template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        who_for: formData.whoFor.join(', '),
+        concerns: formData.concerns,
+        description: formData.description,
+        newsletters: formData.newsletters.join(', '),
+        to_email: 'bilalmalik746429@gmail.com',
+        time: new Date().toLocaleString('no-NO')
+      }
+
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      )
+
+      if (result.status === 200) {
+        alert('Henvendelse sendt! Vi kontakter deg vanligvis samme eller neste virkedag.')
+        setFormData({
+          name: '',
+          phone: '',
+          email: '',
+          whoFor: [],
+          concerns: '',
+          description: '',
+          newsletters: []
+        })
+      } else {
+        alert('Det oppstod en feil. Prøv igjen senere.')
+      }
+    } catch (error) {
+      console.error('Contact form error:', error)
+      alert('Det oppstod en feil. Prøv igjen senere.')
+    }
   }
 
   return (

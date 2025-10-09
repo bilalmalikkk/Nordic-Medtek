@@ -242,7 +242,7 @@ export default function Home() {
 
 
       {/* Hvem er du Section */}
-      <section className="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100 w-full">
+      <section id="who-are-you-section" className="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100 w-full">
         <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.whoAreYou')}</h2>
@@ -416,7 +416,12 @@ export default function Home() {
         <div className="w-full max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">{t('home.cta1.title')}</h2>
           <button 
-            onClick={() => window.location.reload()}
+            onClick={() => {
+              const whoAreYouSection = document.getElementById('who-are-you-section')
+              if (whoAreYouSection) {
+                whoAreYouSection.scrollIntoView({ behavior: 'smooth' })
+              }
+            }}
             className="group inline-flex items-center justify-center bg-teal-600 text-white px-12 py-6 rounded-2xl font-semibold text-lg hover:bg-teal-700 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-teal-500/25"
           >
             {t('home.cta1.button')}
