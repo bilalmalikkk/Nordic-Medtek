@@ -90,11 +90,20 @@ export default function ProductModal({ product, isOpen, onClose, cardPosition })
                 </p>
               </div>
 
+              {product.detailed_description && (
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Detailed Description</h3>
+                  <div className="text-gray-700 bg-gray-50 p-4 rounded-lg">
+                    <p className="whitespace-pre-line">{product.detailed_description}</p>
+                  </div>
+                </div>
+              )}
+
               <div className="prose prose-lg max-w-none">
                 <div 
                   className="text-gray-700 rich-text-content"
                   dangerouslySetInnerHTML={{ 
-                    __html: product.rich_text || '<p><em>No detailed description available</em></p>' 
+                    __html: product.rich_text || product.rich_text_description || '<p><em>No rich text content available</em></p>' 
                   }}
                 />
               </div>

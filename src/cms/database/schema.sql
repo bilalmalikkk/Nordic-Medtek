@@ -52,6 +52,7 @@ CREATE TABLE IF NOT EXISTS products (
     technical_data TEXT,
     rich_text_description TEXT,
     rich_text TEXT,
+    detailed_description TEXT,
     
     -- Media
     image_url TEXT,

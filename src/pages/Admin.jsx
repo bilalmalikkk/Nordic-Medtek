@@ -27,6 +27,7 @@ export default function Admin() {
     item_number: '',
     technical_data: '',
     rich_text: '',
+    detailed_description: '',
     image_url: '',
     pdf_url: '',
     datasheet_url: '',
@@ -137,6 +138,7 @@ export default function Admin() {
       item_number: '',
       technical_data: '',
       rich_text: '',
+      detailed_description: '',
       image_url: '',
       pdf_url: '',
       datasheet_url: '',
@@ -222,6 +224,7 @@ export default function Admin() {
         category_id: productForm.category_id || null,
         technical_data: productForm.technical_data || null,
         rich_text: productForm.rich_text || null,
+        detailed_description: productForm.detailed_description || null,
         rich_text_description: null, // Clear the old field
         image_url: productForm.image_url || null,
         pdf_url: productForm.pdf_url || null,
@@ -262,6 +265,8 @@ export default function Admin() {
     console.log('Edit button clicked for product:', product);
     console.log('Product rich_text field:', product.rich_text);
     console.log('Product rich_text_description field:', product.rich_text_description);
+    console.log('Product detailed_description field:', product.detailed_description);
+    console.log('All product fields:', Object.keys(product));
     
     setEditingProduct(product);
     setProductForm({
@@ -270,6 +275,7 @@ export default function Admin() {
       item_number: product.item_number || '',
       technical_data: product.technical_data || '',
       rich_text: product.rich_text || product.rich_text_description || '',
+      detailed_description: product.detailed_description || '',
       image_url: product.image_url || '',
       pdf_url: product.pdf_url || '',
       datasheet_url: product.datasheet_url || '',
@@ -664,6 +670,22 @@ export default function Admin() {
                   />
                   <p className="text-xs text-gray-500 mt-1">
                     HTML tags are supported. Use &lt;p&gt; for paragraphs, &lt;strong&gt; for bold, &lt;em&gt; for italic, etc.
+                  </p>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Detailed Description
+                  </label>
+                  <textarea
+                    value={productForm.detailed_description || ''}
+                    onChange={(e) => setProductForm({...productForm, detailed_description: e.target.value})}
+                    rows={4}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+                    placeholder="Enter detailed description (plain text)"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">
+                    Plain text description for additional product details.
                   </p>
                 </div>
 

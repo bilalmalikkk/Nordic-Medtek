@@ -150,6 +150,16 @@ body {
   line-height: 1.8;
 }
 
+/* Override any external font classes */
+.rich-text-content .font_8,
+.rich-text-content p.font_8 {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: 1.8 !important;
+  margin-bottom: 1em !important;
+  color: inherit !important;
+}
+
 .rich-text-content h1,
 .rich-text-content h2,
 .rich-text-content h3,
