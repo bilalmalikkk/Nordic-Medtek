@@ -85,7 +85,7 @@ export default function Products() {
 
   // Calculate base height for cards based on content
   const calculateCardHeight = (product) => {
-    const richText = product.rich_text_description || product.rich_text || ''
+    const richText = product.rich_text || ''
     const baseHeight = 400 // Base height for image, product name, item number, title, technical data, and button
     const contentHeight = Math.min(richText.length * 0.4, 200) // Max 200px for content
     return Math.max(500, baseHeight + contentHeight)
@@ -235,9 +235,9 @@ export default function Products() {
                           </p>
                           
                           <div 
-                            className="text-gray-600 text-sm mb-4 flex-grow prose prose-sm max-w-none"
+                            className="text-gray-600 text-sm mb-4 flex-grow prose prose-sm max-w-none rich-text-content"
                             dangerouslySetInnerHTML={{ 
-                              __html: product.rich_text_description || product.rich_text || '<p><em>No rich text content available</em></p>' 
+                              __html: product.rich_text || '<p><em>No rich text content available</em></p>' 
                             }}
                           />
                           

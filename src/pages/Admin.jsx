@@ -26,7 +26,6 @@ export default function Admin() {
     product_name: '',
     item_number: '',
     technical_data: '',
-    rich_text_description: '',
     rich_text: '',
     image_url: '',
     pdf_url: '',
@@ -137,7 +136,6 @@ export default function Admin() {
       product_name: '',
       item_number: '',
       technical_data: '',
-      rich_text_description: '',
       rich_text: '',
       image_url: '',
       pdf_url: '',
@@ -223,8 +221,8 @@ export default function Admin() {
         title: productForm.title || productForm.product_name, // Use title if provided, otherwise product_name
         category_id: productForm.category_id || null,
         technical_data: productForm.technical_data || null,
-        rich_text_description: productForm.rich_text_description || null,
         rich_text: productForm.rich_text || null,
+        rich_text_description: null, // Clear the old field
         image_url: productForm.image_url || null,
         pdf_url: productForm.pdf_url || null,
         datasheet_url: productForm.datasheet_url || null,
@@ -262,6 +260,8 @@ export default function Admin() {
 
   const handleEditProduct = (product) => {
     console.log('Edit button clicked for product:', product);
+    console.log('Product rich_text field:', product.rich_text);
+    console.log('Product rich_text_description field:', product.rich_text_description);
     
     setEditingProduct(product);
     setProductForm({
@@ -269,8 +269,7 @@ export default function Admin() {
       product_name: product.product_name || '',
       item_number: product.item_number || '',
       technical_data: product.technical_data || '',
-      rich_text_description: product.rich_text_description || '',
-      rich_text: product.rich_text || '',
+      rich_text: product.rich_text || product.rich_text_description || '',
       image_url: product.image_url || '',
       pdf_url: product.pdf_url || '',
       datasheet_url: product.datasheet_url || '',
@@ -651,18 +650,6 @@ export default function Admin() {
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Product Description (Plain Text)
-                  </label>
-                  <textarea
-                    value={productForm.rich_text_description}
-                    onChange={(e) => setProductForm({...productForm, rich_text_description: e.target.value})}
-                    rows={3}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
-                    placeholder="Enter plain text description"
-                  />
-                </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
