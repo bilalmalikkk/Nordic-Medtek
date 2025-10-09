@@ -217,21 +217,38 @@ export default function Admin() {
       setError(null);
       setSuccessMessage(null);
       
+      // Define allowed fields for product update (exclude JOIN fields and read-only fields)
+      const allowedFields = [
+        'title', 'product_name', 'item_number', 'technical_data', 'rich_text',
+        'detailed_description', 'image_url', 'pdf_url', 'datasheet_url',
+        'category_id', 'sorting', 'status', 'is_featured', 'slug',
+        'manual_sort', 'publish_date', 'unpublish_date', 'external_id'
+      ];
+      
       // Clean up the form data - convert empty strings to null for optional fields
-      const cleanedFormData = {
-        ...productForm,
-        title: productForm.title || productForm.product_name, // Use title if provided, otherwise product_name
-        category_id: productForm.category_id || null,
-        technical_data: productForm.technical_data || null,
-        rich_text: productForm.rich_text || null,
-        detailed_description: productForm.detailed_description || null,
-        rich_text_description: null, // Clear the old field
-        image_url: productForm.image_url || null,
-        pdf_url: productForm.pdf_url || null,
-        datasheet_url: productForm.datasheet_url || null,
-        sorting: parseInt(productForm.sorting) || 0,
-        is_featured: productForm.is_featured ? 1 : 0
-      };
+      // and filter out non-allowed fields
+      const cleanedFormData = {};
+      
+      // Only include allowed fields from productForm
+      for (const field of allowedFields) {
+        if (field in productForm) {
+          const value = productForm[field];
+          // Convert empty strings to null for optional text fields
+          if (value === '' && !['title', 'product_name', 'item_number', 'status'].includes(field)) {
+            cleanedFormData[field] = null;
+          } else {
+            cleanedFormData[field] = value;
+          }
+        }
+      }
+      
+      // Special handling for specific fields
+      cleanedFormData.title = productForm.title || productForm.product_name;
+      cleanedFormData.category_id = productForm.category_id || null;
+      cleanedFormData.sorting = parseInt(productForm.sorting) || 0;
+      cleanedFormData.is_featured = productForm.is_featured ? 1 : 0;
+      
+      console.log('Submitting product data:', cleanedFormData);
       
       if (editingProduct) {
         await CmsApiService.updateProduct(editingProduct.id, cleanedFormData, token);
@@ -251,11 +268,12 @@ export default function Admin() {
       let extra = '';
       if (error?.details?.errors && Array.isArray(error.details.errors)) {
         extra = ': ' + error.details.errors.map(e => e.msg || e.message || e).join(', ');
-      } else if (error?.details?.error || error?.message) {
-        extra = ': ' + (error.details?.error || error.message);
+      } else if (error?.details?.error || error?.details || error?.message) {
+        extra = ': ' + (error.details?.error || error.details || error.message);
       }
       setError(baseMsg + extra);
       console.error('Product operation error:', error);
+      console.error('Error details:', error.details);
     } finally {
       setLoading(false);
     }

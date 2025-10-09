@@ -218,36 +218,73 @@ const updateProduct = async (req, res) => {
         }
 
         const updateData = req.body;
+        
+        console.log('📝 Update product request for ID:', id);
+        console.log('📦 Received update data:', updateData);
 
-        // Handle boolean conversion for is_featured
-        if (updateData.is_featured !== undefined) {
-            updateData.is_featured = updateData.is_featured ? 1 : 0;
-        }
+        // Define allowed fields for update (exclude read-only and JOIN fields)
+        const allowedFields = [
+            'title', 'product_name', 'item_number', 'slug', 'technical_data',
+            'rich_text_description', 'rich_text', 'detailed_description',
+            'image_url', 'pdf_url', 'datasheet_url', 'category_id',
+            'collection_id', 'sorting', 'manual_sort', 'status', 'is_featured',
+            'publish_date', 'unpublish_date', 'external_id'
+        ];
 
-        // Remove any fields that are undefined or shouldn't be updated
+        // Remove any fields that are undefined, read-only, or not allowed
         const cleanedUpdateData = {};
         for (const [key, value] of Object.entries(updateData)) {
-            if (value !== undefined && key !== 'id' && key !== 'created_at') {
+            if (value !== undefined && 
+                key !== 'id' && 
+                key !== 'created_at' && 
+                key !== 'updated_at' &&
+                allowedFields.includes(key)) {
                 cleanedUpdateData[key] = value;
+            } else if (!allowedFields.includes(key) && value !== undefined) {
+                console.warn(`⚠️  Skipping non-allowed field: ${key}`);
             }
+        }
+
+        // Handle boolean conversion for is_featured
+        if (cleanedUpdateData.is_featured !== undefined) {
+            cleanedUpdateData.is_featured = cleanedUpdateData.is_featured ? 1 : 0;
+        }
+        
+        console.log('✅ Cleaned update data:', cleanedUpdateData);
+
+        if (Object.keys(cleanedUpdateData).length === 0) {
+            console.warn('⚠️  No valid fields to update');
+            return res.json({ message: 'No changes to apply' });
         }
 
         await update('products', id, cleanedUpdateData);
 
+        console.log('✅ Product updated successfully');
         res.json({ message: 'Product updated successfully' });
 
     } catch (error) {
-        console.error('Update product error:', error);
+        console.error('❌ Update product error:', error);
+        console.error('❌ Error stack:', error.stack);
+        
         // Provide more detailed error information
         if (error.message && error.message.includes('no such column')) {
+            const columnMatch = error.message.match(/no such column: (\w+)/);
+            const columnName = columnMatch ? columnMatch[1] : 'unknown';
             res.status(500).json({ 
-                error: 'Database schema error. Please ensure all migrations are run.',
-                details: error.message 
+                error: 'Database schema error',
+                details: `Column '${columnName}' does not exist in the products table. Migration may be required.`,
+                message: error.message 
+            });
+        } else if (error.message && error.message.includes('UNIQUE constraint failed')) {
+            res.status(400).json({ 
+                error: 'Duplicate value error',
+                details: error.message
             });
         } else {
             res.status(500).json({ 
                 error: 'Failed to update product',
-                details: process.env.NODE_ENV === 'development' ? error.message : 'Internal server error'
+                details: error.message,
+                stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
             });
         }
     }
