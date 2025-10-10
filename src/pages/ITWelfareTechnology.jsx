@@ -54,15 +54,6 @@ export default function ITWelfareTechnology() {
                     </svg>
                   </Link>
                   <Link 
-                    to="/documents" 
-                    className="group inline-flex items-center justify-center bg-yellow-400 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-                    {t('itWelfareTech.hero.button2')}
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                  <Link 
                     to="/products" 
                     className="group inline-flex items-center justify-center bg-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-teal-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
@@ -354,7 +345,7 @@ export default function ITWelfareTechnology() {
                   {t('itWelfareTech.cta.meeting.description')}
                 </p>
                 <Link
-                  to="/contact"
+                  to="/guidance"
                   className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300"
                 >
                   {t('itWelfareTech.cta.meeting.button')}

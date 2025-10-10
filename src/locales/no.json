@@ -1364,19 +1364,35 @@
         "description": "Eldre får bo hjemme lenger, med økt sikkerhet."
       }
     },
+    "proactiveSolution": {
+      "title": "Vi leverer en sterk proaktiv løsning",
+      "subtitle1": "Norge: Sterk på reaktiv behandling - svakere på proaktiv innsats",
+      "paragraph1": "Ifølge Helsedirektoratet og fagmiljøer i kommunal helse, har Norge et helsesystem som er svært godt rustet til å håndtere akutte og alvorlige sykdomstilfeller - altså **reaktiv behandling**. Dette inkluderer høy kvalitet på sykehus, spesialisthelsetjenester og akuttberedskap.",
+      "paragraph2": "Men det er også bred enighet om at Norge har et **forbedringspotensial innen proaktiv og forebyggende helsearbeid**, særlig i kommunene. En ny nasjonal prioriterings veileder fra Helsedirektoratet (2025) peker på behovet for å styrke tiltak som gir:",
+      "bullet1": "Tidlig oppdagelse av endringer i helsetilstand",
+      "bullet2": "Forebygging av funksjonsfall",
+      "bullet3": "Reduksjon i behov for institusjonsplass og sykehusinnleggelse",
+      "conclusion": "Vår komplette pakke for alarm, sikkerhet og medisinske sensorer gir en helhetlig løsning for proaktiv og forebyggende behandling"
+    },
     "documentation": {
       "title": "Dokumentasjon og legitimitet",
       "ceMarking": {
         "title": "CE-merket og MDR-kompatibelt medisinsk utstyr",
-        "description": "Alle våre produkter er CE-merket og utviklet i tråd med MDR (Medical Device Regulation). Dette sikrer trygghet, kvalitet og pålitelighet for kommuner og helsepersonell, og gjør at teknologien kan integreres sømløst inn i offentlig drift uten å sette liv i fare."
+        "description": "Alle produkter er CE-merket og utviklet i samsvar med MDR (Medical Device Regulation). Det betyr at de oppfyller strenge krav til sikkerhet, kvalitet og pålitelighet. For kommuner og helsepersonell gir dette trygghet for at løsningene kan brukes i pasientbehandling uten å sette liv og helse i fare, og at de kan inngå sømløst i offentlig drift."
       },
       "gdpr": {
         "title": "Datasikkerhet i tråd med GDPR",
-        "description": "Våre systemer er bygget med høyeste grad av datasikkerhet og personvern. Vi er fullt GDPR-kompatible, og sensitive helsedata krypteres med klare rutiner for lagring, tilgang og deling. Dette gjør at kommuner kan bruke teknologien uten juridiske bekymringer eller tap av offentlig tillit."
+        "description": "Systemene er bygget med høyeste grad av datasikkerhet og personvern, fullt ut i tråd med GDPR. Sensitive helsedata behandles kryptert, med klare rutiner for lagring, tilgang og deling. Dette gjør det mulig for kommuner å ta i bruk teknologien uten å bekymre seg for brudd på lovverk eller innbyggernes tillit."
+      },
+      "dpia": {
+        "title": "Personvern-konsekvensvurdering (DPIA)",
+        "description": "For å sikre at vår teknologi ivaretar brukernes personvern på en trygg og ansvarlig måte, har vi gjennomført en omfattende personvernkonsekvensvurdering (DPIA) i samarbeid med juridisk ekspertise. Vurderingen dokumenterer hvordan vi identifiserer og håndterer risiko knyttet til behandling av sensitive helseopplysninger, og bekrefter at løsningen er i samsvar med GDPR og norsk personvernlovgivning.",
+        "description2": "DPIA-en viser at våre systemer er utviklet med innebygd personvern, og at nødvendige tekniske og organisatoriske tiltak er på plass – inkludert dataminimering, tilgangsstyring, kryptering og rutiner for avvikshåndtering. Dette gir kommuner og helseaktører trygghet i valg av teknologi, og sikrer at løsningen kan tas i bruk uten risiko for brudd på personvernet.",
+        "description3": "Gjennom DPIA-prosessen har vi også kvalitetssikret at løsningen støtter tidlig intervensjon og forebygging, samtidig som den oppfyller strenge krav til datasikkerhet og etisk bruk av teknologi."
       },
       "tested": {
         "title": "Driftssikker teknologi testet i norske kommuner",
-        "description": "Løsningene våre er allerede testet i norske kommuner og dokumentert til å fungere i praksis. Dette betyr at teknologien ikke bare er teoretisk, men pålitelig i reell helse- og omsorgstjeneste, og adresserer eksisterende behov, rutiner og utfordringer. Erfaringer viser at den kan redusere unødvendig tilsyn, frigjøre tid for ansatte, og samtidig øke brukersikkerheten."
+        "description": "Løsningene er allerede prøvd ut i norske kommuner og dokumentert å fungere i praksis. Det betyr at teknologien ikke bare er teoretisk, men driftssikker i en reell hverdag – med de krav, rutiner og utfordringer som finnes i helse- og omsorgstjenesten. Erfaringene viser at den kan redusere unødvendige tilsyn, frigjøre tid for ansatte og samtidig øke tryggheten for brukerne."
       },
       "downloadButton": "Last ned politiker-brief"
     },
@@ -1528,7 +1544,7 @@
       },
       "centralOverview": {
         "title": "Sentral oversikt",
-        "description": "Kommunen får sanntidsdata og kan prioritere ressursene riktig."
+        "description": "Kommunens vaktsentral får sanntidsvarsler og kan prioritere ressursene riktig."
       }
     },
     "benefits": {
@@ -1591,7 +1607,7 @@
       },
       "centralOverview": {
         "title": "Sentral oversikt",
-        "description": "kommunen vaktsentral får sanntidsvarsler og kan prioritere ressursene riktig."
+        "description": "kommunens vaktsentral får sanntidsvarsler og kan prioritere ressursene riktig."
       }
     },
     "benefits": {
@@ -1619,12 +1635,10 @@
     },
     "cases": {
       "title": "Case og referanser",
-      "subtitle": "våre estimater basert på utførte tester og piloter:",
-      "result1": "Færre akutte sykehusinnleggelser – opp til 20% reduksjon på ett år",
+      "subtitle": "Vår erfaring fra utførte tester og piloter, samt veileder fra helsedirektoratet (2025):",
+      "result1": "Færre akutte sykehusinnleggelser",
       "result2": "Økt trygghet for ansatte og pårørende",
-      "result3": "Bedre ressursutnyttelse – mer tid frigjort til planlagte besøk",
-      "quote": "Dette gir oss mulighet til å levere bedre tjenester med de ressursene vi har. Det er et viktig bidrag til en bærekraftig omsorgstjeneste.",
-      "attribution": "- Kommunalsjef, pilotkommune"
+      "result3": "Bedre ressursutnyttelse – mer tid frigjort til planlagte besøk"
     },
     "nextSteps": {
       "title": "Hva er neste steg?",
@@ -1674,7 +1688,7 @@
     "pricing": {
       "title": "Prismodell og avtaleformer",
       "subtitle": "Vi tilbyr en tydelig og forutsigbar prismodell:",
-      "model1": "Engangskostnad for utstyr",
+      "model1": "Engangskostnad for utstyr eller leieavtale (anbefalt)",
       "model2": "Årlig lisens for drift, oppdateringer og support",
       "model3": "Mulighet for skalering opp eller ned etter behov",
       "contracts": {
@@ -1875,7 +1889,7 @@
       },
       "centralOverview": {
         "title": "Sentral oversikt",
-        "description": "kommunen får sanntidsvarsler og kan prioritere ressursene riktig."
+        "description": "kommunens vaktsentral får sanntidsvarsler og kan prioritere ressursene riktig."
       }
     },
     "security": {

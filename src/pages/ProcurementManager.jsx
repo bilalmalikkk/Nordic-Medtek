@@ -254,8 +254,8 @@ export default function ProcurementManager() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <p className="text-gray-700 leading-relaxed">
-                        {t('procurementManager.pricing.model1')}
+                      <p className="text-black leading-relaxed">
+                        Engangskostnad for utstyr eller leieavtale (anbefalt)
                       </p>
                     </li>
                     <li className="flex items-start">
@@ -264,7 +264,7 @@ export default function ProcurementManager() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-black leading-relaxed">
                         {t('procurementManager.pricing.model2')}
                       </p>
                     </li>
@@ -274,7 +274,7 @@ export default function ProcurementManager() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-black leading-relaxed">
                         {t('procurementManager.pricing.model3')}
                       </p>
                     </li>
@@ -292,7 +292,7 @@ export default function ProcurementManager() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-black leading-relaxed">
                         {t('procurementManager.pricing.contracts.contract1')}
                       </p>
                     </li>
@@ -302,7 +302,7 @@ export default function ProcurementManager() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-black leading-relaxed">
                         {t('procurementManager.pricing.contracts.contract2')}
                       </p>
                     </li>
@@ -312,7 +312,7 @@ export default function ProcurementManager() {
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <p className="text-gray-700 leading-relaxed">
+                      <p className="text-black leading-relaxed">
                         {t('procurementManager.pricing.contracts.contract3')}
                       </p>
                     </li>

@@ -6,6 +6,7 @@ import sensorDetecty from '../assets/sensor detecty.png'
 import stonks from '../assets/stonks.png'
 import calmShift from '../assets/calm shift.png'
 import videoCall from '../assets/video call.png'
+import proactiveImage from '../assets/image (20).png'
 
 export default function Politicians() {
   const { t } = useTranslation()
@@ -216,6 +217,84 @@ export default function Politicians() {
           </div>
         </section>
 
+        {/* Proactive Solution Section */}
+        <section className="proactive-solution-section py-20 w-full bg-white">
+          <div className="w-full">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">
+                {t('politicians.proactiveSolution.title')}
+              </h2>
+              
+              {/* Illustration */}
+              <div className="max-w-4xl mx-auto mb-12">
+                <div className="bg-gradient-to-br from-orange-50 to-yellow-50 p-8 rounded-2xl shadow-lg border border-orange-100">
+                  <img 
+                    src={proactiveImage} 
+                    alt="Proactive Treatment" 
+                    className="w-full h-auto rounded-xl"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <div className="max-w-4xl mx-auto space-y-8">
+              {/* First Subheading */}
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                {t('politicians.proactiveSolution.subtitle1')}
+              </h3>
+              
+              {/* First Paragraph */}
+              <p className="text-lg text-gray-700 leading-relaxed">
+                {t('politicians.proactiveSolution.paragraph1')}
+              </p>
+              
+              {/* Second Paragraph */}
+              <p className="text-lg text-gray-700 leading-relaxed">
+                {t('politicians.proactiveSolution.paragraph2')}
+              </p>
+              
+              {/* Bullet Points */}
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    {t('politicians.proactiveSolution.bullet1')}
+                  </p>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    {t('politicians.proactiveSolution.bullet2')}
+                  </p>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+                    <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    {t('politicians.proactiveSolution.bullet3')}
+                  </p>
+                </li>
+              </ul>
+              
+              {/* Final Paragraph */}
+              <p className="text-lg text-gray-700 leading-relaxed font-medium">
+                {t('politicians.proactiveSolution.conclusion')}
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Documentation and Legitimacy Section */}
         <section className="documentation-section py-20 w-full bg-white">
           <div className="w-full">
@@ -244,6 +323,22 @@ export default function Politicians() {
                 </h3>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   {t('politicians.documentation.gdpr.description')}
+                </p>
+              </div>
+
+              {/* DPIA */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-gray-900">
+                  {t('politicians.documentation.dpia.title')}
+                </h3>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  {t('politicians.documentation.dpia.description')}
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  {t('politicians.documentation.dpia.description2')}
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  {t('politicians.documentation.dpia.description3')}
                 </p>
               </div>
 

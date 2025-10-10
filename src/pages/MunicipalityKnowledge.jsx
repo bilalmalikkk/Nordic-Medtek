@@ -30,7 +30,6 @@ export default function MunicipalityKnowledge() {
                   <h1 className="text-3xl lg:text-5xl font-bold text-gray-900 leading-tight">
                     {t('municipalityKnowledge.hero.title')}
                   </h1>
-                  <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
                 </div>
                 <div className="space-y-4">
                   <p className="text-lg text-gray-700 leading-relaxed">
@@ -402,15 +401,6 @@ export default function MunicipalityKnowledge() {
                   </p>
                 </li>
               </ul>
-
-              <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-teal-500">
-                <blockquote className="text-lg text-gray-700 italic leading-relaxed mb-4">
-                  "{t('municipalityKnowledge.cases.quote')}"
-                </blockquote>
-                <cite className="text-gray-600 font-medium">
-                  {t('municipalityKnowledge.cases.attribution')}
-                </cite>
-              </div>
             </div>
           </div>
         </section>

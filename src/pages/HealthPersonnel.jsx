@@ -152,7 +152,7 @@ export default function HealthPersonnel() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Sentral oversikt</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  kommunen vaktsentral får sanntidsvarsler og kan prioritere ressursene riktig.
+                  kommunens vaktsentral får sanntidsvarsler og kan prioritere ressursene riktig.
                 </p>
               </div>
             </div>
@@ -268,9 +268,8 @@ export default function HealthPersonnel() {
               <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full mt-4"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {/* Demo Option */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center">
+            <div className="flex justify-center">
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center max-w-4xl">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Se en kort demo som viser systemet i praksis.
                 </h3>
@@ -279,19 +278,6 @@ export default function HealthPersonnel() {
                   className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Se demo
-                </Link>
-              </div>
-
-              {/* Test Group Option */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Test løsningen på en liten pasientgruppe før kommunen ruller det ut bredere.
-                </h3>
-                <Link 
-                  to="/guidance" 
-                  className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  Test på en pasientgruppe først
                 </Link>
               </div>
             </div>
