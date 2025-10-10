@@ -1332,6 +1332,7 @@
       "title": "Trygghet og verdighet for eldre – lavere kostnader for kommunen.",
       "description1": "Som politiker skal du fatte beslutninger som gir størst mulig samfunnsnytte.",
       "description2": "Våre sensorer og systemer bidrar til færre sykehusinnleggelser, tryggere eldre og mer bærekraftig drift av kommunen. Resultater du kan stå inne for.",
+      "description3": "I tillegg støtter du et selskap som utvikler og produserer i Norge. Dette gir både arbeidsplasser og oppbygging av viktig fremtidsrettet industri i Norge.",
       "button": "Se gevinstene for samfunnet"
     },
     "challenges": {
@@ -1563,7 +1564,7 @@
   },
   "municipalityKnowledge": {
     "hero": {
-      "title": "En tryggere kommune - lavere kostnader, færre innleggelser, mer robuste tjenester.",
+      "title": "En tryggere kommune – lavere kostnader, færre innleggelser, og mer robuste tjenester.",
       "description1": "Som kommunalsjef eller avdelingsleder har du ansvar for å sikre gode tjenester innenfor stramme rammer.",
       "description2": "Våre sensorer og systemer hjelper deg å redusere sykehusinnleggelser, styrke hjemmetjenesten og frigjøre ressurser slik at kommunen kan levere både trygghet og bærekraft.",
       "button1": "Bestill gratis veiledning",
@@ -1590,7 +1591,7 @@
       },
       "centralOverview": {
         "title": "Sentral oversikt",
-        "description": "kommunen får sanntidsoversikt og kan prioritere ressursene riktig."
+        "description": "kommunen vaktsentral får sanntidsvarsler og kan prioritere ressursene riktig."
       }
     },
     "benefits": {
@@ -1618,7 +1619,7 @@
     },
     "cases": {
       "title": "Case og referanser",
-      "subtitle": "Kommuner som har testet løsningen melder om:",
+      "subtitle": "våre estimater basert på utførte tester og piloter:",
       "result1": "Færre akutte sykehusinnleggelser – opp til 20% reduksjon på ett år",
       "result2": "Økt trygghet for ansatte og pårørende",
       "result3": "Bedre ressursutnyttelse – mer tid frigjort til planlagte besøk",
@@ -1643,8 +1644,9 @@
   },
   "procurementManager": {
     "hero": {
-      "title": "Trygg leverandør - tydelig dokumentasjon.",
-      "description": "Som innkjøpsansvarlig trenger du oversikt, forutsigbarhet og sikkerhet. Alle dokumenter, prismodeller og sertifikater er tilgjengelige for gjennomgang, og tåler både revisjon og tidspress.",
+      "title": "Trygg leverandør – tydelig dokumentasjon.",
+      "description1": "Som innkjøpsansvarlig trenger du oversikt, forutsigbarhet og trygghet i anskaffelsesprosessen. All dokumentasjon, prismodeller og sertifikater er tilgjengelige - slik at du kan gjøre en vurdering som tåler både revisjon og tidspress.",
+      "description2": "Produksjon i Norge gjør deg mindre utsatt for globale kriser og leveranse utfordringer.",
       "button1": "Bestill gratis veiledning",
       "button2": "Last ned dokumentasjon"
     },
@@ -1707,9 +1709,10 @@
   "itWelfareTech": {
     "hero": {
       "title": "Sikker, kompatibel og klar for integrasjon.",
-      "description": "Vi leverer IT og velferdsteknologi som er sikker, stabil og kompatibel. Våre løsninger følger GDPR, ISO-standarder og integrerer enkelt med eksisterende systemer.",
+      "description": "Som ansvarlig for IT og velferdsteknologi skal du sikre at nye løsninger er trygge, stabile og passer inn i kommunens systemlandskap. Våre sensorer og systemer er bygget på moderne arkitektur, følger GDPR og ISO-standarder, og integreres enkelt med eksisterende fagsystemer.",
       "button1": "Bestill gratis veiledning",
-      "button2": "Se teknisk dokumentasjon"
+      "button2": "Se teknisk dokumentasjon",
+      "button3": "Se produkter"
     },
     "security": {
       "title": "Datasikkerhet og personvern",

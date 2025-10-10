@@ -383,7 +383,7 @@ export default function MunicipalityDetails() {
                     {t('municipalityDetails.nextSteps.pilot.description')}
                   </p>
                   <Link 
-                    to="/guidance" 
+                    to="/demo" 
                     className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     {t('municipalityDetails.nextSteps.pilot.button')}

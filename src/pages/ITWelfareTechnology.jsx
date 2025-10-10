@@ -62,6 +62,15 @@ export default function ITWelfareTechnology() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                   </Link>
+                  <Link 
+                    to="/products" 
+                    className="group inline-flex items-center justify-center bg-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-teal-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    {t('itWelfareTech.hero.button3')}
+                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </Link>
                 </div>
               </div>
               <div className="flex justify-center">
@@ -337,21 +346,8 @@ export default function ITWelfareTechnology() {
               </p>
             </div>
             
-            {/* CTA Options Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              {/* Download Documentation */}
-              <div className="text-center">
-                <p className="text-gray-700 mb-6">
-                  {t('itWelfareTech.cta.documentation.description')}
-                </p>
-                <Link
-                  to="/documents"
-                  className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors duration-300"
-                >
-                  {t('itWelfareTech.cta.documentation.button')}
-                </Link>
-              </div>
-
+            {/* CTA Options Grid - Only Meeting Card */}
+            <div className="flex justify-center max-w-4xl mx-auto">
               {/* Schedule Technical Meeting */}
               <div className="text-center">
                 <p className="text-gray-700 mb-6">

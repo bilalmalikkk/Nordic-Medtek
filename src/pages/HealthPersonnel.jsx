@@ -38,7 +38,7 @@ export default function HealthPersonnel() {
                   <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
                 </div>
                 <p className="text-xl text-gray-700 leading-relaxed">
-                  Som sykepleier eller hjemmehjelper vet du at mye kan skje mellom besøkene. Våre sensorer oppdager fall og endringer i pust eller puls automatisk, og varsler deg direkte. Du får beskjed når det er kritisk, slik at du kan være der pasienten trenger deg mest, uten ekstra rutiner.
+                  Som sykepleier eller hjemmehjelper vet du at mye kan skje mellom besøkene. Våre sensorer oppdager fall og endringer i pust eller puls automatisk, og varsler deg eller vaktsentral automatisk. Du får beskjed når det er kritisk, slik at du kan være der pasienten trenger deg mest, uten ekstra rutiner.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Link 
@@ -152,7 +152,7 @@ export default function HealthPersonnel() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Sentral oversikt</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  kommunen får sanntidsvarsler og kan prioritere ressursene riktig.
+                  kommunen vaktsentral får sanntidsvarsler og kan prioritere ressursene riktig.
                 </p>
               </div>
             </div>

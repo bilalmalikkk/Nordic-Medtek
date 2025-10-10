@@ -37,17 +37,9 @@ export default function Politicians() {
                   <p className="text-lg text-gray-700 leading-relaxed">
                     {t('politicians.hero.description2')}
                   </p>
-                </div>
-                <div className="pt-4">
-                  <Link 
-                    to="/municipal-benefits" 
-                    className="group inline-flex items-center justify-center bg-yellow-400 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-                    {t('politicians.hero.button')}
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    {t('politicians.hero.description3')}
+                  </p>
                 </div>
               </div>
               <div className="flex justify-center">
@@ -265,146 +257,10 @@ export default function Politicians() {
                 </p>
               </div>
 
-              {/* Download Button */}
-              <div className="pt-8">
-                <Link 
-                  to="/documents" 
-                  className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  {t('politicians.documentation.downloadButton')}
-                  <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </Link>
-              </div>
             </div>
           </div>
         </section>
 
-        {/* Case and Stories Section */}
-        <section className="case-stories-section py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
-          <div className="w-full">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                {t('politicians.cases.title')}
-              </h2>
-              <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {/* Case Card 1 */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">
-                  {t('politicians.cases.pilotResults')}
-                </h3>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      {t('politicians.cases.result1')}
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      {t('politicians.cases.result2')}
-                    </p>
-                  </li>
-                </ul>
-                <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-teal-500">
-                  <blockquote className="text-gray-700 italic leading-relaxed mb-4">
-                    "{t('politicians.cases.quote')}"
-                  </blockquote>
-                  <cite className="text-gray-600 font-medium text-sm">
-                    {t('politicians.cases.attribution')}
-                  </cite>
-                </div>
-              </div>
-
-              {/* Case Card 2 */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">
-                  {t('politicians.cases.pilotResults')}
-                </h3>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      {t('politicians.cases.result1')}
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      {t('politicians.cases.result2')}
-                    </p>
-                  </li>
-                </ul>
-                <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-teal-500">
-                  <blockquote className="text-gray-700 italic leading-relaxed mb-4">
-                    "{t('politicians.cases.quote')}"
-                  </blockquote>
-                  <cite className="text-gray-600 font-medium text-sm">
-                    {t('politicians.cases.attribution')}
-                  </cite>
-                </div>
-              </div>
-
-              {/* Case Card 3 */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <h3 className="text-xl font-bold text-gray-900 mb-6">
-                  {t('politicians.cases.pilotResults')}
-                </h3>
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      {t('politicians.cases.result1')}
-                    </p>
-                  </li>
-                  <li className="flex items-start">
-                    <div className="w-6 h-6 bg-teal-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-                      <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-gray-700 leading-relaxed">
-                      {t('politicians.cases.result2')}
-                    </p>
-                  </li>
-                </ul>
-                <div className="bg-gray-50 p-6 rounded-xl border-l-4 border-teal-500">
-                  <blockquote className="text-gray-700 italic leading-relaxed mb-4">
-                    "{t('politicians.cases.quote')}"
-                  </blockquote>
-                  <cite className="text-gray-600 font-medium text-sm">
-                    {t('politicians.cases.attribution')}
-                  </cite>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Next Steps Section */}
         <section className="next-steps-section py-20 w-full bg-white">
@@ -419,26 +275,7 @@ export default function Politicians() {
               <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {/* Brief Card */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  {t('politicians.nextSteps.brief.title')}
-                </h3>
-                <p className="text-gray-700 leading-relaxed mb-6">
-                  {t('politicians.nextSteps.brief.description')}
-                </p>
-                <Link 
-                  to="/documents" 
-                  className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full"
-                >
-                  {t('politicians.nextSteps.brief.button')}
-                  <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </Link>
-              </div>
-
+            <div className="grid md:grid-cols-1 gap-8 max-w-3xl mx-auto">
               {/* Presentation Card */}
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">

@@ -34,9 +34,14 @@ export default function ProcurementManager() {
                   </h1>
                   <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
                 </div>
-                <p className="text-xl text-gray-700 leading-relaxed">
-                  {t('procurementManager.hero.description')}
-                </p>
+                <div className="space-y-4">
+                  <p className="text-xl text-gray-700 leading-relaxed">
+                    {t('procurementManager.hero.description1')}
+                  </p>
+                  <p className="text-xl text-gray-700 leading-relaxed">
+                    {t('procurementManager.hero.description2')}
+                  </p>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <Link 
                     to="/guidance" 
@@ -378,17 +383,6 @@ export default function ProcurementManager() {
                     </p>
                   </li>
                 </ul>
-                <div className="pt-4">
-                  <Link 
-                    to="/contact" 
-                    className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-                    {t('procurementManager.procurement.button')}
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                </div>
               </div>
 
               <div className="flex justify-center">
@@ -408,64 +402,25 @@ export default function ProcurementManager() {
         </section>
 
         {/* Next Steps Section */}
-        <section className="next-steps-section py-20 w-full bg-gradient-to-br from-gray-50 to-white">
+        <section className="next-steps-section py-20 w-full bg-white">
           <div className="w-full">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                {t('procurementManager.nextSteps.title')}
+                Hva er neste steg?
               </h2>
-              <p className="text-xl text-gray-700 mb-8">
-                {t('procurementManager.nextSteps.subtitle')}
-              </p>
               <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
             </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Download Document Package Card */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    {t('procurementManager.nextSteps.download.title')}
-                  </h3>
-                  <Link
-                    to="/documents"
-                    className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-                    {t('procurementManager.nextSteps.download.button')}
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Schedule Meeting Card */}
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <svg className="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                    {t('procurementManager.nextSteps.meeting.title')}
-                  </h3>
-                  <Link
-                    to="/contact"
-                    className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-                    {t('procurementManager.nextSteps.meeting.button')}
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
+            
+            <div className="text-center">
+              <Link 
+                to="/guidance" 
+                className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Kontakt oss
+                <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
             </div>
           </div>
         </section>
