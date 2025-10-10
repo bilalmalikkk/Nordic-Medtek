@@ -230,6 +230,8 @@ const updateProduct = async (req, res) => {
             'collection_id', 'sorting', 'manual_sort', 'status', 'is_featured',
             'publish_date', 'unpublish_date', 'external_id'
         ];
+        
+        console.log('📝 Allowed fields for update:', allowedFields);
 
         // Remove any fields that are undefined, read-only, or not allowed
         const cleanedUpdateData = {};
@@ -257,10 +259,19 @@ const updateProduct = async (req, res) => {
             return res.json({ message: 'No changes to apply' });
         }
 
-        await update('products', id, cleanedUpdateData);
-
+        const updateResult = await update('products', id, cleanedUpdateData);
+        
         console.log('✅ Product updated successfully');
-        res.json({ message: 'Product updated successfully' });
+        console.log('📊 Update result:', updateResult);
+        
+        // Verify the update by fetching the updated product
+        const updatedProduct = await queryOne('SELECT * FROM products WHERE id = ?', [id]);
+        console.log('🔍 Verified updated product:', updatedProduct);
+        
+        res.json({ 
+            message: 'Product updated successfully',
+            updatedProduct: updatedProduct
+        });
 
     } catch (error) {
         console.error('❌ Update product error:', error);

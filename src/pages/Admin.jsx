@@ -122,9 +122,11 @@ export default function Admin() {
     setProducts([]); // Clear immediately
     setLoading(true);
     try {
+      // Wait a bit for the database to commit the transaction
+      await new Promise(resolve => setTimeout(resolve, 300));
       await loadData(token);
-      // Wait a bit for the database to update
-      await new Promise(resolve => setTimeout(resolve, 500));
+      // Wait a bit more and refresh again to ensure we get the latest data
+      await new Promise(resolve => setTimeout(resolve, 200));
       await loadData(token);
     } finally {
       setLoading(false);
@@ -262,7 +264,9 @@ export default function Admin() {
       setTimeout(() => setSuccessMessage(null), 3000);
       
       resetProductForm();
-      await loadData(token);
+      
+      // Force refresh data to ensure we get the latest from database
+      await forceRefresh();
     } catch (error) {
       const baseMsg = editingProduct ? 'Failed to update product' : 'Failed to create product';
       let extra = '';
@@ -300,7 +304,7 @@ export default function Admin() {
       category_id: product.category_id || '',
       sorting: product.sorting || 0,
       status: product.status || 'PUBLISHED',
-      is_featured: product.is_featured || false
+      is_featured: Boolean(product.is_featured) // Ensure boolean conversion
     });
     setSelectedImage(product.image_url || null);
     setSelectedDatasheet(product.datasheet_url || null);
