@@ -108,7 +108,7 @@
       "email": "Epost",
       "whoFor": "Hvem gjelder dette for",
       "concerns": "Hva er du mest bekymret for?",
-      "description": "Beskrivelse av situasjon",
+      "situationDescription": "Beskrivelse av situasjon",
       "newsletters": "Ja, send meg gjerne",
       "submit": "Send inn skjema",
       "footer": "Vi kontakter deg vanligvis samme eller neste virkedag."
@@ -1008,9 +1008,10 @@
   },
   "municipality": {
     "hero": {
-      "title": "En tryggere og mer bærekraftig omsorg i kommunen.",
+      "title": "Fixes for Kommune",
+      "subtitle": "En tryggere og mer bærekraftig omsorg i kommunen.",
       "description": "Teknologi som gjør det mulig for eldre å bo hjemme lenger, samtidig som ressursene brukes smartere.",
-      "button": "Se hvordan det fungerer i praksis"
+      "additionalText": "Vår velferds-teknologiske løsning reduserer arbeidspresset på helsepersonell, øker tryggheten for brukerne og effektiviserer driften - alt i én fleksibel og skalerbar plattform.\n\nTeknologi som gjør det mulig for eldre å bo hjemme lenger, samtidig som ressursene brukes smartere.\n\nEn investering i bærekraftig omsorg og smartere ressursbruk."
     },
     "benefits": {
       "title": "Kommunale fordeler",
@@ -1047,7 +1048,10 @@
       "partnership": {
         "title": "Partnerskap som bygger fremtidens omsorg",
         "link": "(link til side for kommunalsjef, politikere, innkjøpsansvarlig, IT og velferdsteknologi)",
-        "municipalChief": "Kommunal sjef"
+        "municipalChief": "Kommunal sjef",
+        "politicians": "Politikere",
+        "procurementManager": "Innkjøpsansvarlig",
+        "itWelfareTechnology": "IT"
       }
     },
     "cta": {

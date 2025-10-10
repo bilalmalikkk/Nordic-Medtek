@@ -62,21 +62,20 @@ export default function Municipality() {
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
                   {t('municipality.hero.title')}
                 </h1>
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+                  {t('municipality.hero.subtitle')}
+                </h2>
                 <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
               </div>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed bg-white p-4 sm:p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
                 {t('municipality.hero.description')}
               </p>
-              <div className="pt-4">
-                <Link 
-                  to="/demo" 
-                  className="group inline-flex items-center justify-center bg-yellow-400 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-500 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  {t('municipality.hero.button')}
-                  <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
+              <div className="space-y-4 text-gray-700">
+                {t('municipality.hero.additionalText').split('\n\n').map((paragraph, index) => (
+                  <p key={index} className="text-lg leading-relaxed italic">
+                    {paragraph.trim()}
+                  </p>
+                ))}
               </div>
             </div>
             <div className="flex justify-center">
@@ -359,6 +358,24 @@ export default function Municipality() {
                       >
                         {t('municipality.benefits.partnership.municipalChief')}
                       </Link>
+                      <Link
+                        to="/politicians"
+                        className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-3 rounded-xl text-sm font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105"
+                      >
+                        {t('municipality.benefits.partnership.politicians')}
+                      </Link>
+                      <Link
+                        to="/procurement-manager"
+                        className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-3 rounded-xl text-sm font-semibold hover:from-emerald-600 hover:to-teal-700 transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105"
+                      >
+                        {t('municipality.benefits.partnership.procurementManager')}
+                      </Link>
+                      <Link
+                        to="/it-welfare-technology"
+                        className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-3 rounded-xl text-sm font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:scale-105"
+                      >
+                        {t('municipality.benefits.partnership.itWelfareTechnology')}
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -401,12 +418,12 @@ export default function Municipality() {
         <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              {t('municipality.faq.title')}
+              {t('home.faq.title')}
             </h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
           </div>
           <div className="space-y-6">
-            {t('municipality.faq.questions', { returnObjects: true }).map((faq, index) => (
+            {t('home.faq.questions', { returnObjects: true }).map((faq, index) => (
               <div key={index} className="bg-gray-50 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
                   <div className="w-8 h-8 bg-teal-600 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
@@ -423,30 +440,6 @@ export default function Municipality() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-20 w-full bg-gradient-to-br from-orange-50 to-yellow-50">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-          <div className="bg-white rounded-3xl shadow-2xl p-12 border-2 border-orange-200">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                {t('municipality.finalCta.title')}
-              </h2>
-              <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-                {t('municipality.finalCta.description')}
-              </p>
-              <Link 
-                to="/guidance" 
-                className="group inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-12 py-6 rounded-2xl font-semibold text-lg hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
-              >
-                {t('municipality.finalCta.button')}
-                <svg className="w-6 h-6 ml-3 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-slate-200 py-8 w-full">
