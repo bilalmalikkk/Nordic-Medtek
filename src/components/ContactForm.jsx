@@ -22,12 +22,8 @@ export default function ContactForm({ title, desc, typeOptions, footerNote }) {
     name: z.string().min(2),
     phone: z.string().min(6),
     email: z.string().email(),
-    confirmEmail: z.string().email(),
     description: z.string().min(5),
     newsletters: z.array(z.enum(['produkter', 'nyheter', 'marked'])).optional(),
-  }).refine((d) => d.email === d.confirmEmail, {
-    path: ['confirmEmail'],
-    message: 'E-postene matcher ikke',
   })
 
   const {
@@ -109,7 +105,7 @@ export default function ContactForm({ title, desc, typeOptions, footerNote }) {
         </div>
 
         {/* Input Fields */}
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
           <div>
             <input 
               className="w-full px-4 py-3 border border-gray-300 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
@@ -135,15 +131,6 @@ export default function ContactForm({ title, desc, typeOptions, footerNote }) {
               {...register('email')} 
             />
             {errors.email && <p className="form-error mt-1">{errors.email.message}</p>}
-          </div>
-
-          <div>
-            <input 
-              className="w-full px-4 py-3 border border-orange-400 rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500" 
-              placeholder="test@gmail.com" 
-              {...register('confirmEmail')} 
-            />
-            {errors.confirmEmail && <p className="form-error mt-1">{errors.confirmEmail.message}</p>}
           </div>
         </div>
 

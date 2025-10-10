@@ -67,12 +67,10 @@ export default function Municipality() {
                 </h2>
                 <div className="w-20 h-1 bg-teal-600 rounded-full"></div>
               </div>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed bg-white p-4 sm:p-6 rounded-xl shadow-sm border-l-4 border-teal-500">
-                {t('municipality.hero.description')}
-              </p>
-              <div className="space-y-4 text-gray-700">
+              <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed bg-white p-4 sm:p-6 rounded-xl shadow-sm border-l-4 border-teal-500 space-y-4">
+                <p>{t('municipality.hero.description')}</p>
                 {t('municipality.hero.additionalText').split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="text-lg leading-relaxed italic">
+                  <p key={index} className="italic">
                     {paragraph.trim()}
                   </p>
                 ))}

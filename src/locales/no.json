@@ -877,7 +877,7 @@
         },
         {
           "question": "Hvordan fungerer leieavtalen?",
-          "answer": "Den er veldig enkel du velger hva produkt du vil ha, og så påløper det en liten kostnad per måned. Du tar ingen risiko, du har ingen bindingstid, og du kan når som helst avslutte leieforholdet og returnere produktet."
+          "answer": "Den er veldig enkel! Du velger hva produkt du vil ha, og så påløper det en liten kostnad per måned. Du tar ingen risiko, du har ingen bindingstid, og du kan når som helst avslutte leieforholdet og returnere produktet."
         }
       ]
     },
@@ -1008,10 +1008,10 @@
   },
   "municipality": {
     "hero": {
-      "title": "Fixes for Kommune",
+      "title": "",
       "subtitle": "En tryggere og mer bærekraftig omsorg i kommunen.",
-      "description": "Teknologi som gjør det mulig for eldre å bo hjemme lenger, samtidig som ressursene brukes smartere.",
-      "additionalText": "Vår velferds-teknologiske løsning reduserer arbeidspresset på helsepersonell, øker tryggheten for brukerne og effektiviserer driften - alt i én fleksibel og skalerbar plattform.\n\nTeknologi som gjør det mulig for eldre å bo hjemme lenger, samtidig som ressursene brukes smartere.\n\nEn investering i bærekraftig omsorg og smartere ressursbruk."
+      "description": "Vår velferds-teknologiske løsning reduserer arbeidspresset på helsepersonell, øker tryggheten for brukerne og effektiviserer driften - alt i én fleksibel og skalerbar plattform.",
+      "additionalText": "Teknologi som gjør det mulig for eldre å bo hjemme lenger, samtidig som ressursene brukes smartere.\n\nEn investering i bærekraftig omsorg og smartere ressursbruk."
     },
     "benefits": {
       "title": "Kommunale fordeler",
