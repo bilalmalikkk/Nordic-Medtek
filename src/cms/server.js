@@ -161,6 +161,84 @@ app.get('/api/temp-check-db', async (req, res) => {
   }
 });
 
+// TEMPORARY LOGIN SIMULATION ENDPOINT - REMOVE AFTER USE!
+app.get('/api/temp-simulate-login', async (req, res) => {
+  try {
+    console.log('🔐 TEMPORARY LOGIN SIMULATION ENDPOINT CALLED');
+    
+    const { queryOne } = await import('./database/init.js');
+    const bcrypt = await import('bcryptjs');
+    
+    const username = 'admin';
+    const password = 'admin123';
+    
+    console.log('🔍 Simulating login for username:', username);
+    
+    // Use the exact same query as the login endpoint
+    const user = await queryOne(
+      'SELECT * FROM users WHERE (username = ? OR email = ?) AND is_active = 1',
+      [username, username]
+    );
+    
+    console.log('🔍 User found:', user ? 'YES' : 'NO');
+    if (user) {
+      console.log('🔍 User details:', {
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        is_active: user.is_active,
+        role: user.role
+      });
+    }
+    
+    if (!user) {
+      console.log('❌ No user found - this would cause "Invalid credentials"');
+      return res.json({
+        success: false,
+        message: 'User not found - this is why login fails',
+        step: 'user_lookup',
+        username: username
+      });
+    }
+    
+    // Test password using the exact same method as login endpoint
+    const isValidPassword = await bcrypt.default.compare(password, user.password_hash);
+    console.log('🔐 Password comparison result:', isValidPassword);
+    
+    if (!isValidPassword) {
+      console.log('❌ Password mismatch - this would cause "Invalid credentials"');
+      return res.json({
+        success: false,
+        message: 'Password mismatch - this is why login fails',
+        step: 'password_check',
+        username: username,
+        storedHash: user.password_hash
+      });
+    }
+    
+    console.log('✅ Login simulation successful!');
+    res.json({
+      success: true,
+      message: 'Login simulation successful - login should work',
+      user: {
+        id: user.id,
+        username: user.username,
+        email: user.email,
+        role: user.role,
+        is_active: user.is_active
+      },
+      passwordMatch: isValidPassword
+    });
+    
+  } catch (error) {
+    console.error('❌ Login simulation error:', error);
+    res.status(500).json({ 
+      error: 'Login simulation failed', 
+      details: error.message 
+    });
+  }
+});
+
 // TEMPORARY PASSWORD TEST ENDPOINT - REMOVE AFTER USE!
 app.get('/api/temp-test-password', async (req, res) => {
   try {
