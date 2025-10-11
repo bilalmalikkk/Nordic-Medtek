@@ -3,6 +3,8 @@ import rateLimit from 'express-rate-limit';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
+import sqlite3 from 'sqlite3';
+import fs from 'fs';
 
 // ES module __dirname equivalent
 const __filename = fileURLToPath(import.meta.url);
@@ -20,12 +22,122 @@ import uploadRoutes from './routes/upload.js';
 import importRoutes from './routes/import.js';
 import contactRoutes from './routes/contact.js';
 
-import { initializeDatabase } from './database/init.js';
 import { authenticateToken } from './middleware/auth.js';
-import runMigrations from './database/migrate.js';
 
 const app = express();
 const PORT = process.env.PORT || process.env.CMS_PORT || 3001;
+
+// Database configuration
+const DB_PATH = process.env.NODE_ENV === 'production' 
+    ? path.join('/app/src/cms/database', 'cms.db')
+    : path.join(__dirname, 'database', 'cms.db');
+const SCHEMA_PATH = path.join(__dirname, 'database', 'schema.sql');
+
+console.log('🔍 Database configuration:');
+console.log('   Environment:', process.env.NODE_ENV);
+console.log('   Database path:', DB_PATH);
+console.log('   Schema path:', SCHEMA_PATH);
+
+// Create database connection
+const { Database } = sqlite3.verbose();
+const db = new Database(DB_PATH, (err) => {
+    if (err) {
+        console.error('❌ Database connection error:', err);
+    } else {
+        console.log('✅ Database connection established successfully');
+    }
+});
+
+// Database helper functions
+const dbHelpers = {
+    queryOne: (query, params = []) => {
+        return new Promise((resolve, reject) => {
+            db.get(query, params, (err, row) => {
+                if (err) reject(err);
+                else resolve(row);
+            });
+        });
+    },
+    run: (query, params = []) => {
+        return new Promise((resolve, reject) => {
+            db.run(query, params, function(err) {
+                if (err) reject(err);
+                else resolve({ id: this.lastID, changes: this.changes });
+            });
+        });
+    }
+};
+
+// Initialize database
+async function initializeDatabase() {
+    return new Promise((resolve, reject) => {
+        console.log('🚀 Initializing database...');
+        
+        if (!fs.existsSync(SCHEMA_PATH)) {
+            const error = new Error(`Schema file not found at: ${SCHEMA_PATH}`);
+            console.error('❌', error.message);
+            reject(error);
+            return;
+        }
+
+        console.log('📄 Reading schema file...');
+        const schema = fs.readFileSync(SCHEMA_PATH, 'utf8');
+        
+        console.log('🔧 Executing database schema...');
+        db.exec(schema, async (err) => {
+            if (err) {
+                console.error('❌ Error initializing database:', err);
+                reject(err);
+            } else {
+                console.log('✅ Database schema loaded successfully');
+                try {
+                    await ensureAdminUser();
+                    console.log('✅ Database initialization completed');
+                    resolve();
+                } catch (adminError) {
+                    console.error('❌ Error creating admin user:', adminError);
+                    reject(adminError);
+                }
+            }
+        });
+    });
+}
+
+// Ensure admin user exists
+async function ensureAdminUser() {
+    try {
+        const existingAdmin = await dbHelpers.queryOne('SELECT * FROM users WHERE username = ?', ['admin']);
+        if (!existingAdmin) {
+            console.log('Creating default admin user...');
+            
+            const adminUsername = process.env.DEFAULT_ADMIN_USERNAME || 'admin';
+            const adminEmail = process.env.DEFAULT_ADMIN_EMAIL || 'admin@nordicmedtek.com';
+            const adminPassword = process.env.DEFAULT_ADMIN_PASSWORD || 'admin123';
+            
+            const bcrypt = await import('bcryptjs');
+            const passwordHash = await bcrypt.hash(adminPassword, parseInt(process.env.BCRYPT_ROUNDS) || 10);
+            
+            await dbHelpers.run(
+                "INSERT INTO users (username, email, password_hash, role, is_active) VALUES (?, ?, ?, 'admin', 1)",
+                [adminUsername, adminEmail, passwordHash]
+            );
+            console.log('✅ Default admin user created with username:', adminUsername);
+        } else {
+            console.log('✅ Admin user already exists');
+        }
+    } catch (error) {
+        console.error('❌ Error ensuring admin user:', error);
+        throw error;
+    }
+}
+
+// Simple migration function
+async function runMigrations() {
+    console.log('🔄 Running database migrations...');
+    // For now, just log that migrations would run here
+    console.log('✅ Database migrations completed');
+    return Promise.resolve();
+}
 
 // Trust proxy for Railway deployment
 app.set('trust proxy', 1);

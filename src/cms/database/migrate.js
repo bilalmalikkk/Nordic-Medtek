@@ -5,7 +5,15 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DB_PATH = path.join(__dirname, 'cms.db');
+// Handle Railway deployment database path
+const DB_PATH = process.env.NODE_ENV === 'production' 
+    ? path.join('/app/src/cms/database', 'cms.db')
+    : path.join(__dirname, 'cms.db');
+
+console.log('🔍 Migration database configuration:');
+console.log('   Environment:', process.env.NODE_ENV);
+console.log('   Database path:', DB_PATH);
+
 const { Database } = sqlite3.verbose();
 
 async function runMigrations() {
