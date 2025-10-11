@@ -64,21 +64,47 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-// CORS configuration
-app.use(cors({
-    origin: [
-        'http://localhost:5173',
-        'https://localhost:5173',
-        'http://localhost:3000',
-        'https://localhost:3000',
-        'https://nordic-medtek.vercel.app'
-    ],
+// CORS configuration with explicit preflight handling
+const corsOptions = {
+    origin: function (origin, callback) {
+        const allowedOrigins = [
+            'http://localhost:5173',
+            'https://localhost:5173',
+            'http://localhost:3000',
+            'https://localhost:3000',
+            'https://nordic-medtek.vercel.app'
+        ];
+        
+        // Allow requests with no origin (mobile apps, curl, etc.)
+        if (!origin) return callback(null, true);
+        
+        if (allowedOrigins.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            console.log('CORS blocked origin:', origin);
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
+    allowedHeaders: [
+        'Content-Type', 
+        'Authorization', 
+        'X-Requested-With',
+        'Accept',
+        'Origin',
+        'Access-Control-Request-Method',
+        'Access-Control-Request-Headers'
+    ],
+    exposedHeaders: ['Authorization'],
     preflightContinue: false,
     optionsSuccessStatus: 204
-}));
+};
+
+app.use(cors(corsOptions));
+
+// Explicitly handle preflight requests
+app.options('*', cors(corsOptions));
 
 // Body parsing middleware
 app.use(express.json({ limit: '50mb' }));
@@ -99,11 +125,24 @@ app.use('/api/contact', contactRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
+    console.log('🏥 Health check requested from:', req.headers.origin || req.ip);
     res.json({ 
         status: 'OK', 
         timestamp: new Date().toISOString(),
         version: '1.0.0',
+        environment: process.env.NODE_ENV,
+        cors: 'enabled',
         volume: 'mounted'
+    });
+});
+
+// Simple test endpoint for CORS
+app.get('/api/test', (req, res) => {
+    console.log('🧪 Test endpoint requested from:', req.headers.origin || req.ip);
+    res.json({ 
+        message: 'CORS test successful',
+        origin: req.headers.origin,
+        timestamp: new Date().toISOString()
     });
 });
 
@@ -176,19 +215,28 @@ app.use('*', (req, res) => {
 // Initialize database and start server
 async function startServer() {
     try {
+        console.log('🚀 Starting NordicMedTek CMS Server...');
+        console.log('📍 Environment:', process.env.NODE_ENV);
+        console.log('🔧 Port:', PORT);
+        
         await initializeDatabase();
         console.log('✅ CMS Database initialized successfully');
         
         // Run migrations to ensure all columns exist
+        console.log('🔄 Running database migrations...');
         await runMigrations();
+        console.log('✅ Database migrations completed');
         
-        app.listen(PORT, () => {
+        app.listen(PORT, '0.0.0.0', () => {
             console.log(`🚀 NordicMedTek CMS Server running on port ${PORT}`);
-            console.log(`🔗 API endpoint: http://localhost:${PORT}/api`);
+            console.log(`🔗 API endpoint: http://0.0.0.0:${PORT}/api`);
             console.log(`📊 Admin panel will be integrated with main app`);
+            console.log(`🌐 CORS enabled for: https://nordic-medtek.vercel.app`);
         });
     } catch (error) {
         console.error('❌ Failed to start CMS server:', error);
+        console.error('❌ Error details:', error.message);
+        console.error('❌ Stack trace:', error.stack);
         process.exit(1);
     }
 }
