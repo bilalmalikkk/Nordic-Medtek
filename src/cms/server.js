@@ -161,6 +161,100 @@ app.get('/api/temp-check-db', async (req, res) => {
   }
 });
 
+// TEMPORARY CLEANUP ENDPOINT - REMOVE AFTER USE!
+app.get('/api/temp-cleanup-users', async (req, res) => {
+  try {
+    console.log('🧹 TEMPORARY CLEANUP ENDPOINT CALLED');
+    
+    const sqlite3 = await import('sqlite3');
+    const bcrypt = await import('bcryptjs');
+    
+    const dbPath = '/app/data/cms.db';
+    const { Database } = sqlite3.default.verbose();
+    const db = new Database(dbPath);
+    
+    // First, show all users
+    db.all('SELECT * FROM users', (err, allUsers) => {
+      if (err) {
+        console.error('❌ Error getting all users:', err);
+        res.status(500).json({ error: 'Database error', details: err.message });
+      } else {
+        console.log('📊 All users before cleanup:', allUsers.length);
+        allUsers.forEach((user, index) => {
+          console.log(`👤 User ${index + 1}:`, {
+            id: user.id,
+            username: user.username,
+            email: user.email,
+            role: user.role,
+            is_active: user.is_active,
+            hash: user.password_hash.substring(0, 20) + '...'
+          });
+        });
+        
+        // Delete ALL existing admin users
+        db.run('DELETE FROM users WHERE username = ?', ['admin'], function(err) {
+          if (err) {
+            console.error('❌ Error deleting admin users:', err);
+            res.status(500).json({ error: 'Delete error', details: err.message });
+          } else {
+            console.log(`🗑️ Deleted ${this.changes} admin user(s)`);
+            
+            // Create ONE clean admin user with correct password
+            const passwordHash = bcrypt.default.hashSync('admin123', 10);
+            
+            db.run(
+              'INSERT INTO users (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
+              ['admin', 'admin@nordicmedtek.com', passwordHash, 'admin'],
+              function(err) {
+                if (err) {
+                  console.error('❌ Error creating clean admin:', err);
+                  res.status(500).json({ error: 'Create error', details: err.message });
+                } else {
+                  console.log('✅ Clean admin user created with ID:', this.lastID);
+                  
+                  // Verify the new user
+                  db.get('SELECT * FROM users WHERE username = ?', ['admin'], (err, newUser) => {
+                    if (err) {
+                      console.error('❌ Verification error:', err);
+                    } else if (newUser) {
+                      console.log('✅ Verification successful:', {
+                        id: newUser.id,
+                        username: newUser.username,
+                        email: newUser.email,
+                        hash: newUser.password_hash.substring(0, 20) + '...'
+                      });
+                    }
+                    
+                    db.close();
+                    
+                    res.json({
+                      success: true,
+                      message: 'Cleanup completed - only one admin user exists now',
+                      deleted: this.changes,
+                      newAdminId: this.lastID,
+                      credentials: {
+                        username: 'admin',
+                        password: 'admin123',
+                        email: 'admin@nordicmedtek.com'
+                      }
+                    });
+                  });
+                }
+              }
+            );
+          }
+        });
+      }
+    });
+  } catch (error) {
+    console.error('❌ Cleanup error:', error);
+    res.status(500).json({ 
+      error: 'Cleanup failed', 
+      details: error.message 
+    });
+  }
+});
+
 // TEMPORARY LOGIN SIMULATION ENDPOINT - REMOVE AFTER USE!
 app.get('/api/temp-simulate-login', async (req, res) => {
   try {
