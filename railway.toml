@@ -5,3 +5,11 @@ builder = "NIXPACKS"
 startCommand = "npm run cms:start"
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
+
+# IMPORTANT: Railway persistent volume configuration
+# You need to create a volume in Railway dashboard:
+# 1. Go to your Railway project
+# 2. Click on your service
+# 3. Go to "Variables" tab
+# 4. Add volume: Mount path = /app/src/cms/database
+# This will persist the database between deployments

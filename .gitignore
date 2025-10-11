@@ -12,6 +12,17 @@ dist
 dist-ssr
 *.local
 
+# Database files - NEVER commit database to git!
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+src/cms/database/cms.db
+
+# Uploads - user generated content
+uploads/
+temp/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
