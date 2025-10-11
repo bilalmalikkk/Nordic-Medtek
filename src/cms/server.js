@@ -115,7 +115,7 @@ app.get('/api/temp-check-db', async (req, res) => {
     const path = await import('path');
     const fs = await import('fs');
     
-    const dbPath = '/app/data/cms.db';
+    const dbPath = '/app/src/cms/database/cms.db';
     console.log('📁 Database path:', dbPath);
     console.log('📁 Database exists:', fs.default.existsSync(dbPath));
     
@@ -169,7 +169,7 @@ app.get('/api/temp-cleanup-users', async (req, res) => {
     const sqlite3 = await import('sqlite3');
     const bcrypt = await import('bcryptjs');
     
-    const dbPath = '/app/data/cms.db';
+    const dbPath = '/app/src/cms/database/cms.db';
     const { Database } = sqlite3.default.verbose();
     const db = new Database(dbPath);
     
@@ -341,7 +341,7 @@ app.get('/api/temp-test-password', async (req, res) => {
     const bcrypt = await import('bcryptjs');
     const sqlite3 = await import('sqlite3');
     
-    const dbPath = '/app/data/cms.db';
+    const dbPath = '/app/src/cms/database/cms.db';
     const { Database } = sqlite3.default.verbose();
     const db = new Database(dbPath);
     
@@ -397,7 +397,7 @@ app.get('/api/temp-reset-admin', async (req, res) => {
     const path = await import('path');
     const fs = await import('fs');
     
-    const dbPath = '/app/data/cms.db';
+    const dbPath = '/app/src/cms/database/cms.db';
     console.log('📁 Database path:', dbPath);
     console.log('📁 Database exists:', fs.default.existsSync(dbPath));
     
