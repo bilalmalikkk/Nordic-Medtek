@@ -8,8 +8,11 @@ restartPolicyMaxRetries = 10
 
 # IMPORTANT: Railway persistent volume configuration
 # You need to create a volume in Railway dashboard:
-# 1. Go to your Railway project
-# 2. Click on your service
+# 1. Go to your Railway project dashboard
+# 2. Click on your service (nordic-medtek-production)
 # 3. Go to "Variables" tab
-# 4. Add volume: Mount path = /app/src/cms/database
-# This will persist the database between deployments
+# 4. Scroll down to "Volumes" section
+# 5. Add volume: Mount path = /app/src/cms/database
+# 6. This will persist the database between deployments and code pushes
+#
+# To verify volume is working, visit: /api/test-volume
