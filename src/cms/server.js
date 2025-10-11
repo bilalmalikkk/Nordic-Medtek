@@ -29,6 +29,9 @@ import runMigrations from './database/migrate.js';
 const app = express();
 const PORT = process.env.PORT || process.env.CMS_PORT || 3001;
 
+// Trust proxy for Railway deployment
+app.set('trust proxy', 1);
+
 // Security middleware
 const allowedOrigins = [
     "'self'",
