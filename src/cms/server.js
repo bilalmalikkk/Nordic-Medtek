@@ -1,5 +1,4 @@
 import express from 'express';
-import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import path from 'path';
@@ -64,33 +63,36 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-// CORS configuration
-app.use(cors({
-    origin: [
+// Simple and reliable CORS configuration
+app.use((req, res, next) => {
+    const allowedOrigins = [
         'http://localhost:5173',
         'https://localhost:5173',
         'http://localhost:3000',
         'https://localhost:3000',
         'https://nordic-medtek.vercel.app'
-    ],
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
-    preflightContinue: false,
-    optionsSuccessStatus: 204
-}));
-
-// Explicitly handle preflight requests for all routes
-app.options('*', (req, res) => {
-    console.log('🔄 OPTIONS preflight request from:', req.headers.origin);
-    console.log('🔄 Requested method:', req.headers['access-control-request-method']);
-    console.log('🔄 Requested headers:', req.headers['access-control-request-headers']);
+    ];
     
-    res.header('Access-Control-Allow-Origin', req.headers.origin || '*');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
-    res.header('Access-Control-Allow-Credentials', 'true');
-    res.sendStatus(204);
+    const origin = req.headers.origin;
+    
+    if (allowedOrigins.includes(origin)) {
+        res.setHeader('Access-Control-Allow-Origin', origin);
+    } else {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+    }
+    
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.setHeader('Access-Control-Max-Age', '86400');
+    
+    // Handle preflight requests
+    if (req.method === 'OPTIONS') {
+        console.log('✅ OPTIONS preflight handled for origin:', origin);
+        return res.status(200).end();
+    }
+    
+    next();
 });
 
 // Body parsing middleware
@@ -112,11 +114,23 @@ app.use('/api/contact', contactRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
+    console.log('🏥 Health check from:', req.headers.origin || req.ip);
     res.json({ 
         status: 'OK', 
         timestamp: new Date().toISOString(),
         version: '1.0.0',
-        volume: 'mounted'
+        volume: 'mounted',
+        cors: 'enabled'
+    });
+});
+
+// Simple CORS test endpoint
+app.get('/api/cors-test', (req, res) => {
+    console.log('🧪 CORS test from:', req.headers.origin || req.ip);
+    res.json({ 
+        message: 'CORS is working!',
+        origin: req.headers.origin,
+        timestamp: new Date().toISOString()
     });
 });
 

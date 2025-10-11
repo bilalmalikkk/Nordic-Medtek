@@ -6,6 +6,12 @@ import { generateToken, authenticateToken } from '../middleware/auth.js';
 
 const router = express.Router();
 
+// Test endpoint to verify auth routes are working
+router.get('/test', (req, res) => {
+    console.log('🔐 Auth test endpoint hit from:', req.headers.origin || req.ip);
+    res.json({ message: 'Auth routes are working!', timestamp: new Date().toISOString() });
+});
+
 // Login endpoint
 router.post('/login', [
     body('username').notEmpty().withMessage('Username is required'),
