@@ -65,23 +65,24 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-// CORS configuration
+// CORS configuration - temporarily permissive for debugging
 app.use(cors({
-    origin: [
-        'http://localhost:5173',
-        'https://localhost:5173',
-        'http://localhost:3000',
-        'https://localhost:3000',
-        'https://nordic-medtek.vercel.app',
-        'https://nordic-medtek-git-main-mikals-projects.vercel.app',
-        process.env.FRONTEND_URL
-    ].filter(Boolean),
+    origin: true, // Allow all origins temporarily
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Origin', 'Accept'],
     preflightContinue: false,
     optionsSuccessStatus: 204
 }));
+
+// Handle preflight requests explicitly
+app.options('*', (req, res) => {
+    res.header('Access-Control-Allow-Origin', req.headers.origin || '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Origin, Accept');
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.sendStatus(204);
+});
 
 // Body parsing middleware
 app.use(express.json({ limit: '50mb' }));
@@ -107,6 +108,16 @@ app.get('/api/health', (req, res) => {
         timestamp: new Date().toISOString(),
         version: '1.0.0',
         volume: 'mounted'
+    });
+});
+
+// CORS test endpoint
+app.get('/api/test-cors', (req, res) => {
+    res.json({
+        success: true,
+        message: 'CORS is working!',
+        origin: req.headers.origin,
+        timestamp: new Date().toISOString()
     });
 });
 
