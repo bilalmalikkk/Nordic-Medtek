@@ -107,23 +107,24 @@ app.get('/api/temp-reset-admin', async (req, res) => {
   try {
     console.log('🔧 TEMPORARY ADMIN RESET ENDPOINT CALLED');
     
-    const bcrypt = require('bcryptjs');
-    const sqlite3 = require('sqlite3');
-    const path = require('path');
-    const fs = require('fs');
+    const bcrypt = await import('bcryptjs');
+    const sqlite3 = await import('sqlite3');
+    const path = await import('path');
+    const fs = await import('fs');
     
-    const dbPath = path.join(__dirname, 'database/cms.db');
+    const dbPath = path.default.join(__dirname, 'database/cms.db');
     console.log('📁 Database path:', dbPath);
-    console.log('📁 Database exists:', fs.existsSync(dbPath));
+    console.log('📁 Database exists:', fs.default.existsSync(dbPath));
     
     // Ensure directory exists
-    const dbDir = path.dirname(dbPath);
-    if (!fs.existsSync(dbDir)) {
+    const dbDir = path.default.dirname(dbPath);
+    if (!fs.default.existsSync(dbDir)) {
       console.log('📁 Creating database directory...');
-      fs.mkdirSync(dbDir, { recursive: true });
+      fs.default.mkdirSync(dbDir, { recursive: true });
     }
     
-    const db = new sqlite3.Database(dbPath);
+    const { Database } = sqlite3.default.verbose();
+    const db = new Database(dbPath);
     
     // Drop and recreate users table
     db.run('DROP TABLE IF EXISTS users');
@@ -139,7 +140,7 @@ app.get('/api/temp-reset-admin', async (req, res) => {
     )`);
     
     // Create admin user
-    const passwordHash = bcrypt.hashSync('admin123', 10);
+    const passwordHash = bcrypt.default.hashSync('admin123', 10);
     
     db.run(
       'INSERT INTO users (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
