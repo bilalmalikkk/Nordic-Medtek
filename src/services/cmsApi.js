@@ -1,7 +1,8 @@
 // CMS API service for connecting to the integrated CMS
-const API_URL = import.meta.env.VITE_CMS_URL || 'http://localhost:3001/api';
+// Use relative URLs for production (Vercel proxy) or localhost for development
+const API_URL = import.meta.env.PROD ? '/api' : (import.meta.env.VITE_CMS_URL || 'http://localhost:3001/api');
 // Base without trailing /api for assets like /uploads/...
-const API_BASE_URL = API_URL.replace(/\/?api\/?$/, '');
+const API_BASE_URL = import.meta.env.PROD ? '' : API_URL.replace(/\/?api\/?$/, '');
 
 class CmsApiService {
   async request(endpoint, options = {}) {
