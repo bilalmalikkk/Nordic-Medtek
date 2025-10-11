@@ -106,6 +106,61 @@ app.get('/api/health', (req, res) => {
     });
 });
 
+// TEMPORARY DATABASE CHECK ENDPOINT - REMOVE AFTER USE!
+app.get('/api/temp-check-db', async (req, res) => {
+  try {
+    console.log('🔍 TEMPORARY DATABASE CHECK ENDPOINT CALLED');
+    
+    const sqlite3 = await import('sqlite3');
+    const path = await import('path');
+    const fs = await import('fs');
+    
+    const dbPath = '/app/data/cms.db';
+    console.log('📁 Database path:', dbPath);
+    console.log('📁 Database exists:', fs.default.existsSync(dbPath));
+    
+    const { Database } = sqlite3.default.verbose();
+    const db = new Database(dbPath);
+    
+    // Check users table
+    db.all('SELECT * FROM users', (err, rows) => {
+      if (err) {
+        console.error('❌ Error querying users:', err);
+        res.status(500).json({ 
+          error: 'Database query failed', 
+          details: err.message 
+        });
+      } else {
+        console.log('📊 Users found:', rows.length);
+        rows.forEach((user, index) => {
+          console.log(`👤 User ${index + 1}:`, user.username, user.email);
+        });
+        
+        res.json({ 
+          success: true,
+          message: 'Database check completed',
+          userCount: rows.length,
+          users: rows.map(u => ({ 
+            id: u.id, 
+            username: u.username, 
+            email: u.email, 
+            role: u.role,
+            is_active: u.is_active 
+          }))
+        });
+      }
+      
+      db.close();
+    });
+  } catch (error) {
+    console.error('❌ Database check error:', error);
+    res.status(500).json({ 
+      error: 'Check failed', 
+      details: error.message 
+    });
+  }
+});
+
 // TEMPORARY ADMIN RESET ENDPOINT - REMOVE AFTER USE!
 app.get('/api/temp-reset-admin', async (req, res) => {
   try {
