@@ -102,6 +102,96 @@ app.get('/api/health', (req, res) => {
     });
 });
 
+// TEMPORARY ADMIN RESET ENDPOINT - REMOVE AFTER USE!
+app.post('/api/temp-reset-admin', async (req, res) => {
+  try {
+    console.log('🔧 TEMPORARY ADMIN RESET ENDPOINT CALLED');
+    
+    const bcrypt = require('bcryptjs');
+    const sqlite3 = require('sqlite3');
+    const path = require('path');
+    const fs = require('fs');
+    
+    const dbPath = path.join(__dirname, 'database/cms.db');
+    console.log('📁 Database path:', dbPath);
+    console.log('📁 Database exists:', fs.existsSync(dbPath));
+    
+    // Ensure directory exists
+    const dbDir = path.dirname(dbPath);
+    if (!fs.existsSync(dbDir)) {
+      console.log('📁 Creating database directory...');
+      fs.mkdirSync(dbDir, { recursive: true });
+    }
+    
+    const db = new sqlite3.Database(dbPath);
+    
+    // Drop and recreate users table
+    db.run('DROP TABLE IF EXISTS users');
+    db.run(`CREATE TABLE users (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      username VARCHAR(50) UNIQUE NOT NULL,
+      email VARCHAR(100) UNIQUE NOT NULL,
+      password_hash VARCHAR(255) NOT NULL,
+      role VARCHAR(20) DEFAULT 'admin',
+      is_active BOOLEAN DEFAULT 1,
+      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+      updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    )`);
+    
+    // Create admin user
+    const passwordHash = bcrypt.hashSync('admin123', 10);
+    
+    db.run(
+      'INSERT INTO users (username, email, password_hash, role) VALUES (?, ?, ?, ?)',
+      ['admin', 'admin@nordicmedtek.com', passwordHash, 'admin'],
+      function(err) {
+        if (err) {
+          console.error('❌ Error creating admin:', err);
+          res.status(500).json({ 
+            error: 'Failed to create admin user', 
+            details: err.message 
+          });
+        } else {
+          console.log('✅ Admin user created successfully!');
+          console.log('   ID:', this.lastID);
+          console.log('   Username: admin');
+          console.log('   Password: admin123');
+          
+          // Verify
+          db.get('SELECT * FROM users WHERE username = ?', ['admin'], (err, user) => {
+            if (err) {
+              console.error('❌ Verification error:', err);
+            } else if (user) {
+              console.log('✅ Verification successful:', user.username, user.email);
+            } else {
+              console.log('❌ Verification failed: user not found');
+            }
+            
+            db.close();
+            
+            res.json({ 
+              success: true, 
+              message: 'Admin user reset successfully',
+              credentials: { 
+                username: 'admin', 
+                password: 'admin123',
+                email: 'admin@nordicmedtek.com'
+              },
+              userId: this.lastID
+            });
+          });
+        }
+      }
+    );
+  } catch (error) {
+    console.error('❌ Reset endpoint error:', error);
+    res.status(500).json({ 
+      error: 'Reset failed', 
+      details: error.message 
+    });
+  }
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
     console.error(err.stack);
