@@ -12,8 +12,12 @@ router.post('/login', [
     body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters')
 ], async (req, res) => {
     try {
+        console.log('🔐 Login attempt from:', req.headers.origin || req.ip);
+        console.log('🔐 Request body:', { username: req.body.username, password: '[HIDDEN]' });
+        
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
+            console.log('❌ Validation errors:', errors.array());
             return res.status(400).json({ errors: errors.array() });
         }
 

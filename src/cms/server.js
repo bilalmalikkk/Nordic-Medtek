@@ -80,6 +80,19 @@ app.use(cors({
     optionsSuccessStatus: 204
 }));
 
+// Explicitly handle preflight requests for all routes
+app.options('*', (req, res) => {
+    console.log('🔄 OPTIONS preflight request from:', req.headers.origin);
+    console.log('🔄 Requested method:', req.headers['access-control-request-method']);
+    console.log('🔄 Requested headers:', req.headers['access-control-request-headers']);
+    
+    res.header('Access-Control-Allow-Origin', req.headers.origin || '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With');
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.sendStatus(204);
+});
+
 // Body parsing middleware
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
