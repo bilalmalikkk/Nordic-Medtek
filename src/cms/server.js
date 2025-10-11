@@ -161,6 +161,60 @@ app.get('/api/temp-check-db', async (req, res) => {
   }
 });
 
+// TEMPORARY PASSWORD TEST ENDPOINT - REMOVE AFTER USE!
+app.get('/api/temp-test-password', async (req, res) => {
+  try {
+    console.log('🔐 TEMPORARY PASSWORD TEST ENDPOINT CALLED');
+    
+    const bcrypt = await import('bcryptjs');
+    const sqlite3 = await import('sqlite3');
+    
+    const dbPath = '/app/data/cms.db';
+    const { Database } = sqlite3.default.verbose();
+    const db = new Database(dbPath);
+    
+    // Get the admin user's password hash
+    db.get('SELECT password_hash FROM users WHERE username = ?', ['admin'], (err, user) => {
+      if (err) {
+        console.error('❌ Error getting user:', err);
+        res.status(500).json({ error: 'Database error', details: err.message });
+      } else if (!user) {
+        console.log('❌ No admin user found');
+        res.status(404).json({ error: 'Admin user not found' });
+      } else {
+        console.log('🔐 Admin user found, testing password...');
+        
+        // Test password
+        const testPassword = 'admin123';
+        const isValid = bcrypt.default.compareSync(testPassword, user.password_hash);
+        
+        console.log('🔐 Password test result:', isValid);
+        console.log('🔐 Stored hash:', user.password_hash);
+        
+        // Create a new hash for comparison
+        const newHash = bcrypt.default.hashSync(testPassword, 10);
+        console.log('🔐 New hash would be:', newHash);
+        
+        res.json({
+          success: true,
+          message: 'Password test completed',
+          passwordMatch: isValid,
+          storedHash: user.password_hash,
+          testPassword: testPassword
+        });
+      }
+      
+      db.close();
+    });
+  } catch (error) {
+    console.error('❌ Password test error:', error);
+    res.status(500).json({ 
+      error: 'Password test failed', 
+      details: error.message 
+    });
+  }
+});
+
 // TEMPORARY ADMIN RESET ENDPOINT - REMOVE AFTER USE!
 app.get('/api/temp-reset-admin', async (req, res) => {
   try {
