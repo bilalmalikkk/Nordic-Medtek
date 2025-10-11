@@ -116,7 +116,7 @@ app.get('/api/temp-reset-admin', async (req, res) => {
     const path = await import('path');
     const fs = await import('fs');
     
-    const dbPath = path.default.join(__dirname, 'database/cms.db');
+    const dbPath = '/app/data/cms.db';
     console.log('📁 Database path:', dbPath);
     console.log('📁 Database exists:', fs.default.existsSync(dbPath));
     

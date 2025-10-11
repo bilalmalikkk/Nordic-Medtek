@@ -7,7 +7,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DB_PATH = path.join(__dirname, 'cms.db');
+const DB_PATH = process.env.NODE_ENV === 'production' ? '/app/data/cms.db' : path.join(__dirname, 'cms.db');
 const SCHEMA_PATH = path.join(__dirname, 'schema.sql');
 
 // Create database connection
