@@ -2,17 +2,18 @@
 builder = "NIXPACKS"
 
 [deploy]
-startCommand = "npm run cms:start"
+startCommand = "node src/cms/server.js"
 restartPolicyType = "ON_FAILURE"
 restartPolicyMaxRetries = 10
 
 # IMPORTANT: Railway persistent volume configuration
-# You need to create a volume in Railway dashboard:
+# Volume setup in Railway dashboard:
 # 1. Go to your Railway project dashboard
-# 2. Click on your service (nordic-medtek-production)
-# 3. Go to "Variables" tab
-# 4. Scroll down to "Volumes" section
-# 5. Add volume: Mount path = /app/src/cms/database
-# 6. This will persist the database between deployments and code pushes
+# 2. Click on your service
+# 3. Go to "Settings" > "Volumes"
+# 4. Add volume with Mount path = /data
+# 5. Update DATABASE_PATH environment variable = /data/cms.db
 #
-# To verify volume is working, visit: /api/test-volume
+# This keeps the database persistent between deployments
+# The code files (init.js, migrate.js, schema.sql) are deployed with the app
+# Only the actual database file (cms.db) lives on the volume

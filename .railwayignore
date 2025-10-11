@@ -1,0 +1,42 @@
+# Railway Ignore File
+# These files/folders will NOT be deployed to Railway
+
+# Development files
+node_modules/
+.git/
+.vscode/
+.idea/
+
+# Build artifacts
+dist/
+dist-ssr/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+temp/
+*.tmp
+
+# Local environment files
+*.local
+
+# Keep these important files (don't ignore):
+# - src/**/*.js (all JavaScript source files)
+# - src/**/*.sql (database schema files)
+# - package.json, package-lock.json
+# - railway.toml
+
+# User uploads (these should be on Railway volume)
+uploads/
+
+# Database file (will be created on Railway volume)
+*.db
+*.sqlite
+*.sqlite3
+
+# OS files
+.DS_Store
+Thumbs.db
+

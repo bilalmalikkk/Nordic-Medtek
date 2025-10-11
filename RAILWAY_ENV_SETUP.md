@@ -7,6 +7,7 @@ Make sure these environment variables are set in your Railway project:
 ```
 NODE_ENV=production
 PORT=3001
+DATABASE_PATH=/data/cms.db
 JWT_SECRET=your-secure-jwt-secret-here
 FRONTEND_URL=https://nordic-medtek.vercel.app
 CORS_ORIGIN=https://nordic-medtek.vercel.app
@@ -16,6 +17,8 @@ DEFAULT_ADMIN_USERNAME=admin
 DEFAULT_ADMIN_EMAIL=admin@nordicmedtek.com
 DEFAULT_ADMIN_PASSWORD=your-secure-password-here
 ```
+
+**IMPORTANT:** The `DATABASE_PATH` should point to your Railway volume mount path.
 
 ## How to Set Variables in Railway
 

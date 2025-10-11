@@ -5,8 +5,13 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DB_PATH = path.join(__dirname, 'cms.db');
+// Use the same database path logic as init.js
+// Priority: 1. Custom env var, 2. Railway volume path, 3. Local path
+const DB_PATH = process.env.DATABASE_PATH 
+    || (process.env.NODE_ENV === 'production' ? '/data/cms.db' : path.join(__dirname, 'cms.db'));
 const { Database } = sqlite3.verbose();
+
+console.log('🔍 Migration database path:', DB_PATH);
 
 async function runMigrations() {
     return new Promise((resolve, reject) => {

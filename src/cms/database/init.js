@@ -8,9 +8,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Handle Railway deployment database path
-const DB_PATH = process.env.NODE_ENV === 'production' 
-    ? path.join('/app/src/cms/database', 'cms.db')
-    : path.join(__dirname, 'cms.db');
+// Priority: 1. Custom env var, 2. Railway volume path, 3. Local path
+const DB_PATH = process.env.DATABASE_PATH 
+    || (process.env.NODE_ENV === 'production' ? '/data/cms.db' : path.join(__dirname, 'cms.db'));
 const SCHEMA_PATH = path.join(__dirname, 'schema.sql');
 
 // Create database connection with error handling
@@ -20,6 +20,13 @@ console.log('🔍 Database configuration:');
 console.log('   Environment:', process.env.NODE_ENV);
 console.log('   Database path:', DB_PATH);
 console.log('   Schema path:', SCHEMA_PATH);
+
+// Ensure the database directory exists
+const dbDir = path.dirname(DB_PATH);
+if (!fs.existsSync(dbDir)) {
+    console.log('📁 Creating database directory:', dbDir);
+    fs.mkdirSync(dbDir, { recursive: true });
+}
 
 const db = new Database(DB_PATH, (err) => {
     if (err) {
