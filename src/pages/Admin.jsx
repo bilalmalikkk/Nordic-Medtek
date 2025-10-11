@@ -99,7 +99,7 @@ export default function Admin() {
       setError(null);
       
       const [productsResponse, categoriesResponse] = await Promise.all([
-        CmsApiService.getProducts(),
+        CmsApiService.getProducts({ status: '' }), // Empty status to get ALL products (DRAFT, PUBLISHED, ARCHIVED)
         CmsApiService.getCategories()
       ]);
       
