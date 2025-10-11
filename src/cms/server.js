@@ -64,7 +64,7 @@ const limiter = rateLimit({
 });
 app.use(limiter);
 
-// CORS configuration - simplified and more reliable
+// CORS configuration
 app.use(cors({
     origin: [
         'http://localhost:5173',
