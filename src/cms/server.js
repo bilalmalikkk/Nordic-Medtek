@@ -103,7 +103,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // TEMPORARY ADMIN RESET ENDPOINT - REMOVE AFTER USE!
-app.post('/api/temp-reset-admin', async (req, res) => {
+app.get('/api/temp-reset-admin', async (req, res) => {
   try {
     console.log('🔧 TEMPORARY ADMIN RESET ENDPOINT CALLED');
     
