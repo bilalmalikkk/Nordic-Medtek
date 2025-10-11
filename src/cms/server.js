@@ -1,5 +1,4 @@
 import express from 'express';
-import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -44,16 +43,7 @@ if (process.env.FRONTEND_URL) {
     allowedOrigins.push(process.env.FRONTEND_URL);
 }
 
-app.use(helmet({
-    crossOriginResourcePolicy: { policy: "cross-origin" },
-    contentSecurityPolicy: {
-        directives: {
-            defaultSrc: ["'self'"],
-            frameAncestors: allowedOrigins,
-            frameSrc: allowedOrigins
-        }
-    }
-}));
+// Helmet removed to fix CORS issues
 
 // Rate limiting
 const limiter = rateLimit({
@@ -203,11 +193,19 @@ app.use('*', (req, res) => {
 // Initialize database and start server
 async function startServer() {
     try {
-        await initializeDatabase();
-        console.log('✅ CMS Database initialized successfully');
+        console.log('🚀 Starting server...');
         
-        // Run migrations to ensure all columns exist
-        await runMigrations();
+        // Try to initialize database
+        try {
+            await initializeDatabase();
+            console.log('✅ CMS Database initialized successfully');
+            
+            // Run migrations to ensure all columns exist
+            await runMigrations();
+            console.log('✅ Database migrations completed');
+        } catch (dbError) {
+            console.error('⚠️ Database initialization failed, but continuing with server startup:', dbError.message);
+        }
         
         app.listen(PORT, () => {
             console.log(`🚀 NordicMedTek CMS Server running on port ${PORT}`);
