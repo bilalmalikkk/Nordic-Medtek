@@ -36,7 +36,9 @@ app.set('trust proxy', 1);
 const allowedOrigins = [
     "'self'",
     "http://localhost:5173",
-    "https://localhost:5173"
+    "https://localhost:5173",
+    "https://nordic-medtek.vercel.app",
+    "https://nordic-medtek-git-main-mikals-projects.vercel.app"
 ];
 
 // Add production frontend URL if specified
@@ -70,6 +72,8 @@ app.use(cors({
         'https://localhost:5173',
         'http://localhost:3000',
         'https://localhost:3000',
+        'https://nordic-medtek.vercel.app',
+        'https://nordic-medtek-git-main-mikals-projects.vercel.app',
         process.env.FRONTEND_URL
     ].filter(Boolean),
     credentials: true,
