@@ -127,21 +127,43 @@ app.get('/api/temp-reset-admin', async (req, res) => {
       fs.default.mkdirSync(dbDir, { recursive: true });
     }
     
-    const { Database } = sqlite3.default.verbose();
-    const db = new Database(dbPath);
-    
-    // Drop and recreate users table
-    db.run('DROP TABLE IF EXISTS users');
-    db.run(`CREATE TABLE users (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      username VARCHAR(50) UNIQUE NOT NULL,
-      email VARCHAR(100) UNIQUE NOT NULL,
-      password_hash VARCHAR(255) NOT NULL,
-      role VARCHAR(20) DEFAULT 'admin',
-      is_active BOOLEAN DEFAULT 1,
-      created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-      updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
-    )`);
+            const { Database } = sqlite3.default.verbose();
+            const db = new Database(dbPath);
+            
+            // Initialize database schema first
+            console.log('🔧 Initializing database schema...');
+            
+            // Read and execute schema.sql
+            const schemaPath = path.default.join(__dirname, 'database/schema.sql');
+            console.log('📁 Schema path:', schemaPath);
+            console.log('📁 Schema exists:', fs.default.existsSync(schemaPath));
+            
+            if (fs.default.existsSync(schemaPath)) {
+              const schemaSQL = fs.default.readFileSync(schemaPath, 'utf8');
+              console.log('📄 Schema SQL loaded, executing...');
+              
+              // Execute schema
+              db.exec(schemaSQL, (err) => {
+                if (err) {
+                  console.error('❌ Schema execution error:', err);
+                } else {
+                  console.log('✅ Schema executed successfully');
+                }
+              });
+            }
+            
+            // Drop and recreate users table (in case it exists)
+            db.run('DROP TABLE IF EXISTS users');
+            db.run(`CREATE TABLE users (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              username VARCHAR(50) UNIQUE NOT NULL,
+              email VARCHAR(100) UNIQUE NOT NULL,
+              password_hash VARCHAR(255) NOT NULL,
+              role VARCHAR(20) DEFAULT 'admin',
+              is_active BOOLEAN DEFAULT 1,
+              created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+              updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+            )`);
     
     // Create admin user
     const passwordHash = bcrypt.default.hashSync('admin123', 10);
