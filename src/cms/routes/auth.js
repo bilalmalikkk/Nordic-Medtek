@@ -1,16 +1,10 @@
 import express from 'express';
 import bcrypt from 'bcryptjs';
 import { body, validationResult } from 'express-validator';
-import { queryOne, update, insert } from '../database/db.js';
+import { queryOne, update, insert } from '../database/init.js';
 import { generateToken, authenticateToken } from '../middleware/auth.js';
 
 const router = express.Router();
-
-// Test endpoint to verify auth routes are working
-router.get('/test', (req, res) => {
-    console.log('🔐 Auth test endpoint hit from:', req.headers.origin || req.ip);
-    res.json({ message: 'Auth routes are working!', timestamp: new Date().toISOString() });
-});
 
 // Login endpoint
 router.post('/login', [
@@ -18,12 +12,8 @@ router.post('/login', [
     body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters')
 ], async (req, res) => {
     try {
-        console.log('🔐 Login attempt from:', req.headers.origin || req.ip);
-        console.log('🔐 Request body:', { username: req.body.username, password: '[HIDDEN]' });
-        
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            console.log('❌ Validation errors:', errors.array());
             return res.status(400).json({ errors: errors.array() });
         }
 
