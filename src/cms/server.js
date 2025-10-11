@@ -152,18 +152,8 @@ app.get('/api/temp-reset-admin', async (req, res) => {
               });
             }
             
-            // Drop and recreate users table (in case it exists)
-            db.run('DROP TABLE IF EXISTS users');
-            db.run(`CREATE TABLE users (
-              id INTEGER PRIMARY KEY AUTOINCREMENT,
-              username VARCHAR(50) UNIQUE NOT NULL,
-              email VARCHAR(100) UNIQUE NOT NULL,
-              password_hash VARCHAR(255) NOT NULL,
-              role VARCHAR(20) DEFAULT 'admin',
-              is_active BOOLEAN DEFAULT 1,
-              created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-              updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
-            )`);
+            // Clear existing admin users (if any)
+            db.run('DELETE FROM users WHERE username = ?', ['admin']);
     
     // Create admin user
     const passwordHash = bcrypt.default.hashSync('admin123', 10);
