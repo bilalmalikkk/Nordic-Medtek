@@ -156,7 +156,7 @@ export default function Products() {
                 </Link>
                 <Link
                   to="/medical-followup-products"
-                  className="inline-flex items-center gap-2 bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
+                  className="inline-flex items-center gap-2 bg-teal-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-900 transition-colors"
                 >
                   Medisinsk oppfølging
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
