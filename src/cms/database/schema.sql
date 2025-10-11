@@ -117,9 +117,8 @@ CREATE TABLE IF NOT EXISTS settings (
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
--- Insert default admin user (password: admin123)
-INSERT OR IGNORE INTO users (username, email, password_hash, role) 
-VALUES ('admin', 'admin@nordicmedtek.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
+-- Insert default admin user (will be created by ensureAdminUser function with proper environment variables)
+-- This is just a fallback - the actual admin user is created in init.js with proper password hashing
 
 -- Insert default categories based on CSV analysis
 INSERT OR IGNORE INTO categories (name, slug, description, icon, color, sort_order) VALUES

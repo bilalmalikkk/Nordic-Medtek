@@ -7,45 +7,87 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DB_PATH = process.env.NODE_ENV === 'production' ? '/app/src/cms/database/cms.db' : path.join(__dirname, 'cms.db');
+// Handle Railway deployment database path
+const DB_PATH = process.env.NODE_ENV === 'production' 
+    ? path.join('/app/src/cms/database', 'cms.db')
+    : path.join(__dirname, 'cms.db');
 const SCHEMA_PATH = path.join(__dirname, 'schema.sql');
 
-// Create database connection
+// Create database connection with error handling
 const { Database } = sqlite3.verbose();
-const db = new Database(DB_PATH);
+
+console.log('🔍 Database configuration:');
+console.log('   Environment:', process.env.NODE_ENV);
+console.log('   Database path:', DB_PATH);
+console.log('   Schema path:', SCHEMA_PATH);
+
+const db = new Database(DB_PATH, (err) => {
+    if (err) {
+        console.error('❌ Database connection error:', err);
+        throw err;
+    } else {
+        console.log('✅ Database connection established successfully');
+    }
+});
 
 async function ensureAdminUser() {
     try {
         const existingAdmin = await dbHelpers.queryOne('SELECT * FROM users WHERE username = ?', ['admin']);
         if (!existingAdmin) {
             console.log('Creating default admin user...');
+            
+            // Use environment variables for admin credentials
+            const adminUsername = process.env.DEFAULT_ADMIN_USERNAME || 'admin';
+            const adminEmail = process.env.DEFAULT_ADMIN_EMAIL || 'admin@nordicmedtek.com';
+            const adminPassword = process.env.DEFAULT_ADMIN_PASSWORD || 'admin123';
+            
+            // Hash the password using bcrypt
+            const bcrypt = await import('bcryptjs');
+            const passwordHash = await bcrypt.hash(adminPassword, parseInt(process.env.BCRYPT_ROUNDS) || 10);
+            
             await db.run(
-                "INSERT INTO users (username, email, password_hash, role) VALUES ('admin', 'admin@nordicmedtek.com', '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin')"
+                "INSERT INTO users (username, email, password_hash, role, is_active) VALUES (?, ?, ?, 'admin', 1)",
+                [adminUsername, adminEmail, passwordHash]
             );
-            console.log('✅ Default admin user created');
+            console.log('✅ Default admin user created with username:', adminUsername);
+        } else {
+            console.log('✅ Admin user already exists');
         }
     } catch (error) {
-        console.error('Error ensuring admin user:', error);
+        console.error('❌ Error ensuring admin user:', error);
+        throw error;
     }
 }
 
 async function initializeDatabase() {
     return new Promise((resolve, reject) => {
+        console.log('🚀 Initializing database...');
+        
         if (!fs.existsSync(SCHEMA_PATH)) {
-            reject(new Error('Schema file not found'));
+            const error = new Error(`Schema file not found at: ${SCHEMA_PATH}`);
+            console.error('❌', error.message);
+            reject(error);
             return;
         }
 
+        console.log('📄 Reading schema file...');
         const schema = fs.readFileSync(SCHEMA_PATH, 'utf8');
         
+        console.log('🔧 Executing database schema...');
         db.exec(schema, async (err) => {
             if (err) {
-                console.error('Error initializing database:', err);
+                console.error('❌ Error initializing database:', err);
                 reject(err);
             } else {
-                console.log('Database schema loaded successfully');
-                await ensureAdminUser();
-                resolve();
+                console.log('✅ Database schema loaded successfully');
+                try {
+                    await ensureAdminUser();
+                    console.log('✅ Database initialization completed');
+                    resolve();
+                } catch (adminError) {
+                    console.error('❌ Error creating admin user:', adminError);
+                    reject(adminError);
+                }
             }
         });
     });
