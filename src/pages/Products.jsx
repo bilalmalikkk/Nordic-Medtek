@@ -35,10 +35,15 @@ export default function Products() {
   
   // Debug: Log the products being used
   console.log('=== PRODUCTS PAGE DEBUG ===')
+  console.log('API_BASE_URL:', API_BASE_URL)
   console.log('Products from CMS:', products)
   console.log('Products loading:', productsLoading)
   console.log('Products error:', productsError)
   console.log('Display products:', displayProducts)
+  if (products.length > 0) {
+    console.log('Sample product image URL:', products[0].image_url)
+    console.log('Full image URL would be:', products[0].image_url ? `${API_BASE_URL}${products[0].image_url}` : 'No image')
+  }
   console.log('==========================')
   const isLoading = productsLoading || categoriesLoading
   const hasError = productsError && products.length === 0
@@ -200,19 +205,23 @@ export default function Products() {
                         onClick={() => openModal(product)}
                       >
                         <div className="aspect-w-16 aspect-h-12 bg-gray-100">
-                          {product.image_url ? (
+                          {product.image_url && !product.image_url.startsWith('wix:') ? (
                             <img 
                               src={product.image_url.startsWith('http') ? product.image_url : `${API_BASE_URL}${product.image_url}`}
                               alt={product.product_name}
                               className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                              onError={(e) => {
+                                console.error('Image failed to load:', e.target.src);
+                                e.target.style.display = 'none';
+                                e.target.nextSibling.style.display = 'flex';
+                              }}
                             />
-                          ) : (
-                            <div className="w-full h-48 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center">
-                              <svg className="w-12 h-12 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                              </svg>
-                            </div>
-                          )}
+                          ) : null}
+                          <div className={`w-full h-48 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center ${product.image_url && !product.image_url.startsWith('wix:') ? 'hidden' : ''}`}>
+                            <svg className="w-12 h-12 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                            </svg>
+                          </div>
                         </div>
                         
                         <div className="p-6 flex flex-col flex-grow text-left">
