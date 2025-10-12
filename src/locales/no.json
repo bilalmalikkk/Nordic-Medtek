@@ -750,11 +750,25 @@
   "hero": {
     "title1": "Vi tar vare på deg,\nuansett hvor du er i livsløpet",
     "title2": "",
-    "lead": "Vi utvikler innovative løsninger som gir brukerne trygghet,\nverdighet og bedre livskvalitet",
+    "lead": "\"Vi utvikler innovative løsninger som gir brukerne trygghet,\nverdighet og bedre livskvalitet\"",
     "button": "Se hvordan det fungerer"
   },
   "home": {
     "whoAreYou": "Hvem er du",
+    "smartOvervakning": {
+      "title": "Smart overvåkning",
+      "subtitle": "som gir trygghet for familie og omsorgspersoner",
+      "originalText": {
+        "paragraph1": "Vi tilbyr omfattende løsninger for hele aldringsreisen. Enten du er privatperson som ønsker ekstra trygghet for dine kjære, eller du representerer en kommune som ønsker å innføre velferdsteknologi.",
+        "paragraph2": "Vår skalerbare løsning kan gå fra en enkel sensor til en komplett løsning med daglig oppfølging av medisinsk personale."
+      },
+      "editedVersion": {
+        "header": "Redigert versjon:",
+        "paragraph1": "Enten du er privatperson som ønsker ekstra trygghet for dine kjære, eller du representerer en kommune som ønsker å innføre velferdsteknologi.",
+        "paragraph2": "Vi tilbyr løsninger for hele aldringsreisen.",
+        "paragraph3": "Våre skalerbare produkter kan gå fra en enkel sensor til en komplett løsning med daglig oppfølging av medisinsk personale."
+      }
+    },
     "fallDetection": {
       "title": "Avansert fallalarm teknologi",
       "subtitle": "diskret overvåkning som respekterer privatlivet",
@@ -768,11 +782,12 @@
       "description2": "Vår løsning integrerer seg sømløst i hverdagen, slik at brukeren kan leve trygt og uavhengig i sitt eget hjem, mens familien og omsorgspersoner får ro i sjelen."
     },
     "digitaltTilsyn": {
-      "title": "Enkelhet",
+      "title": "Enkelt",
       "subtitle": "Løsninger med fokus på enkelthet",
-      "description1": "Det er ansett som enkelt å lage et avansert system, som ser og føles avansert. Vår filosofi er å lage det mest avanserte systemet, som skal føles som det enkleste. Det er det som gjøre vårt system så unikt!",
-      "description2": "Det er stort arbeidspress på arbeidere i helsesektoren, og kompliserte systemer har ofte ført til liten eller ingen tidsbesparelse. Vårt mål fra første dag av utvikling har vært å lage et system som er svært enkelt å bruke og installere. Selv om vi mener vi har et av de mest komplette systemer i marked, krever det ingen teknisk kunnskap å sette opp og bruke våre løsninger.",
-      "link": "",
+      "description1": "Det mest avanserte systemet, skal oppleves som det enkleste. Der ligger vårt forsprang.",
+      "description2": "Stort arbeidspress i helsesektoren og kompliserte systemer, har ofte ført til liten eller ingen tidsbesparelse.",
+      "description3": "Våre systemer er derimot svært enkle å bruke og installere og krever ingen teknisk kunnskap. Dette skaper trygghet og frigjør viktig tid.",
+      "link": "Les mer her",
       "linkUrl": ""
     },
     "medicalHome": {
@@ -783,24 +798,25 @@
     },
     "easeBlink": {
       "title": "easeBlink",
-      "subtitle": "Trygghetsskapende teknologi",
+      "subtitle": "vi vil mer en bare sensorer og teknologi",
       "description1": "Mange eldre, spesielt de med begrenset mobilitet, opplever isolasjon. Videokonferanser lar dem opprettholde kontakt med familie og venner, se ansiktene deres og høre stemmene deres i sanntid. Dette skaper en følelse av tilstedeværelse og fellesskap som tradisjonelle telefoner og tekstmeldinger ikke kan erstatte.",
       "description2": "Bilde deling i form av en digital karusell gjør det mulig å dele minner, feiringer og hverdagsøyeblikk. Dette bringer glede og gir samtaleemner. Løsningen har et svært enkelt brukergrensesnitt, noe som gjør den tilgjengelig for eldre med varierende grader av kognitiv svekkelse.",
       "link": "les mer om kamerakroken her"
     },
     "madeInNorway": {
-      "title": "Made in Norway",
-      "subtitle": "Derfor bør du velge et produkt laget i Norge",
-      "description1": "Når du velger et produkt som er laget i Norge, velger du mer enn bare kvalitet – du investerer i bærekraft, trygghet og stolthet.",
+      "title": "Norsk kvalitet",
+      "subtitle": "derfor bør du velge et produkt laget i Norge",
+      "description1": "Når du velger et produkt som er laget i Norge, velger du mer enn bare kvalitet. Du investerer i bærekraft, trygghet og stolthet.",
       "quality": {
         "title": "Kvalitet",
         "description": "Norske produkter er kjent for sin høye standard. Med fokus på presisjon, godt håndverk og nøye utvalgte materialer, får du et produkt som varer – og som leverer, gang på gang."
       },
       "sustainability": {
         "title": "Bærekraftig og ansvarlig produksjon",
-        "description": "Produksjon i Norge følger strenge miljøkrav og etisk arbeidspraksis. Det betyr at du støtter en grønnere fremtid og rettferdige arbeidsforhold – uten å gå på kompromiss med kvaliteten. Med unntak av noen enkle tredjeparts bluetooth enheter produseres alle våre produkter i Norge."
+        "description": "Produksjon i Norge følger strenge miljøkrav og etisk arbeidspraksis. Det betyr at du støtter en grønnere fremtid og rettferdige arbeidsforhold, uten å gå på kompromiss med kvaliteten."
       }
     },
+    "howItWorksButton": "Se hvordan det fungerer",
     "targetAudiences": {
       "municipalities": {
         "title": "For kommuner",

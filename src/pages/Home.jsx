@@ -9,6 +9,9 @@ import elderlySensorsImage from '../assets/eldre dame med sensorer.jpg'
 import phoneImage from '../assets/Phone_lowres.png'
 import madeInNorwayImage from '../assets/image-Norway.png'
 import digitaltTilsynImage from '../assets/Digitalt tilsyn.jpg'
+import n1Image from '../assets/n1.png'
+import n3Image from '../assets/n3.png'
+import n5Image from '../assets/n5.png'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -47,26 +50,32 @@ export default function Home() {
             {/* Text Content */}
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-gray-900">
-                Smart overvåkning
+                {t('home.smartOvervakning.title')}
               </h2>
               <p className="text-xl text-gray-600 italic">
-                som gir trygghet for familie og omsorgspersoner
+                {t('home.smartOvervakning.subtitle')}
               </p>
-              <div className="space-y-4 text-gray-700 leading-relaxed">
-                <p>
-                  Vi tilbyr omfattende løsninger for hele aldringsreisen. Enten du er privatperson som ønsker ekstra trygghet for dine kjære, eller du representerer en kommune som ønsker å innføre velferdsteknologi.
-                </p>
-                <p>
-                  Vår skalerbare løsning kan gå fra en enkel sensor til en komplett løsning med daglig oppfølging av medisinsk personale.
-                </p>
+              <div className="text-gray-700 leading-relaxed">
+                {/* Edited Version Only */}
+                <div className="space-y-4">
+                  <p>
+                    {t('home.smartOvervakning.editedVersion.paragraph1')}
+                  </p>
+                  <p>
+                    {t('home.smartOvervakning.editedVersion.paragraph2')}
+                  </p>
+                  <p>
+                    {t('home.smartOvervakning.editedVersion.paragraph3')}
+                  </p>
+                </div>
               </div>
             </div>
             
             {/* Image */}
             <div className="relative flex justify-end">
               <img 
-                src={eldreMannImage} 
-                alt="Elderly man in living room with smart home technology" 
+                src={n1Image} 
+                alt="Elderly woman knitting in a comfortable living room setting" 
                 className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
@@ -82,8 +91,8 @@ export default function Home() {
             {/* Image */}
             <div className="relative flex justify-start order-2 md:order-1">
               <img 
-                src={elderlySensorsImage} 
-                alt="Elderly woman in living room with sensor technology overlay" 
+                src={n3Image} 
+                alt="Two women in a home setting with smart home technology overlays" 
                 className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
@@ -118,15 +127,15 @@ export default function Home() {
               <h2 className="text-4xl font-bold text-gray-900 italic">
                 {t('home.digitaltTilsyn.title')}
               </h2>
-              <p className="text-xl text-gray-600 italic">
-                {t('home.digitaltTilsyn.subtitle')}
-              </p>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
                   {t('home.digitaltTilsyn.description1')}
                 </p>
                 <p>
                   {t('home.digitaltTilsyn.description2')}
+                </p>
+                <p>
+                  {t('home.digitaltTilsyn.description3')}
                 </p>
                 <div className="pt-4">
                   <a 
@@ -147,8 +156,8 @@ export default function Home() {
             {/* Image */}
             <div className="relative flex justify-end">
               <img 
-                src={digitaltTilsynImage} 
-                alt="Digital supervision technology with elderly woman" 
+                src={n5Image} 
+                alt="Two women in a home setting with smart home technology" 
                 className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
@@ -239,6 +248,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* How It Works Button */}
+      <div className="flex justify-center py-10 bg-white">
+        <button className="bg-gray-800 text-white px-8 py-4 rounded-lg text-xl italic hover:bg-gray-700 transition-colors">
+          {t('home.howItWorksButton')}
+        </button>
+      </div>
 
 
       {/* Hvem er du Section */}

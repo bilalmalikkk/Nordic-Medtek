@@ -108,7 +108,7 @@
       "email": "Email",
       "whoFor": "Who is this for",
       "concerns": "What are you most concerned about?",
-      "description": "Description of situation",
+      "descriptionLabel": "Description of situation",
       "newsletters": "Yes, send me gladly",
       "submit": "Submit form",
       "footer": "We usually contact you the same or next business day."
@@ -750,7 +750,7 @@
   "hero": {
     "title1": "Live safely at home, longer",
     "title2": "",
-    "lead": "Smart monitoring that provides peace of mind for families and caregivers",
+    "lead": "\"Smart monitoring that provides peace of mind for families and caregivers\"",
     "button": "See how it works"
   },
   "guidance": {
@@ -770,6 +770,29 @@
   },
   "home": {
     "whoAreYou": "Who are you",
+    "smartOvervakning": {
+      "title": "Smart monitoring",
+      "subtitle": "that provides security for family and caregivers",
+      "originalText": {
+        "paragraph1": "We offer comprehensive solutions for the entire aging journey. Whether you are a private person who wants extra security for your loved ones, or you represent a municipality that wants to introduce welfare technology.",
+        "paragraph2": "Our scalable solution can range from a simple sensor to a complete solution with daily follow-up by medical personnel."
+      },
+      "editedVersion": {
+        "header": "Edited version:",
+        "paragraph1": "Whether you are a private person who wants extra security for your loved ones, or you represent a municipality that wants to introduce welfare technology.",
+        "paragraph2": "We offer solutions for the entire aging journey.",
+        "paragraph3": "Our scalable products can range from a simple sensor to a complete solution with daily follow-up by medical personnel."
+      }
+    },
+    "digitaltTilsyn": {
+      "title": "Simple",
+      "subtitle": "Solutions with a focus on simplicity",
+      "description1": "The most advanced system should feel like the simplest. That's where our advantage lies.",
+      "description2": "High pressure in the healthcare sector and complicated systems have often led to little or no time savings.",
+      "description3": "Our systems, however, are very easy to use and install and require no technical knowledge. This creates security and frees up important time.",
+      "link": "Read more here",
+      "linkUrl": ""
+    },
     "fallDetection": {
       "title": "Advanced fall alarm technology",
       "subtitle": "discrete monitoring that respects privacy",
@@ -790,24 +813,25 @@
     },
     "easeBlink": {
       "title": "easeBlink",
-      "subtitle": "Safety-creating technology",
+      "subtitle": "we want more than just sensors and technology",
       "description1": "Many elderly, especially those with limited mobility, experience isolation. Video calls allow them to maintain contact with family and friends, see their faces and hear their voices in real-time, fostering a sense of presence and community that traditional phone calls and text messages cannot replace.",
       "description2": "Image sharing in the form of a digital carousel enables sharing memories, celebrations, and everyday moments. This feature brings joy and provides conversation topics. The solution has a very simple user interface, making it accessible for elderly people with varying degrees of cognitive impairment.",
       "link": "read more about the camera hook here"
     },
     "madeInNorway": {
-      "title": "Made in Norway",
-      "subtitle": "Therefore you should choose a product made in Norway",
-      "description1": "When you choose a product made in Norway, you choose more than just quality – you invest in sustainability, safety, and pride.",
+      "title": "Norwegian quality",
+      "subtitle": "therefore you should choose a product made in Norway",
+      "description1": "When you choose a product made in Norway, you choose more than just quality. You invest in sustainability, safety, and pride.",
       "quality": {
         "title": "Quality",
         "description": "Norwegian products are known for their high standard. With a focus on precision, good craftsmanship, and carefully selected materials, you get a product that lasts – and delivers, time and time again."
       },
       "sustainability": {
         "title": "Sustainable and responsible production",
-        "description": "Production in Norway follows strict environmental requirements and ethical work practices. This means you support a greener future and fair working conditions – without compromising on quality. With the exception of some simple third-party Bluetooth devices, all our products are produced in Norway."
+        "description": "Production in Norway follows strict environmental requirements and ethical work practices. This means you support a greener future and fair working conditions, without compromising on quality."
       }
     },
+    "howItWorksButton": "See how it works",
     "targetAudiences": {
       "municipalities": {
         "title": "For municipalities",
@@ -1826,7 +1850,7 @@
         "description": "Plan for further development in collaboration with municipalities."
       }
     },
-    "cta": {
+    "ctaTechnical": {
       "title": "What is the next step?",
       "subtitle": "Do you want a technical review?",
       "documentation": {
