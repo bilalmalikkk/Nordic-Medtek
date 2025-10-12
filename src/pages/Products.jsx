@@ -41,8 +41,10 @@ export default function Products() {
   console.log('Products error:', productsError)
   console.log('Display products:', displayProducts)
   if (products.length > 0) {
-    console.log('Sample product image URL:', products[0].image_url)
-    console.log('Full image URL would be:', products[0].image_url ? `${API_BASE_URL}${products[0].image_url}` : 'No image')
+    const product = products[0]
+    console.log('Sample product image URL:', product.image_url)
+    console.log('Starts with http:', product.image_url ? product.image_url.startsWith('http') : false)
+    console.log('Final image URL will be:', product.image_url ? (product.image_url.startsWith('http') ? product.image_url : `${API_BASE_URL}${product.image_url}`) : 'No image')
   }
   console.log('==========================')
   const isLoading = productsLoading || categoriesLoading
