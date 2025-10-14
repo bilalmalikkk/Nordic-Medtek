@@ -30,12 +30,12 @@ export default function Home() {
           <div className="text-center py-8">
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight drop-shadow-lg whitespace-pre-line">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight drop-shadow-lg whitespace-pre-line animate-fade-in-down">
                   {t('hero.title1')}
                 </h1>
-                <div className="w-24 h-1 bg-white rounded-full mx-auto"></div>
+                <div className="w-24 h-1 bg-white rounded-full mx-auto animate-scale-in animate-delay-300"></div>
               </div>
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white italic leading-relaxed max-w-5xl mx-auto px-4 sm:px-8 drop-shadow-lg whitespace-pre-line">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white italic leading-relaxed max-w-5xl mx-auto px-4 sm:px-8 drop-shadow-lg whitespace-pre-line animate-fade-in-up animate-delay-500">
                 {t('hero.lead')}
               </p>
             </div>
@@ -265,7 +265,7 @@ export default function Home() {
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
           </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 card-hover animate-fade-in-up animate-delay-100">
                 <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mb-6">
                   <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -285,7 +285,7 @@ export default function Home() {
                   </svg>
                 </Link>
               </div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 card-hover animate-fade-in-up animate-delay-200">
                 <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
                   <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
@@ -305,7 +305,7 @@ export default function Home() {
                   </svg>
                 </Link>
               </div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 card-hover animate-fade-in-up animate-delay-300">
                 <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
                   <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -325,7 +325,7 @@ export default function Home() {
                   </svg>
                 </Link>
               </div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+              <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 card-hover animate-fade-in-up animate-delay-400">
                 <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
                   <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />

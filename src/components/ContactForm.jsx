@@ -79,13 +79,13 @@ export default function ContactForm({ title, desc, typeOptions, footerNote }) {
 
   return (
     <section className="form-section w-full px-8">
-      <div className="text-center mb-16">
+      <div className="text-center mb-16 animate-fade-in-down">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">{title || t('form.title')}</h2>
-        <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full mb-6"></div>
-        <p className="text-xl text-gray-700">{desc || t('form.desc')}</p>
+        <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full mb-6 animate-scale-in animate-delay-200"></div>
+        <p className="text-xl text-gray-700 animate-fade-in-up animate-delay-300">{desc || t('form.desc')}</p>
       </div>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-8 rounded-2xl shadow-2xl border border-blue-200">
+      <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-8 rounded-2xl shadow-2xl border border-blue-200 animate-fade-in-up animate-delay-400 hover-lift">
         {/* Request Type Selection */}
         <div className="mb-8">
           <label className="block text-lg font-medium text-gray-900 mb-4">{t('form.type.legend')}</label>

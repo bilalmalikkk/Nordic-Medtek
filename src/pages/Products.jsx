@@ -189,13 +189,13 @@ export default function Products() {
                   </div>
                   
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    {categoryProducts.map((product) => {
+                    {categoryProducts.map((product, index) => {
                       const cardHeight = calculateCardHeight(product)
                       
                       return (
                       <div 
                         key={product.id} 
-                        className="group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col cursor-pointer" 
+                        className={`group bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col cursor-pointer card-hover animate-fade-in-up animate-delay-${(index % 4 + 1) * 100}`}
                         style={{ minHeight: `${cardHeight}px` }}
                         onClick={() => openModal(product)}
                       >
