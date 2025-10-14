@@ -816,7 +816,13 @@
       "subtitle": "we want more than just sensors and technology",
       "description1": "Many elderly, especially those with limited mobility, experience isolation. Video calls allow them to maintain contact with family and friends, see their faces and hear their voices in real-time, fostering a sense of presence and community that traditional phone calls and text messages cannot replace.",
       "description2": "Image sharing in the form of a digital carousel enables sharing memories, celebrations, and everyday moments. This feature brings joy and provides conversation topics. The solution has a very simple user interface, making it accessible for elderly people with varying degrees of cognitive impairment.",
-      "link": "read more about the camera hook here"
+      "link": "read more about the camera hook here",
+      "hero": {
+        "title": "easyBlink",
+        "subtitle": "simpler contact, safer everyday",
+        "description1": "Social contact is important – also when one gets older.",
+        "description2": "With easeBlink, seniors can easily keep in touch with family and healthcare personnel, and have a safer and more meaningful everyday at home."
+      }
     },
     "madeInNorway": {
       "title": "Norwegian quality",

@@ -14,28 +14,27 @@ export default function EaseBlink() {
 
   return (
     <div className="min-h-screen w-full bg-gray-50">
-      <div className="w-full">
-        {/* Hero Section */}
-        <section className="pt-8 pb-24 w-full bg-gray-50">
-          <div className="w-full max-w-5xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-            <div className="text-center space-y-12">
-              <h1 className="text-6xl sm:text-7xl md:text-8xl font-normal text-gray-900">
-                easyBlink
-              </h1>
-              <p className="text-3xl sm:text-4xl font-normal text-gray-900">
-                enklere kontakt, tryggere hverdag
-              </p>
-              <div className="space-y-6 pt-12">
-                <h2 className="text-5xl sm:text-6xl font-normal text-gray-900">
-                  Sosial kontakt er viktig – også når man blir eldre.
-                </h2>
-                <p className="text-2xl text-gray-900 max-w-4xl mx-auto leading-relaxed font-normal">
-                  Med easeBlink kan eldre enkelt holde kontakt med familie og helsepersonell, og få en tryggere og mer meningsfull hverdag hjemme.
-                </p>
-              </div>
-            </div>
+      {/* Hero Section */}
+      <section className="py-20 bg-gray-100 w-full">
+        <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="text-center max-w-6xl mx-auto">
+            <h1 className="text-7xl sm:text-8xl font-normal text-gray-900 mb-8">
+              easyBlink
+            </h1>
+            <p className="text-5xl sm:text-6xl font-normal text-gray-900 mb-20">
+              enklere kontakt, tryggere hverdag
+            </p>
+            <p className="text-4xl font-normal text-gray-900 mb-0 max-w-6xl mx-auto">
+              Sosial kontakt er viktig – også når man blir eldre.
+            </p>
+            <p className="text-2xl font-normal text-gray-900 max-w-6xl mx-auto">
+              Med easeBlink kan eldre enkelt holde kontakt med familie og helsepersonell, og få en tryggere og mer meningsfull hverdag hjemme.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
+
+      <div className="w-full">
 
         {/* What is easeBlink Section */}
         <section className="py-20 bg-white w-full">

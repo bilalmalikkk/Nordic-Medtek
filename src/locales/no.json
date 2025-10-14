@@ -801,7 +801,13 @@
       "subtitle": "vi vil mer en bare sensorer og teknologi",
       "description1": "Mange eldre, spesielt de med begrenset mobilitet, opplever isolasjon. Videokonferanser lar dem opprettholde kontakt med familie og venner, se ansiktene deres og høre stemmene deres i sanntid. Dette skaper en følelse av tilstedeværelse og fellesskap som tradisjonelle telefoner og tekstmeldinger ikke kan erstatte.",
       "description2": "Bilde deling i form av en digital karusell gjør det mulig å dele minner, feiringer og hverdagsøyeblikk. Dette bringer glede og gir samtaleemner. Løsningen har et svært enkelt brukergrensesnitt, noe som gjør den tilgjengelig for eldre med varierende grader av kognitiv svekkelse.",
-      "link": "les mer om kamerakroken her"
+      "link": "les mer om kamerakroken her",
+      "hero": {
+        "title": "easyBlink",
+        "subtitle": "enklere kontakt, tryggere hverdag",
+        "description1": "Sosial kontakt er viktig – også når man blir eldre.",
+        "description2": "Med easeBlink kan eldre enkelt holde kontakt med familie og helsepersonell, og få en tryggere og mer meningsfull hverdag hjemme."
+      }
     },
     "madeInNorway": {
       "title": "Norsk kvalitet",
