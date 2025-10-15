@@ -26,16 +26,16 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/5 to-black/15 z-10"></div>
         
         {/* Content */}
-        <div className="relative z-10 w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="relative z-10 w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center py-8">
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-tight drop-shadow-lg whitespace-pre-line animate-fade-in-down">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white leading-tight drop-shadow-lg whitespace-pre-line animate-fade-in-down">
                   {t('hero.title1')}
                 </h1>
                 <div className="w-24 h-1 bg-white rounded-full mx-auto animate-scale-in animate-delay-300"></div>
               </div>
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white italic leading-relaxed max-w-5xl mx-auto px-4 sm:px-8 drop-shadow-lg whitespace-pre-line animate-fade-in-up animate-delay-500">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white italic leading-relaxed max-w-5xl mx-auto px-4 sm:px-8 drop-shadow-lg whitespace-pre-line animate-fade-in-up animate-delay-500">
                 {t('hero.lead')}
               </p>
             </div>
@@ -45,8 +45,8 @@ export default function Home() {
 
       {/* Smart Overvåkning Section */}
       <section className="py-20 bg-white w-full">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-gray-900">
@@ -76,7 +76,7 @@ export default function Home() {
               <img 
                 src={n1Image} 
                 alt="Elderly woman knitting in a comfortable living room setting" 
-                className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
+                className="w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
           </div>
@@ -86,14 +86,14 @@ export default function Home() {
 
       {/* Trygghet Section */}
       <section className="py-20 bg-white w-full">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Image */}
             <div className="relative flex justify-start order-2 md:order-1">
               <img 
                 src={n3Image} 
                 alt="Two women in a home setting with smart home technology overlays" 
-                className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
+                className="w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
             
@@ -120,8 +120,8 @@ export default function Home() {
 
       {/* Digitalt tilsyn Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 w-full">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
             <div className="space-y-6">
               <h2 className="text-4xl font-bold text-gray-900 italic">
@@ -158,7 +158,7 @@ export default function Home() {
               <img 
                 src={n5Image} 
                 alt="Two women in a home setting with smart home technology" 
-                className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
+                className="w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
           </div>
@@ -167,14 +167,14 @@ export default function Home() {
 
       {/* easeBlink Section */}
       <section className="py-20 bg-white w-full">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Image */}
             <div className="relative flex justify-start order-2 md:order-1">
               <img 
                 src={phoneImage} 
                 alt="Smartphone showing video call with elderly person" 
-                className="w-[28rem] h-[28rem] object-contain rounded-2xl shadow-2xl"
+                className="w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-contain rounded-2xl shadow-2xl"
               />
             </div>
             
@@ -212,14 +212,14 @@ export default function Home() {
 
       {/* Made in Norway Section */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 w-full">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Image */}
             <div className="relative flex justify-end order-1 md:order-2">
               <img 
                 src={madeInNorwayImage} 
                 alt="Made in Norway artwork with Norwegian nature and Northern Lights" 
-                className="w-[28rem] h-[28rem] object-cover rounded-lg shadow-lg border border-gray-200"
+                className="w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl object-cover rounded-lg shadow-lg border border-gray-200"
               />
             </div>
             
@@ -259,12 +259,12 @@ export default function Home() {
 
       {/* Hvem er du Section */}
       <section id="who-are-you-section" className="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100 w-full">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.whoAreYou')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
           </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 card-hover animate-fade-in-up animate-delay-100">
                 <div className="w-16 h-16 bg-teal-100 rounded-2xl flex items-center justify-center mb-6">
                   <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -351,7 +351,7 @@ export default function Home() {
 
       {/* Hva - våre løsninger Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.what.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -375,7 +375,7 @@ export default function Home() {
 
       {/* Hvordan - vår tilnærming Section */}
       <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.how.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -390,7 +390,7 @@ export default function Home() {
 
       {/* Hvorfor - vårt formål Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.why.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -405,7 +405,7 @@ export default function Home() {
 
       {/* Fordeler Section */}
       <section className="py-20 w-full bg-gradient-to-br from-green-50 to-emerald-50">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.benefits.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -429,7 +429,7 @@ export default function Home() {
 
       {/* First CTA Section */}
       <section className="py-20 w-full bg-gradient-to-br from-gray-900 to-gray-800">
-        <div className="w-full max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 text-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">{t('home.cta1.title')}</h2>
           <button 
             onClick={() => {
@@ -450,7 +450,7 @@ export default function Home() {
 
       {/* FAQ Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('home.faq.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -473,7 +473,7 @@ export default function Home() {
 
       {/* Final CTA Section */}
       <section className="py-20 w-full bg-gradient-to-br from-orange-50 to-yellow-50">
-        <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="bg-white rounded-3xl shadow-2xl p-12 border-2 border-orange-200">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">{t('home.cta2.title')}</h2>
@@ -496,7 +496,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-gray-200 py-8 w-full">
-        <div className="w-full max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 text-center">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 text-center">
           <p className="text-gray-600">{t('home.footer')}</p>
         </div>
       </footer>

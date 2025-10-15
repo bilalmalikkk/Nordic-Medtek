@@ -71,17 +71,17 @@ export default function Navbar() {
       <div className="bg-teal-700 text-white w-full">
         <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
           {/* Logo */}
-          <div className="flex items-center w-48 md:w-72 relative overflow-visible">
+          <div className="flex items-center w-48 md:w-64 lg:w-72 relative overflow-visible">
             <img 
               src={logo} 
               alt="NordicMedTek" 
-              className="h-8 md:h-12 w-auto" 
+              className="h-8 md:h-10 lg:h-12 w-auto" 
               style={{ transform: 'scaleX(2) scaleY(1.9)', transformOrigin: 'left center' }} 
             />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-8 xl:gap-20 text-base">
+          <nav className="hidden md:flex items-center gap-4 lg:gap-8 xl:gap-20 text-sm lg:text-base">
             <NavLink to="/" end className={({isActive})=> isActive? 'underline' : 'hover:underline'}>{t('nav.home')}</NavLink>
             <NavLink to="/private" className={({isActive})=> isPrivateActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.private')}</NavLink>
             <NavLink to="/municipality" className={({isActive})=> isMunicipalityActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.municipality')}</NavLink>
@@ -91,7 +91,7 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile menu button and language toggle */}
-          <div className="flex items-center gap-4 lg:hidden">
+          <div className="flex items-center gap-4 md:hidden">
             <button onClick={toggleLang} className="text-sm hover:underline">{t('nav.lang')}</button>
             <button
               onClick={toggleMobileMenu}
@@ -116,7 +116,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Navigation Menu */}
-        <div className={`lg:hidden bg-teal-600 border-t border-teal-500 transition-all duration-300 ease-in-out overflow-hidden ${
+        <div className={`md:hidden bg-teal-600 border-t border-teal-500 transition-all duration-300 ease-in-out overflow-hidden ${
           isMobileMenuOpen 
             ? 'max-h-screen opacity-100' 
             : 'max-h-0 opacity-0'
