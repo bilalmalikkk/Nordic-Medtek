@@ -10,6 +10,7 @@ export default function Navbar() {
   const { t, i18n } = useTranslation()
   const location = useLocation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState(null)
   
   function toggleLang() {
     const next = i18n.language === 'no' ? 'en' : 'no'
@@ -53,6 +54,38 @@ export default function Navbar() {
   }
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const subpages = {
+    private: [
+      { path: '/alarm-communication', key: 'pageTitles.alarmCommunication' },
+      { path: '/medical-followup', key: 'pageTitles.medicalFollowup' },
+      { path: '/safety-solutions', key: 'pageTitles.safetySolutions' },
+      { path: '/fallalarm', key: 'pageTitles.fallalarm' },
+      { path: '/experiences', key: 'pageTitles.experiences' }
+    ],
+    municipality: [
+      { path: '/municipality-details', key: 'pageTitles.municipalityDetails' },
+      { path: '/municipality-knowledge', key: 'pageTitles.municipalityKnowledge' },
+      { path: '/procurement-manager', key: 'pageTitles.procurementManager' },
+      { path: '/health-personnel', key: 'pageTitles.healthPersonnel' },
+      { path: '/it-welfare-technology', key: 'pageTitles.itWelfareTechnology' },
+      { path: '/municipal-benefits', key: 'pageTitles.municipalBenefits' },
+      { path: '/demo', key: 'pageTitles.demo' },
+      { path: '/politicians', key: 'pageTitles.politicians' }
+    ],
+    company: [
+      { path: '/guidance', key: 'pageTitles.guidance' },
+      { path: '/documents', key: 'pageTitles.documents' },
+      { path: '/pricing', key: 'pageTitles.pricing' },
+      { path: '/support', key: 'pageTitles.support' },
+      { path: '/evidence', key: 'pageTitles.evidence' }
+    ],
+    products: [
+      { path: '/alarm-buttons', key: 'pageTitles.alarmButtons' },
+      { path: '/trygghet-og-fallsikring', key: 'pageTitles.trygghetOgFallsikring' },
+      { path: '/medical-followup-products', key: 'pageTitles.medicalFollowupProducts' }
+    ]
   }
 
   const getCurrentPageTitle = () => {
@@ -133,30 +166,99 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-4 lg:gap-8 xl:gap-20 text-sm lg:text-base">
             <NavLink to="/" end className={({isActive})=> isActive? 'underline font-semibold' : 'hover:underline'}>{t('nav.home')}</NavLink>
-            <NavLink to="/private" className={({isActive})=> isPrivateActive(isActive)? 'underline font-semibold relative' : 'hover:underline'}>
-              {t('nav.private')}
-              {isPrivateActive(false) && getCurrentPageTitle() && (
-                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></span>
-              )}
-            </NavLink>
-            <NavLink to="/municipality" className={({isActive})=> isMunicipalityActive(isActive)? 'underline font-semibold relative' : 'hover:underline'}>
-              {t('nav.municipality')}
-              {isMunicipalityActive(false) && getCurrentPageTitle() && (
-                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></span>
-              )}
-            </NavLink>
-            <NavLink to="/company" className={({isActive})=> isCompanyActive(isActive)? 'underline font-semibold relative' : 'hover:underline'}>
-              {t('nav.company')}
-              {isCompanyActive(false) && getCurrentPageTitle() && (
-                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></span>
-              )}
-            </NavLink>
-            <NavLink to="/products" className={({isActive})=> isProductsActive(isActive)? 'underline font-semibold relative' : 'hover:underline'}>
-              {t('nav.products')}
-              {isProductsActive(false) && getCurrentPageTitle() && (
-                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></span>
-              )}
-            </NavLink>
+            
+            {/* Private Dropdown */}
+            <div className="relative group">
+              <NavLink to="/private" className={({isActive})=> isPrivateActive(isActive)? 'underline font-semibold relative' : 'hover:underline'}>
+                {t('nav.private')}
+                {isPrivateActive(false) && getCurrentPageTitle() && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></span>
+                )}
+              </NavLink>
+              <div className="absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  {subpages.private.map((subpage) => (
+                    <Link
+                      key={subpage.path}
+                      to={subpage.path}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-colors"
+                    >
+                      {t(subpage.key)}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Municipality Dropdown */}
+            <div className="relative group">
+              <NavLink to="/municipality" className={({isActive})=> isMunicipalityActive(isActive)? 'underline font-semibold relative' : 'hover:underline'}>
+                {t('nav.municipality')}
+                {isMunicipalityActive(false) && getCurrentPageTitle() && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></span>
+                )}
+              </NavLink>
+              <div className="absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  {subpages.municipality.map((subpage) => (
+                    <Link
+                      key={subpage.path}
+                      to={subpage.path}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-colors"
+                    >
+                      {t(subpage.key)}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Company Dropdown */}
+            <div className="relative group">
+              <NavLink to="/company" className={({isActive})=> isCompanyActive(isActive)? 'underline font-semibold relative' : 'hover:underline'}>
+                {t('nav.company')}
+                {isCompanyActive(false) && getCurrentPageTitle() && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></span>
+                )}
+              </NavLink>
+              <div className="absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  {subpages.company.map((subpage) => (
+                    <Link
+                      key={subpage.path}
+                      to={subpage.path}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-colors"
+                    >
+                      {t(subpage.key)}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Products Dropdown */}
+            <div className="relative group">
+              <NavLink to="/products" className={({isActive})=> isProductsActive(isActive)? 'underline font-semibold relative' : 'hover:underline'}>
+                {t('nav.products')}
+                {isProductsActive(false) && getCurrentPageTitle() && (
+                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></span>
+                )}
+              </NavLink>
+              <div className="absolute top-full left-0 mt-1 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  {subpages.products.map((subpage) => (
+                    <Link
+                      key={subpage.path}
+                      to={subpage.path}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-teal-50 hover:text-teal-700 transition-colors"
+                    >
+                      {t(subpage.key)}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
             <NavLink to="/partners" className={({isActive})=> isPartnersActive(isActive)? 'underline font-semibold' : 'hover:underline'}>{t('nav.partners')}</NavLink>
           </nav>
 
