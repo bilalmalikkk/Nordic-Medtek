@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import HelpCards from './components/HelpCards'
 import ContactForm from './components/ContactForm'
 import ScrollToTop from './components/ScrollToTop'
+import PageIndicator from './components/PageIndicator'
 import Home from './pages/Home'
 import Private from './pages/Private'
 import Municipality from './pages/Municipality'
@@ -46,6 +47,7 @@ function App() {
     <div>
       <ScrollToTop />
       <Navbar />
+      <PageIndicator />
       <main className="w-full max-w-[2000px] mx-auto">
         <Routes>
           <Route path="/" element={<Home />} />

@@ -4,6 +4,7 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
 import logo from '../assets/logo_and_text__high_quality.svg'
+import Breadcrumb from './Breadcrumb'
 
 export default function Navbar() {
   const { t, i18n } = useTranslation()
@@ -54,6 +55,55 @@ export default function Navbar() {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
+  const getCurrentPageTitle = () => {
+    const pageMappings = {
+      '/alarm-communication': 'pages.alarmCommunication',
+      '/medical-followup': 'pages.medicalFollowup',
+      '/safety-solutions': 'pages.safetySolutions',
+      '/fallalarm': 'pages.fallalarm',
+      '/experiences': 'pages.experiences',
+      '/municipality-details': 'pages.municipalityDetails',
+      '/municipality-knowledge': 'pages.municipalityKnowledge',
+      '/procurement-manager': 'pages.procurementManager',
+      '/health-personnel': 'pages.healthPersonnel',
+      '/it-welfare-technology': 'pages.itWelfareTechnology',
+      '/municipal-benefits': 'pages.municipalBenefits',
+      '/demo': 'pages.demo',
+      '/politicians': 'pages.politicians',
+      '/guidance': 'pages.guidance',
+      '/documents': 'pages.documents',
+      '/pricing': 'pages.pricing',
+      '/support': 'pages.support',
+      '/evidence': 'pages.evidence',
+      '/alarm-buttons': 'pages.alarmButtons',
+      '/trygghet-og-fallsikring': 'pages.trygghetOgFallsikring',
+      '/medical-followup-products': 'pages.medicalFollowupProducts',
+      '/easeblink': 'pages.easeblink'
+    }
+    
+    const mainPage = getMainPage(location.pathname)
+    if (mainPage && mainPage !== location.pathname) {
+      return pageMappings[location.pathname] ? t(pageMappings[location.pathname]) : location.pathname.replace('/', '')
+    }
+    return null
+  }
+
+  const getMainPage = (pathname) => {
+    if (pathname === '/') return null
+    
+    const privateSubPages = ['/alarm-communication', '/medical-followup', '/safety-solutions', '/fallalarm', '/experiences']
+    const municipalitySubPages = ['/municipality-details', '/municipality-knowledge', '/procurement-manager', '/health-personnel', '/it-welfare-technology', '/municipal-benefits', '/demo', '/politicians']
+    const companySubPages = ['/guidance', '/documents', '/pricing', '/support', '/evidence']
+    const productsSubPages = ['/alarm-buttons', '/trygghet-og-fallsikring', '/medical-followup-products']
+    
+    if (privateSubPages.includes(pathname)) return '/private'
+    if (municipalitySubPages.includes(pathname)) return '/municipality'
+    if (companySubPages.includes(pathname)) return '/company'
+    if (productsSubPages.includes(pathname) || pathname.startsWith('/products')) return '/products'
+    
+    return pathname
+  }
+
   return (
     <header className="w-screen">
       {/* Top utility bar - hidden on mobile */}
@@ -82,12 +132,32 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-4 lg:gap-8 xl:gap-20 text-sm lg:text-base">
-            <NavLink to="/" end className={({isActive})=> isActive? 'underline' : 'hover:underline'}>{t('nav.home')}</NavLink>
-            <NavLink to="/private" className={({isActive})=> isPrivateActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.private')}</NavLink>
-            <NavLink to="/municipality" className={({isActive})=> isMunicipalityActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.municipality')}</NavLink>
-            <NavLink to="/company" className={({isActive})=> isCompanyActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.company')}</NavLink>
-            <NavLink to="/products" className={({isActive})=> isProductsActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.products')}</NavLink>
-            <NavLink to="/partners" className={({isActive})=> isPartnersActive(isActive)? 'underline' : 'hover:underline'}>{t('nav.partners')}</NavLink>
+            <NavLink to="/" end className={({isActive})=> isActive? 'underline font-semibold' : 'hover:underline'}>{t('nav.home')}</NavLink>
+            <NavLink to="/private" className={({isActive})=> isPrivateActive(isActive)? 'underline font-semibold relative' : 'hover:underline'}>
+              {t('nav.private')}
+              {isPrivateActive(false) && getCurrentPageTitle() && (
+                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></span>
+              )}
+            </NavLink>
+            <NavLink to="/municipality" className={({isActive})=> isMunicipalityActive(isActive)? 'underline font-semibold relative' : 'hover:underline'}>
+              {t('nav.municipality')}
+              {isMunicipalityActive(false) && getCurrentPageTitle() && (
+                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></span>
+              )}
+            </NavLink>
+            <NavLink to="/company" className={({isActive})=> isCompanyActive(isActive)? 'underline font-semibold relative' : 'hover:underline'}>
+              {t('nav.company')}
+              {isCompanyActive(false) && getCurrentPageTitle() && (
+                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></span>
+              )}
+            </NavLink>
+            <NavLink to="/products" className={({isActive})=> isProductsActive(isActive)? 'underline font-semibold relative' : 'hover:underline'}>
+              {t('nav.products')}
+              {isProductsActive(false) && getCurrentPageTitle() && (
+                <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-yellow-400"></span>
+              )}
+            </NavLink>
+            <NavLink to="/partners" className={({isActive})=> isPartnersActive(isActive)? 'underline font-semibold' : 'hover:underline'}>{t('nav.partners')}</NavLink>
           </nav>
 
           {/* Mobile menu button and language toggle */}
@@ -200,6 +270,9 @@ export default function Navbar() {
             </nav>
           </div>
       </div>
+      
+      {/* Breadcrumb for subpages */}
+      <Breadcrumb />
     </header>
   )
 }

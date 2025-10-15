@@ -14,9 +14,35 @@
     "pricing": "Priser",
     "support": "Support",
     "evidence": "Bevis/effekt",
-    "lang": "English"
+    "lang": "English",
+    "currentlyViewing": "Viser nå",
+    "subpageOf": "Underside av"
   },
   "util": {"about": "Om oss", "demo": "Bestill demo", "contact": "Kontakt oss", "privacy": "Personvernerklæring"},
+  "pageTitles": {
+    "alarmCommunication": "Alarmkommunikasjon",
+    "medicalFollowup": "Medisinsk oppfølging",
+    "safetySolutions": "Sikkerhetsløsninger",
+    "fallalarm": "Fallalarm",
+    "experiences": "Erfaringer",
+    "municipalityDetails": "Kommunedetaljer",
+    "municipalityKnowledge": "Kommunekunnskap",
+    "procurementManager": "Innkjøpsansvarlig",
+    "healthPersonnel": "Helsepersonell",
+    "itWelfareTechnology": "IT-velferdsteknologi",
+    "municipalBenefits": "Kommunegevinster",
+    "demo": "Demo",
+    "politicians": "Politikere",
+    "guidance": "Veiledning",
+    "documents": "Dokumenter",
+    "pricing": "Priser",
+    "support": "Support",
+    "evidence": "Bevis",
+    "alarmButtons": "Alarmknapper",
+    "trygghetOgFallsikring": "Trygghet og fallsikring",
+    "medicalFollowupProducts": "Produkter for medisinsk oppfølging",
+    "easeblink": "EaseBlink"
+  },
   "medicalFollowupProducts": {
     "hero": {
       "title": "Produkter for medisinsk oppfølging hjemme",

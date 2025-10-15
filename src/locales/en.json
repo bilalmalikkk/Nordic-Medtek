@@ -14,9 +14,35 @@
     "pricing": "Pricing",
     "support": "Support",
     "evidence": "Evidence/impact",
-    "lang": "Norsk"
+    "lang": "Norsk",
+    "currentlyViewing": "Currently viewing",
+    "subpageOf": "Subpage of"
   },
   "util": {"about": "About", "demo": "Book demo", "contact": "Contact", "privacy": "Privacy policy"},
+  "pageTitles": {
+    "alarmCommunication": "Alarm Communication",
+    "medicalFollowup": "Medical Follow-up",
+    "safetySolutions": "Safety Solutions",
+    "fallalarm": "Fall Alarm",
+    "experiences": "Experiences",
+    "municipalityDetails": "Municipality Details",
+    "municipalityKnowledge": "Municipality Knowledge",
+    "procurementManager": "Procurement Manager",
+    "healthPersonnel": "Health Personnel",
+    "itWelfareTechnology": "IT Welfare Technology",
+    "municipalBenefits": "Municipal Benefits",
+    "demo": "Demo",
+    "politicians": "Politicians",
+    "guidance": "Guidance",
+    "documents": "Documents",
+    "pricing": "Pricing",
+    "support": "Support",
+    "evidence": "Evidence",
+    "alarmButtons": "Alarm Buttons",
+    "trygghetOgFallsikring": "Safety & Fall Protection",
+    "medicalFollowupProducts": "Medical Follow-up Products",
+    "easeblink": "EaseBlink"
+  },
   "medicalFollowupProducts": {
     "hero": {
       "title": "Products for medical follow-up at home",
