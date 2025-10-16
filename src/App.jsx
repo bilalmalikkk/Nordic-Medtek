@@ -6,6 +6,7 @@ import ContactForm from './components/ContactForm'
 import ScrollToTop from './components/ScrollToTop'
 import PageIndicator from './components/PageIndicator'
 import Home from './pages/Home'
+import HomePage1 from './pages/HomePage1'
 import Private from './pages/Private'
 import Municipality from './pages/Municipality'
 import MunicipalityDetails from './pages/MunicipalityDetails'
@@ -50,7 +51,8 @@ function App() {
       <PageIndicator />
       <main className="w-full max-w-[2000px] mx-auto">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage1 />} />
+          <Route path="/home-original" element={<Home />} />
           <Route path="/private" element={<Private />} />
           <Route path="/municipality" element={<Municipality />} />
           <Route path="/municipality-details" element={<MunicipalityDetails />} />
