@@ -30,7 +30,7 @@ export default function HomePage1() {
         <div className="absolute inset-0 bg-black/40"></div>
         
         {/* Content */}
-        <div className="relative z-10 w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-12 pt-32">
+        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-12 pt-32">
           <div className="max-w-4xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
               Vi leverer løsninger som gir <span className="text-blue-400">mennesker</span> trygghet, verdighet og bedre <span className="text-blue-400">livskvalitet</span>
@@ -45,7 +45,7 @@ export default function HomePage1() {
 
       {/* Vår løsning Section */}
       <section className="py-20 bg-white w-full">
-        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Vår løsning</h2>
             <div className="space-y-4 text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
@@ -125,7 +125,7 @@ export default function HomePage1() {
 
       {/* Target Audience Section */}
       <section className="py-20 bg-white w-full">
-        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {/* Privat Column */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col">
@@ -174,7 +174,7 @@ export default function HomePage1() {
 
       {/* Hvorfor velge oss Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white w-full">
-        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Hvorfor velge oss</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -300,7 +300,7 @@ export default function HomePage1() {
 
       {/* Lurer du på noe Section */}
       <section className="py-20 bg-white w-full">
-        <div className="w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Lurer du på noe?</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
@@ -354,7 +354,7 @@ export default function HomePage1() {
 
       {/* Footer */}
       <footer className="bg-gray-200 py-8 w-full">
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 text-center">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 text-center">
           <p className="text-gray-600">{t('home.footer')}</p>
         </div>
       </footer>
