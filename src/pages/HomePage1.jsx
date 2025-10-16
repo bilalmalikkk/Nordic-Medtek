@@ -25,20 +25,22 @@ export default function HomePage1() {
       {/* Top separator */}
       <div className="h-1 bg-white"></div>
       {/* Hero Section */}
-      <section className="w-full relative overflow-hidden min-h-[600px] flex items-end" style={{backgroundImage: `url(${varmeHenderImage})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
-        {/* Dark overlay for better text visibility */}
-        <div className="absolute inset-0 bg-black/40"></div>
-        
-        {/* Content */}
-        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-12 pt-32">
-          <div className="max-w-4xl">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
-              Vi leverer løsninger som gir <span className="text-blue-400">mennesker</span> trygghet, verdighet og bedre <span className="text-blue-400">livskvalitet</span>
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed">
-              Teknologi som gjør det mulig for eldre å bo hjemme lenger,<br />
-              samtidig som ressursene brukes smartere.
-            </p>
+      <section className="w-full flex justify-center bg-white">
+        <div className="relative overflow-hidden min-h-[600px] flex items-end max-w-[1600px] w-full" style={{backgroundImage: `url(${varmeHenderImage})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+          {/* Dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-black/40"></div>
+          
+          {/* Content */}
+          <div className="relative z-10 w-full mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-12 pt-32">
+            <div className="max-w-4xl">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
+                Vi leverer løsninger som gir <span className="text-blue-400">mennesker</span> trygghet, verdighet og bedre <span className="text-blue-400">livskvalitet</span>
+              </h1>
+              <p className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed">
+                Teknologi som gjør det mulig for eldre å bo hjemme lenger,<br />
+                samtidig som ressursene brukes smartere.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -352,12 +354,6 @@ export default function HomePage1() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-200 py-8 w-full">
-        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 text-center">
-          <p className="text-gray-600">{t('home.footer')}</p>
-        </div>
-      </footer>
       </div>
     </div>
   )
