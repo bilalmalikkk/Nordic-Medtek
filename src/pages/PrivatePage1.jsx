@@ -67,16 +67,23 @@ export default function PrivatePage1() {
       </section>
 
       {/* Våre løsninger Section */}
-      <section className="py-20 w-full flex justify-center">
-        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-50 py-20 rounded-lg">
-          <div className="text-center mb-16">
+      <section className="py-20 w-full bg-white">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Våre løsninger
             </h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 py-16 px-4 sm:px-6 lg:px-8 rounded-lg">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-gray-900">
+                Bekymret for dine kjære?
+              </h3>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* For at de ikke får sagt fra */}
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col">
               <div className="text-center flex-1 flex flex-col">
@@ -180,6 +187,7 @@ export default function PrivatePage1() {
                 </Link>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
