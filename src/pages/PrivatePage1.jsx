@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import landingPage from '../assets/Landingpage.png'
-import varmeHenderImage from '../assets/varme_hender.jpg'
 import alarm from '../assets/alarm.png'
 import blodtrykk from '../assets/blodtrykk.png'
 import fallsensor from '../assets/fallsensor.png'
@@ -9,8 +8,6 @@ import mann from '../assets/mann.png'
 import hus from '../assets/hus.png'
 import blokker from '../assets/blokker.png'
 import zeroKr from '../assets/0kr.png'
-import group16 from '../assets/Group 16.jpg'
-import phoneLowres from '../assets/Phone_lowres.png'
 
 export default function PrivatePage1() {
   const { t } = useTranslation()
@@ -154,67 +151,6 @@ export default function PrivatePage1() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* easeBlink Section */}
-      <section className="py-20 w-full bg-white">
-        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Left side - Text Content */}
-            <div className="space-y-6">
-              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 italic">
-                easeBlink
-              </h2>
-              <h3 className="text-2xl sm:text-3xl font-normal text-gray-900 italic">
-                Videokontakt og bildedeling motvirker isolasjon
-              </h3>
-              
-              <div className="space-y-4 text-base text-gray-700">
-                <p>
-                  Mange eldre, spesielt de med begrenset mobilitet, opplever isolasjon.
-                </p>
-                <p>
-                  Vår videoløsning easeBlink lar dem opprettholde kontakt med familie og venner, se ansiktene deres og høre stemmene deres i sanntid. Dette skaper en følelse av tilstedeværelse og fellesskap som tradisjonelle telefoner og tekstmeldinger ikke kan erstatte.
-                </p>
-                <p>
-                  EaseBlink har også bildedeling i form av en digital karusell gjør det mulig å dele minner, feiringer og hverdagsøyeblikk. Dette bringer glede og gir samtaleemner.
-                </p>
-                <p>
-                  Løsningen har et svært enkelt brukergrensesnitt, noe som gjør den tilgjengelig for eldre med varierende grader av kognitiv svekkelse.
-                </p>
-              </div>
-
-              <div className="pt-4">
-                <Link 
-                  to="/easeblink" 
-                  className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300"
-                >
-                  Bestill easeBlink
-                </Link>
-              </div>
-            </div>
-
-            {/* Right side - Images */}
-            <div className="relative flex items-center justify-center">
-              {/* Desktop/Tablet view with carousel */}
-              <div className="relative">
-                <img 
-                  src={group16} 
-                  alt="easeBlink carousel showing precious moments" 
-                  className="w-full max-w-2xl h-auto"
-                />
-              </div>
-              {/* Mobile phone overlaying on the right */}
-              <div className="absolute -right-8 bottom-0 w-1/3 max-w-xs">
-                <img 
-                  src={phoneLowres} 
-                  alt="easeBlink mobile app video call" 
-                  className="w-full h-auto"
-                />
               </div>
             </div>
           </div>
