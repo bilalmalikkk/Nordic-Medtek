@@ -300,8 +300,8 @@
     "howAlarmButtonsWork": {
       "title": "How do alarm buttons work?",
       "text1": "They are usually worn around the neck or in the pocket. If something happens, they just press the button and are immediately connected to a pre-selected contact, for example you, another relative or healthcare personnel.",
-      "text2": "The alarm system can be set up so that it first tries to reach you, then other relatives, and finally healthcare personnel if no one answers.",
-      "text3": "With two-way communication, they can speak directly with help without having to find the phone.",
+      "text2": "Some models also have two-way voice directly in the device. This means they can speak directly, without having to find the phone. Some solutions also have GPS, so you can see where they are and get notified if they move outside an agreed area.",
+      "text3": "This provides security in everyday life, and means they can continue to go to the store or visit the neighbor without you having to worry.",
       "orderButton": "Order button"
     },
     "whereDoesThisFit": {
@@ -771,6 +771,132 @@
       "text1": "Do you want to read more about the specific fall sensor technology used, how the sensors are installed, and what types of falls they can detect?",
       "text2": "Here you will find detailed information about our fall sensor products, including technical specifications, installation requirements, and integration capabilities with other safety systems.",
       "button": "See fall sensor products and specifications"
+    }
+  },
+  "safetySolutions1": {
+    "breadcrumb": "Back to home",
+    "submenu": {
+      "challenges": "Challenges we solve",
+      "howItWorks": "How it works",
+      "whereItFits": "Where it fits",
+      "pricing": "Pricing"
+    },
+    "hero": {
+      "title": "Fall sensors and home safety",
+      "subtitle": "Prevent a fall from changing everything. Our sensors detect falls automatically.",
+      "button": "Order fall sensor",
+      "bullet1": "Automatically detects falls, regardless of whether the elderly person uses an alarm button or not.",
+      "bullet2": "Alerts you as a relative or healthcare personnel immediately.",
+      "bullet3": "Can be connected to safety alarms, video screens, or medical monitoring for a complete solution."
+    },
+    "challenges": {
+      "title": "Prevent a fall from changing everything",
+      "text1": "A small fall can have major consequences. A hip fracture or hours alone on the floor can mean that mom or dad never fully recovers. Perhaps you've already noticed that balance is failing more often, or that they seem more unsteady on the stairs or in the bathroom.",
+      "text2": "Many elderly become quite scared after a fall. They withdraw and dare less, and quality of life falls together with safety. As a relative, you carry a worry: what if it happens when no one is there?",
+      "text3": "Our fall sensors cannot prevent all falls, but they ensure that a fall is never left undetected."
+    },
+    "howItWorks": {
+      "title": "How do fall sensors work?",
+      "text1": "Our sensors use radar or infrared technology to detect falls automatically, and can be placed in the living room, bedroom, stairs, or bathroom. They capture movement patterns and alert when something is wrong, for example if someone falls and doesn't get up again.",
+      "text2": "As a relative, you get alerts directly to your mobile. You can set up multiple contacts who can be notified if the first person doesn't respond. Alerts can also be set up to go to the municipality's monitoring center for home care services.",
+      "imageAlt": "Elderly person sleeping peacefully in a bed with fall sensor"
+    },
+    "whereItFits": {
+      "title": "Where in the home is this important?",
+      "intro": "Many choose to have sensors in multiple rooms, to cover the entire home and avoid the worry that a fall occurs in a 'blind spot.' All our sensors are discreet and placed on walls or ceilings. If you've mounted a picture, you can easily do this yourself.",
+      "bathroom": "In the bathroom, which is the most risky room in the house. The sensors can even detect falls behind shower curtains.",
+      "bedroom": "In the living room or bedroom, where they may be alone for large parts of the day.",
+      "stairs": "In stairs or hallways, where one misstep can be enough.",
+      "bathroomAlt": "Bathroom fall sensor",
+      "bedroomAlt": "Bedroom fall sensor",
+      "stairsAlt": "Stairs fall sensor"
+    },
+    "pricing": {
+      "title": "What does it cost?",
+      "text1": "We offer both purchase and rental of sensors.",
+      "text2": "A solution with fall sensors in, for example, living room and bathroom will cost from 99 kroner per month. There is no binding period or startup cost for rental, but you must pay a deposit.",
+      "text3": "You can expand later with more sensors or services if needs change.",
+      "button": "Order rental or purchase"
+    },
+    "combine": {
+      "title": "Combine with more of our solutions",
+      "alarmComm": "Solutions for alarm and communication include alerts for sudden illness, two-way communication with video, and geofence functions that give you peace of mind when your loved ones are at home or out.",
+      "alarmButton": "Alarm buttons and quick alerts",
+      "medical": "Monitoring for heart problems, diabetes, and regular measurements of breathing, blood pressure, sleep, blood sugar, body temperature, and oxygen saturation. Automatic alerts for deviations.",
+      "medicalButton": "Medical follow-up",
+      "easeblink": "Our video solution easeblink enables contact with family and friends, see their faces and hear their voices in real time. With EaseBlink you can share pictures of memories, celebrations, and everyday moments.",
+      "easeblinkButton": "Video contact and photo sharing"
+    },
+    "questions": {
+      "title": "Do you have questions?",
+      "faq": {
+        "title": "Frequently asked questions",
+        "description": ".....",
+        "button": "Frequently asked questions"
+      },
+      "experiences": {
+        "title": "How others use the solutions",
+        "description": "Experiences..",
+        "button": "References Experiences"
+      },
+      "contact": {
+        "title": "Contact us",
+        "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+        "button": "Contact us today"
+      }
+    }
+  },
+  "alarmCommunication1": {
+    "breadcrumb": "Back to home",
+    "submenu": {
+      "challenges": "Challenges we solve",
+      "howItWorks": "How it works",
+      "whereItFits": "Where it fits",
+      "pricing": "Pricing"
+    },
+    "hero": {
+      "title": "Alarm buttons and quick alerts",
+      "subtitle": "With an alarm button around the neck, they can call for help with one press.",
+      "button": "Order alarm button",
+      "bullet1": "Works both indoors and outdoors, everywhere there is mobile coverage.",
+      "bullet2": "Alerts you immediately, not hours later.",
+      "bullet3": "Tailored to your needs; alerts can go to you, other relatives, or directly to healthcare personnel.",
+      "bullet4": "Secure two-way communication, they get help without searching for the phone.",
+      "bullet5": "No binding or startup costs, and can be expanded with fall sensors or medical monitoring later."
+    },
+    "pricing": {
+      "title": "What does it cost?",
+      "text1": "We offer both purchase and rental of sensors.",
+      "text2": "A solution with fall sensors in, for example, living room and bathroom will cost from 99 kroner per month. There is no binding period or startup cost for rental, but you must pay a deposit.",
+      "text3": "You can expand later with more sensors or services if needs change.",
+      "button": "Order rental or purchase"
+    },
+    "combine": {
+      "title": "Combine with more of our solutions",
+      "fallSensors": "Sensors to detect falls in various rooms at home. Fall sensors in bathrooms and other rooms ensure that falls are detected automatically without the need to call for help. This gives you alerts when falls occur.",
+      "fallSensorsButton": "See safety and fall protection",
+      "medical": "Monitoring for heart problems, diabetes, and regular measurements of breathing, blood pressure, sleep, blood sugar, body temperature, and oxygen saturation. Automatic alerts for deviations.",
+      "medicalButton": "Medical follow-up",
+      "easeblink": "Our video solution easeblink enables contact with family and friends, see their faces and hear their voices in real time. With EaseBlink you can share pictures of memories, celebrations, and everyday moments.",
+      "easeblinkButton": "Video contact and photo sharing"
+    },
+    "questions": {
+      "title": "Do you have questions?",
+      "faq": {
+        "title": "Frequently asked questions",
+        "description": ".....",
+        "button": "Frequently asked questions"
+      },
+      "experiences": {
+        "title": "How others use the solutions",
+        "description": "Experiences..",
+        "button": "References Experiences"
+      },
+      "contact": {
+        "title": "Contact us",
+        "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+        "button": "Contact us today"
+      }
     }
   },
   "hero": {

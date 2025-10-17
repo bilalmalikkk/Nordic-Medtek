@@ -300,8 +300,8 @@
     "howAlarmButtonsWork": {
       "title": "Hvordan virker alarmknappene?",
       "text1": "De bæres som regel rundt halsen eller i lommen. Hvis noe skjer, trykker de bare på knappen, og blir umiddelbart koblet til en forhåndsvalgt kontakt, for eksempel deg, en annen pårørende eller helsepersonell.",
-      "text2": "Alarmsystemet kan settes opp slik at det først prøver å nå deg, deretter andre pårørende, og til slutt helsepersonell hvis ingen svarer.",
-      "text3": "Med to-veis kommunikasjon kan de snakke direkte med hjelp uten å måtte finne telefonen.",
+      "text2": "Noen modeller har også to-veis tale rett i enheten. Det betyr at de kan snakke direkte, uten å måtte finne mobilen. Enkelte løsninger har også GPS, slik at du kan se hvor de er og få beskjed hvis de beveger seg utenfor et avtalt område.",
+      "text3": "Dette gir en trygghet i hverdagen, og gjør at de kan fortsette å gå på butikken eller besøke naboen uten at du må være urolig.",
       "orderButton": "Bestill knapp"
     },
     "whereDoesThisFit": {
@@ -771,6 +771,132 @@
       "text1": "Vil du lese mer om den spesifikke fallsensorteknologien som brukes, hvordan sensorene installeres, og hvilke typer fall de kan oppdage?",
       "text2": "Her finner du detaljert informasjon om våre fallsensorprodukter, inkludert tekniske spesifikasjoner, installasjonskrav og integrasjonsmuligheter med andre sikkerhetssystemer.",
       "button": "Se fallsensorprodukter og spesifikasjoner"
+    }
+  },
+  "safetySolutions1": {
+    "breadcrumb": "Tilbake til forsiden",
+    "submenu": {
+      "challenges": "Utfordringene vi løser",
+      "howItWorks": "Hvordan det virker",
+      "whereItFits": "Hvor det passer",
+      "pricing": "Pris"
+    },
+    "hero": {
+      "title": "Fallsensorer og trygghet hjemme",
+      "subtitle": "Unngå at et fall endrer alt. Våre sensorer oppdager fall helt automatisk.",
+      "button": "Bestill fallsensor",
+      "bullet1": "Fanger opp fall automatisk, uansett om den eldre benytter alarmknapp eller ikke.",
+      "bullet2": "Varsler deg som pårørende eller helsepersonell umiddelbart.",
+      "bullet3": "Kan kobles til trygghetsalarm, videoskjerm eller medisinsk overvåkning for en komplett løsning."
+    },
+    "challenges": {
+      "title": "Unngå at et fall endrer alt",
+      "text1": "Et lite fall kan få store konsekvenser. Et hoftebrudd eller timer alene på gulvet kan gjøre at mor eller far aldri helt kommer seg igjen. Kanskje du allerede har merket at balansen svikter litt oftere, eller at de virker mer usta i trappa eller på badet.",
+      "text2": "Mange eldre blir gøre redde etter et fall. De trekker seg tilbake og våger mindre, og livskvaliteten faller sammen med trygghetén. Som pårørende bærer du på en uro, hva hvis det skjer når ingen er der?",
+      "text3": "Våre fallsensorer kan ikke forhindre alle fall, men de sikrer at et fall aldri blir liggende uoppdaget."
+    },
+    "howItWorks": {
+      "title": "Hvordan virker fallsensorene?",
+      "text1": "Våre sensorer bruker radar eller infrarød teknologi for å oppdage fall automatisk, og kan plasseres i stue, soverom, trapper eller på bad. De fanger opp bevegelsesmønstre og varsler når noe ikke stemmer, for eksempel hvis noen faller og ikke reiser seg igjen.",
+      "text2": "Du som pårørende får varsel direkte til mobilen. Du kan sette opp flere kontakter som kan bli varslet om førstemann ikke svarer. Varsel kan også settes opp til å gå til kommunens vaktsentral for hjemmetjenesten.",
+      "imageAlt": "Eldre person som sover rolig i en seng med fallsensor"
+    },
+    "whereItFits": {
+      "title": "Hvor i hjemmet er dette viktig?",
+      "intro": "Flere velger å ha sensorer i flere rom, for å dekke hele hjemmet og slippe bekymringen for at et fall skjer i en «blindsone». Alle våre sensorer er diskrete og plasseres på vegg eller i tak. Har du montert et bilde, klarer du fint dette selv.",
+      "bathroom": "På badet, som er det mest risikofylte rommet i huset. Sensorene kan til og med oppdage fall bak dusjforheng.",
+      "bedroom": "I stua eller på soverommet, der de kanskje er alene store deler av dagen.",
+      "stairs": "I trapper eller ganger, hvor ett feilsteg kan være nok.",
+      "bathroomAlt": "Baderom fallsensor",
+      "bedroomAlt": "Soverom fallsensor",
+      "stairsAlt": "Trapper fallsensor"
+    },
+    "pricing": {
+      "title": "Hva koster det?",
+      "text1": "Vi tilbyr både kjøp og leie av sensorer.",
+      "text2": "En løsning med fallsensor i for eksempel stue og bad vil koste fra 99 kroner i måneden. Det er ingen bindingstid eller oppstartskostnad ved leie, men du må betale et depositum.",
+      "text3": "Du kan utvide senere med flere sensorer eller tjenester hvis behovet endrer seg.",
+      "button": "Bestill leie eller kjøp"
+    },
+    "combine": {
+      "title": "Kombiner med flere av våre løsninger",
+      "alarmComm": "Løsninger for alarm og kommunikasjon inkluderer varsling ved plutselig sykdom, toveis kommunikasjon med video, og geofence-funksjoner som gir deg trygghet når dine kjære er hjemme eller ute.",
+      "alarmButton": "Alarmknapper og rask varsling",
+      "medical": "Overvåkning for hjerteproblemer, diabetes og regelmessige målinger av pust, blodtrykk, søvn, blodskukker, kroppstemperatur og oksygenmetning. Automatisk varsling ved avvik.",
+      "medicalButton": "Medisinsk oppfølging",
+      "easeblink": "Vår videoløsning easeblink muliggjør kontakt med familie og venner, se ansiktene deres og høre stemmene deres i sanntid. Med EaseBlink kan dere dele bilder med minner, feiringer og hverdagsøyeblikk.",
+      "easeblinkButton": "Videokontakt og bildedeling"
+    },
+    "questions": {
+      "title": "Lurer du på noe?",
+      "faq": {
+        "title": "Ofte stilte spørsmål",
+        "description": ".....",
+        "button": "Ofte stilte spørsmål"
+      },
+      "experiences": {
+        "title": "Hvordan andre bruker løsningene",
+        "description": "Erfaringer..",
+        "button": "Referanser Erfaringer"
+      },
+      "contact": {
+        "title": "Kontakt oss",
+        "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+        "button": "Kontakt oss i dag"
+      }
+    }
+  },
+  "alarmCommunication1": {
+    "breadcrumb": "Tilbake til forsiden",
+    "submenu": {
+      "challenges": "Utfordringene vi løser",
+      "howItWorks": "Hvordan det virker",
+      "whereItFits": "Hvor det passer",
+      "pricing": "Pris"
+    },
+    "hero": {
+      "title": "Alarmknapper og rask varsling",
+      "subtitle": "Med alarmknapp rundt halsen kan de tilkalle hjelp med ett trykk.",
+      "button": "Bestill alarmknapp",
+      "bullet1": "Virker både inne og ute, overalt hvor det er mobildekning.",
+      "bullet2": "Gir deg varsling med en gang, ikke timer senere.",
+      "bullet3": "Tilpasset deres behov; varsling kan gå til deg, andre pårørende eller direkte til helsepersonell.",
+      "bullet4": "Trygg to-veis kommunikasjon, de får hjelp uten å lete etter telefonen.",
+      "bullet5": "Ingen binding eller oppstartskostnad, og kan utvides med fallsensorer eller medisinsk overvåkning senere."
+    },
+    "pricing": {
+      "title": "Hva koster det?",
+      "text1": "Vi tilbyr både kjøp og leie av sensorer.",
+      "text2": "En løsning med fallsensor i for eksempel stue og bad vil koste fra 99 kroner i måneden. Det er ingen bindingstid eller oppstartskostnad ved leie, men du må betale et depositum.",
+      "text3": "Du kan utvide senere med flere sensorer eller tjenester hvis behovet endrer seg.",
+      "button": "Bestill leie eller kjøp"
+    },
+    "combine": {
+      "title": "Kombiner med flere av våre løsninger",
+      "fallSensors": "Sensorer for å fange opp fall i ulike rom til hjemme. Fallsensorer i badene og andre rom gjør at fall oppdages automatisk uten at hjelp må tilkalles. Dette gir deg varsling om fall skjer.",
+      "fallSensorsButton": "Se trygghet og fallsikring",
+      "medical": "Overvåkning for hjerteproblemer, diabetes og regelmessige målinger av pust, blodtrykk, søvn, blodskukker, kroppstemperatur og oksygenmetning. Automatisk varsling ved avvik.",
+      "medicalButton": "Medisinsk oppfølging",
+      "easeblink": "Vår videoløsning easeblink muliggjør kontakt med familie og venner, se ansiktene deres og høre stemmene deres i sanntid. Med EaseBlink kan dere dele bilder med minner, feiringer og hverdagsøyeblikk.",
+      "easeblinkButton": "Videokontakt og bildedeling"
+    },
+    "questions": {
+      "title": "Lurer du på noe?",
+      "faq": {
+        "title": "Ofte stilte spørsmål",
+        "description": ".....",
+        "button": "Ofte stilte spørsmål"
+      },
+      "experiences": {
+        "title": "Hvordan andre bruker løsningene",
+        "description": "Erfaringer..",
+        "button": "Referanser Erfaringer"
+      },
+      "contact": {
+        "title": "Kontakt oss",
+        "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+        "button": "Kontakt oss i dag"
+      }
     }
   },
   "hero": {

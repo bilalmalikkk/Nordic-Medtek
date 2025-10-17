@@ -99,7 +99,7 @@ export default function PrivatePage1() {
               </div>
               <div className="text-center mt-auto">
                 <Link 
-                  to="/alarm-communication" 
+                  to="/alarm-communication1" 
                   className="group inline-flex items-center justify-center bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Alarmknapper og rask varsling
@@ -125,7 +125,7 @@ export default function PrivatePage1() {
               </div>
               <div className="text-center mt-auto">
                 <Link 
-                  to="/safety-solutions" 
+                  to="/safety-solutions1" 
                   className="group inline-flex items-center justify-center bg-green-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-green-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Gå til trygghet og fallsikring

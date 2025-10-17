@@ -22,9 +22,11 @@ import ProductDetail from './pages/ProductDetail'
 import ProductDatasheet from './pages/ProductDatasheet'
 import Guidance from './pages/Guidance'
 import AlarmCommunication from './pages/AlarmCommunication'
+import AlarmCommunication1 from './pages/AlarmCommunication1'
 import MedicalFollowup from './pages/MedicalFollowup'
 import MedicalFollowupProducts from './pages/MedicalFollowupProducts'
 import SafetySolutions from './pages/SafetySolutions'
+import SafetySolutions1 from './pages/SafetySolutions1'
 import Demo from './pages/Demo'
 import Experiences from './pages/Experiences'
 import Fallalarm from './pages/Fallalarm'
@@ -69,9 +71,11 @@ function App() {
           <Route path="/products/:id/datasheet" element={<ProductDatasheet />} />
           <Route path="/guidance" element={<Guidance />} />
           <Route path="/alarm-communication" element={<AlarmCommunication />} />
+          <Route path="/alarm-communication1" element={<AlarmCommunication1 />} />
           <Route path="/medical-followup" element={<MedicalFollowup />} />
           <Route path="/medical-followup-products" element={<MedicalFollowupProducts />} />
           <Route path="/safety-solutions" element={<SafetySolutions />} />
+          <Route path="/safety-solutions1" element={<SafetySolutions1 />} />
           <Route path="/demo" element={<Demo />} />
           <Route path="/experiences" element={<Experiences />} />
           <Route path="/fallalarm" element={<Fallalarm />} />
