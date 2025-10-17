@@ -69,8 +69,8 @@ export default function PrivatePage1() {
       </section>
 
       {/* Våre løsninger Section */}
-      <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="w-full max-w-[1600px] mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+      <section className="py-20 w-full flex justify-center">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-50 py-20 rounded-lg">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Våre løsninger
@@ -162,7 +162,7 @@ export default function PrivatePage1() {
 
       {/* easeBlink Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full max-w-[1600px] mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             {/* Left side - Text Content */}
             <div className="space-y-6">
@@ -223,7 +223,7 @@ export default function PrivatePage1() {
 
       {/* Produkter og priser Section */}
       <section className="py-20 w-full bg-white border-t border-gray-200">
-        <div className="w-full max-w-[1600px] mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
             <div className="flex-1">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -247,8 +247,8 @@ export default function PrivatePage1() {
       </section>
 
       {/* Hvorfor velge oss Section */}
-      <section className="py-20 w-full bg-gradient-to-br from-green-50 to-teal-50">
-        <div className="w-full max-w-[1600px] mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+      <section className="py-20 w-full flex justify-center">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-teal-50 py-20 rounded-lg">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Hvorfor velge oss?
@@ -322,7 +322,7 @@ export default function PrivatePage1() {
 
       {/* Lurer du på noe Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full max-w-[1600px] mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Lurer du på noe?
