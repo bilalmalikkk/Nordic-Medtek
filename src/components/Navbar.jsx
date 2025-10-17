@@ -155,14 +155,14 @@ export default function Navbar() {
       <div className="bg-teal-700 text-white w-full">
         <div className="w-full px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
           {/* Logo */}
-          <div className="flex items-center w-48 md:w-64 lg:w-72 relative overflow-visible">
+          <Link to="/" className="flex items-center w-48 md:w-64 lg:w-72 relative overflow-visible hover:opacity-80 transition-opacity">
             <img 
               src={logo} 
               alt="NordicMedTek" 
               className="h-8 md:h-10 lg:h-12 w-auto" 
               style={{ transform: 'scaleX(2) scaleY(1.9)', transformOrigin: 'left center' }} 
             />
-          </div>
+          </Link>
 
           {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center gap-8 lg:gap-12 xl:gap-16 text-base lg:text-lg absolute left-1/2 transform -translate-x-1/2">
