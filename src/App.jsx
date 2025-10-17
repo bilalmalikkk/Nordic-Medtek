@@ -8,6 +8,7 @@ import PageIndicator from './components/PageIndicator'
 import Home from './pages/Home'
 import HomePage1 from './pages/HomePage1'
 import Private from './pages/Private'
+import PrivatePage1 from './pages/PrivatePage1'
 import Municipality from './pages/Municipality'
 import MunicipalityDetails from './pages/MunicipalityDetails'
 import MunicipalityKnowledge from './pages/MunicipalityKnowledge'
@@ -53,7 +54,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage1 />} />
           <Route path="/home-original" element={<Home />} />
-          <Route path="/private" element={<Private />} />
+          <Route path="/private" element={<PrivatePage1 />} />
+          <Route path="/private-original" element={<Private />} />
           <Route path="/municipality" element={<Municipality />} />
           <Route path="/municipality-details" element={<MunicipalityDetails />} />
           <Route path="/municipality-knowledge" element={<MunicipalityKnowledge />} />
