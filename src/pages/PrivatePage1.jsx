@@ -8,6 +8,7 @@ import mann from '../assets/mann.png'
 import hus from '../assets/hus.png'
 import blokker from '../assets/blokker.png'
 import zeroKr from '../assets/0kr.png'
+import phoneLowres from '../assets/Phone_lowres.png'
 
 export default function PrivatePage1() {
   const { t } = useTranslation()
@@ -75,7 +76,7 @@ export default function PrivatePage1() {
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* For at de ikke får sagt fra */}
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col">
               <div className="text-center flex-1 flex flex-col">
@@ -147,6 +148,32 @@ export default function PrivatePage1() {
                   className="group inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Medisinsk oppfølging
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+
+            {/* For isolasjon */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col">
+              <div className="text-center flex-1 flex flex-col">
+                <div className="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <img src={phoneLowres} alt="Video contact" className="w-12 h-12" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  For isolasjon?
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed flex-1">
+                  Vår videoløsning easeBlink mulligør kontakt med familie og venner, se ansiktene deres og høre stemmene deres i samtid. Med EaseBlink kan dere dele bilder med minner, feiringer og hverdagsøyeblikk.
+                </p>
+              </div>
+              <div className="text-center mt-auto">
+                <Link 
+                  to="/easeblink" 
+                  className="group inline-flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  Videokontakt og bildedeling
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
