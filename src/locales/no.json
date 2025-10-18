@@ -2619,15 +2619,15 @@
       "fallSensors": {
         "title": "Fallsensorer",
         "q1": "Må mor eller far ha på seg noe?",
-        "a1": "Nei. Det er hele poenget. Sensorene oppdager fall automatisk, helt uten at de må huske en knapp eller et armbånd.",
+        "a1": "Våre vegg eller tak-monterte sensorer oppdager fall uten at brukeren trenger å ha noe på seg",
         "q2": "Er det vanskelig å montere?",
         "a2": "Nei. Har du klart å henge opp et bilde, klarer du dette. Vi sender med enkel veiledning.",
         "q3": "Hva om de bare setter seg raskt ned, vil det utløse alarm?",
         "a3": "Sensorene er laget for å skille mellom normale bevegelser og fall, slik at det ikke kommer unødvendige alarmer.",
-        "q4": "Er dataene trygge?",
-        "a4": "Ja. All data lagres i Norge, og vi følger GDPR og DPIA slik at du kan være trygg på personvernet.",
-        "q5": "Hva skiller dette fra en alarmknapp?",
-        "a5": "Alarmknapper er avhengig av at mor eller far husker å ha den på seg, og at de klarer å trykke. Fallsensorene virker helt av seg selv, og varsler deg straks noe skjer, også når de er svake, forvirret eller ikke får trykket.\n\nFor mange gir dette en ekstra trygghet i tillegg til alarmknapp."
+        "q4": "Hva med personvernet?",
+        "a4": "Våre fall sensorer bruker IR og radar teknikk. Dette viser er person som grovkornet sorte prikker, og ivaretar personvernet fult ut. Dette er sensorer det er lov å plassere på bad og soverom.",
+        "q5": "Hva skiller dette fra en alarm knapp?",
+        "a5": "Alarm knapper er avhengig av at mor eller far husker å ha den på seg, og de fleste alarm knapper på markedet krever at brukeren klarer å trykke på knappen. Dette er ikke tilfelle om brukeren har besvimt eller fått et illebefinnende.\n\nVår alarm knapp er avansert og kan oppdage fall automatisk om brukeren ikke klarer å trykke på alarm knappen, men man er avhengig av at brukeren husker å ha alarm knappen på seg. Mange er glad i den ekstra sikkerheten det gir å ha begge løsninger installert."
       },
       "alarmButtons": {
         "title": "Alarmknapper",
@@ -2640,14 +2640,14 @@
         "q4": "Er dataene trygge?",
         "a4": "Ja. All data håndteres i tråd med GDPR og lagres på servere i Norge.",
         "q5": "Er dette vanskelig å sette opp?",
-        "a5": "Nei. Alarmene er laget for å være like enkle å bruke som en liten fjernkontroll. Vi setter opp systemet sammen med deg, slik at du vet at alt virker.\n\nAll data håndteres trygt, lagres på servere i Norge, og følger strenge regler for personvern."
+        "a5": "Nei. Alarmene er laget for å være svært enkle å bruke. Når du mottar denne er den allerede satt opp. Den som styrer vaktrommet kobler alarm knappen til deg med en enkel operasjon som tar mindre enn et minutt å utføre.\n\nAll data håndteres trygt, lagres på servere i Norge, og følger strenge regler for personvern."
       },
       "medicalSensors": {
         "title": "Medisinske sensorer",
         "q1": "Må vi måle dette manuelt hver dag?",
         "a1": "Nei. De fleste målinger skjer helt automatisk. Har dere for eksempel en sensor under madrassen, måles puls og pust hver natt uten at de merker det.",
         "q2": "Kan dette virkelig erstatte legebesøk?",
-        "a2": "Ikke alltid. Men legen kan følge med på verdier i portalen og be dem komme inn før noe blir alvorlig. Det gjør at dere slipper mange ekstra turer «for sikkerhets skyld».",
+        "a2": "Nei, men legen eller helsepersonell kan følge med på verdier i portalen og be brukeren komme inn før noe blir alvorlig. Vaktrommet (vår sky-løsning) utfører automatisk trendanalyse og vil melde fra om det er negativ utvikling over tid på målinger",
         "q3": "Er dette trygt for personvernet?",
         "a3": "Ja. Data lagres på servere i Norge og håndteres etter GDPR og DPIA. Ingenting deles uten deres samtykke.",
         "q4": "Er dette vanskelig å bruke?",
