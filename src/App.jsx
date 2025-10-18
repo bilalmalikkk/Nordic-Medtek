@@ -10,6 +10,7 @@ import HomePage1 from './pages/HomePage1'
 import Private from './pages/Private'
 import PrivatePage1 from './pages/PrivatePage1'
 import Municipality from './pages/Municipality'
+import Kommune1 from './pages/Kommune1'
 import MunicipalityDetails from './pages/MunicipalityDetails'
 import MunicipalityKnowledge from './pages/MunicipalityKnowledge'
 import ProcurementManager from './pages/ProcurementManager'
@@ -60,6 +61,7 @@ function App() {
           <Route path="/private" element={<PrivatePage1 />} />
           <Route path="/private-original" element={<Private />} />
           <Route path="/municipality" element={<Municipality />} />
+          <Route path="/kommune1" element={<Kommune1 />} />
           <Route path="/municipality-details" element={<MunicipalityDetails />} />
           <Route path="/municipality-knowledge" element={<MunicipalityKnowledge />} />
           <Route path="/procurement-manager" element={<ProcurementManager />} />

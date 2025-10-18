@@ -150,7 +150,7 @@ export default function HomePage1() {
                 Våre løsninger innen velferdsteknologi øker tryggheten for hjemmeboende brukere, reduserer arbeidspresset på helsepersonell, og effektiviserer driften - alt i én fleksibel og skalerbar plattform.
               </p>
               <Link 
-                to="/municipality" 
+                to="/kommune1" 
                 className="inline-flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
               >
                 Løsninger for kommuner

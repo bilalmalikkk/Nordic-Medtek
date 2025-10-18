@@ -276,7 +276,7 @@ export default function Home() {
                   {t('home.targetAudiences.municipalities.description')}
                 </p>
                 <Link 
-                  to="/municipality" 
+                  to="/kommune1" 
                   className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors group"
                 >
                   {t('home.targetAudiences.municipalities.link')}

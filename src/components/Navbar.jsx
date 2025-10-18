@@ -29,7 +29,7 @@ export default function Navbar() {
   const isMunicipalityActive = (isActive) => {
     if (isActive) return true
     // Municipality section sub-pages
-    const municipalitySubPages = ['/municipality-details', '/municipality-knowledge', '/procurement-manager', '/health-personnel', '/it-welfare-technology', '/municipal-benefits', '/demo', '/politicians']
+    const municipalitySubPages = ['/municipality', '/municipality-details', '/municipality-knowledge', '/procurement-manager', '/health-personnel', '/it-welfare-technology', '/municipal-benefits', '/demo', '/politicians']
     return municipalitySubPages.includes(location.pathname)
   }
 
@@ -125,12 +125,12 @@ export default function Navbar() {
     if (pathname === '/') return null
     
     const privateSubPages = ['/alarm-communication', '/medical-followup', '/safety-solutions', '/fallalarm', '/experiences']
-    const municipalitySubPages = ['/municipality-details', '/municipality-knowledge', '/procurement-manager', '/health-personnel', '/it-welfare-technology', '/municipal-benefits', '/demo', '/politicians']
+    const municipalitySubPages = ['/municipality', '/municipality-details', '/municipality-knowledge', '/procurement-manager', '/health-personnel', '/it-welfare-technology', '/municipal-benefits', '/demo', '/politicians']
     const companySubPages = ['/guidance', '/documents', '/pricing', '/support', '/evidence']
     const productsSubPages = ['/alarm-buttons', '/trygghet-og-fallsikring', '/medical-followup-products']
     
     if (privateSubPages.includes(pathname)) return '/private'
-    if (municipalitySubPages.includes(pathname)) return '/municipality'
+    if (municipalitySubPages.includes(pathname)) return '/kommune1'
     if (companySubPages.includes(pathname)) return '/company'
     if (productsSubPages.includes(pathname) || pathname.startsWith('/products')) return '/products'
     
@@ -170,7 +170,7 @@ export default function Navbar() {
               {t('nav.private')}
             </NavLink>
 
-            <NavLink to="/municipality" className={({isActive})=> isMunicipalityActive(isActive)? 'font-semibold' : 'hover:opacity-80 transition-opacity'}>
+            <NavLink to="/kommune1" className={({isActive})=> isMunicipalityActive(isActive)? 'font-semibold' : 'hover:opacity-80 transition-opacity'}>
               {t('nav.municipality')}
             </NavLink>
 
@@ -230,7 +230,7 @@ export default function Navbar() {
                 {t('nav.private')}
               </NavLink>
               <NavLink 
-                to="/municipality" 
+                to="/kommune1" 
                 className={({isActive})=> `block py-2 px-3 rounded-md text-base transition-all duration-200 transform hover:scale-105 ${isMunicipalityActive(isActive)? 'bg-teal-500 text-white' : 'text-gray-200 hover:bg-teal-500 hover:text-white'}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
