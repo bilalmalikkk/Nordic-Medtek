@@ -266,7 +266,7 @@ export default function SafetySolutions1() {
                 {t('safetySolutions1.combine.medical')}
               </p>
               <Link 
-                to="/medical-followup" 
+                to="/medical-followup1" 
                 className="group inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full"
               >
                 {t('safetySolutions1.combine.medicalButton')}

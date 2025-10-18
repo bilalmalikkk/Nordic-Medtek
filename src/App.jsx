@@ -24,6 +24,7 @@ import Guidance from './pages/Guidance'
 import AlarmCommunication from './pages/AlarmCommunication'
 import AlarmCommunication1 from './pages/AlarmCommunication1'
 import MedicalFollowup from './pages/MedicalFollowup'
+import MedicalFollowup1 from './pages/MedicalFollowup1'
 import MedicalFollowupProducts from './pages/MedicalFollowupProducts'
 import SafetySolutions from './pages/SafetySolutions'
 import SafetySolutions1 from './pages/SafetySolutions1'
@@ -73,6 +74,7 @@ function App() {
           <Route path="/alarm-communication" element={<AlarmCommunication />} />
           <Route path="/alarm-communication1" element={<AlarmCommunication1 />} />
           <Route path="/medical-followup" element={<MedicalFollowup />} />
+          <Route path="/medical-followup1" element={<MedicalFollowup1 />} />
           <Route path="/medical-followup-products" element={<MedicalFollowupProducts />} />
           <Route path="/safety-solutions" element={<SafetySolutions />} />
           <Route path="/safety-solutions1" element={<SafetySolutions1 />} />

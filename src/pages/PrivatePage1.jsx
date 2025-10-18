@@ -26,7 +26,7 @@ export default function PrivatePage1() {
             <Link to="/alarm-buttons" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
               <span className="text-sm font-medium text-gray-900">Alarmknapper</span>
             </Link>
-            <Link to="/medical-followup" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
+            <Link to="/medical-followup1" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
               <span className="text-sm font-medium text-gray-900">Medisinsk oppfølging</span>
             </Link>
             <Link to="/easeblink" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
@@ -151,7 +151,7 @@ export default function PrivatePage1() {
               </div>
               <div className="text-center mt-auto">
                 <Link 
-                  to="/medical-followup" 
+                  to="/medical-followup1" 
                   className="group inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Medisinsk oppfølging

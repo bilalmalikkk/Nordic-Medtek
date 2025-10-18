@@ -466,7 +466,7 @@
       "measurement2": "Blodtrykk og oksygenmetning",
       "measurement3": "Blodsukker og temperatur",
       "measurement4": "Søvn og avvik som kan tyde på at noe er galt",
-      "text2": "En rekke sensorer kan velges, og alt settes opp automatisk. Det er ingen krav til teknisk kompetanse for å ta vårt system i bruk.",
+      "text2": "Alt dette går automatisk inn i systemet vårt, som du og legen kan følge via en enkel portal. Skjer det noe unormalt, kan det varsles direkte.",
       "imageAlt1": "Sensorer og plasseringer for medisinsk overvåking",
       "imageAlt2": "Systemoversikt over medisinske overvåkningsenheter"
     },
@@ -890,6 +890,62 @@
       "experiences": {
         "title": "Hvordan andre bruker løsningene",
         "description": "Erfaringer..",
+        "button": "Referanser Erfaringer"
+      },
+      "contact": {
+        "title": "Kontakt oss",
+        "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+        "button": "Kontakt oss i dag"
+      }
+    }
+  },
+  "medicalFollowup1": {
+    "breadcrumb": "Tilbake til forsiden",
+    "submenu": {
+      "challenges": "Utfordringene vi løser",
+      "howItWorks": "Hvordan det virker",
+      "whereFits": "Hvor det passer",
+      "price": "Pris"
+    },
+    "hero": {
+      "title": "Medisinsk oppfølging hjemme",
+      "subtitle": "Overvåkning og måling av helsetilstanden. Automatisk varsling ved avvik.",
+      "button": "Bestill helsesensor",
+      "bullet1": "Målingene skjer helt automatisk, uten at de må huske å gjøre noe selv i hverdagen.",
+      "bullet2": "Data kan deles direkte med fastlegen, som da kan justere medisiner eller be dem komme inn for noe utvikler seg.",
+      "bullet3": "Alt foregår hjemme, i deres trygge omgivelser, uten stress og reiser."
+    },
+    "challenges": {
+      "title": "Trygghet for deg og god helseoppfølging dine kjære",
+      "text1": "Det kan være urolig nok å vite at mor eller far er blitt mer ustø eller svake. Men hvis de i tillegg har hjerteproblemer, pustevansker, diabetes eller nylig har vært syke, blir bekymringen enda større.",
+      "text2": "Hvordan vet du at alt er i orden mellom legebesøkene? Hva hvis verdiene plutselig forverrer seg, og ingen oppdager det i tide?",
+      "text3": "Våre løsninger for medisinsk oppfølging gir deg og familien en helt ny trygghet. De følger viktige helseverdier automatisk, rett fra stua hjemme, og deler dataen med deg, eller direkte med helsepersonell hvis dere ønsker det."
+    },
+    "pricing": {
+      "title": "Hva koster det?",
+      "text1": "Vi tilbyr både kjøp og leie av sensorer.",
+      "text2": "En løsning med fallsensor i for eksempel stue og bad vil koste fra 99 kroner i måneden. Det er ingen bindingstid eller oppstartskostnad ved leie, men du må betale et depositum.",
+      "text3": "Du kan utvide senere med flere sensorer eller tjenester hvis behovet endrer seg.",
+      "button": "Bestill leie eller kjøp"
+    },
+    "combine": {
+      "title": "Kombiner med flere av våre løsninger",
+      "fallSensors": "Legg til trygghet og sikkerhet ved å kombinere med vår sensorer som oppdager fall automatisk. Dette gir deg varsling umiddelbart om de faller, selv om de ikke selv kan trykke på en alarmknapp.",
+      "fallSensorsButton": "Se fallsensorer og trygghet",
+      "alarmButtons": "Alarmknapper for å varsle når ønsket. Alarmknapp rundt halsen eller i lommen gjør at de kan tilkalle hjelp når som helst med ett trykk.",
+      "alarmButtonsButton": "Se trygghetsalarmer og kommunikasjon",
+      "videoAndContact": "Har du et kjent til med kognitiv svikt? Hjelp til å komme i kontakt med familie, venner og leger via enkel videoskjerm. Dette kan kombineres med alle andre tjenester vi har.",
+      "videoAndContactButton": "Se videoløsning for kontakt og isolasjon"
+    },
+    "questions": {
+      "title": "Lurer du på noe?",
+      "faq": {
+        "title": "Ofte stilte spørsmål",
+        "button": "Ofte stilte spørsmål"
+      },
+      "experiences": {
+        "title": "Hvordan andre bruker løsningene",
+        "subtitle": "Erfaringer",
         "button": "Referanser Erfaringer"
       },
       "contact": {

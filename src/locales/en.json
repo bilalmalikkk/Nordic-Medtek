@@ -466,7 +466,7 @@
       "measurement2": "Blood pressure and oxygen saturation",
       "measurement3": "Blood sugar and temperature",
       "measurement4": "Sleep and deviations that may indicate something is wrong",
-      "text2": "A number of sensors can be selected, and everything is set up automatically. There are no requirements for technical competence to use our system.",
+      "text2": "All of this automatically feeds into our system, which you and the doctor can follow via a simple portal. If something abnormal happens, it can be alerted directly.",
       "imageAlt1": "Sensors and placements for medical monitoring",
       "imageAlt2": "System overview of medical monitoring devices"
     },
@@ -890,6 +890,62 @@
       "experiences": {
         "title": "How others use the solutions",
         "description": "Experiences..",
+        "button": "References Experiences"
+      },
+      "contact": {
+        "title": "Contact us",
+        "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+        "button": "Contact us today"
+      }
+    }
+  },
+  "medicalFollowup1": {
+    "breadcrumb": "Back to home",
+    "submenu": {
+      "challenges": "The challenges we solve",
+      "howItWorks": "How it works",
+      "whereFits": "Where it fits",
+      "price": "Price"
+    },
+    "hero": {
+      "title": "Medical follow-up at home",
+      "subtitle": "Monitoring and measurement of health status. Automatic alerts for deviations.",
+      "button": "Order health sensor",
+      "bullet1": "Measurements happen completely automatically, without them having to remember to do anything themselves in daily life.",
+      "bullet2": "Data can be shared directly with the doctor, who can then adjust medications or ask them to come in if something develops.",
+      "bullet3": "Everything happens at home, in their safe environment, without stress and travel."
+    },
+    "challenges": {
+      "title": "Peace of mind for you and good health monitoring for your loved ones",
+      "text1": "It can be worrying enough to know that mom or dad has become more unsteady or weak. But if they also have heart problems, breathing difficulties, diabetes, or have recently been ill, the concern becomes even greater.",
+      "text2": "How do you know everything is okay between doctor visits? What if values suddenly worsen, and no one discovers it in time?",
+      "text3": "Our medical monitoring solutions give you and your family a completely new peace of mind. They track important health values automatically, right from their living room at home, and share the data with you, or directly with healthcare personnel if you wish."
+    },
+    "pricing": {
+      "title": "What does it cost?",
+      "text1": "We offer both purchase and rental of sensors.",
+      "text2": "A solution with fall sensors in, for example, the living room and bathroom will cost from 99 kroner per month. There is no binding period or startup cost for rental, but you must pay a deposit.",
+      "text3": "You can expand later with more sensors or services if needs change.",
+      "button": "Order rental or purchase"
+    },
+    "combine": {
+      "title": "Combine with more of our solutions",
+      "fallSensors": "Add safety and security by combining with our sensors that detect falls automatically. This gives you immediate notification if they fall, even if they cannot press an alarm button themselves.",
+      "fallSensorsButton": "See fall sensors and safety",
+      "alarmButtons": "Alarm buttons to alert when desired. An alarm button around the neck or in the pocket means they can call for help anytime with one press.",
+      "alarmButtonsButton": "See safety alarms and communication",
+      "videoAndContact": "Do you have a loved one with cognitive decline? Help them connect with family, friends and doctors via simple video screen. This can be combined with all our other services.",
+      "videoAndContactButton": "See video solution for contact and isolation"
+    },
+    "questions": {
+      "title": "Have questions?",
+      "faq": {
+        "title": "Frequently asked questions",
+        "button": "Frequently asked questions"
+      },
+      "experiences": {
+        "title": "How others use the solutions",
+        "subtitle": "Experiences",
         "button": "References Experiences"
       },
       "contact": {

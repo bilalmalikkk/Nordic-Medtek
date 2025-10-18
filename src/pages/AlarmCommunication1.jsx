@@ -325,10 +325,10 @@ export default function AlarmCommunication1() {
                     <p className="text-gray-700 leading-relaxed mb-6 flex-1">
                       {t('alarmCommunication1.combine.medical')}
                     </p>
-                    <Link 
-                      to="/medical-followup" 
-                      className="group inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full"
-                    >
+              <Link 
+                to="/medical-followup1" 
+                className="group inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full"
+              >
                       {t('alarmCommunication1.combine.medicalButton')}
                       <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
