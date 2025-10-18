@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import videoCallImage from '../assets/video call.png'
+import easeBlinkScreen from '../assets/image (13).png'
+import phoneLowres from '../assets/Phone_lowres.png'
 
 export default function EaseBlink1() {
   const { t } = useTranslation()
@@ -23,159 +25,245 @@ export default function EaseBlink1() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              <span className="font-medium">{t('easeblink1.backButton')}</span>
+              <span className="font-medium">Tilbake</span>
             </Link>
           </div>
         </div>
 
+        {/* Top Menu Cards */}
+        <section className="py-4 bg-gray-50 w-full border-b border-gray-200">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap justify-center gap-3">
+              <a href="#what-is" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
+                <span className="text-sm font-medium text-gray-900">Hva er easeBlink</span>
+              </a>
+              <a href="#why" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
+                <span className="text-sm font-medium text-gray-900">Hvorfor easeBlink</span>
+              </a>
+              <a href="#how-to-get" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
+                <span className="text-sm font-medium text-gray-900">Hvordan få easeBlink</span>
+              </a>
+              <Link to="/pricing" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
+                <span className="text-sm font-medium text-gray-900">Pris</span>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Hero Section */}
-        <section className="py-16 md:py-24 w-full bg-white">
+        <section id="what-is" className="py-16 md:py-24 w-full bg-white">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-6">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                  {t('easeblink1.title')}
-                </h1>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                  {t('easeblink1.description')}
-                </p>
-              </div>
-              
-              <div className="flex justify-center lg:justify-end">
-                <div className="relative">
-                  <div className="w-80 h-80 bg-white rounded-3xl shadow-2xl border-4 border-gray-100 overflow-hidden">
-                    <img 
-                      src={videoCallImage} 
-                      alt="Video call interface" 
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  {/* Decorative elements */}
-                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-teal-500 rounded-full opacity-80"></div>
-                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-blue-500 rounded-full opacity-60"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Main Content Section */}
-        <section className="py-16 w-full bg-gradient-to-b from-gray-50 to-white">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                <div className="p-8 md:p-12">
-                  <div className="text-center mb-8">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
-                      <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                      {t('easeblink1.isolationTitle')}
-                    </h2>
-                  </div>
-                  
-                  <div className="prose prose-lg max-w-none text-gray-700 mb-8">
-                    <p className="text-xl leading-relaxed">
-                      {t('easeblink1.isolationDescription')}
-                    </p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <Link 
-                      to="/contact"
-                      className="inline-flex items-center bg-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-teal-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                    >
-                      <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                      </svg>
-                      {t('easeblink1.ctaButton')}
-                      <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-16 w-full bg-white">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                {t('easeblink1.featuresTitle')}
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                {t('easeblink1.featuresDescription')}
+            <div className="max-w-3xl">
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Kontakt med familien
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+                EaseBlink muligjør kontakt med familie og venner med video, og dere kan dele bilder med minner, feiringer og hverdagsøyeblikk.
               </p>
             </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-300">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('easeblink1.feature1.title')}</h3>
-                <p className="text-gray-600">{t('easeblink1.feature1.description')}</p>
-              </div>
+          </div>
+        </section>
+
+        {/* Avoid Isolation Section */}
+        <section className="py-16 w-full bg-gray-50">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Unngå isolasjon
+              </h2>
               
-              <div className="text-center p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-300">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('easeblink1.feature2.title')}</h3>
-                <p className="text-gray-600">{t('easeblink1.feature2.description')}</p>
-              </div>
-              
-              <div className="text-center p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-300">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('easeblink1.feature3.title')}</h3>
-                <p className="text-gray-600">{t('easeblink1.feature3.description')}</p>
+              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                <p>
+                  Mange eldre, spesielt de med begrenset mobilitet, opplever isolasjon.
+                </p>
+                
+                <p>
+                  Vår videoløsning easeBlink lar dem opprettholde kontakt med familie og venner, se ansiktene deres og høre stemmene deres i sanntid. Dette skaper en følelse av tilstedeværelse og fellesskap som tradisjonelle telefoner og tekstmeldinger ikke kan erstatte.
+                </p>
+                
+                <p>
+                  EaseBlink har også bildedeling i form av en digital karusell gjør det mulig å dele minner, feiringer og hverdagsøyeblikk. Dette bringer glede og gir samtaleemner.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 w-full bg-gradient-to-br from-teal-50 to-blue-50">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              {t('easeblink1.ctaTitle')}
+        {/* How easeBlink Works Section */}
+        <section className="py-16 w-full bg-white">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col lg:flex-row gap-12 items-center">
+              {/* Left side - Text content */}
+              <div className="lg:w-1/2 space-y-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+                  Hvordan virker easeBlink?
+                </h2>
+                
+                <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+                  <p>
+                    En skjerm med store brukervennlige knapper som gjør at mor eller far kan motta bilder og meldinger fra familien, og enkelt ha videosamtaler.
+                  </p>
+                  
+                  <p>
+                    Løsningen har et svært enkelt brukergrensesnitt, noe som gjør den tilgjengelig for eldre med varierende grader av kognitiv svekelse.
+                  </p>
+                </div>
+              </div>
+              
+              {/* Right side - Images */}
+              <div className="lg:w-1/2 flex justify-center lg:justify-end">
+                <div className="relative pr-16 md:pr-20">
+                  {/* Larger screen - positioned in background, higher */}
+                  <img 
+                    src={easeBlinkScreen} 
+                    alt="EaseBlink screen interface showing contacts and photo carousel" 
+                    className="w-full max-w-sm h-auto rounded-lg shadow-xl"
+                  />
+                  
+                  {/* Phone - overlapping on the right, positioned lower */}
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 mt-8 z-10">
+                    <img 
+                      src={phoneLowres} 
+                      alt="Phone showing video call interface" 
+                      className="w-32 md:w-40 h-auto drop-shadow-2xl"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-16 w-full bg-gray-50">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Hva koster det?
+              </h2>
+              
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                Vi tilbyr både kjøp og leie ....
+              </p>
+              
+              <Link 
+                to="/pricing"
+                className="inline-block bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                Bestill leie eller kjøp
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Combine Solutions Section */}
+        <section className="py-16 w-full bg-blue-50">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+              Kombiner med flere av våre løsninger
             </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              {t('easeblink1.ctaDescription')}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact"
-                className="inline-flex items-center bg-teal-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-teal-700 transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                {t('easeblink1.contactButton')}
-              </Link>
-              <Link 
-                to="/demo"
-                className="inline-flex items-center bg-white text-teal-600 border-2 border-teal-600 px-8 py-4 rounded-xl font-semibold hover:bg-teal-50 transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                {t('easeblink1.demoButton')}
-              </Link>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Safety and Fall Prevention Card */}
+              <div className="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                <p className="text-sm text-gray-700 leading-relaxed mb-6 flex-grow">
+                  Bekymring for fall i ditt hjem. Trådløse eller trådbaserte fallsensorer eller trykksensorer kombinert registrerer fravær. Når sensorer registrerer varslig bli du varslet på din mobilapp.
+                </p>
+                <Link 
+                  to="/safety-solutions1"
+                  className="inline-block w-full bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-all duration-300 text-center mt-auto"
+                >
+                  Se til trygghet og fallsikring
+                </Link>
+              </div>
+
+              {/* Alarm Buttons Card */}
+              <div className="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                <p className="text-sm text-gray-700 leading-relaxed mb-6 flex-grow">
+                  I pludskelige for alarm eller kommunikasjon (inkluderer varsling ved plutselig sykdom, tovels kommunikasjon med dine kjære, sos knapp på natt trygghet når hjemme eller ute med Laserens Alarm sammen med GPSsite
+                </p>
+                <Link 
+                  to="/alarm-communication1"
+                  className="inline-block w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 text-center mt-auto"
+                >
+                  Alarmknapper og rask varsling
+                </Link>
+              </div>
+
+              {/* Medical Follow-up Card */}
+              <div className="bg-white p-6 rounded-lg shadow-md flex flex-col">
+                <p className="text-sm text-gray-700 leading-relaxed mb-6 flex-grow">
+                  Overvåkning for hjerteproblemer, diabetes og regelmessige målinger av pust, blodtrykk, oksygenmetning. Kombinerte løsning for sikkerhet med automatisk varling til deg som pårørende. Dette kan brukes alene eller sammen med andre løsninger.
+                </p>
+                <Link 
+                  to="/medical-followup1"
+                  className="inline-block w-full bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-all duration-300 text-center mt-auto"
+                >
+                  Medisinsk oppfølging
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Questions Section */}
+        <section className="py-16 w-full bg-white">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+              Lurer du på noe?
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* FAQ Card */}
+              <div className="bg-white p-8 rounded-3xl border-4 border-dashed border-orange-400 hover:border-orange-500 transition-all duration-300 flex flex-col">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Ofte stilte spørsmål</h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">.....</p>
+                </div>
+                <div className="mt-auto">
+                  <Link 
+                    to="/faq"
+                    state={{ from: '/easeblink1' }}
+                    className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 w-full text-center"
+                  >
+                    Ofte stilte spørsmål
+                  </Link>
+                </div>
+              </div>
+
+              {/* Experiences Card */}
+              <div className="bg-white p-8 rounded-3xl border-4 border-dashed border-orange-400 hover:border-orange-500 transition-all duration-300 flex flex-col">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Hvordan andre bruker løsningene</h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">Erfaringer..</p>
+                </div>
+                <div className="mt-auto">
+                  <Link 
+                    to="/experiences" 
+                    className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 w-full text-center"
+                  >
+                    Referanser Erfaringer
+                  </Link>
+                </div>
+              </div>
+
+              {/* Contact Card */}
+              <div className="bg-white p-8 rounded-3xl border-4 border-dashed border-orange-400 hover:border-orange-500 transition-all duration-300 flex flex-col">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Kontakt oss</h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.
+                  </p>
+                </div>
+                <div className="mt-auto">
+                  <Link 
+                    to="/documents" 
+                    className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 w-full text-center"
+                  >
+                    Kontakt oss i dag
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>

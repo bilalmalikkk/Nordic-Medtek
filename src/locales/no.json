@@ -775,7 +775,7 @@
     }
   },
   "safetySolutions1": {
-    "breadcrumb": "Tilbake til forsiden",
+    "breadcrumb": "Tilbake",
     "submenu": {
       "challenges": "Utfordringene vi løser",
       "howItWorks": "Hvordan det virker",
@@ -848,7 +848,7 @@
     }
   },
   "alarmCommunication1": {
-    "breadcrumb": "Tilbake til forsiden",
+    "breadcrumb": "Tilbake",
     "submenu": {
       "challenges": "Utfordringene vi løser",
       "howItWorks": "Hvordan det virker",
@@ -901,7 +901,7 @@
     }
   },
   "medicalFollowup1": {
-    "breadcrumb": "Tilbake til forsiden",
+    "breadcrumb": "Tilbake",
     "submenu": {
       "challenges": "Utfordringene vi løser",
       "howItWorks": "Hvordan det virker",
@@ -2572,7 +2572,7 @@
     "description": "Her finner du svar på ofte stilte spørsmål om løsnigene våre.",
     "contactPrompt": "Ta kontakt med oss om du ikke finner svar på det lurer på",
     "contactButton": "Kontakt oss",
-    "backButton": "Tilbake til forsiden",
+    "backButton": "Tilbake",
     "categories": {
       "general": "Generelt",
       "costs": "Kostnader",
@@ -2669,7 +2669,7 @@
     }
   },
   "easeblink1": {
-    "backButton": "Tilbake til forsiden",
+    "backButton": "Tilbake",
     "title": "Kontakt med familien",
     "description": "EaseBlink muligjør kontakt med familie og venner med video, og dere kan dele bilder med minner, feiringer og hverdagsøyeblikk.",
     "isolationTitle": "For isolasjon?",
