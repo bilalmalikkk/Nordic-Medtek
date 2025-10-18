@@ -281,7 +281,7 @@ export default function SafetySolutions1() {
                 {t('safetySolutions1.combine.easeblink')}
               </p>
               <Link 
-                to="/easeblink" 
+                to="/easeblink1" 
                 className="group inline-flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl w-full"
               >
                 {t('safetySolutions1.combine.easeblinkButton')}

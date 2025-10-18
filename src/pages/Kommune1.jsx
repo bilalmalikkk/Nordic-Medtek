@@ -69,19 +69,19 @@ export default function Kommune1() {
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-3">
             <Link to="/products" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">Produkter</span>
+              <span className="text-sm font-medium text-gray-900">{t('kommune1.submenu.products')}</span>
             </Link>
             <Link to="/pricing" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">Priser og avtaler</span>
+              <span className="text-sm font-medium text-gray-900">{t('kommune1.submenu.pricing')}</span>
             </Link>
             <Link to="/it-welfare-technology" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">IT-arkitektur</span>
+              <span className="text-sm font-medium text-gray-900">{t('kommune1.submenu.itArchitecture')}</span>
             </Link>
             <Link to="/documents" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">Dokumentasjon</span>
+              <span className="text-sm font-medium text-gray-900">{t('kommune1.submenu.documentation')}</span>
             </Link>
             <Link to="/experiences" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">Referanser</span>
+              <span className="text-sm font-medium text-gray-900">{t('kommune1.submenu.references')}</span>
             </Link>
           </div>
         </div>
@@ -94,16 +94,16 @@ export default function Kommune1() {
             {/* Left Side - Main Content */}
             <div className="space-y-5">
               <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                En tryggere og mer bærekraftig omsorg i kommunen.
+                {t('kommune1.hero.title')}
               </h1>
               <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                Vår velferds-teknologiske løsning reduserer arbeidspresset på helsepersonell, øker tryggheten for brukerne og effektiviserer driften - alt i én fleksibel og skalerbar plattform.
+                {t('kommune1.hero.description1')}
               </p>
               <p className="text-base text-gray-600 leading-relaxed">
-                Teknologi som gjør det mulig for eldre å bo hjemme lenger, samtidig som ressursene brukes smartere.
+                {t('kommune1.hero.description2')}
               </p>
               <p className="text-base sm:text-lg font-semibold text-teal-700">
-                En investering i bærekraftig omsorg og smartere ressursbruk
+                {t('kommune1.hero.description3')}
               </p>
             </div>
 
@@ -117,7 +117,7 @@ export default function Kommune1() {
                     </svg>
                   </div>
                   <p className="text-sm sm:text-base text-gray-800 leading-relaxed">
-                    Mindre stress og bekymring for hva som skjer mellom besøkene.
+                    {t('kommune1.hero.benefit1')}
                   </p>
                 </li>
                 <li className="flex items-start">
@@ -127,7 +127,7 @@ export default function Kommune1() {
                     </svg>
                   </div>
                   <p className="text-sm sm:text-base text-gray-800 leading-relaxed">
-                    Bedre oversikt gjør det enklere å prioritere riktig.
+                    {t('kommune1.hero.benefit2')}
                   </p>
                 </li>
                 <li className="flex items-start">
@@ -137,7 +137,7 @@ export default function Kommune1() {
                     </svg>
                   </div>
                   <p className="text-sm sm:text-base text-gray-800 leading-relaxed">
-                    Økt trygghet både for ansatte og pårørende.
+                    {t('kommune1.hero.benefit3')}
                   </p>
                 </li>
                 <li className="flex items-start">
@@ -147,7 +147,7 @@ export default function Kommune1() {
                     </svg>
                   </div>
                   <p className="text-sm sm:text-base text-gray-800 leading-relaxed">
-                    Mulighet til å jobbe mer forebyggende i stedet for å håndtere kriser.
+                    {t('kommune1.hero.benefit4')}
                   </p>
                 </li>
               </ul>
@@ -160,46 +160,46 @@ export default function Kommune1() {
       <section className="py-16 w-full bg-white">
         <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
-            Klar til å se hvordan våre løsninger kan fungere i din kommune?
+            {t('kommune1.ctaOptions.title')}
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
             {/* Demo Card */}
             <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 text-center hover:border-teal-500 hover:shadow-xl transition-all duration-300">
               <p className="text-base text-gray-700 leading-relaxed mb-8 min-h-[80px] flex items-center justify-center">
-                Vi tilbyr demoen tilpasset hjemmetjenesten.
+                {t('kommune1.ctaOptions.demo.description')}
               </p>
               <Link 
                 to="/demo"
                 className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                Bestill demo
+                {t('kommune1.ctaOptions.demo.button')}
               </Link>
             </div>
 
             {/* Data Presentation Card */}
             <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 text-center hover:border-teal-500 hover:shadow-xl transition-all duration-300">
               <p className="text-base text-gray-700 leading-relaxed mb-8 min-h-[80px] flex items-center justify-center">
-                Vi tilbyr korte digitale møter for ledere med gjennomgang av gevinstene.
+                {t('kommune1.ctaOptions.dataPresentation.description')}
               </p>
               <Link 
                 to="/guidance"
                 className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                Bestill en datapresentasjon
+                {t('kommune1.ctaOptions.dataPresentation.button')}
               </Link>
             </div>
 
             {/* Pilot Project Card */}
             <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 text-center hover:border-teal-500 hover:shadow-xl transition-all duration-300">
               <p className="text-base text-gray-700 leading-relaxed mb-8 min-h-[80px] flex items-center justify-center">
-                Vi kan starte med et pilotprosjekt for en liten pasientgruppe.
+                {t('kommune1.ctaOptions.pilotProject.description')}
               </p>
               <Link 
                 to="/documents"
                 className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                Kontakt oss for mer informasjon
+                {t('kommune1.ctaOptions.pilotProject.button')}
               </Link>
             </div>
           </div>
@@ -211,10 +211,10 @@ export default function Kommune1() {
         <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-4">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Løsningen kort forklart
+              {t('kommune1.solutionExplanation.title')}
             </h2>
             <p className="text-lg text-gray-600">
-              Slik støtter systemet helsetjenesten i hverdagen:
+              {t('kommune1.solutionExplanation.subtitle')}
             </p>
           </div>
           
@@ -230,10 +230,10 @@ export default function Kommune1() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                Smarte sensorer oppdager problemer i sanntid
+                {t('kommune1.solutionExplanation.smartSensors.title')}
               </h3>
               <p className="text-base text-gray-600 leading-relaxed text-center">
-                Bevegelse-, fall- og helsesensorer overvåker hjemmemiljøet i stillhet. De gjenkjenner uregelmessigheter som fall, mangel på bevegelse eller unormale vitale tegn, uten behov for manuelle innsjekklinger.
+                {t('kommune1.solutionExplanation.smartSensors.description')}
               </p>
             </div>
 
@@ -247,10 +247,10 @@ export default function Kommune1() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                Kontrollrommet gir full oversikt
+                {t('kommune1.solutionExplanation.controlRoom.title')}
               </h3>
               <p className="text-base text-gray-600 leading-relaxed text-center">
-                Alle hendelser samles i Vaktrommet, et digitalt dashbord som gir de ansatte en klar oversikt. Hvis noe skjer, varsles riktig person umiddelbart, noe som sikrer rask og målrettet respons.
+                {t('kommune1.solutionExplanation.controlRoom.description')}
               </p>
             </div>
           </div>
@@ -267,10 +267,10 @@ export default function Kommune1() {
                 />
               </div>
               <h4 className="text-base font-bold text-gray-900 mb-2">
-                Fallsensorer
+                {t('kommune1.solutionExplanation.fallSensors.title')}
               </h4>
               <p className="text-sm text-gray-600 leading-relaxed">
-                oppdager fall automatisk, også når ingen klarer å trykke på alarmknappen.
+                {t('kommune1.solutionExplanation.fallSensors.description')}
               </p>
             </div>
 
@@ -284,10 +284,10 @@ export default function Kommune1() {
                 />
               </div>
               <h4 className="text-base font-bold text-gray-900 mb-2">
-                Helsesensorer
+                {t('kommune1.solutionExplanation.healthSensors.title')}
               </h4>
               <p className="text-sm text-gray-600 leading-relaxed">
-                følger med på puls, puls og aktivitet uten at brukeren merker det.
+                {t('kommune1.solutionExplanation.healthSensors.description')}
               </p>
             </div>
 
@@ -301,10 +301,10 @@ export default function Kommune1() {
                 />
               </div>
               <h4 className="text-base font-bold text-gray-900 mb-2">
-                Sentral oversikt
+                {t('kommune1.solutionExplanation.centralOverview.title')}
               </h4>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Kommunen <span className="underline">varselstyrer</span> for samordisurser og kan prioritere ressurser riktig.
+                {t('kommune1.solutionExplanation.centralOverview.description')}
               </p>
             </div>
 
@@ -318,10 +318,10 @@ export default function Kommune1() {
                 />
               </div>
               <h4 className="text-base font-bold text-gray-900 mb-2">
-                Direkte varsel
+                {t('kommune1.solutionExplanation.directNotification.title')}
               </h4>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Varsler til helsepersonellets vakttelefoner er tydelige og enkle å forstå.
+                {t('kommune1.solutionExplanation.directNotification.description')}
               </p>
             </div>
           </div>
@@ -333,7 +333,7 @@ export default function Kommune1() {
         <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Hvordan løser vi dette?
+              {t('kommune1.howWeSolve.title')}
             </h2>
           </div>
           
@@ -348,17 +348,17 @@ export default function Kommune1() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                Sømløs integrasjon med eksisterende systemer
+                {t('kommune1.howWeSolve.seamlessIntegration.title')}
               </h3>
               <p className="text-base text-gray-700 leading-relaxed text-center mb-4">
-                Løsningen kobles til API og etablerte kommunale arbeidsflytter. Dette betyr at dataflytter er sikker, at ansatte ikke trenger å lære nye verktøy.
+                {t('kommune1.howWeSolve.seamlessIntegration.description')}
               </p>
               <div className="text-center">
                 <Link 
                   to="/it-welfare-technology"
                   className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors group"
                 >
-                  IT-arkitektur
+                  {t('kommune1.howWeSolve.seamlessIntegration.link')}
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -376,17 +376,17 @@ export default function Kommune1() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                Sensorene installeres enkelt
+                {t('kommune1.howWeSolve.easyInstallation.title')}
               </h3>
               <p className="text-base text-gray-700 leading-relaxed text-center mb-4">
-                Sensorene leverer ferdigm til å montere rask. De installeres enkelt og krever ikke sikve fra deg.
+                {t('kommune1.howWeSolve.easyInstallation.description')}
               </p>
               <div className="text-center">
                 <Link 
                   to="/products"
                   className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors group"
                 >
-                  Produkter
+                  {t('kommune1.howWeSolve.easyInstallation.link')}
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -402,10 +402,10 @@ export default function Kommune1() {
         <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Case og referanser
+              {t('kommune1.caseStudies.title')}
             </h2>
             <p className="text-lg text-red-600 font-medium mb-6">
-              Vår erfaring fra utførte tester og pilioter, samt veileder fra helsedirektoratet (2025):
+              {t('kommune1.caseStudies.subtitle')}
             </p>
           </div>
 
@@ -415,19 +415,19 @@ export default function Kommune1() {
               <li className="flex items-start">
                 <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-base text-gray-800 font-semibold">
-                  Færre akutte sykehusinnleggelser
+                  {t('kommune1.caseStudies.benefit1')}
                 </p>
               </li>
               <li className="flex items-start">
                 <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-base text-gray-800 font-semibold">
-                  Økt trygghet for ansatte og pårørende
+                  {t('kommune1.caseStudies.benefit2')}
                 </p>
               </li>
               <li className="flex items-start">
                 <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-base text-gray-800 font-semibold">
-                  Bedre ressursutnyttelse - mer tid friggjort til planlagte besøk
+                  {t('kommune1.caseStudies.benefit3')}
                 </p>
               </li>
             </ul>
@@ -439,13 +439,13 @@ export default function Kommune1() {
               to="/experiences"
               className="bg-white border-2 border-gray-300 px-8 py-4 rounded-xl hover:border-teal-500 hover:shadow-lg transition-all duration-300 font-semibold text-gray-900"
             >
-              Pilotkommune X
+              {t('kommune1.caseStudies.pilotMunicipality1')}
             </Link>
             <Link 
               to="/experiences"
               className="bg-white border-2 border-gray-300 px-8 py-4 rounded-xl hover:border-teal-500 hover:shadow-lg transition-all duration-300 font-semibold text-gray-900"
             >
-              Hjemmetjeneste Y
+              {t('kommune1.caseStudies.pilotMunicipality2')}
             </Link>
           </div>
 
@@ -453,19 +453,19 @@ export default function Kommune1() {
           <div className="space-y-6 max-w-4xl mx-auto">
             <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-teal-500">
               <p className="text-gray-700 italic mb-3 leading-relaxed">
-                "Vi får rask beskjed når noe skjer, og kan handle med en gang. Det gir trygghet både for pasientene og for oss som ansatte."
+                "{t('kommune1.caseStudies.testimonial1.quote')}"
               </p>
               <p className="text-sm text-gray-600 font-medium">
-                – Avdelingssykepleier, pilotkommune
+                {t('kommune1.caseStudies.testimonial1.author')}
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-teal-500">
               <p className="text-gray-700 italic mb-3 leading-relaxed">
-                "Vi slipper å løpe på lav som skjer mellom besøkene. Nå får vi beskjed med en gang, og kan rekke ut rask."
+                "{t('kommune1.caseStudies.testimonial2.quote')}"
               </p>
               <p className="text-sm text-gray-600 font-medium">
-                – Sykepleier, pilotkommune
+                {t('kommune1.caseStudies.testimonial2.author')}
               </p>
             </div>
           </div>
@@ -477,10 +477,10 @@ export default function Kommune1() {
         <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Samfunnsgevinsten
+              {t('kommune1.communityBenefits.title')}
             </h2>
             <p className="text-lg text-gray-700">
-              Vår løsning gir målbare resultater:
+              {t('kommune1.communityBenefits.subtitle')}
             </p>
           </div>
           
@@ -496,10 +496,10 @@ export default function Kommune1() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                Færre sykehusinnleggelser
+                {t('kommune1.communityBenefits.fewerAdmissions.title')}
               </h3>
               <p className="text-base text-gray-700 leading-relaxed text-center">
-                Sensoren oppdager kritiske hendelser tidlig.
+                {t('kommune1.communityBenefits.fewerAdmissions.description')}
               </p>
             </div>
 
@@ -513,10 +513,10 @@ export default function Kommune1() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                Lavere kostnader
+                {t('kommune1.communityBenefits.lowerCosts.title')}
               </h3>
               <p className="text-base text-gray-700 leading-relaxed text-center">
-                Kommunen sparer betydelige summer på forebygging.
+                {t('kommune1.communityBenefits.lowerCosts.description')}
               </p>
             </div>
 
@@ -530,10 +530,10 @@ export default function Kommune1() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                Bedre arbeidsvilkår
+                {t('kommune1.communityBenefits.betterWorkingConditions.title')}
               </h3>
               <p className="text-base text-gray-700 leading-relaxed text-center">
-                Ansatte får en mer forutsigbar arbeidshverdag.
+                {t('kommune1.communityBenefits.betterWorkingConditions.description')}
               </p>
             </div>
 
@@ -547,10 +547,10 @@ export default function Kommune1() {
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                Trygghet og verdighet
+                {t('kommune1.communityBenefits.safetyAndDignity.title')}
               </h3>
               <p className="text-base text-gray-700 leading-relaxed text-center">
-                eldre får bo hjemme lenger, med økt sikkerhet.
+                {t('kommune1.communityBenefits.safetyAndDignity.description')}
               </p>
             </div>
           </div>
@@ -558,13 +558,13 @@ export default function Kommune1() {
           {/* CTA Section */}
           <div className="text-center">
             <p className="text-base text-gray-700 mb-6">
-              Vi tilbyr korte digitale møter for ledere med gjennomgang av gevinstene.
+              {t('kommune1.communityBenefits.ctaDescription')}
             </p>
             <Link 
               to="/guidance"
               className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg"
             >
-              Bestill en lederpresentasjon
+              {t('kommune1.communityBenefits.ctaButton')}
             </Link>
           </div>
         </div>
@@ -589,7 +589,8 @@ export default function Kommune1() {
                 {/* Spacer */}
               </p>
               <Link 
-                to="/support"
+                to="/faq"
+                state={{ from: '/kommune1' }}
                 className="inline-block bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 Ofte stilte spørsmål

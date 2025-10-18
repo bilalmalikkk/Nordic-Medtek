@@ -41,7 +41,8 @@
     "alarmButtons": "Alarm Buttons",
     "trygghetOgFallsikring": "Safety & Fall Protection",
     "medicalFollowupProducts": "Medical Follow-up Products",
-    "easeblink": "EaseBlink"
+    "easeblink": "EaseBlink",
+    "faq": "FAQ"
   },
   "medicalFollowupProducts": {
     "hero": {
@@ -2411,6 +2412,264 @@
     "loginRequired": "Please login to access the CSV import tool",
     "goToAdmin": "Go to Admin Login",
     "backToAdmin": "← Back to Admin"
+  },
+  "kommune1": {
+    "submenu": {
+      "products": "Products",
+      "pricing": "Pricing and Agreements",
+      "itArchitecture": "IT Architecture",
+      "documentation": "Documentation",
+      "references": "References"
+    },
+    "hero": {
+      "title": "Safer and more sustainable care in the municipality.",
+      "description1": "Our welfare technology solution reduces workload on healthcare personnel, increases safety for users, and streamlines operations - all in one flexible and scalable platform.",
+      "description2": "Technology that enables elderly to live at home longer, while using resources smarter.",
+      "description3": "An investment in sustainable care and smarter resource usage",
+      "benefit1": "Less stress and worry about what happens between visits.",
+      "benefit2": "Better overview makes it easier to prioritize correctly.",
+      "benefit3": "Increased security for both staff and relatives.",
+      "benefit4": "Ability to work more preventively instead of handling crises."
+    },
+    "ctaOptions": {
+      "title": "Ready to see how our solutions can work in your municipality?",
+      "demo": {
+        "description": "We offer demos tailored to home care services.",
+        "button": "Book demo"
+      },
+      "dataPresentation": {
+        "description": "We offer short digital meetings for leaders with a review of the benefits.",
+        "button": "Book a data presentation"
+      },
+      "pilotProject": {
+        "description": "We can start with a pilot project for a small patient group.",
+        "button": "Contact us for more information"
+      }
+    },
+    "solutionExplanation": {
+      "title": "The solution briefly explained",
+      "subtitle": "How the system supports healthcare services in everyday life:",
+      "smartSensors": {
+        "title": "Smart sensors detect problems in real-time",
+        "description": "Motion, fall, and health sensors monitor the home environment silently. They recognize irregularities such as falls, lack of movement, or abnormal vital signs, without the need for manual checks."
+      },
+      "controlRoom": {
+        "title": "The control room provides full overview",
+        "description": "All events are collected in the Control Room, a digital dashboard that gives staff a clear overview. If something happens, the right person is immediately notified, ensuring fast and targeted response."
+      },
+      "fallSensors": {
+        "title": "Fall sensors",
+        "description": "detect falls automatically, even when no one can press the alarm button."
+      },
+      "healthSensors": {
+        "title": "Health sensors",
+        "description": "monitor pulse, pulse and activity without the user noticing."
+      },
+      "centralOverview": {
+        "title": "Central overview",
+        "description": "The municipality controls alerts to coordinate resources and can prioritize resources correctly."
+      },
+      "directNotification": {
+        "title": "Direct notification",
+        "description": "Alerts to healthcare personnel's duty phones are clear and easy to understand."
+      }
+    },
+    "howWeSolve": {
+      "title": "How do we solve this?",
+      "seamlessIntegration": {
+        "title": "Seamless integration with existing systems",
+        "description": "The solution connects to APIs and established municipal workflows. This means data flow is secure, and staff don't need to learn new tools.",
+        "link": "IT Architecture"
+      },
+      "easyInstallation": {
+        "title": "Sensors are easily installed",
+        "description": "The sensors are delivered ready to mount quickly. They are easily installed and do not require expertise from you.",
+        "link": "Products"
+      }
+    },
+    "caseStudies": {
+      "title": "Cases and references",
+      "subtitle": "Our experience from completed tests and pilots, as well as guidelines from the Directorate of Health (2025):",
+      "benefit1": "Fewer acute hospital admissions",
+      "benefit2": "Increased security for staff and relatives",
+      "benefit3": "Better resource utilization - more time freed up for scheduled visits",
+      "pilotMunicipality1": "Pilot Municipality X",
+      "pilotMunicipality2": "Home Care Service Y",
+      "testimonial1": {
+        "quote": "We get notified quickly when something happens, and can act immediately. This provides security for both patients and us as staff.",
+        "author": "– Department Nurse, pilot municipality"
+      },
+      "testimonial2": {
+        "quote": "We don't have to worry about what happens between visits. Now we get notified immediately, and can respond quickly.",
+        "author": "– Nurse, pilot municipality"
+      }
+    },
+    "communityBenefits": {
+      "title": "Community Benefits",
+      "subtitle": "Our solution provides measurable results:",
+      "fewerAdmissions": {
+        "title": "Fewer hospital admissions",
+        "description": "The sensor detects critical events early."
+      },
+      "lowerCosts": {
+        "title": "Lower costs",
+        "description": "The municipality saves significant amounts on prevention."
+      },
+      "betterWorkingConditions": {
+        "title": "Better working conditions",
+        "description": "Staff get a more predictable work day."
+      },
+      "safetyAndDignity": {
+        "title": "Safety and dignity",
+        "description": "elderly can live at home longer, with increased security."
+      },
+      "ctaDescription": "We offer short digital meetings for leaders with a review of the benefits.",
+      "ctaButton": "Book a leader presentation"
+    },
+    "finalCTA": {
+      "title": "Do you have any questions?",
+      "faq": {
+        "title": "Frequently asked questions",
+        "button": "Frequently asked questions"
+      },
+      "references": {
+        "title": "How others use the solutions",
+        "description": "Experiences",
+        "button": "References/Experiences"
+      },
+      "contact": {
+        "title": "Contact us",
+        "description": "We are here to answer questions and help you choose the right solution for your loved ones",
+        "button": "Contact us today"
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Here you can find answers to frequently asked questions about our solutions.",
+    "contactPrompt": "Contact us if you don't find the answer you're looking for",
+    "contactButton": "Contact us",
+    "backButton": "Back to home page",
+    "categories": {
+      "general": "General",
+      "costs": "Costs",
+      "securityPrivacy": "Security and Privacy"
+    },
+    "generalItems": {
+      "fallSensors": "Fall Sensors",
+      "alarmButtons": "Alarm Buttons",
+      "medicalFollowup": "Medical Follow-up",
+      "alarmCommunication": "Alarm and Communication"
+    },
+    "costsItems": {
+      "pricing": "Pricing and Agreements",
+      "products": "Product Overview"
+    },
+    "securityItems": {
+      "privacyPolicy": "Privacy Policy",
+      "dataProtection": "Data Security",
+      "guidance": "Guidance and Support"
+    },
+    "accordion": {
+      "general": {
+        "q1": "Is it difficult to install?",
+        "a1": "No. Most of our products can be mounted yourself, as easy as hanging up a picture. We'll show you how.",
+        "q2": "What does it cost?",
+        "a2": "Our solutions cost from approx. 299 kroner per month. It depends on how many sensors or services you choose.",
+        "q3": "Do we need internet?",
+        "a3": "Yes, for the systems to send alerts and share data, there must be internet at home. If you don't have it already, we can help you with suggestions.",
+        "q4": "Is the data safe?",
+        "a4": "Yes. All data is stored on servers in Norway and follows strict privacy requirements (GDPR and DPIA)."
+      },
+      "costs": {
+        "q1": "What is the typical price?",
+        "a1": "A solution with fall sensors in, for example, living room and bathroom costs from approx. 99 kroner per month, without binding period or startup cost *. You can expand later with more sensors or services if needs change.\n\n* Upon order, there is a deposit of 800 for the sensor, which is written off on the monthly rental fee over 8 months.",
+        "q2": "Should I rent or buy?",
+        "a2": "Our medical sensors and solutions are costly investments if purchased. For private individuals, there is rarely a need to own the equipment. It is only needed as long as the person being cared for needs extra security.\n\nWhen you rent from NordicMedTek you get:\n\n• Flexibility: you only pay for the period you actually need the equipment.\n• Simpler everyday life: we take care of maintenance and return when the need is no longer there.\n• Economic security: you avoid tying up large sums in equipment that might otherwise go unused.\n\nMany competitors only offer purchase. We believe rental is the most sensible and gentle solution for private individuals. When the equipment changes, you can easily terminate the rental and return the products. That way you never pay more than necessary, and you always have access to modern and reliable solutions without unnecessary risk.",
+        "q3": "Can I get support?",
+        "a3": "• Clear overview of available support schemes\n• Can you get help from the municipality?\n• Is there reimbursement via Helfo?\n• Comparison with alternatives: home help, supervision, nursing home"
+      },
+      "security": {
+        "q1": "Is this safe for privacy?",
+        "a1": "Yes. Data is stored on servers in Norway and handled according to GDPR and DPIA. Nothing is shared without your consent.",
+        "q2": "Is the data safe?",
+        "a2": "All data is stored securely in Norway and follows strict privacy requirements."
+      },
+      "fallSensors": {
+        "title": "Fall Sensors",
+        "q1": "Does mom or dad have to wear something?",
+        "a1": "No. That's the whole point. The sensors detect falls automatically, completely without them having to remember a button or a wristband.",
+        "q2": "Is it difficult to install?",
+        "a2": "No. If you can hang up a picture, you can do this. We send simple instructions.",
+        "q3": "What if they just sit down quickly, will it trigger an alarm?",
+        "a3": "The sensors are designed to distinguish between normal movements and falls, so there are no unnecessary alarms.",
+        "q4": "Is the data safe?",
+        "a4": "Yes. All data is stored in Norway, and we follow GDPR and DPIA so you can be confident about privacy.",
+        "q5": "What distinguishes this from an alarm button?",
+        "a5": "Alarm buttons depend on mom or dad remembering to wear it, and being able to press it. Fall sensors work completely on their own, and alert you immediately when something happens, even when they are weak, confused, or can't press.\n\nFor many, this provides extra security in addition to an alarm button."
+      },
+      "alarmButtons": {
+        "title": "Alarm Buttons",
+        "q1": "Does the alarm only work at home?",
+        "a1": "No, we have models with 4G and GPS that work everywhere with mobile coverage, at the store, on a trip, or at the neighbor's.",
+        "q2": "What happens when they press the button?",
+        "a2": "The alarm calls pre-selected contacts or a control room. With two-way voice, they can speak directly with help without having to find a phone.",
+        "q3": "What if they don't manage to press?",
+        "a3": "Advanced models have built-in fall alarms that are automatically triggered if they fall.",
+        "q4": "Is the data safe?",
+        "a4": "Yes. All data is handled in accordance with GDPR and stored on servers in Norway.",
+        "q5": "Is this difficult to set up?",
+        "a5": "No. The alarms are designed to be as easy to use as a small remote control. We set up the system together with you, so you know everything works.\n\nAll data is handled securely, stored on servers in Norway, and follows strict privacy rules."
+      },
+      "medicalSensors": {
+        "title": "Medical Sensors",
+        "q1": "Do we have to measure this manually every day?",
+        "a1": "No. Most measurements happen completely automatically. If you have, for example, a sensor under the mattress, pulse and breathing are measured every night without them noticing.",
+        "q2": "Can this really replace doctor visits?",
+        "a2": "Not always. But the doctor can monitor values in the portal and ask them to come in before something becomes serious. This means you avoid many extra trips 'just to be safe'.",
+        "q3": "Is this safe for privacy?",
+        "a3": "Yes. Data is stored on servers in Norway and handled according to GDPR and DPIA. Nothing is shared without your consent.",
+        "q4": "Is this difficult to use?",
+        "a4": "No. This is designed for completely normal homes. Many sensors are just placed under the mattress, or used like a regular blood pressure monitor. We help you get started so you know everything works as it should.\n\nAll data is stored securely in Norway and follows strict privacy requirements."
+      },
+      "easeBlink": {
+        "title": "EaseBlink",
+        "q1": "To do",
+        "a1": "To do"
+      }
+    },
+    "bottomCta": {
+      "title": "Still wondering about something?",
+      "heading": "Contact us",
+      "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+      "button": "Contact us today"
+    }
+  },
+  "easeblink1": {
+    "backButton": "Back to home page",
+    "title": "Contact with family",
+    "description": "EaseBlink enables contact with family and friends through video, and you can share pictures with memories, celebrations and everyday moments.",
+    "isolationTitle": "For isolation?",
+    "isolationDescription": "Our video solution easeBlink enables contact with family and friends, see their faces and hear their voices in real-time. With EaseBlink you can share pictures with memories, celebrations and everyday moments.",
+    "ctaButton": "Video contact and picture sharing",
+    "featuresTitle": "Why choose EaseBlink?",
+    "featuresDescription": "A simple and secure way to stay in touch with your loved ones.",
+    "feature1": {
+      "title": "Easy video contact",
+      "description": "Start video calls with just one click - no complicated settings."
+    },
+    "feature2": {
+      "title": "Picture sharing",
+      "description": "Share memories, celebrations and everyday moments with family."
+    },
+    "feature3": {
+      "title": "Safe and secure",
+      "description": "All conversations and pictures are encrypted and stored securely."
+    },
+    "ctaTitle": "Ready to get started?",
+    "ctaDescription": "Get help setting up EaseBlink for your family today.",
+    "contactButton": "Contact us",
+    "demoButton": "Watch demo"
   }
 }
 

@@ -41,7 +41,8 @@
     "alarmButtons": "Alarmknapper",
     "trygghetOgFallsikring": "Trygghet og fallsikring",
     "medicalFollowupProducts": "Produkter for medisinsk oppfølging",
-    "easeblink": "EaseBlink"
+    "easeblink": "EaseBlink",
+    "faq": "Ofte stilte spørsmål"
   },
   "medicalFollowupProducts": {
     "hero": {
@@ -2434,6 +2435,264 @@
     "loginRequired": "Vennligst logg inn for å få tilgang til CSV-importverktøyet",
     "goToAdmin": "Gå til Admin Innlogging",
     "backToAdmin": "← Tilbake til Admin"
+  },
+  "kommune1": {
+    "submenu": {
+      "products": "Produkter",
+      "pricing": "Priser og avtaler",
+      "itArchitecture": "IT-arkitektur",
+      "documentation": "Dokumentasjon",
+      "references": "Referanser"
+    },
+    "hero": {
+      "title": "En tryggere og mer bærekraftig omsorg i kommunen.",
+      "description1": "Vår velferds-teknologiske løsning reduserer arbeidspresset på helsepersonell, øker tryggheten for brukerne og effektiviserer driften - alt i én fleksibel og skalerbar plattform.",
+      "description2": "Teknologi som gjør det mulig for eldre å bo hjemme lenger, samtidig som ressursene brukes smartere.",
+      "description3": "En investering i bærekraftig omsorg og smartere ressursbruk",
+      "benefit1": "Mindre stress og bekymring for hva som skjer mellom besøkene.",
+      "benefit2": "Bedre oversikt gjør det enklere å prioritere riktig.",
+      "benefit3": "Økt trygghet både for ansatte og pårørende.",
+      "benefit4": "Mulighet til å jobbe mer forebyggende i stedet for å håndtere kriser."
+    },
+    "ctaOptions": {
+      "title": "Klar til å se hvordan våre løsninger kan fungere i din kommune?",
+      "demo": {
+        "description": "Vi tilbyr demoen tilpasset hjemmetjenesten.",
+        "button": "Bestill demo"
+      },
+      "dataPresentation": {
+        "description": "Vi tilbyr korte digitale møter for ledere med gjennomgang av gevinstene.",
+        "button": "Bestill en datapresentasjon"
+      },
+      "pilotProject": {
+        "description": "Vi kan starte med et pilotprosjekt for en liten pasientgruppe.",
+        "button": "Kontakt oss for mer informasjon"
+      }
+    },
+    "solutionExplanation": {
+      "title": "Løsningen kort forklart",
+      "subtitle": "Slik støtter systemet helsetjenesten i hverdagen:",
+      "smartSensors": {
+        "title": "Smarte sensorer oppdager problemer i sanntid",
+        "description": "Bevegelse-, fall- og helsesensorer overvåker hjemmemiljøet i stillhet. De gjenkjenner uregelmessigheter som fall, mangel på bevegelse eller unormale vitale tegn, uten behov for manuelle innsjekklinger."
+      },
+      "controlRoom": {
+        "title": "Kontrollrommet gir full oversikt",
+        "description": "Alle hendelser samles i Vaktrommet, et digitalt dashbord som gir de ansatte en klar oversikt. Hvis noe skjer, varsles riktig person umiddelbart, noe som sikrer rask og målrettet respons."
+      },
+      "fallSensors": {
+        "title": "Fallsensorer",
+        "description": "oppdager fall automatisk, også når ingen klarer å trykke på alarmknappen."
+      },
+      "healthSensors": {
+        "title": "Helsesensorer",
+        "description": "følger med på puls, puls og aktivitet uten at brukeren merker det."
+      },
+      "centralOverview": {
+        "title": "Sentral oversikt",
+        "description": "Kommunen varselstyrer for samordisurser og kan prioritere ressurser riktig."
+      },
+      "directNotification": {
+        "title": "Direkte varsel",
+        "description": "Varsler til helsepersonellets vakttelefoner er tydelige og enkle å forstå."
+      }
+    },
+    "howWeSolve": {
+      "title": "Hvordan løser vi dette?",
+      "seamlessIntegration": {
+        "title": "Sømløs integrasjon med eksisterende systemer",
+        "description": "Løsningen kobles til API og etablerte kommunale arbeidsflytter. Dette betyr at dataflytter er sikker, at ansatte ikke trenger å lære nye verktøy.",
+        "link": "IT-arkitektur"
+      },
+      "easyInstallation": {
+        "title": "Sensorene installeres enkelt",
+        "description": "Sensorene leverer ferdigm til å montere rask. De installeres enkelt og krever ikke sikve fra deg.",
+        "link": "Produkter"
+      }
+    },
+    "caseStudies": {
+      "title": "Case og referanser",
+      "subtitle": "Vår erfaring fra utførte tester og pilioter, samt veileder fra helsedirektoratet (2025):",
+      "benefit1": "Færre akutte sykehusinnleggelser",
+      "benefit2": "Økt trygghet for ansatte og pårørende",
+      "benefit3": "Bedre ressursutnyttelse - mer tid friggjort til planlagte besøk",
+      "pilotMunicipality1": "Pilotkommune X",
+      "pilotMunicipality2": "Hjemmetjeneste Y",
+      "testimonial1": {
+        "quote": "Vi får rask beskjed når noe skjer, og kan handle med en gang. Det gir trygghet både for pasientene og for oss som ansatte.",
+        "author": "– Avdelingssykepleier, pilotkommune"
+      },
+      "testimonial2": {
+        "quote": "Vi slipper å løpe på lav som skjer mellom besøkene. Nå får vi beskjed med en gang, og kan rekke ut rask.",
+        "author": "– Sykepleier, pilotkommune"
+      }
+    },
+    "communityBenefits": {
+      "title": "Samfunnsgevinsten",
+      "subtitle": "Vår løsning gir målbare resultater:",
+      "fewerAdmissions": {
+        "title": "Færre sykehusinnleggelser",
+        "description": "Sensoren oppdager kritiske hendelser tidlig."
+      },
+      "lowerCosts": {
+        "title": "Lavere kostnader",
+        "description": "Kommunen sparer betydelige summer på forebygging."
+      },
+      "betterWorkingConditions": {
+        "title": "Bedre arbeidsvilkår",
+        "description": "Ansatte får en mer forutsigbar arbeidshverdag."
+      },
+      "safetyAndDignity": {
+        "title": "Trygghet og verdighet",
+        "description": "eldre får bo hjemme lenger, med økt sikkerhet."
+      },
+      "ctaDescription": "Vi tilbyr korte digitale møter for ledere med gjennomgang av gevinstene.",
+      "ctaButton": "Bestill en lederpresentasjon"
+    },
+    "finalCTA": {
+      "title": "Lurer du på noe?",
+      "faq": {
+        "title": "Ofte stilte spørsmål",
+        "button": "Ofte stilte spørsmål"
+      },
+      "references": {
+        "title": "Hvordan andre bruker løsningene",
+        "description": "Erfaringer",
+        "button": "Referanser/Erfaringer"
+      },
+      "contact": {
+        "title": "Kontakt oss",
+        "description": "Vi er her for å svare på spørsmål og følge deg med å velge rett løsning for dine kjære",
+        "button": "Kontakt oss i dag"
+      }
+    }
+  },
+  "faq": {
+    "title": "Ofte stilte spørsmål",
+    "description": "Her finner du svar på ofte stilte spørsmål om løsnigene våre.",
+    "contactPrompt": "Ta kontakt med oss om du ikke finner svar på det lurer på",
+    "contactButton": "Kontakt oss",
+    "backButton": "Tilbake til forsiden",
+    "categories": {
+      "general": "Generelt",
+      "costs": "Kostnader",
+      "securityPrivacy": "Sikkerhet og personvern"
+    },
+    "generalItems": {
+      "fallSensors": "Fallsensorer",
+      "alarmButtons": "Alarmknapper",
+      "medicalFollowup": "Medisinsk oppfølging",
+      "alarmCommunication": "Alarm og kommunikasjon"
+    },
+    "costsItems": {
+      "pricing": "Priser og avtaler",
+      "products": "Produktoversikt"
+    },
+    "securityItems": {
+      "privacyPolicy": "Personvernerklæring",
+      "dataProtection": "Datasikkerhet",
+      "guidance": "Veiledning og support"
+    },
+    "accordion": {
+      "general": {
+        "q1": "Er det vanskelig å installere?",
+        "a1": "Nei. De fleste av våre produkter kan du montere selv, like enkelt som å henge opp et bilde. Vi viser deg hvordan.",
+        "q2": "Hva koster det?",
+        "a2": "Våre løsninger koster fra ca. 299 kroner i måneden. Det avhenger av hvor mange sensorer eller tjenester dere velger.",
+        "q3": "Må vi ha internett?",
+        "a3": "Ja, for at systemene skal sende varsler og dele data må det være internett hjemme. Har dere ikke det fra før, kan vi hjelpe dere med forslag.",
+        "q4": "Er dataene trygge?",
+        "a4": "Ja. Alle data lagres på servere i Norge og følger strenge krav til personvern (GDPR og DPIA)."
+      },
+      "costs": {
+        "q1": "Hva er typisk pris?",
+        "a1": "En løsning med fallsensor i for eksempel stue og bad koster fra ca. 99 kroner i måneden, uten bindingstid, eller oppstartskostnad *. Du kan utvide senere med flere sensorer eller tjenester hvis behovet endrer seg.\n\n* Ved bestilling er det et depositum på 800 for sensoren, som blir avskrevet på månedsleieavgift over 8 md.",
+        "q2": "Bør jeg leie eller kjøpe?",
+        "a2": "Våre medisinske sensorer og løsninger er kostbare investeringer dersom de kjøpes. For privatpersoner er det sjelden behov for å eie utstyret. Det trengs bare så lenge den man skal ivareta har behov for ekstra trygghet.\n\nNår du leier fra NordicMedTek får du:\n\n• Fleksibilitet: du betaler kun for den perioden du faktisk har behov for utstyret.\n• Enklere hverdag: vi tar oss av vedlikehold og retur når behovet ikke lenger er der.\n• Økonomisk trygghet: du unngår å binde opp store summer i utstyr som ellers kan bli stående ubrukt.\n\nMange konkurrenter tilbyr kun kjøp. Vi mener leie er den mest fornuftige og skånsomme løsningen for privatpersoner. Når utstyret endrer seg, kan du enkelt avslutte leien og returnere produktene. På den måten betaler du aldri mer enn nødvendig, og du får alltid tilgang til moderne og pålitelige løsninger uten unødvendig risiko.",
+        "q3": "Kan jeg få støtte?",
+        "a3": "• Klar oversikt over hvilke støtteordninger som finnes\n• Kan man få hjelp fra kommunen?\n• Er det refusjon via Helfo?\n• Gjerne sammenligning med alternativene: hjemmehjelp, tilsyn, sykehjem"
+      },
+      "security": {
+        "q1": "Er dette trygt for personvernet?",
+        "a1": "Ja. Data lagres på servere i Norge og håndteres etter GDPR og DPIA. Ingenting deles uten deres samtykke.",
+        "q2": "Er dataene trygge?",
+        "a2": "All data lagres trygt i Norge og følger strenge krav til personvern."
+      },
+      "fallSensors": {
+        "title": "Fallsensorer",
+        "q1": "Må mor eller far ha på seg noe?",
+        "a1": "Nei. Det er hele poenget. Sensorene oppdager fall automatisk, helt uten at de må huske en knapp eller et armbånd.",
+        "q2": "Er det vanskelig å montere?",
+        "a2": "Nei. Har du klart å henge opp et bilde, klarer du dette. Vi sender med enkel veiledning.",
+        "q3": "Hva om de bare setter seg raskt ned, vil det utløse alarm?",
+        "a3": "Sensorene er laget for å skille mellom normale bevegelser og fall, slik at det ikke kommer unødvendige alarmer.",
+        "q4": "Er dataene trygge?",
+        "a4": "Ja. All data lagres i Norge, og vi følger GDPR og DPIA slik at du kan være trygg på personvernet.",
+        "q5": "Hva skiller dette fra en alarmknapp?",
+        "a5": "Alarmknapper er avhengig av at mor eller far husker å ha den på seg, og at de klarer å trykke. Fallsensorene virker helt av seg selv, og varsler deg straks noe skjer, også når de er svake, forvirret eller ikke får trykket.\n\nFor mange gir dette en ekstra trygghet i tillegg til alarmknapp."
+      },
+      "alarmButtons": {
+        "title": "Alarmknapper",
+        "q1": "Virker alarmen bare hjemme?",
+        "a1": "Nei, vi har modeller med 4G og GPS som virker overalt med mobildekning, på butikken, på tur eller hos naboen.",
+        "q2": "Hva skjer når de trykker på knappen?",
+        "a2": "Alarmen ringer opp forhåndsvalgte kontaktpersoner eller et vaktrom. Med to-veis tale kan de snakke direkte med hjelp uten å måtte finne telefon.",
+        "q3": "Hva hvis de ikke rekker å trykke?",
+        "a3": "Avanserte modeller har innebygget fallalarm som utløses automatisk hvis de faller.",
+        "q4": "Er dataene trygge?",
+        "a4": "Ja. All data håndteres i tråd med GDPR og lagres på servere i Norge.",
+        "q5": "Er dette vanskelig å sette opp?",
+        "a5": "Nei. Alarmene er laget for å være like enkle å bruke som en liten fjernkontroll. Vi setter opp systemet sammen med deg, slik at du vet at alt virker.\n\nAll data håndteres trygt, lagres på servere i Norge, og følger strenge regler for personvern."
+      },
+      "medicalSensors": {
+        "title": "Medisinske sensorer",
+        "q1": "Må vi måle dette manuelt hver dag?",
+        "a1": "Nei. De fleste målinger skjer helt automatisk. Har dere for eksempel en sensor under madrassen, måles puls og pust hver natt uten at de merker det.",
+        "q2": "Kan dette virkelig erstatte legebesøk?",
+        "a2": "Ikke alltid. Men legen kan følge med på verdier i portalen og be dem komme inn før noe blir alvorlig. Det gjør at dere slipper mange ekstra turer «for sikkerhets skyld».",
+        "q3": "Er dette trygt for personvernet?",
+        "a3": "Ja. Data lagres på servere i Norge og håndteres etter GDPR og DPIA. Ingenting deles uten deres samtykke.",
+        "q4": "Er dette vanskelig å bruke?",
+        "a4": "Nei. Dette er laget for helt vanlige hjem. Mange sensorer legges bare under madrassen, eller brukes som et vanlig blodtrykksapparat. Vi hjelper deg i gang slik at du vet at alt virker som det skal.\n\nAll data lagres trygt i Norge og følger strenge krav til personvern."
+      },
+      "easeBlink": {
+        "title": "EaseBlink",
+        "q1": "To do",
+        "a1": "To do"
+      }
+    },
+    "bottomCta": {
+      "title": "Lurer du fremdeles på noe?",
+      "heading": "Kontakt oss",
+      "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+      "button": "Kontakt oss i dag"
+    }
+  },
+  "easeblink1": {
+    "backButton": "Tilbake til forsiden",
+    "title": "Kontakt med familien",
+    "description": "EaseBlink muligjør kontakt med familie og venner med video, og dere kan dele bilder med minner, feiringer og hverdagsøyeblikk.",
+    "isolationTitle": "For isolasjon?",
+    "isolationDescription": "Vår videoløsning easeBlink muligjør kontakt med familie og venner, se ansiktene deres og høre stemmene deres i samtid. Med EaseBlink kan dere dele bilder med minner, feiringer og hverdagsøyeblikk.",
+    "ctaButton": "Videokontakt og bildedeling",
+    "featuresTitle": "Hvorfor velge EaseBlink?",
+    "featuresDescription": "En enkel og trygg måte å holde kontakt med dine kjære på.",
+    "feature1": {
+      "title": "Enkel videokontakt",
+      "description": "Start videooppkall med bare ett trykk - ingen kompliserte innstillinger."
+    },
+    "feature2": {
+      "title": "Bildedeling",
+      "description": "Del minner, feiringer og hverdagsøyeblikk med familien."
+    },
+    "feature3": {
+      "title": "Trygg og sikker",
+      "description": "Alle samtaler og bilder er kryptert og lagret sikkert."
+    },
+    "ctaTitle": "Klar til å komme i gang?",
+    "ctaDescription": "Få hjelp til å sette opp EaseBlink for din familie i dag.",
+    "contactButton": "Kontakt oss",
+    "demoButton": "Se demo"
   }
 }
 

@@ -47,6 +47,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy'
 import TrygghetOgFallsikring from './pages/TrygghetOgFallsikring'
 import AlarmButtons from './pages/AlarmButtons'
 import EaseBlink from './pages/EaseBlink'
+import FAQ from './pages/FAQ'
+import EaseBlink1 from './pages/EaseBlink1'
 
 function App() {
   return (
@@ -98,6 +100,8 @@ function App() {
           <Route path="/trygghet-og-fallsikring" element={<TrygghetOgFallsikring />} />
           <Route path="/alarm-buttons" element={<AlarmButtons />} />
           <Route path="/easeblink" element={<EaseBlink />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/easeblink1" element={<EaseBlink1 />} />
         </Routes>
       </main>
     </div>

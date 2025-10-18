@@ -29,8 +29,8 @@ export default function PrivatePage1() {
             <Link to="/medical-followup1" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
               <span className="text-sm font-medium text-gray-900">Medisinsk oppfølging</span>
             </Link>
-            <Link to="/easeblink" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">helsebindinger?</span>
+            <Link to="/easeblink1" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
+              <span className="text-sm font-medium text-gray-900">Videokontakt</span>
             </Link>
           </div>
         </div>
@@ -177,7 +177,7 @@ export default function PrivatePage1() {
               </div>
               <div className="text-center mt-auto">
                 <Link 
-                  to="/easeblink" 
+                  to="/easeblink1" 
                   className="group inline-flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Videokontakt og bildedeling
@@ -309,7 +309,8 @@ export default function PrivatePage1() {
               </div>
               <div className="mt-auto">
                 <Link 
-                  to="/guidance" 
+                  to="/faq"
+                  state={{ from: '/private' }}
                   className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 w-full text-center"
                 >
                   Ofte stilte spørsmål

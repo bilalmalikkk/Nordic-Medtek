@@ -316,7 +316,8 @@ export default function HomePage1() {
                 ....
               </p>
               <Link 
-                to="/support" 
+                to="/faq"
+                state={{ from: '/' }}
                 className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
               >
                 Ofte stilte spørsmål

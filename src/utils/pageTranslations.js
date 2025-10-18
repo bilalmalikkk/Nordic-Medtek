@@ -20,7 +20,8 @@ const pageMappings = {
   '/alarm-buttons': 'pageTitles.alarmButtons',
   '/trygghet-og-fallsikring': 'pageTitles.trygghetOgFallsikring',
   '/medical-followup-products': 'pageTitles.medicalFollowupProducts',
-  '/easeblink': 'pageTitles.easeblink'
+  '/easeblink': 'pageTitles.easeblink',
+  '/faq': 'pageTitles.faq'
 }
 
 // Hard fallbacks per language in case i18n keys are missing
@@ -47,7 +48,8 @@ const hardFallbacks = {
     '/alarm-buttons': 'Alarmknapper',
     '/trygghet-og-fallsikring': 'Trygghet og fallsikring',
     '/medical-followup-products': 'Produkter for medisinsk oppfølging',
-    '/easeblink': 'EaseBlink'
+    '/easeblink': 'EaseBlink',
+    '/faq': 'Ofte stilte spørsmål'
   },
   en: {
     '/alarm-communication': 'Alarm Communication',
@@ -71,7 +73,8 @@ const hardFallbacks = {
     '/alarm-buttons': 'Alarm Buttons',
     '/trygghet-og-fallsikring': 'Safety & Fall Protection',
     '/medical-followup-products': 'Medical Follow-up Products',
-    '/easeblink': 'EaseBlink'
+    '/easeblink': 'EaseBlink',
+    '/faq': 'FAQ'
   }
 }
 
@@ -89,16 +92,21 @@ export const getPageTranslation = (pathname, t, i18n) => {
   return pathname.replace('/', '').replace(/-/g, ' ')
 }
 
-export const getMainPage = (pathname) => {
+export const getMainPage = (pathname, locationState = null) => {
   if (pathname === '/') return null
   
   const privateSubPages = ['/alarm-communication', '/medical-followup', '/safety-solutions', '/fallalarm', '/experiences']
-  const municipalitySubPages = ['/municipality-details', '/municipality-knowledge', '/procurement-manager', '/health-personnel', '/it-welfare-technology', '/municipal-benefits', '/demo', '/politicians']
+  const municipalitySubPages = ['/municipality', '/municipality-details', '/municipality-knowledge', '/procurement-manager', '/health-personnel', '/it-welfare-technology', '/municipal-benefits', '/demo', '/politicians']
   const companySubPages = ['/guidance', '/documents', '/pricing', '/support', '/evidence']
   const productsSubPages = ['/alarm-buttons', '/trygghet-og-fallsikring', '/medical-followup-products']
   
+  // Special handling for FAQ - use state to determine parent
+  if (pathname === '/faq' && locationState?.from) {
+    return locationState.from
+  }
+  
   if (privateSubPages.includes(pathname)) return '/private'
-  if (municipalitySubPages.includes(pathname)) return '/municipality'
+  if (municipalitySubPages.includes(pathname)) return '/kommune1'
   if (companySubPages.includes(pathname)) return '/company'
   if (productsSubPages.includes(pathname) || pathname.startsWith('/products')) return '/products'
   

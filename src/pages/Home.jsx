@@ -195,7 +195,7 @@ export default function Home() {
                 </p>
                 <div className="pt-4">
                   <Link 
-                    to="/easeblink"
+                    to="/easeblink1"
                     className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors group"
                   >
                     {t('home.easeBlink.link')}
