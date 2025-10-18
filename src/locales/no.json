@@ -2600,17 +2600,15 @@
         "q2": "Hva koster det?",
         "a2": "Våre løsninger koster fra ca. 299 kroner i måneden. Det avhenger av hvor mange sensorer eller tjenester dere velger.",
         "q3": "Må vi ha internett?",
-        "a3": "Ja, for at systemene skal sende varsler og dele data må det være internett hjemme. Har dere ikke det fra før, kan vi hjelpe dere med forslag.",
+        "a3": "Nei, om du ikke har kablet eller trådløst nettverk vil systemet bruke 4G. Systemet sjekker hele tiden om det er kablet eller trådløst nettverk tilgjengelig. Prioritert rekkefølge er slik som dette:\n1. Kablet nettverk\n2. Trådløst nettverk (Wi-Fi)\n3. 4G (mobilnett)",
         "q4": "Er dataene trygge?",
         "a4": "Ja. Alle data lagres på servere i Norge og følger strenge krav til personvern (GDPR og DPIA)."
       },
       "costs": {
         "q1": "Hva er typisk pris?",
-        "a1": "En løsning med fallsensor i for eksempel stue og bad koster fra ca. 99 kroner i måneden, uten bindingstid, eller oppstartskostnad *. Du kan utvide senere med flere sensorer eller tjenester hvis behovet endrer seg.\n\n* Ved bestilling er det et depositum på 800 for sensoren, som blir avskrevet på månedsleieavgift over 8 md.",
+        "a1": "Vår fleksible leie-ordning gir en lav terskel for å ta i bruk en moderne og effektiv løsning. Vi har som mål å være ledende på både pris og funksjonalitet, og derfor gjennomfører vi nå en grundig evaluering av markedet. Dette sikrer at vår løsning blir riktig priset og strategisk plassert – til fordel for deg som kunde. Prisene er derfor ikke lansert ennå, men vil bli tilgjengelige så snart vi har kvalitets-sikret at de gjenspeiler den verdien vi ønsker å tilby.",
         "q2": "Bør jeg leie eller kjøpe?",
-        "a2": "Våre medisinske sensorer og løsninger er kostbare investeringer dersom de kjøpes. For privatpersoner er det sjelden behov for å eie utstyret. Det trengs bare så lenge den man skal ivareta har behov for ekstra trygghet.\n\nNår du leier fra NordicMedTek får du:\n\n• Fleksibilitet: du betaler kun for den perioden du faktisk har behov for utstyret.\n• Enklere hverdag: vi tar oss av vedlikehold og retur når behovet ikke lenger er der.\n• Økonomisk trygghet: du unngår å binde opp store summer i utstyr som ellers kan bli stående ubrukt.\n\nMange konkurrenter tilbyr kun kjøp. Vi mener leie er den mest fornuftige og skånsomme løsningen for privatpersoner. Når utstyret endrer seg, kan du enkelt avslutte leien og returnere produktene. På den måten betaler du aldri mer enn nødvendig, og du får alltid tilgang til moderne og pålitelige løsninger uten unødvendig risiko.",
-        "q3": "Kan jeg få støtte?",
-        "a3": "• Klar oversikt over hvilke støtteordninger som finnes\n• Kan man få hjelp fra kommunen?\n• Er det refusjon via Helfo?\n• Gjerne sammenligning med alternativene: hjemmehjelp, tilsyn, sykehjem"
+        "a2": "Våre medisinske sensorer og løsninger er kostbare investeringer dersom de kjøpes. For privatpersoner er det sjelden behov for å eie utstyret. Det trengs bare så lenge den man skal ivareta har behov for ekstra trygghet.\n\nNår du leier fra NordicMedTek får du:\n\n• Fleksibilitet: du betaler kun for den perioden du faktisk har behov for utstyret.\n• Enklere hverdag: vi tar oss av vedlikehold og retur når behovet ikke lenger er der.\n• Økonomisk trygghet: du unngår å binde opp store summer i utstyr som ellers kan bli stående ubrukt.\n\nMange konkurrenter tilbyr kun kjøp. Vi mener leie er den mest fornuftige og skånsomme løsningen for privatpersoner. Når utstyret endrer seg, kan du enkelt avslutte leien og returnere produktene. På den måten betaler du aldri mer enn nødvendig, og du får alltid tilgang til moderne og pålitelige løsninger uten unødvendig risiko."
       },
       "security": {
         "q1": "Er dette trygt for personvernet?",

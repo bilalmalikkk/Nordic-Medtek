@@ -142,10 +142,6 @@ export default function FAQ() {
                     <h3 className="font-bold text-gray-900 mb-2">{t('faq.accordion.costs.q2')}</h3>
                     <p className="text-gray-700 whitespace-pre-line">{t('faq.accordion.costs.a2')}</p>
                   </div>
-                  <div className="bg-white border-l-4 border-blue-500 p-6 rounded-r-xl shadow-sm">
-                    <h3 className="font-bold text-gray-900 mb-2">{t('faq.accordion.costs.q3')}</h3>
-                    <p className="text-gray-700 whitespace-pre-line">{t('faq.accordion.costs.a3')}</p>
-                  </div>
                 </div>
               )}
             </div>
