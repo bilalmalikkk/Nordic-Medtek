@@ -99,15 +99,11 @@ export default function FAQ() {
                   </div>
                   <div className="bg-white border-l-4 border-teal-500 p-6 rounded-r-xl shadow-sm">
                     <h3 className="font-bold text-gray-900 mb-2">{t('faq.accordion.general.q2')}</h3>
-                    <p className="text-gray-700">{t('faq.accordion.general.a2')}</p>
+                    <p className="text-gray-700 whitespace-pre-line">{t('faq.accordion.general.a2')}</p>
                   </div>
                   <div className="bg-white border-l-4 border-teal-500 p-6 rounded-r-xl shadow-sm">
                     <h3 className="font-bold text-gray-900 mb-2">{t('faq.accordion.general.q3')}</h3>
                     <p className="text-gray-700">{t('faq.accordion.general.a3')}</p>
-                  </div>
-                  <div className="bg-white border-l-4 border-teal-500 p-6 rounded-r-xl shadow-sm">
-                    <h3 className="font-bold text-gray-900 mb-2">{t('faq.accordion.general.q4')}</h3>
-                    <p className="text-gray-700">{t('faq.accordion.general.a4')}</p>
                   </div>
                 </div>
               )}

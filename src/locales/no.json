@@ -2597,18 +2597,16 @@
       "general": {
         "q1": "Er det vanskelig å installere?",
         "a1": "Nei. De fleste av våre produkter kan du montere selv, like enkelt som å henge opp et bilde. Vi viser deg hvordan.",
-        "q2": "Hva koster det?",
-        "a2": "Våre løsninger koster fra ca. 299 kroner i måneden. Det avhenger av hvor mange sensorer eller tjenester dere velger.",
-        "q3": "Må vi ha internett?",
-        "a3": "Nei, om du ikke har kablet eller trådløst nettverk vil systemet bruke 4G. Systemet sjekker hele tiden om det er kablet eller trådløst nettverk tilgjengelig. Prioritert rekkefølge er slik som dette:\n1. Kablet nettverk\n2. Trådløst nettverk (Wi-Fi)\n3. 4G (mobilnett)",
-        "q4": "Er dataene trygge?",
-        "a4": "Ja. Alle data lagres på servere i Norge og følger strenge krav til personvern (GDPR og DPIA)."
+        "q2": "Må vi ha internett?",
+        "a2": "Nei, om du ikke har kablet eller trådløst nettverk vil systemet bruke 4G. Systemet sjekker hele tiden om det er kablet eller trådløst nettverk tilgjengelig. Prioritert rekkefølge er slik som dette:\n1. Kablet nettverk\n2. Trådløst nettverk (Wi-Fi)\n3. 4G (mobilnett)",
+        "q3": "Er dataene trygge?",
+        "a3": "Ja. Alle data lagres på servere i Norge og følger strenge krav til personvern (GDPR og DPIA)."
       },
       "costs": {
         "q1": "Hva er typisk pris?",
         "a1": "Vår fleksible leie-ordning gir en lav terskel for å ta i bruk en moderne og effektiv løsning. Vi har som mål å være ledende på både pris og funksjonalitet, og derfor gjennomfører vi nå en grundig evaluering av markedet. Dette sikrer at vår løsning blir riktig priset og strategisk plassert – til fordel for deg som kunde. Prisene er derfor ikke lansert ennå, men vil bli tilgjengelige så snart vi har kvalitets-sikret at de gjenspeiler den verdien vi ønsker å tilby.",
         "q2": "Bør jeg leie eller kjøpe?",
-        "a2": "Våre medisinske sensorer og løsninger er kostbare investeringer dersom de kjøpes. For privatpersoner er det sjelden behov for å eie utstyret. Det trengs bare så lenge den man skal ivareta har behov for ekstra trygghet.\n\nNår du leier fra NordicMedTek får du:\n\n• Fleksibilitet: du betaler kun for den perioden du faktisk har behov for utstyret.\n• Enklere hverdag: vi tar oss av vedlikehold og retur når behovet ikke lenger er der.\n• Økonomisk trygghet: du unngår å binde opp store summer i utstyr som ellers kan bli stående ubrukt.\n\nMange konkurrenter tilbyr kun kjøp. Vi mener leie er den mest fornuftige og skånsomme løsningen for privatpersoner. Når utstyret endrer seg, kan du enkelt avslutte leien og returnere produktene. På den måten betaler du aldri mer enn nødvendig, og du får alltid tilgang til moderne og pålitelige løsninger uten unødvendig risiko."
+        "a2": "Våre medisinske sensorer og løsninger er kostbare investeringer dersom de kjøpes. For privatpersoner er det sjelden behov for å eie utstyret.\n\nNår du leier fra NordicMedTek får du:\n\n• Fleksibilitet: du betaler kun for den perioden du faktisk har behov for utstyret.\n• Enklere hverdag: vi tar oss av vedlikehold og retur når behovet ikke lenger er der.\n• Økonomisk trygghet: du unngår å binde opp store summer i utstyr som ellers kan bli stående ubrukt.\n\nMange konkurrenter tilbyr kun kjøp. Vi mener leie er den mest fornuftige og skånsomme løsningen for privatpersoner. Når behovet endrer seg, kan du enkelt avslutte leien og returnere produktene. På den måten betaler du aldri mer enn nødvendig, og du får alltid tilgang til moderne og pålitelige løsninger uten unødvendig risiko."
       },
       "security": {
         "q1": "Er dette trygt for personvernet?",
@@ -2625,7 +2623,7 @@
         "q3": "Hva om de bare setter seg raskt ned, vil det utløse alarm?",
         "a3": "Sensorene er laget for å skille mellom normale bevegelser og fall, slik at det ikke kommer unødvendige alarmer.",
         "q4": "Hva med personvernet?",
-        "a4": "Våre fall sensorer bruker IR og radar teknikk. Dette viser er person som grovkornet sorte prikker, og ivaretar personvernet fult ut. Dette er sensorer det er lov å plassere på bad og soverom.",
+        "a4": "Våre fall sensorer bruker IR og radar teknikk. Dette viser en person som grovkornet sorte prikker, og ivaretar personvernet fult ut. Dette er sensorer det er lov å plassere på bad og soverom.",
         "q5": "Hva skiller dette fra en alarm knapp?",
         "a5": "Alarm knapper er avhengig av at mor eller far husker å ha den på seg, og de fleste alarm knapper på markedet krever at brukeren klarer å trykke på knappen. Dette er ikke tilfelle om brukeren har besvimt eller fått et illebefinnende.\n\nVår alarm knapp er avansert og kan oppdage fall automatisk om brukeren ikke klarer å trykke på alarm knappen, men man er avhengig av at brukeren husker å ha alarm knappen på seg. Mange er glad i den ekstra sikkerheten det gir å ha begge løsninger installert."
       },
