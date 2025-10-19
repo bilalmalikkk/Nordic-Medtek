@@ -34,15 +34,12 @@ export default function EaseBlink1() {
         <section className="py-4 bg-gray-50 w-full border-b border-gray-200">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-wrap justify-center gap-3">
-              <a href="#what-is" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-                <span className="text-sm font-medium text-gray-900">Hva er easeBlink</span>
-              </a>
-              <a href="#why" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-                <span className="text-sm font-medium text-gray-900">Hvorfor easeBlink</span>
-              </a>
-              <a href="#how-to-get" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-                <span className="text-sm font-medium text-gray-900">Hvordan få easeBlink</span>
-              </a>
+              <Link to="/easeblink2" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
+                <span className="text-sm font-medium text-gray-900">Utfordringene vi løser</span>
+              </Link>
+              <Link to="/easeblink3" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
+                <span className="text-sm font-medium text-gray-900">Hvordan det virker</span>
+              </Link>
               <Link to="/pricing" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
                 <span className="text-sm font-medium text-gray-900">Pris</span>
               </Link>
@@ -51,7 +48,7 @@ export default function EaseBlink1() {
         </section>
 
         {/* Hero Section */}
-        <section id="what-is" className="py-16 md:py-24 w-full bg-white">
+        <section id="challenges" className="py-16 md:py-24 w-full bg-white">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
@@ -90,7 +87,7 @@ export default function EaseBlink1() {
         </section>
 
         {/* How easeBlink Works Section */}
-        <section className="py-16 w-full bg-white">
+        <section id="how-it-works" className="py-16 w-full bg-white">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col lg:flex-row gap-12 items-center">
               {/* Left side - Text content */}

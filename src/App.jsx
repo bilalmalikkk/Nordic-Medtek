@@ -49,6 +49,8 @@ import AlarmButtons from './pages/AlarmButtons'
 import EaseBlink from './pages/EaseBlink'
 import FAQ from './pages/FAQ'
 import EaseBlink1 from './pages/EaseBlink1'
+import EaseBlink2 from './pages/EaseBlink2'
+import EaseBlink3 from './pages/EaseBlink3'
 
 function App() {
   return (
@@ -102,6 +104,8 @@ function App() {
           <Route path="/easeblink" element={<EaseBlink />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/easeblink1" element={<EaseBlink1 />} />
+          <Route path="/easeblink2" element={<EaseBlink2 />} />
+          <Route path="/easeblink3" element={<EaseBlink3 />} />
         </Routes>
       </main>
     </div>

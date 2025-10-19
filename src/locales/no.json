@@ -2689,6 +2689,112 @@
     "ctaDescription": "Få hjelp til å sette opp EaseBlink for din familie i dag.",
     "contactButton": "Kontakt oss",
     "demoButton": "Se demo"
+  },
+  "easeblink2": {
+    "backButton": "Tilbake til easeBlink",
+    "section1": {
+      "title": "Utfordringer vi ønsker løser",
+      "description1": "mange eldre føler på ensomhet i større eller mindre grad. EaseBlink er utviklet for å redusere ensomhet.",
+      "description2": "I tillegg muliggjør løsningen videokonsultasjon med fastlege, helsetjenesten og sykehus"
+    },
+    "section2": {
+      "title": "Samhørighet",
+      "description": "Mange eldre, spesielt de med begrenset mobilitet, opplever isolasjon. Gjennom videosamtaler kan eldre holde kontakten med familie og venner, se ansiktene deres og høre stemmene deres i sann-tid. Dette gir en følelse av tilstedeværelse og fellesskap som telefon og tekstmeldinger ikke kan erstatte."
+    },
+    "section3": {
+      "title": "Glede i hverdagen",
+      "description": "Når systemet ikke bruker til videosamtale med lege eller familie vil easeBlink utføre en automatisk bildedeling i form av en digital karusell - som gjør det mulig å dele minner, feiringer og hverdags øyeblikk, noe som kan gi glede og samtaleemner i hverdagen. Denne løsningen har svært enkel å bruke slik at eldre med ulik grad av konjunktiv svikt kan bruke løsningen"
+    },
+    "combineSolutions": {
+      "title": "Kombiner med flere av våre løsninger",
+      "card1": {
+        "description": "Bekymring for fall å hause i Fritzon er en av dokumentene Våre intense fallsensorer spesielle åtskilide Fall og sender varsilddat varslig til dag er hel lersonene",
+        "button": "Gå til trygghet og fallsikring"
+      },
+      "card2": {
+        "description": "Løsninger for ålaen og kommunikasjon inoluderer varslig ved plutelig sokdom, toveis kommunikasjon med dine og plansfree funksjoner som gir deg trygglant når dine kjære er hjemme eller ute.",
+        "button": "Alarmknapper og rask varsling"
+      },
+      "card3": {
+        "description": "Overvåkning for hjerteproblemer, diabetes og regelmessige målinger av post, blodsrykk, igen, oksygenmetring og temperaturmåling, Automatisk varsling ved avvik.",
+        "button": "Medisinsk oppfølging"
+      }
+    },
+    "questions": {
+      "title": "Lurer du på noe?",
+      "faq": {
+        "title": "Ofte stilte spørsmål",
+        "description": ".....",
+        "button": "Ofte stilte spørsmål"
+      },
+      "experiences": {
+        "title": "Hvordan andre bruker løsningene",
+        "description": "Erfaringer..",
+        "button": "Referanser Erfaringer"
+      },
+      "contact": {
+        "title": "Kontakt oss",
+        "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+        "button": "Kontakt oss i dag"
+      }
+    }
+  },
+  "easeblink3": {
+    "backButton": "Tilbake til easeBlink",
+    "section1": {
+      "title": "Hvordan virker det",
+      "description": "En brukervennlig skjerm som viser bilder, meldinger og videosamtaler fra inviterte pårørende og ansatte i helsetjenesten. Alt er kryptert og trygt."
+    },
+    "section2": {
+      "title": "Hvem kan bruke easeBlink",
+      "description": "EaseBlink er beregnet på brukere som ikke er datakyndige, eller som ikke har motoriske ferdigheter til å betjene dataskjermer. EaseBlink er i et kryptert og lukket system, og det tilbyr en sikker kommunikasjon mellom helsetjenesten, familie og bruker."
+    },
+    "section3": {
+      "title": "Motta samtale er enkelt !",
+      "description": "To store knapper gjør det enkelt å svare eller avvise en samtale. Systemet kan settes opp med autosvar for utvalgte brukere når situasjonen krever det, slik at viktige samtaler ikke blir oversett"
+    },
+    "section4": {
+      "title": "Opprett samtale",
+      "subtitle": "Enkelt fra en kontaktliste",
+      "description": "Velg personen du ønsker å ringe fra en tydelig og stor kontaktliste. Det er enkelt å finne frem og kontakter kan administreres av pårørende slik at det alltid er riktig personer tilgjengelig."
+    },
+    "section5": {
+      "title": "Oppsett og vedlikehold",
+      "description": "Administrering av hvilke personer som har tilgang til hvilke brukere bestemmes av i en brukervennlig administrasjons applikasjon. Hjemmetjenesten eller de som har tilgang til å bruke systemet kommuniserer med bruker via nettbrett eller smart telefoner."
+    },
+    "combineSolutions": {
+      "title": "Kombiner med flere av våre løsninger",
+      "card1": {
+        "description": "Bekymring for fall å hause i Fritzon er en av dokumentene Våre intense fallsensorer spesielle åtskilide Fall og sender varsilddat varslig til dag er hel lersonene",
+        "button": "Gå til trygghet og fallsikring"
+      },
+      "card2": {
+        "description": "Løsninger for ålaen og kommunikasjon inoluderer varslig ved plutelig sokdom, toveis kommunikasjon med dine og plansfree funksjoner som gir deg trygglant når dine kjære er hjemme eller ute.",
+        "button": "Alarmknapper og rask varsling"
+      },
+      "card3": {
+        "description": "Overvåkning for hjerteproblemer, diabetes og regelmessige målinger av post, blodsrykk, igen, oksygenmetring og temperaturmåling, Automatisk varsling ved avvik.",
+        "button": "Medisinsk oppfølging"
+      }
+    },
+    "questions": {
+      "title": "Lurer du på noe?",
+      "faq": {
+        "title": "Ofte stilte spørsmål",
+        "description": ".....",
+        "button": "Ofte stilte spørsmål"
+      },
+      "experiences": {
+        "title": "Hvordan andre bruker løsningene",
+        "description": "Erfaringer..",
+        "button": "Referanser Erfaringer"
+      },
+      "contact": {
+        "title": "Kontakt oss",
+        "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+        "button": "Kontakt oss i dag"
+      }
+    }
   }
 }
 
