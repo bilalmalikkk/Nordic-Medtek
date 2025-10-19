@@ -72,7 +72,7 @@ export default function EaseBlink1() {
                 <img 
                   src={bildeKarusell} 
                   alt="Elderly woman using EaseBlink to connect with family through video and photo sharing" 
-                  className="w-full max-w-xs h-auto rounded-lg shadow-xl"
+                  className="w-full max-w-xs h-auto"
                 />
               </div>
             </div>
