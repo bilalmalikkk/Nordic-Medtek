@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useState, useEffect } from 'react'
 import heroImage from '../assets/Landingpage.png'
 import varmeHenderImage from '../assets/varme_hender.jpg'
 import varmeHenderImageFallback from '../assets/varme_hender.jpg'
@@ -19,6 +20,27 @@ import notification from '../assets/notification.png'
 
 export default function HomePage1() {
   const { t } = useTranslation()
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [modalContent, setModalContent] = useState(null)
+
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        setIsModalOpen(false)
+      }
+    }
+
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEscape)
+      document.body.style.overflow = 'hidden'
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape)
+      document.body.style.overflow = 'unset'
+    }
+  }, [isModalOpen])
+
   return (
     <div className="min-h-screen w-full">
       <div className="w-full">
@@ -34,11 +56,10 @@ export default function HomePage1() {
           <div className="relative z-10 w-full mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-12 pt-32">
             <div className="max-w-4xl">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
-                Vi leverer løsninger som gir <span className="text-blue-400">mennesker</span> trygghet, verdighet og bedre <span className="text-blue-400">livskvalitet</span>
+                {t('homePage1.hero.title')}
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed">
-                Teknologi som gjør det mulig for eldre å bo hjemme lenger,<br />
-                samtidig som ressursene brukes smartere.
+                {t('homePage1.hero.subtitle')}
               </p>
             </div>
           </div>
@@ -49,13 +70,13 @@ export default function HomePage1() {
       <section className="py-20 bg-white w-full">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Vår løsning</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">{t('homePage1.ourSolution.title')}</h2>
             <div className="space-y-4 text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
               <p>
-                Vi leverer komplett trygghetsløsninger med et bredt utvalg sensorer i hjemmet, toveiskommunikasjon og varsling til mobiltelefon og vaktsentraler.
+                {t('homePage1.ourSolution.description1')}
               </p>
               <p>
-                Løsningen vår er modulær. Du kan starte enkelt og bygge ut senere hvis behovet endrer seg.
+                {t('homePage1.ourSolution.description2')}
               </p>
             </div>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full mt-6"></div>
@@ -71,9 +92,9 @@ export default function HomePage1() {
                   className="w-full h-full object-contain rounded-xl"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Fallsensorer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('homePage1.ourSolution.cards.fallSensors.title')}</h3>
               <p className="text-gray-700 leading-relaxed">
-                Oppdager fall automatisk, også når brukeren ikke klarer å trykke på alarmknappen.
+                {t('homePage1.ourSolution.cards.fallSensors.description')}
               </p>
             </div>
 
@@ -86,9 +107,9 @@ export default function HomePage1() {
                   className="w-full h-full object-contain rounded-xl"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Helsesensorer</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('homePage1.ourSolution.cards.healthSensors.title')}</h3>
               <p className="text-gray-700 leading-relaxed">
-                Følger med på pust, puls og aktivitet uten at brukeren merker det.
+                {t('homePage1.ourSolution.cards.healthSensors.description')}
               </p>
             </div>
 
@@ -101,9 +122,9 @@ export default function HomePage1() {
                   className="w-full h-full object-contain rounded-xl"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Sentral oversikt</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('homePage1.ourSolution.cards.centralOverview.title')}</h3>
               <p className="text-gray-700 leading-relaxed">
-                Kommunens vaktsentral får sanntidsovervåking og kan prioritere ressursene riktig.
+                {t('homePage1.ourSolution.cards.centralOverview.description')}
               </p>
             </div>
 
@@ -116,9 +137,9 @@ export default function HomePage1() {
                   className="w-full h-full object-contain rounded-xl"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Direkte varsling</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{t('homePage1.ourSolution.cards.directAlert.title')}</h3>
               <p className="text-gray-700 leading-relaxed">
-                Få umiddelbare varsler på din mobil eller nettbrett når noe kritisk skjer.
+                {t('homePage1.ourSolution.cards.directAlert.description')}
               </p>
             </div>
           </div>
@@ -131,43 +152,43 @@ export default function HomePage1() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
             {/* Privat Column */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Privat</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">{t('homePage1.targetAudience.private.title')}</h3>
               <p className="text-gray-700 leading-relaxed mb-8 flex-grow">
-                Våre unike sensorer oppdager uregelmessigheter knyttet til trygghet og sikkerhet hos dine eldre som bor hjemme, og varsler deg som pårørende eller helsetjenesten helt automatisk.
+                {t('homePage1.targetAudience.private.description')}
               </p>
               <Link 
                 to="/private" 
                 className="inline-flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
               >
-                Løsninger for pårørende
+                {t('homePage1.targetAudience.private.link')}
               </Link>
             </div>
 
             {/* Kommune Column */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Kommune</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">{t('homePage1.targetAudience.municipality.title')}</h3>
               <p className="text-gray-700 leading-relaxed mb-8 flex-grow">
-                Våre løsninger innen velferdsteknologi øker tryggheten for hjemmeboende brukere, reduserer arbeidspresset på helsepersonell, og effektiviserer driften - alt i én fleksibel og skalerbar plattform.
+                {t('homePage1.targetAudience.municipality.description')}
               </p>
               <Link 
                 to="/kommune1" 
                 className="inline-flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
               >
-                Løsninger for kommuner
+                {t('homePage1.targetAudience.municipality.link')}
               </Link>
             </div>
 
             {/* Bedrift Column */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col">
-              <h3 className="text-3xl font-bold text-gray-900 mb-6">Bedrift</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">{t('homePage1.targetAudience.company.title')}</h3>
               <p className="text-gray-700 leading-relaxed mb-8 flex-grow">
-                Vi tilbyr våre løsninger til bedriftsmarkedet, enten du er forhandler som ønsker et bredere og pålitelig sortiment, du er leverandør av systemer for vaktrom og teknisk infrastruktur eller du driver private helse- og omsorgstilbud.
+                {t('homePage1.targetAudience.company.description')}
               </p>
               <Link 
                 to="/company" 
                 className="inline-flex items-center justify-center bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
               >
-                Tilbud til bedrifter
+                {t('homePage1.targetAudience.company.link')}
               </Link>
             </div>
           </div>
@@ -178,121 +199,126 @@ export default function HomePage1() {
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white w-full">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Hvorfor velge oss</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('homePage1.whyChooseUs.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Card 1: Easy to use */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Et av markedets enkleste system å bruke</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('homePage1.whyChooseUs.cards.easyToUse.title')}</h3>
               <p className="text-gray-600 text-sm mb-6 flex-grow">
-                Kan installeres av alle. Oppe og gå på minutter(?)
+                {t('homePage1.whyChooseUs.cards.easyToUse.description')}
               </p>
               <Link 
-                to="/guidance" 
+                to="/easy-installation"
                 className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
               >
-                Hvordan bruke løsningene
+                {t('homePage1.whyChooseUs.cards.easyToUse.link')}
               </Link>
             </div>
 
             {/* Card 2: Efficient alarm center */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Effektiv og fleksibel alarmsentral</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('homePage1.whyChooseUs.cards.efficientAlarm.title')}</h3>
               <p className="text-gray-600 text-sm mb-6 flex-grow">
-                egen drift / vaktselskap / alarmsentral med medisink oppfølging
+                {t('homePage1.whyChooseUs.cards.efficientAlarm.description')}
               </p>
               <Link 
-                to="/vaktrom-integration" 
+                to="/vaktrommet" 
                 className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
               >
-                Vår alarmsentralløsning
+                {t('homePage1.whyChooseUs.cards.efficientAlarm.link')}
               </Link>
             </div>
 
             {/* Card 3: Easy to install */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Et av markedets enkleste system å installere</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('homePage1.whyChooseUs.cards.easyToInstall.title')}</h3>
               <p className="text-gray-600 text-sm mb-6 flex-grow">
-                Kan installeres av alle. Oppe og gå på minutter(?)
+                {t('homePage1.whyChooseUs.cards.easyToInstall.description')}
               </p>
-              <Link 
-                to="/guidance" 
-                className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
+              <button 
+                onClick={() => {
+                  setModalContent('easyToInstall')
+                  setIsModalOpen(true)
+                }}
+                className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm text-left"
               >
-                Hvordan installere løsningene
-              </Link>
+                {t('homePage1.whyChooseUs.cards.easyToInstall.link')}
+              </button>
             </div>
 
             {/* Card 4: Best price */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Mål om å være best på pris, med lavest totale kostnad</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('homePage1.whyChooseUs.cards.bestPrice.title')}</h3>
               <p className="text-gray-600 text-sm mb-6 flex-grow">
-                Lei sensorer fra kr. 99,- i måneden.
+                {t('homePage1.whyChooseUs.cards.bestPrice.description')}
               </p>
-              <Link 
-                to="/pricing" 
-                className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
+              <button 
+                onClick={() => {
+                  setModalContent('bestPrice')
+                  setIsModalOpen(true)
+                }}
+                className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm text-left"
               >
-                Se prisliste
-              </Link>
+                {t('homePage1.whyChooseUs.cards.bestPrice.link')}
+              </button>
             </div>
 
             {/* Card 5: Open and integrable solution */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Open og integrerbar løsning</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('homePage1.whyChooseUs.cards.openSolution.title')}</h3>
               <p className="text-gray-600 text-sm mb-6 flex-grow">
-                Støtter standarder som FHIR og HL7. Åpne API-er tilgjengelig for utviklere.
+                {t('homePage1.whyChooseUs.cards.openSolution.description')}
               </p>
               <Link 
-                to="/it-welfare-technology" 
+                to="/it-welfare-technology#integration-standards" 
                 className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
               >
-                Våre integrasjoner og API-er
+                {t('homePage1.whyChooseUs.cards.openSolution.link')}
               </Link>
             </div>
 
             {/* Card 6: Data security */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Vi følger strenge krav til datasikkerhet og personvern</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('homePage1.whyChooseUs.cards.dataSecurity.title')}</h3>
               <p className="text-gray-600 text-sm mb-6 flex-grow">
-                All data lagres på på serve i Norge og krypteres både under overføring og lagring. GDPR og DPIA kompatibel behandling av personlige og sensitive data.
+                {t('homePage1.whyChooseUs.cards.dataSecurity.description')}
               </p>
               <Link 
-                to="/privacy" 
+                to="/it-welfare-technology#data-security" 
                 className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
               >
-                Sikkerhetsinforamsjon
+                {t('homePage1.whyChooseUs.cards.dataSecurity.link')}
               </Link>
             </div>
 
             {/* Card 7: Most complete solution */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Et av markedets mest komplette løsning</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('homePage1.whyChooseUs.cards.completeSolution.title')}</h3>
               <p className="text-gray-600 text-sm mb-6 flex-grow">
-                Et komplett system av sensorer, kommunikasjonsløsninger og varslingssystem
+                {t('homePage1.whyChooseUs.cards.completeSolution.description')}
               </p>
               <Link 
                 to="/products" 
                 className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
               >
-                Se komplett oversikt
+                {t('homePage1.whyChooseUs.cards.completeSolution.link')}
               </Link>
             </div>
 
             {/* Card 8: Made in Norway */}
             <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Utviklet og produsert i Norge</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('homePage1.whyChooseUs.cards.madeInNorway.title')}</h3>
               <p className="text-gray-600 text-sm mb-6 flex-grow">
-                Utviklet i tett samarbeid med helsetjenesten og brukerne.<br />
-                Lokal produksjon som sikrer kvalitet og følger strenge miljøkrav og etisk arbeidspraksis.
+                {t('homePage1.whyChooseUs.cards.madeInNorway.description')}
               </p>
               <Link 
-                to="/company" 
+                to="/vision" 
                 className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
               >
-                Om selskapet
+                {t('homePage1.whyChooseUs.cards.madeInNorway.link')}
               </Link>
             </div>
           </div>
@@ -303,51 +329,51 @@ export default function HomePage1() {
       <section className="py-20 bg-white w-full">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Lurer du på noe?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">{t('homePage1.faq.title')}</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Card 1: Ofte stilte spørsmål */}
             <div className="bg-white p-8 rounded-3xl border-4 border-dashed border-orange-400 flex flex-col items-center text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Ofte stilte spørsmål</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('homePage1.faq.cards.faq.title')}</h3>
               <p className="text-gray-600 text-sm mb-8 flex-grow">
-                ....
+                {t('homePage1.faq.cards.faq.description')}
               </p>
               <Link 
                 to="/faq"
                 state={{ from: '/' }}
                 className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
               >
-                Ofte stilte spørsmål
+                {t('homePage1.faq.cards.faq.link')}
               </Link>
             </div>
 
             {/* Card 2: Hvordan andre bruker løsningene */}
             <div className="bg-white p-8 rounded-3xl border-4 border-dashed border-orange-400 flex flex-col items-center text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Hvordan andre bruker løsningene</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('homePage1.faq.cards.experiences.title')}</h3>
               <p className="text-gray-600 text-sm mb-8 flex-grow">
-                Erfaringer.
+                {t('homePage1.faq.cards.experiences.description')}
               </p>
               <Link 
                 to="/experiences" 
                 className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
               >
-                Referanser Erfaringer
+                {t('homePage1.faq.cards.experiences.link')}
               </Link>
             </div>
 
             {/* Card 3: Kontakt oss */}
             <div className="bg-white p-8 rounded-3xl border-4 border-dashed border-orange-400 flex flex-col items-center text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Kontakt oss</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t('homePage1.faq.cards.contact.title')}</h3>
               <p className="text-gray-600 text-sm mb-8 flex-grow">
-                Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.
+                {t('homePage1.faq.cards.contact.description')}
               </p>
               <Link 
                 to="/documents" 
                 className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
               >
-                Kontakt oss i dag
+                {t('homePage1.faq.cards.contact.link')}
               </Link>
             </div>
           </div>
@@ -355,6 +381,50 @@ export default function HomePage1() {
       </section>
 
       </div>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <>
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 z-50"
+            onClick={() => setIsModalOpen(false)}
+          />
+          
+          {/* Modal */}
+          <div 
+            className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8 relative mx-4"
+            style={{
+              position: 'fixed',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              zIndex: 9999
+            }}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-4 right-4 z-10 p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Modal content */}
+            <div className="space-y-4">
+              <h3 className="text-2xl font-bold text-gray-900">
+                {t(`homePage1.whyChooseUs.cards.${modalContent}.popup.title`)}
+              </h3>
+              <div className="w-16 h-1 bg-teal-600 rounded-full"></div>
+              <p className="text-gray-700 leading-relaxed">
+                {t(`homePage1.whyChooseUs.cards.${modalContent}.popup.description`)}
+              </p>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   )
 }

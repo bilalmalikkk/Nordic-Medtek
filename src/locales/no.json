@@ -19,6 +19,129 @@
     "subpageOf": "Underside av"
   },
   "util": {"about": "Om oss", "demo": "Bestill demo", "contact": "Kontakt oss", "privacy": "Personvernerklæring"},
+  "homePage1": {
+    "hero": {
+      "title": "Vi leverer løsninger som gir mennesker trygghet, verdighet og bedre livskvalitet",
+      "subtitle": "Teknologi som gjør det mulig for eldre å bo hjemme lenger, samtidig som ressursene brukes smartere."
+    },
+    "ourSolution": {
+      "title": "Vår løsning",
+      "description1": "Vi leverer komplett trygghetsløsninger med et bredt utvalg sensorer i hjemmet, toveiskommunikasjon og varsling til mobiltelefon og vaktsentraler.",
+      "description2": "Løsningen vår er modulær. Du kan starte enkelt og bygge ut senere hvis behovet endrer seg.",
+      "cards": {
+        "fallSensors": {
+          "title": "Fallsensorer",
+          "description": "Oppdager fall automatisk, også når brukeren ikke klarer å trykke på alarmknappen."
+        },
+        "healthSensors": {
+          "title": "Helsesensorer",
+          "description": "Følger med på pust, puls og aktivitet uten at brukeren merker det."
+        },
+        "centralOverview": {
+          "title": "Sentral oversikt",
+          "description": "Kommunens vaktsentral får sanntidsovervåking og kan prioritere ressursene riktig."
+        },
+        "directAlert": {
+          "title": "Direkte varsling",
+          "description": "Få umiddelbare varsler på din mobil eller nettbrett når noe kritisk skjer."
+        }
+      }
+    },
+    "targetAudience": {
+      "private": {
+        "title": "Privat",
+        "description": "Våre unike sensorer oppdager uregelmessigheter knyttet til trygghet og sikkerhet hos dine eldre som bor hjemme, og varsler deg som pårørende eller helsetjenesten helt automatisk.",
+        "link": "Løsninger for pårørende"
+      },
+      "municipality": {
+        "title": "Kommune",
+        "description": "Våre løsninger innen velferdsteknologi øker tryggheten for hjemmeboende brukere, reduserer arbeidspresset på helsepersonell, og effektiviserer driften - alt i én fleksibel og skalerbar plattform.",
+        "link": "Løsninger for kommuner"
+      },
+      "company": {
+        "title": "Bedrift",
+        "description": "Vi tilbyr våre løsninger til bedriftsmarkedet, enten du er forhandler som ønsker et bredere og pålitelig sortiment, du er leverandør av systemer for vaktrom og teknisk infrastruktur eller du driver private helse- og omsorgstilbud.",
+        "link": "Tilbud til bedrifter"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Hvorfor velge oss",
+      "cards": {
+        "easyToUse": {
+          "title": "Et av markedets enkleste system å bruke",
+          "description": "Kan installeres av alle. Oppe og gå på minutter(?)",
+          "link": "Hvordan bruke løsningene",
+          "popup": {
+            "title": "Fullautomatisk sensorbruk – enkelt og bekymringsfritt",
+            "description": "Våre sensorer er utviklet for å fungere helt automatisk, uten behov for manuell betjening. Enkelte enheter, som blodtrykks måleren, krever kun at du slår dem på – resten skjer av seg selv. Du slipper oppgaver knyttet til bruk og oppsett, og systemet håndterer alt i bakgrunnen."
+          }
+        },
+        "efficientAlarm": {
+          "title": "Effektiv og fleksibel alarmsentral",
+          "description": "egen drift / vaktselskap / alarmsentral med medisink oppfølging",
+          "link": "Vår alarmsentralløsning"
+        },
+        "easyToInstall": {
+          "title": "Et av markedets enkleste system å installere",
+          "description": "Kan installeres av alle. Oppe og gå på minutter(?)",
+          "link": "Hvordan installere løsningene",
+          "popup": {
+            "title": "Fullautomatisk sensorbruk – enkelt og bekymringsfritt",
+            "description": "Våre sensorer er utviklet for å fungere helt automatisk, uten behov for manuell betjening. Enkelte enheter, som blodtrykks måleren, krever kun at du slår dem på – resten skjer av seg selv. Du slipper oppgaver knyttet til bruk og oppsett, og systemet håndterer alt i bakgrunnen."
+          }
+        },
+        "bestPrice": {
+          "title": "Mål om å være best på pris, med lavest totale kostnad",
+          "description": "Lei sensorer fra kr. 99,- i måneden.",
+          "link": "Se prisliste",
+          "popup": {
+            "title": "Vår fleksible leieordning",
+            "description": "Vår fleksible leieordning gir en lav terskel for å ta i bruk en moderne og effektiv løsning. Vi har som mål å være ledende på både pris og funksjonalitet, og derfor gjennomfører vi nå en grundig evaluering av markedet. Dette sikrer at vår løsning blir riktig priset og strategisk plassert – til fordel for deg som kunde. Prisene er derfor ikke lansert ennå, men vil bli tilgjengelige så snart vi har kvalitets-sikret at de gjenspeiler den verdien vi ønsker å tilby"
+          }
+        },
+        "openSolution": {
+          "title": "Open og integrerbar løsning",
+          "description": "Støtter standarder som FHIR og HL7. Åpne API-er tilgjengelig for utviklere.",
+          "link": "Våre integrasjoner og API-er"
+        },
+        "dataSecurity": {
+          "title": "Vi følger strenge krav til datasikkerhet og personvern",
+          "description": "All data lagres på på serve i Norge og krypteres både under overføring og lagring. GDPR og DPIA kompatibel behandling av personlige og sensitive data.",
+          "link": "Sikkerhetsinforamsjon"
+        },
+        "completeSolution": {
+          "title": "Et av markedets mest komplette løsning",
+          "description": "Et komplett system av sensorer, kommunikasjonsløsninger og varslingssystem",
+          "link": "Se komplett oversikt"
+        },
+        "madeInNorway": {
+          "title": "Utviklet og produsert i Norge",
+          "description": "Utviklet i tett samarbeid med helsetjenesten og brukerne. Lokal produksjon som sikrer kvalitet og følger strenge miljøkrav og etisk arbeidspraksis.",
+          "link": "Om selskapet"
+        }
+      }
+    },
+    "faq": {
+      "title": "Lurer du på noe?",
+      "cards": {
+        "faq": {
+          "title": "Ofte stilte spørsmål",
+          "description": "....",
+          "link": "Ofte stilte spørsmål"
+        },
+        "experiences": {
+          "title": "Hvordan andre bruker løsningene",
+          "description": "Erfaringer.",
+          "link": "Referanser Erfaringer"
+        },
+        "contact": {
+          "title": "Kontakt oss",
+          "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+          "link": "Kontakt oss i dag"
+        }
+      }
+    }
+  },
   "pageTitles": {
     "alarmCommunication": "Alarmkommunikasjon",
     "medicalFollowup": "Medisinsk oppfølging",
@@ -1286,7 +1409,10 @@
       }
     },
     "cta": {
-      "title": "Klar til å se hvordan dette kan fungere i din kommune?",
+      "title": "Hva er neste steg?",
+      "question": "Vil du ha en teknisk gjennomgang?",
+      "description": "Avtal et møte med våre utviklere for detaljert gjennomgang.",
+      "button": "Bestill et teknisk møte",
       "contact": "Kontakt oss",
       "demo": "Bestill demo"
     },
@@ -1953,15 +2079,16 @@
   },
   "itWelfareTech": {
     "hero": {
-      "title": "Sikker, kompatibel og klar for integrasjon.",
-      "description": "Som ansvarlig for IT og velferdsteknologi skal du sikre at nye løsninger er trygge, stabile og passer inn i kommunens systemlandskap. Våre sensorer og systemer er bygget på moderne arkitektur, følger GDPR og ISO-standarder, og integreres enkelt med eksisterende fagsystemer.",
+      "title": "Datasikkerhet og personvern – en integrert del av løsningen",
+      "description": "Vi setter datasikkerhet og personvern høyt i alle deler av vår løsning. All informasjon behandles i henhold til gjeldende regelverk, og systemet er utviklet med innebygd sikkerhet fra sensor til skyløsning. Personopplysninger lagres og håndteres på en trygg og transparent måte, slik at både brukere og tjenesteytere kan ha full tillit til systemet.",
       "button1": "Bestill gratis veiledning",
       "button2": "Se teknisk dokumentasjon",
       "button3": "Se produkter"
     },
     "security": {
+      "mainTitle": "IT arkitektur",
       "title": "Datasikkerhet og personvern",
-      "subtitle": "Vi setter sikkerhet først:",
+      "subtitle": "Vi setter sikkerhet først",
       "encryption": {
         "title": "Kryptering",
         "description": "All data krypteres både under overføring og lagring."
@@ -2020,7 +2147,7 @@
       }
     },
     "integration": {
-      "title": "Integrasjon og standarder",
+      "title": "Datasikkerhet og integrasjon",
       "subtitle": "Vi vet at integrasjon er avgjørende for kommunens systemmiljø:",
       "fhir": {
         "title": "FHIR og HL7",
@@ -2037,6 +2164,32 @@
       "documentation": {
         "title": "Teknisk dokumentasjon",
         "description": "Dokumentasjon tilgjengelig for tekniske team."
+      }
+    },
+    "downloadableDocuments": {
+      "title": "Nedlastbare dokumenter",
+      "documents": {
+        "conformity": "samsvarserklæring",
+        "productSheet": "produktark",
+        "certificates": "sertifikater",
+        "safetyDocs": "sikkerhetsdokumentasjon"
+      }
+    },
+    "finalCta": {
+      "title": "Klar til å se hvordan våre løsninger kan fungere i din kommune?",
+      "columns": {
+        "demo": {
+          "description": "Vi tilbyr demoer tilpasset hjemmetjenesten.",
+          "button": "Bestill demo"
+        },
+        "presentation": {
+          "description": "Vi tilbyr korte digitale møter for ledere med gjennomgang av gevinster.",
+          "button": "Bestill en lederpresentasjon"
+        },
+        "pilot": {
+          "description": "Vi kan starte med et pilotprosjekt for en liten pasientgruppe.",
+          "button": "Kontakt oss for mer informasjon"
+        }
       }
     },
     "planning": {
@@ -2965,6 +3118,66 @@
       "experiences": {
         "title": "Hvordan andre bruker løsningene",
         "description": "Erferinger..",
+        "button": "Referanser Erfaringer"
+      },
+      "contact": {
+        "title": "Kontakt oss",
+        "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+        "button": "Kontakt oss i dag"
+      }
+    }
+  },
+  "easyInstallation": {
+    "title": "Helhetlig utvikling med fokus på enkel integrasjon",
+    "description": "Gjennom hele utviklingsprosessen har vi hatt et tydelig fokus på brukervennlig installasjon. Vår filosofi er at sensorer for ulike behov er tilgjengelige for de fleste - men det som skiller oss ut, er evnen til å integrere dem sømløst i én samlet løsning. Dette er mulig fordi vi utvikler alle komponenter internt i samme selskap - fra sensor til skyløsning.",
+    "footer": "© 2024 Nordic Medical Technologies. Alle rettigheter reservert.",
+    "howToCare": {
+      "title": "Hvordan vil du passe på?",
+      "subtitle": "Egeninnsats eller tilkoblet alarmsentral",
+      "gateway": {
+        "title": "Installasjon av gateway - enkelt og effektivt.",
+        "description": "Oppsettet av vår gateway, den sentrale enheten for alle våre sensorer, er gjort så enkelt at du kan komme i gang på få minutter. Med vår plug-and-play-løsning får du en rask og pålitelig installasjon - uten behov for spesialverktøy eller teknisk kompetanse.",
+        "button": "Se installasjons veiledning"
+      },
+      "fallSensor": {
+        "title": "Radarbasert fallsensor - intelligent trygghet",
+        "description": "Vår radarbaserte fallsensor gir pålitelig og diskret overvåkning uten behov for kamera eller fysisk kontakt. Installasjonen er rask og enkel, og sensoren tilpasser seg automatisk til rommet den monteres i. Med kontinuerlig måling av bevegelse og fall, får du varsling i sanntid - helt uten at personen trenger å bære noe",
+        "button": "Se installations veiledning"
+      },
+      "bloodPressure": {
+        "title": "Blodtrykksmåler - enklere blir det ikkel",
+        "description": "Vår blodtrykksmåler er klar til bruk med ett enkelt trinn: slå den på. Ingen komplisert installasjon, ingen tilkobling - bare trykk på knappen, og målingen starter. Resultatene sendes automatisk til systemet, slik at du får full oversikt uten ekstra arbeid.",
+        "button": "Se installations veiledning"
+      }
+    },
+    "sensors": {
+      "title": "Sensorer du kan installere på 1-2-3",
+      "card1": {
+        "title": "Fallsensorer",
+        "description": "Bekymring for fall på badet, i trappen eller på soverommet? Våre diskrete fallsensorer oppdager automatisk fall og sender umiddelbar varsling til deg eller helsepersonell.",
+        "button": "Gå til trygghet og fallsikring"
+      },
+      "card2": {
+        "title": "Alarm og kommunikasjon",
+        "description": "Løsninger for alarm og kommunikasjon inkluderer varsling ved plutselig sykdom, toveis kommunikasjon med video, og geofence-funksjoner som gir deg trygghet når dine kjære er hjemme eller ute.",
+        "button": "Alarmknapper og rask varsling"
+      },
+      "card3": {
+        "title": "Medisinsk oppfølging",
+        "description": "Overvåkning for hjerteproblemer, diabetes og regelmessige målinger av pust, blodtrykk, søvn, blodsukker, kroppstemperatur og oksygenmetning. Automatisk varsling ved avvik.",
+        "button": "Medisinsk oppfølging"
+      }
+    },
+    "wondering": {
+      "title": "Lurer du på noe?",
+      "faq": {
+        "title": "Ofte stilte spørsmål",
+        "description": "...",
+        "button": "Ofte stilte spørsmål"
+      },
+      "experiences": {
+        "title": "Hvordan andre bruker løsningene Erfaringer.",
+        "description": "..",
         "button": "Referanser Erfaringer"
       },
       "contact": {

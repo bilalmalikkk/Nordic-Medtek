@@ -19,6 +19,129 @@
     "subpageOf": "Subpage of"
   },
   "util": {"about": "About", "demo": "Book demo", "contact": "Contact", "privacy": "Privacy policy"},
+  "homePage1": {
+    "hero": {
+      "title": "We deliver solutions that give people security, dignity and better quality of life",
+      "subtitle": "Technology that makes it possible for the elderly to live at home longer, while resources are used smarter."
+    },
+    "ourSolution": {
+      "title": "Our solution",
+      "description1": "We deliver complete safety solutions with a wide range of sensors in the home, two-way communication and alerts to mobile phones and alarm centers.",
+      "description2": "Our solution is modular. You can start simple and expand later if needs change.",
+      "cards": {
+        "fallSensors": {
+          "title": "Fall sensors",
+          "description": "Detects falls automatically, even when the user cannot press the alarm button."
+        },
+        "healthSensors": {
+          "title": "Health sensors",
+          "description": "Monitors breathing, pulse and activity without the user noticing."
+        },
+        "centralOverview": {
+          "title": "Central overview",
+          "description": "The municipality's alarm center receives real-time monitoring and can prioritize resources correctly."
+        },
+        "directAlert": {
+          "title": "Direct alert",
+          "description": "Get immediate alerts on your mobile or tablet when something critical happens."
+        }
+      }
+    },
+    "targetAudience": {
+      "private": {
+        "title": "Private",
+        "description": "Our unique sensors detect irregularities related to safety and security in your elderly who live at home, and alert you as a relative or the health service completely automatically.",
+        "link": "Solutions for relatives"
+      },
+      "municipality": {
+        "title": "Municipality",
+        "description": "Our welfare technology solutions increase safety for home users, reduce work pressure on healthcare personnel, and streamline operations - all in one flexible and scalable platform.",
+        "link": "Solutions for municipalities"
+      },
+      "company": {
+        "title": "Company",
+        "description": "We offer our solutions to the business market, whether you are a retailer who wants a broader and reliable range, you are a supplier of systems for alarm centers and technical infrastructure, or you run private health and care services.",
+        "link": "Business offers"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why choose us",
+      "cards": {
+        "easyToUse": {
+          "title": "One of the market's easiest systems to use",
+          "description": "Can be installed by anyone. Up and running in minutes(?)",
+          "link": "How to use the solutions",
+          "popup": {
+            "title": "Fully automatic sensor usage – simple and worry-free",
+            "description": "Our sensors are designed to work completely automatically, without requiring manual operation. Some devices, such as the blood pressure monitor, only require you to turn them on – the rest happens automatically. You avoid tasks related to usage and setup, and the system handles everything in the background."
+          }
+        },
+        "efficientAlarm": {
+          "title": "Efficient and flexible alarm center",
+          "description": "own operation / security company / alarm center with medical follow-up",
+          "link": "Our alarm center solution"
+        },
+        "easyToInstall": {
+          "title": "One of the market's easiest systems to install",
+          "description": "Can be installed by anyone. Up and running in minutes(?)",
+          "link": "How to install the solutions",
+          "popup": {
+            "title": "Fully automatic sensor usage – simple and worry-free",
+            "description": "Our sensors are designed to work completely automatically, without requiring manual operation. Some devices, such as the blood pressure monitor, only require you to turn them on – the rest happens automatically. You avoid tasks related to usage and setup, and the system handles everything in the background."
+          }
+        },
+        "bestPrice": {
+          "title": "Goal to be best on price, with lowest total cost",
+          "description": "Rent sensors from kr. 99,- per month.",
+          "link": "See price list",
+          "popup": {
+            "title": "Our flexible rental arrangement",
+            "description": "Our flexible rental arrangement provides a low threshold for adopting a modern and efficient solution. We aim to be leading in both price and functionality, and therefore we are now conducting a thorough market evaluation. This ensures that our solution is correctly priced and strategically positioned – to your advantage as a customer. The prices are therefore not yet launched, but will be available as soon as we have quality-assured that they reflect the value we want to offer."
+          }
+        },
+        "openSolution": {
+          "title": "Open and integrable solution",
+          "description": "Supports standards such as FHIR and HL7. Open APIs available for developers.",
+          "link": "Our integrations and APIs"
+        },
+        "dataSecurity": {
+          "title": "We follow strict requirements for data security and privacy",
+          "description": "All data is stored on servers in Norway and encrypted both during transfer and storage. GDPR and DPIA compatible processing of personal and sensitive data.",
+          "link": "Security information"
+        },
+        "completeSolution": {
+          "title": "One of the market's most complete solutions",
+          "description": "A complete system of sensors, communication solutions and alarm system",
+          "link": "See complete overview"
+        },
+        "madeInNorway": {
+          "title": "Developed and produced in Norway",
+          "description": "Developed in close collaboration with the health service and users. Local production that ensures quality and follows strict environmental requirements and ethical work practices.",
+          "link": "About the company"
+        }
+      }
+    },
+    "faq": {
+      "title": "Have questions?",
+      "cards": {
+        "faq": {
+          "title": "Frequently asked questions",
+          "description": "....",
+          "link": "Frequently asked questions"
+        },
+        "experiences": {
+          "title": "How others use the solutions",
+          "description": "Experiences.",
+          "link": "References Experiences"
+        },
+        "contact": {
+          "title": "Contact us",
+          "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+          "link": "Contact us today"
+        }
+      }
+    }
+  },
   "pageTitles": {
     "alarmCommunication": "Alarm Communication",
     "medicalFollowup": "Medical Follow-up",
@@ -1925,14 +2048,15 @@
   },
   "itWelfareTech": {
     "hero": {
-      "title": "Secure, compatible and ready for integration.",
-      "description": "We deliver IT and welfare technology that is secure, stable and compatible. Our solutions follow GDPR, ISO standards and integrate easily with existing systems.",
+      "title": "Data security and privacy – an integrated part of the solution",
+      "description": "We prioritize data security and privacy in all parts of our solution. All information is processed in accordance with applicable regulations, and the system is developed with built-in security from sensor to cloud solution. Personal data is stored and handled in a safe and transparent manner, so that both users and service providers can have full confidence in the system.",
       "button1": "Order free guidance",
       "button2": "See technical documentation"
     },
     "security": {
+      "mainTitle": "IT architecture",
       "title": "Data security and privacy",
-      "subtitle": "We put security first:",
+      "subtitle": "We put security first",
       "encryption": {
         "title": "Encryption",
         "description": "All data is encrypted both during transfer and storage."
@@ -1975,8 +2099,10 @@
       }
     },
     "cta": {
-      "title": "Ready to take the next step?",
-      "description": "Let us show you how our secure and compatible solutions can be integrated into your municipality's IT environment.",
+      "title": "What is the next step?",
+      "question": "Do you want a technical review?",
+      "description": "Schedule a meeting with our developers for a detailed review.",
+      "button": "Order a technical meeting",
       "contact": "Contact us",
       "demo": "Book demo"
     },
@@ -1997,7 +2123,7 @@
       }
     },
     "integration": {
-      "title": "Integration and standards",
+      "title": "Data security and integration",
       "subtitle": "We know that integration is crucial for the municipality's system environment:",
       "fhir": {
         "title": "FHIR and HL7",
@@ -2014,6 +2140,32 @@
       "documentation": {
         "title": "Technical documentation",
         "description": "Documentation available for technical teams."
+      }
+    },
+    "downloadableDocuments": {
+      "title": "Downloadable documents",
+      "documents": {
+        "conformity": "Declaration of conformity",
+        "productSheet": "Product sheet",
+        "certificates": "Certificates",
+        "safetyDocs": "Safety documentation"
+      }
+    },
+    "finalCta": {
+      "title": "Ready to see how our solutions can work in your municipality?",
+      "columns": {
+        "demo": {
+          "description": "We offer demos tailored to home care services.",
+          "button": "Order demo"
+        },
+        "presentation": {
+          "description": "We offer short digital meetings for leaders with a review of benefits.",
+          "button": "Order a leader presentation"
+        },
+        "pilot": {
+          "description": "We can start with a pilot project for a small patient group.",
+          "button": "Contact us for more information"
+        }
       }
     },
     "planning": {
@@ -2946,6 +3098,66 @@
       "experiences": {
         "title": "How others use the solutions",
         "description": "Experiences..",
+        "button": "References Experiences"
+      },
+      "contact": {
+        "title": "Contact us",
+        "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+        "button": "Contact us today"
+      }
+    }
+  },
+  "easyInstallation": {
+    "title": "Holistic development with focus on simple integration",
+    "description": "Throughout the entire development process, we have had a clear focus on user-friendly installation. Our philosophy is that sensors for various needs are available to most – but what sets us apart is the ability to integrate them seamlessly into a single, comprehensive solution. This is possible because we develop all components internally within the same company – from sensor to cloud solution.",
+    "footer": "© 2024 Nordic Medical Technologies. All rights reserved.",
+    "howToCare": {
+      "title": "How will you take care?",
+      "subtitle": "Self-effort or connected alarm central",
+      "gateway": {
+        "title": "Gateway installation - simple and efficient.",
+        "description": "The setup of our gateway, the central unit for all our sensors, is made so simple that you can get started in minutes. With our plug-and-play solution, you get a fast and reliable installation - without the need for special tools or technical expertise.",
+        "button": "See installation guide"
+      },
+      "fallSensor": {
+        "title": "Radar-based fall sensor - intelligent safety",
+        "description": "Our radar-based fall sensor provides reliable and discreet monitoring without the need for camera or physical contact. The installation is quick and easy, and the sensor automatically adapts to the room it is installed in. With continuous measurement of movement and falls, you get real-time alerts - completely without the person needing to wear anything.",
+        "button": "See installation guide"
+      },
+      "bloodPressure": {
+        "title": "Blood pressure monitor - it doesn't get easier",
+        "description": "Our blood pressure monitor is ready for use with a single step: turn it on. No complicated installation, no connection - just press the button, and the measurement starts. The results are automatically sent to the system, so you get a full overview without extra work.",
+        "button": "See installation guide"
+      }
+    },
+    "sensors": {
+      "title": "Sensors you can install in 1-2-3",
+      "card1": {
+        "title": "Fall sensors",
+        "description": "Concerned about falls in the bathroom, on the stairs, or in the bedroom? Our discrete fall sensors automatically detect falls and send immediate alerts to you or healthcare personnel.",
+        "button": "Go to safety and fall protection"
+      },
+      "card2": {
+        "title": "Alarm and communication",
+        "description": "Solutions for alarm and communication include alerts for sudden illness, two-way communication with video, and geofence functions that give you peace of mind when your loved ones are home or out.",
+        "button": "Alarm buttons and quick alerts"
+      },
+      "card3": {
+        "title": "Medical follow-up",
+        "description": "Monitoring for heart problems, diabetes and regular measurements of breathing, blood pressure, sleep, blood sugar, body temperature and oxygen saturation. Automatic alerts for deviations.",
+        "button": "Medical follow-up"
+      }
+    },
+    "wondering": {
+      "title": "Wondering about something?",
+      "faq": {
+        "title": "Frequently asked questions",
+        "description": "...",
+        "button": "Frequently asked questions"
+      },
+      "experiences": {
+        "title": "How others use the solutions Experiences.",
+        "description": "..",
         "button": "References Experiences"
       },
       "contact": {

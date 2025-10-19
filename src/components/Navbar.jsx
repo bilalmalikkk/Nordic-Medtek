@@ -147,7 +147,7 @@ export default function Navbar() {
           <Link to="/demo" className="hover:opacity-80 transition-opacity">Book demo</Link>
           <Link to="/documents" className="hover:opacity-80 transition-opacity">Kontakt oss</Link>
           <Link to="/privacy" className="hover:opacity-80 transition-opacity">Personvernerklæring</Link>
-          <button onClick={toggleLang} className="hover:opacity-80 transition-opacity">English</button>
+          <button onClick={toggleLang} className="hover:opacity-80 transition-opacity">{t('nav.lang')}</button>
         </div>
       </div>
       

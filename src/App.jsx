@@ -38,6 +38,7 @@ import Support from './pages/Support'
 import Evidence from './pages/Evidence'
 import HealthPersonnel from './pages/HealthPersonnel'
 import ITWelfareTechnology from './pages/ITWelfareTechnology'
+import EasyInstallation from './pages/EasyInstallation'
 import MunicipalBenefits from './pages/MunicipalBenefits'
 import Politicians from './pages/Politicians'
 import Admin from './pages/Admin'
@@ -95,6 +96,7 @@ function App() {
           <Route path="/evidence" element={<Evidence />} />
           <Route path="/health-personnel" element={<HealthPersonnel />} />
           <Route path="/it-welfare-technology" element={<ITWelfareTechnology />} />
+          <Route path="/easy-installation" element={<EasyInstallation />} />
           <Route path="/municipal-benefits" element={<MunicipalBenefits />} />
           <Route path="/politicians" element={<Politicians />} />
           <Route path="/admin" element={<Admin />} />

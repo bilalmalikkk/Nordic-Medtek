@@ -2,9 +2,14 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 export default function ScrollToTop() {
-  const { pathname } = useLocation()
+  const { pathname, hash } = useLocation()
 
   useEffect(() => {
+    // Don't scroll to top if there's a hash in the URL
+    if (hash) {
+      return
+    }
+
     // Function to force scroll to top with multiple methods
     const scrollToTop = () => {
       // Method 1: Standard window scroll
@@ -38,7 +43,7 @@ export default function ScrollToTop() {
       clearTimeout(timeout2)
       clearTimeout(timeout3)
     }
-  }, [pathname])
+  }, [pathname, hash])
 
   return null
 }
