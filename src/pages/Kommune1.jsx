@@ -244,7 +244,7 @@ export default function Kommune1() {
               {/* Child Cards Grid 2x2 - Bottom Aligned */}
               <div className="grid grid-cols-2 gap-4 mt-auto">
                 {/* Fall Sensors */}
-                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                <Link to="/safety-solutions1" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-center mb-3">
                     <img 
                       src={fallIllustrateImage} 
@@ -258,10 +258,10 @@ export default function Kommune1() {
                   <p className="text-xs text-gray-600 leading-relaxed">
                     {t('kommune1.solutionExplanation.fallSensors.description')}
                   </p>
-                </div>
+                </Link>
 
                 {/* Health Sensors */}
-                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                <Link to="/medical-followup1" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-center mb-3">
                     <img 
                       src={recievesPingImage} 
@@ -275,10 +275,10 @@ export default function Kommune1() {
                   <p className="text-xs text-gray-600 leading-relaxed">
                     {t('kommune1.solutionExplanation.healthSensors.description')}
                   </p>
-                </div>
+                </Link>
 
                 {/* Alarm Button */}
-                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                <Link to="/alarm-communication1" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-center mb-3">
                     <img 
                       src={sensorImage} 
@@ -292,10 +292,10 @@ export default function Kommune1() {
                   <p className="text-xs text-gray-600 leading-relaxed">
                     {t('kommune1.solutionExplanation.alarmButton.description')}
                   </p>
-                </div>
+                </Link>
 
                 {/* EaseBlink Pro */}
-                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                <Link to="/kommune-easeblink-proff" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-center mb-3">
                     <img 
                       src={medicalHomeImage} 
@@ -309,7 +309,7 @@ export default function Kommune1() {
                   <p className="text-xs text-gray-600 leading-relaxed">
                     {t('kommune1.solutionExplanation.easeblinkPro.description')}
                   </p>
-                </div>
+                </Link>
               </div>
             </div>
 
@@ -332,7 +332,7 @@ export default function Kommune1() {
               {/* Child Cards Grid 2x2 - Bottom Aligned */}
               <div className="grid grid-cols-2 gap-4 mt-auto">
                 {/* Central Overview */}
-                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                <Link to="/products" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-center mb-3">
                     <img 
                       src={sensorsDataImage} 
@@ -346,10 +346,10 @@ export default function Kommune1() {
                   <p className="text-xs text-gray-600 leading-relaxed">
                     {t('kommune1.solutionExplanation.centralOverview.description')}
                   </p>
-                </div>
+                </Link>
 
                 {/* Direct Notification */}
-                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                <Link to="/vaktrommet" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-center mb-3">
                     <img 
                       src={notificationImage} 
@@ -363,10 +363,10 @@ export default function Kommune1() {
                   <p className="text-xs text-gray-600 leading-relaxed">
                     {t('kommune1.solutionExplanation.directNotification.description')}
                   </p>
-                </div>
+                </Link>
 
                 {/* Automatic NEWS */}
-                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                <Link to="/vaktrommet" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-center mb-3">
                     <img 
                       src={newsImage} 
@@ -380,10 +380,10 @@ export default function Kommune1() {
                   <p className="text-xs text-gray-600 leading-relaxed">
                     {t('kommune1.solutionExplanation.automaticNews.description')}
                   </p>
-                </div>
+                </Link>
 
                 {/* Automatic Trend Analysis */}
-                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                <Link to="/vaktrommet" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-center mb-3">
                     <img 
                       src={trendsImage} 
@@ -397,7 +397,7 @@ export default function Kommune1() {
                   <p className="text-xs text-gray-600 leading-relaxed">
                     {t('kommune1.solutionExplanation.automaticTrend.description')}
                   </p>
-                </div>
+                </Link>
               </div>
             </div>
           </div>

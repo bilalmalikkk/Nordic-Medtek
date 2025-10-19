@@ -2849,6 +2849,130 @@
         "button": "Kontakt oss i dag"
       }
     }
+  },
+  "vaktrommet": {
+    "hero": {
+      "title": "Vaktrommet-privat",
+      "description": "Vi kaller vår skyløsning for vaktrommet, fordi det er det den er. Vaktrommet kan tilbys med sykepleier og doktor som hjelper deg å ta vare på dine kjære, eller så kan du velge en løsning hvor du selv overvåker brukeren. Vi beskriver de alternativene løsninger mer utfyllende nedenfor."
+    },
+    "serviceOptions": {
+      "title": "Hvordan vil du passe på ?",
+      "subtitle": "Egeninnsats eller tilkoblet alarmsentral",
+      "card1": {
+        "title": "Vaktrommet Privat - trygghet i eget hjem",
+        "description": "Vaktrommet Privat gjør det enkelt å sette opp en løsning der dere selv kan følge med på deres kjære. Med et passende antall sensorer kan systemet overvåke ulike situasjoner i hjemmet, og automatisk varsle deg dersom noe uventet skjer.",
+        "button": "Mer info for egeninnsats"
+      },
+      "card2": {
+        "title": "Alarmsentral - når egeninnsats ikke er nokl",
+        "description": "Egeninnsats er ikke alltid mulig - enten på grunn av arbeidssituasjon, avstand eller andre praktiske begrensninger. Ved å koble systemet til en alarmsentral, kan du være trygg på at dine kjære er overvåket døgnet rundt. Du har fortsatt full tilgang til systemet via smarttelefon og PC, og kan følge med når det passer deg.",
+        "button": "Vår alarmsentral"
+      },
+      "card3": {
+        "title": "Profesjonell oppfølging - sammen med Salub",
+        "description": "I samarbeid med vår partner Salubi tilbyr vi en unik løsning der dine kjære kobles til en vaktsentral bemannet av sykepleiere og leger. Du får medisinsk oppfølging døgnet rundt, med daglig eller avtalt evaluering av helsedata. Tjenesten er proaktiv og passer spesielt godt for personer med endringer i helsetilstanden.",
+        "button": "Utvidet oppfølging"
+      }
+    },
+    "monitoring": {
+      "mobile": {
+        "title": "Du følger enkelt med fra mobile enheter",
+        "description": "Installer vår app på din telefon og du kan følge med på dine kjære når det måtte passe. Ved alarm situasjon som et fall får du både alarm, og bilde over situasjonen om du har vårt sikkerhets kamera installert."
+      },
+      "pc": {
+        "title": "Full kontrol fra PC",
+        "description": "Fra PC får du full tilgang til alle funksjoner på vaktrommet. Her settes alle alarmer, hvor alarmer skal sendes osv."
+      }
+    },
+    "sensors": {
+      "title": "Sensorer du kan koble til vaktsentralen",
+      "card1": {
+        "description": "Bekymring for fall på badet, I trappen eller på soverommet? Våre diskrete fallsensorer oppdager automatisk fall og sender umiddelbar varsling til deg eller helsepersonell.",
+        "button": "Gå til trygghet og fallsikring"
+      },
+      "card2": {
+        "description": "Løsninger for alarm og kommunikasjon inkluderer varsling ved plutselig sykdom, toveis kommunikasjon med video, og geofence-funksjoner som gir deg trygghet når dine kjære er hjemme eller ute.",
+        "button": "Alarmknapper og rask varsling"
+      },
+      "card3": {
+        "description": "Overvåkning for hjerteproblemer, diabetes og regelmessige målinger av pust, blodtrykk, søvn, blodsukker, kroppstemperatur og oksygenmetning. Automatisk varsling ved avvik.",
+        "button": "Medisinsk oppfølging"
+      }
+    },
+    "questions": {
+      "title": "Lurer du på noe?",
+      "faq": {
+        "title": "Ofte stilte spørsmål",
+        "description": "....",
+        "button": "Ofte stilte spørsmål"
+      },
+      "experiences": {
+        "title": "Hvordan andre bruker løsningene",
+        "description": "Erferinger..",
+        "button": "Referanser Erfaringer"
+      },
+      "contact": {
+        "title": "Kontakt oss",
+        "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+        "button": "Kontakt oss i dag"
+      }
+    }
+  },
+  "kommuneEaseblinkProff": {
+    "hero": {
+      "title": "EaseBlink-Proff",
+      "description": "EaseBlink-proff tilbyr en utvidet tjeneste til doktorer, sykehus og helsepersonell. Les mer om hvordan vi støtter E-konsultasjon, medical@home og oppfølging nedenfor."
+    },
+    "healthcareHelper": {
+      "title": "Helsearbeiderens hjelper",
+      "description1": "For helsepersonell som jobber i hjemmetjenesten, kan det være avgjørende å få medisinsk vurdering raskt. Ved å koble opp en lege digitalt under et hjemmebesøk, kan helsearbeideren få støtte til å ta riktige avgjørelser på stedet.",
+      "description2": "Dette kan være alt fra vurdering av sår, infeksjoner eller endringer i pasientens allmenntilstand. Det gir økt trygghet både for pasient og helsepersonell, og bidrar til bedre og mer presis behandling.",
+      "description3": "Med vår løsning har doktoren tilgang til både historiske data, og sanntidsdata."
+    },
+    "eConsultation": {
+      "title": "E-konsultasjon tatt til et nytt nivå",
+      "description1": "Vår e-konsultasjonsløsning er integrert med vår medisinsk databaseløsning. Dette betyr at legen har tilgang til både sanntidsdata og historiske målinger. Via sensorene vi monterer i hjemmet, kan legen følge med på hjertet, pust, temperatur, hjertens variasjoner og mye mer.",
+      "description2": "Løsningen gir også mulighet til å invitere familie, sykehus eller spesialister inn i konsultasjonen. Løsningen er under MDR-sertifisering med mål om godkjenning innen utgangen av 2026."
+    },
+    "medicalHome": {
+      "title": "medical@home",
+      "description1": "Medical@Home er en ny måte å tenke helse på – der avansert teknologi møter hverdagslivets komfort. Det handler om å gi mennesker muligheten til å leve trygt og selvstendig hjemme, samtidig som deres helse kontinuerlig og diskret overvåkes.",
+      "description2": "Dette er en del av fremtidens krav om effektivitet i helsevesenet og kan redusere sykehusopphold. Løsningen bruker medisinske sensorer som utfører automatisk NEWS.",
+      "description3": "Løsningen er under MDR-sertifisering med mål om godkjenning innen utgangen av 2026."
+    },
+    "combineSolutions": {
+      "title": "Kombiner med flere av våre løsninger",
+      "card1": {
+        "description": "Beskyttelse for fall på badet. Trenger noen å overvåke? Våre diskrete fallsensorer oppdager automatisk fall og sender varsel. Vi er der for deg, enten du er hjemme eller ute.",
+        "button": "Gi til trygghet og følelse"
+      },
+      "card2": {
+        "description": "Løsninger for alarm og kommunikasjon inkluderer varsling ved plutselig sykdom, toveis kommunikasjon med video, og spesifikke funksjoner som gir deg trygghet når dine kjære er hjemme eller ute.",
+        "button": "Alarmknapper og rask varsling"
+      },
+      "card3": {
+        "description": "Overvåking for hjerteproblemer, diabetes og regelmessige målinger av puls, blodtrykk, vekt, blodsukker, kroppstemperatur og oksygenmetning. Automatisk varsling ved avvik.",
+        "button": "Medisinsk oppfølging"
+      }
+    },
+    "questions": {
+      "title": "Lurer du på noe?",
+      "faq": {
+        "title": "Ofte stilte spørsmål",
+        "description": "....",
+        "button": "Ofte stilte spørsmål"
+      },
+      "experiences": {
+        "title": "Hvordan andre bruker løsningene",
+        "description": "Erferinger..",
+        "button": "Referanser Erfaringer"
+      },
+      "contact": {
+        "title": "Kontakt oss",
+        "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+        "button": "Kontakt oss i dag"
+      }
+    }
   }
 }
 

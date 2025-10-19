@@ -2830,6 +2830,130 @@
         "button": "Contact us today"
       }
     }
+  },
+  "vaktrommet": {
+    "hero": {
+      "title": "Control Room - Private",
+      "description": "We call our cloud solution the control room, because that's what it is. The control room can be offered with nurses and doctors who help you take care of your loved ones, or you can choose a solution where you monitor the user yourself. We describe the alternative solutions more fully below."
+    },
+    "serviceOptions": {
+      "title": "How do you want to take care?",
+      "subtitle": "Self-effort or connected alarm center",
+      "card1": {
+        "title": "Control Room Private - safety in your own home",
+        "description": "Control Room Private makes it easy to set up a solution where you can monitor your loved ones yourself. With an appropriate number of sensors, the system can monitor various situations in the home and automatically alert you if something unexpected happens.",
+        "button": "More info for self-effort"
+      },
+      "card2": {
+        "title": "Alarm center - when self-effort is not enough",
+        "description": "Self-effort is not always possible - either due to work situation, distance or other practical limitations. By connecting the system to an alarm center, you can be sure that your loved ones are monitored around the clock. You still have full access to the system via smartphone and PC, and can follow along when it suits you.",
+        "button": "Our alarm center"
+      },
+      "card3": {
+        "title": "Professional follow-up - together with Salub",
+        "description": "In collaboration with our partner Salubi, we offer a unique solution where your loved ones are connected to a control center staffed by nurses and doctors. You receive medical follow-up around the clock, with daily or agreed-upon evaluation of health data. The service is proactive and particularly well-suited for individuals with changes in their health status.",
+        "button": "Extended follow-up"
+      }
+    },
+    "monitoring": {
+      "mobile": {
+        "title": "You easily follow along from mobile devices",
+        "description": "Install our app on your phone and you can follow your loved ones whenever it suits you. In an alarm situation such as a fall, you get both an alarm and a picture of the situation if you have our security camera installed."
+      },
+      "pc": {
+        "title": "Full control from PC",
+        "description": "From PC you get full access to all functions in the control room. Here all alarms are set, where alarms should be sent, etc."
+      }
+    },
+    "sensors": {
+      "title": "Sensors you can connect to the control center",
+      "card1": {
+        "description": "Concern about falls in the bathroom, on the stairs or in the bedroom? Our discreet fall sensors automatically detect falls and send immediate alerts to you or healthcare personnel.",
+        "button": "Go to safety and fall prevention"
+      },
+      "card2": {
+        "description": "Solutions for alarm and communication include alerts for sudden illness, two-way communication with video, and geofence functions that give you peace of mind when your loved ones are home or out.",
+        "button": "Alarm buttons and quick alerts"
+      },
+      "card3": {
+        "description": "Monitoring for heart problems, diabetes and regular measurements of breathing, blood pressure, sleep, blood sugar, body temperature and oxygen saturation. Automatic alerts for deviations.",
+        "button": "Medical follow-up"
+      }
+    },
+    "questions": {
+      "title": "Do you have questions?",
+      "faq": {
+        "title": "Frequently asked questions",
+        "description": "....",
+        "button": "Frequently asked questions"
+      },
+      "experiences": {
+        "title": "How others use the solutions",
+        "description": "Experiences..",
+        "button": "References Experiences"
+      },
+      "contact": {
+        "title": "Contact us",
+        "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+        "button": "Contact us today"
+      }
+    }
+  },
+  "kommuneEaseblinkProff": {
+    "hero": {
+      "title": "EaseBlink-Proff",
+      "description": "EaseBlink-proff offers an extended service to doctors, hospitals and healthcare personnel. Read more about how we support e-consultation, medical@home and follow-up below."
+    },
+    "healthcareHelper": {
+      "title": "Healthcare worker's helper",
+      "description1": "For healthcare personnel working in home care services, it can be crucial to get a medical assessment quickly. By digitally connecting a doctor during a home visit, the healthcare worker can get support to make the right decisions on the spot.",
+      "description2": "This can range from assessing wounds, infections, or changes in the patient's general condition. It provides increased safety for both patient and healthcare personnel, and contributes to better and more precise treatment.",
+      "description3": "With our solution, the doctor has access to both historical data and real-time data."
+    },
+    "eConsultation": {
+      "title": "E-consultation taken to a new level",
+      "description1": "Our e-consultation solution is integrated with our medical database solution. This means that the doctor has access to both real-time data and historical measurements. Via the sensors we install in the home, the doctor can monitor the heart, breathing, temperature, heart variations and much more.",
+      "description2": "The solution also provides the opportunity to invite family, hospitals or specialists into the consultation. The solution is undergoing MDR certification with a target approval by the end of 2026."
+    },
+    "medicalHome": {
+      "title": "medical@home",
+      "description1": "Medical@Home is a new way of thinking about health – where advanced technology meets everyday comfort. It's about giving people the opportunity to live safely and independently at home, while their health is continuously and discreetly monitored.",
+      "description2": "This is part of the future's demands for efficiency in healthcare and can reduce hospital stays. The solution uses medical sensors that perform automatic NEWS.",
+      "description3": "The solution is undergoing MDR certification with a target approval by the end of 2026."
+    },
+    "combineSolutions": {
+      "title": "Combine with more of our solutions",
+      "card1": {
+        "description": "Protection for falls in the bathroom. Does someone need monitoring? Our discreet fall sensors automatically detect falls and send alerts. We are there for you, whether you are at home or out.",
+        "button": "Give to safety and feeling"
+      },
+      "card2": {
+        "description": "Solutions for alarm and communication include alerts for sudden illness, two-way communication with video, and specific functions that give you peace of mind when your loved ones are home or out.",
+        "button": "Alarm buttons and quick alerts"
+      },
+      "card3": {
+        "description": "Monitoring for heart problems, diabetes and regular measurements of pulse, blood pressure, weight, blood sugar, body temperature and oxygen saturation. Automatic alerts for deviations.",
+        "button": "Medical follow-up"
+      }
+    },
+    "questions": {
+      "title": "Do you have questions?",
+      "faq": {
+        "title": "Frequently asked questions",
+        "description": "....",
+        "button": "Frequently asked questions"
+      },
+      "experiences": {
+        "title": "How others use the solutions",
+        "description": "Experiences..",
+        "button": "References Experiences"
+      },
+      "contact": {
+        "title": "Contact us",
+        "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+        "button": "Contact us today"
+      }
+    }
   }
 }
 

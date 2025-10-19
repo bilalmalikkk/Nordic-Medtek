@@ -51,6 +51,8 @@ import FAQ from './pages/FAQ'
 import EaseBlink1 from './pages/EaseBlink1'
 import EaseBlink2 from './pages/EaseBlink2'
 import EaseBlink3 from './pages/EaseBlink3'
+import KommuneEaseblinkProff from './pages/Kommune-easeblink-proff'
+import Vaktrommet from './pages/Vaktrommet'
 
 function App() {
   return (
@@ -106,6 +108,8 @@ function App() {
           <Route path="/easeblink1" element={<EaseBlink1 />} />
           <Route path="/easeblink2" element={<EaseBlink2 />} />
           <Route path="/easeblink3" element={<EaseBlink3 />} />
+          <Route path="/kommune-easeblink-proff" element={<KommuneEaseblinkProff />} />
+          <Route path="/vaktrommet" element={<Vaktrommet />} />
         </Routes>
       </main>
     </div>
