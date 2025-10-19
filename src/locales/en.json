@@ -2472,6 +2472,30 @@
       "directNotification": {
         "title": "Direct notification",
         "description": "Alerts to healthcare personnel's duty phones are clear and easy to understand."
+      },
+      "alarmButton": {
+        "title": "Alarm button",
+        "description": "detects falls automatically, even when the user is unable to press the alarm button."
+      },
+      "easeblinkPro": {
+        "title": "easeBlink-pro",
+        "description": "supports e-consultation and medica@home"
+      },
+      "automaticNews": {
+        "title": "Automatic NEWS",
+        "description": "If the user has a selection of our sensors, the solution can automatically generate NEWS."
+      },
+      "automaticTrend": {
+        "title": "Automatic trend analysis",
+        "description": "trend monitoring of medical measurements with automatic alarm"
+      },
+      "seamlessIntegration": {
+        "title": "Seamless integration",
+        "description": "Our solution integrates seamlessly with existing systems and workflows."
+      },
+      "easyInstallation": {
+        "title": "Easy installation",
+        "description": "The sensors are easily installed and require minimal technical expertise."
       }
     },
     "howWeSolve": {

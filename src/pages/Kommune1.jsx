@@ -13,6 +13,11 @@ import sensorDetectyImage from '../assets/sensor detecty.png'
 import stonksImage from '../assets/stonks.png'
 import calmShiftImage from '../assets/calm shift (2).png'
 import videoCallImage from '../assets/video call.png'
+import fallIllustrateImage from '../assets/fall_illustrate.png'
+import medicalHomeImage from '../assets/medical@home.png'
+import newsImage from '../assets/NEWS.png'
+import trendsImage from '../assets/trends).png'
+import vaktrommetImage from '../assets/vaktrommet.png'
 
 export default function Kommune1() {
   const { t } = useTranslation()
@@ -65,9 +70,9 @@ export default function Kommune1() {
     <div className="municipality-page min-h-screen w-full">
       <div className="w-full">
       {/* Top Menu Cards */}
-      <section className="py-3 bg-gray-50 w-full border-b border-gray-200">
-        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-3">
+      <section className="py-3 w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-lg">
+          <div className="flex flex-wrap justify-center gap-3 py-2">
             <Link to="/products" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
               <span className="text-sm font-medium text-gray-900">{t('kommune1.submenu.products')}</span>
             </Link>
@@ -89,7 +94,7 @@ export default function Kommune1() {
 
       {/* Hero Section - Updated for Kommune1 */}
       <section className="py-12 w-full relative overflow-hidden bg-white">
-        <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start">
             {/* Left Side - Main Content */}
             <div className="space-y-5">
@@ -158,7 +163,7 @@ export default function Kommune1() {
 
       {/* CTA Options Section */}
       <section className="py-16 w-full bg-white">
-        <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12">
             {t('kommune1.ctaOptions.title')}
           </h2>
@@ -207,9 +212,9 @@ export default function Kommune1() {
       </section>
 
       {/* Solution Explanation Section */}
-      <section className="py-20 w-full bg-gray-50">
-        <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-4">
+      <section className="py-20 w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-lg">
+          <div className="text-center mb-4 pt-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t('kommune1.solutionExplanation.title')}
             </h2>
@@ -218,10 +223,10 @@ export default function Kommune1() {
             </p>
           </div>
           
-          {/* Top Row - 2 large cards */}
-          <div className="grid md:grid-cols-2 gap-8 mb-8 mt-12">
-            {/* Smart Sensors Card */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+          {/* Two Column Layout with Parent Cards */}
+          <div className="grid md:grid-cols-2 gap-8 mt-12 pb-12 items-stretch">
+            {/* Left Column - Smart Sensors Parent Card */}
+            <div className="bg-gradient-to-br from-yellow-50 to-green-50 rounded-2xl p-8 shadow-lg flex flex-col">
               <div className="flex justify-center mb-6">
                 <img 
                   src={sensors1Image} 
@@ -229,16 +234,87 @@ export default function Kommune1() {
                   className="w-full h-64 object-contain rounded-xl"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
                 {t('kommune1.solutionExplanation.smartSensors.title')}
               </h3>
-              <p className="text-base text-gray-600 leading-relaxed text-center">
+              <p className="text-base text-gray-700 leading-relaxed text-center mb-6">
                 {t('kommune1.solutionExplanation.smartSensors.description')}
               </p>
+              
+              {/* Child Cards Grid 2x2 - Bottom Aligned */}
+              <div className="grid grid-cols-2 gap-4 mt-auto">
+                {/* Fall Sensors */}
+                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                  <div className="flex justify-center mb-3">
+                    <img 
+                      src={fallIllustrateImage} 
+                      alt="Fallsensorer" 
+                      className="w-40 h-40 object-contain"
+                    />
+                  </div>
+                  <h4 className="text-sm font-bold text-gray-900 mb-2">
+                    {t('kommune1.solutionExplanation.fallSensors.title')}
+                  </h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {t('kommune1.solutionExplanation.fallSensors.description')}
+                  </p>
+                </div>
+
+                {/* Health Sensors */}
+                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                  <div className="flex justify-center mb-3">
+                    <img 
+                      src={recievesPingImage} 
+                      alt="Helsesensorer" 
+                      className="w-40 h-40 object-contain"
+                    />
+                  </div>
+                  <h4 className="text-sm font-bold text-gray-900 mb-2">
+                    {t('kommune1.solutionExplanation.healthSensors.title')}
+                  </h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {t('kommune1.solutionExplanation.healthSensors.description')}
+                  </p>
+                </div>
+
+                {/* Alarm Button */}
+                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                  <div className="flex justify-center mb-3">
+                    <img 
+                      src={sensorImage} 
+                      alt="Alarm knapp" 
+                      className="w-40 h-40 object-contain"
+                    />
+                  </div>
+                  <h4 className="text-sm font-bold text-gray-900 mb-2">
+                    {t('kommune1.solutionExplanation.alarmButton.title')}
+                  </h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {t('kommune1.solutionExplanation.alarmButton.description')}
+                  </p>
+                </div>
+
+                {/* EaseBlink Pro */}
+                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                  <div className="flex justify-center mb-3">
+                    <img 
+                      src={medicalHomeImage} 
+                      alt="easeBlink-proff" 
+                      className="w-40 h-40 object-contain"
+                    />
+                  </div>
+                  <h4 className="text-sm font-bold text-gray-900 mb-2">
+                    {t('kommune1.solutionExplanation.easeblinkPro.title')}
+                  </h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {t('kommune1.solutionExplanation.easeblinkPro.description')}
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {/* Control Room Card */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+            {/* Right Column - Control Room Parent Card */}
+            <div className="bg-gradient-to-br from-yellow-50 to-green-50 rounded-2xl p-8 shadow-lg flex flex-col">
               <div className="flex justify-center mb-6">
                 <img 
                   src={presentation2Image} 
@@ -246,83 +322,83 @@ export default function Kommune1() {
                   className="w-full h-64 object-contain rounded-xl"
                 />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
                 {t('kommune1.solutionExplanation.controlRoom.title')}
               </h3>
-              <p className="text-base text-gray-600 leading-relaxed text-center">
+              <p className="text-base text-gray-700 leading-relaxed text-center mb-6">
                 {t('kommune1.solutionExplanation.controlRoom.description')}
               </p>
-            </div>
-          </div>
+              
+              {/* Child Cards Grid 2x2 - Bottom Aligned */}
+              <div className="grid grid-cols-2 gap-4 mt-auto">
+                {/* Central Overview */}
+                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                  <div className="flex justify-center mb-3">
+                    <img 
+                      src={sensorsDataImage} 
+                      alt="Sentral oversikt" 
+                      className="w-40 h-40 object-contain"
+                    />
+                  </div>
+                  <h4 className="text-sm font-bold text-gray-900 mb-2">
+                    {t('kommune1.solutionExplanation.centralOverview.title')}
+                  </h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {t('kommune1.solutionExplanation.centralOverview.description')}
+                  </p>
+                </div>
 
-          {/* Bottom Row - 4 small cards */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {/* Fall Sensors */}
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 text-center">
-              <div className="flex justify-center mb-4">
-                <img 
-                  src={sensorImage} 
-                  alt="Fallsensorer" 
-                  className="w-32 h-32 object-contain"
-                />
-              </div>
-              <h4 className="text-base font-bold text-gray-900 mb-2">
-                {t('kommune1.solutionExplanation.fallSensors.title')}
-              </h4>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {t('kommune1.solutionExplanation.fallSensors.description')}
-              </p>
-            </div>
+                {/* Direct Notification */}
+                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                  <div className="flex justify-center mb-3">
+                    <img 
+                      src={notificationImage} 
+                      alt="Direkte varsel" 
+                      className="w-40 h-40 object-contain"
+                    />
+                  </div>
+                  <h4 className="text-sm font-bold text-gray-900 mb-2">
+                    {t('kommune1.solutionExplanation.directNotification.title')}
+                  </h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {t('kommune1.solutionExplanation.directNotification.description')}
+                  </p>
+                </div>
 
-            {/* Health Sensors */}
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 text-center">
-              <div className="flex justify-center mb-4">
-                <img 
-                  src={recievesPingImage} 
-                  alt="Helsesensorer" 
-                  className="w-32 h-32 object-contain"
-                />
-              </div>
-              <h4 className="text-base font-bold text-gray-900 mb-2">
-                {t('kommune1.solutionExplanation.healthSensors.title')}
-              </h4>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {t('kommune1.solutionExplanation.healthSensors.description')}
-              </p>
-            </div>
+                {/* Automatic NEWS */}
+                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                  <div className="flex justify-center mb-3">
+                    <img 
+                      src={newsImage} 
+                      alt="Automatisk NEWS" 
+                      className="w-40 h-40 object-contain"
+                    />
+                  </div>
+                  <h4 className="text-sm font-bold text-gray-900 mb-2">
+                    {t('kommune1.solutionExplanation.automaticNews.title')}
+                  </h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {t('kommune1.solutionExplanation.automaticNews.description')}
+                  </p>
+                </div>
 
-            {/* Central Overview */}
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 text-center">
-              <div className="flex justify-center mb-4">
-                <img 
-                  src={sensorsDataImage} 
-                  alt="Sentral oversikt" 
-                  className="w-32 h-32 object-contain"
-                />
+                {/* Automatic Trend Analysis */}
+                <div className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center">
+                  <div className="flex justify-center mb-3">
+                    <img 
+                      src={trendsImage} 
+                      alt="Automatisk trend analyser" 
+                      className="w-40 h-40 object-contain"
+                    />
+                  </div>
+                  <h4 className="text-sm font-bold text-gray-900 mb-2">
+                    {t('kommune1.solutionExplanation.automaticTrend.title')}
+                  </h4>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    {t('kommune1.solutionExplanation.automaticTrend.description')}
+                  </p>
+                </div>
               </div>
-              <h4 className="text-base font-bold text-gray-900 mb-2">
-                {t('kommune1.solutionExplanation.centralOverview.title')}
-              </h4>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {t('kommune1.solutionExplanation.centralOverview.description')}
-              </p>
-            </div>
-
-            {/* Direct Notification */}
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 text-center">
-              <div className="flex justify-center mb-4">
-                <img 
-                  src={notificationImage} 
-                  alt="Direkte varsel" 
-                  className="w-32 h-32 object-contain"
-                />
-              </div>
-              <h4 className="text-base font-bold text-gray-900 mb-2">
-                {t('kommune1.solutionExplanation.directNotification.title')}
-              </h4>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {t('kommune1.solutionExplanation.directNotification.description')}
-              </p>
             </div>
           </div>
         </div>
@@ -330,49 +406,21 @@ export default function Kommune1() {
 
       {/* How We Solve This Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t('kommune1.howWeSolve.title')}
             </h2>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-10">
-            {/* Seamless Integration Card */}
-            <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100">
-              <div className="flex justify-center mb-6">
-                <img 
-                  src={connectedSystemImage} 
-                  alt="Sømløs integrasjon" 
-                  className="w-full max-w-md h-64 object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                {t('kommune1.howWeSolve.seamlessIntegration.title')}
-              </h3>
-              <p className="text-base text-gray-700 leading-relaxed text-center mb-4">
-                {t('kommune1.howWeSolve.seamlessIntegration.description')}
-              </p>
-              <div className="text-center">
-                <Link 
-                  to="/it-welfare-technology"
-                  className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors group"
-                >
-                  {t('kommune1.howWeSolve.seamlessIntegration.link')}
-                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-
+          <div className="grid md:grid-cols-3 gap-8">
             {/* Easy Installation Card */}
-            <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100">
+            <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100 flex flex-col">
               <div className="flex justify-center mb-6">
                 <img 
                   src={easeOfInstallationImage} 
                   alt="Sensorene installeres enkelt" 
-                  className="w-full max-w-md h-64 object-contain"
+                  className="w-full max-w-md h-80 object-contain"
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
@@ -381,12 +429,68 @@ export default function Kommune1() {
               <p className="text-base text-gray-700 leading-relaxed text-center mb-4">
                 {t('kommune1.howWeSolve.easyInstallation.description')}
               </p>
-              <div className="text-center">
+              <div className="text-center mt-auto">
                 <Link 
                   to="/products"
                   className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors group"
                 >
                   {t('kommune1.howWeSolve.easyInstallation.link')}
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+
+            {/* Control Center Card */}
+            <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100 flex flex-col">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={vaktrommetImage} 
+                  alt="Vaktsentralen tar imot data" 
+                  className="w-full max-w-md h-80 object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                Vaktsentralen tar imot data
+              </h3>
+              <p className="text-base text-gray-700 leading-relaxed text-center mb-4">
+                Når en sensor aktiveres, sender den data til vaktsentralen, der den behandles med tidsbesparende funksjoner.
+              </p>
+              <div className="text-center mt-auto">
+                <Link 
+                  to="/products"
+                  className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors group"
+                >
+                  Produkter
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+
+            {/* Seamless Integration Card */}
+            <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-orange-100 flex flex-col">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={connectedSystemImage} 
+                  alt="Sømløs integrasjon" 
+                  className="w-full max-w-md h-80 object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                {t('kommune1.howWeSolve.seamlessIntegration.title')}
+              </h3>
+              <p className="text-base text-gray-700 leading-relaxed text-center mb-4">
+                {t('kommune1.howWeSolve.seamlessIntegration.description')}
+              </p>
+              <div className="text-center mt-auto">
+                <Link 
+                  to="/it-welfare-technology"
+                  className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors group"
+                >
+                  {t('kommune1.howWeSolve.seamlessIntegration.link')}
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -399,7 +503,7 @@ export default function Kommune1() {
 
       {/* Case Studies and References Section */}
       <section className="py-20 w-full bg-gradient-to-br from-gray-50 to-white">
-        <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t('kommune1.caseStudies.title')}
@@ -474,7 +578,7 @@ export default function Kommune1() {
 
       {/* Community Benefits Section */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t('kommune1.communityBenefits.title')}
@@ -492,7 +596,7 @@ export default function Kommune1() {
                 <img 
                   src={sensorDetectyImage} 
                   alt="Færre sykehusinnleggelser" 
-                  className="w-full max-w-xs h-48 object-contain rounded-xl"
+                  className="w-full max-w-xs h-64 object-contain rounded-xl"
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
@@ -509,7 +613,7 @@ export default function Kommune1() {
                 <img 
                   src={stonksImage} 
                   alt="Lavere kostnader" 
-                  className="w-full max-w-xs h-48 object-contain rounded-xl"
+                  className="w-full max-w-xs h-64 object-contain rounded-xl"
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
@@ -526,7 +630,7 @@ export default function Kommune1() {
                 <img 
                   src={calmShiftImage} 
                   alt="Bedre arbeidsvilkår" 
-                  className="w-full max-w-xs h-48 object-contain rounded-xl"
+                  className="w-full max-w-xs h-64 object-contain rounded-xl"
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
@@ -543,7 +647,7 @@ export default function Kommune1() {
                 <img 
                   src={videoCallImage} 
                   alt="Trygghet og verdighet" 
-                  className="w-full max-w-xs h-48 object-contain rounded-xl"
+                  className="w-full max-w-xs h-64 object-contain rounded-xl"
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
@@ -572,7 +676,7 @@ export default function Kommune1() {
 
       {/* Final CTA Section - Lurer du på noe? */}
       <section className="py-20 w-full bg-white">
-        <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Lurer du på noe?

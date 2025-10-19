@@ -2495,6 +2495,30 @@
       "directNotification": {
         "title": "Direkte varsel",
         "description": "Varsler til helsepersonellets vakttelefoner er tydelige og enkle å forstå."
+      },
+      "alarmButton": {
+        "title": "Alarm knapp",
+        "description": "oppdager fall automatisk, også når brukeren ikke klarer å trykke på alarmknappen."
+      },
+      "easeblinkPro": {
+        "title": "easeBlink-proff",
+        "description": "støtter e-konsultasjon og medica@home"
+      },
+      "automaticNews": {
+        "title": "Automatisk NEWS",
+        "description": "Har brukeren et utvalg av våre sensorer kan løsning generere NEWS automatisk."
+      },
+      "automaticTrend": {
+        "title": "Automatisk trend analyser",
+        "description": "trend overvåking på medisinske målinger med automatisk alarm"
+      },
+      "seamlessIntegration": {
+        "title": "Sømløs integrasjon",
+        "description": "Vår løsning integreres sømløst med eksisterende systemer og arbeidsflyt."
+      },
+      "easyInstallation": {
+        "title": "Enkel installasjon",
+        "description": "Sensorene installeres enkelt og krever minimal teknisk ekspertise."
       }
     },
     "howWeSolve": {
