@@ -30,6 +30,20 @@ export default function EaseBlink1() {
           </div>
         </div>
 
+        {/* Hero Section */}
+        <section id="challenges" className="py-16 md:py-24 w-full bg-white">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Kontakt med familien
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
+                EaseBlink muligjør kontakt med familie og venner med video, og dere kan dele bilder med minner, feiringer og hverdagsøyeblikk.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Top Menu Cards */}
         <section className="py-4 bg-gray-50 w-full border-b border-gray-200">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,20 +57,6 @@ export default function EaseBlink1() {
               <Link to="/pricing" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
                 <span className="text-sm font-medium text-gray-900">Pris</span>
               </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Hero Section */}
-        <section id="challenges" className="py-16 md:py-24 w-full bg-white">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                Kontakt med familien
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-700 leading-relaxed">
-                EaseBlink muligjør kontakt med familie og venner med video, og dere kan dele bilder med minner, feiringer og hverdagsøyeblikk.
-              </p>
             </div>
           </div>
         </section>
