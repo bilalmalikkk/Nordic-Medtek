@@ -12,7 +12,7 @@ export default function EaseBlink2() {
       <div className="w-full">
         {/* Back Button */}
         <div className="w-full bg-gray-50 border-b border-gray-200">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-2">
             <Link 
               to="/easeblink1"
               className="inline-flex items-center text-gray-700 hover:text-teal-600 transition-colors group"
@@ -31,11 +31,11 @@ export default function EaseBlink2() {
         </div>
 
         {/* First Section - Utfordringer vi ønsker løser */}
-        <section className="py-16 md:py-24 w-full bg-white">
+        <section className="pt-8 pb-16 md:pt-12 md:pb-24 w-full bg-white">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
+            <div className="flex flex-col lg:flex-row gap-6 items-center">
               {/* Left side - Text content */}
-              <div className="space-y-6">
+              <div className="lg:w-3/5 space-y-6">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                   {t('easeblink2.section1.title')}
                 </h1>
@@ -50,11 +50,11 @@ export default function EaseBlink2() {
               </div>
               
               {/* Right side - Image */}
-              <div className="flex justify-center lg:justify-end">
+              <div className="lg:w-2/5 flex justify-center">
                 <img 
                   src={familyTablet} 
                   alt="Family video call on tablet" 
-                  className="w-full max-w-lg h-auto rounded-lg"
+                  className="w-full max-w-md h-auto rounded-lg"
                 />
               </div>
             </div>
@@ -64,9 +64,9 @@ export default function EaseBlink2() {
         {/* Second Section - Samhørighet */}
         <section className="py-16 w-full bg-white">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
+            <div className="flex flex-col lg:flex-row gap-6 items-center">
               {/* Left side - Image */}
-              <div className="flex justify-center lg:justify-start">
+              <div className="lg:w-2/5 flex justify-center">
                 <img 
                   src={videoCollaboration} 
                   alt="Video collaboration showing family connection" 
@@ -75,7 +75,7 @@ export default function EaseBlink2() {
               </div>
               
               {/* Right side - Text content */}
-              <div className="space-y-6">
+              <div className="lg:w-3/5 space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                   {t('easeblink2.section2.title')}
                 </h2>
@@ -91,9 +91,9 @@ export default function EaseBlink2() {
         {/* Third Section - Glede i hverdagen */}
         <section className="py-16 w-full bg-gray-50">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
+            <div className="flex flex-col lg:flex-row gap-6 items-center">
               {/* Left side - Text content */}
-              <div className="space-y-6">
+              <div className="lg:w-3/5 space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                   {t('easeblink2.section3.title')}
                 </h2>
@@ -104,11 +104,11 @@ export default function EaseBlink2() {
               </div>
               
               {/* Right side - Image */}
-              <div className="flex justify-center lg:justify-end">
+              <div className="lg:w-2/5 flex justify-center">
                 <img 
                   src={bildeKarusell} 
                   alt="Elderly woman holding tablet showing family photo carousel" 
-                  className="w-full max-w-sm h-auto"
+                  className="w-full max-w-xs h-auto"
                 />
               </div>
             </div>

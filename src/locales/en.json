@@ -2646,30 +2646,166 @@
     }
   },
   "easeblink1": {
-    "backButton": "Back to home page",
+    "backButton": "Back",
     "title": "Contact with family",
     "description": "EaseBlink enables contact with family and friends through video, and you can share pictures with memories, celebrations and everyday moments.",
-    "isolationTitle": "For isolation?",
-    "isolationDescription": "Our video solution easeBlink enables contact with family and friends, see their faces and hear their voices in real-time. With EaseBlink you can share pictures with memories, celebrations and everyday moments.",
-    "ctaButton": "Video contact and picture sharing",
-    "featuresTitle": "Why choose EaseBlink?",
-    "featuresDescription": "A simple and secure way to stay in touch with your loved ones.",
-    "feature1": {
-      "title": "Easy video contact",
-      "description": "Start video calls with just one click - no complicated settings."
+    "menu": {
+      "challenges": "Challenges we solve",
+      "howItWorks": "How it works",
+      "pricing": "Pricing"
     },
-    "feature2": {
-      "title": "Picture sharing",
-      "description": "Share memories, celebrations and everyday moments with family."
+    "isolationTitle": "Avoid isolation",
+    "isolationDescription": "Many elderly people, especially those with limited mobility, experience isolation. Our video solution easeBlink allows them to maintain contact with family and friends, see their faces and hear their voices in real-time. This creates a sense of presence and community that traditional phones and text messages cannot replace. EaseBlink also has photo sharing in the form of a digital carousel that makes it possible to share memories, celebrations and everyday moments. This brings joy and provides conversation topics.",
+    "howItWorksTitle": "How does easeBlink work?",
+    "howItWorksDescription1": "A screen with large user-friendly buttons that allow mom or dad to receive pictures and messages from the family, and easily have video calls.",
+    "howItWorksDescription2": "The solution has a very simple user interface, making it accessible to elderly people with varying degrees of cognitive impairment.",
+    "pricingTitle": "What does it cost?",
+    "pricingDescription": "We offer both purchase and rental ....",
+    "pricingButton": "Order rental or purchase",
+    "pricingModal": {
+      "title": "Pricing Information",
+      "description": "Our flexible rental arrangement provides a low threshold for using a modern and effective solution. Our goal is to be leading in both price and functionality, and therefore we are now conducting a thorough evaluation of the market. This ensures that our solution is correctly priced and strategically positioned - to your advantage as a customer. Prices are therefore not yet launched, but will be available as soon as we have quality assured that they reflect the value we want to offer",
+      "closeButton": "Close"
     },
-    "feature3": {
-      "title": "Safe and secure",
-      "description": "All conversations and pictures are encrypted and stored securely."
+    "combineSolutionsTitle": "Combine with more of our solutions",
+    "combineSolutions": {
+      "card1": {
+        "description": "Concern about falls in your home. Wireless or wired fall sensors or pressure sensors combined detect absence. When sensors detect alerts, you will be notified on your mobile app.",
+        "button": "See safety and fall prevention"
+      },
+      "card2": {
+        "description": "Solutions for alarm or communication (includes alerts for sudden illness, two-way communication with your loved ones, SOS button for night safety when at home or out with Laser Alarm together with GPS",
+        "button": "Alarm buttons and quick alerts"
+      },
+      "card3": {
+        "description": "Monitoring for heart problems, diabetes and regular measurements of breathing, blood pressure, oxygen saturation. Combined solution for safety with automatic alerts to you as a relative. This can be used alone or together with other solutions.",
+        "button": "Medical follow-up"
+      }
     },
-    "ctaTitle": "Ready to get started?",
-    "ctaDescription": "Get help setting up EaseBlink for your family today.",
-    "contactButton": "Contact us",
-    "demoButton": "Watch demo"
+    "questionsTitle": "Do you have questions?",
+    "questions": {
+      "faq": {
+        "title": "Frequently asked questions",
+        "description": ".....",
+        "button": "Frequently asked questions"
+      },
+      "experiences": {
+        "title": "How others use the solutions",
+        "description": "Experiences..",
+        "button": "References Experiences"
+      },
+      "contact": {
+        "title": "Contact us",
+        "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+        "button": "Contact us today"
+      }
+    }
+  },
+  "easeblink2": {
+    "backButton": "Back to easeBlink",
+    "section1": {
+      "title": "Challenges we want to solve",
+      "description1": "many elderly people feel loneliness to a greater or lesser extent. EaseBlink is developed to reduce loneliness.",
+      "description2": "In addition, the solution enables video consultation with GP, health services and hospitals"
+    },
+    "section2": {
+      "title": "Togetherness",
+      "description": "Many elderly people, especially those with limited mobility, experience isolation. Through video calls, the elderly can maintain contact with family and friends, see their faces and hear their voices in real-time. This provides a sense of presence and community that phone and text messages cannot replace."
+    },
+    "section3": {
+      "title": "Joy in everyday life",
+      "description": "When the system is not used for video calls with doctor or family, easeBlink will perform automatic photo sharing in the form of a digital carousel - which makes it possible to share memories, celebrations and everyday moments, which can bring joy and conversation topics in everyday life. This solution is very easy to use so that elderly people with varying degrees of cognitive impairment can use the solution"
+    },
+    "combineSolutions": {
+      "title": "Combine with more of our solutions",
+      "card1": {
+        "description": "Concern about falls in your home. Our wireless fall sensors detect falls and send alerts directly to your mobile app.",
+        "button": "Go to safety and fall prevention"
+      },
+      "card2": {
+        "description": "Solutions for alarm and communication include alerts for sudden illness, two-way communication with your loved ones and SOS button functions that give you peace of mind when your loved ones are at home or out.",
+        "button": "Alarm buttons and quick alerts"
+      },
+      "card3": {
+        "description": "Monitoring for heart problems, diabetes and regular measurements of breathing, blood pressure, oxygen saturation and temperature measurement. Automatic alerts for deviations.",
+        "button": "Medical follow-up"
+      }
+    },
+    "questions": {
+      "title": "Do you have questions?",
+      "faq": {
+        "title": "Frequently asked questions",
+        "description": ".....",
+        "button": "Frequently asked questions"
+      },
+      "experiences": {
+        "title": "How others use the solutions",
+        "description": "Experiences..",
+        "button": "References Experiences"
+      },
+      "contact": {
+        "title": "Contact us",
+        "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+        "button": "Contact us today"
+      }
+    }
+  },
+  "easeblink3": {
+    "backButton": "Back to easeBlink",
+    "section1": {
+      "title": "How it works",
+      "description": "A user-friendly screen that displays photos, messages and video calls from invited relatives and healthcare staff. Everything is encrypted and secure."
+    },
+    "section2": {
+      "title": "Who can use easeBlink",
+      "description": "EaseBlink is designed for users who are not tech-savvy, or who do not have motor skills to operate computer screens. EaseBlink is in an encrypted and closed system, and it offers secure communication between healthcare, family and user."
+    },
+    "section3": {
+      "title": "Receiving calls is easy!",
+      "description": "Two large buttons make it easy to answer or reject a call. The system can be set up with auto-answer for selected users when the situation requires it, so that important calls are not missed"
+    },
+    "section4": {
+      "title": "Make a call",
+      "subtitle": "Easy from a contact list",
+      "description": "Select the person you want to call from a clear and large contact list. It's easy to find your way around and contacts can be managed by relatives so that the right people are always available."
+    },
+    "section5": {
+      "title": "Setup and maintenance",
+      "description": "Administration of which people have access to which users is determined in a user-friendly administration application. The home service or those who have access to use the system communicate with the user via tablets or smartphones."
+    },
+    "combineSolutions": {
+      "title": "Combine with more of our solutions",
+      "card1": {
+        "description": "Concern about falls in your home. Our wireless fall sensors detect falls and send alerts directly to your mobile app.",
+        "button": "Go to safety and fall prevention"
+      },
+      "card2": {
+        "description": "Solutions for alarm and communication include alerts for sudden illness, two-way communication with your loved ones and SOS button functions that give you peace of mind when your loved ones are at home or out.",
+        "button": "Alarm buttons and quick alerts"
+      },
+      "card3": {
+        "description": "Monitoring for heart problems, diabetes and regular measurements of breathing, blood pressure, oxygen saturation and temperature measurement. Automatic alerts for deviations.",
+        "button": "Medical follow-up"
+      }
+    },
+    "questions": {
+      "title": "Do you have questions?",
+      "faq": {
+        "title": "Frequently asked questions",
+        "description": ".....",
+        "button": "Frequently asked questions"
+      },
+      "experiences": {
+        "title": "How others use the solutions",
+        "description": "Experiences..",
+        "button": "References Experiences"
+      },
+      "contact": {
+        "title": "Contact us",
+        "description": "We are here to answer questions and help you choose the right solution for your loved ones.",
+        "button": "Contact us today"
+      }
+    }
   }
 }
 

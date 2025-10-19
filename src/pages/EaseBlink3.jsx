@@ -14,7 +14,7 @@ export default function EaseBlink3() {
       <div className="w-full">
         {/* Back Button */}
         <div className="w-full bg-gray-50 border-b border-gray-200">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-2">
             <Link 
               to="/easeblink1"
               className="inline-flex items-center text-gray-700 hover:text-teal-600 transition-colors group"
@@ -33,11 +33,11 @@ export default function EaseBlink3() {
         </div>
 
         {/* First Section - Hvordan virker det */}
-        <section className="py-16 md:py-24 w-full bg-white">
+        <section className="pt-8 pb-16 md:pt-12 md:pb-24 w-full bg-white">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
+            <div className="flex flex-col lg:flex-row gap-6 items-center">
               {/* Left side - Text content */}
-              <div className="space-y-6">
+              <div className="lg:w-3/5 space-y-6">
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                   {t('easeblink3.section1.title')}
                 </h1>
@@ -48,7 +48,7 @@ export default function EaseBlink3() {
               </div>
               
               {/* Right side - Image */}
-              <div className="flex justify-center lg:justify-end">
+              <div className="lg:w-2/5 flex justify-center">
                 <img 
                   src={howItWorks} 
                   alt="How it works diagram showing tools and ideas" 
@@ -62,9 +62,9 @@ export default function EaseBlink3() {
         {/* Second Section - Hvem kan bruke easeBlink */}
         <section className="py-16 w-full bg-gray-50">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
+            <div className="flex flex-col lg:flex-row gap-6 items-center">
               {/* Left side - Image */}
-              <div className="flex justify-center lg:justify-start">
+              <div className="lg:w-2/5 flex justify-center">
                 <img 
                   src={eldreDame} 
                   alt="Elderly woman using tablet on couch" 
@@ -73,7 +73,7 @@ export default function EaseBlink3() {
               </div>
               
               {/* Right side - Text content */}
-              <div className="space-y-6">
+              <div className="lg:w-3/5 space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                   {t('easeblink3.section2.title')}
                 </h2>
@@ -89,9 +89,9 @@ export default function EaseBlink3() {
         {/* Third Section - Motta samtale er enkelt */}
         <section className="py-16 w-full bg-white">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
+            <div className="flex flex-col lg:flex-row gap-6 items-center">
               {/* Left side - Text content */}
-              <div className="space-y-6">
+              <div className="lg:w-3/5 space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                   {t('easeblink3.section3.title')}
                 </h2>
@@ -102,7 +102,7 @@ export default function EaseBlink3() {
               </div>
               
               {/* Right side - Image */}
-              <div className="flex justify-center lg:justify-end">
+              <div className="lg:w-2/5 flex justify-center">
                 <img 
                   src={tabletCalling} 
                   alt="Tablet showing incoming call with accept and reject buttons" 
@@ -116,9 +116,9 @@ export default function EaseBlink3() {
         {/* Fourth Section - Opprett samtale */}
         <section className="py-16 w-full bg-gray-50">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
+            <div className="flex flex-col lg:flex-row gap-6 items-center">
               {/* Left side - Image */}
-              <div className="flex justify-center lg:justify-start">
+              <div className="lg:w-2/5 flex justify-center">
                 <img 
                   src={easeBlinkCall} 
                   alt="Contact list showing family members" 
@@ -127,7 +127,7 @@ export default function EaseBlink3() {
               </div>
               
               {/* Right side - Text content */}
-              <div className="space-y-6">
+              <div className="lg:w-3/5 space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                   {t('easeblink3.section4.title')}
                 </h2>
@@ -147,9 +147,9 @@ export default function EaseBlink3() {
         {/* Fifth Section - Oppsett og vedlikehold */}
         <section className="py-16 w-full bg-white">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-6 items-center">
+            <div className="flex flex-col lg:flex-row gap-6 items-center">
               {/* Left side - Text content */}
-              <div className="space-y-6">
+              <div className="lg:w-3/5 space-y-6">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                   {t('easeblink3.section5.title')}
                 </h2>
@@ -160,7 +160,7 @@ export default function EaseBlink3() {
               </div>
               
               {/* Right side - Image */}
-              <div className="flex justify-center lg:justify-end">
+              <div className="lg:w-2/5 flex justify-center">
                 <img 
                   src={designer} 
                   alt="Contact management interface on computer screen" 

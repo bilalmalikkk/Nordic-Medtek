@@ -2668,27 +2668,57 @@
     "backButton": "Tilbake",
     "title": "Kontakt med familien",
     "description": "EaseBlink muligjør kontakt med familie og venner med video, og dere kan dele bilder med minner, feiringer og hverdagsøyeblikk.",
-    "isolationTitle": "For isolasjon?",
-    "isolationDescription": "Vår videoløsning easeBlink muligjør kontakt med familie og venner, se ansiktene deres og høre stemmene deres i samtid. Med EaseBlink kan dere dele bilder med minner, feiringer og hverdagsøyeblikk.",
-    "ctaButton": "Videokontakt og bildedeling",
-    "featuresTitle": "Hvorfor velge EaseBlink?",
-    "featuresDescription": "En enkel og trygg måte å holde kontakt med dine kjære på.",
-    "feature1": {
-      "title": "Enkel videokontakt",
-      "description": "Start videooppkall med bare ett trykk - ingen kompliserte innstillinger."
+    "menu": {
+      "challenges": "Utfordringene vi løser",
+      "howItWorks": "Hvordan det virker",
+      "pricing": "Pris"
     },
-    "feature2": {
-      "title": "Bildedeling",
-      "description": "Del minner, feiringer og hverdagsøyeblikk med familien."
+    "isolationTitle": "Unngå isolasjon",
+    "isolationDescription": "Mange eldre, spesielt de med begrenset mobilitet, opplever isolasjon. Vår videoløsning easeBlink lar dem opprettholde kontakt med familie og venner, se ansiktene deres og høre stemmene deres i sanntid. Dette skaper en følelse av tilstedeværelse og fellesskap som tradisjonelle telefoner og tekstmeldinger ikke kan erstatte. EaseBlink har også bildedeling i form av en digital karusell gjør det mulig å dele minner, feiringer og hverdagsøyeblikk. Dette bringer glede og gir samtaleemner.",
+    "howItWorksTitle": "Hvordan virker easeBlink?",
+    "howItWorksDescription1": "En skjerm med store brukervennlige knapper som gjør at mor eller far kan motta bilder og meldinger fra familien, og enkelt ha videosamtaler.",
+    "howItWorksDescription2": "Løsningen har et svært enkelt brukergrensesnitt, noe som gjør den tilgjengelig for eldre med varierende grader av kognitiv svekelse.",
+    "pricingTitle": "Hva koster det?",
+    "pricingDescription": "Vi tilbyr både kjøp og leie ....",
+    "pricingButton": "Bestill leie eller kjøp",
+    "pricingModal": {
+      "title": "Prisinformasjon",
+      "description": "Vår fleksible leieordning gir en lav terskel for å ta i bruk en moderne og effektiv løsning. Vi har som mål å være ledende på både pris og funksjonalitet, og derfor gjennomfører vi nå en grundig evaluering av markedet. Dette sikrer at vår løsning blir riktig priset og strategisk plassert – til fordel for deg som kunde. Prisene er derfor ikke lansert ennå, men vil bli tilgjengelige så snart vi har kvalitets-sikret at de gjenspeiler den verdien vi ønsker å tilby",
+      "closeButton": "Lukk"
     },
-    "feature3": {
-      "title": "Trygg og sikker",
-      "description": "Alle samtaler og bilder er kryptert og lagret sikkert."
+    "combineSolutionsTitle": "Kombiner med flere av våre løsninger",
+    "combineSolutions": {
+      "card1": {
+        "description": "Bekymring for fall i ditt hjem. Trådløse eller trådbaserte fallsensorer eller trykksensorer kombinert registrerer fravær. Når sensorer registrerer varslig bli du varslet på din mobilapp.",
+        "button": "Se til trygghet og fallsikring"
+      },
+      "card2": {
+        "description": "I pludskelige for alarm eller kommunikasjon (inkluderer varsling ved plutselig sykdom, tovels kommunikasjon med dine kjære, sos knapp på natt trygghet når hjemme eller ute med Laserens Alarm sammen med GPSsite",
+        "button": "Alarmknapper og rask varsling"
+      },
+      "card3": {
+        "description": "Overvåkning for hjerteproblemer, diabetes og regelmessige målinger av pust, blodtrykk, oksygenmetning. Kombinerte løsning for sikkerhet med automatisk varling til deg som pårørende. Dette kan brukes alene eller sammen med andre løsninger.",
+        "button": "Medisinsk oppfølging"
+      }
     },
-    "ctaTitle": "Klar til å komme i gang?",
-    "ctaDescription": "Få hjelp til å sette opp EaseBlink for din familie i dag.",
-    "contactButton": "Kontakt oss",
-    "demoButton": "Se demo"
+    "questionsTitle": "Lurer du på noe?",
+    "questions": {
+      "faq": {
+        "title": "Ofte stilte spørsmål",
+        "description": ".....",
+        "button": "Ofte stilte spørsmål"
+      },
+      "experiences": {
+        "title": "Hvordan andre bruker løsningene",
+        "description": "Erfaringer..",
+        "button": "Referanser Erfaringer"
+      },
+      "contact": {
+        "title": "Kontakt oss",
+        "description": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+        "button": "Kontakt oss i dag"
+      }
+    }
   },
   "easeblink2": {
     "backButton": "Tilbake til easeBlink",
