@@ -13,22 +13,24 @@ export default function EaseBlink3() {
     <div className="easeblink3-page min-h-screen w-full">
       <div className="w-full">
         {/* Back Button */}
-        <div className="w-full bg-gray-50 border-b border-gray-200">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-2">
-            <Link 
-              to="/easeblink1"
-              className="inline-flex items-center text-gray-700 hover:text-teal-600 transition-colors group"
-            >
-              <svg 
-                className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
+        <div className="w-full">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-lg">
+            <div className="py-2">
+              <Link 
+                to="/easeblink1"
+                className="inline-flex items-center text-gray-700 hover:text-teal-600 transition-colors group"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              <span className="font-medium">{t('easeblink3.backButton')}</span>
-            </Link>
+                <svg 
+                  className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                <span className="font-medium">{t('easeblink3.backButton')}</span>
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -60,9 +62,9 @@ export default function EaseBlink3() {
         </section>
 
         {/* Second Section - Hvem kan bruke easeBlink */}
-        <section className="py-16 w-full bg-gray-50">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row gap-6 items-center">
+        <section className="py-16 w-full">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-lg">
+            <div className="flex flex-col lg:flex-row gap-6 items-center py-8 px-4">
               {/* Left side - Image */}
               <div className="lg:w-2/5 flex justify-center">
                 <img 
@@ -114,9 +116,9 @@ export default function EaseBlink3() {
         </section>
 
         {/* Fourth Section - Opprett samtale */}
-        <section className="py-16 w-full bg-gray-50">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col lg:flex-row gap-6 items-center">
+        <section className="py-16 w-full">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-lg">
+            <div className="flex flex-col lg:flex-row gap-6 items-center py-8 px-4">
               {/* Left side - Image */}
               <div className="lg:w-2/5 flex justify-center">
                 <img 
@@ -172,9 +174,9 @@ export default function EaseBlink3() {
         </section>
 
         {/* Combine Solutions Section */}
-        <section className="py-16 w-full bg-blue-50">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+        <section className="py-16 w-full">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-blue-50 rounded-lg">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center pt-8">
               {t('easeblink3.combineSolutions.title')}
             </h2>
             
@@ -218,13 +220,14 @@ export default function EaseBlink3() {
                 </Link>
               </div>
             </div>
+            <div className="pb-8"></div>
           </div>
         </section>
 
         {/* Questions Section */}
-        <section className="py-16 w-full bg-white">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+        <section className="py-16 w-full">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-lg">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center pt-8">
               {t('easeblink3.questions.title')}
             </h2>
             
@@ -280,6 +283,7 @@ export default function EaseBlink3() {
                 </div>
               </div>
             </div>
+            <div className="pb-8"></div>
           </div>
         </section>
 
