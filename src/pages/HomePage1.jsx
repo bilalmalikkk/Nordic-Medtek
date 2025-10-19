@@ -184,10 +184,10 @@ export default function HomePage1() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Card 1: Easy to use */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Et av markedets enkleste system å bruke</h3>
-              <p className="text-gray-600 text-sm mb-6">
-                Kan installeres av alle. Oppe og gå på minutter!?
+              <p className="text-gray-600 text-sm mb-6 flex-grow">
+                Kan installeres av alle. Oppe og gå på minutter(?)
               </p>
               <Link 
                 to="/guidance" 
@@ -198,9 +198,9 @@ export default function HomePage1() {
             </div>
 
             {/* Card 2: Efficient alarm center */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Effektiv og fleksibel alarmsentral</h3>
-              <p className="text-gray-600 text-sm mb-6">
+              <p className="text-gray-600 text-sm mb-6 flex-grow">
                 egen drift / vaktselskap / alarmsentral med medisink oppfølging
               </p>
               <Link 
@@ -212,10 +212,10 @@ export default function HomePage1() {
             </div>
 
             {/* Card 3: Easy to install */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Et av markedets enkleste system å installere</h3>
-              <p className="text-gray-600 text-sm mb-6">
-                Kan installeres av alle. Oppe og gå på minutter!?
+              <p className="text-gray-600 text-sm mb-6 flex-grow">
+                Kan installeres av alle. Oppe og gå på minutter(?)
               </p>
               <Link 
                 to="/guidance" 
@@ -226,9 +226,9 @@ export default function HomePage1() {
             </div>
 
             {/* Card 4: Best price */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Mål om å være best på pris, med lavest totale kostnad</h3>
-              <p className="text-gray-600 text-sm mb-6">
+              <p className="text-gray-600 text-sm mb-6 flex-grow">
                 Lei sensorer fra kr. 99,- i måneden.
               </p>
               <Link 
@@ -239,12 +239,11 @@ export default function HomePage1() {
               </Link>
             </div>
 
-            {/* Card 5: Most integrated solution */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Et av markedets mest integrerte løsning</h3>
-              <p className="text-gray-600 text-sm mb-6">
-                Støtter standarder som FHIR og HL7.<br />
-                Apne API-er til integrering tar sisnkbare
+            {/* Card 5: Open and integrable solution */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Open og integrerbar løsning</h3>
+              <p className="text-gray-600 text-sm mb-6 flex-grow">
+                Støtter standarder som FHIR og HL7. Åpne API-er tilgjengelig for utviklere.
               </p>
               <Link 
                 to="/it-welfare-technology" 
@@ -255,10 +254,10 @@ export default function HomePage1() {
             </div>
 
             {/* Card 6: Data security */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Vi følger strenge krav til datasikkerhet og personvern</h3>
-              <p className="text-gray-600 text-sm mb-6">
-                All data lagres på på serve I Norge og krypteres både under overføring og lagring. GDPR og DPIA kompatibel behandling av personlige og sensitive data.
+              <p className="text-gray-600 text-sm mb-6 flex-grow">
+                All data lagres på på serve i Norge og krypteres både under overføring og lagring. GDPR og DPIA kompatibel behandling av personlige og sensitive data.
               </p>
               <Link 
                 to="/privacy" 
@@ -269,10 +268,10 @@ export default function HomePage1() {
             </div>
 
             {/* Card 7: Most complete solution */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Et av markedets mest komplette løsning</h3>
-              <p className="text-gray-600 text-sm mb-6">
-                Et komplett system av sensorer, kommunikasjonsenheter og varslingssystem
+              <p className="text-gray-600 text-sm mb-6 flex-grow">
+                Et komplett system av sensorer, kommunikasjonsløsninger og varslingssystem
               </p>
               <Link 
                 to="/products" 
@@ -283,9 +282,9 @@ export default function HomePage1() {
             </div>
 
             {/* Card 8: Made in Norway */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
               <h3 className="text-xl font-bold text-gray-900 mb-3">Utviklet og produsert i Norge</h3>
-              <p className="text-gray-600 text-sm mb-6">
+              <p className="text-gray-600 text-sm mb-6 flex-grow">
                 Utviklet i tett samarbeid med helsetjenesten og brukerne.<br />
                 Lokal produksjon som sikrer kvalitet og følger strenge miljøkrav og etisk arbeidspraksis.
               </p>
