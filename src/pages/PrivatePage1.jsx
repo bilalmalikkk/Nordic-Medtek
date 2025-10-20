@@ -189,6 +189,95 @@ export default function PrivatePage1() {
               </div>
             </div>
           </div>
+
+          {/* Hvordan løser vi dette Section */}
+          <div className="py-12">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Hvordan løser vi dette?
+              </h2>
+              <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Column 1: Easy Installation */}
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
+                <div className="flex justify-center mb-6">
+                  <img 
+                    src={easeOfInstallation} 
+                    alt="Enkel installasjon" 
+                    className="w-full max-w-xs h-64 object-contain"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                  Sensorene installeres enkelt uten krav om teknisk kunnskap
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                  Sensorene lever ferdige til å monteres opp. De installeres enkelt og krever ikke ekstra rutiner fra deg.
+                </p>
+                <Link 
+                  to="/products"
+                  state={{ from: '/private' }}
+                  className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
+                >
+                  Produkter
+                </Link>
+              </div>
+
+              {/* Column 2: Monitoring Center */}
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
+                <div className="flex justify-center mb-6">
+                  <img 
+                    src={vaktrommetImage} 
+                    alt="Vaktsentral" 
+                    className="w-full max-w-xs h-64 object-contain"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                  Vaktsentralen tar imot data og utfører automatisk overvåking
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                  Så snart en sensor tilkobles begynner den å sende data til vaktsentralen. Her overvåkes brukerne med en rekke tidsbesparende funksjoner.
+                </p>
+                <Link 
+                  to="/vaktrommet"
+                  state={{ from: '/private' }}
+                  className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
+                >
+                  Vaktsentral
+                </Link>
+              </div>
+
+              {/* Column 3: Alarms on Phone/PC */}
+              <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
+                <div className="flex justify-center gap-4 mb-6">
+                  <img 
+                    src={trendsImage} 
+                    alt="Data dashboard" 
+                    className="w-full max-w-[140px] h-64 object-contain"
+                  />
+                  <img 
+                    src={fallOnPhone} 
+                    alt="Alarmer på telefon" 
+                    className="w-full max-w-[140px] h-64 object-contain"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                  Få alarmer, utvikling og trenger på din telefon eller PC
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                  Skulle noe kritisk inntreffe som krever umiddelbar handling vil du få melding både på PC og mobiltelefon. Har du avtale med vaktsentral vil dei sette aksjon.
+                </p>
+                <Link 
+                  to="/it-welfare-technology"
+                  state={{ from: '/private' }}
+                  className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
+                >
+                  IT-arkitektur
+                </Link>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -287,92 +376,6 @@ export default function PrivatePage1() {
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Hvordan løser vi dette Section */}
-      <section className="py-20 w-full bg-white">
-        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Hvordan løser vi dette?
-            </h2>
-            <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Column 1: Easy Installation */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
-              <div className="flex justify-center mb-6">
-                <img 
-                  src={easeOfInstallation} 
-                  alt="Enkel installasjon" 
-                  className="w-full max-w-xs h-64 object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                Sensorene installeres enkelt uten krav om teknisk kunnskap
-              </h3>
-              <p className="text-gray-700 leading-relaxed mb-6 text-center">
-                Sensorene lever ferdige til å monteres opp. De installeres enkelt og krever ikke ekstra rutiner fra deg.
-              </p>
-              <Link 
-                to="/products"
-                state={{ from: '/private' }}
-                className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
-              >
-                Produkter
-              </Link>
-            </div>
-
-            {/* Column 2: Monitoring Center */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
-              <div className="flex justify-center mb-6">
-                <img 
-                  src={trendsImage} 
-                  alt="Vaktsentral" 
-                  className="w-full max-w-xs h-64 object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                Vaktsentralen tar imot data og utfører automatisk overvåking
-              </h3>
-              <p className="text-gray-700 leading-relaxed mb-6 text-center">
-                Så snart en sensor tilkobles begynner den å sende data til vaktsentralen. Her overvåkes brukerne med en rekke tidsbesparende funksjoner.
-              </p>
-              <Link 
-                to="/vaktrommet"
-                state={{ from: '/private' }}
-                className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
-              >
-                Vaktsentral
-              </Link>
-            </div>
-
-            {/* Column 3: Alarms on Phone/PC */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
-              <div className="flex justify-center mb-6">
-                <img 
-                  src={fallOnPhone} 
-                  alt="Alarmer på telefon" 
-                  className="w-full max-w-xs h-64 object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                Få alarmer, utvikling og trenger på din telefon eller PC
-              </h3>
-              <p className="text-gray-700 leading-relaxed mb-6 text-center">
-                Skulle noe kritisk inntreffe som krever umiddelbar handling vil du få melding både på PC og mobiltelefon. Har du avtale med vaktsentral vil dei sette aksjon.
-              </p>
-              <Link 
-                to="/it-welfare-technology"
-                state={{ from: '/private' }}
-                className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
-              >
-                IT-arkitektur
-              </Link>
             </div>
           </div>
         </div>

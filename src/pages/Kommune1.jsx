@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import sensors1Image from '../assets/sensors-1.png'
 import presentation2Image from '../assets/presentation 2.png'
 import sensorImage from '../assets/sensor.png'
