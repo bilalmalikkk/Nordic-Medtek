@@ -290,17 +290,16 @@ export default function PrivatePage1() {
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Produkter og priser
               </h2>
-              <div className="space-y-2 text-lg text-gray-700">
-                <p>Vi leverer løsninger fra kr 99 per måned.</p>
-                <p>Se oversikt over alle våre produker og priser og bestill i dag</p>
-              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Vi skal være best på pris! Vår fleksible leie-ordning gir en lav terskel for å ta i bruk en moderne og effektiv løsning. Vi har som mål å være ledende på både pris og funksjonalitet, og derfor gjennomfører vi nå en grundig evaluering av markedet. Dette sikrer at vår løsning blir riktig priset og strategisk plassert - til fordel for deg som kunde. Prisene er derfor ikke lansert ennå, men vil bli tilgjengelige så snart vi har kvalitets-sikret at de gjenspeiler den verdien vi ønsker å tilby. Vi har som mål å tilby prisgaranti.
+              </p>
             </div>
             <div>
               <Link 
                 to="/products" 
                 className="inline-block bg-gray-800 text-white px-12 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 text-lg"
               >
-                Bestill
+                Produktliste
               </Link>
             </div>
           </div>
