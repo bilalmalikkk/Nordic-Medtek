@@ -204,12 +204,22 @@ export default function HomePage1() {
               <p className="text-gray-600 text-sm mb-6 flex-grow">
                 {t('homePage1.whyChooseUs.cards.efficientAlarm.description')}
               </p>
-              <Link 
-                to="/vaktrommet" 
-                className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
-              >
-                {t('homePage1.whyChooseUs.cards.efficientAlarm.link')}
-              </Link>
+              <div className="flex flex-col gap-2">
+                <Link 
+                  to="/vaktrommet"
+                  state={{ from: '/' }}
+                  className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
+                >
+                  {t('homePage1.whyChooseUs.cards.efficientAlarm.link1')}
+                </Link>
+                <Link 
+                  to="/vaktrommet-kommune"
+                  state={{ from: '/' }}
+                  className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
+                >
+                  {t('homePage1.whyChooseUs.cards.efficientAlarm.link2')}
+                </Link>
+              </div>
             </div>
 
             {/* Card 3: Easy to install */}

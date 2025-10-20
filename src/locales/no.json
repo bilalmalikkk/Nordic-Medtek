@@ -79,7 +79,8 @@
         "efficientAlarm": {
           "title": "Effektiv og fleksibel alarmsentral",
           "description": "egen drift / vaktselskap / alarmsentral med medisink oppfølging",
-          "link": "Vår alarmsentralløsning"
+          "link1": "Vår alarmløsning for privat",
+          "link2": "Vår alarmløsning for kommune"
         },
         "easyToInstall": {
           "title": "Et av markedets enkleste system å bruke",
