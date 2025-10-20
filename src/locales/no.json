@@ -3009,22 +3009,22 @@
       "description": "Vi kaller vår skyløsning for vaktrommet, fordi det er det den er. Vaktrommet kan tilbys med sykepleier og doktor som hjelper deg å ta vare på dine kjære, eller så kan du velge en løsning hvor du selv overvåker brukeren. Vi beskriver de alternativene løsninger mer utfyllende nedenfor."
     },
     "serviceOptions": {
-      "title": "Hvordan vil du passe på ?",
-      "subtitle": "Egeninnsats eller tilkoblet alarmsentral",
+      "title": "Hvordan vil du passe brukerne ?",
+      "subtitle": "Egeninnsats eller tilkoblet ekstern alarmsentral",
       "card1": {
-        "title": "Vaktrommet Privat - trygghet i eget hjem",
-        "description": "Vaktrommet Privat gjør det enkelt å sette opp en løsning der dere selv kan følge med på deres kjære. Med et passende antall sensorer kan systemet overvåke ulike situasjoner i hjemmet, og automatisk varsle deg dersom noe uventet skjer.",
-        "button": "Mer info for egeninnsats"
+        "title": "Lokal overvåkning - med kommunens egne ressurser",
+        "description": "Vaktrommet kan driftes fullt ut av kommunens egne ansatte, og gir mulighet for lokal overvåkning av brukere i hjemmet eller institusjon. Systemet gir helsepersonell tilgang til sanntidsdata og varsler, og gjør det enkelt å følge opp endringer i helsetilstand. Med denne modellen beholder kommunen kontrollen over tjenesten, samtidig som den sikrer trygghet og kontinuitet for brukerne.",
+        "button": "Lokal overvåkning"
       },
       "card2": {
-        "title": "Alarmsentral - når egeninnsats ikke er nokl",
-        "description": "Egeninnsats er ikke alltid mulig - enten på grunn av arbeidssituasjon, avstand eller andre praktiske begrensninger. Ved å koble systemet til en alarmsentral, kan du være trygg på at dine kjære er overvåket døgnet rundt. Du har fortsatt full tilgang til systemet via smarttelefon og PC, og kan følge med når det passer deg.",
-        "button": "Vår alarmsentral"
+        "title": "Profesjonell overvåkning - med ekstern vaktsentral",
+        "description": "Kommunen kan velge å knytte Vaktrommet til en ekstern vaktsentral. Denne modellen sikrer kontinuerlig overvåkning og rask respons ved hendelser, uten å belaste kommunens egne ressurser. Systemet gir samtidig kommunen full innsikt og tilgang til brukerdata via sikre digitale flater. Løsningen støtter standardiserte løsninger for deling av data, blant annet FHIR, HL7 og API-er tilgjengelig for utviklere. Vaktrommet kan derfor overføre data til enhver annen løsning.",
+        "button": "Ekstern vaktsentral"
       },
       "card3": {
-        "title": "Profesjonell oppfølging - sammen med Salub",
-        "description": "I samarbeid med vår partner Salubi tilbyr vi en unik løsning der dine kjære kobles til en vaktsentral bemannet av sykepleiere og leger. Du får medisinsk oppfølging døgnet rundt, med daglig eller avtalt evaluering av helsedata. Tjenesten er proaktiv og passer spesielt godt for personer med endringer i helsetilstanden.",
-        "button": "Utvidet oppfølging"
+        "title": "Vår egen vaktsentral - kontinuerlig medisinsk trygghet",
+        "description": "Gjennom vår samarbeidspartner Salubi AS, tilbyr vi en vaktsentral med døgnkontinuerlig overvåkning, bemannet av både sykepleiere og leger - noe som ikke er standard i alle vaktsentraler. Dette gir en ekstra trygghet for brukerne og kommunen. I tillegg utfører lege en manuell vurdering av pasientdata etter avtalt syklus, noe som sikrer medisinsk kvalitet og tidlig oppdagelse av endringer i helsetilstand.",
+        "button": "gå til salubi.no"
       }
     },
     "monitoring": {

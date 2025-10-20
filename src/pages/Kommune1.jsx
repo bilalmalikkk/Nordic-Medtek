@@ -332,7 +332,7 @@ export default function Kommune1() {
               {/* Child Cards Grid 2x2 - Bottom Aligned */}
               <div className="grid grid-cols-2 gap-4 mt-auto">
                 {/* Central Overview */}
-                <Link to="/products" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
+                <Link to="/vaktrommet-kommune" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-center mb-3">
                     <img 
                       src={sensorsDataImage} 
