@@ -165,15 +165,15 @@ export default function Navbar() {
 
           {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center gap-8 lg:gap-12 xl:gap-16 text-base lg:text-lg absolute left-1/2 transform -translate-x-1/2">
-            <NavLink to="/private" className={({isActive})=> isPrivateActive(isActive)? 'font-semibold' : 'hover:opacity-80 transition-opacity'}>
+            <NavLink to="/private" className={isPrivateActive(location.pathname === '/private') ? 'font-semibold border-b-2 border-white pb-1' : 'hover:opacity-80 transition-opacity'}>
               {t('nav.private')}
             </NavLink>
 
-            <NavLink to="/kommune1" className={({isActive})=> isMunicipalityActive(isActive)? 'font-semibold' : 'hover:opacity-80 transition-opacity'}>
+            <NavLink to="/kommune1" className={isMunicipalityActive(location.pathname === '/kommune1') ? 'font-semibold border-b-2 border-white pb-1' : 'hover:opacity-80 transition-opacity'}>
               {t('nav.municipality')}
             </NavLink>
 
-            <NavLink to="/company" className={({isActive})=> isCompanyActive(isActive)? 'font-semibold' : 'hover:opacity-80 transition-opacity'}>
+            <NavLink to="/company" className={isCompanyActive(location.pathname === '/company') ? 'font-semibold border-b-2 border-white pb-1' : 'hover:opacity-80 transition-opacity'}>
               {t('nav.company')}
             </NavLink>
           </nav>
