@@ -220,7 +220,7 @@ export default function PrivatePage1() {
                   state={{ from: '/private' }}
                   className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
                 >
-                  Produkter
+                  Se ett eksempel
                 </Link>
               </div>
 
@@ -273,7 +273,7 @@ export default function PrivatePage1() {
                   state={{ from: '/private' }}
                   className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
                 >
-                  IT-arkitektur
+                  Alarm tjenesten
                 </Link>
               </div>
             </div>
