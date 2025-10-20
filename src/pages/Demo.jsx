@@ -1,7 +1,11 @@
+import { useLocation, Link } from 'react-router-dom'
 import ContactForm from '../components/ContactForm'
 import heroImg from '../assets/demo pilot.png'
 
 export default function Demo() {
+  const location = useLocation()
+  const fromPage = location.state?.from || '/kommune1'
+  
   const typeOptions = [
     { value: 'demo', label: 'Demo' },
     { value: 'leder', label: 'Lederpresentasjon' },
@@ -9,9 +13,24 @@ export default function Demo() {
   ]
   return (
     <div className="demo-page min-h-screen w-full">
+      {/* Back Button */}
+      <section className="py-4 w-full bg-gray-50">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <Link 
+            to={fromPage} 
+            className="inline-flex items-center text-gray-600 hover:text-teal-600 transition-colors duration-200"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            <span className="font-medium">Tilbake</span>
+          </Link>
+        </div>
+      </section>
+
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <section className="hero-section min-h-[calc(100vh-100px)] flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
+        <section className="hero-section py-12 md:py-16 flex items-center w-full bg-gradient-to-br from-gray-50 to-white">
           <div className="w-full">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">

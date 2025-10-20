@@ -261,36 +261,25 @@ export default function AlarmCommunication1() {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-16 w-full bg-white">
-          <div className="w-full">
-            <div className="w-full px-8">
-              <div className="space-y-8">
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                  {t('alarmCommunication1.pricing.title')}
+        {/* Produkter og priser Section */}
+        <section className="py-20 w-full bg-white border-t border-gray-200">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+              <div className="flex-1">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                  Produkter og priser
                 </h2>
-                <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-                  <p>
-                    {t('alarmCommunication1.pricing.text1')}
-                  </p>
-                  <p>
-                    {t('alarmCommunication1.pricing.text2')}
-                  </p>
-                  <p>
-                    {t('alarmCommunication1.pricing.text3')}
-                  </p>
-                </div>
-                <div className="pt-4">
-                  <Link 
-                    to="/products" 
-                    className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-                    {t('alarmCommunication1.pricing.button')}
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
-                </div>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Vi skal være best på pris! Vår fleksible leie-ordning gir en lav terskel for å ta i bruk en moderne og effektiv løsning. Vi har som mål å være ledende på både pris og funksjonalitet, og derfor gjennomfører vi nå en grundig evaluering av markedet. Dette sikrer at vår løsning blir riktig priset og strategisk plassert - til fordel for deg som kunde. Prisene er derfor ikke lansert ennå, men vil bli tilgjengelige så snart vi har kvalitets-sikret at de gjenspeiler den verdien vi ønsker å tilby. Vi har som mål å tilby prisgaranti.
+                </p>
+              </div>
+              <div>
+                <Link 
+                  to="/products" 
+                  className="inline-block bg-gray-800 text-white px-12 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 text-lg"
+                >
+                  Produktliste
+                </Link>
               </div>
             </div>
           </div>

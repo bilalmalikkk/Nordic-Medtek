@@ -9,8 +9,8 @@ export default function PageIndicator() {
   const mainPage = getMainPage(location.pathname)
   const currentPage = location.pathname
   
-  // Hide page indicator for IT Welfare Technology page
-  if (currentPage === '/it-welfare-technology') return null
+  // Hide page indicator for IT Welfare Technology and Demo pages
+  if (currentPage === '/it-welfare-technology' || currentPage === '/demo') return null
   
   if (!mainPage || mainPage === currentPage || !ready) return null
   

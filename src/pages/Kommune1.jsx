@@ -170,6 +170,7 @@ export default function Kommune1() {
               </p>
               <Link 
                 to="/demo"
+                state={{ from: '/kommune1' }}
                 className="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 {t('kommune1.ctaOptions.demo.button')}

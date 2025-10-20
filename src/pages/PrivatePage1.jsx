@@ -212,13 +212,13 @@ export default function PrivatePage1() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
                   Sensorene installeres enkelt uten krav om teknisk kunnskap
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                <p className="text-gray-700 leading-relaxed mb-6 text-center flex-grow">
                   Sensorene lever ferdige til å monteres opp. De installeres enkelt og krever ikke ekstra rutiner fra deg.
                 </p>
                 <Link 
                   to="/pdf/innstalation_gateway.pdf"
                   state={{ from: '/private' }}
-                  className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
+                  className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors mt-auto"
                 >
                   Se ett eksempel
                 </Link>
@@ -236,13 +236,13 @@ export default function PrivatePage1() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
                   Vaktsentralen tar imot data og utfører automatisk overvåking
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                <p className="text-gray-700 leading-relaxed mb-6 text-center flex-grow">
                   Så snart en sensor tilkobles begynner den å sende data til vaktsentralen. Her overvåkes brukerne med en rekke tidsbesparende funksjoner.
                 </p>
                 <Link 
                   to="/vaktrommet"
                   state={{ from: '/private' }}
-                  className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
+                  className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors mt-auto"
                 >
                   Vaktsentral
                 </Link>
@@ -265,13 +265,13 @@ export default function PrivatePage1() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
                   Få alarmer, utvikling og trenger på din telefon eller PC
                 </h3>
-                <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                <p className="text-gray-700 leading-relaxed mb-6 text-center flex-grow">
                   Skulle noe kritisk inntreffe som krever umiddelbar handling vil du få melding både på PC og mobiltelefon. Har du avtale med vaktsentral vil dei sette aksjon.
                 </p>
                 <Link 
                   to="/vaktrommet#mobile-pc-control"
                   state={{ from: '/private' }}
-                  className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
+                  className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors mt-auto"
                 >
                   Alarm tjenesten
                 </Link>

@@ -263,30 +263,24 @@ export default function MedicalFollowup1() {
           </div>
         </section>
 
-        <section id="pris" className="py-16 w-full bg-gray-50">
+        {/* Produkter og priser Section */}
+        <section className="py-20 w-full bg-white border-t border-gray-200">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
-                {t('medicalFollowup1.pricing.title')}
-              </h2>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                {t('medicalFollowup1.pricing.text1')}
-              </p>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                {t('medicalFollowup1.pricing.text2')}
-              </p>
-                  <p className="text-lg text-gray-700 leading-relaxed">
-                {t('medicalFollowup1.pricing.text3')}
-              </p>
-              <div className="pt-4">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+              <div className="flex-1">
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                  Produkter og priser
+                </h2>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  Vi skal være best på pris! Vår fleksible leie-ordning gir en lav terskel for å ta i bruk en moderne og effektiv løsning. Vi har som mål å være ledende på både pris og funksjonalitet, og derfor gjennomfører vi nå en grundig evaluering av markedet. Dette sikrer at vår løsning blir riktig priset og strategisk plassert - til fordel for deg som kunde. Prisene er derfor ikke lansert ennå, men vil bli tilgjengelige så snart vi har kvalitets-sikret at de gjenspeiler den verdien vi ønsker å tilby. Vi har som mål å tilby prisgaranti.
+                </p>
+              </div>
+              <div>
                 <Link 
                   to="/products" 
-                  className="inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="inline-block bg-gray-800 text-white px-12 py-4 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 text-lg"
                 >
-                  {t('medicalFollowup1.pricing.button')}
-                  <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
+                  Produktliste
                 </Link>
               </div>
             </div>

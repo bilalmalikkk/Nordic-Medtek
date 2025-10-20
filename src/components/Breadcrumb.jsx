@@ -9,8 +9,8 @@ export default function Breadcrumb() {
   const mainPage = getMainPage(location.pathname, location.state)
   const currentPage = location.pathname
   
-  // Hide breadcrumb for FAQ page and IT Welfare Technology page
-  if (currentPage === '/faq' || currentPage === '/it-welfare-technology') return null
+  // Hide breadcrumb for FAQ, IT Welfare Technology, and Demo pages
+  if (currentPage === '/faq' || currentPage === '/it-welfare-technology' || currentPage === '/demo') return null
   
   if (!mainPage || mainPage === currentPage || !ready) return null
   
