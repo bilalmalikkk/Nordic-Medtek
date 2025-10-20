@@ -56,6 +56,7 @@ import KommuneEaseblinkProff from './pages/Kommune-easeblink-proff'
 import Vaktrommet from './pages/Vaktrommet'
 import VaktrommetKommune from './pages/VaktrommetKommune'
 import PDFViewer from './pages/PDFViewer'
+import InfoPage from './pages/InfoPage'
 
 function App() {
   return (
@@ -116,6 +117,7 @@ function App() {
           <Route path="/vaktrommet" element={<Vaktrommet />} />
           <Route path="/vaktrommet-kommune" element={<VaktrommetKommune />} />
           <Route path="/pdf/:pdfName" element={<PDFViewer />} />
+          <Route path="/info/:infoType" element={<InfoPage />} />
         </Routes>
       </main>
     </div>

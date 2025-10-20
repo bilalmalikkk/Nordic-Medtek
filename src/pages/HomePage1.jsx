@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { useState, useEffect } from 'react'
-import { createPortal } from 'react-dom'
 import heroImage from '../assets/Landingpage.png'
 import varmeHenderImage from '../assets/varme_hender.jpg'
 import varmeHenderImageFallback from '../assets/varme_hender.jpg'
@@ -21,26 +19,6 @@ import notification from '../assets/notification.png'
 
 export default function HomePage1() {
   const { t } = useTranslation()
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [modalContent, setModalContent] = useState(null)
-
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape') {
-        setIsModalOpen(false)
-      }
-    }
-
-    if (isModalOpen) {
-      document.addEventListener('keydown', handleEscape)
-      document.body.style.overflow = 'hidden'
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleEscape)
-      document.body.style.overflow = 'unset'
-    }
-  }, [isModalOpen])
 
   return (
     <div className="min-h-screen w-full">
@@ -240,15 +218,12 @@ export default function HomePage1() {
               <p className="text-gray-600 text-sm mb-6 flex-grow">
                 {t('homePage1.whyChooseUs.cards.easyToInstall.description')}
               </p>
-              <button 
-                onClick={() => {
-                  setModalContent('easyToInstall')
-                  setIsModalOpen(true)
-                }}
-                className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm text-left"
+              <Link 
+                to="/info/easyToInstall"
+                className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
               >
                 {t('homePage1.whyChooseUs.cards.easyToInstall.link')}
-              </button>
+              </Link>
             </div>
 
             {/* Card 4: Best price */}
@@ -257,15 +232,12 @@ export default function HomePage1() {
               <p className="text-gray-600 text-sm mb-6 flex-grow">
                 {t('homePage1.whyChooseUs.cards.bestPrice.description')}
               </p>
-              <button 
-                onClick={() => {
-                  setModalContent('bestPrice')
-                  setIsModalOpen(true)
-                }}
-                className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm text-left"
+              <Link 
+                to="/info/bestPrice"
+                className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
               >
                 {t('homePage1.whyChooseUs.cards.bestPrice.link')}
-              </button>
+              </Link>
             </div>
 
             {/* Card 5: Open and integrable solution */}
@@ -383,51 +355,6 @@ export default function HomePage1() {
       </section>
 
       </div>
-
-      {/* Modal */}
-      {isModalOpen && createPortal(
-        <>
-          {/* Backdrop */}
-          <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-[9998]"
-            onClick={() => setIsModalOpen(false)}
-          />
-          
-          {/* Modal */}
-          <div 
-            className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full p-8 relative mx-4"
-            style={{
-              position: 'fixed',
-              top: '50%',
-              left: '50%',
-              transform: 'translate(-50%, -50%)',
-              zIndex: 9999
-            }}
-          >
-            {/* Close button */}
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 z-10 p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            {/* Modal content */}
-            <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-gray-900">
-                {t(`homePage1.whyChooseUs.cards.${modalContent}.popup.title`)}
-              </h3>
-              <div className="w-16 h-1 bg-teal-600 rounded-full"></div>
-              <p className="text-gray-700 leading-relaxed">
-                {t(`homePage1.whyChooseUs.cards.${modalContent}.popup.description`)}
-              </p>
-            </div>
-          </div>
-        </>,
-        document.body
-      )}
     </div>
   )
 }
