@@ -68,11 +68,11 @@
       "title": "Hvorfor velge oss",
       "cards": {
         "easyToUse": {
-          "title": "Et av markedets enkleste system å bruke",
+          "title": "Et av markedets enkleste system å installere",
           "description": "Kan installeres av alle. Oppe og gå på minutter(?)",
-          "link": "Hvordan bruke løsningene",
+          "link": "Hvordan installere løsningene",
           "popup": {
-            "title": "Fullautomatisk sensorbruk – enkelt og bekymringsfritt",
+            "title": "Automatisk – enkelt og bekymringsfritt",
             "description": "Våre sensorer er utviklet for å fungere helt automatisk, uten behov for manuell betjening. Enkelte enheter, som blodtrykks måleren, krever kun at du slår dem på – resten skjer av seg selv. Du slipper oppgaver knyttet til bruk og oppsett, og systemet håndterer alt i bakgrunnen."
           }
         },
@@ -82,11 +82,11 @@
           "link": "Vår alarmsentralløsning"
         },
         "easyToInstall": {
-          "title": "Et av markedets enkleste system å installere",
+          "title": "Et av markedets enkleste system å bruke",
           "description": "Kan installeres av alle. Oppe og gå på minutter(?)",
-          "link": "Hvordan installere løsningene",
+          "link": "Hvordan bruke løsningene",
           "popup": {
-            "title": "Fullautomatisk sensorbruk – enkelt og bekymringsfritt",
+            "title": "Automatisk – enkelt og bekymringsfritt",
             "description": "Våre sensorer er utviklet for å fungere helt automatisk, uten behov for manuell betjening. Enkelte enheter, som blodtrykks måleren, krever kun at du slår dem på – resten skjer av seg selv. Du slipper oppgaver knyttet til bruk og oppsett, og systemet håndterer alt i bakgrunnen."
           }
         },
@@ -2635,7 +2635,7 @@
       },
       "fallSensors": {
         "title": "Fallsensorer",
-        "description": "oppdager fall automatisk, også når ingen klarer å trykke på alarmknappen."
+        "description": "oppdager fall automatisk med avansert teknologi som kombinerer radar og IR teknologi"
       },
       "healthSensors": {
         "title": "Helsesensorer",
@@ -2643,7 +2643,7 @@
       },
       "centralOverview": {
         "title": "Sentral oversikt",
-        "description": "Kommunen varselstyrer for samordisurser og kan prioritere ressurser riktig."
+        "description": "kommunen vaktsentral får sanntidsvarsler og kan prioritere ressursene riktig."
       },
       "directNotification": {
         "title": "Direkte varsel",
@@ -3128,7 +3128,7 @@
     }
   },
   "easyInstallation": {
-    "title": "Helhetlig utvikling med fokus på enkel integrasjon",
+    "title": "Helhetlig utvikling med fokus på enkel installasjon",
     "description": "Gjennom hele utviklingsprosessen har vi hatt et tydelig fokus på brukervennlig installasjon. Vår filosofi er at sensorer for ulike behov er tilgjengelige for de fleste - men det som skiller oss ut, er evnen til å integrere dem sømløst i én samlet løsning. Dette er mulig fordi vi utvikler alle komponenter internt i samme selskap - fra sensor til skyløsning.",
     "footer": "© 2024 Nordic Medical Technologies. Alle rettigheter reservert.",
     "howToCare": {

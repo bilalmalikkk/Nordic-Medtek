@@ -212,6 +212,7 @@ export default function HomePage1() {
               </p>
               <Link 
                 to="/easy-installation"
+                state={{ from: '/' }}
                 className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
               >
                 {t('homePage1.whyChooseUs.cards.easyToUse.link')}
