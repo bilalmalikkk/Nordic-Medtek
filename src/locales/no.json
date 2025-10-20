@@ -3006,8 +3006,44 @@
   },
   "vaktrommet": {
     "hero": {
-      "title": "Vaktrommet-privat",
-      "description": "Vi kaller vår skyløsning for vaktrommet, fordi det er det den er. Vaktrommet kan tilbys med sykepleier og doktor som hjelper deg å ta vare på dine kjære, eller så kan du velge en løsning hvor du selv overvåker brukeren. Vi beskriver de alternativene løsninger mer utfyllende nedenfor."
+      "title": "Vaktrommet - en fleksibel og trygg skyløsning",
+      "description1": "Vår skyløsning, Vaktrommet, er utviklet for å fungere som et digitalt vaktrom - med mulighet for kontinuerlig oppfølging av brukere.",
+      "description2": "Kommunen kan velge mellom ulike driftsmodeller: enten med tilknytning til en profesjonell vaktsentral bemannet av sykepleiere og leger, eller som en løsning der kommunens egne ansatte overvåker brukerne. De ulike alternativene beskrives nærmere nedenfor."
+    },
+    "eConsultation": {
+      "title": "E-konsultasjon med innsikt - trygg og effektiv oppfølging i hjemmetjenesten",
+      "description": "Vår videobaserte e-konsultasjonsløsning er integrert med sanntids- og historiske målinger fra pasientens sensorer. Når lege kontaktes ved akutt behov eller rutinemessig oppfølging, får han umiddelbar tilgang til relevante helsedata - som hjertefrekvens, pust, temperatur og variasjoner over tid. Dette gir sykepleiere i hjemmetjenesten et kraftig verktøy for å sikre rask, presis og medisinsk fundert oppfølging - direkte fra pasientens hjem. Løsningen er under MDR sertifisering med mål om godkjenning innen utgangen av 2026."
+    },
+    "automaticNews": {
+      "title": "Automatisk NEWS – smartere oppfølging med Vaktrommet",
+      "description": "Vår skyløsning Vaktrommet bruker sensorer til å beregne National Early Warning Score (NEWS) automatisk uten manuell registrering. Systemet samler inn sanntidsdata om pustefrekvens, hjertefrekvens, temperatur og oksygenmetning, og gir helsepersonell et klart bilde av pasientens tilstand.",
+      "benefits": {
+        "title": "Dette gir hjemmetjenesten:",
+        "item1": "Tidlig varsling ved endringer i helsetilstand",
+        "item2": "Effektiv prioritering av innsats",
+        "item3": "Redusert behov for manuell dokumentasjon",
+        "item4": "Bedre pasientsikkerhet og faglig støtte"
+      },
+      "conclusion": "Vaktrommet gir både oversikt og trygghet – og frigjør tid til omsorg."
+    },
+    "proactiveHealth": {
+      "title": "Proaktiv helseoppfølging – med automatisk datainnsamling og trendanalyse",
+      "description": "Med riktig utvalg av sensorer kan vår løsning automatisk overvåke og lagre vitale måleverdier som hjertefrekvens, pustefrekvens, temperatur og oksygenmetning – alle nøkkeldata som inngår i beregningen av NEWS (National Early Warning Score). Disse dataene samles kontinuerlig og lagres sikkert i vår skyløsning, Vaktrommet. Over tid bygges det opp en medisinsk trend som gir verdifull innsikt i pasientens utvikling. Denne innsikten gjør det mulig å handle proaktivt – før tilstanden forverres – og gir helsepersonell et kraftig verktøy for tidlig intervensjon og bedre ressursbruk. Resultatet? Økt trygghet for brukeren, bedre beslutningsgrunnlag for helsepersonell, og en mer effektiv helsetjeneste."
+    },
+    "overview": {
+      "title": "Vaktrommet – full oversikt, effektiv oppfølging",
+      "description": "Vaktrommet er utviklet for å gi helsepersonell en kraftig og brukervennlig plattform for overvåkning og oppfølging av mange brukere samtidig. Systemet inneholder et bredt utvalg funksjoner og visuelle skjermbilder som gjør arbeidet enklere, mer effektivt og tryggere.",
+      "features": {
+        "title": "Med Vaktrommet får du:",
+        "item1": "Oversiktlige dashboards med sanntidsvisning av vitale måledata",
+        "item2": "Automatisk utsortering av brukere som trenger ekstra tilsyn",
+        "item3": "Trendanalyse basert på historiske helsedata",
+        "item4": "Varslinger og beslutningsstøtte direkte i systemet",
+        "item5": "Skalerbar løsning som passer både små og store tjenesteområder"
+      },
+      "conclusion": "Vaktrommet gir kommunen full kontroll, bedre ressursutnyttelse og økt trygghet for både ansatte og brukere.",
+      "button1": "Sjekk ut oversikt-side",
+      "button2": "Sjekk ut pasient-side"
     },
     "serviceOptions": {
       "title": "Hvordan vil du passe brukerne ?",
