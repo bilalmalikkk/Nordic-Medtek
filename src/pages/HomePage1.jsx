@@ -247,7 +247,8 @@ export default function HomePage1() {
                 {t('homePage1.whyChooseUs.cards.openSolution.description')}
               </p>
               <Link 
-                to="/it-welfare-technology#integration-standards" 
+                to="/it-welfare-technology#integration-standards"
+                state={{ from: '/' }}
                 className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
               >
                 {t('homePage1.whyChooseUs.cards.openSolution.link')}
@@ -261,7 +262,8 @@ export default function HomePage1() {
                 {t('homePage1.whyChooseUs.cards.dataSecurity.description')}
               </p>
               <Link 
-                to="/it-welfare-technology#data-security" 
+                to="/it-welfare-technology#data-security"
+                state={{ from: '/' }}
                 className="text-teal-600 hover:text-teal-700 font-semibold underline transition-colors text-sm"
               >
                 {t('homePage1.whyChooseUs.cards.dataSecurity.link')}
