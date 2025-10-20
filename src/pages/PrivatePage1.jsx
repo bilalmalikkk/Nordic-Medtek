@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import landingPage from '../assets/Landingpage.png'
 import alarm from '../assets/alarm.png'
 import blodtrykk from '../assets/blodtrykk.png'
@@ -9,30 +9,31 @@ import hus from '../assets/hus.png'
 import blokker from '../assets/blokker.png'
 import zeroKr from '../assets/0kr.png'
 import phoneLowres from '../assets/Phone_lowres.png'
+import easeOfInstallation from '../assets/ease of installationm.png'
+import vaktrommetImage from '../assets/vaktrommet.png'
+import trendsImage from '../assets/trends_no_background.png'
+import fallOnPhone from '../assets/fall_on_phone.png'
 
 export default function PrivatePage1() {
   const { t } = useTranslation()
+  const location = useLocation()
+  const fromPage = location.state?.from || '/'
   
   return (
     <div className="private-page min-h-screen w-full">
       <div className="w-full">
-      {/* Top Menu Cards */}
-      <section className="py-4 bg-gray-50 w-full border-b border-gray-200">
+      {/* Back Button */}
+      <section className="py-4 w-full bg-gray-50">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-3">
-            <Link to="/fallalarm" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">Fallsensorer</span>
-            </Link>
-            <Link to="/alarm-buttons" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">Alarmknapper</span>
-            </Link>
-            <Link to="/medical-followup1" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">Medisinsk oppfølging</span>
-            </Link>
-            <Link to="/easeblink1" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">Videokontakt</span>
-            </Link>
-          </div>
+          <Link 
+            to={fromPage}
+            className="inline-flex items-center text-gray-600 hover:text-teal-600 transition-colors duration-200"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            <span className="font-medium">Tilbake</span>
+          </Link>
         </div>
       </section>
 
@@ -286,6 +287,92 @@ export default function PrivatePage1() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hvordan løser vi dette Section */}
+      <section className="py-20 w-full bg-white">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Hvordan løser vi dette?
+            </h2>
+            <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Column 1: Easy Installation */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={easeOfInstallation} 
+                  alt="Enkel installasjon" 
+                  className="w-full max-w-xs h-64 object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                Sensorene installeres enkelt uten krav om teknisk kunnskap
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                Sensorene lever ferdige til å monteres opp. De installeres enkelt og krever ikke ekstra rutiner fra deg.
+              </p>
+              <Link 
+                to="/products"
+                state={{ from: '/private' }}
+                className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
+              >
+                Produkter
+              </Link>
+            </div>
+
+            {/* Column 2: Monitoring Center */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={trendsImage} 
+                  alt="Vaktsentral" 
+                  className="w-full max-w-xs h-64 object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                Vaktsentralen tar imot data og utfører automatisk overvåking
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                Så snart en sensor tilkobles begynner den å sende data til vaktsentralen. Her overvåkes brukerne med en rekke tidsbesparende funksjoner.
+              </p>
+              <Link 
+                to="/vaktrommet"
+                state={{ from: '/private' }}
+                className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
+              >
+                Vaktsentral
+              </Link>
+            </div>
+
+            {/* Column 3: Alarms on Phone/PC */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 flex flex-col">
+              <div className="flex justify-center mb-6">
+                <img 
+                  src={fallOnPhone} 
+                  alt="Alarmer på telefon" 
+                  className="w-full max-w-xs h-64 object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                Få alarmer, utvikling og trenger på din telefon eller PC
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                Skulle noe kritisk inntreffe som krever umiddelbar handling vil du få melding både på PC og mobiltelefon. Har du avtale med vaktsentral vil dei sette aksjon.
+              </p>
+              <Link 
+                to="/it-welfare-technology"
+                state={{ from: '/private' }}
+                className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
+              >
+                IT-arkitektur
+              </Link>
             </div>
           </div>
         </div>

@@ -21,6 +21,8 @@ import vaktrommetImage from '../assets/vaktrommet.png'
 
 export default function Kommune1() {
   const { t } = useTranslation()
+  const location = useLocation()
+  const fromPage = location.state?.from || '/'
   const [showHealthButtons, setShowHealthButtons] = useState(false)
   const [showMoreTimeButtons, setShowMoreTimeButtons] = useState(false)
   const [showKnowledgeButtons, setShowKnowledgeButtons] = useState(false)
@@ -69,26 +71,18 @@ export default function Kommune1() {
   return (
     <div className="municipality-page min-h-screen w-full">
       <div className="w-full">
-      {/* Top Menu Cards */}
-      <section className="py-3 w-full">
-        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-lg">
-          <div className="flex flex-wrap justify-center gap-3 py-2">
-            <Link to="/products" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">{t('kommune1.submenu.products')}</span>
-            </Link>
-            <Link to="/pricing" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">{t('kommune1.submenu.pricing')}</span>
-            </Link>
-            <Link to="/it-welfare-technology" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">{t('kommune1.submenu.itArchitecture')}</span>
-            </Link>
-            <Link to="/documents" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">{t('kommune1.submenu.documentation')}</span>
-            </Link>
-            <Link to="/experiences" className="bg-white border border-gray-200 px-6 py-2.5 rounded-full hover:bg-teal-50 hover:border-teal-500 transition-all duration-200 shadow-sm hover:shadow">
-              <span className="text-sm font-medium text-gray-900">{t('kommune1.submenu.references')}</span>
-            </Link>
-          </div>
+      {/* Back Button */}
+      <section className="py-4 w-full bg-gray-50">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <Link 
+            to={fromPage}
+            className="inline-flex items-center text-gray-600 hover:text-teal-600 transition-colors duration-200"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            <span className="font-medium">Tilbake</span>
+          </Link>
         </div>
       </section>
 
