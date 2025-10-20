@@ -1,16 +1,11 @@
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
-import { useState } from 'react'
 import plugPlayImage from '../assets/plug_play_general.png'
-import PDFModal from '../components/PDFModal'
 
 export default function EasyInstallation() {
   const { t } = useTranslation()
   const location = useLocation()
   const fromPage = location.state?.from || '/'
-  const [isPDFModalOpen, setIsPDFModalOpen] = useState(false)
-  const [isRadarPDFModalOpen, setIsRadarPDFModalOpen] = useState(false)
-  const [isBloodPressurePDFModalOpen, setIsBloodPressurePDFModalOpen] = useState(false)
   
   return (
     <div className="min-h-screen w-full bg-white">
@@ -74,12 +69,12 @@ export default function EasyInstallation() {
               <p className="text-gray-700 leading-relaxed mb-6 flex-grow">
                 {t('easyInstallation.howToCare.gateway.description')}
               </p>
-              <button 
-                onClick={() => setIsPDFModalOpen(true)}
-                className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center w-full"
+              <Link 
+                to="/pdf/innstalation_gateway.pdf"
+                className="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center w-full"
               >
                 {t('easyInstallation.howToCare.gateway.button')}
-              </button>
+              </Link>
             </div>
 
             {/* Fall Sensor Card */}
@@ -90,12 +85,12 @@ export default function EasyInstallation() {
               <p className="text-gray-700 leading-relaxed mb-6 flex-grow">
                 {t('easyInstallation.howToCare.fallSensor.description')}
               </p>
-              <button 
-                onClick={() => setIsRadarPDFModalOpen(true)}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center w-full"
+              <Link 
+                to="/pdf/innstalation_radar_R2.pdf"
+                className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center w-full"
               >
                 {t('easyInstallation.howToCare.fallSensor.button')}
-              </button>
+              </Link>
             </div>
 
             {/* Blood Pressure Monitor Card */}
@@ -106,12 +101,12 @@ export default function EasyInstallation() {
               <p className="text-gray-700 leading-relaxed mb-6 flex-grow">
                 {t('easyInstallation.howToCare.bloodPressure.description')}
               </p>
-              <button 
-                onClick={() => setIsBloodPressurePDFModalOpen(true)}
-                className="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors text-center w-full"
+              <Link 
+                to="/pdf/innstalation_bloodpresure.pdf"
+                className="inline-block bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors text-center w-full"
               >
                 {t('easyInstallation.howToCare.bloodPressure.button')}
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -234,30 +229,6 @@ export default function EasyInstallation() {
           </div>
         </div>
       </footer>
-
-      {/* Gateway PDF Modal */}
-      <PDFModal
-        isOpen={isPDFModalOpen}
-        onClose={() => setIsPDFModalOpen(false)}
-        pdfUrl="/innstalation_gateway.pdf"
-        title="Installasjonsveiledning for Gateway"
-      />
-
-      {/* Radar PDF Modal */}
-      <PDFModal
-        isOpen={isRadarPDFModalOpen}
-        onClose={() => setIsRadarPDFModalOpen(false)}
-        pdfUrl="/innstalation_radar_R2.pdf"
-        title="Installasjonsveiledning for Radarbasert Fallsensor"
-      />
-
-      {/* Blood Pressure PDF Modal */}
-      <PDFModal
-        isOpen={isBloodPressurePDFModalOpen}
-        onClose={() => setIsBloodPressurePDFModalOpen(false)}
-        pdfUrl="/innstalation_bloodpresure.pdf"
-        title="Installasjonsveiledning for Blodtrykksmåler"
-      />
     </div>
   )
 }
