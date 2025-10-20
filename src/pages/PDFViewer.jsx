@@ -19,7 +19,7 @@ export default function PDFViewer() {
       {/* Header */}
       <div className="bg-white border-b border-gray-200 sticky top-0 z-10 shadow-sm">
         <div className="w-full px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between max-w-7xl mx-auto">
+          <div className="flex items-center justify-between max-w-[1600px] mx-auto">
             <div className="flex items-center gap-4">
               <button
                 onClick={() => navigate(-1)}
@@ -42,12 +42,14 @@ export default function PDFViewer() {
       </div>
 
       {/* PDF Content */}
-      <div className="w-full h-[calc(100vh-80px)]">
-        <iframe
-          src={`/${pdfName}`}
-          className="w-full h-full border-0"
-          title={title}
-        />
+      <div className="w-full h-[calc(100vh-80px)] flex justify-center">
+        <div className="max-w-[1600px] w-full h-full">
+          <iframe
+            src={`/${pdfName}`}
+            className="w-full h-full border-0"
+            title={title}
+          />
+        </div>
       </div>
     </div>
   )
