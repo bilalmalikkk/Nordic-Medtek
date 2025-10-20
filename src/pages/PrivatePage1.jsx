@@ -216,7 +216,7 @@ export default function PrivatePage1() {
                   Sensorene lever ferdige til å monteres opp. De installeres enkelt og krever ikke ekstra rutiner fra deg.
                 </p>
                 <Link 
-                  to="/products"
+                  to="/pdf/innstalation_gateway.pdf"
                   state={{ from: '/private' }}
                   className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
                 >
@@ -269,7 +269,7 @@ export default function PrivatePage1() {
                   Skulle noe kritisk inntreffe som krever umiddelbar handling vil du få melding både på PC og mobiltelefon. Har du avtale med vaktsentral vil dei sette aksjon.
                 </p>
                 <Link 
-                  to="/it-welfare-technology"
+                  to="/vaktrommet#mobile-pc-control"
                   state={{ from: '/private' }}
                   className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors"
                 >

@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import trendsNoBackgroundImage from '../assets/trends_no_background.png'
 import fallOnPhoneImage from '../assets/fall_on_phone.png'
 import sykepleierPaVaktrommetImage from '../assets/sykepleier_på_vaktrommet.png'
@@ -8,6 +9,18 @@ export default function Vaktrommet() {
   const { t } = useTranslation()
   const location = useLocation()
   const from = location.state?.from || '/private'
+
+  // Scroll to hash on page load
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash)
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }, 300)
+      }
+    }
+  }, [location.hash])
   
   return (
     <div className="vaktrommet-page min-h-screen w-full">
@@ -128,7 +141,7 @@ export default function Vaktrommet() {
         {/* Mobile and PC Monitoring Section */}
         <section className="py-16 w-full bg-gray-50">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="border-2 border-dashed border-blue-300 p-8 rounded-lg">
+            <div id="mobile-pc-control" className="border-2 border-dashed border-blue-300 p-8 rounded-lg">
               <div className="grid md:grid-cols-2 gap-12">
                 {/* Mobile Monitoring */}
                 <div className="space-y-6">
