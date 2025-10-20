@@ -3,7 +3,7 @@
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
-import logo from '../assets/logo_and_text__high_quality.svg'
+import logo from '../assets/Puls_and_name.svg'
 import Breadcrumb from './Breadcrumb'
 
 export default function Navbar() {
@@ -155,12 +155,11 @@ export default function Navbar() {
       <div className="bg-teal-700 text-white w-full">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center w-48 md:w-64 lg:w-72 relative overflow-visible hover:opacity-80 transition-opacity">
+          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
             <img 
               src={logo} 
               alt="NordicMedTek" 
-              className="h-8 md:h-10 lg:h-12 w-auto" 
-              style={{ transform: 'scaleX(2) scaleY(1.9)', transformOrigin: 'left center' }} 
+              className="h-10 md:h-12 lg:h-14 w-auto" 
             />
           </Link>
 
@@ -178,9 +177,6 @@ export default function Navbar() {
               {t('nav.company')}
             </NavLink>
           </nav>
-          
-          {/* Spacer to balance logo */}
-          <div className="hidden md:block w-48 md:w-64 lg:w-72"></div>
 
           {/* Mobile menu button and language toggle */}
           <div className="flex items-center gap-4 md:hidden">
