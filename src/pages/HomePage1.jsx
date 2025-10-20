@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import heroImage from '../assets/Landingpage.png'
 import varmeHenderImage from '../assets/varme_hender.jpg'
 import varmeHenderImageFallback from '../assets/varme_hender.jpg'
@@ -384,11 +385,11 @@ export default function HomePage1() {
       </div>
 
       {/* Modal */}
-      {isModalOpen && (
+      {isModalOpen && createPortal(
         <>
           {/* Backdrop */}
           <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-50"
+            className="fixed inset-0 bg-black bg-opacity-50 z-[9998]"
             onClick={() => setIsModalOpen(false)}
           />
           
@@ -424,7 +425,8 @@ export default function HomePage1() {
               </p>
             </div>
           </div>
-        </>
+        </>,
+        document.body
       )}
     </div>
   )
