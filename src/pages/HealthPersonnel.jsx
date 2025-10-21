@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import kHelsepersonell from '../assets/k-helsepersonell.png'
 import bigChecklist from '../assets/big checklist.png'
 import sensor from '../assets/sensor.png'
@@ -16,11 +16,28 @@ import videoCall from '../assets/video call.png'
 
 export default function HealthPersonnel() {
   const { t } = useTranslation()
+  const location = useLocation()
+  const fromPage = location.state?.from || '/'
   
   return (
     <div className="health-personnel-page min-h-screen w-full relative">
+      {/* Back Button */}
+      <section className="py-4 w-full bg-gray-50 relative z-20">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <Link 
+            to={fromPage}
+            className="inline-flex items-center text-gray-600 hover:text-teal-600 transition-colors duration-200"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            <span className="font-medium">Tilbake</span>
+          </Link>
+        </div>
+      </section>
+
       {/* Alphabet Label */}
-      <div className="absolute top-4 left-4 z-10">
+      <div className="absolute top-20 left-4 z-10">
         <div className="w-8 h-8 bg-orange-300 rounded-full flex items-center justify-center text-white font-bold text-lg">
           O
         </div>

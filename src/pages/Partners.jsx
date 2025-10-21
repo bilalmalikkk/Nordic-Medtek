@@ -1,12 +1,30 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import rectangleImage from '../assets/Rectangle.png'
 
 export default function Partners() {
   const { t } = useTranslation()
+  const location = useLocation()
+  const fromPage = location.state?.from || '/'
+  
   return (
     <div className="min-h-screen w-full">
       <div className="w-full">
+        {/* Back Button */}
+        <section className="py-4 w-full bg-gray-50">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <Link 
+              to={fromPage}
+              className="inline-flex items-center text-gray-600 hover:text-teal-600 transition-colors duration-200"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              <span className="font-medium">Tilbake</span>
+            </Link>
+          </div>
+        </section>
+
         {/* Hero Section */}
         <section className="py-12 w-full relative overflow-hidden bg-white">
           <div className="w-full px-4 sm:px-6 lg:px-8">
@@ -48,7 +66,7 @@ export default function Partners() {
 
         {/* Why Become Partner Section */}
         <section className="py-20 w-full bg-white">
-          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-8">{t('partners.whyBecomePartner.title')}</h2>
               <ul className="space-y-4 text-lg text-gray-700">
@@ -65,7 +83,7 @@ export default function Partners() {
 
         {/* How We Support Partners Section */}
         <section className="py-20 w-full bg-gradient-to-br from-gray-50 to-white">
-          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
               <h2 className="text-4xl font-bold text-gray-900 mb-8">{t('partners.howWeSupport.title')}</h2>
               <ol className="space-y-6 text-lg text-gray-700">
@@ -82,7 +100,7 @@ export default function Partners() {
 
         {/* Ready to Become Partner CTA Section */}
         <section className="py-20 w-full bg-white">
-          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-8">{t('partners.cta.title')}</h2>
               <Link 

@@ -42,6 +42,7 @@ export default function Company() {
               <div className="pt-4 flex flex-col sm:flex-row gap-4">
                 <Link 
                   to="/partners" 
+                  state={{ from: '/company' }}
                   className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   {t('company.hero.button1')}
@@ -51,6 +52,7 @@ export default function Company() {
                 </Link>
                 <Link 
                   to="/products" 
+                  state={{ from: '/company' }}
                   className="group inline-flex items-center justify-center bg-yellow-200 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-yellow-300 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   {t('company.hero.button2')}
@@ -60,6 +62,7 @@ export default function Company() {
                 </Link>
                 <Link 
                   to="/competitive-advantage" 
+                  state={{ from: '/company' }}
                   className="group inline-flex items-center justify-center bg-green-200 text-gray-800 px-8 py-4 rounded-xl font-semibold hover:bg-green-300 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   {t('company.hero.button3')}
@@ -135,7 +138,7 @@ export default function Company() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{t('company.whoCollaborate.careEnvironments.title')}</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">{t('company.whoCollaborate.careEnvironments.description')}</p>
-                <Link to="/vaktrom-integration" className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors group">
+                <Link to="/vaktrom-integration" state={{ from: '/company' }} className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors group">
                   {t('company.whoCollaborate.careEnvironments.link')}
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -150,7 +153,7 @@ export default function Company() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{t('company.whoCollaborate.broaderAssortment.title')}</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">{t('company.whoCollaborate.broaderAssortment.description')}</p>
-                <Link to="/partners" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors group">
+                <Link to="/partners" state={{ from: '/company' }} className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors group">
                   {t('company.whoCollaborate.broaderAssortment.link')}
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -165,7 +168,7 @@ export default function Company() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{t('company.whoCollaborate.competitiveAdvantage.title')}</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">{t('company.whoCollaborate.competitiveAdvantage.description')}</p>
-                <Link to="/guidance" className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors group">
+                <Link to="/guidance" state={{ from: '/company' }} className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors group">
                   {t('company.whoCollaborate.competitiveAdvantage.link')}
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -206,6 +209,7 @@ export default function Company() {
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">{t('company.cta.title')}</h2>
           <Link 
             to="/partners" 
+            state={{ from: '/company' }}
             className="group inline-flex items-center justify-center bg-teal-600 text-white px-12 py-6 rounded-2xl font-semibold text-lg hover:bg-teal-700 transition-all duration-300 hover:scale-105 shadow-2xl hover:shadow-teal-500/25"
           >
             {t('company.cta.button')}
@@ -253,6 +257,7 @@ export default function Company() {
               <div className="flex-shrink-0">
                 <Link 
                   to="/guidance" 
+                  state={{ from: '/company' }}
                   className="group inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-yellow-500 text-white px-12 py-6 rounded-2xl font-semibold text-lg hover:from-orange-600 hover:to-yellow-600 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
                 >
                   {t('company.finalCta.button')}

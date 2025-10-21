@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import landingPage from '../assets/Landingpage.png'
 
 export default function Municipality() {
   const { t } = useTranslation()
+  const location = useLocation()
+  const fromPage = location.state?.from || '/'
   const [showHealthButtons, setShowHealthButtons] = useState(false)
   const [showMoreTimeButtons, setShowMoreTimeButtons] = useState(false)
   const [showKnowledgeButtons, setShowKnowledgeButtons] = useState(false)
@@ -53,6 +55,21 @@ export default function Municipality() {
   return (
     <div className="municipality-page min-h-screen w-full">
       <div className="w-full">
+      {/* Back Button */}
+      <section className="py-4 w-full bg-gray-50">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <Link 
+            to={fromPage}
+            className="inline-flex items-center text-gray-600 hover:text-teal-600 transition-colors duration-200"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            <span className="font-medium">Tilbake</span>
+          </Link>
+        </div>
+      </section>
+
       {/* Hero Section */}
       <section className="py-12 w-full relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
         <div className="w-full px-4 sm:px-6 lg:px-8">
