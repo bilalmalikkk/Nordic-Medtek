@@ -344,7 +344,7 @@ export default function Kommune1() {
                 </Link>
 
                 {/* Direct Notification */}
-                <Link to="/vaktrommet" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
+                <Link to="/vaktrommet-kommune#mobile-pc-monitoring" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-center mb-3">
                     <img 
                       src={notificationImage} 
@@ -361,7 +361,7 @@ export default function Kommune1() {
                 </Link>
 
                 {/* Automatic NEWS */}
-                <Link to="/vaktrommet" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
+                <Link to="/vaktrommet-kommune#automatic-news" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-center mb-3">
                     <img 
                       src={newsImage} 
@@ -378,7 +378,7 @@ export default function Kommune1() {
                 </Link>
 
                 {/* Automatic Trend Analysis */}
-                <Link to="/vaktrommet" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
+                <Link to="/vaktrommet-kommune#proactive-health" state={{ from: '/kommune1' }} className="bg-yellow-50 rounded-xl p-4 shadow-md border border-yellow-100 text-center hover:shadow-lg hover:border-yellow-200 transition-all duration-300 cursor-pointer">
                   <div className="flex justify-center mb-3">
                     <img 
                       src={trendsImage} 

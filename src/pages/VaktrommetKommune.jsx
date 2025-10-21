@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 import trendsNoBackgroundImage from '../assets/trends_no_background.png'
 import fallOnPhoneImage from '../assets/fall_on_phone.png'
 import sykepleierPaVaktrommetImage from '../assets/sykepleier_på_vaktrommet.png'
@@ -11,6 +12,18 @@ export default function VaktrommetKommune() {
   const { t } = useTranslation()
   const location = useLocation()
   const from = location.state?.from || '/kommune1'
+  
+  // Handle hash navigation
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1))
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }, 100)
+      }
+    }
+  }, [location.hash])
   
   return (
     <div className="vaktrommet-page min-h-screen w-full">
@@ -116,7 +129,7 @@ export default function VaktrommetKommune() {
         </section>
 
         {/* Mobile and PC Monitoring Section */}
-        <section className="py-16 w-full bg-gray-50">
+        <section id="mobile-pc-monitoring" className="py-16 w-full bg-gray-50">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-2 border-dashed border-blue-300 p-8 rounded-lg">
               <div className="grid md:grid-cols-2 gap-12">
@@ -187,7 +200,7 @@ export default function VaktrommetKommune() {
       </section>
 
       {/* Automatic NEWS Section */}
-      <section className="py-16 w-full bg-gray-50">
+      <section id="automatic-news" className="py-16 w-full bg-gray-50">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
@@ -249,7 +262,7 @@ export default function VaktrommetKommune() {
       </section>
 
       {/* Proactive Health Follow-up Section */}
-      <section className="py-16 w-full bg-white">
+      <section id="proactive-health" className="py-16 w-full bg-white">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center order-2 lg:order-1">
