@@ -426,10 +426,10 @@ export default function Kommune1() {
               </p>
               <div className="text-center mt-auto">
                 <Link 
-                  to="/products"
+                  to="/pdf/innstalation_gateway.pdf"
                   className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors group"
                 >
-                  {t('kommune1.howWeSolve.easyInstallation.link')}
+                  se en typisk installasjon
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -500,74 +500,41 @@ export default function Kommune1() {
       <section className="py-20 w-full bg-gradient-to-br from-gray-50 to-white">
         <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t('kommune1.caseStudies.title')}
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Erfaringer og anbefalinger – dokumentert effekt av velferdsteknologi
             </h2>
-            <p className="text-lg text-red-600 font-medium mb-6">
-              {t('kommune1.caseStudies.subtitle')}
+            <p className="text-lg text-gray-700 mb-6 max-w-4xl mx-auto leading-relaxed">
+              Basert på vår erfaring fra gjennomførte tester og pilotprosjekter, samt anbefalinger fra Helsedirektoratets veileder for velferdsteknologi (2025), ser vi tydelige gevinster ved bruk av digitale løsninger i helse- og omsorgstjenesten. Rapportene viser at velferdsteknologi kan bidra til:
             </p>
           </div>
 
           {/* Benefits List */}
           <div className="mb-10">
-            <ul className="space-y-3 max-w-3xl mx-auto">
+            <ul className="space-y-3 max-w-3xl mx-auto mb-6">
               <li className="flex items-start">
                 <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-base text-gray-800 font-semibold">
-                  {t('kommune1.caseStudies.benefit1')}
+                  Færre akutte sykehusinnleggelser
                 </p>
               </li>
               <li className="flex items-start">
                 <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-base text-gray-800 font-semibold">
-                  {t('kommune1.caseStudies.benefit2')}
+                  Økt trygghet for ansatte og pårørende
                 </p>
               </li>
               <li className="flex items-start">
                 <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                 <p className="text-base text-gray-800 font-semibold">
-                  {t('kommune1.caseStudies.benefit3')}
+                  Bedre ressursutnyttelse – mer tid frigjort til planlagte besøk
                 </p>
               </li>
             </ul>
+            <p className="text-lg text-gray-700 text-center max-w-4xl mx-auto leading-relaxed">
+              I det følgende presenterer vi konkrete eksempler og referanser som underbygger disse funnene.
+            </p>
           </div>
 
-          {/* Pilot Municipality Cards */}
-          <div className="flex flex-wrap justify-center gap-6 mb-12">
-            <Link 
-              to="/experiences"
-              className="bg-white border-2 border-gray-300 px-8 py-4 rounded-xl hover:border-teal-500 hover:shadow-lg transition-all duration-300 font-semibold text-gray-900"
-            >
-              {t('kommune1.caseStudies.pilotMunicipality1')}
-            </Link>
-            <Link 
-              to="/experiences"
-              className="bg-white border-2 border-gray-300 px-8 py-4 rounded-xl hover:border-teal-500 hover:shadow-lg transition-all duration-300 font-semibold text-gray-900"
-            >
-              {t('kommune1.caseStudies.pilotMunicipality2')}
-            </Link>
-          </div>
-
-          {/* Testimonials */}
-          <div className="space-y-6 max-w-4xl mx-auto">
-            <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-teal-500">
-              <p className="text-gray-700 italic mb-3 leading-relaxed">
-                "{t('kommune1.caseStudies.testimonial1.quote')}"
-              </p>
-              <p className="text-sm text-gray-600 font-medium">
-                {t('kommune1.caseStudies.testimonial1.author')}
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-teal-500">
-              <p className="text-gray-700 italic mb-3 leading-relaxed">
-                "{t('kommune1.caseStudies.testimonial2.quote')}"
-              </p>
-              <p className="text-sm text-gray-600 font-medium">
-                {t('kommune1.caseStudies.testimonial2.author')}
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 

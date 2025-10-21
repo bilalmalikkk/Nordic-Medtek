@@ -128,12 +128,16 @@ export default function EasyInstallation() {
               <p className="text-gray-700 leading-relaxed mb-6 flex-grow">
                 {t('easyInstallation.sensors.card1.description')}
               </p>
-              <button className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center flex items-center justify-center gap-2">
+              <Link 
+                to="/safety-solutions1"
+                state={{ from: '/easy-installation' }}
+                className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors text-center flex items-center justify-center gap-2"
+              >
                 {t('easyInstallation.sensors.card1.button')}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </button>
+              </Link>
             </div>
 
             {/* Card 2 */}
@@ -144,12 +148,16 @@ export default function EasyInstallation() {
               <p className="text-gray-700 leading-relaxed mb-6 flex-grow">
                 {t('easyInstallation.sensors.card2.description')}
               </p>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center gap-2">
+              <Link 
+                to="/alarm-communication1"
+                state={{ from: '/easy-installation' }}
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center gap-2"
+              >
                 {t('easyInstallation.sensors.card2.button')}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </button>
+              </Link>
             </div>
 
             {/* Card 3 */}
@@ -160,12 +168,16 @@ export default function EasyInstallation() {
               <p className="text-gray-700 leading-relaxed mb-6 flex-grow">
                 {t('easyInstallation.sensors.card3.description')}
               </p>
-              <button className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors text-center flex items-center justify-center gap-2">
+              <Link 
+                to="/medical-followup1"
+                state={{ from: '/easy-installation' }}
+                className="bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors text-center flex items-center justify-center gap-2"
+              >
                 {t('easyInstallation.sensors.card3.button')}
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

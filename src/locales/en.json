@@ -19,6 +19,80 @@
     "subpageOf": "Subpage of"
   },
   "util": {"about": "About", "demo": "Book demo", "contact": "Contact", "privacy": "Privacy policy"},
+  "about": {
+    "title": "About us",
+    "description": "Nordic Medical Technologies is an ambitious player in welfare technology, with the goal of making care services simpler, safer and more accessible. We offer products that are easy to install, use and operate – developed with both healthcare personnel and users in mind.",
+    "section": {
+      "paragraph1": "Nordic Medical Technologies was founded with a clear vision: to make welfare technology smarter, simpler and accessible to all. Behind the company stands **Mikal Dreggevik**, a Norwegian serial entrepreneur with over 30 years of experience in electronics and technological innovation.",
+      "paragraph2": "Mikal is also the founder of **WestControl AS**, one of Norway's largest and most recognized electronics manufacturers. WestControl is on the team as a development and production partner, ensuring industrial precision, high quality and scalability in all our solutions.",
+      "paragraph3": "We develop technology that puts people at the center and gives health and care services the tools they need for safer, more effective care. Our products are easy to install, intuitive to use and delivered with **price guarantee** – because we believe in **best value for money** without compromise."
+    },
+    "team": {
+      "title": "MEET THE TEAM",
+      "members": [
+        {
+          "name": "MIKAL DREGGEVIK",
+          "role": "CEO, development manager, designer and electronics specialist",
+          "company": "nordicmedtek"
+        },
+        {
+          "name": "TOR ENNE",
+          "role": "CTO, Technology strategy & processes around MDR approval",
+          "company": "nordicmedtek"
+        },
+        {
+          "name": "VIDAR",
+          "role": "Daily leader/CEO, Doctor with market knowledge and large network",
+          "company": "omsyn"
+        },
+        {
+          "name": "DAVID BROWN",
+          "role": "Senior Developer software",
+          "company": "westcontrol"
+        },
+        {
+          "name": "TEAM INDIA",
+          "role": "Wholly owned subsidiary, Senior software developers",
+          "company": "kopera"
+        },
+        {
+          "name": "PER-ANDERS ELVERTRØ",
+          "role": "Regulatory Affairs, MDR process Manager",
+          "company": "inventas"
+        },
+        {
+          "name": "THERESE OPPEGAARD",
+          "role": "Business Development Manager / Incubator Manager Health, Norway Health Tech / EIRAccelerator / Validé AS",
+          "company": "valide"
+        },
+        {
+          "name": "MARIT B. HAGLAND",
+          "role": "Business Developer Health, Norway Health Tech / EIRAccelerator / Validé AS",
+          "company": "valide"
+        }
+      ]
+    },
+    "help": {
+      "title": "Are you wondering about something?",
+      "cards": [
+        {
+          "title": "Frequently asked questions",
+          "content": ".....",
+          "buttonText": "Frequently asked questions"
+        },
+        {
+          "title": "How others use the solutions",
+          "content": "Experiences..",
+          "buttonText": "References Experiences"
+        },
+        {
+          "title": "Contact us",
+          "content": "We are here to answer questions and help you choose the right solution for your loved ones.",
+          "buttonText": "Contact us today"
+        }
+      ]
+    }
+  },
   "homePage1": {
     "hero": {
       "title": "We deliver solutions that give people security, dignity and better quality of life",
