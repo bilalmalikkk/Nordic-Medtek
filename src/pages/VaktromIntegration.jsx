@@ -40,6 +40,7 @@ export default function VaktromIntegration() {
                 </div>
                 <Link 
                   to="/guidance" 
+                  state={{ from: '/vaktrom-integration' }}
                   className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
 {t('vaktromIntegration.hero.button')}
@@ -137,6 +138,7 @@ export default function VaktromIntegration() {
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Link 
               to="/guidance" 
+              state={{ from: '/vaktrom-integration' }}
               className="inline-flex items-center justify-center bg-gray-800 text-white px-12 py-6 rounded-xl font-semibold text-lg hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
 {t('vaktromIntegration.cta.button')}

@@ -137,6 +137,9 @@ export default function Navbar() {
     return pathname
   }
 
+  // Check if current page is guidance page
+  const isGuidancePage = location.pathname === '/guidance'
+
   return (
     <header className="w-screen">
       {/* Top utility bar */}
@@ -289,8 +292,8 @@ export default function Navbar() {
           </div>
       </div>
       
-      {/* Breadcrumb for subpages */}
-      <Breadcrumb />
+      {/* Breadcrumb for subpages - hide for guidance pages */}
+      {!isGuidancePage && <Breadcrumb />}
     </header>
   )
 }

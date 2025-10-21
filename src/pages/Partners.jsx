@@ -40,6 +40,7 @@ export default function Partners() {
                 </div>
                 <Link 
                   to="/guidance" 
+                  state={{ from: '/partners' }}
                   className="group inline-flex items-center justify-center bg-gray-800 text-white px-8 py-4 rounded-xl font-semibold hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
 {t('partners.hero.button')}
@@ -105,6 +106,7 @@ export default function Partners() {
               <h2 className="text-4xl font-bold text-gray-900 mb-8">{t('partners.cta.title')}</h2>
               <Link 
                 to="/guidance" 
+                state={{ from: '/partners' }}
                 className="inline-flex items-center justify-center bg-gray-800 text-white px-12 py-6 rounded-xl font-semibold text-lg hover:bg-gray-900 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
 {t('partners.cta.button')}
