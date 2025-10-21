@@ -1,116 +1,151 @@
 import { useTranslation } from 'react-i18next'
-import desertImage from '../assets/wolfgang-hasselmann-1ICIhK-ElJs-unsplash-edited.avif'
-import storyBg from '../assets/varme_hender_1920x1080.jpg'
-import leadershipImg from '../assets/Gemini_Generated_Image_p4saa8p4saa8p4sa.jpg'
+import { Link } from 'react-router-dom'
+import varmeHenderImage from '../assets/varme_hender.jpg'
+import NordicMedicalLogo from '../assets/NordicMedical_Logo.svg'
+import OmsynLogo from '../assets/image (27).png'
+import WestControlLogo from '../assets/image (28).png'
+import KoperaLogo from '../assets/image (29).png'
+import InventasLogo from '../assets/image (30).png'
+import ValideLogo from '../assets/image (31).png'
+
+// Helper function to render text with bold formatting
+const renderBoldText = (text) => {
+  const parts = text.split(/(\*\*.*?\*\*)/g)
+  return parts.map((part, index) => {
+    if (part.startsWith('**') && part.endsWith('**')) {
+      return <strong key={index}>{part.slice(2, -2)}</strong>
+    }
+    return part
+  })
+}
+
+// Helper function to get company logo
+const getCompanyLogo = (company) => {
+  switch (company) {
+    case 'nordicmedtek':
+      return NordicMedicalLogo
+    case 'omsyn':
+      return OmsynLogo
+    case 'westcontrol':
+      return WestControlLogo
+    case 'kopera':
+      return KoperaLogo
+    case 'inventas':
+      return InventasLogo
+    case 'valide':
+      return ValideLogo
+    default:
+      return NordicMedicalLogo
+  }
+}
 
 export default function Vision() {
   const { t } = useTranslation()
   
-  const subtitle2 = t('vision.subtitle2')
-  const [subtitle2First, subtitle2Second] = subtitle2.split('–').map(part => part ? part.trim() : '')
-  
   return (
     <div className="w-full">
-      <section className="py-12 md:py-16 w-full relative overflow-hidden mb-8 md:mb-12 lg:mb-16">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url(${desertImage})`
-          }}
-        />
+      {/* Hero Section */}
+      <section className="py-8 w-full relative overflow-hidden" style={{backgroundImage: `url(${varmeHenderImage})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+        {/* Dark overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/40 z-10"></div>
         
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-            <div className="flex items-start justify-start min-h-[65vh]">
-             <div className="w-full px-8 sm:px-12 lg:px-16 xl:px-20 pt-6 sm:pt-8 lg:pt-10">
-              <div className="max-w-4xl">
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight drop-shadow-lg">
-                  {t('vision.title')}
-                </h1>
-                <div className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-gray-800 leading-relaxed drop-shadow-lg">
-                  <p className="mb-2 whitespace-nowrap">{t('vision.subtitle1')} {subtitle2First}</p>
-                  <p className="mb-2">{subtitle2Second ? `– ${subtitle2Second}` : ''}</p>
-                </div>
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="py-4">
+            {/* Back navigation */}
+            <div className="mb-4">
+              <Link to="/" className="text-white hover:text-gray-300 transition-colors flex items-center">
+                <span className="text-lg">← Tilbake</span>
+              </Link>
+            </div>
+            
+            {/* Main content */}
+            <div className="text-center">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                {t('about.title')}
+              </h1>
+              <div className="max-w-4xl mx-auto">
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white leading-relaxed drop-shadow-lg">
+                  {t('about.description')}
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* Story section */}
-      <section className="relative py-12 md:py-16 bg-white overflow-hidden rounded-xl">
-        <div
-          className="absolute inset-0 md:left-1/2 md:w-1/2 bg-cover bg-center rounded-xl overflow-hidden"
-          style={{ backgroundImage: `url(${storyBg})` }}
-        />
-        <div className="relative w-full px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="bg-white/95 p-6 sm:p-8 rounded-xl shadow-sm">
-              <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900">{t('visionPage.story.title')}</h2>
-              <p className="mt-3 text-xl sm:text-2xl text-gray-700">{t('visionPage.story.subtitle')}</p>
-              <p className="mt-6 text-lg text-gray-800 leading-8">{t('visionPage.story.body')}</p>
-            </div>
-            <div className="hidden md:block" />
+
+      {/* Content Section */}
+      <section className="py-8 bg-white">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-4 text-gray-800 leading-8 text-lg">
+            <p>{renderBoldText(t('about.section.paragraph1'))}</p>
+            <p>{renderBoldText(t('about.section.paragraph2'))}</p>
+            <p>{renderBoldText(t('about.section.paragraph3'))}</p>
           </div>
         </div>
       </section>
-      {/* Leadership section */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
-            <div className="relative w-full rounded-xl overflow-hidden ring-1 ring-slate-200 bg-white">
-              <img src={leadershipImg} alt="Visjonært lederskap" className="w-full h-auto object-cover" />
-            </div>
-            <div className="text-center bg-white rounded-xl ring-1 ring-slate-200 p-6 sm:p-8">
-              <h2 className="text-4xl sm:text-5xl font-semibold text-gray-900">{t('visionPage.leadership.title')}</h2>
-              <p className="mt-3 text-xl sm:text-2xl text-gray-700">{t('visionPage.leadership.subtitle')}</p>
-              <p className="mt-6 text-lg text-gray-800 leading-8 max-w-2xl mx-auto">{t('visionPage.leadership.body')}</p>
-              <p className="mt-6 text-lg italic text-gray-700 max-w-2xl mx-auto">{t('visionPage.leadership.cta')}</p>
-            </div>
+
+      {/* Team Section */}
+      <section className="py-8 bg-white">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-8 uppercase">
+            {t('about.team.title')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {t('about.team.members', { returnObjects: true }).map((member, index) => (
+              <div key={index} className="flex flex-col items-center text-center space-y-3">
+                {/* Company Logo */}
+                <div className="w-24 h-16 flex items-center justify-center">
+                  <img 
+                    src={getCompanyLogo(member.company)} 
+                    alt={`${member.company} logo`}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                
+                {/* Member Name */}
+                <h3 className="text-lg font-bold text-gray-900 uppercase">
+                  {member.name}
+                </h3>
+                
+                {/* Member Role */}
+                <p className="text-sm text-gray-700 leading-relaxed">
+                  {member.role}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-      {/* Closing quote / commas line */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
-          <blockquote className="text-center max-w-5xl mx-auto text-pink-600 italic leading-relaxed">
-            <p className="text-3xl sm:text-4xl md:text-5xl font-medium">{t('visionPage.quote.title')}</p>
-            <p className="mt-6 text-2xl sm:text-3xl md:text-4xl">{t('visionPage.quote.body')}</p>
-          </blockquote>
+
+      {/* Help Section */}
+      <section className="py-8 bg-white">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 text-center mb-8">
+            {t('about.help.title')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {t('about.help.cards', { returnObjects: true }).map((card, index) => (
+              <div key={index} className="border-2 border-dashed border-orange-500 rounded-xl p-6 text-center flex flex-col h-full">
+                {/* Card Title */}
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {card.title}
+                </h3>
+                
+                {/* Card Content */}
+                <p className="text-gray-700 leading-relaxed flex-grow mb-3">
+                  {card.content}
+                </p>
+                
+                {/* Card Button */}
+                <button className="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors mt-auto">
+                  {card.buttonText}
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
-  {/* Solutions and audiences section (moved to bottom) */}
-  <section className="py-12 md:py-16 bg-white">
-    <div className="w-full px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto space-y-8 text-gray-800 leading-8 text-lg">
-        <p>{t('visionPage.solutions.intro1')}</p>
-        <p>{t('visionPage.solutions.intro2')}</p>
-
-        <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">{t('visionPage.solutions.medical.title')}</h3>
-          <p>{t('visionPage.solutions.medical.body')}</p>
-        </div>
-
-        <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">{t('visionPage.solutions.home.title')}</h3>
-          <p>{t('visionPage.solutions.home.intro')}</p>
-          <ul className="list-disc pl-6 space-y-2">
-            {t('visionPage.solutions.home.points', { returnObjects: true }).map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="space-y-4">
-          <h3 className="text-2xl font-semibold">{t('visionPage.solutions.audience.title')}</h3>
-          <p>{t('visionPage.solutions.audience.intro')}</p>
-          <ul className="list-disc pl-6 space-y-2">
-            {t('visionPage.solutions.audience.items', { returnObjects: true }).map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
     </div>
   )
 }

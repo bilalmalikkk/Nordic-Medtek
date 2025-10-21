@@ -19,6 +19,80 @@
     "subpageOf": "Underside av"
   },
   "util": {"about": "Om oss", "demo": "Bestill demo", "contact": "Kontakt oss", "privacy": "Personvernerklæring"},
+  "about": {
+    "title": "Om oss",
+    "description": "Nordic Medical Technologies er en ambisiøs aktør innen velferds teknolog, med mål om å gjøre omsorgstjenester enklere, tryggere og mer tilgjengelige. Vi tilbyr produkter som er enkle å installere, bruke og betjene – utviklet med tanke på både helsepersonell og brukere.",
+    "section": {
+      "paragraph1": "Nordic Medical Technologies ble grunnlagt med en klar visjon: å gjøre velferdsteknologi smartere, enklere og tilgjengelig for alle. Bak selskapet står **Mikal Dreggevik**, en norsk seriegründer med over 30 års erfaring innen elektronikk og teknologisk innovasjon.",
+      "paragraph2": "Mikal er også grunnleggeren av **WestControl AS**, en av Norges største og mest anerkjente elektronikkprodusenter. WestControl er med på laget som utviklings- og produksjonspartner, og sikrer industriell presisjon, høy kvalitet og skalerbarhet i alle våre løsninger.",
+      "paragraph3": "Vi utvikler teknologi som setter mennesket i sentrum og gir helse- og omsorgstjenester verktøyene de trenger for tryggere, mer effektiv omsorg. Våre produkter er enkle å installere, intuitive å bruke og leveres med **prisgaranti** – fordi vi tror på **best value for money** uten kompromiss."
+    },
+    "team": {
+      "title": "MØT TEAMET",
+      "members": [
+        {
+          "name": "MIKAL DREGGEVIK",
+          "role": "CEO, utviklingsleder, designer og elektronikk spesialist",
+          "company": "nordicmedtek"
+        },
+        {
+          "name": "TOR ENNE",
+          "role": "CTO, Teknologistrategi & prosesser rundt MDR godkjenning",
+          "company": "nordicmedtek"
+        },
+        {
+          "name": "VIDAR",
+          "role": "Daglig leder/CEO, Doktor med markedskjennskap og stort nettverkt",
+          "company": "omsyn"
+        },
+        {
+          "name": "DAVID BROWN",
+          "role": "Senior Developer software",
+          "company": "westcontrol"
+        },
+        {
+          "name": "TEAM INDIA",
+          "role": "Heleid datterselskap, Senior utviklere software",
+          "company": "kopera"
+        },
+        {
+          "name": "PER-ANDERS ELVERTRØ",
+          "role": "Regulatory Affairs, MDR prosessen Manager",
+          "company": "inventas"
+        },
+        {
+          "name": "THERESE OPPEGAARD",
+          "role": "Business Development Manager / Incubator Manager Health, Norway Health Tech / EIRAccelerator / Validé AS",
+          "company": "valide"
+        },
+        {
+          "name": "MARIT B. HAGLAND",
+          "role": "Forretningsutvikler Helse, Norway Health Tech / EIRAccelerator / Validé AS",
+          "company": "valide"
+        }
+      ]
+    },
+    "help": {
+      "title": "Lurer du på noe?",
+      "cards": [
+        {
+          "title": "Ofte stilte spørsmål",
+          "content": ".....",
+          "buttonText": "Ofte stilte spørsmål"
+        },
+        {
+          "title": "Hvordan andre bruker løsningene",
+          "content": "Erfaringer..",
+          "buttonText": "Referanser Erfaringer"
+        },
+        {
+          "title": "Kontakt oss",
+          "content": "Vi er her for å svare på spørsmål og hjelpe deg med å velge rett løsning for dine kjære.",
+          "buttonText": "Kontakt oss i dag"
+        }
+      ]
+    }
+  },
   "homePage1": {
     "hero": {
       "title": "Vi leverer løsninger som gir mennesker trygghet, verdighet og bedre livskvalitet",
