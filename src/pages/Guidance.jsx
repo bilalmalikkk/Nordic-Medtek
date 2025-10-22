@@ -11,8 +11,8 @@ export default function Guidance() {
     <div className="guidance-page min-h-screen w-full">
       <div className="w-full">
         {/* Back Button */}
-        <section className="py-4 w-full bg-gray-50">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-4 w-full">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gray-50 rounded-lg">
             <button 
               onClick={() => navigate(-1)}
               className="inline-flex items-center text-gray-600 hover:text-teal-600 transition-colors duration-200"
@@ -26,8 +26,8 @@ export default function Guidance() {
         </section>
 
         {/* Hero Section */}
-        <section className="py-12 w-full relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
-          <div className="w-full px-4 sm:px-6 lg:px-8">
+        <section className="py-12 w-full relative overflow-hidden">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white rounded-lg">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <div className="space-y-4">
@@ -57,8 +57,8 @@ export default function Guidance() {
         </section>
 
         {/* How we can help Section */}
-        <section className="py-20 w-full bg-gradient-to-br from-yellow-50 to-yellow-100">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-20 w-full">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-yellow-50 to-yellow-100 rounded-lg">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 {t('help.heading')}
@@ -89,9 +89,9 @@ export default function Guidance() {
 
       </div>
 
-      {/* Contact Form Section - Full Width */}
-      <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
-        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Contact Form Section */}
+      <section className="py-20 w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg">
           <ContactForm />
         </div>
       </section>

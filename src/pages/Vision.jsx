@@ -45,13 +45,12 @@ export default function Vision() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="py-8 w-full relative overflow-hidden" style={{backgroundImage: `url(${varmeHenderImage})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
-        
+      <section className="w-full relative overflow-hidden">
         {/* Content */}
-        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="py-4">
+        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8" style={{backgroundImage: `url(${varmeHenderImage})`, backgroundSize: 'cover', backgroundPosition: 'center'}}>
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/40 z-10"></div>
+          <div className="relative z-20 py-8">
             {/* Back navigation */}
             <div className="mb-4">
               <Link to="/" className="text-white hover:text-gray-300 transition-colors flex items-center">
@@ -75,8 +74,8 @@ export default function Vision() {
       </section>
 
       {/* Content Section */}
-      <section className="py-8 bg-white">
-        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-lg">
           <div className="space-y-4 text-gray-800 leading-8 text-lg">
             <p>{renderBoldText(t('about.section.paragraph1'))}</p>
             <p>{renderBoldText(t('about.section.paragraph2'))}</p>
@@ -86,8 +85,8 @@ export default function Vision() {
       </section>
 
       {/* Team Section */}
-      <section className="py-8 bg-white">
-        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-lg">
           <h2 className="text-4xl font-bold text-gray-900 text-center mb-8 uppercase">
             {t('about.team.title')}
           </h2>
@@ -119,8 +118,8 @@ export default function Vision() {
       </section>
 
       {/* Help Section */}
-      <section className="py-8 bg-white">
-        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 bg-white rounded-lg">
           <h2 className="text-4xl font-bold text-gray-900 text-center mb-8">
             {t('about.help.title')}
           </h2>
