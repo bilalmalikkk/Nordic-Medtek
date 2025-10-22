@@ -146,11 +146,36 @@ export default function Navbar() {
       {/* Top utility bar */}
       <div className="bg-teal-800 text-gray-200 text-sm w-full">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-end gap-8 lg:gap-12 py-3">
-          <Link to="/vision" className="hover:opacity-80 transition-opacity">Om oss</Link>
-          <Link to="/products" className="hover:opacity-80 transition-opacity">Våre produkter</Link>
-          <Link to="/demo" className="hover:opacity-80 transition-opacity">Book demo</Link>
-          <Link to="/documents" className="hover:opacity-80 transition-opacity">Kontakt oss</Link>
-          <Link to="/privacy" className="hover:opacity-80 transition-opacity">Personvernerklæring</Link>
+          <Link 
+            to="/vision" 
+            className={`hover:opacity-80 transition-opacity ${location.pathname === '/vision' ? 'border-b-2 border-white pb-1' : ''}`}
+          >
+            Om oss
+          </Link>
+          <Link 
+            to="/products" 
+            className={`hover:opacity-80 transition-opacity ${location.pathname === '/products' ? 'border-b-2 border-white pb-1' : ''}`}
+          >
+            Våre produkter
+          </Link>
+          <Link 
+            to="/demo" 
+            className={`hover:opacity-80 transition-opacity ${location.pathname === '/demo' ? 'border-b-2 border-white pb-1' : ''}`}
+          >
+            Book demo
+          </Link>
+          <Link 
+            to="/documents" 
+            className={`hover:opacity-80 transition-opacity ${location.pathname === '/documents' ? 'border-b-2 border-white pb-1' : ''}`}
+          >
+            Kontakt oss
+          </Link>
+          <Link 
+            to="/privacy" 
+            className={`hover:opacity-80 transition-opacity ${location.pathname === '/privacy' ? 'border-b-2 border-white pb-1' : ''}`}
+          >
+            Personvernerklæring
+          </Link>
           <button onClick={toggleLang} className="hover:opacity-80 transition-opacity">{t('nav.lang')}</button>
         </div>
       </div>
