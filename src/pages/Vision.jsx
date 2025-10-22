@@ -138,9 +138,30 @@ export default function Vision() {
                 </p>
                 
                 {/* Card Button */}
-                <button className="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors mt-auto">
-                  {card.buttonText}
-                </button>
+                {card.title === 'Kontakt oss' ? (
+                  <button 
+                    onClick={() => {
+                      // Open guidance page in current tab
+                      window.location.href = '/guidance'
+                      // Open contact page in new tab
+                      window.open('/documents', '_blank')
+                    }}
+                    className="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors mt-auto"
+                  >
+                    {card.buttonText}
+                  </button>
+                ) : card.title === 'Ofte stilte spørsmål' ? (
+                  <button 
+                    onClick={() => window.location.href = '/faq'}
+                    className="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors mt-auto"
+                  >
+                    {card.buttonText}
+                  </button>
+                ) : (
+                  <button className="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors mt-auto">
+                    {card.buttonText}
+                  </button>
+                )}
               </div>
             ))}
           </div>

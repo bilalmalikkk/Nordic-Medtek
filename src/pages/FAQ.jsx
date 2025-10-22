@@ -1,11 +1,10 @@
 import { useTranslation } from 'react-i18next'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 
 export default function FAQ() {
   const { t } = useTranslation()
-  const location = useLocation()
-  const fromPage = location.state?.from || '/'
+  const navigate = useNavigate()
   
   const [openSection, setOpenSection] = useState(null)
   
@@ -19,8 +18,8 @@ export default function FAQ() {
         {/* Back Button */}
         <div className="w-full bg-gray-50 border-b border-gray-200">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <Link 
-              to={fromPage}
+            <button 
+              onClick={() => navigate(-1)}
               className="inline-flex items-center text-gray-700 hover:text-teal-600 transition-colors group"
             >
               <svg 
@@ -32,7 +31,7 @@ export default function FAQ() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
               <span className="font-medium">{t('faq.backButton')}</span>
-            </Link>
+            </button>
           </div>
         </div>
 

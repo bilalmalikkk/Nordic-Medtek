@@ -137,8 +137,9 @@ export default function Navbar() {
     return pathname
   }
 
-  // Check if current page is guidance page
+  // Check if current page is guidance or experiences page
   const isGuidancePage = location.pathname === '/guidance'
+  const isExperiencesPage = location.pathname === '/experiences'
 
   return (
     <header className="w-screen">
@@ -292,8 +293,8 @@ export default function Navbar() {
           </div>
       </div>
       
-      {/* Breadcrumb for subpages - hide for guidance pages */}
-      {!isGuidancePage && <Breadcrumb />}
+      {/* Breadcrumb for subpages - hide for guidance and experiences pages */}
+      {!isGuidancePage && !isExperiencesPage && <Breadcrumb />}
     </header>
   )
 }

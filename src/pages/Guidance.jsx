@@ -1,12 +1,11 @@
 import { useTranslation } from 'react-i18next'
-import { Link, useLocation } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import ContactForm from '../components/ContactForm'
 import veiledning from '../assets/veiledning.png'
 
 export default function Guidance() {
   const { t } = useTranslation()
-  const location = useLocation()
-  const fromPage = location.state?.from || '/'
+  const navigate = useNavigate()
   
   return (
     <div className="guidance-page min-h-screen w-full">
@@ -14,15 +13,15 @@ export default function Guidance() {
         {/* Back Button */}
         <section className="py-4 w-full bg-gray-50">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <Link 
-              to={fromPage}
+            <button 
+              onClick={() => navigate(-1)}
               className="inline-flex items-center text-gray-600 hover:text-teal-600 transition-colors duration-200"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               <span className="font-medium">Tilbake</span>
-            </Link>
+            </button>
           </div>
         </section>
 
