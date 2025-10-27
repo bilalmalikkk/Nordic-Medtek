@@ -159,6 +159,9 @@ export default function AlarmCommunication1() {
                     <p className="text-xl text-gray-700 leading-relaxed">
                       {t('alarmCommunication.howAlarmButtonsWork.text2')}
                     </p>
+                    <p className="text-xl text-gray-700 leading-relaxed mt-6 font-semibold">
+                      Alle våre alarmknapper har innebygget automatisk fall deteksjon.
+                    </p>
                   </div>
                   <div className="flex justify-center">
                     <div className="relative w-full max-w-xs">

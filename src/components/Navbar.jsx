@@ -143,8 +143,8 @@ export default function Navbar() {
 
   return (
     <header className="w-screen">
-      {/* Top utility bar */}
-      <div className="bg-teal-800 text-gray-200 text-sm w-full">
+      {/* Top utility bar - Hidden on mobile, shown on desktop */}
+      <div className="hidden lg:block bg-teal-800 text-gray-200 text-sm w-full">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-end gap-8 lg:gap-12 py-3">
           <Link 
             to="/vision" 
@@ -207,16 +207,15 @@ export default function Navbar() {
             </NavLink>
           </nav>
 
-          {/* Mobile menu button and language toggle */}
+          {/* Mobile menu button - larger size */}
           <div className="flex items-center gap-4 md:hidden">
-            <button onClick={toggleLang} className="text-sm hover:underline">{t('nav.lang')}</button>
             <button
               onClick={toggleMobileMenu}
-              className="text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded-md p-2 transition-all duration-300 hover:bg-teal-600 hover:scale-110"
+              className="text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded-md p-3 transition-all duration-300 hover:bg-teal-600 hover:scale-110"
               aria-label="Toggle mobile menu"
             >
               <svg
-                className={`w-6 h-6 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-180' : 'rotate-0'}`}
+                className={`w-8 h-8 transition-all duration-300 ${isMobileMenuOpen ? 'rotate-180' : 'rotate-0'}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -239,83 +238,89 @@ export default function Navbar() {
             : 'max-h-0 opacity-0'
         }`}>
           <nav className="px-4 py-4 space-y-2">
-              <NavLink 
-                to="/" 
-                end 
-                className={({isActive})=> `block py-2 px-3 rounded-md text-base transition-all duration-200 transform hover:scale-105 ${isActive? 'bg-teal-500 text-white' : 'text-gray-200 hover:bg-teal-500 hover:text-white'}`}
+            {/* Main Navigation Items */}
+            <NavLink 
+              to="/" 
+              end 
+              className={({isActive})=> `block py-2 px-3 rounded-md text-base transition-all duration-200 transform hover:scale-105 ${isActive? 'bg-teal-500 text-white' : 'text-gray-200 hover:bg-teal-500 hover:text-white'}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t('nav.home')}
+            </NavLink>
+            <NavLink 
+              to="/private" 
+              className={({isActive})=> `block py-2 px-3 rounded-md text-base transition-all duration-200 transform hover:scale-105 ${isPrivateActive(isActive)? 'bg-teal-500 text-white' : 'text-gray-200 hover:bg-teal-500 hover:text-white'}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t('nav.private')}
+            </NavLink>
+            <NavLink 
+              to="/kommune1" 
+              className={({isActive})=> `block py-2 px-3 rounded-md text-base transition-all duration-200 transform hover:scale-105 ${isMunicipalityActive(isActive)? 'bg-teal-500 text-white' : 'text-gray-200 hover:bg-teal-500 hover:text-white'}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t('nav.municipality')}
+            </NavLink>
+            <NavLink 
+              to="/company" 
+              className={({isActive})=> `block py-2 px-3 rounded-md text-base transition-all duration-200 transform hover:scale-105 ${isCompanyActive(isActive)? 'bg-teal-500 text-white' : 'text-gray-200 hover:bg-teal-500 hover:text-white'}`}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {t('nav.company')}
+            </NavLink>
+            
+            {/* Separator */}
+            <div className="pt-4 border-t border-teal-500 mt-4">
+              {/* Top Bar Items - moved to mobile menu */}
+              <Link 
+                to="/vision" 
+                className="block py-2 px-3 rounded-md text-sm text-gray-200 hover:bg-teal-500 hover:text-white transition-all duration-200 transform hover:scale-105"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t('nav.home')}
-              </NavLink>
-              <NavLink 
-                to="/private" 
-                className={({isActive})=> `block py-2 px-3 rounded-md text-base transition-all duration-200 transform hover:scale-105 ${isPrivateActive(isActive)? 'bg-teal-500 text-white' : 'text-gray-200 hover:bg-teal-500 hover:text-white'}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t('nav.private')}
-              </NavLink>
-              <NavLink 
-                to="/kommune1" 
-                className={({isActive})=> `block py-2 px-3 rounded-md text-base transition-all duration-200 transform hover:scale-105 ${isMunicipalityActive(isActive)? 'bg-teal-500 text-white' : 'text-gray-200 hover:bg-teal-500 hover:text-white'}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t('nav.municipality')}
-              </NavLink>
-              <NavLink 
-                to="/company" 
-                className={({isActive})=> `block py-2 px-3 rounded-md text-base transition-all duration-200 transform hover:scale-105 ${isCompanyActive(isActive)? 'bg-teal-500 text-white' : 'text-gray-200 hover:bg-teal-500 hover:text-white'}`}
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t('nav.company')}
-              </NavLink>
-              <NavLink 
+                Om oss
+              </Link>
+              <Link 
                 to="/products" 
-                className={({isActive})=> `block py-2 px-3 rounded-md text-base transition-all duration-200 transform hover:scale-105 ${isProductsActive(isActive)? 'bg-teal-500 text-white' : 'text-gray-200 hover:bg-teal-500 hover:text-white'}`}
+                className="block py-2 px-3 rounded-md text-sm text-gray-200 hover:bg-teal-500 hover:text-white transition-all duration-200 transform hover:scale-105"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t('nav.products')}
-              </NavLink>
-              <NavLink 
-                to="/partners" 
-                className={({isActive})=> `block py-2 px-3 rounded-md text-base transition-all duration-200 transform hover:scale-105 ${isPartnersActive(isActive)? 'bg-teal-500 text-white' : 'text-gray-200 hover:bg-teal-500 hover:text-white'}`}
+                Våre produkter
+              </Link>
+              <Link 
+                to="/demo" 
+                className="block py-2 px-3 rounded-md text-sm text-gray-200 hover:bg-teal-500 hover:text-white transition-all duration-200 transform hover:scale-105"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                {t('nav.partners')}
-              </NavLink>
+                Book demo
+              </Link>
+              <Link 
+                to="/documents" 
+                className="block py-2 px-3 rounded-md text-sm text-gray-200 hover:bg-teal-500 hover:text-white transition-all duration-200 transform hover:scale-105"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Kontakt oss
+              </Link>
+              <Link 
+                to="/privacy" 
+                className="block py-2 px-3 rounded-md text-sm text-gray-200 hover:bg-teal-500 hover:text-white transition-all duration-200 transform hover:scale-105"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Personvernerklæring
+              </Link>
               
-              {/* Mobile utility links */}
-              <div className="pt-4 border-t border-teal-500 mt-4">
-                <Link 
-                  to="/vision" 
-                  className="block py-2 px-3 rounded-md text-sm text-gray-200 hover:bg-teal-500 hover:text-white transition-all duration-200 transform hover:scale-105"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {t('util.about')}
-                </Link>
-                <Link 
-                  to="/demo" 
-                  className="block py-2 px-3 rounded-md text-sm text-gray-200 hover:bg-teal-500 hover:text-white transition-all duration-200 transform hover:scale-105"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {t('util.demo')}
-                </Link>
-                <Link 
-                  to="/documents" 
-                  className="block py-2 px-3 rounded-md text-sm text-gray-200 hover:bg-teal-500 hover:text-white transition-all duration-200 transform hover:scale-105"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {t('util.contact')}
-                </Link>
-                <Link 
-                  to="/privacy" 
-                  className="block py-2 px-3 rounded-md text-sm text-gray-200 hover:bg-teal-500 hover:text-white transition-all duration-200 transform hover:scale-105"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {t('util.privacy')}
-                </Link>
-              </div>
-            </nav>
-          </div>
+              {/* Language Toggle - only in mobile menu */}
+              <button 
+                onClick={() => {
+                  toggleLang()
+                  setIsMobileMenuOpen(false)
+                }} 
+                className="block w-full text-left py-2 px-3 rounded-md text-sm text-gray-200 hover:bg-teal-500 hover:text-white transition-all duration-200 transform hover:scale-105"
+              >
+                {t('nav.lang')}
+              </button>
+            </div>
+          </nav>
+        </div>
       </div>
       
       {/* Breadcrumb for subpages - hide for guidance and experiences pages */}

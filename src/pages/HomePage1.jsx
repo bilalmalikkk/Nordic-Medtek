@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import SEOHead from '../components/SEOHead'
 import heroImage from '../assets/Landingpage.png'
 import varmeHenderImage from '../assets/varme_hender.jpg'
 import varmeHenderImageFallback from '../assets/varme_hender.jpg'
@@ -21,7 +22,15 @@ export default function HomePage1() {
   const { t } = useTranslation()
 
   return (
-    <div className="min-h-screen w-full">
+    <>
+      <SEOHead 
+        title="NordicMedTek - Nordic Medical Technologies"
+        description="Leading provider of medical technology solutions including fall detection systems, alarm buttons, and healthcare monitoring devices for elderly care in Nordic countries."
+        keywords="medical technology, fall detection, alarm systems, healthcare monitoring, elderly care, Nordic medical devices, safety solutions"
+        image="/assets/Landingpage.png"
+        url="/"
+      />
+      <div className="min-h-screen w-full">
       <div className="w-full">
       {/* Top separator */}
       <div className="h-1 bg-white"></div>
@@ -368,5 +377,6 @@ export default function HomePage1() {
 
       </div>
     </div>
+    </>
   )
 }

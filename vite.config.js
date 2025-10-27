@@ -7,7 +7,19 @@ export default defineConfig({
   server: {
     port: 5173,
     strictPort: false,
+    // Force cache invalidation
+    force: true,
   },
   // Ensure environment variables are properly exposed
   envPrefix: 'VITE_',
+  // Add cache busting
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/[name].[hash].js`,
+        chunkFileNames: `assets/[name].[hash].js`,
+        assetFileNames: `assets/[name].[hash].[ext]`
+      }
+    }
+  }
 })

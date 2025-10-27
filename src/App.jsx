@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import HelpCards from './components/HelpCards'
@@ -20,7 +21,6 @@ import Partners from './pages/Partners'
 import VaktromIntegration from './pages/VaktromIntegration'
 import Products from './pages/Products'
 import ProductDetail from './pages/ProductDetail'
-import ProductDatasheet from './pages/ProductDatasheet'
 import Guidance from './pages/Guidance'
 import AlarmCommunication from './pages/AlarmCommunication'
 import AlarmCommunication1 from './pages/AlarmCommunication1'
@@ -61,11 +61,12 @@ import DashboardViewer from './pages/DashboardViewer'
 
 function App() {
   return (
-    <div>
-      <ScrollToTop />
-      <Navbar />
-      <PageIndicator />
-      <main className="w-full max-w-[2000px] mx-auto">
+    <HelmetProvider>
+      <div>
+        <ScrollToTop />
+        <Navbar />
+        <PageIndicator />
+        <main className="w-full max-w-[2000px] mx-auto">
         <Routes>
           <Route path="/" element={<HomePage1 />} />
           <Route path="/home-original" element={<Home />} />
@@ -82,7 +83,6 @@ function App() {
           <Route path="/vaktrom-integration" element={<VaktromIntegration />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetail />} />
-          <Route path="/products/:id/datasheet" element={<ProductDatasheet />} />
           <Route path="/guidance" element={<Guidance />} />
           <Route path="/alarm-communication" element={<AlarmCommunication />} />
           <Route path="/alarm-communication1" element={<AlarmCommunication1 />} />
@@ -121,8 +121,9 @@ function App() {
           <Route path="/info/:infoType" element={<InfoPage />} />
           <Route path="/dashboard/:dashboardType" element={<DashboardViewer />} />
         </Routes>
-      </main>
-    </div>
+        </main>
+      </div>
+    </HelmetProvider>
   )
 }
 

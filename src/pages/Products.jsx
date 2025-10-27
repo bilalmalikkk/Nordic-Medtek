@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'
 import { useProducts, useCategories } from '../hooks/useCmsProducts'
 import { API_BASE_URL } from '../services/cmsApi'
 import { Link, useLocation } from 'react-router-dom'
-import ProductModal from '../components/ProductModal'
 
 export default function Products() {
   const { t } = useTranslation()
@@ -14,6 +13,26 @@ export default function Products() {
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [lastRefresh, setLastRefresh] = useState(Date.now())
+
+  // Handle modal escape key and body overflow
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        setIsModalOpen(false)
+        setSelectedProduct(null)
+      }
+    }
+
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEscape)
+      document.body.style.overflow = 'hidden'
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape)
+      document.body.style.overflow = 'unset'
+    }
+  }, [isModalOpen])
 
   // Auto-refresh when page becomes visible (user switches back to tab)
   // MUST be before any conditional returns to follow React Rules of Hooks
@@ -34,14 +53,6 @@ export default function Products() {
   }, [lastRefresh, refresh])
 
   const displayProducts = products
-  
-  // Debug: Log the products being used
-  console.log('=== PRODUCTS PAGE DEBUG ===')
-  console.log('Products from CMS:', products)
-  console.log('Products loading:', productsLoading)
-  console.log('Products error:', productsError)
-  console.log('Display products:', displayProducts)
-  console.log('==========================')
   const isLoading = productsLoading || categoriesLoading
   const hasError = productsError && products.length === 0
 
@@ -84,6 +95,28 @@ export default function Products() {
     acc[categoryName].push(product)
     return acc
   }, {})
+
+  // Define the desired category order
+  const categoryOrder = [
+    'Communication',
+    'Alarm knapp og varsling',
+    'Trygghet og fallsikring',
+    'Medisinsk oppfølging',
+    'Cameras'
+  ]
+
+  // Sort categories according to the desired order
+  const sortedGroups = Object.entries(groups).sort(([a], [b]) => {
+    const indexA = categoryOrder.indexOf(a)
+    const indexB = categoryOrder.indexOf(b)
+    
+    // If category is not in the predefined order, place it at the end
+    if (indexA === -1 && indexB === -1) return a.localeCompare(b)
+    if (indexA === -1) return 1
+    if (indexB === -1) return -1
+    
+    return indexA - indexB
+  })
 
   // Calculate base height for cards based on content
   const calculateCardHeight = (product) => {
@@ -188,13 +221,13 @@ export default function Products() {
         {/* Products by Category */}
         <section className="py-20 w-full">
           <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-            {Object.keys(groups).length === 0 ? (
+            {sortedGroups.length === 0 ? (
               <div className="text-center py-16">
                 <p className="text-gray-600">{t('products.noProducts')}</p>
               </div>
             ) : (
               <div className="space-y-16">
-              {Object.entries(groups).map(([category, categoryProducts]) => (
+              {sortedGroups.map(([category, categoryProducts]) => (
                 <div key={category} className="bg-white rounded-2xl shadow-lg p-8">
                   <div className="flex items-center mb-8">
                     <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mr-4">
@@ -259,20 +292,29 @@ export default function Products() {
                           />
                           
                           <div className="flex justify-center mt-auto">
-                            <Link
-                              to={product.datasheet_url ? `/products/${product.id}/datasheet` : '#'}
-                              className={`text-sm px-6 py-3 rounded-lg transition-colors flex items-center gap-2 ${
-                                product.datasheet_url 
-                                  ? 'bg-teal-600 text-white hover:bg-teal-700' 
-                                  : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                              }`}
-                              onClick={(e) => {
-                                e.stopPropagation()
-                                if (!product.datasheet_url) e.preventDefault()
-                              }}
-                            >
-                              Datasheet
-                            </Link>
+                            {product.datasheet_url ? (
+                              <a
+                                href={product.datasheet_url.startsWith('http') ? product.datasheet_url : `${API_BASE_URL}${product.datasheet_url}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm px-6 py-3 rounded-lg transition-colors flex items-center gap-2 bg-teal-600 text-white hover:bg-teal-700"
+                                onClick={(e) => {
+                                  e.stopPropagation()
+                                }}
+                              >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                                View Datasheet
+                              </a>
+                            ) : (
+                              <span className="text-sm px-6 py-3 rounded-lg bg-gray-300 text-gray-500 cursor-not-allowed flex items-center gap-2">
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                                No Datasheet
+                              </span>
+                            )}
                           </div>
                         </div>
                       </div>
@@ -287,11 +329,118 @@ export default function Products() {
         </section>
       </div>
       
-      <ProductModal 
-        product={selectedProduct}
-        isOpen={isModalOpen}
-        onClose={closeModal}
-      />
+      {/* Product Modal */}
+      {isModalOpen && selectedProduct && (
+        <>
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 z-50"
+            onClick={closeModal}
+          />
+          
+          {/* Modal */}
+          <div 
+            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto mx-4"
+            style={{
+              position: 'fixed',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              zIndex: 9999
+            }}
+          >
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 z-10 p-2 bg-gray-100 hover:bg-gray-200 rounded-full transition-colors"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <div className="p-8">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <div className="aspect-w-16 aspect-h-12 bg-gray-100 rounded-xl overflow-hidden mb-6">
+                    {selectedProduct.image_url ? (
+                      <img 
+                        src={selectedProduct.image_url.startsWith('http') ? selectedProduct.image_url : `${API_BASE_URL}${selectedProduct.image_url}`}
+                        alt={selectedProduct.product_name}
+                        className="w-full h-64 object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-64 bg-gradient-to-br from-teal-100 to-teal-200 flex items-center justify-center">
+                        <svg className="w-16 h-16 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        </svg>
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                <div className="space-y-6">
+                  <div>
+                    <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                      {selectedProduct.product_name}
+                    </h1>
+                    <p className="text-gray-600 text-lg mb-4">
+                      {selectedProduct.item_number}
+                    </p>
+                    {selectedProduct.title && (
+                      <h2 className="text-2xl font-bold text-gray-800 mb-4">
+                        {selectedProduct.title}
+                      </h2>
+                    )}
+                    <p className="text-gray-800 text-lg font-semibold mb-6">
+                      {selectedProduct.technical_data}
+                    </p>
+                  </div>
+
+                  {selectedProduct.detailed_description && (
+                    <div className="mb-6">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Detailed Description</h3>
+                      <div className="text-gray-700 bg-gray-50 p-4 rounded-lg">
+                        <p className="whitespace-pre-line">{selectedProduct.detailed_description}</p>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="prose prose-lg max-w-none">
+                    <div 
+                      className="text-gray-700 rich-text-content"
+                      dangerouslySetInnerHTML={{ 
+                        __html: selectedProduct.rich_text || selectedProduct.rich_text_description || '<p><em>No rich text content available</em></p>' 
+                      }}
+                    />
+                  </div>
+
+                  <div className="flex gap-4 pt-6">
+                    {selectedProduct.datasheet_url && (
+                      <a
+                        href={selectedProduct.datasheet_url.startsWith('http') ? selectedProduct.datasheet_url : `${API_BASE_URL}${selectedProduct.datasheet_url}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors flex items-center gap-2"
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        View Datasheet
+                      </a>
+                    )}
+                    <button
+                      onClick={closeModal}
+                      className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+                    >
+                      Close
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   )
 }

@@ -1,5 +1,5 @@
 // CMS API service for connecting to the integrated CMS
-const API_URL = import.meta.env.VITE_CMS_URL || 'http://localhost:3001/api';
+const API_URL = import.meta.env.VITE_CMS_URL || 'https://nordic-medtek-cms-production.up.railway.app/api';
 // Base without trailing /api for assets like /uploads/...
 const API_BASE_URL = API_URL.replace(/\/?api\/?$/, '');
 

@@ -251,7 +251,7 @@ export default function Kommune1() {
                     {t('kommune1.solutionExplanation.fallSensors.title')}
                   </h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    {t('kommune1.solutionExplanation.fallSensors.description')}
+                    {t('kommune1.solutionExplanation.fallSensors.description')} <span className="text-yellow-600 font-semibold">les mer</span>
                   </p>
                 </Link>
 
@@ -268,7 +268,7 @@ export default function Kommune1() {
                     {t('kommune1.solutionExplanation.healthSensors.title')}
                   </h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    {t('kommune1.solutionExplanation.healthSensors.description')}
+                    {t('kommune1.solutionExplanation.healthSensors.description')} <span className="text-yellow-600 font-semibold">les mer</span>
                   </p>
                 </Link>
 
@@ -285,7 +285,7 @@ export default function Kommune1() {
                     {t('kommune1.solutionExplanation.alarmButton.title')}
                   </h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    {t('kommune1.solutionExplanation.alarmButton.description')}
+                    {t('kommune1.solutionExplanation.alarmButton.description')} <span className="text-yellow-600 font-semibold">les mer</span>
                   </p>
                 </Link>
 
@@ -302,7 +302,7 @@ export default function Kommune1() {
                     {t('kommune1.solutionExplanation.easeblinkPro.title')}
                   </h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    {t('kommune1.solutionExplanation.easeblinkPro.description')}
+                    {t('kommune1.solutionExplanation.easeblinkPro.description')} <span className="text-yellow-600 font-semibold">les mer</span>
                   </p>
                 </Link>
               </div>
@@ -339,7 +339,7 @@ export default function Kommune1() {
                     {t('kommune1.solutionExplanation.centralOverview.title')}
                   </h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    {t('kommune1.solutionExplanation.centralOverview.description')}
+                    {t('kommune1.solutionExplanation.centralOverview.description')} <span className="text-yellow-600 font-semibold">les mer</span>
                   </p>
                 </Link>
 
@@ -356,7 +356,7 @@ export default function Kommune1() {
                     {t('kommune1.solutionExplanation.directNotification.title')}
                   </h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    {t('kommune1.solutionExplanation.directNotification.description')}
+                    {t('kommune1.solutionExplanation.directNotification.description')} <span className="text-yellow-600 font-semibold">les mer</span>
                   </p>
                 </Link>
 
@@ -373,7 +373,7 @@ export default function Kommune1() {
                     {t('kommune1.solutionExplanation.automaticNews.title')}
                   </h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    {t('kommune1.solutionExplanation.automaticNews.description')}
+                    {t('kommune1.solutionExplanation.automaticNews.description')} <span className="text-yellow-600 font-semibold">les mer</span>
                   </p>
                 </Link>
 
@@ -390,7 +390,7 @@ export default function Kommune1() {
                     {t('kommune1.solutionExplanation.automaticTrend.title')}
                   </h4>
                   <p className="text-xs text-gray-600 leading-relaxed">
-                    {t('kommune1.solutionExplanation.automaticTrend.description')}
+                    {t('kommune1.solutionExplanation.automaticTrend.description')} <span className="text-yellow-600 font-semibold">les mer</span>
                   </p>
                 </Link>
               </div>

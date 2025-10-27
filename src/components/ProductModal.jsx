@@ -22,14 +22,6 @@ export default function ProductModal({ product, isOpen, onClose, cardPosition })
 
   if (!isOpen || !product) return null
 
-  const modalStyle = {
-    position: 'fixed',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    zIndex: 9999
-  }
-
   return (
     <>
       {/* Backdrop */}
@@ -41,7 +33,13 @@ export default function ProductModal({ product, isOpen, onClose, cardPosition })
       {/* Modal */}
       <div 
         className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto mx-4"
-        style={modalStyle}
+        style={{
+          position: 'fixed',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          zIndex: 9999
+        }}
       >
         <button
           onClick={onClose}
