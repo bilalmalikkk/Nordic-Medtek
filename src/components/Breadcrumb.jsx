@@ -9,8 +9,8 @@ export default function Breadcrumb() {
   const mainPage = getMainPage(location.pathname, location.state)
   const currentPage = location.pathname
   
-  // Hide breadcrumb for FAQ, IT Welfare Technology, and Demo pages
-  if (currentPage === '/faq' || currentPage === '/it-welfare-technology' || currentPage === '/demo') return null
+  // Hide breadcrumb for FAQ, IT Welfare Technology, Demo, Trygghet og fallsikring, alarm-buttons, and medical-followup-products pages
+  if (currentPage === '/faq' || currentPage === '/it-welfare-technology' || currentPage === '/demo' || currentPage === '/trygghet-og-fallsikring' || currentPage === '/alarm-buttons' || currentPage === '/medical-followup-products') return null
   
   if (!mainPage || mainPage === currentPage || !ready) return null
   

@@ -242,6 +242,7 @@
     "faq": "FAQ"
   },
   "medicalFollowupProducts": {
+    "breadcrumb": "Back",
     "hero": {
       "title": "Products for medical follow-up at home",
       "subtitle1": "Avoid a fall changing everything.",
@@ -345,6 +346,7 @@
     }
   },
   "alarmButtons": {
+    "breadcrumb": "Back",
     "hero": {
       "title": "Products for alarm buttons and quick notification",
       "subtitle": "Avoid a fall changing everything. Our sensors detect falls completely automatically.",
@@ -389,6 +391,7 @@
     }
   },
   "trygghetOgFallsikring": {
+    "breadcrumb": "Back",
     "hero": {
       "title": "Products for safety and fall protection",
       "subtitle": "Avoid a fall changing everything. Our sensors detect falls completely automatically.",
@@ -2632,6 +2635,29 @@
     "featured": "Featured",
     "active": "Active",
     "itemNumber": "Item #{number}"
+  },
+  "mdrInfo": {
+    "title": "What is MDR?",
+    "heroDescription": "MDR (Medical Device Regulation) is the EU's regulatory framework for medical devices. It ensures high patient safety and sets strict requirements for quality, documentation, and traceability for products to be placed on the market.",
+    "subtitle": "Medical Device Regulation (MDR) Certification",
+    "description": "Our products are certified under the European Union's Medical Device Regulation (MDR), ensuring the highest standards of safety, quality, and efficacy. This certification demonstrates our commitment to providing medical devices that meet rigorous European regulatory requirements.",
+    "certification": {
+      "title": "What is MDR Certification?",
+      "description": "The EU Medical Device Regulation (MDR) is the most stringent medical device regulation framework in the world. Certification under MDR means our products have undergone extensive clinical evaluation, quality management system audits, and comprehensive documentation review by notified bodies."
+    },
+    "benefits": {
+      "title": "Benefits of MDR Certified Products",
+      "list": [
+        "Guaranteed safety and performance standards",
+        "Full compliance with EU regulatory requirements",
+        "Comprehensive clinical evidence and documentation",
+        "Enhanced patient and user confidence",
+        "Continuous quality monitoring and improvement",
+        "Traceability throughout the supply chain"
+      ]
+    },
+    "backToProducts": "Back to Products",
+    "backToHomepage": "Back to Homepage"
   },
   "csvImport": {
     "accessRequired": "Access Required",

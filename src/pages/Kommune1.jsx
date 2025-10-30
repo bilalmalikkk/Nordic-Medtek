@@ -18,6 +18,7 @@ import medicalHomeImage from '../assets/medical@home.png'
 import newsImage from '../assets/NEWS.png'
 import trendsImage from '../assets/trends).png'
 import vaktrommetImage from '../assets/vaktrommet.png'
+import jpegImage from '../assets/jpeg.jpg'
 
 export default function Kommune1() {
   const { t } = useTranslation()
@@ -313,7 +314,7 @@ export default function Kommune1() {
               <div className="flex justify-center mb-6">
                 <img 
                   src={presentation2Image} 
-                  alt="Kontrollrommet" 
+                  alt="Vaktrommet" 
                   className="w-full h-64 object-contain rounded-xl"
                 />
               </div>
@@ -442,15 +443,15 @@ export default function Kommune1() {
               <div className="flex justify-center mb-6">
                 <img 
                   src={vaktrommetImage} 
-                  alt="Vaktsentralen tar imot data" 
+                  alt="Vaktrommet tar imot data" 
                   className="w-full max-w-md h-80 object-contain"
                 />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                Vaktsentralen tar imot data
+                Vaktrommet tar imot data
               </h3>
               <p className="text-base text-gray-700 leading-relaxed text-center mb-4">
-                Når en sensor aktiveres, sender den data til vaktsentralen, der den behandles med tidsbesparende funksjoner.
+                Når en sensor aktiveres, sender den data til Vaktrommet, der den behandles med tidsbesparende funksjoner.
               </p>
               <div className="text-center mt-auto">
                 <Link 
@@ -490,6 +491,71 @@ export default function Kommune1() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vaktrommet Flexibility Section */}
+      <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6 text-center">
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
+                  Vaktrommet er fleksibelt og kan koble mot alle vaktsentraler
+                </h2>
+                <div className="w-16 h-1 bg-teal-600 rounded-full mx-auto"></div>
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Vaktrommet samarbeider utelukkende med åpne og tilgjengelige vaktsentraler. Vi fremmer et inkluderende økosystem der teknologi kommer flest mulig til gode, uten låste løsninger eller proprietære bindinger.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-center justify-center">
+                  <div className="w-2 h-2 bg-teal-600 rounded-full mr-3 flex-shrink-0"></div>
+                  <p className="text-base text-gray-800 font-semibold">
+                    Ingen eksklusive avtaler
+                  </p>
+                </div>
+                <div className="flex items-center justify-center">
+                  <div className="w-2 h-2 bg-teal-600 rounded-full mr-3 flex-shrink-0"></div>
+                  <p className="text-base text-gray-800 font-semibold">
+                    Ingen teknologiske sperrer
+                  </p>
+                </div>
+                <div className="flex items-center justify-center">
+                  <div className="w-2 h-2 bg-teal-600 rounded-full mr-3 flex-shrink-0"></div>
+                  <p className="text-base text-gray-800 font-semibold">
+                    Full fleksibilitet for kommuner og tjenesteleverandører
+                  </p>
+                </div>
+              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Fremtidens velferdsteknologi må være åpen, skalerbar og interoperabel. Dette sikrer at alle kan bidra og dra nytte av løsningen.
+              </p>
+              <div className="pt-4">
+                <Link 
+                  to="/products"
+                  className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold transition-colors group"
+                >
+                  Produkter
+                  <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-lg">
+                <div className="absolute -inset-2 bg-gradient-to-r from-teal-400 to-blue-500 rounded-2xl blur opacity-20"></div>
+                <div className="relative bg-white p-4 rounded-2xl shadow-2xl">
+                  <img 
+                    src={jpegImage} 
+                    alt="Vaktrommet fleksibel integrasjon" 
+                    className="w-full h-auto rounded-xl"
+                  />
+                </div>
               </div>
             </div>
           </div>

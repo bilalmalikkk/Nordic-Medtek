@@ -2,6 +2,9 @@ import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
 import ContactForm from '../components/ContactForm'
 import erfaringerImage from '../assets/erfaringer.png'
+import image33 from '../assets/image (33).png'
+import image34 from '../assets/image (34).png'
+import image35 from '../assets/image (35).png'
 
 export default function Experiences() {
   const { t } = useTranslation()
@@ -56,54 +59,88 @@ export default function Experiences() {
           </div>
         </section>
 
-        {/* Customer Stories Section */}
-        <section className="customer-stories-section py-20 w-full bg-gray-50 border-2 border-dashed border-gray-300">
-          <div className="w-full">
+        {/* Customer Testimonials Section */}
+        <section className="py-20 w-full bg-gradient-to-br from-blue-50 to-indigo-50">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                {t('experiences.customerStories.title')}
+                Kundehistorier fra kommuner og hjemmetjenester
               </h2>
               <div className="w-24 h-1 bg-teal-600 mx-auto rounded-full"></div>
             </div>
+            
             <div className="grid md:grid-cols-3 gap-8">
+              {/* Oslo universitetssykehus */}
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl font-bold text-blue-600">A</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    {t('experiences.customerStories.municipalityA.title')}
+                <div className="text-center mb-6">
+                  <img 
+                    src={image33} 
+                    alt="Oslo universitetssykehus logo" 
+                    className="w-40 h-40 mx-auto mb-4 object-contain"
+                  />
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    Hjemmemonitorering av Covid-19 pasienter
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {t('experiences.customerStories.municipalityA.description')}
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                  "Vi har fått svært positiv tilbakemelding fra pasientene som har brukt hjemmemonitorering. De opplever økt trygghet og bedre forståelse av sin sykdom. Det gir dem en følelse av kontroll og trygghet i eget hjem. Monitorering er også verdifull for tidlig oppdagelse av forverring for å unngå sykehusinnleggelse."
+                </p>
+                <div className="text-center">
+                  <p className="text-sm font-semibold text-gray-900">
+                    Johannes Nordsteien Svensøy
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    Lege, MSc.EMDM (Katastrofemedisin)
                   </p>
                 </div>
               </div>
 
+              {/* Farsund Kommune */}
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl font-bold text-green-600">B</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    {t('experiences.customerStories.municipalityB.title')}
+                <div className="text-center mb-6">
+                  <img 
+                    src={image34} 
+                    alt="Farsund Kommune logo" 
+                    className="w-40 h-40 mx-auto mb-4 object-contain"
+                  />
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    Farsund Kommune
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {t('experiences.customerStories.municipalityB.description')}
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                  "Vi har en tjenestemottaker som trenger tett oppfølging, spesielt om natten. NMT's sengesensor er den eneste løsningen som dekker dette behovet. Sensorene gir verdifull data om tilstedeværelse i seng, puls og respirasjonsfrekvens. Dette gir tjenestemottakeren uforstyrret søvn, som alle parter setter pris på. Vi bruker også terskelverdifunksjoner for automatiske alarmer. Takk for løsningen!"
+                </p>
+                <div className="text-center">
+                  <p className="text-sm font-semibold text-gray-900">
+                    Håkon Edland
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    Velferdsteknologi, Forebygging og koordinering
                   </p>
                 </div>
               </div>
 
+              {/* Nordanstigs Kommun */}
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl font-bold text-purple-600">C</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    {t('experiences.customerStories.municipalityC.title')}
+                <div className="text-center mb-6">
+                  <img 
+                    src={image35} 
+                    alt="Nordanstigs Kommun logo" 
+                    className="w-40 h-40 mx-auto mb-4 object-contain"
+                  />
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    Nordanstigs Kommun
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {t('experiences.customerStories.municipalityC.description')}
+                </div>
+                <p className="text-gray-700 leading-relaxed mb-6 text-center">
+                  "NMT's overvåkingskameraer har spart mange mil og minutter for nattepersonalet i Nordanstigs kommun. Det beste er at kundene får sin uforstyrrede nattsøvn. En sømløs og god løsning."
+                </p>
+                <div className="text-center">
+                  <p className="text-sm font-semibold text-gray-900">
+                    Sonia Sydh
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    Hemtjänstens servicegrupp Samordningsenheten, Nordanstigs kommun
                   </p>
                 </div>
               </div>

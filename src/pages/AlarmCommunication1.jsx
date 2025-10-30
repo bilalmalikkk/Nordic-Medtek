@@ -159,9 +159,6 @@ export default function AlarmCommunication1() {
                     <p className="text-xl text-gray-700 leading-relaxed">
                       {t('alarmCommunication.howAlarmButtonsWork.text2')}
                     </p>
-                    <p className="text-xl text-gray-700 leading-relaxed mt-6 font-semibold">
-                      Alle våre alarmknapper har innebygget automatisk fall deteksjon.
-                    </p>
                   </div>
                   <div className="flex justify-center">
                     <div className="relative w-full max-w-xs">
@@ -173,6 +170,19 @@ export default function AlarmCommunication1() {
                         />
                 </div>
               </div>
+                  </div>
+                </div>
+                
+                <div className="grid lg:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <p className="text-xl text-gray-700 leading-relaxed font-semibold">
+                      Alle våre alarmknapper har innebygget automatisk fall deteksjon.
+                    </p>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="relative w-full max-w-xs">
+                      {/* Empty space to maintain layout */}
+                    </div>
                   </div>
                 </div>
                 

@@ -234,17 +234,17 @@ export default function PrivatePage1() {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
-                  Vaktsentralen tar imot data og utfører automatisk overvåking
+                  Vaktrommet tar imot data og utfører automatisk overvåking
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-6 text-center flex-grow">
-                  Så snart en sensor tilkobles begynner den å sende data til vaktsentralen. Her overvåkes brukerne med en rekke tidsbesparende funksjoner.
+                  Så snart en sensor tilkobles begynner den å sende data til Vaktrommet. Her overvåkes brukerne med en rekke tidsbesparende funksjoner.
                 </p>
                 <Link 
                   to="/vaktrommet"
                   state={{ from: '/private' }}
                   className="inline-block text-center text-teal-600 hover:text-teal-700 font-semibold underline transition-colors mt-auto"
                 >
-                  Vaktsentral
+                  Vaktrommet
                 </Link>
               </div>
 

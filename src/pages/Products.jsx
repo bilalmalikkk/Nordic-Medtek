@@ -98,11 +98,11 @@ export default function Products() {
 
   // Define the desired category order
   const categoryOrder = [
-    'Communication',
+    'Kommunikasjon',
     'Alarm knapp og varsling',
     'Trygghet og fallsikring',
     'Medisinsk oppfølging',
-    'Cameras'
+    'Kamera'
   ]
 
   // Sort categories according to the desired order
@@ -186,29 +186,38 @@ export default function Products() {
                 Last updated: {getRefreshTime()} • Click refresh icon to reload
               </p>
               <div className="mt-6 flex justify-center flex-wrap gap-4">
-                <Link
-                  to="/trygghet-og-fallsikring"
+                <button
+                  onClick={() => document.getElementById('trygghet-og-fallsikring')?.scrollIntoView({ behavior: 'smooth' })}
                   className="inline-flex items-center gap-2 bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-colors"
                 >
                   Gå til trygghet og fallsikring
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
-                </Link>
-                <Link
-                  to="/alarm-buttons"
+                </button>
+                <button
+                  onClick={() => document.getElementById('alarm-knapp-og-varsling')?.scrollIntoView({ behavior: 'smooth' })}
                   className="inline-flex items-center gap-2 bg-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
                 >
                   Alarmknapper og rask varsling
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
-                </Link>
-                <Link
-                  to="/medical-followup-products"
+                </button>
+                <button
+                  onClick={() => document.getElementById('medisinsk-oppflging')?.scrollIntoView({ behavior: 'smooth' })}
                   className="inline-flex items-center gap-2 bg-teal-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-900 transition-colors"
                 >
                   Medisinsk oppfølging
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </button>
+                <Link
+                  to="/mdr-info"
+                  className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  MDR Info
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -227,8 +236,16 @@ export default function Products() {
               </div>
             ) : (
               <div className="space-y-16">
-              {sortedGroups.map(([category, categoryProducts]) => (
-                <div key={category} className="bg-white rounded-2xl shadow-lg p-8">
+              {sortedGroups.map(([category, categoryProducts]) => {
+                // Create ID from category name for smooth scrolling
+                const categoryId = category.toLowerCase()
+                  .replace(/\s+/g, '-')
+                  .replace(/[^a-z0-9-]/g, '')
+                  .replace(/--+/g, '-')
+                  .replace(/^-|-$/g, '')
+                
+                return (
+                <div key={category} id={categoryId} className="bg-white rounded-2xl shadow-lg p-8">
                   <div className="flex items-center mb-8">
                     <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mr-4">
                       <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -322,7 +339,8 @@ export default function Products() {
                     })}
               </div>
             </div>
-          ))}
+                )
+              })}
               </div>
             )}
           </div>
@@ -395,47 +413,42 @@ export default function Products() {
                       {selectedProduct.technical_data}
                     </p>
                   </div>
-
-                  {selectedProduct.detailed_description && (
-                    <div className="mb-6">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Detailed Description</h3>
-                      <div className="text-gray-700 bg-gray-50 p-4 rounded-lg">
-                        <p className="whitespace-pre-line">{selectedProduct.detailed_description}</p>
-                      </div>
-                    </div>
-                  )}
-
-                  <div className="prose prose-lg max-w-none">
-                    <div 
-                      className="text-gray-700 rich-text-content"
-                      dangerouslySetInnerHTML={{ 
-                        __html: selectedProduct.rich_text || selectedProduct.rich_text_description || '<p><em>No rich text content available</em></p>' 
-                      }}
-                    />
-                  </div>
-
-                  <div className="flex gap-4 pt-6">
-                    {selectedProduct.datasheet_url && (
-                      <a
-                        href={selectedProduct.datasheet_url.startsWith('http') ? selectedProduct.datasheet_url : `${API_BASE_URL}${selectedProduct.datasheet_url}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors flex items-center gap-2"
-                      >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                        View Datasheet
-                      </a>
-                    )}
-                    <button
-                      onClick={closeModal}
-                      className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
-                    >
-                      Close
-                    </button>
-                  </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Detailed Description - Full Width */}
+            {selectedProduct.detailed_description && (
+              <div className="border-t-2 border-gray-300 pt-8 mt-8 px-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Detailed Description</h3>
+                <div className="text-gray-700 bg-gray-50 p-6 rounded-lg mb-6">
+                  <p className="whitespace-pre-line leading-relaxed">{selectedProduct.detailed_description}</p>
+                </div>
+              </div>
+            )}
+
+            {/* Action Buttons at the End */}
+            <div className="px-8 pb-8">
+              <div className="flex gap-4">
+                {selectedProduct.datasheet_url && (
+                  <a
+                    href={selectedProduct.datasheet_url.startsWith('http') ? selectedProduct.datasheet_url : `${API_BASE_URL}${selectedProduct.datasheet_url}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors flex items-center gap-2"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    View Datasheet
+                  </a>
+                )}
+                <button
+                  onClick={closeModal}
+                  className="bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
+                >
+                  Close
+                </button>
               </div>
             </div>
           </div>

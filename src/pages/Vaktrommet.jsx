@@ -266,7 +266,7 @@ export default function Vaktrommet() {
                 </div>
                 <div className="mt-auto">
                   <Link 
-                    to="/guidance" 
+                    to="/faq" 
                     className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 w-full text-center"
                   >
                     {t('vaktrommet.questions.faq.button')}

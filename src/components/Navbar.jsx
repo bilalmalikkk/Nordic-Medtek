@@ -42,8 +42,8 @@ export default function Navbar() {
 
   const isProductsActive = (isActive) => {
     if (isActive) return true
-    // Products section includes list, detail pages, alarm-buttons, and medical follow-up products
-    return location.pathname.startsWith('/products') || location.pathname === '/alarm-buttons' || location.pathname === '/trygghet-og-fallsikring' || location.pathname === '/medical-followup-products'
+    // Products section includes list, detail pages, alarm-buttons, medical follow-up products, and MDR info
+    return location.pathname.startsWith('/products') || location.pathname === '/alarm-buttons' || location.pathname === '/trygghet-og-fallsikring' || location.pathname === '/medical-followup-products' || location.pathname === '/mdr-info'
   }
 
   const isPartnersActive = (isActive) => {
@@ -154,7 +154,7 @@ export default function Navbar() {
           </Link>
           <Link 
             to="/products" 
-            className={`hover:opacity-80 transition-opacity ${location.pathname === '/products' ? 'border-b-2 border-white pb-1' : ''}`}
+            className={`hover:opacity-80 transition-opacity ${isProductsActive(location.pathname === '/products') ? 'border-b-2 border-white pb-1' : ''}`}
           >
             Våre produkter
           </Link>
@@ -281,7 +281,7 @@ export default function Navbar() {
               </Link>
               <Link 
                 to="/products" 
-                className="block py-2 px-3 rounded-md text-sm text-gray-200 hover:bg-teal-500 hover:text-white transition-all duration-200 transform hover:scale-105"
+                className={`block py-2 px-3 rounded-md text-sm transition-all duration-200 transform hover:scale-105 ${isProductsActive(location.pathname === '/products') ? 'bg-teal-500 text-white' : 'text-gray-200 hover:bg-teal-500 hover:text-white'}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Våre produkter

@@ -15,8 +15,23 @@ export default function TrygghetOgFallsikring() {
   return (
     <div className="min-h-screen w-full bg-white">
       <div className="w-full">
+        {/* Back Button */}
+        <section className="py-4 w-full bg-gray-50">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <Link 
+              to="/products" 
+              className="inline-flex items-center text-gray-600 hover:text-teal-600 transition-colors duration-200"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              <span className="font-medium">{t('trygghetOgFallsikring.breadcrumb')}</span>
+            </Link>
+          </div>
+        </section>
+
         <section className="py-20 w-full">
-          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-4">
@@ -46,7 +61,7 @@ export default function TrygghetOgFallsikring() {
 
 
         <section className="py-20 w-full">
-          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">{t('trygghetOgFallsikring.products.title')}</h2>
             <p className="text-gray-700">
               {t('trygghetOgFallsikring.products.description')}
@@ -70,7 +85,7 @@ export default function TrygghetOgFallsikring() {
         
         {/* Slik bygges en komplett løsning - moved to end */}
         <section className="py-20 w-full">
-          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-gray-50 border border-dashed border-blue-200 rounded-2xl p-6 sm:p-8">
               <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-6">{t('trygghetOgFallsikring.solutionBuilding.title')}</h2>
 
@@ -147,7 +162,7 @@ export default function TrygghetOgFallsikring() {
 
         {/* Typiske oppsett hjemme - moved to very end */}
         <section className="py-20 w-full">
-          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-4">Typiske oppsett hjemme</h2>
             <div>
               <ul className="space-y-6 list-disc ml-5 text-gray-700 max-w-2xl">
@@ -185,7 +200,7 @@ export default function TrygghetOgFallsikring() {
 
         {/* Pricing + FAQ */}
         <section className="py-20 w-full">
-          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-gray-50 border border-dashed border-blue-200 rounded-2xl p-6 sm:p-8">
             <h2 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">Hva koster dette?</h2>
             <p className="text-gray-700 mb-2">
@@ -224,7 +239,7 @@ export default function TrygghetOgFallsikring() {
 
         {/* CTA: Klar for å finne tryggheten hjemme? */}
         <section className="py-20 w-full">
-          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Klar for å finne tryggheten hjemme?</h2>
@@ -248,8 +263,8 @@ export default function TrygghetOgFallsikring() {
         </section>
 
         {/* Contact Form */}
-        <section className="py-20 w-full bg-white">
-          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <section className="py-20 w-full">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-2xl shadow-lg p-12">
               <NewContactForm />
             </div>
@@ -257,8 +272,8 @@ export default function TrygghetOgFallsikring() {
         </section>
 
         {/* Technical info CTA */}
-        <section className="py-20 w-full bg-gray-50">
-          <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+        <section className="py-20 w-full">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl mx-auto text-center">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Vil du se teknisk informasjon?</h3>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">

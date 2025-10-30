@@ -124,45 +124,40 @@ export default function Vision() {
             {t('about.help.title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {t('about.help.cards', { returnObjects: true }).map((card, index) => (
-              <div key={index} className="border-2 border-dashed border-orange-500 rounded-xl p-6 text-center flex flex-col h-full">
-                {/* Card Title */}
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {card.title}
-                </h3>
-                
-                {/* Card Content */}
-                <p className="text-gray-700 leading-relaxed flex-grow mb-3">
-                  {card.content}
-                </p>
-                
-                {/* Card Button */}
-                {card.title === 'Kontakt oss' ? (
-                  <button 
-                    onClick={() => {
-                      // Open guidance page in current tab
-                      window.location.href = '/guidance'
-                      // Open contact page in new tab
-                      window.open('/documents', '_blank')
-                    }}
-                    className="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors mt-auto"
+            {t('about.help.cards', { returnObjects: true }).map((card, index) => {
+              // Determine the route based on card title
+              let route = '/'
+              if (card.title === 'Kontakt oss' || card.title === 'Contact us') {
+                route = '/guidance'
+              } else if (card.title === 'Ofte stilte spørsmål' || card.title === 'Frequently asked questions') {
+                route = '/faq'
+              } else if (card.title === 'Hvordan andre bruker løsningene' || card.title === 'How others use the solutions') {
+                route = '/experiences'
+              }
+
+              return (
+                <div key={index} className="border-2 border-dashed border-orange-500 rounded-xl p-6 text-center flex flex-col h-full">
+                  {/* Card Title */}
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {card.title}
+                  </h3>
+                  
+                  {/* Card Content */}
+                  <p className="text-gray-700 leading-relaxed flex-grow mb-3">
+                    {card.content}
+                  </p>
+                  
+                  {/* Card Button */}
+                  <Link
+                    to={route}
+                    state={{ from: '/vision' }}
+                    className="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors mt-auto text-center block"
                   >
                     {card.buttonText}
-                  </button>
-                ) : card.title === 'Ofte stilte spørsmål' ? (
-                  <button 
-                    onClick={() => window.location.href = '/faq'}
-                    className="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors mt-auto"
-                  >
-                    {card.buttonText}
-                  </button>
-                ) : (
-                  <button className="w-full bg-gray-700 hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors mt-auto">
-                    {card.buttonText}
-                  </button>
-                )}
-              </div>
-            ))}
+                  </Link>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>

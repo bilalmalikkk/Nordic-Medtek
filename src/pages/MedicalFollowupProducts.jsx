@@ -56,10 +56,25 @@ export default function MedicalFollowupProducts() {
   
   return (
     <div className="min-h-screen w-full bg-gray-50">
-      {/* Main Content */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white min-h-[calc(100vh-200px)]">
-          <div className="grid lg:grid-cols-2 gap-12 items-center py-16 px-8">
+      {/* Back Button */}
+      <section className="py-4 w-full bg-gray-50">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <Link 
+            to="/products" 
+            className="inline-flex items-center text-gray-600 hover:text-teal-600 transition-colors duration-200"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            <span className="font-medium">{t('medicalFollowupProducts.breadcrumb')}</span>
+          </Link>
+        </div>
+      </section>
+
+      {/* Hero Section */}
+      <section className="py-20 w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8">
               <div className="space-y-6">
@@ -104,10 +119,11 @@ export default function MedicalFollowupProducts() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Products Section */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="py-20 w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg p-12">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -210,9 +226,11 @@ export default function MedicalFollowupProducts() {
           </div>
         </div>
       </div>
+      </section>
 
       {/* How Solution is Built Section */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="py-20 w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg p-12">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -309,9 +327,11 @@ export default function MedicalFollowupProducts() {
           </div>
         </div>
       </div>
+      </section>
 
       {/* Typical Setups at Home Section */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <section className="py-20 w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gray-50 rounded-2xl p-12">
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -382,9 +402,11 @@ export default function MedicalFollowupProducts() {
           </div>
         </div>
       </div>
+      </section>
 
       {/* FAQ Section */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="py-20 w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg p-12">
           <div className="max-w-4xl mx-auto space-y-12">
             {/* FAQ Item 1 */}
@@ -422,9 +444,11 @@ export default function MedicalFollowupProducts() {
           </div>
         </div>
       </div>
+      </section>
 
       {/* Frequently Asked Questions Section */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="py-20 w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg p-12">
           <div className="max-w-4xl mx-auto">
             {/* Section Header */}
@@ -469,9 +493,11 @@ export default function MedicalFollowupProducts() {
           </div>
         </div>
       </div>
+      </section>
 
       {/* Ready for Safety Section */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="py-20 w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg p-12">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -502,9 +528,11 @@ export default function MedicalFollowupProducts() {
           </div>
         </div>
       </div>
+      </section>
 
       {/* Contact Form Section */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <section className="py-20 w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg p-12">
           <div className="max-w-4xl mx-auto">
             {/* Section Header */}
@@ -657,9 +685,11 @@ export default function MedicalFollowupProducts() {
           </div>
         </div>
       </div>
+      </section>
 
       {/* Technical Information Section */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <section className="py-20 w-full">
+        <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gray-50 rounded-2xl p-12">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
@@ -680,6 +710,7 @@ export default function MedicalFollowupProducts() {
           </div>
         </div>
       </div>
+      </section>
     </div>
   )
 }

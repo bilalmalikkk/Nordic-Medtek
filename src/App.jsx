@@ -58,6 +58,7 @@ import VaktrommetKommune from './pages/VaktrommetKommune'
 import PDFViewer from './pages/PDFViewer'
 import InfoPage from './pages/InfoPage'
 import DashboardViewer from './pages/DashboardViewer'
+import MDRInfo from './pages/MDRInfo'
 
 function App() {
   return (
@@ -120,6 +121,7 @@ function App() {
           <Route path="/pdf/:pdfName" element={<PDFViewer />} />
           <Route path="/info/:infoType" element={<InfoPage />} />
           <Route path="/dashboard/:dashboardType" element={<DashboardViewer />} />
+          <Route path="/mdr-info" element={<MDRInfo />} />
         </Routes>
         </main>
       </div>

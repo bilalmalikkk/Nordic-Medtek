@@ -243,6 +243,7 @@
     "faq": "Ofte stilte spørsmål"
   },
   "medicalFollowupProducts": {
+    "breadcrumb": "Tilbake",
     "hero": {
       "title": "Produkter for medisinsk oppfølging hjemme",
       "subtitle1": "Unngå at et fall endrer alt.",
@@ -346,6 +347,7 @@
     }
   },
   "alarmButtons": {
+    "breadcrumb": "Tilbake",
     "hero": {
       "title": "Produkter for alarmknapper og rask varsling",
       "subtitle": "Unngå at et fall endrer alt. Våre sensorer oppdager fall helt automatisk.",
@@ -390,6 +392,7 @@
     }
   },
   "trygghetOgFallsikring": {
+    "breadcrumb": "Tilbake",
     "hero": {
       "title": "Produkter for trygghet og fallsikring",
       "subtitle": "Unngå at et fall endrer alt. Våre sensorer oppdager fall helt automatisk.",
@@ -1107,7 +1110,7 @@
       "price": "Pris"
     },
     "hero": {
-      "title": "Medisinsk oppfølging hjemme",
+      "title": "Medisinsk oppfølging",
       "subtitle": "Overvåkning og måling av helsetilstanden. Automatisk varsling ved avvik.",
       "button": "Bestill helsesensor",
       "bullet1": "Målingene skjer helt automatisk, uten at de må huske å gjøre noe selv i hverdagen.",
@@ -2658,6 +2661,29 @@
     "active": "Aktiv",
     "itemNumber": "Artikkel #{number}"
   },
+  "mdrInfo": {
+    "title": "Hva er MDR?",
+    "heroDescription": "MDR (Medical Device Regulation) er EUs regelverk for medisinsk utstyr. Det sikrer høy pasientsikkerhet og stiller strenge krav til kvalitet, dokumentasjon og sporbarhet for produkter som skal på markedet.",
+    "subtitle": "Medisinteknisk forordning (MDR) sertifisering",
+    "description": "Våre produkter er sertifisert under EUs medisintekniske forordning (MDR), som sikrer de høyeste standardene for sikkerhet, kvalitet og effektivitet. Denne sertifiseringen viser vårt engasjement for å tilby medisintekniske produkter som oppfyller strenge europeiske regulatoriske krav.",
+    "certification": {
+      "title": "Hva er MDR-sertifisering?",
+      "description": "EUs medisintekniske forordning (MDR) er verdens strengeste regulatoriske rammeverk for medisinteknisk utstyr. Sertifisering under MDR betyr at våre produkter har gjennomgått omfattende klinisk evaluering, revisjon av kvalitetsstyringssystem og grundig gjennomgang av dokumentasjon av notifiserte organer."
+    },
+    "benefits": {
+      "title": "Fordeler med MDR-sertifiserte produkter",
+      "list": [
+        "Garanterte sikkerhets- og ytelsesstandarder",
+        "Full overholdelse av EUs regulatoriske krav",
+        "Omfattende kliniske bevis og dokumentasjon",
+        "Økt tillit hos pasienter og brukere",
+        "Kontinuerlig kvalitetsmonitorering og forbedring",
+        "Sporbarhet gjennom hele forsyningskjeden"
+      ]
+    },
+    "backToProducts": "Tilbake til produkter",
+    "backToHomepage": "Tilbake til forsiden"
+  },
   "csvImport": {
     "accessRequired": "Tilgang påkrevd",
     "loginRequired": "Vennligst logg inn for å få tilgang til CSV-importverktøyet",
@@ -2705,7 +2731,7 @@
         "description": "Bevegelse-, fall- og helsesensorer overvåker hjemmemiljøet i stillhet. De gjenkjenner uregelmessigheter som fall, mangel på bevegelse eller unormale vitale tegn, uten behov for manuelle innsjekklinger."
       },
       "controlRoom": {
-        "title": "Kontrollrommet gir full oversikt",
+        "title": "Vaktrommet gir full oversikt",
         "description": "Alle hendelser samles i Vaktrommet, et digitalt dashbord som gir de ansatte en klar oversikt. Hvis noe skjer, varsles riktig person umiddelbart, noe som sikrer rask og målrettet respons."
       },
       "fallSensors": {

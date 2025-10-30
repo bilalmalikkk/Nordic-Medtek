@@ -88,15 +88,6 @@ export default function ProductModal({ product, isOpen, onClose, cardPosition })
                 </p>
               </div>
 
-              {product.detailed_description && (
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Detailed Description</h3>
-                  <div className="text-gray-700 bg-gray-50 p-4 rounded-lg">
-                    <p className="whitespace-pre-line">{product.detailed_description}</p>
-                  </div>
-                </div>
-              )}
-
               <div className="prose prose-lg max-w-none">
                 <div 
                   className="text-gray-700 rich-text-content"
@@ -129,6 +120,16 @@ export default function ProductModal({ product, isOpen, onClose, cardPosition })
               </div>
             </div>
           </div>
+
+          {/* Detailed Description - Full Width */}
+          {product.detailed_description && (
+            <div className="border-t-2 border-gray-300 pt-8 mt-8">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Detailed Description</h3>
+              <div className="text-gray-700 bg-gray-50 p-6 rounded-lg">
+                <p className="whitespace-pre-line leading-relaxed">{product.detailed_description}</p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
