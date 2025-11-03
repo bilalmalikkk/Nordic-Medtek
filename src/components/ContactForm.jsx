@@ -43,17 +43,44 @@ export default function ContactForm({ title, desc, typeOptions, footerNote }) {
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id'
       const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key'
 
-      // Prepare template parameters
-      const templateParams = {
-        from_name: values.name,
-        from_email: values.email,
-        phone: values.phone,
-        type: values.type,
-        description: values.description,
-        newsletters: values.newsletters ? values.newsletters.join(', ') : '',
-        to_email: 'bilalmalik746429@gmail.com',
-        time: new Date().toLocaleString('no-NO')
+      // Helper function to ensure all values are clean strings and safe for EmailJS
+      const cleanValue = (value) => {
+        if (value === null || value === undefined) return ''
+        // Remove any potential problematic characters and ensure it's a safe string
+        return String(value)
+          .trim()
+          .replace(/\r\n/g, '\n')
+          .replace(/\r/g, '\n')
       }
+
+      // Prepare template parameters - ensure all required variables are strings
+      // EmailJS requires all template variables to be defined, even if empty
+      // NOTE: All variables must be sent, even optional ones, to avoid template parsing errors
+      const templateParams = {
+        from_name: cleanValue(values.name),
+        from_email: cleanValue(values.email),
+        phone: cleanValue(values.phone),
+        type: cleanValue(values.type),
+        description: cleanValue(values.description),
+        newsletters: values.newsletters && Array.isArray(values.newsletters) && values.newsletters.length > 0 
+          ? cleanValue(values.newsletters.join(', ')) 
+          : 'Ingen valgt',
+        // Add optional fields that might be in template conditionals (set to empty if not used)
+        who_for: '',
+        concerns: '',
+        to_email: 'bilalmalik746429@gmail.com',
+        time: new Date().toLocaleString('no-NO', { 
+          timeZone: 'Europe/Oslo',
+          day: '2-digit',
+          month: '2-digit',
+          year: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        })
+      }
+
+      // Log for debugging
+      console.log('EmailJS template params:', JSON.stringify(templateParams, null, 2))
 
       // Send email using EmailJS
       const result = await emailjs.send(
@@ -63,14 +90,22 @@ export default function ContactForm({ title, desc, typeOptions, footerNote }) {
         publicKey
       )
 
+      console.log('EmailJS result:', result)
+
       if (result.status === 200) {
         setSubmitMessage('Henvendelse sendt! Vi kontakter deg snart.')
         reset()
       } else {
+        console.error('EmailJS returned non-200 status:', result.status, result.text)
         setSubmitMessage('Det oppstod en feil. Prøv igjen senere.')
       }
     } catch (error) {
       console.error('Contact form error:', error)
+      console.error('Error details:', {
+        message: error?.message,
+        text: error?.text,
+        status: error?.status
+      })
       setSubmitMessage('Det oppstod en feil. Prøv igjen senere.')
     } finally {
       setIsSubmitting(false)

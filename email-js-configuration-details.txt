@@ -1,0 +1,27 @@
+=== EMAILJS CONFIGURATION DETAILS ===
+
+OLD/ORIGINAL CREDENTIALS (Saved for backup):
+----------------------------------------------
+Service ID: service_fm0hd3j
+Template ID: template_n5fx1is
+Public Key: DTzGd2XBd3DZGZGRs
+
+Location in code:
+- env.example file (lines 11-14)
+- ContactForm.jsx (lines 42-44) - uses import.meta.env.VITE_EMAILJS_* variables
+
+Date saved: 2025-01-03
+
+=== NEW CREDENTIALS (Current/Active) ===
+----------------------------------------
+Service ID: service_lkf5dxl
+Template ID: template_lzkji7e
+Public Key: 5PltdqLpn66Qkm-1X
+
+These credentials are now active in the codebase.
+Updated files:
+- env.example (lines 12-14)
+
+NOTE: You will need to update your actual .env file (if it exists) with these new credentials.
+The ContactForm.jsx reads from environment variables automatically.
+

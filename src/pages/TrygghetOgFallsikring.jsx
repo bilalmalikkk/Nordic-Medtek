@@ -7,7 +7,7 @@ import soveromImage from '../assets/soverom.png'
 import bad3Image from '../assets/bad3.png'
 import trappImage from '../assets/trapp.png'
 import klarTrygghet from '../assets/klar for å finne trygghet.png'
-import NewContactForm from '../components/NewContactForm'
+import ContactForm from '../components/ContactForm'
 import { useTranslation } from 'react-i18next'
 
 export default function TrygghetOgFallsikring() {
@@ -266,7 +266,7 @@ export default function TrygghetOgFallsikring() {
         <section className="py-20 w-full">
           <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white rounded-2xl shadow-lg p-12">
-              <NewContactForm />
+              <ContactForm />
             </div>
           </div>
         </section>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body style="font-family: Arial, sans-serif; font-size: 14px; max-width: 600px; margin: 0 auto; background-color: #ffffff; padding: 20px;">
+  
+  <div style="background: linear-gradient(135deg, #0f766e 0%, #0891b2 100%); padding: 30px 20px; text-align: center;">
+    <h1 style="color: white; margin: 0; font-size: 24px; font-weight: bold;">NordicMedTek</h1>
+    <p style="color: #e0f2fe; margin: 10px 0 0 0; font-size: 16px;">Ny henvendelse fra nettstedet</p>
+  </div>
+
+  <div style="padding: 30px 20px;">
+    
+    <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #0f766e;">
+      <h2 style="color: #1e293b; margin: 0 0 15px 0; font-size: 18px; font-weight: bold;">Kontaktinformasjon</h2>
+      <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+          <td style="padding: 8px 0; color: #64748b; font-weight: 600; width: 120px;">Navn:</td>
+          <td style="padding: 8px 0; color: #1e293b;">{{from_name}}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0; color: #64748b; font-weight: 600;">E-post:</td>
+          <td style="padding: 8px 0; color: #1e293b;">{{from_email}}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0; color: #64748b; font-weight: 600;">Telefon:</td>
+          <td style="padding: 8px 0; color: #1e293b;">{{phone}}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0; color: #64748b; font-weight: 600;">Type:</td>
+          <td style="padding: 8px 0; color: #1e293b;">{{type}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div style="background-color: #ffffff; padding: 25px; border-radius: 8px; margin-bottom: 25px; border: 1px solid #e2e8f0;">
+      <h2 style="color: #1e293b; margin: 0 0 15px 0; font-size: 18px; font-weight: bold;">Melding</h2>
+      <div style="color: #374151; line-height: 1.6; font-size: 16px; white-space: pre-wrap;">{{description}}</div>
+    </div>
+
+    <div style="background-color: #f0f9ff; padding: 20px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #0284c7;">
+      <h2 style="color: #1e293b; margin: 0 0 15px 0; font-size: 18px; font-weight: bold;">Nyhetsbrev</h2>
+      <p style="color: #374151; margin: 0; line-height: 1.6;">{{newsletters}}</p>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+      <a href="mailto:{{from_email}}?subject=Svar på henvendelse fra {{from_name}}" style="display: inline-block; background: linear-gradient(135deg, #0f766e 0%, #0891b2 100%); color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 0 10px;">Svar på e-post</a>
+      <a href="tel:{{phone}}" style="display: inline-block; background-color: #10b981; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; margin: 0 10px;">Ring tilbake</a>
+    </div>
+  </div>
+
+  <div style="background-color: #f1f5f9; padding: 20px; text-align: center; border-top: 1px solid #e2e8f0;">
+    <p style="color: #64748b; margin: 0; font-size: 12px;">
+      <strong>NordicMedTek</strong> - Trygghet og omsorg for hele familien<br>
+      Sendt fra kontaktformular - {{time}}
+    </p>
+    <div style="margin-top: 15px;">
+      <a href="https://nordicmedtek.no" style="color: #0f766e; text-decoration: none; font-size: 12px;">nordicmedtek.no</a>
+    </div>
+  </div>
+
+</body>
+</html>
+

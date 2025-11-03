@@ -22,7 +22,7 @@ import uteImg from '../assets/ute.png'
 import homeImg from '../assets/home.png'
 import buttonOgLockImg from '../assets/button og lock.png'
 import klarForTrygghetImg from '../assets/klar for å finne trygghet.png'
-import NewContactForm from '../components/NewContactForm'
+import ContactForm from '../components/ContactForm'
 import { useTranslation } from 'react-i18next'
 
 export default function AlarmButtons() {
@@ -433,7 +433,7 @@ export default function AlarmButtons() {
         <section className="py-20 w-full bg-white">
           <div className="w-full max-w-8xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
             <div className="bg-white rounded-2xl shadow-lg p-12">
-              <NewContactForm />
+              <ContactForm />
             </div>
           </div>
         </section>
