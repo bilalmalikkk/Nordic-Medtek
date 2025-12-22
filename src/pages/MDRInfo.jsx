@@ -60,44 +60,47 @@ export default function MDRInfo() {
                 </h2>
                 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  For produkter som skal brukes på sykehus eller andre livskritiske sammenhenger, er det avgjørende at de oppfyller kravene i EUs medisintekniske forordning (MDR 2017/745). Denne forordningen stiller strenge krav til sikkerhet, ytelse og dokumentasjon for all medisinsk utstyr som skal CE-merkes og selges i EU.
+                  For produkter som skal brukes på sykehus eller andre livskritiske sammenhenger, er det avgjørende at de oppfyller kravene i EUs medisintekniske forordning (MDR 2017/745). Denne forordningen stiller strenge krav til sikkerhet, ytelse og dokumentasjon for alt medisinsk utstyr som skal CE-merkes og selges i EU.
                 </p>
 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Selv om de fleste av våre medisinske sensorer allerede har medisinsk godkjenning, er det kun en løsning som helhet som kan betraktes som medisinsk godkjent hvis <strong>alle komponenter</strong> (inkludert sensorer, programvare og tilhørende systemer) oppfyller MDR-kravene. Det er ikke nok at enkeltkomponenter er godkjent – hele produktet må gjennomgå en konformitetsvurdering og dokumenteres i henhold til MDRs tekniske og kliniske krav.
+                  Selv om de fleste av våre medisinske sensorer allerede har medisinsk godkjenning, er det kun en løsning som helhet som kan betraktes som medisinsk godkjent hvis <strong>alle komponenter</strong> (inkludert sensorer, programvare og tilhørende systemer) oppfyller MDR-kravene. Det er ikke nok at enkeltkomponenter er godkjent – hele kjeden må gjennomgå en konformitetsvurdering og dokumenteres i henhold til MDR tekniske og kliniske krav.
                 </p>
 
-                <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    MDR innebærer blant annet:
-                  </h3>
-                  <ul className="space-y-3 text-gray-700">
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-teal-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Mer omfattende krav til teknisk dokumentasjon og sporbarhet
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-teal-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Strengere regler for klinisk evaluering og informert samtykke
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-teal-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Et nytt klassifiseringssystem basert på risiko og bruksområde
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-teal-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Krav til markedsovervåking og rapportering av hendelser
-                    </li>
-                  </ul>
-                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  NordicRVM sensorer for puls og pust
+                </h3>
+                
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Våre sensorer er utviklet for å gi <strong>pålitelig puls- og respirasjonsdata</strong> i sanntid, med lavt strømforbruk og robust design for både hverdagsbruk og krevende miljøer. De gir brukere <strong>handlingsbar innsikt</strong> for velvære, restitusjon og ytelse — og er designet med samme ingeniørstandarder vi senere tar inn i MDR-sertifiseringsløpet. (MDR- prosessen er igangsatt.)
+                </p>
+
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Lovlig og korrekt bruksområde (før MDR-sertifisering)
+                </h3>
 
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  Vi har allerede startet MDR-prosessen for sensorer som ikke ennå er godkjent, og vi er snart et år inn i dette arbeidet. Dette markerer et viktig steg i den videre utviklingen av våre produkter, og gir oss mulighet til å tilby løsninger som oppfyller de høyeste krav til kvalitet og sikkerhet – også i kritiske og profesjonelle bruksområder.
+                  Frem til CE-merking som medisinsk utstyr er fullført, markedsføres og brukes sensorene for velvære- og treningsformål (wellness/fitness). Det betyr at dataene kan benyttes til egenmonitorering, coaching, restitusjonsoppfølging og generell helseforbedring, men ikke som grunnlag for diagnose, prognose, behandling eller overvåking av sykdom.
                 </p>
 
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Målet er ikke bare å oppfylle regulatoriske krav, men å sikre at våre produkter er trygge, pålitelige og fullt integrerbare i moderne helsetjenester. MDR-godkjenning er derfor ikke bare en formalitet, men en garanti for at produktet er utviklet med pasientsikkerhet og profesjonell bruk i fokus.
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Dette følger av MDRs definisjon av «medisinsk utstyr» og prinsippet om <strong>tiltenkt formål (intended purpose)</strong>: det er tiltenkt medisinsk formål som avgjør om produktet er et medisinsk utstyr, og som dermed utløser MDR-kravene.
                 </p>
+
+                <ul className="space-y-3 text-gray-700 mb-6">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-teal-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    EUR-Lex: MDR (EU) 2017/745 konsolidert tekst
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-teal-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    European Commission: Medical Device Regulation
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-teal-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    EUMDR.com: MDR oversikt og veiledning
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

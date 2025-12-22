@@ -7,6 +7,7 @@ import sensorsAndPlacements from '../assets/sensors and placements.png'
 import whereDoesThisFitBest from '../assets/Where does this fit best.png'
 import sensorSeng2 from '../assets/sensor seng2.png'
 import btrykk from '../assets/btrykk.png'
+import notMdrStamp from '../assets/notMDRred.png'
 
 export default function MedicalFollowup1() {
   const { t } = useTranslation()
@@ -73,15 +74,6 @@ export default function MedicalFollowup1() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
                   </Link>
-                  <Link 
-                    to="/mdr-info" 
-                    className="group inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-                    MDR Info
-                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                  </Link>
                 </div>
               </div>
               <div className="md:w-1/2 mt-6 md:mt-0">
@@ -123,6 +115,59 @@ export default function MedicalFollowup1() {
               <p className="text-lg text-gray-700 leading-relaxed">
                 {t('medicalFollowup1.challenges.text3')}
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Legal Usage Section */}
+        <section className="py-16 w-full bg-white">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-left">
+              <div className="prose prose-lg max-w-none text-left">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Lovlig og korrekt bruksområde (før MDR-sertifisering)
+                </h3>
+
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Frem til CE-merking som medisinsk utstyr er fullført, markedsføres og brukes sensorene for velvære- og treningsformål (wellness/fitness). Det betyr at dataene kan benyttes til egenmonitorering, coaching, restitusjonsoppfølging og generell helseforbedring, men ikke som grunnlag for diagnose, prognose, behandling eller overvåking av sykdom.
+                </p>
+
+                <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                  Dette følger av MDRs definisjon av «medisinsk utstyr» og prinsippet om <strong>tiltenkt formål (intended purpose)</strong>: det er tiltenkt medisinsk formål som avgjør om produktet er et medisinsk utstyr, og som dermed utløser MDR-kravene.
+                </p>
+
+                <ul className="space-y-3 text-gray-700 mb-6">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-teal-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    EUR-Lex: MDR (EU) 2017/745 konsolidert tekst
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-teal-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    European Commission: Medical Device Regulation
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-teal-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    EUMDR.com: MDR oversikt og veiledning
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* MDR Info Button Section */}
+        <section className="py-8 w-full bg-white">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-center">
+              <Link 
+                to="/mdr-info" 
+                className="group inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                MDR Info
+                <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
             </div>
           </div>
         </section>
@@ -405,6 +450,20 @@ export default function MedicalFollowup1() {
                   {t('medicalFollowup1.questions.contact.button')}
                 </Link>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* NOT MDR APPROVED Stamp */}
+        <section className="py-12 w-full bg-white">
+          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-center items-center">
+              <img 
+                src={notMdrStamp} 
+                alt="NOT MDR APPROVED" 
+                className="max-w-xs h-auto transform rotate-2"
+                style={{ filter: 'drop-shadow(2px 2px 4px rgba(0,0,0,0.2))' }}
+              />
             </div>
           </div>
         </section>

@@ -80,7 +80,7 @@ export default function Private() {
                   Fokus på sikkerhet og egeninnsats
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Om du ønsker en løsning som fokuserer på sikkerhet, mer en medisinsk oppfølging av dine kjære har vi gode løsninger for dette.<br />
+                  Om du ønsker en løsning som fokuserer på sikkerhet, mer en helseoppfølging av dine kjære har vi gode løsninger for dette.<br />
                   Les mer under
                 </p>
               </div>
@@ -90,7 +90,7 @@ export default function Private() {
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
               <div className="text-center">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
-                  Fokus på medisinsk oppfølging
+                  Fokus på helseoppfølging
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
                   Ønsker du at en doktor skal overvåke brukeren regelmessig. Vår partner salubi tilbyr digitalt tilsyn som gir en helhetlig oversikt over din tilstand og aktivitet. Helsepersonell følger med på og analyserer måledata for tidlig intervensjon. For mer informasjon gå til <a href="https://salubi.no" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">salubi.no</a>
@@ -167,7 +167,7 @@ export default function Private() {
               <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col">
                 <div className="text-center flex-1 flex flex-col">
                   <div className="w-20 h-20 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <img src={blodtrykk} alt="Medisinsk oppfølging" className="w-12 h-12" />
+                    <img src={blodtrykk} alt="Helseoppfølging" className="w-12 h-12" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
                     {t('private.concerns.medical.title')}
@@ -181,7 +181,7 @@ export default function Private() {
                     to="/medical-followup" 
                     className="group inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
-                    Medisinsk oppfølging
+                    Helseoppfølging
                     <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>

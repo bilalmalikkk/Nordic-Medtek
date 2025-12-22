@@ -141,7 +141,7 @@ export default function PrivatePage1() {
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 flex flex-col">
               <div className="text-center flex-1 flex flex-col">
                 <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <img src={blodtrykk} alt="Medisinsk oppfølging" className="w-12 h-12" />
+                  <img src={blodtrykk} alt="Helseoppfølging" className="w-12 h-12" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   For akutt sykdom?
@@ -155,7 +155,7 @@ export default function PrivatePage1() {
                   to="/medical-followup1" 
                   className="group inline-flex items-center justify-center bg-red-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                 >
-                  Medisinsk oppfølging
+                  Helseoppfølging
                   <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

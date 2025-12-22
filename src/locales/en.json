@@ -2212,7 +2212,7 @@
       },
       "security": {
         "title": "Security testing",
-        "description": "Continuous security tests and updates."
+        "description": "Compatible with SIRA alarm protocol"
       },
       "documentation": {
         "title": "Technical documentation",

@@ -661,7 +661,7 @@
       "text2": "Det er en bekymring som veier på mange familier. Våre medisinske overvåkningsløsninger sikrer kontinuerlig sporing av vitale tegn, med automatiske varsler når intervensjon trengs."
     },
     "howMedicalMonitoring": {
-      "title": "Hvordan virker medisinsk oppfølging hjemme?",
+      "title": "Hvordan virker helseoppfølging hjemme?",
       "text1": "Sensorer kan plasseres under madrassen, på stolen der de sitter mest eller kobles til kroppen med enkle måleinstrument. Disse måler helt kontaktløst eller med små enheter som brukes bare noen sekunder av gangen.",
       "subtitle": "Typisk kan de måle:",
       "measurement1": "Puls og pustemønster",
@@ -1110,7 +1110,7 @@
       "price": "Pris"
     },
     "hero": {
-      "title": "Medisinsk oppfølging",
+      "title": "Helseoppfølging",
       "subtitle": "Overvåkning og måling av helsetilstanden. Automatisk varsling ved avvik.",
       "button": "Bestill helsesensor",
       "bullet1": "Målingene skjer helt automatisk, uten at de må huske å gjøre noe selv i hverdagen.",
@@ -1121,7 +1121,7 @@
       "title": "Trygghet for deg og god helseoppfølging dine kjære",
       "text1": "Det kan være urolig nok å vite at mor eller far er blitt mer ustø eller svake. Men hvis de i tillegg har hjerteproblemer, pustevansker, diabetes eller nylig har vært syke, blir bekymringen enda større.",
       "text2": "Hvordan vet du at alt er i orden mellom legebesøkene? Hva hvis verdiene plutselig forverrer seg, og ingen oppdager det i tide?",
-      "text3": "Våre løsninger for medisinsk oppfølging gir deg og familien en helt ny trygghet. De følger viktige helseverdier automatisk, rett fra stua hjemme, og deler dataen med deg, eller direkte med helsepersonell hvis dere ønsker det."
+      "text3": "Våre løsninger for helseoppfølging gir deg og familien en helt ny trygghet. De følger viktige helseverdier automatisk, rett fra stua hjemme, og deler dataen med deg, eller direkte med helsepersonell hvis dere ønsker det."
     },
     "pricing": {
       "title": "Hva koster det?",
@@ -2237,7 +2237,7 @@
       },
       "security": {
         "title": "Sikkerhetstester",
-        "description": "Kontinuerlige sikkerhetstester og oppdateringer."
+        "description": "Kompatibel med SIRA-alarmprotokollen"
       },
       "documentation": {
         "title": "Teknisk dokumentasjon",
