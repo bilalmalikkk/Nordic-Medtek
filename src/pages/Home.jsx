@@ -12,6 +12,7 @@ import digitaltTilsynImage from '../assets/Digitalt tilsyn.jpg'
 import n1Image from '../assets/n1.png'
 import n3Image from '../assets/n3.png'
 import n5Image from '../assets/n5.png'
+import NordicMedicalLogo from '../assets/NordicMedical_Logo.svg'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -27,17 +28,37 @@ export default function Home() {
         
         {/* Content */}
         <div className="relative z-10 w-full max-w-8xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20">
-          <div className="text-center py-8">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center py-8">
+            {/* Left side - Main text */}
             <div className="space-y-6">
               <div className="space-y-4">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold text-white leading-tight drop-shadow-lg whitespace-pre-line animate-fade-in-down">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight drop-shadow-lg whitespace-pre-line animate-fade-in-down">
                   {t('hero.title1')}
                 </h1>
-                <div className="w-24 h-1 bg-white rounded-full mx-auto animate-scale-in animate-delay-300"></div>
               </div>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl text-white italic leading-relaxed max-w-5xl mx-auto px-4 sm:px-8 drop-shadow-lg whitespace-pre-line animate-fade-in-up animate-delay-500">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white leading-relaxed drop-shadow-lg whitespace-pre-line animate-fade-in-up animate-delay-500">
                 {t('hero.lead')}
               </p>
+            </div>
+            
+            {/* Right side - Dialogue box */}
+            <div className="flex justify-end">
+              <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 md:p-8 max-w-md w-full animate-fade-in-up animate-delay-700">
+                <div className="flex items-center gap-3 mb-4">
+                  {/* Waveform/Heartbeat icon */}
+                  <svg className="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                  <img 
+                    src={NordicMedicalLogo} 
+                    alt="NordicMedTek" 
+                    className="h-8 w-auto"
+                  />
+                </div>
+                <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                  NordicMedTek er vår produktserie innen velferdsteknologi. Serien omfatter produkter og løsninger som bidrar til trygghet og støtte gjennom hele livsløpet, med fokus på kvalitet og brukervennlighet.
+                </p>
+              </div>
             </div>
           </div>
         </div>

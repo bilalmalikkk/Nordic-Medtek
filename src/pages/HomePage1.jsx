@@ -17,6 +17,7 @@ import sensor from '../assets/sensor.png'
 import receivesPing from '../assets/recieves ping.png'
 import sensorsData from '../assets/sensors data.png'
 import notification from '../assets/notification.png'
+import logo from '../assets/Puls_and_name.svg'
 
 export default function HomePage1() {
   const { t } = useTranslation()
@@ -42,13 +43,33 @@ export default function HomePage1() {
           
           {/* Content */}
           <div className="relative z-10 w-full mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 pb-12 pt-32">
-            <div className="max-w-4xl">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
-                {t('homePage1.hero.title')}
-              </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed">
-                {t('homePage1.hero.subtitle')}
-              </p>
+            <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
+              {/* Left side - Main text */}
+              <div className="max-w-4xl">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-8">
+                  {t('homePage1.hero.title')}
+                </h1>
+                <p className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed">
+                  {t('homePage1.hero.subtitle')}
+                </p>
+              </div>
+              
+              {/* Right side - Dialogue box */}
+              <div className="flex justify-end">
+                <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-6 md:p-8 max-w-md w-full">
+                  <div className="mb-4">
+                    <img 
+                      src={logo} 
+                      alt="NordicMedTek" 
+                      className="h-10 md:h-12 w-auto"
+                      style={{ filter: 'brightness(0)' }}
+                    />
+                  </div>
+                  <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                    NordicMedTek er vår produktserie innen velferdsteknologi. Serien omfatter produkter og løsninger som bidrar til trygghet og støtte gjennom hele livsløpet, med fokus på kvalitet og brukervennlighet.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

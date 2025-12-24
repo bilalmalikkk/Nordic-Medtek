@@ -150,24 +150,19 @@ export default function MedicalFollowup1() {
                     EUMDR.com: MDR oversikt og veiledning
                   </li>
                 </ul>
+                
+                <div className="mt-6">
+                  <Link 
+                    to="/mdr-info" 
+                    className="group inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    Les mer om MDR
+                    <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* MDR Info Button Section */}
-        <section className="py-8 w-full bg-white">
-          <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-center">
-              <Link 
-                to="/mdr-info" 
-                className="group inline-flex items-center justify-center bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                MDR Info
-                <svg className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </Link>
             </div>
           </div>
         </section>

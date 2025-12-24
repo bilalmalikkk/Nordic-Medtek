@@ -3,7 +3,7 @@
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useState } from 'react'
-import logo from '../assets/Puls_and_name.svg'
+import logo from '../assets/NordicRVM_Logo_R2.png'
 import Breadcrumb from './Breadcrumb'
 
 export default function Navbar() {
@@ -184,13 +184,13 @@ export default function Navbar() {
       <div className="bg-teal-700 text-white w-full">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+          <a href="https://nvm-group-mjt9.vercel.app/" className="flex items-center hover:opacity-80 transition-opacity">
             <img 
               src={logo} 
               alt="NordicMedTek" 
               className="h-10 md:h-12 lg:h-14 w-auto" 
             />
-          </Link>
+          </a>
 
           {/* Desktop Navigation - Centered */}
           <nav className="hidden md:flex items-center gap-8 lg:gap-12 xl:gap-16 text-base lg:text-lg absolute left-1/2 transform -translate-x-1/2">
